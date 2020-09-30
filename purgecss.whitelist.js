@@ -4,4 +4,6 @@
  * like JS plugins that auto inject code into the DOM.
  * @type {Array}
  */
-module.exports = [];
+module.exports = [
+    // 'my-example-class'
+];
