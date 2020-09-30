@@ -1,0 +1,10 @@
+/* ==========================================================================
+    ABBREVIATIONS
+   ========================================================================== */
+
+abbr,
+.caps {
+  /* Turn on proper smallcaps */
+  font-variant-caps: all-small-caps;
+  font-variant-caps: small-caps;
+}

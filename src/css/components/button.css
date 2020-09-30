@@ -1,0 +1,15 @@
+@responsive {
+    .button {
+        @apply appearance-none;
+        @apply bg-gray-300;
+        @apply cursor-pointer;
+        @apply inline-block;
+        @apply no-underline;
+        @apply py-2 px-3;
+        @apply text-center;
+    }
+
+    .button:hover {
+        @apply bg-gray-500;
+    }
+}

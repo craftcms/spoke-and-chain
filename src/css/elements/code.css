@@ -1,0 +1,13 @@
+/* ==========================================================================
+     CODE
+   ========================================================================== */
+code,
+kbd,
+pre,
+samp {
+    /* Turn on lining, tabular numerals, slashed zero */
+    font-variant-numeric: lining-nums;
+    font-variant-numeric: slashed-zero;
+    font-variant-numeric: tabular-nums;
+    @apply font-mono;
+}

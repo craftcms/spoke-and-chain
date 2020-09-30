@@ -1,0 +1,14 @@
+{% extends '_layouts/base' %}
+
+{# End Params #}
+{% block header %}
+  {% include '_includes/components/header' with {} only %}
+{% endblock %}
+
+{% block main %}
+  {% block content %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+  {% include '_includes/components/footer' with {} only %}
+{% endblock %}

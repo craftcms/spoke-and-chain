@@ -1,0 +1,23 @@
+{% if craft.app.request.isAjax %}{% spaceless %}{% block ajax %}{% endblock %}{% endspaceless %}{% else %}
+<!doctype html>
+<html class="antialiased smooth-scroll" lang="{{ craft.app.language | replace('_', '-') }}">
+
+  {% include '_includes/layout/head' %}
+
+  <body class="font-sans overflow-x-hidden min-h-screen m-0 {% if bodyClass is defined %} {{ bodyClass }}{% endif %}">
+
+    <div class="overflow-hidden lg:overflow-visible">
+
+      {% block header %}{% endblock %}
+
+      <main>
+        {% block main %}{% endblock %}
+      </main>
+
+      {% block footer %}{% endblock %}
+    </div>
+
+    {% include '_includes/layout/foot' with {} only %}
+  </body>
+</html>
+{% endif %}

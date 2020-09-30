@@ -1,0 +1,27 @@
+/* Apply the basics to all containers */
+.container {
+    @apply mx-auto;
+    @apply px-4;
+    @apply w-full;
+
+    @screen sm {
+        @apply px-0;
+        max-width: calc(100% - 2rem);
+    }
+
+    @screen md {
+        max-width: calc(theme('screens.md') - 2rem);
+    }
+
+    @screen lg {
+        max-width: calc(theme('screens.lg') - 2rem);
+    }
+
+    @screen xl {
+        max-width: calc(theme('screens.xl') - 2rem);
+    }
+
+    @screen xxl {
+        max-width: calc(theme('screens.xxl') - 2rem);
+    }
+}
