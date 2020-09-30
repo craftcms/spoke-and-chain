@@ -1,0 +1,26 @@
+dateModified: 1601371135
+email:
+  fromEmail: support@craftcms.com
+  fromName: 'Spoke and Chain'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  commerce:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.2.6
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Spoke and Chain'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
