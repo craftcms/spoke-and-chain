@@ -1,5 +1,16 @@
+<!-- Template: {{ _self }}.twig -->
+{# Variables #}
+{% set showNav = showNav is not defined ? true : showNav %}
+
+{# Output #}
 <header>
-  <div class="container">
-    Header
+  <div class="container flex">
+    <div>Ident</div>
+
+    {% if showNav %}
+      {% include '_includes/components/nav' with {} only %}
+    {% endif %}
+
+    <div>Search/Cart</div>
   </div>
 </header>

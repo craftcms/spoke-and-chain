@@ -2,13 +2,18 @@
 
 {# End Params #}
 {% block header %}
-  {% include '_includes/components/header' with {} only %}
+  <!-- Site/Header -->
+  {% include '_includes/components/header' with {
+    showNav: true
+  } only %}
 {% endblock %}
 
 {% block main %}
+  <!-- Site/Main -->
   {% block content %}{% endblock %}
 {% endblock %}
 
 {% block footer %}
+  <!-- Site/Footer -->
   {% include '_includes/components/footer' with {} only %}
 {% endblock %}
