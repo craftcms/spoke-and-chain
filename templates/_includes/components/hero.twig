@@ -1,0 +1,22 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set title = title is not defined ? null : title %}
+{% set button = button is not defined ? null : button %}
+{% set image = image is not defined ? null : image %}
+{% set short = short is not defined ? false : short %}
+
+{# Variables #}
+{% set aspectClass = short ? 'aspect-ratio-hero-short' : 'aspect-ratio-hero' %}
+
+{# Output #}
+{% if title or image or button %}
+  <div class="{{ aspectClass }}">
+    <div class="aspect-inner">
+      <div class="flex items-center justify-center w-full h-full">
+        <div>
+          {{ title }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
