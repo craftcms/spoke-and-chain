@@ -1,0 +1,40 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set bikeCategories = craft.categories({
+  group: 'bikeTypes'
+}).all() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Hero #}
+  <div>
+    {% include '_includes/components/hero' with {
+      image: null,
+      title: 'New Bikes!',
+      button: 'Click',
+    } only %}
+  </div>
+
+  <div class="container py-4">
+    {# Bike Categories #}
+    {% if bikeCategories|length %}
+      <div>
+        <div class="flex flex-wrap -mx-2 -mb-4">
+          {% for bikeCategory in bikeCategories %}
+            <div class="w-full md:w-1/2 px-2 pb-4">
+              {% include '_includes/components/cards/category' with {
+                title: bikeCategory.title,
+                image: null,
+                url: bikeCategory.url,
+              } only %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

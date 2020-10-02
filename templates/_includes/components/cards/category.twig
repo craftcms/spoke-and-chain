@@ -1,0 +1,24 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set title = title is not defined ? null : title %}
+{% set image = image is not defined ? null : image %}
+{% set url = url is not defined ? null : url %}
+
+{# Output #}
+{% if title or image %}
+  {% if url %}
+    <a class="aspect-ratio-category-card" href="{{ url }}" aria-label="{{ title }}">
+  {% else %}
+    <div class="aspect-ratio-category-card">
+  {% endif %}
+    <div class="aspect-inner">
+      <div class="flex items-center justify-center h-full w-full">
+        {{ title }}
+      </div>
+    </div>
+  {% if url %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}
+{% endif %}
