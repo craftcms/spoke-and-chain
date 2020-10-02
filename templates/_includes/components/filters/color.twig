@@ -1,0 +1,12 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set colors = colors is not defined ? [] : colors %}
+
+{# Output #}
+{% if colors|length %}
+  <ul>
+    {% for colorCategory in colors %}
+      <li class="flex items-center"><span class="inline-block h-4 w-4 rounded-full mr-1" style="background-color: {{ colorCategory.color }}"></span><span>{{ colorCategory.title }}</span></li>
+    {% endfor %}
+  </ul>
+{% endif %}

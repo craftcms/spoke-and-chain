@@ -1,0 +1,14 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set types = types is not defined ? [] : types %}
+
+{# Variables #}
+
+{# Output #}
+{% if types|length %}
+  <ul>
+    {% for bikeCategory in types %}
+      <li>{{ bikeCategory.title }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

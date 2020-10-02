@@ -1,0 +1,25 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set title = title is not defined ? null : title %}
+{% set image = image is not defined ? null : image %}
+{% set url = url is not defined ? null : url %}
+
+{# Output #}
+{% if title or image %}
+  <a class="block p-2 bg-white" href="{{ url }}" aria-label="{{ title }}">
+    {# Image #}
+    <div class="aspect-ratio-product-card">
+      <div class="aspect-inner bg-gray-300"></div>
+    </div>
+
+    {# Meta #}
+    <div class="py-4">
+      <div>
+        {{ title }}
+      </div>
+      <div>
+        $1,234
+      </div>
+    </div>
+  </a>
+{% endif %}
