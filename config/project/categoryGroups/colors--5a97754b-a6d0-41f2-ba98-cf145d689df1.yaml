@@ -1,0 +1,49 @@
+fieldLayouts:
+  95a4ce3d-304b-4d73-a82a-11b9ecdf6669:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 344f5ef7-49f4-463b-854e-14b57001ee32
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: colors
+name: Colors
+siteSettings:
+  5712e1f3-7800-493e-b74b-c2887dc25c81:
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 88b922c3-eb3a-4680-bec0-1c67e00dd10f
