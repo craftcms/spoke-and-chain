@@ -25,6 +25,7 @@
 @import 'elements/table';
 
 /* Utilities */
+@import 'utilities/aspect-ratio';
 @import 'utilities/center';
 @import 'utilities/hide';
 
