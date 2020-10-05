@@ -1,6 +1,7 @@
 <!-- Template: {{ _self }}.twig -->
 {# Params #}
 {% set types = types is not defined ? [] : types %}
+{% set selected = selected is not defined ? null : selected %}
 
 {# Variables #}
 
@@ -8,7 +9,9 @@
 {% if types|length %}
   <ul>
     {% for bikeCategory in types %}
-      <li>{{ bikeCategory.title }}</li>
+      <li>
+        <a class="{{ selected == bikeCategory.id ? 'font-bold' : '' }}" href="{{ bikeCategory.url }}">{{ bikeCategory.title }}</a>
+      </li>
     {% endfor %}
   </ul>
 {% endif %}

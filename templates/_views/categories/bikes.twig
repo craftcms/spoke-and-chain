@@ -1,6 +1,10 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
+{# Params #}
+{% set colorSlugs = craft.app.request.getQueryParam('colors') %}
+{% set colorSlugs = colorSlugs ? colorSlugs|split('|') : [] %}
+
 {# Variables #}
 {% set isAllBikes = category is not defined %}
 {% set colorCategories = craft.categories({
@@ -10,6 +14,31 @@
   group: 'bikeTypes'
 }).all() %}
 
+{% set urlFilterParams = {
+  colors: colorSlugs,
+  material: []
+} %}
+
+{% set productIds = [] %}
+{% if colorSlugs|length %}
+  {% set relatedColors = colorCategories|filter(cc => cc.slug in colorSlugs) %}
+  {% set productIds = craft.products({
+    relatedTo: ['or', { targetElement: relatedColors, field: 'colors' }]
+  }).ids() %}
+{% endif %}
+
+{% set productQuery = craft.products({
+  relatedTo: [category]
+}) %}
+{% if not productIds|length and colorSlugs|length  %}
+  {# If there are no matching products for the other filters we need not return anything #}
+  {% set products = [] %}
+{% elseif productIds|length %}
+  {% set productQuery = productQuery.id(productIds) %}
+  {% set products = productQuery.all() %}
+{% else %}
+  {% set products = productQuery.all() %}
+{% endif %}
 
 {# Blocks #}
 {% block content %}
@@ -30,19 +59,23 @@
       <div class="flex">
         <div class="hidden md:block w-1/5">
           {% include '_includes/components/filters/bike' with {
-            types: bikeCategories
+            types: bikeCategories,
+            selected: category is defined ? category.id : null,
           } only %}
           {% if colorCategories|length %}
             <hr>
-            {% include '_includes/components/filters/color' with { colors: colorCategories } only %}
+            {% include '_includes/components/filters/color' with {
+              colors: colorCategories,
+              urlFilterParams: urlFilterParams
+            } only %}
           {% endif %}
         </div>
         <div class="w-full md:w-4/5">
           <div class="flex flex-wrap w-full -mx-2 -mb-4">
-            {% for var in 0..11 %}
+            {% for product in products %}
               <div class="w-full md:w-1/2 xl:w-1/3 px-2 pb-4">
                 {% include '_includes/components/cards/product' with {
-                  title: 'Product ' ~ var,
+                  title: product.title,
                   image: true,
                   url: '/'
                 } only %}

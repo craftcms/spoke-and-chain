@@ -1,12 +1,33 @@
 <!-- Template: {{ _self }}.twig -->
+{# Macros #}
+{% import '_includes/macros' as _macros %}
+
 {# Params #}
 {% set colors = colors is not defined ? [] : colors %}
+{% set urlFilterParams = urlFilterParams is not defined ? {colors: []} : urlFilterParams %}
+
+{# Variables #}
+{% set url = craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '') %}
+{% set selectedColors = urlFilterParams.colors %}
 
 {# Output #}
 {% if colors|length %}
   <ul>
-    {% for colorCategory in colors %}
-      <li class="flex items-center"><span class="inline-block h-4 w-4 rounded-full mr-1" style="background-color: {{ colorCategory.color }}"></span><span>{{ colorCategory.title }}</span></li>
+    {% for colorCategory in colors -%}
+      {%- set colorParams = urlFilterParams.colors %}
+      {%- set colorParams = (colorCategory.slug in colorParams ? colorParams : colorParams|merge([colorCategory.slug])) -%}
+      {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
+      <li class="relative">
+        <a class="flex items-center" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
+          <span class="inline-block h-4 w-4 rounded-full mr-1" style="background-color: {{ colorCategory.color }}"></span>
+          <span>{{ colorCategory.title }}{{ colorCategory.slug in selectedColors ? ' ✅' : '' }}</span>
+        </a>
+        {% if colorCategory.slug in selectedColors -%}
+          {%- set colorParams = selectedColors|filter(s => s != colorCategory.slug) -%}
+          {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
+          <a class="absolute right-0 top-0 mr-2" href="{{ _macros.filterSiteUrl(url, filterParams) }}">x</a>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 {% endif %}
