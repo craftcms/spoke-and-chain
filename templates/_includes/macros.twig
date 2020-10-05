@@ -1,0 +1,1 @@
+{% macro filterSiteUrl(url, filterParams = {}) %}{% spaceless -%}{% set params = {} %}{% for key, var in filterParams %}{% if var|length %}{% set params = params|merge({(key): var|join('|')}) %}{% endif %}{% endfor %}{%- endspaceless %}{{ siteUrl(url, params) }}{% endmacro %}
