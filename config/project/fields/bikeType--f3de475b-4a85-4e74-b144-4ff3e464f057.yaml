@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+handle: bikeType
+instructions: ''
+name: 'Bike Type'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add a type'
+  showSiteMenu: true
+  source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories
