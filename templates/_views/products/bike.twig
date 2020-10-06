@@ -1,12 +1,98 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{# Variables #}
+{% spaceless %}
+  {# Variables #}
+  {% set defaultVariant = product.defaultVariant %}
+  {% set productColors = product.colors.all() %}
+{% endspaceless %}
 
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="container">
-    <h1>Bike Product Page</h1>
+  <div>
+    {% include '_includes/components/hero' with {
+      image: null,
+      title: product.title,
+      short: true,
+    } only %}
+  </div>
+
+  <div class="container py-8">
+    {# Meta Details #}
+    <form method="post">
+      <div class="flex">
+        {# Product Title #}
+        <div class="w-1/4">
+          <h1>{{ product.title }}</h1>
+          <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
+          {% if defaultVariant.onSale %}
+            <div><del>{{ defaultVariant.priceAsCurrency }}</del></div>
+          {% endif %}
+        </div>
+
+        {# Product Variants #}
+        <div class="mx-auto">
+          <div class="flex justify-center">
+            {# Colors #}
+            {% if productColors %}
+              <div class="flex">
+                {% for color in productColors %}
+                  <div class="h-4 w-4 rounded-full mr-1" style="background-color: {{ color.color }}" aria-label="{{ color.title }}" title="{{ color.title }}">
+                    <span class="visuallyhidden">{{ color.title }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {# Variants #}
+            <div>
+              <select name="purchasableId">
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}" {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
+                {% endfor %}
+              </select>
+
+              <div>
+                <a href="#">{{ 'Size chart'|t('site') }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {# Product Buy #}
+        <div class="w-1/4 text-right">
+          <input class="button" type="submit" name="submit" value="{{ 'Add to cart'|t('site') }}">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="bg-gray-200 py-8">
+    <div class="container flex justify-center">
+      <div class="max-w-3xl">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
+        </p>
+      </div>
+    </div>
   </div>
 {% endblock %}
