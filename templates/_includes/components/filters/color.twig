@@ -1,17 +1,23 @@
 <!-- Template: {{ _self }}.twig -->
 {# Macros #}
 {% import '_includes/macros' as _macros %}
+{% spaceless %}
+  {# Params #}
+  {% set colors = colors is not defined ? [] : colors %}
+  {% set heading = heading is not defined ? null : heading %}
+  {% set showHeading = showHeading is not defined ? false : showHeading %}
+  {% set urlFilterParams = urlFilterParams is not defined ? {colors: []} : urlFilterParams %}
 
-{# Params #}
-{% set colors = colors is not defined ? [] : colors %}
-{% set urlFilterParams = urlFilterParams is not defined ? {colors: []} : urlFilterParams %}
-
-{# Variables #}
-{% set url = craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '') %}
-{% set selectedColors = urlFilterParams.colors %}
+  {# Variables #}
+  {% set url = craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '') %}
+  {% set selectedColors = urlFilterParams.colors %}
+{% endspaceless %}
 
 {# Output #}
 {% if colors|length %}
+  {% if heading and showHeading %}
+    <h4>{{ heading }}</h4>
+  {% endif %}
   <ul>
     {% for colorCategory in colors -%}
       {%- set colorParams = urlFilterParams.colors %}

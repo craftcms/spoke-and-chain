@@ -2,29 +2,47 @@
 {% extends '_layouts/site' %}
 
 {# Params #}
+{# Get color slugs from the query string #}
 {% set colorSlugs = craft.app.request.getQueryParam('colors') %}
 {% set colorSlugs = colorSlugs ? colorSlugs|split('|') : [] %}
+{# Get material slugs from the query string #}
+{% set materialSlugs = craft.app.request.getQueryParam('material') %}
+{% set materialSlugs = materialSlugs ? materialSlugs|split('|') : [] %}
+{# Setup the filter params #}
+{% set urlFilterParams = {
+  colors: colorSlugs,
+  material: materialSlugs
+} %}
+{% set productIds = [] %}
 
 {# Variables #}
 {% set isAllBikes = category is not defined %}
+{# Get all the categories for the sidebar filter #}
 {% set colorCategories = craft.categories({
   group: 'colors'
+}).all() %}
+{% set materialCategories = craft.categories({
+  group: 'material'
 }).all() %}
 {% set bikeCategories = craft.categories({
   group: 'bikeTypes'
 }).all() %}
 
-{% set urlFilterParams = {
-  colors: colorSlugs,
-  material: []
-} %}
-
-{% set productIds = [] %}
 {% if colorSlugs|length %}
   {% set relatedColors = colorCategories|filter(cc => cc.slug in colorSlugs) %}
   {% set productIds = craft.products({
     relatedTo: ['or', { targetElement: relatedColors, field: 'colors' }]
   }).ids() %}
+{% endif %}
+
+{% if materialSlugs|length %}
+  {% set relatedMaterials = materialCategories|filter(mc => mc.slug in materialSlugs) %}
+  {% set materialProductIds = craft.products({
+    relatedTo: ['or', { targetElement: relatedMaterials, field: 'material' }]
+  }).ids() %}
+  {% if materialProductIds|length %}
+    {% set productIds = productIds|filter(id => id in materialProductIds) %}
+  {% endif %}
 {% endif %}
 
 {% set productQuery = craft.products({
@@ -65,7 +83,18 @@
           {% if colorCategories|length %}
             <hr>
             {% include '_includes/components/filters/color' with {
+              heading: 'Color'|t('site'),
+              showHeading: true,
               colors: colorCategories,
+              urlFilterParams: urlFilterParams
+            } only %}
+          {% endif %}
+          {% if materialCategories|length %}
+            <hr>
+            {% include '_includes/components/filters/material' with {
+              heading: 'Material'|t('site'),
+              showHeading: true,
+              materials: materialCategories,
               urlFilterParams: urlFilterParams
             } only %}
           {% endif %}
@@ -77,7 +106,7 @@
                 {% include '_includes/components/cards/product' with {
                   title: product.title,
                   image: true,
-                  url: '/'
+                  url: product.url
                 } only %}
               </div>
             {% endfor %}
