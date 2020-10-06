@@ -1,0 +1,22 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set title = title is not defined ? null : title %}
+{% set date = date is not defined ? null : date %}
+{% set url = url is not defined ? null : url %}
+{% set horizontal = horizontal is not defined ? false : horizontal %}
+
+{# Output #}
+{% if title or image %}
+  <a class="block w-full bg-white {{ horizontal ? 'flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
+    <div class="{{ horizontal ? 'w-2/3 pr-1' : '' }}">
+      <div class="aspect-ratio-article-card">
+        <div class="aspect-inner bg-cover bg-center" style="background-image: url('https://source.unsplash.com/600x345/?bike')">
+        </div>
+      </div>
+    </div>
+    <div class="p-4">
+      <h4>{{ title }}</h4>
+      <p>{{ date|date('F j, Y') }}</p>
+    </div>
+  </a>
+{% endif %}

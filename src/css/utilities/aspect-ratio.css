@@ -41,4 +41,8 @@
     .aspect-ratio-product-card:before {
         padding-top: calc((2 / 3) * 100%);
     }
+
+    .aspect-ratio-article-card:before {
+        padding-top: calc((1.15 / 2) * 100%);
+    }
 }
