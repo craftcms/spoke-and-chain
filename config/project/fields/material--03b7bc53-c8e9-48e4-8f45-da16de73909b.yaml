@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+handle: material
+instructions: ''
+name: Material
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add a material'
+  showSiteMenu: true
+  source: 'group:562224df-c083-4f48-b0b3-7bdcb9bd8df9'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories
