@@ -78,7 +78,7 @@ siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81:
     hasUrls: true
     template: _views/products/bike
-    uriFormat: 'bikes/{slug}'
+    uriFormat: 'product/{slug}'
 skuFormat: ''
 titleFormat: '{product.title}'
 variantFieldLayouts:
