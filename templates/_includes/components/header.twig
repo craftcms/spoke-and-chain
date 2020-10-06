@@ -6,13 +6,13 @@
 <header class="py-8">
   <div class="container">
     <div class="flex w-full justify-between items-center">
-      <div><a href="/">{{ siteName }}</a></div>
+      <div class="w-1/4"><a href="/">{{ siteName }}</a></div>
 
       {% if showNav %}
         {% include '_includes/components/nav' with {} only %}
       {% endif %}
 
-      <div>Search/Cart</div>
+      <div class="w-1/4 text-right">Search/Cart</div>
     </div>
   </div>
 </header>

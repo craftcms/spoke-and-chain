@@ -12,9 +12,11 @@
 {% if title or image or button %}
   <div class="{{ aspectClass }}">
     <div class="aspect-inner">
-      <div class="flex items-center justify-center w-full h-full">
-        <div>
-          {{ title }}
+      <div class="container h-full">
+        <div class="flex items-center w-full h-full">
+          <div class="mx-auto">
+            {{ title }}
+          </div>
         </div>
       </div>
     </div>
