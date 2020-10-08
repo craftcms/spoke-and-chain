@@ -1,0 +1,20 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Blocks #}
+{% block content %}
+  <div class="bg-gray-200 py-8">
+    {# Heading #}
+    <div class="container flex justify-center">
+      <div class="w-full max-w-3xl">
+        <p>{{ entry.postDate|date('F j, Y') }}</p>
+        <h1>{{ entry.title }}</h1>
+      </div>
+    </div>
+
+    {# Article List #}
+    <div class="container mt-8">
+      Content
+    </div>
+  </div>
+{% endblock %}
