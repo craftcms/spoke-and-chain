@@ -20,7 +20,7 @@ return [
         // Public server config
         'server' => [
             'manifestPath' => '@webroot/dist',
-            'publicPath' => '/dist',
+            'publicPath' => '/',
         ],
         // webpack-dev-server config
         'devServer' => [
