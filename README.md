@@ -81,7 +81,7 @@ Here is an example of running a loop.
 
 Purge will scan the templates and the JS files looking for class names to whitelist to be allowed in the final build files.
 
-If there is no way to avoid programmatic concatenation of class names you can manually add the classes to the `purgecss.whitelist.js` file in the root of the project.
+If there is no way to avoid programmatic concatenation of class names you can manually add the classes to the `whitelist` array in the `tailwind.config.js` file in the root of the project.
 
 This is parsed by purge and will make sure they are included in the build files. This is also handy if there are any libraries that are being used and need to have their class names included.
 

@@ -1,5 +1,14 @@
 module.exports = {
-    purge: [],
+    purge: {
+        enabled: true,
+        content: [
+            "./templates/**/*.{twig,html}",
+            "./src/js/**/*.{js}",
+        ],
+        options: {
+            whitelist: []
+        }
+    },
     theme: {
         screens: {
             sm: '640px',
