@@ -21,6 +21,10 @@
   <div class="container py-8">
     {# Meta Details #}
     <form method="post">
+      {{ csrfInput() }}
+      {{ hiddenInput('action', 'commerce/cart/update-cart') }}
+      {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
+
       <div class="flex">
         {# Product Title #}
         <div class="w-1/4">
