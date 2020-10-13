@@ -13,7 +13,6 @@ const CreateSymlinkPlugin = require('create-symlink-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 // config files
@@ -130,22 +129,6 @@ const configurePostcssLoader = () => {
     };
 };
 
-// Configure PurgeCSS
-const configurePurgeCss = () => {
-    let paths = [];
-    // Configure whitelist paths
-    for (const [key, value] of Object.entries(settings.purgeCssConfig.paths)) {
-        paths.push(path.join(__dirname, value));
-    }
-
-    return {
-        paths: glob.sync(paths, { nodir: true }),
-        whitelist: require( './purgecss.whitelist.js' ),
-        whitelistPatterns: settings.purgeCssConfig.whitelistPatterns,
-    };
-};
-
-
 // Configure terser
 const configureTerser = () => {
     return {
@@ -180,9 +163,6 @@ module.exports = [
                     path: path.resolve(__dirname, settings.paths.dist),
                     filename: path.join('./css', '[name].[chunkhash].css'),
                 }),
-                new PurgecssPlugin(
-                    configurePurgeCss()
-                ),
                 new webpack.BannerPlugin(
                     configureBanner()
                 ),

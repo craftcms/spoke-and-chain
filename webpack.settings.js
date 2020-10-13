@@ -20,7 +20,7 @@ module.exports = {
     urls: {
         live: process.env.LIVE_SITE_URL || "http://example.com",
         local: process.env.PRIMARY_SITE_URL || "http://local.craft.test/",
-        publicPath: process.env.PUBLIC_PATH || "/"
+        publicPath: process.env.PUBLIC_PATH || "/dist/"
     },
     vars: {
         cssName: "styles"
@@ -37,21 +37,6 @@ module.exports = {
     },
     manifestConfig: {
         basePath: ""
-    },
-    purgeCssConfig: {
-        paths: [
-            "./templates/**/*.{twig,html}",
-            "./src/js/**/*.{js}",
-        ],
-        whitelist: [
-            "./purgecss.whitelist.js",
-        ],
-        whitelistPatterns: [],
-        extensions: [
-            "html",
-            "js",
-            "twig",
-        ]
     },
     createSymlinkConfig: [
         // {
