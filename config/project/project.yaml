@@ -1,4 +1,4 @@
-dateModified: 1601992710
+dateModified: 1602490474
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke and Chain'
@@ -8,6 +8,10 @@ plugins:
     edition: pro
     enabled: true
     schemaVersion: 3.2.6
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
   twigpack:
     edition: standard
     enabled: true
