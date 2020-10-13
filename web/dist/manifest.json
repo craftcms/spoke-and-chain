@@ -1,10 +1,10 @@
 {
-  "app.js": "/js/app.79c327d14f61050b93fd.js",
-  "app.js.map": "/js/app.79c327d14f61050b93fd.js.map",
-  "styles.css": "/css/styles.505174307965a584008a.css",
-  "styles.js": "/js/styles.505174307965a584008a.js",
-  "styles.js.map": "/js/styles.505174307965a584008a.js.map",
-  "css/styles.505174307965a584008a.css.map": "/css/styles.505174307965a584008a.css.map",
-  "js/app.79c327d14f61050b93fd.js.LICENSE.txt": "/js/app.79c327d14f61050b93fd.js.LICENSE.txt",
-  "js/styles.505174307965a584008a.js.LICENSE.txt": "/js/styles.505174307965a584008a.js.LICENSE.txt"
+  "app.js": "/dist/js/app.cc14effcf36af1fc991c.js",
+  "app.js.map": "/dist/js/app.cc14effcf36af1fc991c.js.map",
+  "styles.css": "/dist/css/styles.648810c654e6d1d5c50d.css",
+  "styles.js": "/dist/js/styles.648810c654e6d1d5c50d.js",
+  "styles.js.map": "/dist/js/styles.648810c654e6d1d5c50d.js.map",
+  "css/styles.648810c654e6d1d5c50d.css.map": "/dist/css/styles.648810c654e6d1d5c50d.css.map",
+  "js/app.cc14effcf36af1fc991c.js.LICENSE.txt": "/dist/js/app.cc14effcf36af1fc991c.js.LICENSE.txt",
+  "js/styles.648810c654e6d1d5c50d.js.LICENSE.txt": "/dist/js/styles.648810c654e6d1d5c50d.js.LICENSE.txt"
 }
