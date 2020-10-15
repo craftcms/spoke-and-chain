@@ -5,7 +5,7 @@
   {# Variables #}
   {% set featuredArticle = craft.entries({
     section: 'articles',
-  }).first() %}
+  }).one() %}
   {% set articles = craft.entries({
     section: 'articles',
     offset: 1
