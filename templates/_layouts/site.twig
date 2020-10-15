@@ -1,6 +1,6 @@
 {% extends '_layouts/base' %}
 {% set cart = craft.commerce.carts.cart %}
-{% set cartPage = craft.entries({ section: 'cart' }).one() %}
+{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
 
 {# End Params #}
 {% block header %}
