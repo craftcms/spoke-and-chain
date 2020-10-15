@@ -2,6 +2,7 @@
 {% extends '_layouts/site' %}
 
 {# Variables #}
+{% set checkoutPage = craft.entries({ section: 'checkout', type: 'checkout' }).one() %}
 
 {# Blocks #}
 {% block content %}
@@ -71,7 +72,10 @@
               </div>
 
               <div class="pt-4">
-                <input class="button" type="submit" name="submit" value="{{ 'Checkout'|t }}">
+                <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">
+                {% if checkoutPage %}
+                  <a class="button" href="{{ checkoutPage.url }}">{{ 'Checkout'|t }}</a>
+                {% endif %}
               </div>
             </div>
           </div>

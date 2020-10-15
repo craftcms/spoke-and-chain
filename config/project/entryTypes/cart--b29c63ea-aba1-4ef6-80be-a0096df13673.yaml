@@ -1,5 +1,5 @@
 fieldLayouts:
-  9c200ed2-10be-41f4-a5c4-e0cb2bba267f:
+  11289f8a-0349-431d-9d01-5e5b6a0ad4c3:
     tabs:
       -
         elements:
@@ -56,10 +56,10 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 handle: cart
-hasTitleField: false
+hasTitleField: true
 name: Cart
-section: 55bf5ead-9482-4553-aede-3b3b2f0a3755
-sortOrder: 1
-titleFormat: '{section.name|raw}'
+section: f6e39d3c-bc6d-4fac-b921-c655cde09804
+sortOrder: 2
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
