@@ -21,6 +21,6 @@ siteSettings:
     template: _views/checkout/index
     uriFormat: '{parent.uri}/{slug}'
 structure:
-  maxLevels: 1
+  maxLevels: 2
   uid: de07e5ba-bde1-43ad-a8ce-2a9d553214bf
 type: structure
