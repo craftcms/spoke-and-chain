@@ -1,5 +1,6 @@
 {
   "require": {
+    "craftcms/aws-s3": "^1.2",
     "craftcms/cms": "^3.5.10",
     "craftcms/commerce": "^3.2",
     "craftcms/redactor": "^2.8",

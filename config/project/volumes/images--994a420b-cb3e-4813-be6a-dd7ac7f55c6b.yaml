@@ -1,0 +1,50 @@
+fieldLayouts:
+  f35f48a2-5520-4076-bee1-e1f5134c3145:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: images
+hasUrls: true
+name: Images
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET_NAME
+  bucketSelectionMode: manual
+  cfDistributionId: ''
+  cfPrefix: ''
+  expires: ''
+  keyId: $S3_ACCESS_KEY
+  makeUploadsPublic: '1'
+  region: $S3_BUCKET_REGION
+  secret: $S3_SECRET_KEY
+  storageClass: ''
+  subfolder: ''
+sortOrder: 1
+type: craft\awss3\Volume
+url: $S3_BASE_URL
