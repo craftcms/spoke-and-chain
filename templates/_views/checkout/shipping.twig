@@ -1,0 +1,38 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set summaryPage = craft.entries({ section: 'checkout', type: 'summary' }).one() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Heading #}
+  <div class="bg-gray-300">
+    <div class="container py-4 text-center">
+      <h1>{{ entry.title }}</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container flex justify-center">
+      <div class="w-full max-w-2xl">
+        <form method="post">
+          {{ csrfInput() }}
+          {{ actionInput('commerce/cart/update-cart') }}
+          {{ redirectInput(summaryPage ? summaryPage.uri : 'checkout/summary') }}
+
+          {% if entry.heading %}
+            <h2>{{ entry.heading }}</h2>
+          {% endif %}
+
+
+          <div class="text-right">
+            <input class="button" type="submit" name="submit" value="{{ 'Next'|t }}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
