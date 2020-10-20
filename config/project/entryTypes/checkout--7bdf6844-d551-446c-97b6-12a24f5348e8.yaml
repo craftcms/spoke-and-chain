@@ -26,6 +26,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d
+            instructions: ''
+            label: 'Login Heading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf
+            instructions: ''
+            label: 'Guest Heading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 handle: checkout
