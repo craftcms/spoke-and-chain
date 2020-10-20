@@ -1,0 +1,55 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set lineItem = lineItem is not defined ? null : lineItem %}
+{% set purchasable = lineItem ? lineItem.getPurchasable() : null %}
+{% set form = form is defined ? form : false %}
+
+{# Variables #}
+
+{% if lineItem %}
+  <div class="flex flex-wrap border-b border-gray-300 py-8">
+    {# Image #}
+    <div class="w-full md:w-1/3 lg:w-1/5">
+      {% if purchasable %}
+      <a class="block" href="{{ purchasable.product.url }}">
+        {% endif %}
+        <img class="w-full" src="https://source.unsplash.com/220x130/?bike" alt="{{ lineItem.description }}">
+        {% if purchasable %}
+      </a>
+      {% endif %}
+    </div>
+
+    <div class="flex flex-wrap md:w-2/3 lg:w-4/5">
+      {# Product #}
+      <div class="w-full lg:w-1/2">
+        {% if purchasable %}
+          <a class="block" href="{{ purchasable.product.url }}">
+        {% else %}
+          <div>
+        {% endif %}
+            {{ lineItem.description }}
+        {% if purchasable %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+        <div>{{ lineItem.sku }}</div>
+      </div>
+
+    {# Quantity #}
+      <div class="w-full md:w-1/2 lg:w-1/4">
+        {% if form %}
+          <label for="qty">{{ 'Quantity'|t }}</label>
+          <input id="qty" name="lineItems[{{ lineItem.id }}][qty]" type="text" value="{{ lineItem.qty }}">
+        {% else %}
+          {{ 'Quantity'|t }}: {{ lineItem.qty }}
+        {% endif %}
+      </div>
+
+      {# Price #}
+      <div class="w-full md:w-1/2 lg:w-1/4">
+        {{ lineItem.subtotalAsCurrency }}
+      </div>
+    </div>
+  </div>
+{% endif %}
