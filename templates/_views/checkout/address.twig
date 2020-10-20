@@ -1,0 +1,82 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set customer = craft.commerce.customers.customer %}
+{% set addresses = customer ? customer.addresses : [] %}
+{% set shippingPage = craft.entries({ section: 'checkout', type: 'shipping' }).one() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Heading #}
+  <div class="bg-gray-300">
+    <div class="container py-4 text-center">
+      <h1>{{ entry.title }}</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container flex justify-center">
+      <div class="w-full max-w-2xl">
+        <form method="post" x-data="{ selectAddress: '{{ currentUser and addresses|length and cart.shippingAddressId ? cart.shippingAddressId : '' }}' }">
+          {{ csrfInput() }}
+          {{ actionInput('commerce/cart/update-cart') }}
+          {{ redirectInput(shippingPage ? shippingPage.uri : 'checkout/shipping') }}
+
+          {% if entry.heading %}
+            <h2>{{ entry.heading }}</h2>
+          {% endif %}
+
+          {% if currentUser and addresses|length %}
+            {% for address in addresses %}
+              <label class="w-full block border border-gray-300 rounded">
+                <input type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="selectAddress">
+                {% for line in address.addressLines %}
+                	{{ line }}<br>
+                {% endfor %}
+              </label>
+            {% endfor %}
+
+            <label class="w-full border border-gray-300 rounded">
+              <input type="radio" name="shippingAddressId" value="" x-model="selectAddress">
+              {{ 'Add address'|t }}
+            </label>
+            <template x-if="selectAddress == ''">
+              {% include '_includes/components/address/fields' with {
+                modelName: 'shippingAddress',
+                model: cart.shippingAddress
+              } %}
+            </template>
+
+          {% else %}
+            <div>
+              {% include '_includes/components/address/fields' with {
+                modelName: 'shippingAddress',
+                model: cart.shippingAddress
+              } %}
+            </div>
+          {% endif %}
+
+          <div x-data="{ separateBilling: false, billingSameAsShipping: false }">
+            <label>
+              <input type="checkbox" name="billingSameAsShipping" x-model="billingSameAsShipping" value="1"> {{ 'Use address for billing'|t }}
+            </label>
+
+            <template x-if="billingSameAsShipping">
+              {% include '_includes/components/address/fields' with {
+                modelName: 'shippingAddress',
+                model: cart.billingAddress
+              } %}
+            </template>
+          </div>
+
+          <div class="text-right">
+            <input class="button" type="submit" name="submit" value="{{ 'Next'|t }}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
