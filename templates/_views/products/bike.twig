@@ -22,7 +22,7 @@
     {# Meta Details #}
     <form method="post">
       {{ csrfInput() }}
-      {{ hiddenInput('action', 'commerce/cart/update-cart') }}
+      {{ actionInput('commerce/cart/update-cart') }}
       {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
 
       <div class="flex">
