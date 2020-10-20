@@ -1,6 +1,6 @@
 module.exports = {
     purge: {
-        enabled: true,
+        enabled: (process.env.NODE_ENV === 'production'),
         content: [
             "./templates/**/*.{twig,html}",
             "./src/js/**/*.{js}",

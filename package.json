@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Craft CMS & Commerce demo site.",
   "scripts": {
-    "serve": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js --progress --hide-modules"
+    "serve": "NODE_ENV=development webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
+    "build": "NODE_ENV=productio webpack --config webpack.prod.js --progress --hide-modules"
   },
   "repository": {
     "type": "git",
