@@ -15,24 +15,41 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="container flex justify-center">
-      <div class="w-full max-w-2xl">
-        <form method="post">
-          {{ csrfInput() }}
-          {{ actionInput('commerce/cart/update-cart') }}
-          {{ redirectInput(summaryPage ? summaryPage.uri : 'checkout/summary') }}
 
-          {% if entry.heading %}
-            <h2>{{ entry.heading }}</h2>
-          {% endif %}
+  <div class="container flex justify-center">
+    <div class="w-full max-w-2xl">
+      <form method="post" x-data="{ handle: {{ cart.shippingMethodHandle ? "'#{cart.shippingMethodHandle}'" : 'null' }} }">
+        {{ csrfInput() }}
+        {{ actionInput('commerce/cart/update-cart') }}
+        {{ redirectInput(summaryPage ? summaryPage.uri : 'checkout/summary') }}
 
+        {% if entry.heading %}
+          <h2>{{ entry.heading }}</h2>
+        {% endif %}
 
-          <div class="text-right">
-            <input class="button" type="submit" name="submit" value="{{ 'Next'|t }}">
+        {% if not cart.availableShippingMethodOptions|length %}
+          <p>{{ 'No shipping methods available.'|t }}</p>
+          <div>
+            <a class="button" href="{{ summaryPage ? summaryPage.url : siteUrl('checkout/summary') }}">{{ 'Continue'|t }}</a>
           </div>
-        </form>
-      </div>
+        {% else %}
+          <div>
+            {% for handle, method in cart.availableShippingMethodOptions %}
+              <div>
+                <label class="block border rounded" :class="{ 'border-blue-700': handle == '{{ handle }}', 'border-gray-300': handle != '{{ handle }}' }">
+                  <input type="radio" name="shippingMethodHandle" value="{{ handle }}" {% if handle == cart.shippingMethodHandle %}checked{% endif %} x-model="handle"/>
+                  <strong>{{ method.name }}</strong><br>
+                  <span class="price">{{ method.getPrice()|commerceCurrency(cart.currency) }}</span>
+                </label>
+              </div>
+            {% endfor %}
+
+            <div class="text-right">
+              <input class="button" type="submit" value="{{ 'Select Shipping Method'|t }}"/>
+            </div>
+          </div>
+        {% endif %}
+      </form>
     </div>
   </div>
 {% endblock %}
