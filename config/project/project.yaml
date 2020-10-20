@@ -4,10 +4,14 @@ email:
   fromName: 'Spoke and Chain'
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
   commerce:
     edition: pro
     enabled: true
-    schemaVersion: 3.2.6
+    schemaVersion: 3.2.7
   redactor:
     edition: standard
     enabled: true
