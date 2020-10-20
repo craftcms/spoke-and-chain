@@ -59,12 +59,15 @@
             </div>
           {% endif %}
 
-          <div x-data="{ separateBilling: false, billingSameAsShipping: false }">
+          {# Fallback default for `billingAddressSameAsShipping` #}
+          {{ hiddenInput('billingAddressSameAsShipping', 0) }}
+
+          <div x-data="{ billingSameAsShipping: true }">
             <label>
-              <input type="checkbox" name="billingSameAsShipping" x-model="billingSameAsShipping" value="1"> {{ 'Use address for billing'|t }}
+              <input type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping"> {{ 'Use address for billing'|t }}
             </label>
 
-            <template x-if="billingSameAsShipping">
+            <template x-if="!billingSameAsShipping">
               {% include '_includes/components/address/fields' with {
                 modelName: 'shippingAddress',
                 model: cart.billingAddress
