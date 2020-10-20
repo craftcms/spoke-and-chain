@@ -22,7 +22,7 @@
       {% else %}
         <form method="post">
           {{ csrfInput() }}
-          {{ hiddenInput('action', 'commerce/cart/update-cart') }}
+          {{ actionInput('commerce/cart/update-cart') }}
 
           {% for lineItem in cart.lineItems %}
             {% set purchasable = lineItem.getPurchasable() %}
