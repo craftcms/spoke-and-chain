@@ -1,0 +1,57 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set summaryPage = craft.entries({ section: 'checkout', type: 'summary' }).one() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Heading #}
+  <div class="bg-gray-300">
+    <div class="container py-4 text-center">
+      <h1>{{ entry.title }}</h1>
+    </div>
+  </div>
+
+  <div class="container flex justify-center">
+    <div class="border-t border-gray-300 w-full max-w-5xl">
+      {% for lineItem in cart.lineItems %}
+        {% include '_includes/components/order/line-item' with { lineItem: lineItem } only %}
+      {% endfor %}
+
+      {% if cart.shippingAddress %}
+        <div class="flex">
+          <div class="w-full lg:w-1/5">
+            <h3>{{ 'Address'|t }}</h3>
+          </div>
+          <div class="w-full lg:w-4/5">
+            <div class="flex">
+              <div class="w-1/2">
+                <h4>{{ 'Shipping to'|t }}:</h4>
+                <p>{{ cart.shippingAddress.addressLines|join("\n")|nl2br }}</p>
+              </div>
+              <div class="w-1/2">
+                <h4>{{ 'Billing Address'|t }}:</h4>
+
+                {% if cart.shippingAddressId == cart.billingAddressId %}
+                  <p>{{ 'Same as shipping.'|t }}</p>
+                {% elseif cart.billingAddress %}
+                  <p>{{ cart.billingAddress.addressLines|join("\n")|nl2br }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="flex">
+        <div class="w-full lg:w-1/5">
+          <h3>{{ 'Payment Info'|t }}</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
