@@ -73,15 +73,15 @@
   </div>
 
   <div class="bg-gray-100">
-    <div class="container py-4">
+    <div class="container py-6">
       <div class="flex">
-        <div class="hidden md:block w-1/5">
+        <div class="hidden md:block w-1/5 mr-12">
           {% include '_includes/components/filters/bike' with {
             types: bikeCategories,
             selected: category is defined ? category.id : null,
           } only %}
           {% if colorCategories|length %}
-            <hr>
+            <hr class="my-6">
             {% include '_includes/components/filters/color' with {
               heading: 'Color'|t('site'),
               showHeading: true,
@@ -90,7 +90,7 @@
             } only %}
           {% endif %}
           {% if materialCategories|length %}
-            <hr>
+            <hr class="my-6">
             {% include '_includes/components/filters/material' with {
               heading: 'Material'|t('site'),
               showHeading: true,
@@ -100,9 +100,9 @@
           {% endif %}
         </div>
         <div class="w-full md:w-4/5">
-          <div class="flex flex-wrap w-full -mx-2 -mb-4">
+          <div class="grid grid-cols-3 gap-6">
             {% for product in products %}
-              <div class="w-full md:w-1/2 xl:w-1/3 px-2 pb-4">
+              <div>
                 {% include '_includes/components/cards/product' with {
                   title: product.title,
                   image: true,
