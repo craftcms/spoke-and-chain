@@ -15,4 +15,13 @@
     .button:active {
         @apply bg-gray-500;
     }
+
+    .button.submit {
+        @apply bg-red-600;
+        @apply text-white;
+    }
+
+    .button.submit:hover {
+        @apply bg-red-700;
+    }
 }
