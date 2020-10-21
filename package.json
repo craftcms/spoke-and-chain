@@ -4,7 +4,7 @@
   "description": "Craft CMS & Commerce demo site.",
   "scripts": {
     "serve": "NODE_ENV=development webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
-    "build": "NODE_ENV=productio webpack --config webpack.prod.js --progress --hide-modules"
+    "build": "NODE_ENV=production webpack --config webpack.prod.js --progress --hide-modules"
   },
   "repository": {
     "type": "git",
