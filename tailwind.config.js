@@ -21,7 +21,11 @@ module.exports = {
             xl: '1280px',
             xxl: '1440px',
         },
-        extend: {},
+        extend: {
+            spacing: {
+                '0.5': '0.125rem',
+            }
+        },
     },
     variants: {},
     plugins: [],
