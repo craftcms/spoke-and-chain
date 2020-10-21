@@ -58,9 +58,9 @@ textarea {
 [type="text"],
 [type="url"],
 textarea {
-  @apply rounded-sm;
+  @apply rounded;
   @apply border border-gray-500;
-  @apply py-3 px-4;
+  @apply py-2 px-4;
   @apply w-full;
   @apply outline-none;
   color: inherit;
