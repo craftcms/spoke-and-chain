@@ -16,23 +16,26 @@
 {# Output #}
 {% if colors|length %}
   {% if heading and showHeading %}
-    <h4>{{ heading }}</h4>
+    <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
   {% endif %}
-  <ul>
+  <ul class="mt-2">
     {% for colorCategory in colors -%}
       {%- set colorParams = urlFilterParams.colors %}
       {%- set colorParams = (colorCategory.slug in colorParams ? colorParams : colorParams|merge([colorCategory.slug])) -%}
       {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
-      <li class="relative">
-        <a class="flex items-center" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
-          <span class="inline-block h-4 w-4 rounded-full mr-1" style="background-color: {{ colorCategory.color }}"></span>
-          <span>{{ colorCategory.title }}{{ colorCategory.slug in selectedColors ? ' ✅' : '' }}</span>
+
+      {% if colorCategory.slug in selectedColors -%}
+        {%- set colorParams = selectedColors|filter(s => s != colorCategory.slug) -%}
+        {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
+      {% endif %}
+
+      <li class="my-1">
+        <a class="flex items-center font-medium text-black hover:text-red-600" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
+          <span class="mr-2 flex rounded-full p-0.5 border {{ colorCategory.slug in selectedColors ? 'border-gray-900' : 'border-transparent' }}">
+            <span class="inline-block h-5 w-5 rounded-full" style="background-color: {{ colorCategory.color }}"></span>
+          </span>
+          <span>{{ colorCategory.title }}{#{{ colorCategory.slug in selectedColors ? ' ✅' : '' }}#}</span>
         </a>
-        {% if colorCategory.slug in selectedColors -%}
-          {%- set colorParams = selectedColors|filter(s => s != colorCategory.slug) -%}
-          {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
-          <a class="absolute right-0 top-0 mr-2" href="{{ _macros.filterSiteUrl(url, filterParams) }}">x</a>
-        {% endif %}
       </li>
     {% endfor %}
   </ul>
