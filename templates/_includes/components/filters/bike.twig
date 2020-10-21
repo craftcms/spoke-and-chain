@@ -7,10 +7,13 @@
 
 {# Output #}
 {% if types|length %}
-  <ul>
+  <ul class="-mx-3">
     {% for bikeCategory in types %}
-      <li>
-        <a class="{{ selected == bikeCategory.id ? 'font-bold' : '' }}" href="{{ bikeCategory.url }}">{{ bikeCategory.title }}</a>
+      <li class="my-1">
+            <a class="flex items-center font-medium text-black hover:bg-gray-200 block px-3 py-1 rounded {{ selected == bikeCategory.id ? 'bg-gray-300' : '' }}" href="{{ bikeCategory.url }}">
+                {{ svg('@webroot/icons/mountain.svg')|attr({ class: 'text-red-600 fill-current inline-block w-5 h-5 mr-2' }) }}
+                {{ bikeCategory.title }}
+            </a>
       </li>
     {% endfor %}
   </ul>
