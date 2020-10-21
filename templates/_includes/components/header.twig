@@ -3,16 +3,26 @@
 {% set showNav = showNav is not defined ? true : showNav %}
 
 {# Output #}
-<header class="py-8">
+<header class="py-3 text-lg font-medium border-b border-solid border-gray-200">
   <div class="container">
     <div class="flex w-full justify-between items-center">
-      <div class="w-1/4"><a href="/">{{ siteName }}</a></div>
+      <div class="w-1/4 flex items-center">
+        <a
+          title="{{ siteName }}"
+          class="inline-block px-4 py-2 text-black hover:text-red-600"
+          href="/">{{ svg('@webroot/icons/logo.svg')|attr({ class: 'fill-current' }) }}</a>
+      </div>
 
       {% if showNav %}
         {% include '_includes/components/nav' with {} only %}
       {% endif %}
 
-      <div class="w-1/4 text-right">Search / <a href="{{ cartPage.url }}">Cart</a></div>
+      <div class="w-1/4 text-right">
+        <ul>
+          <li class="inline-block"><a class="inline-block px-4 py-2 text-black hover:text-red-600" href="#">Search</a></li>
+          <li class="inline-block"><a class="inline-block px-4 py-2 text-black hover:text-red-600" href="{{ cartPage.url }}">Cart</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
