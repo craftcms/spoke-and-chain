@@ -16,21 +16,31 @@
 {# Output #}
 {% if materials|length %}
   {% if heading and showHeading %}
-    <h4>{{ heading }}</h4>
+    <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
   {% endif %}
-  <ul>
+  <ul class="mt-2 -mx-3">
     {% for materialCategory in materials -%}
       {%- set materialParams = (materialCategory.slug in selectedMaterials ? selectedMaterials : selectedMaterials|merge([materialCategory.slug])) -%}
       {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
-      <li class="relative">
-        <a href="{{ _macros.filterSiteUrl(url, filterParams) }}">
-          {{ materialCategory.title }}{{ materialCategory.slug in selectedMaterials ? ' ✅' : '' }}
+      <li class="my-1">
+        {% if materialCategory.slug in selectedMaterials -%}
+          {%- set materialParams = selectedMaterials|filter(s => s != materialCategory.slug) -%}
+          {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
+        {% endif %}
+
+        <a class="font-medium text-black hover:text-red-600 block px-3 py-1 rounded" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
+          {% if materialCategory.slug in selectedMaterials %}
+            {{ svg('@webroot/icons/checkmark.svg')|attr({ class: 'fill-current inline-block w-5 h-5' }) }}
+          {% endif %}
+          {{ materialCategory.title }}
         </a>
+        {#
         {% if materialCategory.slug in selectedMaterials -%}
           {%- set materialParams = selectedMaterials|filter(s => s != materialCategory.slug) -%}
           {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
           <a class="absolute right-0 top-0 mr-2" href="{{ _macros.filterSiteUrl(url, filterParams) }}">x</a>
         {% endif %}
+        #}
       </li>
     {% endfor %}
   </ul>
