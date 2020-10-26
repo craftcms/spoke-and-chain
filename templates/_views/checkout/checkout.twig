@@ -1,5 +1,6 @@
 {# Variables #}
 {% set addressPage = craft.entries({ section: 'checkout', type: 'address' }).one() %}
+{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
 
 {# Skip this page if there is a logged in user #}
 {% if currentUser %}
@@ -11,6 +12,9 @@
 
 {# Blocks #}
 {% block content %}
+  {% if cart and not cart.lineItems|length %}
+    {% redirect cartPage ? cartPage.uri : 'cart' %}
+  {% endif %}
   <!-- Template: {{ _self }}.twig -->
 
   <div class="bg-gray-300">
