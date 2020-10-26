@@ -10,7 +10,6 @@ window.addresses = function() {
             return window.addressStates;
         },
         states() {
-            console.log('stateid', this.stateId);
             if (this.countryId && Object.keys(this.allStates()).indexOf(this.countryId) >= 0) {
                 let states = [];
                 Object.keys(this.allStates()[this.countryId]).forEach(key => {
