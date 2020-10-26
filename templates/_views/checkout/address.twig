@@ -63,9 +63,10 @@
           {{ hiddenInput('billingAddressSameAsShipping', 0) }}
 
           <div x-data="{ billingSameAsShipping: true }">
-            <label>
-              <input type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping"> {{ 'Use address for billing'|t }}
-            </label>
+            <div>
+              <input class="checkbox-hidden" id="billingSameAsShipping" type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping">
+              <label class="checkbox" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
+            </div>
 
             <template x-if="!billingSameAsShipping">
               {% include '_includes/components/address/fields' with {
