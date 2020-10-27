@@ -7,3 +7,9 @@ body {
   @apply text-base;
   @apply text-gray-900;
 }
+
+:focus {
+  outline: 3px transparent;
+  box-shadow: 0 0 0 3px rgba(0,125,250,.6);
+  border-color: #7eaee9;
+}
