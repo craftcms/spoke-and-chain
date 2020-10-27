@@ -7,7 +7,7 @@ fieldset {
 }
 
 label {
-    @apply font-bold;
+    @apply font-medium;
     @apply text-sm;
     @apply block;
 }
