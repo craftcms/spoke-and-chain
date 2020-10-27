@@ -7,6 +7,13 @@ fieldset {
 }
 
 label {
+    @apply font-bold;
+    @apply text-sm;
+    @apply block;
+}
+
+label + input {
+    @apply mt-2;
 }
 
 legend {
@@ -14,14 +21,14 @@ legend {
 }
 
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Allow only vertical resizing of textareas. */
 textarea {
-  @apply block;
-  @apply h-auto;
-  resize: vertical;
+    @apply block;
+    @apply h-auto;
+    resize: vertical;
 }
 
 button,
@@ -33,20 +40,20 @@ button,
 input,
 select,
 textarea {
-  @apply appearance-none;
+    @apply appearance-none;
 
-  font: inherit;
-  /* Turns on lining, proportional numerals without clarified zeroes */
-  font-variant-numeric: lining-nums;
-  font-variant-numeric: proportional-nums;
+    font: inherit;
+    /* Turns on lining, proportional numerals without clarified zeroes */
+    font-variant-numeric: lining-nums;
+    font-variant-numeric: proportional-nums;
 }
 
 textarea {
-  @apply w-full;
+    @apply w-full;
 }
 
 ::placeholder {
-  font: inherit;
+    font: inherit;
 }
 
 [type="date"],
@@ -58,43 +65,52 @@ textarea {
 [type="text"],
 [type="url"],
 textarea {
-  @apply rounded;
-  @apply border border-gray-500;
-  @apply py-2 px-4;
-  @apply w-full;
-  @apply outline-none;
-  color: inherit;
+    @apply rounded;
+    @apply border border-gray-500;
+    @apply py-2 px-4;
+    @apply w-full;
+    @apply outline-none;
+    color: inherit;
 }
 
-&::-webkit-input-placeholder {
+&
+::-webkit-input-placeholder {
 
 }
 
 /* De-bork search fields */
 [type="search"] {
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-decoration {
+
+&
+::-webkit-search-cancel-button,
+
+&
+::-webkit-search-decoration {
     -webkit-appearance: none;
-  }
+}
+
 }
 
 [type="radio"],
 [type="checkbox"] {
-  &:checked::after {
 
-  }
+&
+:checked::after {
+
+}
+
 }
 
 /* Make range inputs behave like textual form controls. */
 [type="range"] {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 /* Fix cursor style of increment and decrement buttons in Chrome. */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
+    height: auto;
 }
 
 select {
