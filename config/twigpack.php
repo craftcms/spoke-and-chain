@@ -1,5 +1,7 @@
 <?php
 
+use craft\helpers\App;
+
 return [
     // Global settings
     '*' => [
@@ -24,8 +26,8 @@ return [
         ],
         // webpack-dev-server config
         'devServer' => [
-            'manifestPath' => 'http://192.168.1.214:8080/',
-            'publicPath' => 'http://192.168.1.214:8080/',
+            'manifestPath' => App::env('TWIGPACK_MANIFEST_PATH'),
+            'publicPath' => App::env('TWIGPACK_PUBLIC_PATH'),
         ],
         // Bundle to use with the webpack-dev-server
         'devServerBuildType' => 'modern',
