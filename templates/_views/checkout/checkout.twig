@@ -17,63 +17,73 @@
   {% endif %}
   <!-- Template: {{ _self }}.twig -->
 
-  <div class="bg-gray-300">
+  <div class="bg-gray-200 py-12">
     {# Heading #}
     <div class="container py-4 text-center">
-      <h1>{{ entry.title }}</h1>
+      <h1 class="text-4xl mb-12">{{ entry.title }}</h1>
     </div>
 
     <div class="container flex justify-center">
       <div class="w-full max-w-5xl flex flex-wrap">
         {# Login #}
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 px-12">
           {% if entry.heading %}
             <h2>{{ entry.heading }}</h2>
           {% endif %}
-          <form method="post" accept-charset="UTF-8">
+
+          <h2 class="text-2xl mb-4">Checkout with your account</h2>
+
+          <form method="post" class="space-y-6" accept-charset="UTF-8">
             {{ csrfInput() }}
             {{ actionInput('users/login') }}
             {% if addressPage %}
               {{ redirectInput(addressPage.uri) }}
             {% endif %}
 
-            <label for="loginName">Username or email</label>
-            <input id="loginName" type="text" name="loginName"
-                   value="{{ craft.app.user.rememberedUsername }}">
+            <div>
+              <label for="loginName">Username or email</label>
+              <input id="loginName" type="text" name="loginName" value="{{ craft.app.user.rememberedUsername }}">
+            </div>
 
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password">
+            <div>
+              <label for="password">Password</label>
+              <input id="password" type="password" name="password">
+            </div>
 
             <label>
               <input type="checkbox" name="rememberMe" value="1">
               Remember me
             </label>
 
-            <input class="button" type="submit" value="Login">
+            <input class="button submit" type="submit" value="Login">
 
             {% if errorMessage is defined %}
               <p>{{ errorMessage }}</p>
             {% endif %}
+
+            <p><a href="{{ url('forgotpassword') }}">Forgot your password?</a></p>
           </form>
-
-          <p><a href="{{ url('forgotpassword') }}">Forgot your password?</a></p>
-
         </div>
 
         {# Guest #}
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2 pt-6 md:pt-0 px-12">
           {% if entry.subheading %}
             <h2>{{ entry.subheading }}</h2>
           {% endif %}
 
-          <form method="post">
+          <h2 class="text-2xl mb-4">Guest checkout</h2>
+
+          <form method="post" class="space-y-6">
             {{ csrfInput() }}
             {{ actionInput('commerce/cart/update-cart') }}
             {{ redirectInput((addressPage ? addressPage.uri : 'checkout/address')) }}
 
-            <input type="text" name="email" value="{{ cart ? cart.email : '' }}" placeholder="{{ 'Email address'|t }}">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="text" name="email" value="{{ cart ? cart.email : '' }}" placeholder="{{ 'Email address'|t }}">
+            </div>
 
-            <input class="button" type="submit" name="submit" value="{{ 'Continue as Guest'|t }}">
+            <input class="button submit" type="submit" name="submit" value="{{ 'Continue as Guest'|t }}">
           </form>
         </div>
       </div>
