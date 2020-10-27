@@ -5,4 +5,5 @@ body {
   font-variant-numeric: proportional-nums;
   @apply antialiased;
   @apply text-base;
+  @apply text-gray-900;
 }
