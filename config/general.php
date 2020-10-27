@@ -37,6 +37,8 @@ return [
 
     // Staging environment settings
     'staging' => [
+        'devMode' => false,
+
         // Set this to `false` to prevent administrative changes from being made on staging
         'allowAdminChanges' => true,
 

@@ -47,6 +47,7 @@ return [
     ],
     // Staging (pre-production) environment
     'staging' => [
+        'useDevServer' => false,
     ],
     // Development environment
     'dev' => [
