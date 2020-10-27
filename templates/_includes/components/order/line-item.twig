@@ -23,9 +23,9 @@
       {# Product #}
       <div class="w-full lg:w-1/2 md:pr-6">
         {% if purchasable %}
-          <a class="block" href="{{ purchasable.product.url }}">
+          <a class="font-bold text-xl text-black" class="block" href="{{ purchasable.product.url }}">
         {% else %}
-          <div>
+          <div class="font-bold text-xl text-black">
         {% endif %}
             {{ lineItem.description }}
         {% if purchasable %}
