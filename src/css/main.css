@@ -30,6 +30,7 @@
 
 /* Components */
 @import 'components/button';
+@import 'components/shipping-method';
 
 /* Tailwind utilities */
 @import 'tailwindcss/utilities';
