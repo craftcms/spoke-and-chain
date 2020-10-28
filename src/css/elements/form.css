@@ -73,21 +73,16 @@ textarea {
     color: inherit;
 }
 
-&
-::-webkit-input-placeholder {
+&::-webkit-input-placeholder {
 
 }
 
 /* De-bork search fields */
 [type="search"] {
-
-    &
-    ::-webkit-search-cancel-button,
-    &
-    ::-webkit-search-decoration {
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
         -webkit-appearance: none;
     }
-
 }
 
 /* Make range inputs behave like textual form controls. */
