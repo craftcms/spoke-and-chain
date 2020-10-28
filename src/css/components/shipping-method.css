@@ -1,4 +1,3 @@
-.shipping-method input[type=radio]:checked.focused ~ label,
-.shipping-method input[type=radio]:checked:focus ~ label {
+.shipping-method input[type=radio]:focus ~ label {
     @apply shadow-outline;
 }
