@@ -90,17 +90,6 @@ textarea {
 
 }
 
-/*
-[type="radio"],
-[type="checkbox"] {
-
-    &:checked::after {
-
-    }
-
-}
-*/
-
 /* Make range inputs behave like textual form controls. */
 [type="range"] {
     display: block;
