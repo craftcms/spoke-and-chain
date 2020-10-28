@@ -1,7 +1,6 @@
 /* Tailwind */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 /* Elements */
 @import 'elements/abbr';
@@ -31,3 +30,6 @@
 
 /* Components */
 @import 'components/button';
+
+/* Tailwind utilities */
+@import 'tailwindcss/utilities';
