@@ -7,8 +7,9 @@
   <body class="font-sans overflow-x-hidden min-h-screen m-0 {% if bodyClass is defined %} {{ bodyClass }}{% endif %}">
 
     <div class="overflow-hidden lg:overflow-visible">
-
       {% block header %}{% endblock %}
+
+      {% include '_includes/components/notifications' %}
 
       <main>
         {% block main %}{% endblock %}
