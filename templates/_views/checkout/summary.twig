@@ -23,6 +23,15 @@
   </div>
 
   <form method="post" x-data="{ id: null, type: 'gateway' }">
+    {{ csrfInput() }}
+    {{ actionInput('commerce/payments/pay') }}
+    {{ redirectInput(successPage ?
+      successPage.uri ~ '?number=' ~ cart.number
+      : '/checkout/success?number=' ~ cart.number
+    ) }}
+    {{ hiddenInput('cancelUrl', entry.uri|hash) }}
+    {{ hiddenInput('orderEmail', cart.email) }}
+
     <div class="container flex justify-center">
       <div class="border-t border-gray-300 w-full max-w-5xl">
         {% for lineItem in cart.lineItems %}
