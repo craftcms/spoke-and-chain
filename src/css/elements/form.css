@@ -64,7 +64,8 @@ textarea {
 [type="tel"],
 [type="text"],
 [type="url"],
-textarea {
+textarea,
+select {
     @apply rounded;
     @apply border border-gray-500;
     @apply py-2 px-4;
@@ -97,7 +98,36 @@ textarea {
     height: auto;
 }
 
-select {
+.select {
+    @apply inline-block;
+    @apply relative;
+
+    &::before {
+        content: '';
+        @apply block;
+        @apply w-8;
+        @apply absolute;
+        right: 1rem;
+        top: 1px;
+        height: calc(100% - 2px);
+        pointer-events: none;
+        cursor: pointer;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 33%);
+    }
+
+    &::after {
+        content: '';
+        @apply block;
+        @apply h-4 w-4;
+        @apply absolute;
+        @apply bg-red-400;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        cursor: pointer;
+    }
 }
 
 /* Custom checkboxes */
