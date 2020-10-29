@@ -18,7 +18,7 @@
 
   <div class="container flex justify-center py-12">
     <div class="w-full max-w-2xl">
-      <form method="post" x-data="{ handle: {{ cart.shippingMethodHandle ? "'#{cart.shippingMethodHandle}'" : 'null' }} }">
+      <form method="post">
         {{ csrfInput() }}
         {{ actionInput('commerce/cart/update-cart') }}
         {{ redirectInput(summaryPage ? summaryPage.uri : 'checkout/summary') }}
@@ -36,10 +36,10 @@
           <div class="space-y-6">
               <div class="space-y-2">
                 {% for handle, method in cart.availableShippingMethodOptions %}
-                  <div class="shipping-method relative">
-                      <input id="shipping-method-{{ handle }}" class="focus:shadow-none z-0 w-5 h-5 top-0 left-0 w-full h-full cursor-pointer absolute opacity-75" type="radio" name="shippingMethodHandle" value="{{ handle }}" {% if handle == cart.shippingMethodHandle %}checked{% endif %} x-model="handle"/>
+                  <div class="option-select">
+                      <input id="shipping-method-{{ handle }}" type="radio" name="shippingMethodHandle" value="{{ handle }}" {% if handle == cart.shippingMethodHandle %}checked{% endif %}/>
 
-                      <label for="shipping-method-{{ handle }}" class="block border-2 rounded p-4" :class="{ 'border-blue-700': handle == '{{ handle }}', 'border-gray-300': handle != '{{ handle }}' }">
+                      <label for="shipping-method-{{ handle }}">
                           <strong>{{ method.name }}</strong><br>
                           <span class="price">{{ method.getPrice()|commerceCurrency(cart.currency) }}</span>
                       </label>
