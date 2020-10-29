@@ -12,6 +12,7 @@
   {% if cart and (not cart.email or not cart.lineItems|length)  %}
     {% redirect checkoutPage ? checkoutPage.uri : 'checkout' %}
   {% endif %}
+  {% set billingAddressSameAsShipping = (not cart.shippingAddressId and not cart.billingAddressId) or (cart.shippingAddressId and cart.billingAddressId and cart.shippingAddressId == cart.billingAddressId) %}
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
@@ -24,7 +25,9 @@
   <div class="container py-12">
     <div class="container flex justify-center">
       <div class="w-full max-w-2xl">
-        <form method="post" x-data="{ selectAddress: '{{ currentUser and addresses|length and cart.shippingAddressId ? cart.shippingAddressId : '' }}' }">
+        <form method="post" x-data="{
+          shippingAddress: '{{ currentUser and addresses|length and cart.shippingAddressId ? cart.shippingAddressId : '' }}',
+        }">
           {{ csrfInput() }}
           {{ actionInput('commerce/cart/update-cart') }}
           {{ redirectInput(shippingPage ? shippingPage.uri : 'checkout/shipping') }}
@@ -33,12 +36,13 @@
             <h2>{{ entry.heading }}</h2>
           {% endif %}
 
+            <h2 class="text-2xl mb-4">{{ 'Shipping Address'|t }}</h2>
             <div class="space-y-6">
                 <div class="space-y-2">
                     {% if currentUser and addresses|length %}
                         {% for address in addresses %}
                             <label class="w-full block border border-gray-300 rounded p-4">
-                                <input class="radio" type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="selectAddress">
+                                <input class="radio" type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="shippingAddress">
                                 {% for line in address.addressLines %}
                                     {{ line }}<br>
                                 {% endfor %}
@@ -46,13 +50,13 @@
                         {% endfor %}
 
                         <label class="w-full border border-gray-300 rounded p-4">
-                            <input class="radio" type="radio" name="shippingAddressId" value="" x-model="selectAddress">
+                            <input class="radio" type="radio" name="shippingAddressId" value="" x-model="shippingAddress">
                             {{ 'Add address'|t }}
                         </label>
-                        <template x-if="selectAddress == ''">
+                        <template x-if="shippingAddress == ''">
                             {% include '_includes/components/address/fields' with {
                                 modelName: 'shippingAddress',
-                                model: cart.shippingAddress
+                                model: {}
                             } %}
                         </template>
 
@@ -69,17 +73,52 @@
                 {# Fallback default for `billingAddressSameAsShipping` #}
                 {{ hiddenInput('billingAddressSameAsShipping', 0) }}
 
-                <div x-data="{ billingSameAsShipping: true }">
+                <div x-data="{
+                  billingSameAsShipping: {{ billingAddressSameAsShipping ? 'true' : 'false' }},
+                  billingAddress: '{{ currentUser and addresses|length and cart.billingAddressId ? cart.billingAddressId : '' }}'
+                }">
                     <div class="flex items-center">
                         <input class="checkbox" id="billingSameAsShipping" type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping">
                         <label class="ml-2" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
                     </div>
 
                     <template x-if="!billingSameAsShipping">
-                        {% include '_includes/components/address/fields' with {
-                            modelName: 'shippingAddress',
-                            model: cart.billingAddress
-                        } %}
+                      <div class="mt-4">
+                        <div>
+                          <h2 class="text-2xl mb-4">{{ 'Billing Address'|t }}</h2>
+                        </div>
+                        <div class="space-y-2">
+                          {% if currentUser and addresses|length %}
+                            {% for address in addresses %}
+                              <label class="w-full block border border-gray-300 rounded p-4">
+                                <input class="radio" type="radio" name="billingAddressId" value="{{ address.id }}" x-model="billingAddress">
+                                {% for line in address.addressLines %}
+                                  {{ line }}<br>
+                                {% endfor %}
+                              </label>
+                            {% endfor %}
+
+                            <label class="w-full border border-gray-300 rounded p-4">
+                              <input class="radio" type="radio" name="billingAddressId" value="" x-model="billingAddress">
+                              {{ 'Add address'|t }}
+                            </label>
+                            <template x-if="billingAddress == ''">
+                              {% include '_includes/components/address/fields' with {
+                                modelName: 'billingAddress',
+                                model: {}
+                              } %}
+                            </template>
+                          {% else %}
+                            <div>
+                              {% include '_includes/components/address/fields' with {
+                                modelName: 'billingAddress',
+                                model: cart.billingAddress,
+                                outputIdField: not (cart.billingAddress and cart.shippingAddress and cart.billingAddress.id == cart.shippingAddress.id)
+                              } %}
+                            </div>
+                          {% endif %}
+                        </div>
+                      </div>
                     </template>
                 </div>
 

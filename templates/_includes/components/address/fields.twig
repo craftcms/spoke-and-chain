@@ -2,9 +2,10 @@
 {% set states = craft.commerce.states.allEnabledStatesAsListGroupedByCountryId %}
 {% set countryId = model and model.countryId ? model.countryId : null %}
 {% set stateId = model and model.stateId ? model.stateId : null %}
+{% set outputIdField = outputIdField is defined ? outputIdField : true %}
 
 <div x-data="addresses()" x-init="countryId = {{ countryId ? "'#{countryId}'" : 'null' }}; stateId = {{ stateId ? "'#{stateId}'" : 'null' }}; modelName = '{{ modelName }}'; toggleStates()">
-  {% if model and model.id %}
+  {% if model and model.id and outputIdField %}
     {{ hiddenInput(modelName ~ '[id]', model.id) }}
   {% endif %}
   <div class="mt-3">
@@ -63,12 +64,14 @@
   <div class="flex -mx-4 mt-3">
     <div class="flex-1 mx-4">
       <label for="{{ modelName }}-countryId">Country *</label>
-      <select class="js-address-country w-full" name="{{ modelName }}[countryId]" x-on:change="onChange">
-        {% for key, option in countries %}
-          {% set optionValue = (model ? model.countryId : '') %}
-          <option value="{{ key }}" {% if key == optionValue %} selected{% endif %}>{{ option }}</option>
-        {% endfor %}
-      </select>
+      <div class="select w-full">
+        <select class="w-full" name="{{ modelName }}[countryId]" x-on:change="onChange">
+          {% for key, option in countries %}
+            {% set optionValue = (model ? model.countryId : '') %}
+            <option value="{{ key }}" {% if key == optionValue %} selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+      </div>
       {% if model and model.getErrors('countryId') %}
         <div class="text-red-700">{{ model.getErrors('countryId')|join }}</div>
       {% endif %}
@@ -76,11 +79,13 @@
     <div class="flex-1 mx-4">
       <label for="{{ modelName }}-state">State</label>
       {% set options = (model and states[model.countryId] is defined ? states[model.countryId] : []) %}
-      <select :id="stateSelectId" class="w-full" name="{{ modelName }}[stateValue]" x-model="stateId" x-show="showStateSelect">
-        <template x-for="(state, index) in states()" :key="state.id" x-if="states().length">
-          <option :value="state.id" x-text="state.name" :selected="state.id == stateId"></option>
-        </template>
-      </select>
+      <div class="select w-full" x-show="showStateSelect">
+        <select :id="stateSelectId" class="w-full" name="{{ modelName }}[stateValue]" x-model="stateId">
+          <template x-for="(state, index) in states()" :key="state.id" x-if="states().length">
+            <option :value="state.id" x-text="state.name" :selected="state.id == stateId"></option>
+          </template>
+        </select>
+      </div>
       <input
           type="text"
           :id="stateTextId"
