@@ -138,7 +138,7 @@
                 </div>
                 <div class="mt-12 xl:mt-0 space-y-4">
                     <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                        Language
+                        {{ footer.subheading }}
                     </h4>
                     <form class="mt-4 space-y-4 sm:max-w-xs">
                         <fieldset class="w-full">
@@ -236,7 +236,7 @@
                     </a>
                 </div>
                 <p class="mt-8 text-base leading-6 text-gray-600 md:mt-0 md:order-1">
-                    &copy; 2020 Spoke &amp; Chain, Inc. All rights reserved.
+                    &copy; {{ now|date('Y') }} {{ footer.heading }}
                 </p>
             </div>
         </div>
