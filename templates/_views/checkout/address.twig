@@ -41,18 +41,24 @@
                 <div class="space-y-2">
                     {% if currentUser and addresses|length %}
                         {% for address in addresses %}
-                            <label class="w-full block border border-gray-300 rounded p-4">
-                                <input class="radio" type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="shippingAddress">
-                                {% for line in address.addressLines %}
-                                    {{ line }}<br>
-                                {% endfor %}
-                            </label>
+                            <div class="option-select">
+                                <input id="shipping-address-{{ address.id }}" type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="shippingAddress">
+
+                                <label for="shipping-address-{{ address.id }}">
+                                  {% for key, line in address.addressLines %}
+                                    {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>
+                                  {% endfor %}
+                                </label>
+                            </div>
                         {% endfor %}
 
-                        <label class="w-full border border-gray-300 rounded p-4">
-                            <input class="radio" type="radio" name="shippingAddressId" value="" x-model="shippingAddress">
-                            {{ 'Add address'|t }}
-                        </label>
+                        <div class="option-select">
+                            <input id="shipping-address-new" type="radio" name="shippingAddressId" value="" x-model="shippingAddress">
+
+                            <label for="shipping-address-new">
+                              <strong>{{ 'Add address'|t }}</strong>
+                            </label>
+                        </div>
                         <template x-if="shippingAddress == ''">
                             {% include '_includes/components/address/fields' with {
                                 modelName: 'shippingAddress',
@@ -90,18 +96,24 @@
                         <div class="space-y-2">
                           {% if currentUser and addresses|length %}
                             {% for address in addresses %}
-                              <label class="w-full block border border-gray-300 rounded p-4">
-                                <input class="radio" type="radio" name="billingAddressId" value="{{ address.id }}" x-model="billingAddress">
-                                {% for line in address.addressLines %}
-                                  {{ line }}<br>
-                                {% endfor %}
-                              </label>
+                              <div class="option-select">
+                                <input id="billing-address-{{ address.id }}" type="radio" name="billingAddressId" value="{{ address.id }}" x-model="billingAddress">
+
+                                <label for="billing-address-{{ address.id }}">
+                                  {% for key, line in address.addressLines %}
+                                    {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>
+                                  {% endfor %}
+                                </label>
+                              </div>
                             {% endfor %}
 
-                            <label class="w-full border border-gray-300 rounded p-4">
-                              <input class="radio" type="radio" name="billingAddressId" value="" x-model="billingAddress">
-                              {{ 'Add address'|t }}
-                            </label>
+                            <div class="option-select">
+                              <input id="billing-address-new" type="radio" name="billingAddressId" value="" x-model="billingAddress">
+
+                              <label for="billing-address-new">
+                                <strong>{{ 'Add address'|t }}</strong>
+                              </label>
+                            </div>
                             <template x-if="billingAddress == ''">
                               {% include '_includes/components/address/fields' with {
                                 modelName: 'billingAddress',
