@@ -1,3 +1,0 @@
-.shipping-method input[type=radio]:focus ~ label {
-    @apply shadow-outline;
-}

@@ -31,7 +31,7 @@
 /* Components */
 @import 'components/button';
 @import 'components/modal';
-@import 'components/shipping-method';
+@import 'components/option-select';
 
 /* Tailwind utilities */
 @import 'tailwindcss/utilities';
