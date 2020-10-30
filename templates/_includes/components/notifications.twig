@@ -1,11 +1,18 @@
-<div id="notifications">
+<div id="notifications"
+     class="relative">
     {% for type in ['notice', 'error'] %}
         {% set message = craft.app.session.getFlash(type) %}
         {% if message %}
-            <div class="notification {{ type}} py-4 {{ type == 'error' ? 'bg-red-500' : 'bg-blue-500' }}">
-                <div class="container text-center">
-                    {{ message }}
-                </div>
+            <div x-data="notifications()" x-init="init('{{ type }}')">
+                <template x-if="show">
+                    <div x-spread="effects"
+                         class="absolute z-10 w-full flex justify-center">
+                        <div
+                                class="notification rounded-b text-white shadow-lg px-4 py-2 {{ type }} {{ type == 'error' ? 'bg-red-600' : 'bg-blue-500' }}">
+                                {{ message }}
+                        </div>
+                    </div>
+                </template>
             </div>
         {% endif %}
     {% endfor %}
