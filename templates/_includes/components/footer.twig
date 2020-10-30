@@ -167,60 +167,7 @@
                         </fieldset>
                     </form>
 
-                    {# Modal #}
-                    <div x-data="{}">
-                        <button @click="$dispatch('modal', { show: true, modalType: 'centered' })" class="button">
-                            Open Modal
-                        </button>
-                    </div>
-
-                    <div x-data="{}">
-                        <button @click="$dispatch('modal', { show: true, modalType: 'slideout' })" class="button">
-                            Open Slideout
-                        </button>
-                    </div>
-
-                    <div x-data="{ show: false, modalType: 'centered' }" class="relative z-10">
-                        <template x-on:modal.window="show = $event.detail.show; modalType = $event.detail.modalType;"></template>
-
-                        <template x-if="show">
-                            <div class="modal fixed inset-0 flex items-center justify-center" :class="{ 'modal-centered': modalType == 'centered', 'modal-slideout': modalType == 'slideout' }">
-                                <div class="modal-overlay absolute w-full h-full bg-black opacity-25 top-0 left-0 cursor-pointer" @click="show=false;"></div>
-                                <div class="modal-container absolute w-1/2 bg-white shadow-lg overflow-auto flex flex-col">
-                                    <div class="px-12 py-8 text-center bg-gray-200">
-                                        <h2>Some header</h2>
-                                    </div>
-
-                                    <div class="p-12 flex-1 overflow-auto">
-                                        <div class="text-center text-4xl">
-                                            <template x-if="modalType == 'centered'">
-                                                <div>🚀</div>
-                                            </template>
-                                            <template x-if="modalType == 'slideout'">
-                                                <div>👾</div>
-                                            </template>
-                                        </div>
-
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                                    </div>
-
-                                    <div class="px-12 py-8 text-center bg-gray-200">
-                                        <button @click="show=false;" class="button font-bold py-2 px-4 rounded">Cancel</button>
-                                        <button @click="show=false;" class="button submit font-bold py-2 px-4 rounded">Save</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
+                    {% include '_includes/components/modal' %}
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
