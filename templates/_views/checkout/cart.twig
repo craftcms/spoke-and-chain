@@ -30,7 +30,10 @@
 
           <div class="flex justify-end">
             <div class="w-full xl:w-4/5 pt-4">
-              {% include '_includes/components/order/totals' with { order: cart } only %}
+              {% include '_includes/components/order/totals' with {
+                order: cart,
+                form: true
+              } only %}
 
               <div class="pt-4">
                 <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">

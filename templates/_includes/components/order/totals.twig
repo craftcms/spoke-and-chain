@@ -1,4 +1,5 @@
 {% set order = order is not defined ? null : order %}
+{% set form = form is not defined ? false : form %}
 
 {% if order %}
   <!-- Template: {{ _self }}.twig -->
@@ -11,6 +12,31 @@
       <div>{{ 'Tax'|t }}</div>
       <div class="text-right">{{ order.totalTaxAsCurrency }}</div>
     </div>
+    {% if form or order.couponCode %}
+      <div class="flex items-center w-full justify-between pb-1">
+        <div>{{ 'Coupon'|t }}</div>
+        <div x-data="{ show: {{ form ? 'false' : 'true' }} }">
+          {% if not order.couponCode and form %}
+            <template x-if="!show">
+              <a href="#" @click.prevent="show=true;">{{ 'Enter coupon'|t }}</a>
+            </template>
+          {% elseif order.couponCode and form %}
+            <template x-if="show==false">
+              <div class="text-right">{{ order.couponCode }} <a href="#" @click.prevent="show=true;">{{ 'edit'|t }}</a></div>
+            </template>
+          {% else %}
+            <div class="text-right">{{ order.couponCode }}</div>
+          {% endif %}
+          {% if form %}
+            <template x-if="show">
+              <div>
+                <input type="text" name="couponCode" value="{{ order.couponCode }}">
+              </div>
+            </template>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
     {% if order.totalDiscount != 0 %}
       <div class="flex items-center w-full justify-between pb-1">
         <div>{{ 'Discount'|t }}</div>
