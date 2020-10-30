@@ -2,6 +2,8 @@
 namespace modules;
 
 use Craft;
+use craft\commerce\models\Address;
+use yii\base\Event;
 
 /**
  * Custom module class.
@@ -39,6 +41,16 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        // Custom initialization code goes here...
+        // Address validation rules
+        Event::on(Address::class, Address::EVENT_DEFINE_RULES, function ($event) {
+            $event->rules[] = [[
+                'firstName',
+                'lastName',
+                'address1',
+                'city',
+                'countryId',
+                'zipCode'
+            ], 'required'];
+        });
     }
 }
