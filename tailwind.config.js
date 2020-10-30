@@ -27,6 +27,9 @@ module.exports = {
             }
         },
     },
-    variants: {},
+    variants: {
+        transitionProperty: ['responsive', 'hover', 'group-hover', 'focus'],
+        translate: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+    },
     plugins: [],
 }

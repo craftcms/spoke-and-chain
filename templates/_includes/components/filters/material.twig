@@ -28,11 +28,15 @@
           {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
         {% endif %}
 
-        <a class="font-medium text-black hover:text-red-600 block px-3 py-1 rounded" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
+        <a class="flex justify-start w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
           {% if materialCategory.slug in selectedMaterials %}
-            {{ svg('@webroot/icons/checkmark.svg')|attr({ class: 'fill-current inline-block w-5 h-5' }) }}
+            <span class="w-5 h-5 overflow-hidden mr-1 relative">
+              {% set svgClasses = 'w-full h-full fill-current block transition-translate duration-500 ease-in-out transform absolute top-0 left-0' %}
+              {{ svg('@webroot/icons/checkmark.svg')|attr({ class: svgClasses ~ ' translate-x-0 group-hover:-translate-x-full' }) }}
+              {{ svg('@webroot/icons/cross.svg')|attr({ class: svgClasses ~ ' translate-x-full group-hover:translate-x-0' }) }}
+            </span>
           {% endif %}
-          {{ materialCategory.title }}
+          <span>{{ materialCategory.title }}</span>
         </a>
         {#
         {% if materialCategory.slug in selectedMaterials -%}
