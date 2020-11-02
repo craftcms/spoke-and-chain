@@ -8,7 +8,7 @@
     </div>
 
     <template x-if="show">
-        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
+        <div class="origin-top-right absolute right-0 mt-2 z-10 w-48 rounded-md shadow-lg">
             <div class="p-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <a class="block rounded flex items-center px-4 py-2 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">
                     {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
