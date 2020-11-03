@@ -1,5 +1,5 @@
 {% extends '_layouts/base' %}
-{% set cart = craft.commerce.carts.cart %}
+{% set cart = cart is not defined ? craft.commerce.carts.cart : cart %}
 {% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
 
 {# End Params #}
