@@ -2,7 +2,7 @@
 {% set errors = errors is not defined ? [] : errors %}
 
 {% if errors|length %}
-  <ul class="text-red-500">
+  <ul class="text-red-600">
     {% for error in errors %}
       <li>{{ error }}</li>
     {% endfor %}
