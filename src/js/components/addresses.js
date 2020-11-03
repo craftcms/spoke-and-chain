@@ -1,5 +1,6 @@
 window.addresses = function() {
     return {
+        modelId: null,
         countryId: null,
         stateId: null,
         modelName: null,
@@ -24,15 +25,27 @@ window.addresses = function() {
 
             return [];
         },
+        stateSelected(state) {
+            return state && state.id == this.stateId;
+        },
         toggleStates() {
 
             if (this.states().length) {
-                this.stateSelectId = this.modelName + '-state';
+                this.stateSelectId = this.modelName;
+                if (this.modelId) {
+                    this.stateSelectId = this.stateSelectId + '-' + this.modelId;
+                }
+                this.stateSelectId = this.stateSelectId + '-state';
+
                 this.stateTextId = '';
                 this.showStateSelect = true;
             } else {
                 this.stateSelectId = '';
-                this.stateTextId = this.modelName + '-state';
+                this.stateTextId = this.modelName;
+                if (this.modelId) {
+                    this.stateTextId = this.stateTextId + '-' + this.modelId;
+                }
+                this.stateTextId = this.stateTextId + '-state';
                 this.showStateSelect = false;
             }
 

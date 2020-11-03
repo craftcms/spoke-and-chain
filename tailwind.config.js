@@ -22,6 +22,9 @@ module.exports = {
             xxl: '1440px',
         },
         extend: {
+            inset: {
+                '1/2': '50%',
+            },
             spacing: {
                 '0.5': '0.125rem',
             }
