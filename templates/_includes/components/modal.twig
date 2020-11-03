@@ -1,70 +1,73 @@
 {# Modal #}
-<div x-data="modalButton('centered')">
+<div x-data="modalButton()">
     <button @click.prevent="open($dispatch)" class="button">
         Open Modal
     </button>
 </div>
 
-<div x-data="modalButton('slideout')">
+<div x-data="modalButton({
+  header: 'Something',
+  type: 'slideout',
+  content: '#shipping-address-edit-157838',
+  action: 'commerce/cart/update-cart',
+  buttons: []
+})">
     <button @click.prevent="open($dispatch)" class="button">
         Open Slideout
     </button>
 </div>
 
 <div x-data="modal()" class="relative z-10">
-    <template x-on:openmodal.window="openModal($event.detail.modalType)"></template>
+  <template x-on:openmodal.window="openModal($event.detail)" x-on:closemodal.window="closeModal()"></template>
 
-    <div
-            class="modal fixed inset-0 flex items-center justify-center"
-            :class="{ 'modal-centered': modalType == 'centered', 'modal-slideout': modalType == 'slideout', 'hidden': !showWrapper }"
-    >
-        <template x-if="show">
-            <div
-                    x-transition:enter="transition ease-out duration-300"
-                    x-transition:enter-start="opacity-0"
-                    x-transition:enter-end="opacity-100"
-                    x-transition:leave="transition ease-out duration-300"
-                    x-transition:leave-start="opacity-100"
-                    x-transition:leave-end="opacity-0"
-                    class="modal-overlay absolute w-full h-full bg-black bg-opacity-25 top-0 left-0 cursor-pointer"
-                    @click="closeModal()">
+  <div
+      class="modal fixed inset-0 flex items-center justify-center"
+      :class="{ 'modal-centered': modalType == 'centered', 'modal-slideout': modalType == 'slideout', 'hidden': !showWrapper }"
+  >
+    <template x-if="show">
+      <div
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-out duration-300"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="modal-overlay absolute w-full h-full bg-black bg-opacity-25 top-0 left-0 cursor-pointer"
+          @click="closeModal()">
+      </div>
+    </template>
+    <template x-if="show">
+      <div
+          x-spread="modalEffects"
+          class="modal-container absolute w-1/2 bg-white shadow-lg">
+        <form class="h-full w-full overflow-auto flex flex-col" :method="method">
+          {{ csrfInput() }}
+          <template x-if="action">
+            <input type="hidden" name="action" x-model="action">
+          </template>
+          <template x-if="redirect">
+            <input type="hidden" name="redirect" x-model="redirect">
+          </template>
+
+          <template x-if="header">
+            <div class="px-12 py-8 text-center bg-gray-200">
+              <h2 x-text="header"></h2>
             </div>
-        </template>
-        <template x-if="show">
-            <div
-                    x-spread="modalEffects"
-                    class="modal-container absolute w-1/2 bg-white shadow-lg overflow-auto flex flex-col">
-                <div class="px-12 py-8 text-center bg-gray-200">
-                    <h2>Some header</h2>
-                </div>
+          </template>
 
-                <div class="p-12 flex-1 overflow-auto">
-                    <div class="text-center text-4xl">
-                        <template x-if="modalType == 'centered'">
-                            <div>🚀</div>
-                        </template>
-                        <template x-if="modalType == 'slideout'">
-                            <div>👾</div>
-                        </template>
-                    </div>
+          <div class="p-12 flex-1 overflow-auto">
+            <div x-ref="contents"></div>
+          </div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aspernatur cum cupiditate distinctio dolore, et explicabo fugiat inventore iure mollitia nam nostrum odio placeat praesentium provident quo, tempore vero?</p>
-                </div>
-
-                <div class="px-12 py-8 text-center bg-gray-200">
-                    <button @click="closeModal()" class="button font-bold py-2 px-4 rounded">Cancel</button>
-                    <button @click="closeModal()" class="button submit font-bold py-2 px-4 rounded">Save</button>
-                </div>
+          <template x-if="buttons.length">
+            <div class="px-12 py-8 text-center bg-gray-200">
+              <template x-for="(button, index) in buttons" :key="index">
+                <button @click="buttonClick(button, $event)" class="button" :class="buttonClass(button)" x-text="button.label"></button>
+              </template>
             </div>
-        </template>
-    </div>
+          </template>
+        </form>
+      </div>
+    </template>
+  </div>
 </div>
