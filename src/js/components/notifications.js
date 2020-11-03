@@ -1,14 +1,21 @@
 window.notifications = function() {
     return {
-        show: false,
-        init: function(type) {
-            setTimeout(function() {
-                this.show = true
+        duration: 3000,
+        noticeVisible: false,
+        errorVisible: false,
+        init: function() {
+            this.$nextTick(() => {
+                this.noticeVisible = true
+                this.errorVisible = true
 
                 setTimeout(function() {
-                    this.show = false
-                }.bind(this), 3000 * (type === 'error' ? 2 : 1))
-            }.bind(this), 50)
+                    this.noticeVisible = false
+                }.bind(this), this.duration)
+
+                setTimeout(function() {
+                    this.errorVisible = false
+                }.bind(this), this.duration * 2)
+            })
         },
 
         effects: {
