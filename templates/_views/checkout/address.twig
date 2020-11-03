@@ -49,6 +49,28 @@
                                     {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>
                                   {% endfor %}
                                 </label>
+                                <div class="absolute top-1/2 right-0 pr-4 sm:pr-8 transform -translate-y-1/2" x-data="modalButton({
+                                  header: '{{ "Edit Address"|t }}',
+                                  type: 'slideout',
+                                  url: '{{ siteUrl("ajax/address/edit", { id: address.id }) }}',
+                                  action: 'commerce/customer-addresses/save',
+                                  redirect: '{{ entry.uri|hash }}',
+                                  buttons: [
+                                    {
+                                      label: '{{ "Cancel"|t }}',
+                                      close: true,
+                                      prevent: true
+                                    },
+                                    {
+                                      label: '{{ "Save"|t }}',
+                                      class: 'submit',
+                                    }
+                                  ]
+                                })">
+                                  <a href="#" @click.prevent="open($dispatch)">
+                                    {{ 'Edit'|t }}
+                                  </a>
+                                </div>
                             </div>
                         {% endfor %}
 
@@ -62,7 +84,7 @@
                         <template x-if="shippingAddress == ''">
                             {% include '_includes/components/address/fields' with {
                                 modelName: 'shippingAddress',
-                                model: {}
+                                model: cart.getErrors()|length and 'shippingAddress.' in cart.getErrors()|keys|join('||') ? cart.shippingAddress : {}
                             } %}
                         </template>
 

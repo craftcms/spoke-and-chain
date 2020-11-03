@@ -1,0 +1,18 @@
+{% set id = craft.app.request.getQueryParam('id', null) %}
+<div class="ajax-output">
+  {% if not id %}
+    <p>{{ 'Uanble to find address.'|t }}</p>
+  {% endif %}
+
+  {% set address = craft.commerce.addresses.getAddressByIdAndCustomerId(id, craft.commerce.customers.customer.id) %}
+  {% if not address %}
+    <p>{{ 'Uanble to find address.'|t }}</p>
+  {% else %}
+    {% include '_includes/components/address/fields' with {
+      modelName: 'address',
+      model: address,
+      outputIdField: true,
+    } %}
+  {% endif %}
+
+</div>
