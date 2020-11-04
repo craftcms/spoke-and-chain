@@ -4,7 +4,7 @@ import( /* webpackChunkName: "styles" */ '../css/main.css');
 import "core-js/stable";
 import 'alpinejs';
 import './components/addresses';
-import './components/cart-menu';
+import './components/header';
 import './components/modal';
 import './components/notifications';
 

@@ -4,11 +4,11 @@
 
 {# Output #}
 <header class="py-3 text-lg font-medium border-b border-solid border-gray-200">
-  <div class="container">
-    <div class="flex w-full">
-      <div x-data="{showNav: false}" class="flex flex-1 justify-between items-center">
+  <div class="px-4 lg:container">
+    <div x-data="header()" class="flex w-full">
+      <div class="flex flex-1 justify-between items-center">
         <!-- Mobile menu button -->
-        <div class="xl:hidden">
+        <div class="lg:hidden">
           <button @click="showNav = !showNav" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
             <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -21,7 +21,7 @@
         </div>
 
         {# Brand #}
-        <div class="xl:max-w-xs xl:w-full flex-1 xl:flex-none flex items-center justify-center xl:justify-start">
+        <div class="lg:max-w-xs lg:w-full flex-1 lg:flex-none flex items-center justify-center lg:justify-start">
           <a
                   title="{{ siteName }}"
                   class="inline-block px-4 py-2 text-black hover:text-red-600"
@@ -30,8 +30,8 @@
 
         {# Nav #}
         {% if showNav %}
-          <div class="absolute xl:relative z-10 border-t xl:border-t-0 border-gray-200 bg-white w-full top-0 left-0 bottom-0 right-0 xl:inset-auto mt-16 xl:mt-0" :class="{'hidden': !showNav, 'xl:block': true}">
-            <div class="px-8 xl:px-0">
+          <div class="absolute lg:relative z-10 border-t lg:border-t-0 border-gray-200 bg-white w-full top-0 left-0 bottom-0 right-0 lg:inset-auto mt-16 lg:mt-0" :class="{'hidden': !showNav, 'lg:block': true}">
+            <div class="px-8 lg:px-0">
               {% include '_includes/components/nav' with {} only %}
             </div>
           </div>
@@ -39,7 +39,7 @@
       </div>
 
       {# Search & Cart #}
-      <div class="xl:max-w-xs xl:w-full flex justify-end items-center">
+      <div class="lg:max-w-xs lg:w-full flex justify-end items-center">
         <div class="flex items-center">
           <div class="flex">
               <a class="inline-block px-4 py-2 text-black hover:text-red-600" href="#">

@@ -1,13 +1,13 @@
-<div x-data="cartMenu()" class="relative" @click.away="close">
+<div class="relative" @click.away="closeCartMenu">
     <div class="flex">
         <button
-                @click="open"
+                @click="openCartMenu"
                 class="inline-block px-4 py-2 text-black hover:text-red-600 cursor-pointer">
             {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-6 h-6' }) }}
         </button>
     </div>
 
-    <template x-if="show">
+    <template x-if="showCartMenu">
         <div class="origin-top-right absolute right-0 mt-2 z-10 w-48 rounded-md shadow-lg w-64">
             <div class="p-6 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <div class="space-y-4">
