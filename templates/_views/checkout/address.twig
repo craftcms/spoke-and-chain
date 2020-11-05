@@ -54,15 +54,17 @@
                                   type: 'slideout',
                                   url: '{{ siteUrl("ajax/address/edit", { id: address.id }) }}',
                                   action: 'commerce/customer-addresses/save',
-                                  redirect: '{{ entry.uri|hash }}',
+                                  errorKey: 'address{{ address.id }}errors',
+                                  redirect: '{{ entry.url }}',
                                   buttons: [
                                     {
                                       label: '{{ "Cancel"|t }}',
-                                      close: true,
+                                      type: 'close',
                                       prevent: true
                                     },
                                     {
                                       label: '{{ "Save"|t }}',
+                                      type: 'submit',
                                       class: 'submit',
                                     }
                                   ]
