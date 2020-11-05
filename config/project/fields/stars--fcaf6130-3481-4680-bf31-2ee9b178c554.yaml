@@ -1,0 +1,11 @@
+contentColumnType: string
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+handle: stars
+instructions: ''
+name: Stars
+searchable: false
+settings:
+  maxStars: '5'
+translationKeyFormat: null
+translationMethod: none
+type: oberon\starfield\fields\StarField

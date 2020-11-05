@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+handle: product
+instructions: ''
+name: Product
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\commerce\fields\Products
