@@ -5,6 +5,7 @@
     "craftcms/commerce": "^3.2",
     "craftcms/redactor": "^2.8",
     "nystudio107/craft-twigpack": "^1.2",
+    "oberon/starfield": "^1.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
