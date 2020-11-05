@@ -1,0 +1,3 @@
+{
+  "lastsemic"     : true,     // true: Tolerate omitting a semicolon for the last statement of a 1-line block
+}
