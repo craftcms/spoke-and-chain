@@ -30,7 +30,7 @@ fieldLayouts:
         sortOrder: 1
 handle: articlesLanding
 hasTitleField: false
-name: 'Articles Landing'
+name: Articles
 section: 706870b0-b231-4710-947c-e3e6bd5c7062
 sortOrder: 1
 titleFormat: '{section.name|raw}'

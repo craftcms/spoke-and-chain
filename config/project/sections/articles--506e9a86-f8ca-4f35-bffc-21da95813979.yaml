@@ -1,6 +1,6 @@
 enableVersioning: true
 handle: articles
-name: Articles
+name: 'Article Posts'
 previewTargets:
   -
     __assoc__:
