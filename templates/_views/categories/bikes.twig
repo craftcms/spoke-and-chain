@@ -16,7 +16,7 @@
 {% set productIds = [] %}
 
 {# Variables #}
-{% set isAllBikes = category is not defined %}
+{% set isAllBikes = category is not defined and entry is defined and entry.type.handle == 'bikesLanding' %}
 {# Get all the categories for the sidebar filter #}
 {% set colorCategories = craft.categories({
   group: 'colors'
@@ -45,9 +45,15 @@
   {% endif %}
 {% endif %}
 
-{% set productQuery = craft.products({
-  relatedTo: [category]
-}) %}
+{% set productQueryOptions = {
+  type: 'bike'
+} %}
+{% if not isAllBikes %}
+  {% set productQueryOptions = productQueryOptions|merge({
+    relatedTo: [category]
+  }) %}
+{% endif %}
+{% set productQuery = craft.products(productQueryOptions) %}
 {% if not productIds|length and colorSlugs|length  %}
   {# If there are no matching products for the other filters we need not return anything #}
   {% set products = [] %}
@@ -66,7 +72,7 @@
   <div>
     {% include '_includes/components/hero' with {
       image: null,
-      title: category.title,
+      title: isAllBikes ? entry.title : category.title,
       button: 'Click',
       short: true,
     } only %}
@@ -79,6 +85,7 @@
           {% include '_includes/components/filters/bike' with {
             types: bikeCategories,
             selected: category is defined ? category.id : null,
+            urlFilterParams: urlFilterParams
           } only %}
           {% if colorCategories|length %}
             <hr class="my-6">
