@@ -3,6 +3,8 @@ window.modal = function() {
         action: null, // action string for the form
         buttons: [], // buttons to display format: {}
         callback: null, // buttons to display format: {}
+        contentLoaded: false,
+        errorKey: null,
         form: false, // whether or not to output the form
         header: null, // header text
         method: 'post',
@@ -10,6 +12,8 @@ window.modal = function() {
         redirect: null,
         show: false,
         showWrapper: false,
+        submitting: false,
+        success: false,
         url: null, // HTML content for the modal
 
         openModal: function(options) {
@@ -18,14 +22,14 @@ window.modal = function() {
             this.showWrapper = true
 
             this.action = options.action != undefined ? options.action : this.action
+            this.buttons = options.buttons != undefined ? options.buttons : []
+            this.callback = options.callback != undefined ? options.callback : this.callback
+            this.errorKey = options.errorKey != undefined ? options.errorKey : this.errorKey
             this.header = options.header != undefined ? options.header : this.header
             this.method = options.method != undefined ? options.method : this.method
             this.modalType = options.type != undefined ? options.type : 'slideout'
-            this.url = options.url != undefined ? options.url : this.url
             this.redirect = options.redirect != undefined ? options.redirect : this.redirect
-            this.callback = options.callback != undefined ? options.callback : this.callback
-
-            this.buttons = options.buttons != undefined ? options.buttons : []
+            this.url = options.url != undefined ? options.url : this.url
         },
         closeModal: function() {
             console.log('closeModal')
@@ -36,11 +40,12 @@ window.modal = function() {
             }.bind(this), 500)
         },
         hideContent() {
-            this.$refs.contents.innerHtml = ''
+            this.contentLoaded = false
         },
         showContent(element) {
             if (element) {
                 this.$refs.contents.appendChild(element)
+                this.contentLoaded = true
             }
         },
         loadContent() {
@@ -58,30 +63,49 @@ window.modal = function() {
                 throw new Error('Callback provided is not a function: ', callback);
             }
 
-            var xhr = new XMLHttpRequest();
-            var finished = false;
-            xhr.onabort = xhr.onerror = function xhrError() {
-                finished = true;
-                callback(null, xhr.statusText);
-            };
+            fetch(url)
+                .then(response => response.text())
+                .then(text => {
+                    let parser = new DOMParser();
+                    let htmlDoc = parser.parseFromString(text, 'text/html');
+                    let content = htmlDoc.documentElement.querySelector(selector);
 
-            xhr.onreadystatechange = function xhrStateChange() {
-                if (xhr.readyState === 4 && !finished) {
-                    finished = true;
-                    var section;
-                    try {
-                        section = xhr.responseXML.querySelector(selector);
-                        console.log('selector', section);
-                        callback(section);
-                    } catch (e) {
-                        callback(null, e);
+                    callback(content);
+                }).catch(err => {
+                    callback(null, err);
+            });
+        },
+        submit($event, $dispatch) {
+            this.submitting = true;
+
+            let $form = $event.target;
+            var data = new FormData($form);
+
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: data,
+            })
+                .then(response => response.json())
+                .then(result => {
+                    this.submitting = false;
+
+                    if (result.success == undefined) {
+                        if (result.error && this.errorKey && result.errors != undefined) {
+                            $dispatch(this.errorKey, result.errors);
+                        }
+                    } else if (result.success) {
+                        this.success = true;
+                        window.location = this.redirect;
                     }
-                }
-            };
-
-            xhr.open('GET', url);
-            xhr.responseType = 'document';
-            xhr.send();
+                })
+                .catch(error => {
+                    this.submitting = false;
+                    alert(result.message);
+                    console.error('Error:', error);
+                });
         },
         buttonClass(button) {
             if (button && button.class != undefined) {
@@ -95,7 +119,7 @@ window.modal = function() {
                 $event.preventDefault();
             }
 
-            if (button && button.close != undefined && button.close) {
+            if (button && button.type != undefined && button.type == 'close') {
                 this.closeModal();
             }
         },

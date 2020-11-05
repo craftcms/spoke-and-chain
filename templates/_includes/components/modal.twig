@@ -40,13 +40,10 @@
       <div
           x-spread="modalEffects"
           class="modal-container absolute w-1/2 bg-white shadow-lg">
-        <form class="h-full w-full overflow-auto flex flex-col" :method="method">
+        <form class="h-full w-full overflow-auto flex flex-col" :method="method" x-on:submit.prevent="submit($event, $dispatch)">
           {{ csrfInput() }}
           <template x-if="action">
             <input type="hidden" name="action" x-model="action">
-          </template>
-          <template x-if="redirect">
-            <input type="hidden" name="redirect" x-model="redirect">
           </template>
 
           <template x-if="header">
@@ -56,13 +53,24 @@
           </template>
 
           <div class="p-12 flex-1 overflow-auto">
-            <div x-ref="contents"></div>
+            <template x-if="!contentLoaded && !success">
+              <div>
+                Loading…
+              </div>
+            </template>
+            <div x-ref="contents" :class="{ 'hidden': !contentLoaded || success }"></div>
+            <template x-if="contentLoaded && success">
+              <div class="text-center">Success!</div>
+            </template>
           </div>
 
           <template x-if="buttons.length">
             <div class="px-12 py-8 text-center bg-gray-200">
-              <template x-for="(button, index) in buttons" :key="index">
+              <template x-for="(button, index) in buttons" :key="index" x-if="!submitting">
                 <button @click="buttonClick(button, $event)" class="button" :class="buttonClass(button)" x-text="button.label"></button>
+              </template>
+              <template x-if="submitting">
+                <div>Submitting</div>
               </template>
             </div>
           </template>
