@@ -7,6 +7,8 @@ window.addresses = function() {
         stateSelectId: null,
         stateTextId: null,
         showStateSelect: false,
+        errors: {},
+
         allStates() {
             return window.addressStates;
         },
@@ -53,6 +55,20 @@ window.addresses = function() {
         onChange(ev) {
             this.countryId = ev.target.value;
             this.toggleStates();
+        },
+        getErrors(key) {
+            if (!Object.keys(this.errors).length || Object.keys(this.errors).indexOf(key) === -1) {
+                return false;
+            }
+
+            return this.errors[key];
+        },
+        hasErrors(key) {
+            let errors = this.getErrors(key);
+            return errors && errors.length;
+        },
+        updateErrors(errors) {
+            this.errors = errors;
         }
     };
 };
