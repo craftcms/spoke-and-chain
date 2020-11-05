@@ -5,62 +5,59 @@
 {% set outputIdField = outputIdField is defined ? outputIdField : true %}
 {% set idName = model and model.id ? modelName ~ '-' ~ model.id : modelName %}
 
-<div x-data="addresses()" x-init="modelId = '{{ model and model.id ? model.id : "null" }}';countryId = {{ countryId ? "'#{countryId}'" : 'null' }}; stateId = {{ stateId ? "'#{stateId}'" : 'null' }}; modelName = '{{ modelName }}'; toggleStates()">
+<div x-data="addresses()" x-init="
+  modelId = '{{ model and model.id ? model.id : "null" }}';
+  countryId = {{ countryId ? "'#{countryId}'" : 'null' }};
+  stateId = {{ stateId ? "'#{stateId}'" : 'null' }};
+  modelName = '{{ modelName }}';
+  toggleStates();
+  errors = {{ (model ? model.getErrors() : {})|json_encode }};
+"
+>
+{% if model and model.id %}
+  <template x-on:address{{ model.id }}errors.window="updateErrors($event.detail)"></template>
+{% endif %}
   {% if model and model.id and outputIdField %}
     {{ hiddenInput(modelName ~ '[id]', model.id) }}
   {% endif %}
   <div class="mt-3">
     <label for="{{ idName }}-firstName">{{ 'First Name'|t }}</label>
-    <input type="text" id="{{ idName }}-firstName" class="w-full {{ model and model.getErrors('firstName')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[firstName]" value="{{ model ? model.firstName : '' }}">
-    {% if model and model.getErrors('firstName') %}
-      {% include '_includes/components/forms/error-list' with { errors: model.getErrors('firstName') } only %}
-    {% endif %}
+    <input type="text" id="{{ idName }}-firstName" class="w-full" :class="{ 'border-red-600': hasErrors('firstName') }" name="{{ modelName }}[firstName]" value="{{ model ? model.firstName : '' }}">
+    {% include '_includes/components/forms/error-list' with { key: 'firstName' } only %}
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-lastName">{{ 'Last Name'|t }}</label>
     <input type="text" id="{{ idName }}-lastName" class="w-full {{ model and model.getErrors('lastName')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[lastName]" value="{{ model ? model.lastName : '' }}">
-    {% if model and model.getErrors('lastName') %}
-      {% include '_includes/components/forms/error-list' with { errors: model.getErrors('lastName') } only %}
-    {% endif %}
+    {% include '_includes/components/forms/error-list' with { key: 'lastName' } only %}
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-address1">{{ 'Address 1'|t }}</label>
     <input type="text" id="{{ idName }}-address1" class="w-full {{ model and model.getErrors('address1')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[address1]" value="{{ model ? model.address1 : '' }}">
-    {% if model and model.getErrors('address1') %}
-      {% include '_includes/components/forms/error-list' with { errors: model.getErrors('address1') } only %}
-    {% endif %}
+    {% include '_includes/components/forms/error-list' with { key: 'address1' } only %}
   </div>
 
   <div class="mt-3">
     <label for="{{ idName }}-address2">{{ 'Address 2'|t }} <small class="text-gray-500">({{ 'optional'|t }})</small></label>
     <input type="text" id="{{ idName }}-address2" class="w-full {{ model and model.getErrors('address2')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[address2]" value="{{ model ? model.address2 : '' }}">
-    {% if model and model.getErrors('address2') %}
-      {% include '_includes/components/forms/error-list' with { errors: model.getErrors('address2') } only %}
-    {% endif %}
+    {% include '_includes/components/forms/error-list' with { key: 'address2' } only %}
   </div>
 
   <div class="flex -mx-4 mt-3">
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-city">{{ 'City'|t }}</label>
       <input type="text" id="{{ idName }}-city" class="w-full {{ model and model.getErrors('city')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[city]" value="{{ model ? model.city : '' }}">
-      {% if model and model.getErrors('city') %}
-        {% include '_includes/components/forms/error-list' with { errors: model.getErrors('city') } only %}
-      {% endif %}
+      {% include '_includes/components/forms/error-list' with { key: 'city' } only %}
     </div>
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-zipCode">{{ 'Zip Code'|t }}</label>
       <input type="text" id="{{ idName }}-zipCode" class="w-full {{ model and model.getErrors('zipCode')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[zipCode]" value="{{ model ? model.zipCode : '' }}">
-      {% if model and model.getErrors('zipCode') %}
-        {% include '_includes/components/forms/error-list' with { errors: model.getErrors('zipCode') } only %}
-      {% endif %}
+      {% include '_includes/components/forms/error-list' with { key: 'zipCode' } only %}
     </div>
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-phone">{{ 'Phone'|t }} <small class="text-gray-500">({{ 'optional'|t }})</small></label>
     <input type="text" id="{{ idName }}-phone" class="w-full {{ model and model.getErrors('phone')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[phone]" value="{{ model ? model.phone : '' }}">
-    {% if model and model.getErrors('phone') %}
-      {% include '_includes/components/forms/error-list' with { errors: model.getErrors('phone') } only %}
-    {% endif %}
+    {% include '_includes/components/forms/error-list' with { key: 'phone' } only %}
   </div>
   <div class="flex -mx-4 mt-3">
     <div class="flex-1 mx-4">
@@ -73,9 +70,7 @@
           {% endfor %}
         </select>
       </div>
-      {% if model and model.getErrors('countryId') %}
-        {% include '_includes/components/forms/error-list' with { errors: model.getErrors('countryId') } only %}
-      {% endif %}
+      {% include '_includes/components/forms/error-list' with { key: 'countryId' } only %}
     </div>
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-state">{{ 'State'|t }} <small class="text-gray-500" x-show="!showStateSelect">({{ 'optional'|t }})</small></label>
@@ -95,9 +90,7 @@
           value="{{ model ? model.stateName : '' }}"
           x-show="!showStateSelect"
       >
-      {% if model and model.getErrors('stateValue') %}
-        {% include '_includes/components/forms/error-list' with { errors: model.getErrors('stateValue') } only %}
-      {% endif %}
+      {% include '_includes/components/forms/error-list' with { key: 'stateValue' } only %}
     </div>
   </div>
 </div>
