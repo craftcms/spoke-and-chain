@@ -1,13 +1,30 @@
 <!-- Template: {{ _self }}.twig -->
 {# Variables #}
+{% set navItems = [] %}
+{% set bikesLanding = craft.entries({ section: 'bikesLanding' }).one() ?? null %}
+{% if bikesLanding %}
+  {% set navItems = navItems|merge([{
+    label: bikesLanding.title,
+    url: bikesLanding.url,
+    selected: false
+  }]) %}
+{% endif %}
+{% set navItems = navItems|merge([
+  { label: 'Equipment', url: '/', selected: false },
+  { label: 'Services', url: '/', selected: false },
+  { label: 'Articles', url: '/', selected: false },
+  { label: 'Contact', url: '/', selected: false },
+]) %}
 
 {# Output #}
-<nav>
-  <ul class="list-none p-0 flex flex-col lg:flex-row justify-center">
-    <li class="border-b border-gray-200 lg:border-b-0"><a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="/">Bikes</a></li>
-    <li class="border-b border-gray-200 lg:border-b-0"><a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="/">Equipment</a></li>
-    <li class="border-b border-gray-200 lg:border-b-0"><a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="/">Services</a></li>
-    <li class="border-b border-gray-200 lg:border-b-0"><a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="/">Articles</a></li>
-    <li class="border-b border-gray-200 lg:border-b-0"><a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="/">Contact</a></li>
-  </ul>
-</nav>
+{% if navItems|length %}
+  <nav>
+    <ul class="list-none p-0 flex flex-col lg:flex-row justify-center">
+      {% for item in navItems %}
+        <li class="border-b border-gray-200 lg:border-b-0">
+          <a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
