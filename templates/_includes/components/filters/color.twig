@@ -34,7 +34,7 @@
           <span class="mr-2 flex rounded-full p-0.5 border {{ colorCategory.slug in selectedColors ? 'border-gray-900' : 'border-transparent' }}">
             <span class="inline-block h-5 w-5 rounded-full" style="background-color: {{ colorCategory.color }}"></span>
           </span>
-          <span>{{ colorCategory.title }}{#{{ colorCategory.slug in selectedColors ? ' ✅' : '' }}#}</span>
+          <span>{{ colorCategory.title }}</span>
         </a>
       </li>
     {% endfor %}

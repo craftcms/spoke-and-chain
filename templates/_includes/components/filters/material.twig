@@ -38,13 +38,6 @@
           {% endif %}
           <span>{{ materialCategory.title }}</span>
         </a>
-        {#
-        {% if materialCategory.slug in selectedMaterials -%}
-          {%- set materialParams = selectedMaterials|filter(s => s != materialCategory.slug) -%}
-          {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
-          <a class="absolute right-0 top-0 mr-2" href="{{ _macros.filterSiteUrl(url, filterParams) }}">x</a>
-        {% endif %}
-        #}
       </li>
     {% endfor %}
   </ul>
