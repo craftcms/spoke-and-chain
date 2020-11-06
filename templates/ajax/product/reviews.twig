@@ -1,0 +1,18 @@
+{% set id = craft.app.request.getQueryParam('id', null) %}
+<!-- Template: {{ _self }}.twig -->
+<div class="ajax-output">
+  {% if not id %}
+    <p>{{ 'Uanble to find reviews.'|t }}</p>
+  {% endif %}
+
+  {% set reviews = craft.entries({ section: 'reviews', relatedTo: id, orderBy: 'postDate DESC' }).all() %}
+  {% if not reviews %}
+    <p>{{ 'Uanble to find reviews.'|t }}</p>
+  {% else %}
+    {% for review in reviews %}
+      <div {% if not loop.first %}class="border-t border-gray-300 mt-4 pt-4"{% endif %}>
+    	{% include '_includes/components/products/review' with { review: review } only %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

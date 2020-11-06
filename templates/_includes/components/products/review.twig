@@ -1,0 +1,13 @@
+{% set review = review is not defined ? null : review %}
+
+{% if review %}
+  <!-- Template: {{ _self }}.twig -->
+  <div>
+    <p>{{ 'Name'|t }}: {{ review.title }}</p>
+    <p>{{ 'Rating'|t }}: {{ review.stars }}/5</p>
+    <div>
+      <h4>{{ 'Review'|t }}</h4>
+      {{ review.body }}
+    </div>
+  </div>
+{% endif %}

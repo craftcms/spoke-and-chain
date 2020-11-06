@@ -1,11 +1,19 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{% spaceless %}
-  {# Variables #}
-  {% set defaultVariant = product.defaultVariant %}
-  {% set productColors = product.colors.all() %}
-{% endspaceless %}
+{# Variables #}
+{% set defaultVariant = product.defaultVariant %}
+{% set productColors = product.colors.all() %}
+{% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
+{% set hasReviews = reviews and reviews|length %}
+{% set averageRating = hasReviews ? 0 : false %}
+{% set mostRecentReview = hasReviews ? reviews|first : false %}
+{% for review in reviews %}
+	{% set averageRating = averageRating + review.stars %}
+    {% if loop.last %}
+      {% set averageRating = (averageRating / reviews|length)|round(1) %}
+    {% endif %}
+{% endfor %}
 
 {# Blocks #}
 {% block content %}
@@ -73,8 +81,10 @@
   </div>
 
   <div class="bg-gray-200 py-8">
-    <div class="container flex justify-center">
-      <div class="max-w-3xl">
+    <div class="container">
+      {# Description #}
+      <div class="mx-auto max-w-3xl">
+        <h2>{{ 'Desciription'|t }}</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
         </p>
@@ -97,6 +107,39 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
         </p>
       </div>
+
+      {# Reviews #}
+      {% if hasReviews %}
+        <div class="mx-auto max-w-3xl mt-4">
+          <div>
+            <h2>{{ 'Reviews'|t }}</h2>
+            <p>{{ '{number} review(s)'|t('site', { number: reviews|length }) }}</p>
+            <p>{{ 'Average review {number}/5'|t('site', { number: averageRating }) }}</p>
+          </div>
+
+          <div class="mt-4">
+            <h3>{{ 'Most Recent Review'|t }}</h3>
+            {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
+          </div>
+
+          {% if reviews|length > 1 %}
+            <div x-data="modalButton({
+              header: '{{ "{product} Reviews"|t('site', { product: product.title }) }}',
+              type: 'slideout',
+              url: '{{ siteUrl("ajax/product/reviews", { id: product.id }) }}',
+              buttons: [
+                {
+                  label: '{{ "Close"|t }}',
+                  type: 'close',
+                  prevent: true
+                }
+              ]
+            })" class="mt-4">
+              <a class="button" href="#" x-on:click.prevent="open($dispatch)">{{ 'See all reviews'|t }}</a>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endblock %}
