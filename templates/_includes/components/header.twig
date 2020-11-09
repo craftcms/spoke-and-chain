@@ -7,8 +7,9 @@
     'fixed-nav': true
 }">
   <div id="main-nav"
-       class="py-3 text-lg font-medium border-b border-solid border-gray-200 bg-white transform transition-transform duration-0"
+       class="py-3 text-lg font-medium border-b border-solid border-gray-200 bg-white transform transition-transform"
        :class="{
+'duration-300': scrollDirection == 'up' || (scrollDirection == 'down' && hasScrolledPastHeader()),
 'translate-y-0': mainNavVisible,
 '-translate-y-full': !mainNavVisible,
 'fixed top-0 left-0 right-0 z-10': mainNavFixed,

@@ -13,6 +13,7 @@ window.header = function() {
         mainNavVisible: true,
         mainNavFixed: true,
         mainNavHeight: 0,
+        scrollDirection: 'down',
 
         init() {
             this.updateMainNavHeight()
@@ -24,6 +25,7 @@ window.header = function() {
             const scrollValue = window.scrollY
 
             if (scrollValue > this.lastScrollValue) {
+                this.scrollDirection = 'down'
                 // Scroll down
                 this.mainNavVisible = false
 
@@ -35,10 +37,16 @@ window.header = function() {
                 }
             } else {
                 // Scroll up
+                this.scrollDirection = 'up'
                 this.mainNavVisible = true
             }
 
             this.lastScrollValue = scrollValue
+        },
+
+        hasScrolledPastHeader() {
+            // +10 for tolerance
+            return this.lastScrollValue > 0 && this.lastScrollValue > (this.mainNavHeight + 10)
         },
 
         updateMainNavHeight() {
