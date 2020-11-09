@@ -27,6 +27,7 @@
 @import 'utilities/aspect-ratio';
 @import 'utilities/center';
 @import 'utilities/hide';
+@import 'utilities/table-data';
 
 /* Components */
 @import 'components/button';

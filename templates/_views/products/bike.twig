@@ -9,10 +9,10 @@
 {% set averageRating = hasReviews ? 0 : false %}
 {% set mostRecentReview = hasReviews ? reviews|first : false %}
 {% for review in reviews %}
-	{% set averageRating = averageRating + review.stars %}
-    {% if loop.last %}
-      {% set averageRating = (averageRating / reviews|length)|round(1) %}
-    {% endif %}
+  {% set averageRating = averageRating + review.stars %}
+  {% if loop.last %}
+    {% set averageRating = (averageRating / reviews|length)|round(1) %}
+  {% endif %}
 {% endfor %}
 
 {# Blocks #}
@@ -39,7 +39,9 @@
           <h1>{{ product.title }}</h1>
           <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
           {% if defaultVariant.onSale %}
-            <div><del>{{ defaultVariant.priceAsCurrency }}</del></div>
+            <div>
+              <del>{{ defaultVariant.priceAsCurrency }}</del>
+            </div>
           {% endif %}
         </div>
 
@@ -50,7 +52,10 @@
             {% if productColors %}
               <div class="flex">
                 {% for color in productColors %}
-                  <div class="h-4 w-4 rounded-full mr-1" style="background-color: {{ color.color }}" aria-label="{{ color.title }}" title="{{ color.title }}">
+                  <div class="h-4 w-4 rounded-full mr-1"
+                       style="background-color: {{ color.color }}"
+                       aria-label="{{ color.title }}"
+                       title="{{ color.title }}">
                     <span class="visuallyhidden">{{ color.title }}</span>
                   </div>
                 {% endfor %}
@@ -61,7 +66,8 @@
             <div>
               <select name="purchasableId">
                 {% for variant in product.variants %}
-                  <option value="{{ variant.id }}" {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
+                  <option value="{{ variant.id }}"
+                          {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
                 {% endfor %}
               </select>
 
@@ -74,56 +80,251 @@
 
         {# Product Buy #}
         <div class="w-1/4 text-right">
-          <input class="button" type="submit" name="submit" value="{{ 'Add to cart'|t('site') }}">
+          <input class="button" type="submit" name="submit"
+                 value="{{ 'Add to cart'|t('site') }}">
         </div>
       </div>
     </form>
   </div>
 
-  <div class="bg-gray-200 py-8">
-    <div class="container">
-      {# Description #}
-      <div class="mx-auto max-w-3xl">
-        <h2>{{ 'Desciription'|t }}</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam distinctio dolor pariatur saepe. Accusamus cumque repudiandae sit! At consectetur cumque dolorem, facilis, incidunt non nostrum quisquam sequi veniam, voluptas voluptatibus.
-        </p>
-      </div>
-
-      {# Reviews #}
+  {# Product Nav #}
+  <div id="product-nav" class="bg-gray-300 flex py-3">
+    <ul class="flex-1 flex justify-center">
+      <li class="mx-1">
+        <a
+                class="text-gray-900 font-medium inline-block px-4 py-2"
+                href="#overview">Overview</a>
+      </li>
+      <li class="mx-1">
+        <a
+                class="text-gray-900 font-medium inline-block px-4 py-2"
+                href="#components">Components</a>
+      </li>
+      <li class="mx-1">
+        <a
+                class="text-gray-900 font-medium inline-block px-4 py-2"
+                href="#geometry">Geometry</a>
+      </li>
       {% if hasReviews %}
-        <div class="mx-auto max-w-3xl mt-4">
-          <div>
-            <h2>{{ 'Reviews'|t }}</h2>
-            <p>{{ '{number} review(s)'|t('site', { number: reviews|length }) }}</p>
-            <p>{{ 'Average review {number}/5'|t('site', { number: averageRating }) }}</p>
-          </div>
+        <li class="mx-1">
+          <a
+                  class="text-gray-900 font-medium inline-block px-4 py-2"
+                  href="#reviews">Reviews</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
 
-          <div class="mt-4">
-            <h3>{{ 'Most Recent Review'|t }}</h3>
-            {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
-          </div>
+  {# Product Content #}
+  <div class="bg-gray-200 py-8">
+    <div class="container flex justify-center">
+      <div class="max-w-3xl">
+        <div id="overview" class="pt-16">
+          <h2 class="text-xl">Overview</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
+            cumque repudiandae sit! At consectetur cumque dolorem,
+            facilis, incidunt non nostrum quisquam sequi veniam,
+            voluptas voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
+            cumque repudiandae sit! At consectetur cumque dolorem,
+            facilis, incidunt non nostrum quisquam sequi veniam,
+            voluptas voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
+            cumque repudiandae sit! At consectetur cumque dolorem,
+            facilis, incidunt non nostrum quisquam sequi veniam,
+            voluptas voluptatibus.
+          </p>
+        </div>
+        <div id="components" class="pt-16">
+          <h2 class="text-xl">Components</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
+            cumque repudiandae sit! At consectetur cumque dolorem,
+            facilis, incidunt non nostrum quisquam sequi veniam,
+            voluptas voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
+            cumque repudiandae sit! At consectetur cumque dolorem,
+            facilis, incidunt non nostrum quisquam sequi veniam,
+            voluptas voluptatibus.
+          </p>
+        </div>
+        <div id="geometry" class="pt-16">
+          <h2 class="text-xl">Geometry</h2>
 
-          {% if reviews|length > 1 %}
-            <div x-data="modalButton({
+          <img class="w-full mt-4"
+               src="https://s3.amazonaws.com/craft-marinbikes/images/bikes/geometry/_bikeGeometry2048Wide/21_MRN_GEO_ALL_MULTITRAC_2048px.jpg"/>
+
+          <table class="data w-full mt-8">
+            <thead>
+            <tr>
+              <th><span class="visuallyhidden">Type</span></th>
+              <th class="text-center">S</th>
+              <th class="text-center">M</th>
+              <th class="text-center">L</th>
+              <th class="text-center">XL</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="pl-0">Stack (A)</td>
+              <td class="text-center">619</td>
+              <td class="text-center">628</td>
+              <td class="text-center">632</td>
+              <td class="text-center">643</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Reach (B)</td>
+              <td class="text-center">430</td>
+              <td class="text-center">455</td>
+              <td class="text-center">480</td>
+              <td class="text-center">515</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Headtube Angle (C)</td>
+              <td class="text-center">63.5</td>
+              <td class="text-center">63.5</td>
+              <td class="text-center">63.5</td>
+              <td class="text-center">63.5</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Headtube Length (D)</td>
+              <td class="text-center">100</td>
+              <td class="text-center">110</td>
+              <td class="text-center">115</td>
+              <td class="text-center">130</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Seattube Angle (Effective) (E)</td>
+              <td class="text-center">78</td>
+              <td class="text-center">78</td>
+              <td class="text-center">78</td>
+              <td class="text-center">78</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Seattube Length (F)</td>
+              <td class="text-center">390</td>
+              <td class="text-center">400</td>
+              <td class="text-center">425</td>
+              <td class="text-center">430</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Toptupe (Effective) (G)</td>
+              <td class="text-center">561.7</td>
+              <td class="text-center">589</td>
+              <td class="text-center">615</td>
+              <td class="text-center">652</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Bottom Bracket Height (H)</td>
+              <td class="text-center">342</td>
+              <td class="text-center">342</td>
+              <td class="text-center">342</td>
+              <td class="text-center">342</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Bottom Bracket Drop (I)</td>
+              <td class="text-center">35</td>
+              <td class="text-center">35</td>
+              <td class="text-center">35</td>
+              <td class="text-center">35</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Chainstay (J)</td>
+              <td class="text-center">430</td>
+              <td class="text-center">430</td>
+              <td class="text-center">430</td>
+              <td class="text-center">430</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Wheelbase (K)</td>
+              <td class="text-center">1199</td>
+              <td class="text-center">1229</td>
+              <td class="text-center">1256</td>
+              <td class="text-center">1297</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Standover Height (Carbon) (L)</td>
+              <td class="text-center">690</td>
+              <td class="text-center">694</td>
+              <td class="text-center">695</td>
+              <td class="text-center">698</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Standover Height (Aluminum) (L)
+              </td>
+              <td class="text-center">714</td>
+              <td class="text-center">716</td>
+              <td class="text-center">732</td>
+              <td class="text-center">734</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Fork Offset (M)</td>
+              <td class="text-center">44</td>
+              <td class="text-center">44</td>
+              <td class="text-center">44</td>
+              <td class="text-center">44</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Seatpost Diameter</td>
+              <td class="text-center">30.9</td>
+              <td class="text-center">30.9</td>
+              <td class="text-center">30.9</td>
+              <td class="text-center">30.9</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Handlebar Width</td>
+              <td class="text-center">780</td>
+              <td class="text-center">780</td>
+              <td class="text-center">780</td>
+              <td class="text-center">780</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Stem Length</td>
+              <td class="text-center">35</td>
+              <td class="text-center">35</td>
+              <td class="text-center">35</td>
+              <td class="text-center">35</td>
+            </tr>
+            <tr>
+              <td class="pl-0">Crank Length</td>
+              <td class="text-center">170</td>
+              <td class="text-center">170</td>
+              <td class="text-center">170</td>
+              <td class="text-center">170</td>
+            </tr>
+            </tbody>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        {# Reviews #}
+        {% if hasReviews %}
+          <div id="reviews" class="pt-16">
+            <div>
+              <h2 class="text-xl">{{ 'Reviews'|t }}</h2>
+              <p>{{ '{number} review(s)'|t('site', { number: reviews|length }) }}</p>
+              <p>{{ 'Average review {number}/5'|t('site', { number: averageRating }) }}</p>
+            </div>
+
+            <div class="mt-4">
+              <h3>{{ 'Most Recent Review'|t }}</h3>
+              {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
+            </div>
+
+            {% if reviews|length > 1 %}
+              <div x-data="modalButton({
               header: '{{ "{product} Reviews"|t('site', { product: product.title }) }}',
               type: 'slideout',
               url: '{{ siteUrl("ajax/product/reviews", { id: product.id }) }}',
@@ -135,11 +336,13 @@
                 }
               ]
             })" class="mt-4">
-              <a class="button" href="#" x-on:click.prevent="open($dispatch)">{{ 'See all reviews'|t }}</a>
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
+                <a class="button" href="#"
+                   x-on:click.prevent="open($dispatch)">{{ 'See all reviews'|t }}</a>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 {% endblock %}
