@@ -9,7 +9,7 @@
       <input id="first-name" type="text" name="firstName" placeholder="{{ 'First Name'|t }}" autocomplete="false" value="{{ paymentForm.firstName ?? '' }}">
       {% if paymentForm and paymentForm.getErrors('firstName') %}
         <div class="mt-2">
-          {% include '_includes/components/forms/error-list' with { errors: paymentForm.getErrors('firstName') } only %}
+          {% include '_includes/components/forms/errorList' with { errors: paymentForm.getErrors('firstName') } only %}
         </div>
       {% endif %}
     </div>
@@ -19,7 +19,7 @@
       <input id="last-name" type="text" name="lastName" placeholder="{{ 'Last Name'|t }}" autocomplete="false" value="{{ paymentForm.lastName ?? '' }}">
       {% if paymentForm and paymentForm.getErrors('lastName') %}
         <div class="mt-2">
-          {% include '_includes/components/forms/error-list' with { errors: paymentForm.getErrors('lastName') } only %}
+          {% include '_includes/components/forms/errorList' with { errors: paymentForm.getErrors('lastName') } only %}
         </div>
       {% endif %}
     </div>
@@ -33,7 +33,7 @@
       <input type="text" name="number" placeholder="{{ 'Card Number'|t }}" autocomplete="false" value="{{ paymentForm.number ?? '' }}">
       {% if paymentForm and paymentForm.getErrors('number') %}
         <div class="mt-2">
-          {% include '_includes/components/forms/error-list' with { errors: paymentForm.getErrors('number') } only %}
+          {% include '_includes/components/forms/errorList' with { errors: paymentForm.getErrors('number') } only %}
         </div>
       {% endif %}
     </div>
@@ -55,7 +55,7 @@
       {% endfor %}
       {% if paymentForm and cardErrors|length %}
         <div class="mt-2">
-          {% include '_includes/components/forms/error-list' with { errors: cardErrors } only %}
+          {% include '_includes/components/forms/errorList' with { errors: cardErrors } only %}
         </div>
       {% endif %}
     </div>

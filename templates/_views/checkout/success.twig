@@ -22,7 +22,7 @@
   <div class="container flex justify-center">
     <div class="border-t border-gray-300 w-full max-w-5xl">
       {% for lineItem in order.lineItems %}
-        {% include '_includes/components/order/line-item' with { lineItem: lineItem } only %}
+        {% include '_includes/components/order/lineItem' with { lineItem: lineItem } only %}
       {% endfor %}
 
       {% if order.shippingAddress %}

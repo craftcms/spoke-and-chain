@@ -35,7 +35,7 @@
     <div class="container flex justify-center">
       <div class="border-t border-gray-300 w-full max-w-5xl">
         {% for lineItem in cart.lineItems %}
-          {% include '_includes/components/order/line-item' with { lineItem: lineItem } only %}
+          {% include '_includes/components/order/lineItem' with { lineItem: lineItem } only %}
         {% endfor %}
 
         {% if cart.shippingAddress %}
@@ -94,7 +94,7 @@
 
                   <template x-if="id == false">
                     <div>
-                      {% include '_includes/components/forms/credit-card' with {
+                      {% include '_includes/components/forms/creditCard' with {
                         paymentForm: paymentForm,
                         allowSave: true
                       } %}
@@ -103,14 +103,14 @@
                 </div>
               {% else %}
                 <div>
-                  {% include '_includes/components/forms/credit-card' with {
+                  {% include '_includes/components/forms/creditCard' with {
                     paymentForm: paymentForm,
                     allowSave: true
                   } %}
                 </div>
               {% endif %}
             {% else %}
-              {% include '_includes/components/forms/credit-card' with { paymentForm: paymentForm } %}
+              {% include '_includes/components/forms/creditCard' with { paymentForm: paymentForm } %}
             {% endif %}
           </div>
         </div>

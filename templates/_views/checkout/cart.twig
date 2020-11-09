@@ -25,7 +25,7 @@
           {{ actionInput('commerce/cart/update-cart') }}
 
           {% for lineItem in cart.lineItems %}
-            {% include '_includes/components/order/line-item' with { lineItem: lineItem, form: true } only %}
+            {% include '_includes/components/order/lineItem' with { lineItem: lineItem, form: true } only %}
           {% endfor %}
 
           <div class="flex justify-end">
