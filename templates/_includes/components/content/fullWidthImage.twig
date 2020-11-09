@@ -7,8 +7,8 @@
 {% if block and image %}
   <!-- Template: {{ _self }}.twig -->
   <div class="aspect-ratio-hero">
-    <div class="aspect-inner">
-      <img class="w-full" src="{{ image.url }}" alt="{{ image.title }}">
+    <div class="aspect-inner overflow-hidden relative">
+      <img class="absolute transform left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full" src="{{ image.url }}" alt="{{ image.title }}">
     </div>
   </div>
 {% endif %}
