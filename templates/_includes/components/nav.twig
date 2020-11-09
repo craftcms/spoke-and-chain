@@ -9,10 +9,17 @@
     selected: false
   }]) %}
 {% endif %}
+{% set articlesLanding = craft.entries({ section: 'articlesLanding' }).one() ?? null %}
+{% if articlesLanding %}
+  {% set navItems = navItems|merge([{
+    label: articlesLanding.title,
+    url: articlesLanding.url,
+    selected: false
+  }]) %}
+{% endif %}
 {% set navItems = navItems|merge([
   { label: 'Equipment', url: '/', selected: false },
   { label: 'Services', url: '/', selected: false },
-  { label: 'Articles', url: '/', selected: false },
   { label: 'Contact', url: '/', selected: false },
 ]) %}
 
