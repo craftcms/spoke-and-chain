@@ -1,8 +1,10 @@
 {# Layout #}
 {% extends '_layouts/site' %}
+{% set contentBlocks = entry.contentBuilder.all() %}
 
 {# Blocks #}
 {% block content %}
+  <!-- Template: {{ _self }}.twig -->
   <div class="bg-gray-200 py-8">
     {# Heading #}
     <div class="container flex justify-center">
@@ -12,9 +14,13 @@
       </div>
     </div>
 
-    {# Article List #}
-    <div class="container mt-8">
-      Content
-    </div>
+    {# Article Content #}
+    {% for block in contentBlocks %}
+      {% include '_includes/components/content/' ~ block.type.handle with {
+        block: block,
+        isFirst: loop.first,
+        isLast: loop.last,
+      } %}
+    {% endfor %}
   </div>
 {% endblock %}

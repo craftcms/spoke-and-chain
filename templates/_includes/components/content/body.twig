@@ -1,0 +1,13 @@
+{# Params #}
+{% set block = block is not defined ? false : block %}
+{% set isFirst = isFirst is not defined ? false : isFirst %}
+{% set isLast = isLast is not defined ? false : isLast %}
+
+{% if block and block.body %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="container mt-8 flex justify-center">
+    <div class="w-full max-w-3xl">
+      {{ block.body }}
+    </div>
+  </div>
+{% endif %}

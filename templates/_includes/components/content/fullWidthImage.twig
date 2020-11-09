@@ -1,0 +1,14 @@
+{# Params #}
+{% set block = block is not defined ? false : block %}
+{% set isFirst = isFirst is not defined ? false : isFirst %}
+{% set isLast = isLast is not defined ? false : isLast %}
+{% set image = block ? block.image.one() : null %}
+
+{% if block and image %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="aspect-ratio-hero">
+    <div class="aspect-inner">
+      <img class="w-full h-full" src="{{ image.url }}" alt="{{ image.title }}">
+    </div>
+  </div>
+{% endif %}

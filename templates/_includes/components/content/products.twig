@@ -1,0 +1,11 @@
+{# Params #}
+{% set block = block is not defined ? false : block %}
+{% set isFirst = isFirst is not defined ? false : isFirst %}
+{% set isLast = isLast is not defined ? false : isLast %}
+
+{% if block %}
+  <!-- Template: {{ _self }}.twig -->
+  <div>
+    Products
+  </div>
+{% endif %}
