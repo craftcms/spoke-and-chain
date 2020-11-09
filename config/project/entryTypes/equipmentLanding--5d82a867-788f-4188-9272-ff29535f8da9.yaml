@@ -1,5 +1,5 @@
 fieldLayouts:
-  dbde3903-52ad-440e-b0a3-d8947421b704:
+  96c4d0d2-9e9e-4556-bce4-7d987ee1a9ab:
     tabs:
       -
         elements:
@@ -26,22 +26,13 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          -
-            fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
-handle: articles
-hasTitleField: true
-name: Articles
-section: 506e9a86-f8ca-4f35-bffc-21da95813979
+handle: equipmentLanding
+hasTitleField: false
+name: Equipment
+section: 66a6cf28-0a06-441a-b5c7-7b197f55e054
 sortOrder: 1
-titleFormat: null
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

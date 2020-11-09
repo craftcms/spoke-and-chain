@@ -7,5 +7,6 @@ import './components/addresses';
 import './components/header';
 import './components/modal';
 import './components/notifications';
+import './components/quickReplace';
 
 console.log('Loaded.');

@@ -1,3 +1,9 @@
+{# Pre layout #}
+{% set updatedQueryString = craft.app.request.getQueryParam('updated', false) %}
+{% if updatedQueryString and updatedQueryString == 'address' %}
+  {% do craft.app.session.setFlash('notice', 'Address updated'|t) %}
+{% endif %}
+
 {# Layout #}
 {% extends '_layouts/site' %}
 
@@ -55,7 +61,7 @@
                                   url: '{{ siteUrl("ajax/address/edit", { id: address.id }) }}',
                                   action: 'commerce/customer-addresses/save',
                                   errorKey: 'address{{ address.id }}errors',
-                                  redirect: '{{ entry.url }}',
+                                  redirect: '{{ siteUrl(entry.uri, { updated: 'address' }) }}',
                                   buttons: [
                                     {
                                       label: '{{ "Cancel"|t }}',
@@ -167,3 +173,9 @@
     </div>
   </div>
 {% endblock %}
+
+{% js at endBody %}
+    {% if updatedQueryString and updatedQueryString == 'address' %}
+      window.quickReplaceUri = '/{{ entry.uri }}';
+    {% endif %}
+{% endjs %}
