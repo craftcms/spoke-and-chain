@@ -14,6 +14,7 @@ window.header = function() {
         mainNavFixed: true,
         mainNavHeight: 0,
         scrollDirection: 'down',
+        toleranceDistance: 50,
 
         init() {
             this.updateMainNavHeight()
@@ -45,8 +46,8 @@ window.header = function() {
         },
 
         hasScrolledPastHeader() {
-            // +10 for tolerance
-            return this.lastScrollValue > 0 && this.lastScrollValue > (this.mainNavHeight + 10)
+            // added pixels for tolerance
+            return this.lastScrollValue > 0 && this.lastScrollValue > (this.mainNavHeight + this.toleranceDistance)
         },
 
         updateMainNavHeight() {
