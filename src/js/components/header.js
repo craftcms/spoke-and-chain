@@ -16,8 +16,20 @@ window.header = function() {
         scrollDirection: 'down',
         toleranceDistance: 50,
 
+        $header: document.querySelector('#header'),
+        $mainNav: document.querySelector('#main-nav'),
+
         init() {
+            let _this = this
             this.updateMainNavHeight()
+
+            const ro = new ResizeObserver(entries => {
+                for (let entry of entries) {
+                    this.updateMainNavHeight();
+                }
+            });
+
+            ro.observe(this.$header);
         },
 
         onScroll() {
@@ -51,11 +63,8 @@ window.header = function() {
         },
 
         updateMainNavHeight() {
-            const $mainNav = document.getElementById('main-nav');
-            const $header = document.getElementById('header');
-
-            this.mainNavHeight = $mainNav.offsetHeight
-            $header.style.height = this.mainNavHeight + 'px'
+            this.mainNavHeight = this.$mainNav.offsetHeight
+            this.$header.style.height = this.mainNavHeight + 'px'
         }
     }
 }
