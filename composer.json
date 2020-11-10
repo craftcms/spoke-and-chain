@@ -6,6 +6,7 @@
     "craftcms/redactor": "^2.8",
     "nystudio107/craft-twigpack": "^1.2",
     "oberon/starfield": "^1.0",
+    "solspace/craft-freeform": "^3.9",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
