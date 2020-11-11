@@ -65,6 +65,22 @@ window.header = function() {
         updateMainNavHeight() {
             this.mainNavHeight = this.$mainNav.offsetHeight
             this.$header.style.height = this.mainNavHeight + 'px'
+        },
+
+        toggleNav() {
+            this.showNav = !this.showNav
+
+            if (this.showNav) {
+                document.querySelector('html').classList.add('overflow-y-scroll', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
+                document.querySelector('body').classList.add('overflow-y-hidden', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
+            } else {
+                document.querySelector('html').classList.remove('overflow-y-scroll', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
+                document.querySelector('body').classList.remove('overflow-y-hidden', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
+            }
+
+            this.$nextTick(() => {
+                this.updateMainNavHeight()
+            })
         }
     }
 }
