@@ -32,7 +32,6 @@
                 <div x-data="{
                     hasErrors(key) { return {{ field.errors|length ? 'true' : 'false' }}; },
                     getErrors(key) { return {{ field.errors|json_encode }}; }
-
                 }" class="{{ form.customAttributes.columnClass }} pt-4"{{ field.rulesHtmlData }}>
                   <label for="{{ fieldName }}">{{ field.label }}</label>
                   {{ field.renderInput({ class: field.errors|length ? 'border-red-600' : '' ,errorClass: 'hidden' }) }}
@@ -50,6 +49,7 @@
     </div>
   {{ form.renderClosingTag }}
 {% endif %}
+
 {% js at endBody %}
   {% if craft.app.request.getQueryString() %}
     window.quickReplaceUri = encodeURI('{{ url|raw }}');
