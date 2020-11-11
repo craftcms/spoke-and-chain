@@ -1,3 +1,8 @@
+{% set formSuccessQueryString = craft.app.request.getQueryParam('form', false) %}
+{% if formSuccessQueryString and formSuccessQueryString == 'success' %}
+  {% do craft.app.session.setFlash('notice', 'Form submitted.'|t) %}
+{% endif %}
+
 {# Layout #}
 {% extends '_layouts/site' %}
 {% set contentBlocks = entry.contentBuilder.all() %}
@@ -5,9 +10,9 @@
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="bg-gray-200 py-8">
+  <div class="bg-gray-200">
     {# Heading #}
-    <div class="container flex justify-center">
+    <div class="container flex justify-center pt-8">
       <div class="w-full max-w-3xl">
         <p>{{ entry.postDate|date('F j, Y') }}</p>
         <h1>{{ entry.title }}</h1>
