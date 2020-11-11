@@ -11,7 +11,7 @@
 {# Output #}
 {% if title or image or button %}
   <div class="{{ aspectClass }}">
-    <div class="aspect-inner bg-cover bg-center" style="background-image: url(https://www.specialized.com/medias/MTB-2453-Home-Hero-2880x1620-Cody.jpg?context=bWFzdGVyfGltYWdlc3w3NzMxMDh8aW1hZ2UvanBlZ3xpbWFnZXMvaGMxL2hlMi85MjMzMTQ2ODA2MzAyLmpwZ3xiYmQ2NTE3M2JmNjZkZTMyOTRjNGRmYTE5NTVmMzQ4YjcxYzZjMDdkNjc2M2NjMjk1N2FmMWRiNGY5N2RmMGQ1);">
+    <div class="aspect-inner bg-cover bg-center" {% if image %}style="background-image: url({{image}});"{% endif %}>
       <div class="container h-full">
         <div class="flex items-center w-full h-full">
           <div class="mx-auto text-4xl font-bold text-white">

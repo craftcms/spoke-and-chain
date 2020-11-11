@@ -13,6 +13,8 @@
 'translate-y-0': mainNavVisible,
 '-translate-y-full': !mainNavVisible,
 'fixed top-0 left-0 right-0 z-10': mainNavFixed,
+'bottom-0 z-10': showNav,
+'lg:bottom-auto lg:z-10': true,
 }"
   >
     <div class="px-4 lg:px-0 lg:container">
@@ -20,7 +22,7 @@
         <div class="flex flex-1 justify-between items-center">
           <!-- Mobile menu button -->
           <div class="lg:hidden">
-            <button @click="showNav = !showNav"
+            <button @click="toggleNav()"
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
                     aria-label="Main menu" aria-expanded="false">
               <svg class="block h-6 w-6"
