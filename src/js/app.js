@@ -8,5 +8,9 @@ import './components/header';
 import './components/modal';
 import './components/notifications';
 import './components/quickReplace';
+import './components/sliders';
 
 console.log('Loaded.');
+
+// Init sliders
+window.sliders()

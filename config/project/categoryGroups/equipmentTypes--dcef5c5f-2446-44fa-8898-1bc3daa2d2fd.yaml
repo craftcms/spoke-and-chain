@@ -1,0 +1,40 @@
+fieldLayouts:
+  2e756f2d-e91f-4982-a4f0-225484d01f7a:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: equipmentTypes
+name: 'Equipment Types'
+siteSettings:
+  5712e1f3-7800-493e-b74b-c2887dc25c81:
+    hasUrls: true
+    template: _views/categories/equipment
+    uriFormat: 'equipment/{slug}'
+structure:
+  maxLevels: 1
+  uid: d5ebc01f-7cb9-4f11-88d4-d42c8296248c

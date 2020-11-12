@@ -18,6 +18,6 @@ siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81:
     enabledByDefault: true
     hasUrls: true
-    template: null
+    template: _views/categories/equipment
     uriFormat: equipment
 type: single
