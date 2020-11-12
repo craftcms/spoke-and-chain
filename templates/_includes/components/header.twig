@@ -3,11 +3,9 @@
 {% set showNav = showNav is not defined ? true : showNav %}
 
 {# Output #}
-<header id="header" x-data="header()" x-init="init" @scroll.window="onScroll" :class="{
-    'fixed-nav': true
-}">
+<header id="header" x-data="header()" x-init="init" @scroll.window="onScroll" class="fixed-nav"">
   <div id="main-nav"
-       class="py-3 text-lg font-medium border-b border-solid border-gray-200 bg-white transform transition-transform"
+       class="py-3 text-lg font-medium border-b border-solid border-gray-300 bg-white transform transition-transform"
        :class="{
 'duration-300': scrollDirection == 'up' || (scrollDirection == 'down' && hasScrolledPastHeader()),
 'translate-y-0': mainNavVisible,

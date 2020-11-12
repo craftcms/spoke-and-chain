@@ -36,3 +36,4 @@
 
 /* Tailwind utilities */
 @import 'tailwindcss/utilities';
+@import 'utilities/max-h';

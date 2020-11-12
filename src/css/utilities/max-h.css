@@ -1,0 +1,10 @@
+@layer utilities {
+    @responsive {
+        .max-h-0 {
+            max-height: 0;
+        }
+        .max-h-none {
+            max-height: none;
+        }
+    }
+}
