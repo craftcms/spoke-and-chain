@@ -14,6 +14,7 @@
     {% set averageRating = (averageRating / reviews|length)|round(1) %}
   {% endif %}
 {% endfor %}
+{% set form = product.showForm ? craft.freeform.form('product', {}) : null %}
 
 {# Blocks #}
 {% block content %}
@@ -319,4 +320,8 @@
       </div>
     </div>
   </div>
+
+  {% if product.showForm and form %}
+    {% include '_includes/components/content/form' with { block: { form: form, heading: null } } only %}
+  {% endif %}
 {% endblock %}

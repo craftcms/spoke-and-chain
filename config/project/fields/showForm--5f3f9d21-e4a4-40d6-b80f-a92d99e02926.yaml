@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+handle: showForm
+instructions: ''
+name: 'Show Form'
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
