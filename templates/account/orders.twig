@@ -1,0 +1,10 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Blocks #}
+{% block content %}
+  {% include '_includes/components/hero' with {
+    title: 'Orders',
+    short: true,
+  } only %}
+{% endblock %}

@@ -31,97 +31,78 @@
     } only %}
   </div>
 
-  <div class="container py-8">
-    {# Meta Details #}
-    <form method="post">
-      {{ csrfInput() }}
-      {{ actionInput('commerce/cart/update-cart') }}
-      {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
+  {# Product Nav #}
+  {% include '_includes/components/products/nav' %}
 
-      <div class="flex">
-        {# Product Title #}
-        <div class="w-1/4">
-          <h1>{{ product.title }}</h1>
-          <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
-          {% if defaultVariant.onSale %}
-            <div>
-              <del>{{ defaultVariant.priceAsCurrency }}</del>
-            </div>
-          {% endif %}
-        </div>
+  <div class="container">
+    <img src="https://s3.amazonaws.com/craft-marinbikes/images/bikes/gallery/_bikeGalleryLightbox/20_RTZC_2_gallery.jpg" />
+  </div>
 
-        {# Product Variants #}
-        <div class="mx-auto">
-          <div class="flex justify-center">
-            {# Colors #}
-            {% if productColors %}
-              <div class="flex">
-                {% for color in productColors %}
-                  <div class="h-4 w-4 rounded-full mr-1"
-                       style="background-color: {{ color.color }}"
-                       aria-label="{{ color.title }}"
-                       title="{{ color.title }}">
-                    <span class="visuallyhidden">{{ color.title }}</span>
-                  </div>
-                {% endfor %}
+  <div class="bg-gray-200">
+    <div id="buy" class="container py-8">
+      {# Meta Details #}
+      <form method="post">
+        {{ csrfInput() }}
+        {{ actionInput('commerce/cart/update-cart') }}
+        {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
+
+        <div class="flex">
+          {# Product Title #}
+          <div class="w-1/4">
+            <h1>{{ product.title }}</h1>
+            <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
+            {% if defaultVariant.onSale %}
+              <div>
+                <del>{{ defaultVariant.priceAsCurrency }}</del>
               </div>
             {% endif %}
+          </div>
 
-            {# Variants #}
-            <div>
-              <select name="purchasableId">
-                {% for variant in product.variants %}
-                  <option value="{{ variant.id }}"
-                          {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
-                {% endfor %}
-              </select>
+          {# Product Variants #}
+          <div class="mx-auto">
+            <div class="flex justify-center">
+              {# Colors #}
+              {% if productColors %}
+                <div class="flex">
+                  {% for color in productColors %}
+                    <div class="h-4 w-4 rounded-full mr-1"
+                         style="background-color: {{ color.color }}"
+                         aria-label="{{ color.title }}"
+                         title="{{ color.title }}">
+                      <span class="visuallyhidden">{{ color.title }}</span>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
 
+              {# Variants #}
               <div>
-                <a href="#">{{ 'Size chart'|t('site') }}</a>
+                <select name="purchasableId">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}"
+                            {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
+                  {% endfor %}
+                </select>
+
+                <div>
+                  <a href="#">{{ 'Size chart'|t('site') }}</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {# Product Buy #}
-        <div class="w-1/4 text-right">
-          <input class="button" type="submit" name="submit"
-                 value="{{ 'Add to cart'|t('site') }}">
+          {# Product Buy #}
+          <div class="w-1/4 text-right">
+            <input class="button" type="submit" name="submit"
+                   value="{{ 'Add to cart'|t('site') }}">
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
-
-  {# Product Nav #}
-  <div id="product-nav" class="bg-gray-300 flex py-3">
-    <ul class="flex-1 flex justify-center">
-      <li class="mx-1">
-        <a
-                class="text-gray-900 font-medium inline-block px-4 py-2"
-                href="#overview">Overview</a>
-      </li>
-      <li class="mx-1">
-        <a
-                class="text-gray-900 font-medium inline-block px-4 py-2"
-                href="#components">Components</a>
-      </li>
-      <li class="mx-1">
-        <a
-                class="text-gray-900 font-medium inline-block px-4 py-2"
-                href="#geometry">Geometry</a>
-      </li>
-      {% if hasReviews %}
-        <li class="mx-1">
-          <a
-                  class="text-gray-900 font-medium inline-block px-4 py-2"
-                  href="#reviews">Reviews</a>
-        </li>
-      {% endif %}
-    </ul>
+      </form>
+    </div>
   </div>
 
   {# Product Content #}
-  <div class="bg-gray-200 py-8">
+  <div class="bg-white py-8">
     <div class="container flex justify-center">
       <div class="max-w-3xl">
         <div id="overview" class="pt-16">
