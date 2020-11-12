@@ -1,0 +1,67 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Params #}
+
+{# Variables #}
+{% set isAllEquipment = category is not defined and entry is defined and entry.type.handle == 'equipmentLanding' %}
+{# Get all the categories for the sidebar filter #}
+{% set bikeCategories = craft.categories({
+  group: 'equipmentTypes'
+}).all() %}
+
+{% set productQueryOptions = {
+  type: 'equipment'
+} %}
+{% if not isAllEquipment %}
+  {% set productQueryOptions = productQueryOptions|merge({
+    relatedTo: [category]
+  }) %}
+{% endif %}
+{% set products = craft.products(productQueryOptions).all() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Hero #}
+  <div>
+    {% include '_includes/components/hero' with {
+      image: null,
+      title: isAllEquipment ? entry.title : category.title,
+      button: 'Click',
+      short: true,
+    } only %}
+  </div>
+
+  <div class="bg-gray-100">
+    <div class="container py-6">
+      <div x-data="{showFilters: false}" class="md:flex">
+        <div class="md:w-1/5 md:mr-12 mb-6">
+          <button class="button w-full md:hidden" @click="showFilters = !showFilters">Filters</button>
+
+          <div class="mt-4 md:mt-0" :class="{'hidden md:block': !showFilters}">
+{#            {% include '_includes/components/filters/bike' with {#}
+{#              types: bikeCategories,#}
+{#              selected: category is defined ? category.id : null,#}
+{#              urlFilterParams: urlFilterParams#}
+{#            } only %}#}
+          </div>
+        </div>
+        <div class="w-full md:w-4/5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3">
+            {% for product in products %}
+              <div>
+                {% include '_includes/components/cards/product' with {
+                  title: product.title,
+                  image: true,
+                  url: product.url
+                } only %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
