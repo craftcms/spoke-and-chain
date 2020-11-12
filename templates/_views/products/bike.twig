@@ -20,10 +20,14 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   <div>
-    {% include '_includes/components/hero' with {
-      image: null,
-      title: product.title,
-      short: true,
+    {% include '_includes/components/products/slider' with {
+      images: [
+        'https://source.unsplash.com/600x345/?bike',
+        'https://source.unsplash.com/600x345/?biking',
+        'https://source.unsplash.com/600x345/?bicycle',
+        'https://source.unsplash.com/600x345/?cycling',
+      ],
+      id: 'product-slider-' ~ product.id
     } only %}
   </div>
 
