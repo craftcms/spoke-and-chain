@@ -3,19 +3,19 @@
 
 {% if images|length %}
   <!-- Template: {{ _self }}.twig -->
-<div class="aspect-ratio-hero mt-8">
+<div class="aspect-ratio-hero">
   <div class="aspect-inner overflow-hidden relative" x-ref="container">
     <div id="{{ id }}" class="absolute top-0 left-0 w-full h-full swiper-container" data-slider='{"navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"} }'>
       <div class="swiper-wrapper">
         {% for image in images %}
           <div class="swiper-slide flex justify-center items-center">
-            <img class="block h-full" src="{{ image }}" alt="">
+            <img class="block h-full" src="{{ image.url }}" alt="{{ image.title }}">
           </div>
         {% endfor %}
       </div>
 
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev text-gray-500"></div>
+      <div class="swiper-button-next text-gray-500"></div>
 
     </div>
   </div>

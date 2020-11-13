@@ -15,28 +15,22 @@
   {% endif %}
 {% endfor %}
 {% set form = product.showForm ? craft.freeform.form('product', {}) : null %}
+{% set images = product.productImages.all() %}
 
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  <div>
-    {% include '_includes/components/products/slider' with {
-      images: [
-        'https://source.unsplash.com/600x345/?bike',
-        'https://source.unsplash.com/600x345/?biking',
-        'https://source.unsplash.com/600x345/?bicycle',
-        'https://source.unsplash.com/600x345/?cycling',
-      ],
-      id: 'product-slider-' ~ product.id
-    } only %}
-  </div>
-
   {# Product Nav #}
   {% include '_includes/components/products/nav' %}
 
-  <div class="container">
-    <img src="https://s3.amazonaws.com/craft-marinbikes/images/bikes/gallery/_bikeGalleryLightbox/20_RTZC_2_gallery.jpg" />
-  </div>
+  {% if images|length %}
+    <div>
+      {% include '_includes/components/products/slider' with {
+        images: images,
+        id: 'product-slider-' ~ product.id
+      } only %}
+    </div>
+  {% endif %}
 
   <div class="bg-gray-200">
     <div id="buy" class="container py-8">

@@ -4,7 +4,6 @@
     @apply relative;
 
     &:before {
-        @apply bg-gray-300;
         @apply block;
         @apply w-full;
         content: '';
