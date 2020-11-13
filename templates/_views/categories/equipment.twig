@@ -6,7 +6,7 @@
 {# Variables #}
 {% set isAllEquipment = category is not defined and entry is defined and entry.type.handle == 'equipmentLanding' %}
 {# Get all the categories for the sidebar filter #}
-{% set bikeCategories = craft.categories({
+{% set equipmentCategories = craft.categories({
   group: 'equipmentTypes'
 }).all() %}
 
@@ -38,14 +38,13 @@
     <div class="container py-6">
       <div x-data="{showFilters: false}" class="md:flex">
         <div class="md:w-1/5 md:mr-12 mb-6">
-          <button class="button w-full md:hidden" @click="showFilters = !showFilters">Filters</button>
+          <button class="button w-full md:hidden" @click="showFilters = !showFilters">{{ 'Categories'|t }}</button>
 
           <div class="mt-4 md:mt-0" :class="{'hidden md:block': !showFilters}">
-{#            {% include '_includes/components/filters/bike' with {#}
-{#              types: bikeCategories,#}
-{#              selected: category is defined ? category.id : null,#}
-{#              urlFilterParams: urlFilterParams#}
-{#            } only %}#}
+            {% include '_includes/components/filters/equipment' with {
+              types: equipmentCategories,
+              selected: category is defined ? category.id : null,
+            } only %}
           </div>
         </div>
         <div class="w-full md:w-4/5">
