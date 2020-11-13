@@ -9,7 +9,7 @@
       <div class="swiper-wrapper">
         {% for image in images %}
           <div class="swiper-slide flex justify-center items-center">
-            <img class="block h-full" src="{{ image }}" alt="">
+            <img class="block h-full" src="{{ image.url }}" alt="{{ image.title }}">
           </div>
         {% endfor %}
       </div>
