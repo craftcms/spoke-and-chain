@@ -7,6 +7,7 @@ import './components/addresses';
 import './components/header';
 import './components/modal';
 import './components/notifications';
+import './components/product-nav';
 import './components/quickReplace';
 import './components/sliders';
 
