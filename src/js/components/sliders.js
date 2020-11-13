@@ -16,7 +16,6 @@ window.sliders = function() {
         sliders[slider.getAttribute('id')] = new Swiper(slider, opts);
 
         const ro = new ResizeObserver(entries => {
-            console.log('resize');
             for (let entry of entries) {
                 sliders[slider.getAttribute('id')].updateSize();
             }
