@@ -7,4 +7,46 @@
     title: 'Bike Service',
     image: 'https://source.unsplash.com/rMPr-UhfaXI/2400x1609',
   } only %}
+
+  <div class="max-w-2xl mx-auto p-8">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+  </div>
+
+  <div class="max-w-4xl mx-auto">
+    <img src="https://source.unsplash.com/GKLmVfcXl0o/2048x1313" />
+  </div>
+
+  <div class="max-w-2xl mx-auto p-8">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
+  </div>
+
+
+  <div class="max-w-4xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
+    {% include '_includes/components/services/plan' with {
+      name: 'Standard',
+      features: [
+        'Frame and Fork alignment checked',
+        'Adjustment of gears and brakes but not maintenance such as cable change.',
+        'Chain lubricated and checked.',
+      ]
+    } only %}
+
+    {% include '_includes/components/services/plan' with {
+      name: 'Premium',
+      features: [
+        'Wheel hubs and rims checked for damage/wear. Bearings checked for movement. Wheels trued and spokes tensioned.',
+        'Checked for movement and adjustment: headset, bottom bracket.',
+        'Drive train, chain, cassette and chainset: cleaned, checked for wear and lubrication.',
+        'Bottom bracket checked for operation and adjustment.',
+      ]
+    } only %}
+  </div>
 {% endblock %}
