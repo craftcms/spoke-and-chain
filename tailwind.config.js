@@ -31,6 +31,7 @@ module.exports = {
         },
     },
     variants: {
+        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
         transitionProperty: ['responsive', 'hover', 'group-hover', 'focus'],
         translate: ['responsive', 'hover', 'focus', 'active', 'group-hover']
     },
