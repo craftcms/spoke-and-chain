@@ -101,9 +101,19 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Hero #}
-  <div>
+  {% set mainImageUrl = null %}
+
+  {% if isAllBikes %}
+    {% set mainImage = entry.mainImage.one() %}
+  {% else %}
+    {% set mainImage = category.mainImage.one() %}
+  {% endif %}
+
+  {% set mainImageUrl = mainImage.url ?? null %}
+
+  <div class="bg-gray-700">
     {% include '_includes/components/hero' with {
-      image: null,
+      image: mainImageUrl,
       title: isAllBikes ? entry.title : category.title,
       button: 'Click',
       short: true,
