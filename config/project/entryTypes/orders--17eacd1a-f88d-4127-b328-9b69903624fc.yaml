@@ -1,0 +1,38 @@
+fieldLayouts:
+  2001d55a-3bd3-4600-8ee8-e3ef1b6899de:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: orders
+hasTitleField: true
+name: Orders
+section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
