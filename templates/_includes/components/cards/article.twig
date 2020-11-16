@@ -7,8 +7,8 @@
 
 {# Output #}
 {% if title or image %}
-  <a class="block w-full bg-white {{ horizontal ? 'flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
-    <div class="{{ horizontal ? 'w-2/3 pr-1' : '' }}">
+  <a class="block rounded-md overflow-hidden w-full bg-white {{ horizontal ? 'sm:flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
+    <div class="{{ horizontal ? 'sm:w-2/3 sm:pr-1' : '' }}">
       <div class="aspect-ratio-article-card">
         <div class="aspect-inner bg-cover bg-center" style="background-image: url('https://source.unsplash.com/tUKGJhLre5c/1200x800')">
         </div>
