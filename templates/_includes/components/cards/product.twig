@@ -3,6 +3,7 @@
 {% set title = title is not defined ? null : title %}
 {% set image = image is not defined ? null : image %}
 {% set url = url is not defined ? null : url %}
+{% set price = price is not defined ? null : price %}
 
 {# Output #}
 {% if title or image %}
@@ -15,7 +16,7 @@
         {{ title }}
       </div>
       <div>
-        $1,234
+        {{ price }}
       </div>
     </div>
   </a>
