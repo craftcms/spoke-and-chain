@@ -10,13 +10,13 @@
   <a class="block w-full bg-white {{ horizontal ? 'flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
     <div class="{{ horizontal ? 'w-2/3 pr-1' : '' }}">
       <div class="aspect-ratio-article-card">
-        <div class="aspect-inner bg-cover bg-center" style="background-image: url('https://source.unsplash.com/600x345/?bike')">
+        <div class="aspect-inner bg-cover bg-center" style="background-image: url('https://source.unsplash.com/tUKGJhLre5c/1200x800')">
         </div>
       </div>
     </div>
-    <div class="p-4">
-      <h4>{{ title }}</h4>
-      <p>{{ date|date('F j, Y') }}</p>
+    <div class="p-6">
+      <h2 class="text-xl text-gray-900">{{ title }}</h2>
+      <p class="text-gray-600 text-sm uppercase">{{ date|date('F j, Y') }}</p>
     </div>
   </a>
 {% endif %}
