@@ -1,7 +1,12 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
+{# macros #}
+{% import '_includes/macros' as _macros %}
+
 {# Params #}
+{# Get sort from query string #}
+{% set sort = craft.app.request.getQueryParam('sort') %}
 {# Get color slugs from the query string #}
 {% set colorSlugs = craft.app.request.getQueryParam('colors') %}
 {% set colorSlugs = colorSlugs ? colorSlugs|split('|') : [] %}
@@ -13,6 +18,9 @@
   colors: colorSlugs,
   material: materialSlugs
 } %}
+{% if sort %}
+  {% set urlFilterParams = urlFilterParams|merge({ sort: sort }) %}
+{% endif %}
 {% set productIds = [] %}
 
 {# Variables #}
@@ -48,6 +56,26 @@
 {% set productQueryOptions = {
   type: 'bike'
 } %}
+{% if sort %}
+  {% switch sort %}
+    {% case 'dateasc' %}
+      {% set productQueryOptions = productQueryOptions|merge({
+        orderBy: 'postDate ASC'
+      }) %}
+    {% case 'priceasc' %}
+      {% set productQueryOptions = productQueryOptions|merge({
+        orderBy: 'defaultPrice ASC'
+      }) %}
+    {% case 'pricedesc' %}
+      {% set productQueryOptions = productQueryOptions|merge({
+        orderBy: 'defaultPrice DESC'
+      }) %}
+    {% default %}
+      {% set productQueryOptions = productQueryOptions|merge({
+        orderBy: 'postDate DESC'
+      }) %}
+  {% endswitch %}
+{% endif %}
 {% if not isAllBikes %}
   {% set productQueryOptions = productQueryOptions|merge({
     relatedTo: [category]
@@ -63,6 +91,10 @@
 {% else %}
   {% set products = productQuery.all() %}
 {% endif %}
+
+{# Sort URL #}
+{% set sortUrl = craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '') %}
+{% set sortUrl = _macros.filterSiteUrl(sortUrl, urlFilterParams|merge({sort: 'sort'})) %}
 
 {# Blocks #}
 {% block content %}
@@ -108,6 +140,16 @@
                 urlFilterParams: urlFilterParams
               } only %}
             {% endif %}
+
+            <hr class="my-6">
+            <form x-data="sort()" x-init="url = '{{ sortUrl }}';" id="filters-sort" action="{{ siteUrl(craft.app.request.getUrl()) }}" method="get">
+              <select name="sort" id="" @change="onChange($event, $refs)" x-ref="sort">
+                <option value="">{{ 'Newest to Oldest'|t }}</option>
+                <option value="dateasc" {{ sort and sort == 'dateasc' ? 'selected' : '' }}>{{ 'Oldest to Newest'|t }}</option>
+                <option value="priceasc" {{ sort and sort == 'priceasc' ? 'selected' : '' }}>{{ 'Price: Low to High'|t }}</option>
+                <option value="pricedesc" {{ sort and sort == 'pricedesc' ? 'selected' : '' }}>{{ 'Price: High to Low'|t }}</option>
+              </select>
+            </form>
           </div>
         </div>
         <div class="w-full md:w-4/5">
@@ -117,7 +159,8 @@
                 {% include '_includes/components/cards/product' with {
                   title: product.title,
                   image: true,
-                  url: product.url
+                  url: product.url,
+                  price: product.defaultPriceAsCurrency
                 } only %}
               </div>
             {% endfor %}

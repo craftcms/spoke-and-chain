@@ -9,6 +9,7 @@ import './components/modal';
 import './components/notifications';
 import './components/quickReplace';
 import './components/sliders';
+import './components/sort';
 
 console.log('Loaded.');
 
