@@ -1,0 +1,9 @@
+siteUid: null
+sortOrder: 1
+template: _views/account/order
+uriParts:
+  - account/orders/
+  -
+    - slug
+    - '[^\/]+'
+uriPattern: 'account/orders/<slug:[^\/]+>'
