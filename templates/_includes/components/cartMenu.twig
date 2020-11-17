@@ -12,16 +12,18 @@
             <div class="p-6 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <div class="space-y-4">
                     <div class="text-center text-base text-gray-500 p-8 rounded border-gray-300 border border-dashed">
-                        Cart Overview
+                      {{ 'Cart Overview'|t }}
                     </div>
                     <div>
                         <a class="button submit w-full text-center" href="{{ cartPage.url }}">Check Out</a>
                     </div>
                     <div>
-                        <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">
-                            {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                            Cart
-                        </a>
+                        {% if cartPage is defined %}
+                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">
+                                {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                                {{ cartPage.title }}
+                            </a>
+                        {% endif %}
                         <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/orders') }}">
                             {{ svg('@webroot/icons/box.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
                             Orders
@@ -30,13 +32,15 @@
                             {{ svg('@webroot/icons/address-card.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
                             Membership
                         </a>
-                        <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/settings') }}">
-                            {{ svg('@webroot/icons/cog.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                            Account
-                        </a>
+                        {% if acountPage is defined %}
+                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ accountPage.url }}">
+                                {{ svg('@webroot/icons/cog.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                                {{ accountPage.title }}
+                            </a>
+                        {% endif %}
                         <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ logoutUrl }}">
                             {{ svg('@webroot/icons/sign-out.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                            Sign out
+                            {{ 'Sign out'|t }}
                         </a>
                     </div>
                 </div>
