@@ -7,7 +7,7 @@
 
 {# Output #}
 {% if title or image %}
-  <a class="block rounded-md overflow-hidden w-full bg-white {{ horizontal ? 'sm:flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
+  <a class="group block rounded-md overflow-hidden w-full bg-white {{ horizontal ? 'sm:flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
     <div class="{{ horizontal ? 'sm:w-2/3 sm:pr-1' : '' }}">
       <div class="aspect-ratio-article-card">
         <div class="aspect-inner bg-cover bg-center" style="background-image: url('https://source.unsplash.com/tUKGJhLre5c/1200x800')">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="p-6">
-      <h2 class="text-xl text-gray-900">{{ title }}</h2>
+      <h2 class="text-xl text-gray-900 group-hover:text-red-600">{{ title }}</h2>
       <p class="text-gray-600 text-sm uppercase">{{ date|date('F j, Y') }}</p>
     </div>
   </a>

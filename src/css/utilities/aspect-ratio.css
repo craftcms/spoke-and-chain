@@ -29,11 +29,11 @@
     }
 
     .aspect-ratio-hero-short:before {
-        padding-top: calc((1 / 5) * 100%);
+        padding-top: calc((1 / 3) * 100%);
 
         @screen xxl {
             padding-top: 0;
-            height: 18rem;
+            height: 24rem;
         }
     }
 
