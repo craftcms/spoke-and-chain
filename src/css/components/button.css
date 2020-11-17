@@ -16,6 +16,11 @@
         @apply bg-gray-500;
     }
 
+    .button.button--small {
+        @apply py-1 px-2;
+        @apply text-sm;
+    }
+
     .button.submit {
         @apply bg-red-600;
         @apply text-white;
