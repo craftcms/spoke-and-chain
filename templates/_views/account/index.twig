@@ -1,0 +1,4 @@
+{% if entry is not defined %}
+  {% redirect '/' %}
+{% endif %}
+{% include '_views/account/' ~ entry.type.handle %}

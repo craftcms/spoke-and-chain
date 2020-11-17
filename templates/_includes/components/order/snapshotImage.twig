@@ -1,0 +1,15 @@
+{# Params #}
+{% set lineItem = lineItem is not defined ? null : lineItem %}
+
+{# Output #}
+{% if lineItem %}
+  <!-- Template: {{ _self }}.twig -->
+  {% set snapshotImage = lineItem.snapshot.product.mainImage is defined and lineItem.snapshot.product.mainImage ? craft.assets.id(lineItem.snapshot.product.mainImage).one() : null %}
+  {% if snapshotImage %}
+    <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full" src="{{ snapshotImage.url }}" alt="{{ snapshotImage.title }}">
+  {% else %}
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gray-200 flex justify-center items-center">
+      <div class="text-xs text-gray-600">{{ 'Image unavailable'|t }}</div>
+    </div>
+  {% endif %}
+{% endif %}

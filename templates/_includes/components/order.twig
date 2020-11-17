@@ -1,60 +1,69 @@
-<div class="bg-white shadow rounded-md">
-  <div class="border-b border-gray-200 p-6">
-    <div class="flex justify-between items-center -mx-4 text-sm">
-      <div class="flex">
-        <div class="mx-4">
-          <div class="uppercase text-xs text-gray-600">Order Number</div>
-          <div class="font-medium">987654445</div>
-        </div>
-        <div class="mx-4">
-          <div class="uppercase text-xs text-gray-600">Order Date</div>
-          <div class="font-medium">September 15th, 2020</div>
-        </div>
-        <div class="mx-4">
-          <div class="uppercase text-xs text-gray-600">Total</div>
-          <div class="font-medium">$12,500</div>
-        </div>
-        <div class="mx-4">
-          <div class="uppercase text-xs text-gray-600">Shipped To</div>
-          <div class="font-medium">Home</div>
-        </div>
-      </div>
-      <div class="mx-4 text-right">
-        <div class="text-green-500">
-          In Transit
-        </div>
-      </div>
-    </div>
-  </div>
+{# Variables #}
+{% set order = order is not defined ? null : order %}
+{% set statusColors = {
+  green: 'text-green-500',
+  blue: 'text-blue-500',
+  yellow: 'text-yellow-500',
+  purple: 'text-purple-500',
+} %}
 
-  <div class="p-6">
-    <div class="flex">
-      <div class="flex-1">
-        <div class="flex items-center">
-          <div>
-            <img class="w-32" src="https://s7d5.scene7.com/is/image/Specialized/95221-01_LEVO-SW-CARBON-29-REDTNT-BLK_HERO?$hybris-pdp-hero$" />
+{% if order %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="bg-white shadow rounded-md">
+    <div class="border-b border-gray-200 p-6">
+      <div class="flex justify-between items-center -mx-4 text-sm">
+        <div class="flex">
+          <div class="mx-4">
+            <div class="uppercase text-xs text-gray-600">{{ 'Order Number'|t }}</div>
+            <div class="font-medium">{{ order.shortNumber }}</div>
           </div>
-          <div class="flex-1 mx-8 py-4 border-b border-gray-200">
-            <div class="font-bold">S-Works Turbo Levo</div>
-            <div>$12,500</div>
-            <div>Quantity: 1</div>
+          <div class="mx-4">
+            <div class="uppercase text-xs text-gray-600">{{ 'Order Date'|t }}</div>
+            <div class="font-medium">{{ order.dateOrdered|date('F jS, Y') }}</div>
+          </div>
+          <div class="mx-4">
+            <div class="uppercase text-xs text-gray-600">{{ 'Total'|t }}</div>
+            <div class="font-medium">{{ order.totalAsCurrency }}</div>
+          </div>
+          <div class="mx-4">
+            <div class="uppercase text-xs text-gray-600">{{ 'Shipped To'|t }}</div>
+            <div class="font-medium">{{ order.shippingAddress.zipCode }}, {{ order.shippingAddress.country.iso }}</div>
           </div>
         </div>
-        <div class="flex items-center">
-          <div>
-            <img class="w-32" src="https://s7d5.scene7.com/is/image/Specialized/95221-01_LEVO-SW-CARBON-29-REDTNT-BLK_HERO?$hybris-pdp-hero$" />
-          </div>
-          <div class="flex-1 mx-8 py-4">
-            <div class="font-bold">S-Works Turbo Levo</div>
-            <div>$12,500</div>
-            <div>Quantity: 1</div>
+        <div class="mx-4 text-right">
+          <div class="{{ statusColors[order.orderStatus.color] }}">
+            {{ order.orderStatus.name }}
           </div>
         </div>
       </div>
-      <div class="w-1/3">
-        <button class="button text-sm w-full submit">View order details</button>
-        <button class="button text-sm w-full mt-2">Download PDF invoice</button>
+    </div>
+
+    <div class="p-6">
+      <div class="flex">
+        <div class="flex-1">
+          {% for lineItem in order.lineItems %}
+            <div class="flex items-center">
+              <div class="w-1/3">
+                <div class="aspect-ratio-product-card">
+                  <div class="aspect-inner overflow-hidden relative">
+                    {% include '_includes/components/order/snapshotImage' with { lineItem: lineItem } %}
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 mx-8 py-4 {{ not loop.first ? 'border-t' : '' }} border-gray-200">
+                <div class="font-bold">{{ lineItem.description }}</div>
+                <div>{{ lineItem.totalAsCurrency }}</div>
+                <div>{{ 'Quantity'|t }}: {{ lineItem.qty }}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="w-1/3">
+          <a class="button text-center text-sm w-full submit" href="{{ siteUrl(entry.uri ~ '/' ~ order.shortNumber) }}">{{ 'View order
+          details'|t }}</a>
+          <button class="button text-sm w-full mt-2">{{ 'Download PDF invoice'|t }}</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{% endif %}

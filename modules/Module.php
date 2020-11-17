@@ -2,6 +2,8 @@
 namespace modules;
 
 use Craft;
+use craft\commerce\elements\Product;
+use craft\commerce\elements\Variant;
 use craft\commerce\models\Address;
 use yii\base\Event;
 
@@ -42,7 +44,7 @@ class Module extends \yii\base\Module
         parent::init();
 
         // Address validation rules
-        Event::on(Address::class, Address::EVENT_DEFINE_RULES, function ($event) {
+        Event::on(Address::class, Address::EVENT_DEFINE_RULES, function($event) {
             $event->rules[] = [[
                 'firstName',
                 'lastName',
@@ -51,6 +53,16 @@ class Module extends \yii\base\Module
                 'countryId',
                 'zipCode'
             ], 'required'];
+        });
+
+        Event::on(Variant::class, Variant::EVENT_AFTER_CAPTURE_PRODUCT_SNAPSHOT, function($event) {
+            /** @var Product $product */
+            $product = $event->product;
+            $attributes = $product->getAttributes(['mainImage']);
+
+            if (!empty($attributes) && array_key_exists('mainImage', $attributes) && $mainImage = $attributes['mainImage']->one()) {
+                $event->fieldData['mainImage'] = $mainImage->id;
+            }
         });
 
         if (\Craft::$app->env === 'dev') {
