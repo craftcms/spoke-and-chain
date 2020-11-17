@@ -58,11 +58,10 @@ class Module extends \yii\base\Module
         Event::on(Variant::class, Variant::EVENT_AFTER_CAPTURE_PRODUCT_SNAPSHOT, function($event) {
             /** @var Product $product */
             $product = $event->product;
-            $data = $event->fieldData;
             $attributes = $product->getAttributes(['mainImage']);
 
             if (!empty($attributes) && array_key_exists('mainImage', $attributes) && $mainImage = $attributes['mainImage']->one()) {
-                $data['mainImage'] = $mainImage;
+                $event->fieldData['mainImage'] = $mainImage->id;
             }
         });
 
