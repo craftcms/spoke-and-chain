@@ -1,11 +1,5 @@
 {# Variables #}
 {% set order = order is not defined ? null : order %}
-{% set statusColors = {
-  green: 'text-green-500',
-  blue: 'text-blue-500',
-  yellow: 'text-yellow-500',
-  purple: 'text-purple-500',
-} %}
 
 {% if order %}
   <!-- Template: {{ _self }}.twig -->
@@ -31,9 +25,7 @@
           </div>
         </div>
         <div class="mx-4 text-right">
-          <div class="{{ statusColors[order.orderStatus.color] }}">
-            {{ order.orderStatus.name }}
-          </div>
+          {% include '_includes/components/order/orderStatus' with { orderStats: order.orderStatus } %}
         </div>
       </div>
     </div>
