@@ -167,7 +167,7 @@
               <div>
                 {% include '_includes/components/cards/product' with {
                   title: product.title,
-                  image: true,
+                  image: product.mainImage.one(),
                   url: product.url,
                   price: product.defaultPriceAsCurrency
                 } only %}

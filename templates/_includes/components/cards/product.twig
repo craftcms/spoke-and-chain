@@ -8,7 +8,10 @@
 {# Output #}
 {% if title or image %}
   <a class="block bg-white p-8" href="{{ url }}" aria-label="{{ title }}">
-    <img src="https://s7d5.scene7.com/is/image/Specialized/95221-01_LEVO-SW-CARBON-29-REDTNT-BLK_HERO?$hybris-pdp-hero$" />
+
+    {% if image %}
+      <img src="{{ image.url }}" />
+    {% endif %}
 
     {# Meta #}
     <div class="text-black">
