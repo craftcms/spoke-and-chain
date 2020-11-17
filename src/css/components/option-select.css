@@ -26,6 +26,14 @@
     @apply rounded;
 }
 
+.option-select > div {
+    @apply border-gray-300;
+    @apply block;
+    @apply border-2;
+    @apply p-4;
+    @apply rounded;
+}
+
 .option-select > input[type=radio]:checked ~ label {
     @apply border-blue-700;
 }
