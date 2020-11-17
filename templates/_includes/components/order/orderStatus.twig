@@ -1,0 +1,18 @@
+{# Params #}
+{% set orderStatus = orderStatus is not defined ? null : orderStatus %}
+{% set class = class is not defined ? null : class %}
+{% set prefix = prefix is not defined ? null : prefix %}
+{% set statusColors = {
+  green: 'text-green-500',
+  blue: 'text-blue-500',
+  yellow: 'text-yellow-500',
+  purple: 'text-purple-500',
+} %}
+
+{# Output #}
+{% if orderStatus %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="{{ class }}">
+    {{ prefix ? prefix ~ ': ' : '' }}<span class="{{ statusColors[orderStatus.color] }}">{{ orderStatus.name }}</span>
+  </div>
+{% endif %}

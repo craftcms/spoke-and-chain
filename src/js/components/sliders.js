@@ -1,6 +1,5 @@
 import Swiper, {Navigation} from 'swiper';
 Swiper.use([Navigation]);
-import 'swiper/swiper-bundle.css';
 
 window.sliders = function() {
     let sliderElements = document.querySelectorAll('[data-slider]');

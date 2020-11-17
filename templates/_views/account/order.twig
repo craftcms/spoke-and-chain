@@ -1,21 +1,30 @@
-{% set orderNumber = craft.app.request.getQueryParam('number', null) %}
-{% set order = orderNumber ? craft.orders({ number: orderNumber }).one() : null%}
-{% if not orderNumber or not order %}
-  {% redirect '/' %}
-{% endif %}
+{% requireLogin %}
 
 {# Layout #}
 {% extends '_layouts/site' %}
 
 {# Variables #}
+{% set ordersPage = craft.entries({ section: 'account', type: 'orders' }).one() %}
+{% if slug is not defined or not slug %}
+  {% redirect ordersPage ? ordersPage.url : '/account/orders' %}
+{% endif %}
+{% set order = craft.orders({
+  isCompleted: true,
+  shortNumber: slug,
+}).user(currentUser).one() %}
 
-{# Output #}
+{# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  {# Heading #}
-  <div class="bg-gray-300">
-    <div class="container py-4 text-center">
-      <h1>{{ entry.title }}</h1>
+  <div class="bg-gray-100 py-8">
+    <div class="max-w-4xl mx-auto py-6">
+      <h1 class="text-4xl text-center">{{ 'Order'|t }} {{ slug }}</h1>
+      <div class="text-center mt-2">
+        {% include '_includes/components/order/orderStatus' with { orderStatus: order.orderStatus, prefix: 'Status'|t } %}
+      </div>
+      <div class="text-center mt-2">
+        <a href="{{ ordersPage ? ordersPage.url : siteUrl('account/orders') }}">{{ 'Back to orders'|t }}</a>
+      </div>
     </div>
   </div>
 
