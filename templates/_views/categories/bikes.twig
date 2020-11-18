@@ -101,7 +101,7 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Hero #}
-  {% set mainImageUrl = null %}
+  {% set mainImage = null %}
 
   {% if isAllBikes %}
     {% set mainImage = entry.mainImage.one() %}
@@ -109,13 +109,23 @@
     {% set mainImage = category.mainImage.one() %}
   {% endif %}
 
-  {% set mainImageUrl = mainImage.url ?? null %}
+  {% set thumbUrl = null %}
+
+  {% if mainImage %}
+    {% set thumb = {
+      width: 2000,
+      height: 1000,
+    } %}
+
+    {% set thumbUrl = mainImage.getUrl(thumb) %}
+  {% endif %}
 
   <div class="bg-gray-700">
     {% include '_includes/components/hero' with {
-      image: mainImageUrl,
+      image: thumbUrl,
       title: isAllBikes ? entry.title : category.title,
       button: 'Click',
+      short: true,
     } only %}
   </div>
 
@@ -162,16 +172,14 @@
           </div>
         </div>
         <div class="w-full md:w-4/5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
             {% for product in products %}
-              <div>
-                {% include '_includes/components/cards/product' with {
-                  title: product.title,
-                  image: product.mainImage.one(),
-                  url: product.url,
-                  price: product.defaultPriceAsCurrency
-                } only %}
-              </div>
+              {% include '_includes/components/cards/product' with {
+                title: product.title,
+                image: product.mainImage.one(),
+                url: product.url,
+                price: product.defaultPriceAsCurrency
+              } only %}
             {% endfor %}
           </div>
         </div>
