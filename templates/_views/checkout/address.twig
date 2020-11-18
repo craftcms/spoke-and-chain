@@ -51,34 +51,12 @@
                                 <input id="shipping-address-{{ address.id }}" type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="shippingAddress">
 
                                 <label for="shipping-address-{{ address.id }}">
-                                  {% for key, line in address.addressLines %}
-                                    {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>
-                                  {% endfor %}
+                                  {% include '_includes/components/address/lines' with { address: address } %}
                                 </label>
-                                <div class="absolute top-1/2 right-0 pr-4 sm:pr-8 transform -translate-y-1/2" x-data="modalButton({
-                                  header: '{{ "Edit Address"|t }}',
-                                  type: 'slideout',
-                                  url: '{{ siteUrl("ajax/address/edit", { id: address.id }) }}',
-                                  action: 'commerce/customer-addresses/save',
-                                  errorKey: 'address{{ address.id }}errors',
-                                  redirect: '{{ siteUrl(entry.uri, { updated: 'address' }) }}',
-                                  buttons: [
-                                    {
-                                      label: '{{ "Cancel"|t }}',
-                                      type: 'close',
-                                      prevent: true
-                                    },
-                                    {
-                                      label: '{{ "Save"|t }}',
-                                      type: 'submit',
-                                      class: 'submit',
-                                    }
-                                  ]
-                                })">
-                                  <a href="#" @click.prevent="open($dispatch)">
-                                    {{ 'Edit'|t }}
-                                  </a>
-                                </div>
+                                {% include '_includes/components/address/editButton' with {
+                                  address: address,
+                                  redirectUrl: entry.uri
+                                } %}
                             </div>
                         {% endfor %}
 
