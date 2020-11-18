@@ -574,16 +574,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.5.13.2",
+            "version": "3.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "90891b1d386aa8e31c2daeb86851a7aed96f4ff2"
+                "reference": "81a574b56f0f08e3847ad01f80242e78cdb18195"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/90891b1d386aa8e31c2daeb86851a7aed96f4ff2",
-                "reference": "90891b1d386aa8e31c2daeb86851a7aed96f4ff2",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/81a574b56f0f08e3847ad01f80242e78cdb18195",
+                "reference": "81a574b56f0f08e3847ad01f80242e78cdb18195",
                 "shasum": ""
             },
             "require": {
@@ -668,20 +668,20 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-10-16T10:55:46+00:00"
+            "time": "2020-10-20T22:27:53+00:00"
         },
         {
             "name": "craftcms/commerce",
-            "version": "3.2.8.1",
+            "version": "3.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "44d43c93565148975797595a74904bd163909d5f"
+                "reference": "41e0e85fb9c8808d7d406031a9cdb6478c4b919e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/44d43c93565148975797595a74904bd163909d5f",
-                "reference": "44d43c93565148975797595a74904bd163909d5f",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/41e0e85fb9c8808d7d406031a9cdb6478c4b919e",
+                "reference": "41e0e85fb9c8808d7d406031a9cdb6478c4b919e",
                 "shasum": ""
             },
             "require": {
@@ -727,7 +727,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-10-15T15:44:19+00:00"
+            "time": "2020-11-17T15:58:20+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
