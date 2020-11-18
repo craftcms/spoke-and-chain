@@ -5,16 +5,30 @@
 {% set url = url is not defined ? null : url %}
 {% set price = price is not defined ? null : price %}
 
+{% set thumbUrl = null %}
+
+{% if image %}
+  {% set thumb = {
+    mode: 'fit',
+    width: 600,
+    height: 400,
+  } %}
+
+  {% set thumbUrl = image.getUrl(thumb) %}
+{% endif %}
+
+
 {# Output #}
 {% if title or image %}
-  <a class="block bg-white p-8" href="{{ url }}" aria-label="{{ title }}">
-
-    {% if image %}
-      <img src="{{ image.url }}" />
-    {% endif %}
+  <a class="flex flex-col rounded-md bg-white p-8" href="{{ url }}" aria-label="{{ title }}">
+    <div class="flex-1 flex items-center">
+      {% if thumbUrl %}
+        <img src="{{ thumbUrl }}" />
+      {% endif %}
+    </div>
 
     {# Meta #}
-    <div class="text-black">
+    <div class="mt-4 text-black">
       <div class="text-lg font-medium">
         {{ title }}
       </div>
