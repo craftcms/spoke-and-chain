@@ -1,0 +1,32 @@
+contentColumnType: text
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+handle: planFeatures
+instructions: ''
+name: 'Plan Features'
+searchable: false
+settings:
+  addRowLabel: 'Add a feature'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Feature
+            -
+              - handle
+              - feature
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table
