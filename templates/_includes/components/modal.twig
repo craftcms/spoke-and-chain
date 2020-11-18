@@ -18,7 +18,10 @@
 </div>
 
 <div x-data="modal()" class="relative z-10">
-  <template x-on:openmodal.window="openModal($event.detail)" x-on:closemodal.window="closeModal()"></template>
+  <template
+      x-on:openmodal.window="openModal($event.detail)"
+      x-on:closemodal.window="closeModal()"
+  ></template>
 
   <div
       class="modal fixed inset-0 flex items-center justify-center"
@@ -67,7 +70,7 @@
           <template x-if="buttons.length">
             <div class="px-12 py-8 text-center bg-gray-200">
               <template x-for="(button, index) in buttons" :key="index" x-if="!submitting">
-                <button @click="buttonClick(button, $event)" class="button" :class="buttonClass(button)" x-text="button.label"></button>
+                <button :type="button.type == 'submit' ? 'submit' : 'button'" @click="buttonClick(button, $event)" class="button" :class="buttonClass(button)" x-text="button.label"></button>
               </template>
               <template x-if="submitting">
                 <div>Submitting</div>

@@ -86,24 +86,24 @@ window.modal = function() {
                 },
                 body: data,
             })
-                .then(response => response.json())
-                .then(result => {
-                    this.submitting = false;
+            .then(response => response.json())
+            .then(result => {
+                this.submitting = false;
 
-                    if (result.success == undefined) {
-                        if (result.error && this.errorKey && result.errors != undefined) {
-                            $dispatch(this.errorKey, result.errors);
-                        }
-                    } else if (result.success) {
-                        this.success = true;
-                        window.location = this.redirect;
+                if (result.success == undefined) {
+                    if (result.error && this.errorKey && result.errors != undefined) {
+                        $dispatch(this.errorKey, result.errors);
                     }
-                })
-                .catch(error => {
-                    this.submitting = false;
-                    alert(result.message);
-                    console.error('Error:', error);
-                });
+                } else if (result.success) {
+                    this.success = true;
+                    window.location = this.redirect;
+                }
+            })
+            .catch(error => {
+                this.submitting = false;
+                alert(result.message);
+                console.error('Error:', error);
+            });
         },
         buttonClass(button) {
             if (button && button.class != undefined) {
@@ -118,6 +118,11 @@ window.modal = function() {
             }
 
             if (button && button.type != undefined && button.type == 'close') {
+                this.closeModal();
+            }
+        },
+        handleEscape() {
+            if (this.show == true) {
                 this.closeModal();
             }
         },
