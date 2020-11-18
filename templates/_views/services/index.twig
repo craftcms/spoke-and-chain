@@ -39,8 +39,7 @@
         {% for plan in plans %}
           {% set planInfo = plan.getInformation() ?? null %}
           {% include '_includes/components/services/plan' with {
-            name: planInfo ? planInfo.title : plan.name,
-            features: planInfo ? planInfo.planFeatures : []
+            plan: plan
           } only %}
         {% endfor %}
       </div>
