@@ -9,14 +9,6 @@
     selected: false
   }]) %}
 {% endif %}
-{% set equipmentLanding = craft.entries({ section: 'equipmentLanding' }).one() ?? null %}
-{% if equipmentLanding %}
-  {% set navItems = navItems|merge([{
-    label: equipmentLanding.title,
-    url: equipmentLanding.url,
-    selected: false
-  }]) %}
-{% endif %}
 {% set servicesLanding = craft.entries({ section: 'servicesLanding' }).one() ?? null %}
 {% if servicesLanding %}
   {% set navItems = navItems|merge([{
