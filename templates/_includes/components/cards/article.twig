@@ -7,6 +7,15 @@
 {% set date = article.postDate %}
 {% set url = article.url %}
 {% set image = article.mainImage.one() %}
+{% set thumbUrl = null %}
+{% if image %}
+  {% set thumb = {
+    width: 700,
+    height: 400,
+  } %}
+
+  {% set thumbUrl = image.getUrl(thumb) %}
+{% endif %}
 
 {# Output #}
 {% if title %}
@@ -15,7 +24,7 @@
       <div class="aspect-ratio-article-card">
         <div class="aspect-inner bg-cover bg-center"
            {% if image %}
-              style="background-image: url('{{ image.url }}')"
+              style="background-image: url('{{ thumbUrl }}')"
            {% endif %}
         >
         </div>
