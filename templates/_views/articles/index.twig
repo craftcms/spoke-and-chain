@@ -25,9 +25,7 @@
       <div class="container mt-8">
         <div>
           {% include '_includes/components/cards/article' with {
-            title: featuredArticle.title,
-            url: featuredArticle.url,
-            date: featuredArticle.postDate,
+            article: featuredArticle,
             horizontal: true
           } only %}
         </div>
@@ -36,9 +34,7 @@
           {% for article in articles %}
             <div class="">
               {% include '_includes/components/cards/article' with {
-                title: article.title,
-                url: article.url,
-                date: article.postDate,
+                article: article,
               } only %}
             </div>
           {% endfor %}

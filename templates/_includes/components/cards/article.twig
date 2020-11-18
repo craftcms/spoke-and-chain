@@ -1,16 +1,23 @@
 <!-- Template: {{ _self }}.twig -->
 {# Params #}
-{% set title = title is not defined ? null : title %}
-{% set date = date is not defined ? null : date %}
-{% set url = url is not defined ? null : url %}
 {% set horizontal = horizontal is not defined ? false : horizontal %}
 
+{# Variables #}
+{% set title = article.title %}
+{% set date = article.postDate %}
+{% set url = article.url %}
+{% set image = article.mainImage.one() %}
+
 {# Output #}
-{% if title or image %}
+{% if title %}
   <a class="group block rounded-md overflow-hidden w-full bg-white {{ horizontal ? 'sm:flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
     <div class="{{ horizontal ? 'sm:w-2/3 sm:pr-1' : '' }}">
       <div class="aspect-ratio-article-card">
-        <div class="aspect-inner bg-cover bg-center" style="background-image: url('https://source.unsplash.com/tUKGJhLre5c/1200x800')">
+        <div class="aspect-inner bg-cover bg-center"
+           {% if image %}
+              style="background-image: url('{{ image.url }}')"
+           {% endif %}
+        >
         </div>
       </div>
     </div>
