@@ -42,7 +42,7 @@ fields:
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: true
+      useSingleFolder: false
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
