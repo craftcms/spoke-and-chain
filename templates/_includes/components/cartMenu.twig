@@ -38,10 +38,18 @@
                                 {{ accountPage.title }}
                             </a>
                         {% endif %}
-                        <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ logoutUrl }}">
-                            {{ svg('@webroot/icons/sign-out.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                            {{ 'Sign out'|t }}
-                        </a>
+
+                        {% if not currentUser %}
+                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ loginPage.url }}">
+                                {{ svg('@webroot/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                                {{ 'Sign in'|t }}
+                            </a>
+                        {% else %}
+                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ logoutUrl }}">
+                                {{ svg('@webroot/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                                {{ 'Sign out'|t }}
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
 
