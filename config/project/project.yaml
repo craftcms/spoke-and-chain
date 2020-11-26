@@ -1,4 +1,4 @@
-dateModified: 1605714274
+dateModified: 1606403678
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke and Chain'
@@ -94,8 +94,9 @@ system:
   schemaVersion: 3.5.13
   timeZone: America/Los_Angeles
 users:
-  allowPublicRegistration: false
-  defaultGroup: null
+  allowPublicRegistration: true
+  defaultGroup: ''
   photoSubpath: null
-  photoVolumeUid: null
+  photoVolumeUid: 994a420b-cb3e-4813-be6a-dd7ac7f55c6b
   requireEmailVerification: true
+  suspendByDefault: false
