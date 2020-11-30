@@ -5,34 +5,34 @@
   <!-- Template: {{ _self }}.twig -->
   <div class="bg-white shadow rounded-md">
     <div class="border-b border-gray-200 p-6">
-      <div class="flex justify-between items-center -mx-4 text-sm">
-        <div class="flex">
-          <div class="mx-4">
+      <div class="md:flex justify-between items-center text-sm">
+        <div class="flex-1 grid gap-8 grid-cols-2 sm:grid-cols-4">
+          <div>
             <div class="uppercase text-xs text-gray-600">{{ 'Order Number'|t }}</div>
             <div class="font-medium">{{ order.shortNumber }}</div>
           </div>
-          <div class="mx-4">
+          <div>
             <div class="uppercase text-xs text-gray-600">{{ 'Order Date'|t }}</div>
             <div class="font-medium">{{ order.dateOrdered|date('F jS, Y') }}</div>
           </div>
-          <div class="mx-4">
+          <div>
             <div class="uppercase text-xs text-gray-600">{{ 'Total'|t }}</div>
             <div class="font-medium">{{ order.totalAsCurrency }}</div>
           </div>
-          <div class="mx-4">
+          <div>
             <div class="uppercase text-xs text-gray-600">{{ 'Shipped To'|t }}</div>
             <div class="font-medium">{{ order.shippingAddress.zipCode }}, {{ order.shippingAddress.country.iso }}</div>
           </div>
         </div>
-        <div class="mx-4 text-right">
+        <div class="mt-8 md:mt-0 md:ml-4 md:text-right">
           {% include '_includes/components/order/orderStatus' with { orderStats: order.orderStatus } %}
         </div>
       </div>
     </div>
 
     <div class="p-6">
-      <div class="flex">
-        <div class="flex-1">
+      <div class="sm:flex">
+        <div class="sm:flex-1">
           {% for lineItem in order.lineItems %}
             <div class="flex items-center">
               <div class="w-1/3">
@@ -50,7 +50,7 @@
             </div>
           {% endfor %}
         </div>
-        <div class="w-1/3">
+        <div class="mt-4 sm:mt-0 sm:w-1/3">
           <a class="button text-center text-sm w-full submit" href="{{ siteUrl(entry.uri ~ '/' ~ order.shortNumber) }}">{{ 'View order
           details'|t }}</a>
           <button class="button text-sm w-full mt-2">{{ 'Download PDF invoice'|t }}</button>
