@@ -4,8 +4,54 @@
 {# Blocks #}
 {% block content %}
   <div class="bg-gray-100 py-8">
-    <div class="max-w-4xl mx-auto space-y-6">
-      {{ 'login' }}
+    <div class="text-center">
+      <h1 class="text-4xl">{{ 'Sign into your account'|t }}</h1>
+    </div>
+
+    <div class="max-w-sm mx-auto space-y-6 mt-8">
+      <form method="post" accept-charset="UTF-8" class="space-y-4">
+        {{ csrfInput() }}
+        {{ actionInput('users/login') }}
+
+        <div>
+          <label for="loginName">Username or email</label>
+          {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+            id: 'loginName',
+          }) }}
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          {{ input('password', 'password', null, {
+            id: 'password',
+          }) }}
+        </div>
+
+        <div class="flex items-center">
+          {{ input('checkbox', 'rememberMe', '1', {
+            id: 'rememberMe',
+            class: 'checkbox mr-2',
+          }) }}
+
+          <label for="rememberMe">
+            Remember me
+          </label>
+        </div>
+
+        <div>
+          <button class="button submit w-full" type="submit">Login</button>
+        </div>
+
+        {% if errorMessage is defined %}
+          <p>{{ errorMessage }}</p>
+        {% endif %}
+      </form>
+
+      <div>
+        <p class="my-2"><a href="{{ url('reset-password') }}">Forgot your password?</a></p>
+
+        <p class="my-2"><a href="{{ url('account/register') }}">Don’t have an account? Create one now.</a></p>
+      </div>
     </div>
   </div>
 {% endblock %}
