@@ -1,0 +1,84 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Blocks #}
+{% block content %}
+  <div class="bg-gray-100 py-8">
+    <div class="text-center">
+      <h1 class="text-4xl">{{ 'Create an account'|t }}</h1>
+    </div>
+
+    {% macro errorList(errors) %}
+      {% if errors %}
+        {{ ul(errors, {class: 'errors mt-1 ml-5 list-square text-red-600 text-sm'}) }}
+      {% endif %}
+    {% endmacro %}
+
+    <div class="max-w-sm mx-auto space-y-6 mt-8">
+      <form method="post" accept-charset="UTF-8" class="space-y-4">
+        {{ csrfInput() }}
+        {{ actionInput('users/save-user') }}
+        {{ redirectInput('') }}
+
+        <div>
+          <label for="username">Username</label>
+          {{ input('text', 'username', user.username ?? null, {
+            id: 'username',
+          }) }}
+
+          {% if user is defined %}
+            {{ _self.errorList(user.getErrors('username')) }}
+          {% endif %}
+        </div>
+
+        <div>
+          <label for="firstName">First Name</label>
+          {{ input('text', 'firstName', user.firstName ?? null, {
+            id: 'firstName',
+          }) }}
+
+          {% if user is defined %}
+            {{ _self.errorList(user.getErrors('firstName')) }}
+          {% endif %}
+        </div>
+
+        <div>
+          <label for="lastName">Last Name</label>
+          {{ input('text', 'lastName', user.lastName ?? null, {
+            id: 'lastName',
+          }) }}
+
+          {% if user is defined %}
+            {{ _self.errorList(user.getErrors('lastName')) }}
+          {% endif %}
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          {{ input('email', 'email', user.email ?? null, {
+            id: 'email',
+          }) }}
+
+          {% if user is defined %}
+            {{ _self.errorList(user.getErrors('email')) }}
+          {% endif %}
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          {{ input('password', 'password', null, {
+            id: 'password',
+          }) }}
+
+          {% if user is defined %}
+            {{ _self.errorList(user.getErrors('password')) }}
+          {% endif %}
+        </div>
+
+        <button class="button submit w-full" type="submit">Register</button>
+
+        <p><a href="{{ loginPage.url }}">Already have an account? Sign in now.</a></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}
