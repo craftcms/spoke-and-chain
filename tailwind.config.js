@@ -29,6 +29,9 @@ module.exports = {
                 '0.5': '0.125rem',
             }
         },
+        listStyleType: {
+            square: 'square',
+        }
     },
     variants: {
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
