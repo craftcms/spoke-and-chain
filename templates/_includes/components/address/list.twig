@@ -1,0 +1,38 @@
+{% set customer = craft.commerce.customers.getCustomer() %}
+
+<div class="space-y-2">
+  {% for address in customer.getAddresses() %}
+    <div class="option-select">
+      <div>
+        {% include '_includes/components/address/lines' with { address: address } %}
+        <div x-data="{
+                      handleSubmit: function(ev) {
+                        if (confirm('{{ "Are you sure you wish to delete this address?"|t }}')) {
+                            ev.target.submit();
+                        }
+                      }
+                  }">
+          <form method="post" action="" x-on:submit.prevent="handleSubmit($event)">
+            {{ csrfInput() }}
+
+            {{ actionInput('commerce/customer-addresses/delete') }}
+            {{ hiddenInput('id', address.id) }}
+
+            <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
+          </form>
+        </div>
+      </div>
+      {% include '_includes/components/address/editButton' with {
+        address: address,
+        redirectUrl: '',
+      } %}
+    </div>
+  {% endfor %}
+  <div x-data="modalButton('address', { id: 'new', method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
+    <a class="option-select text-black" href="#" x-on:click.prevent="open($dispatch)">
+      <div>
+        <strong>{{ 'Add address'|t }}</strong>
+      </div>
+    </a>
+  </div>
+</div>
