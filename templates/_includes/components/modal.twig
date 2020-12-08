@@ -1,23 +1,5 @@
 {# Modal #}
-<div x-data="modalButton()">
-    <button @click.prevent="open($dispatch)" class="button">
-        Open Modal
-    </button>
-</div>
-
-<div x-data="modalButton({
-  header: 'Something',
-  type: 'slideout',
-  content: '#shipping-address-edit-157838',
-  action: 'commerce/cart/update-cart',
-  buttons: []
-})">
-    <button @click.prevent="open($dispatch)" class="button">
-        Open Slideout
-    </button>
-</div>
-
-<div x-data="modal()" class="relative z-10">
+<div x-data="modal()" class="relative z-10" x-init="init()">
   <template
       x-on:openmodal.window="openModal($event.detail)"
       x-on:closemodal.window="closeModal()"
@@ -39,46 +21,13 @@
           @click="closeModal()">
       </div>
     </template>
-    <template x-if="show">
-      <div
-          x-spread="modalEffects"
-          class="modal-container absolute w-1/2 bg-white shadow-lg">
-        <form class="h-full w-full overflow-auto flex flex-col" :method="method" x-on:submit.prevent="submit($event, $dispatch)">
-          {{ csrfInput() }}
-          <template x-if="action">
-            <input type="hidden" name="action" x-model="action">
-          </template>
-
-          <template x-if="header">
-            <div class="px-12 py-8 text-center bg-gray-200">
-              <h2 x-text="header"></h2>
-            </div>
-          </template>
-
-          <div class="p-12 flex-1 overflow-auto">
-            <template x-if="!contentLoaded && !success">
-              <div>
-                Loading…
-              </div>
-            </template>
-            <div x-ref="contents" :class="{ 'hidden': !contentLoaded || success }"></div>
-            <template x-if="contentLoaded && success">
-              <div class="text-center">Success!</div>
-            </template>
-          </div>
-
-          <template x-if="buttons.length">
-            <div class="px-12 py-8 text-center bg-gray-200">
-              <template x-for="(button, index) in buttons" :key="index" x-if="!submitting">
-                <button :type="button.type == 'submit' ? 'submit' : 'button'" @click="buttonClick(button, $event)" class="button" :class="buttonClass(button)" x-text="button.label"></button>
-              </template>
-              <template x-if="submitting">
-                <div>Submitting</div>
-              </template>
-            </div>
-          </template>
-        </form>
-      </div>
-    </template>
+    <div class="modal-container absolute w-1/2 bg-white shadow-l transition transform duration-300 translate-x-0" :class="{ 'translate-x-full': !show  }">
+        <template x-if="show && !contentLoaded">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Loading</div>
+        </template>
+        <div :class="{ 'hidden': !contentLoaded }">
+          {{ sprig('_includes/components/modals/_body', {}, { id: 'modal-body', class: 'h-full w-full overflow-auto flex flex-col'  }) }}
+        </div>
+    </div>
   </div>
 </div>
