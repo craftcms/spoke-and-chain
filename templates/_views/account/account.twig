@@ -112,60 +112,8 @@
           <h2 class="text-2xl">{{ 'Addresses'|t }}</h2>
         </div>
 
-        <div class="w-full md:w-2/3 space-y-2 md:pr-16">
-          {% for address in customer.getAddresses() %}
-          	<div class="option-select">
-              <div>
-                {% include '_includes/components/address/lines' with { address: address } %}
-                <div x-data="{
-                    handleSubmit: function(ev) {
-                      if (confirm('{{ "Are you sure you wish to delete this address?"|t }}')) {
-                          ev.target.submit();
-                      }
-                    }
-                }">
-                  <form method="post" action="" x-on:submit.prevent="handleSubmit($event)">
-                    {{ csrfInput() }}
-                    {{ redirectInput(siteUrl(entry.uri, { updated: 'addressdeleted' })) }}
-                    {{ actionInput('commerce/customer-addresses/delete') }}
-                    {{ hiddenInput('id', address.id) }}
-
-                    <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
-                  </form>
-                </div>
-              </div>
-              {% include '_includes/components/address/editButton' with {
-                address: address,
-                redirectUrl: entry.uri,
-              } %}
-            </div>
-          {% endfor %}
-          <div x-data="modalButton({
-              header: '{{ "Add an address"|t }}',
-              type: 'slideout',
-              url: '{{ siteUrl("ajax/address/edit", { id: 'new' }) }}',
-              action: 'commerce/customer-addresses/save',
-              errorKey: 'addresserrors',
-              redirect: '{{ siteUrl(entry.uri, { updated: 'addressadded' }) }}',
-              buttons: [
-                {
-                  label: '{{ "Cancel"|t }}',
-                  type: 'close',
-                  prevent: true
-                },
-                {
-                  label: '{{ "Add"|t }}',
-                  type: 'submit',
-                  class: 'submit',
-                }
-              ]
-          })">
-            <a class="option-select text-black" href="#" x-on:click.prevent="open($dispatch)">
-              <div>
-                <strong>{{ 'Add address'|t }}</strong>
-              </div>
-            </a>
-          </div>
+        <div class="w-full md:w-2/3 md:pr-16">
+          {{ sprig('_includes/components/address/list', {}, { id: 'address-list' }) }}
         </div>
       </div>
     </div>
