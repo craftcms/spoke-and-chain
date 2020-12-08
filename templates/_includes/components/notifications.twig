@@ -1,16 +1,41 @@
-<div id="notifications" x-data="notifications()" x-init="init()" class="relative">
-    {% for type in ['notice', 'error'] %}
-        {% set message = craft.app.session.getFlash(type) %}
-        {% if message %}
-            <template x-if="{{ type }}Visible">
-                <div x-spread="effects"
-                     class="absolute z-10 w-full flex justify-center">
-                    <div
-                        class="notification rounded-b text-white shadow-lg px-4 py-2 {{ type }} {{ type == 'error' ? 'bg-red-600' : 'bg-blue-500' }}">
-                        {{ message }}
-                    </div>
-                </div>
-            </template>
-        {% endif %}
-    {% endfor %}
+<div id="notifications" x-data="notifications()" class="relative">
+  <template
+      x-on:notification.window="show($event.detail)"
+  ></template>
+  <template x-if="visible">
+    <div x-spread="effects"
+         class="absolute z-10 w-full flex justify-center">
+      <div
+          class="notification rounded-b text-white shadow-lg px-4 py-2"
+          :class="{ 'bg-red-600': type == 'error', 'bg-blue-500': type == 'notice' }"
+          x-text="message">
+      </div>
+    </div>
+  </template>
 </div>
+
+{% js at endBody %}
+  {% set notice = craft.app.session.getFlash('notice') %}
+  {% set error = craft.app.session.getFlash('error') %}
+  {% if notice %}
+  setTimeout(function() {
+    window.dispatchEvent(new CustomEvent('notification', {
+      detail: {
+        type: 'notice',
+        message: '{{ notice|e('js') }}'
+      }
+    }));
+  }, 300);
+
+  {% endif %}
+  {% if error %}
+    setTimeout(function() {
+      window.dispatchEvent(new CustomEvent('notification', {
+        detail: {
+          type: 'error',
+          message: '{{ error|e('js') }}'
+        }
+      }));
+    }, {{ notice ? '6000' : '0' }});
+  {% endif %}
+{% endjs %}
