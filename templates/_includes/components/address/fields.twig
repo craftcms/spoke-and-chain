@@ -7,8 +7,8 @@
 
 <div x-data="addresses()" x-init="
   modelId = '{{ model and model.id ? model.id : "null" }}';
-  countryId = {{ countryId ? "'#{countryId}'" : 'null' }};
-  stateId = {{ stateId ? "'#{stateId}'" : 'null' }};
+  countryId = {{ countryId ? "'#{countryId}'"|raw : 'null' }};
+  stateId = {{ stateId ? "'#{stateId}'"|raw : 'null' }};
   modelName = '{{ modelName }}';
   toggleStates();
   errors = {{ (model ? model.getErrors() : {})|json_encode }};
