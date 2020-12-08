@@ -1,0 +1,10 @@
+{% set type = type ?? null %}
+{% set data = data ?? '{}' %}
+
+{{ hiddenInput('type', type, { id: 'modal-handle' }) }}
+{{ hiddenInput('data', data, { id: 'modal-data' }) }}
+
+{# Output child component#}
+{% if type %}
+  {{ sprig('_includes/components/modals/' ~ type, {}, { data: data }) }}
+{% endif %}
