@@ -22,14 +22,23 @@ window.notifications = function() {
         },
 
         effects: {
+            ['x-transition:enter']() {
+                return 'transition transform ease-out duration-300';
+            },
+            ['x-transition:enter-start']() {
+                return '-translate-y-full';
+            },
+            ['x-transition:enter-end']() {
+                return 'translate-y-0';
+            },
             ['x-transition:leave']() {
-                return 'transition ease-out duration-300';
+                return 'transition transform ease-out duration-300';
             },
             ['x-transition:leave-start']() {
-                return 'opacity-100';
+                return 'translate-y-0';
             },
             ['x-transition:leave-end']() {
-                return 'opacity-0';
+                return '-translate-y-full';
             },
         }
     }

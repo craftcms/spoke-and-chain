@@ -1,12 +1,12 @@
-<div id="notifications" x-data="notifications()" class="relative">
+<div id="notifications" x-data="notifications()" class="fixed left-1/2 transform -translate-x-1/2 top-0 z-40">
   <template
       x-on:notification.window="show($event.detail)"
   ></template>
   <template x-if="visible">
     <div x-spread="effects"
-         class="absolute z-10 w-full flex justify-center">
+         class="w-full flex justify-center pt-8">
       <div
-          class="notification rounded-b text-white shadow-lg px-4 py-2"
+          class="notification rounded text-white shadow-lg px-4 py-2"
           :class="{ 'bg-red-600': type == 'error', 'bg-blue-500': type == 'notice' }"
           x-text="message">
       </div>
