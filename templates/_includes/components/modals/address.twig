@@ -1,5 +1,8 @@
 {% set data = data is not defined ? '' : data %}
 {% set data = not data is iterable ? data|json_decode : data %}
+{% if address is not defined or (address is defined and not address is instance of('craft\\commerce\\models\\Address')) %}
+  {% set address = data.id and data.id == 'new' ? [] : data.id ? craft.commerce.customers.customer.addressById(data.id) : null %}
+{% endif %}
 
 <!-- Template: {{ _self }}.twig -->
 <form
@@ -8,6 +11,7 @@
     s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
     s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
     s-val:data='{{ data|json_encode }}'
+    s-val:type='{{ type }}'
 >
   <div class="px-12 py-8 text-center bg-gray-200">
     <h2>{{ 'Edit Address'|t }}</h2>
@@ -15,7 +19,6 @@
 
   <div class="p-12 flex-1 overflow-auto">
     {% if data %}
-      {% set address = data.id and data.id == 'new' ? [] : data.id ? craft.commerce.customers.customer.addressById(data.id) : null %}
       {% if address is same as (null) %}
         <p>{{ 'Uanble to find address.'|t }}</p>
       {% else %}
@@ -23,6 +26,7 @@
             modelName: 'address',
             model: address,
             outputIdField: true,
+            errors: address.getErrors()
           } %}
       {% endif %}
     {% endif %}
@@ -39,7 +43,7 @@
 <script>
     // Refresh other components
     {% if success is defined and success %}
-      document.querySelector('#address-list').dispatchEvent(new CustomEvent('refresh'));
+      htmx.trigger(htmx.find('#address-list'), 'refresh');
       window.dispatchEvent(new CustomEvent('closemodal'));
       window.dispatchEvent(new CustomEvent('notification', {
           detail: {

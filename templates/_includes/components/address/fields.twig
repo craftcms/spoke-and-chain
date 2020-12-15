@@ -1,3 +1,5 @@
+{% set errors = errors is not defined ? [] : errors %}
+{% set errorKeys = errors and errors|length ? errors|keys : [] %}
 {% set countries = craft.commerce.countries.allEnabledCountriesAsList %}
 {% set states = craft.commerce.states.allEnabledStatesAsListGroupedByCountryId %}
 {% set countryId = model and model.countryId ? model.countryId : null %}
@@ -11,7 +13,6 @@
   stateId = {{ stateId ? "'#{stateId}'"|raw : 'null' }};
   modelName = '{{ modelName }}';
   toggleStates();
-  errors = {{ (model ? model.getErrors() : {})|json_encode }};
 "
 >
   <template x-on:address{{ model and model.id ? model.id : '' }}errors.window="updateErrors($event.detail)"></template>
@@ -21,41 +22,41 @@
   <div class="mt-3">
     <label for="{{ idName }}-firstName">{{ 'First Name'|t }}</label>
     <input type="text" id="{{ idName }}-firstName" class="w-full" :class="{ 'border-red-600': hasErrors('firstName') }" name="{{ modelName }}[firstName]" value="{{ model ? model.firstName : '' }}">
-    {% include '_includes/components/forms/errorList' with { key: 'firstName' } only %}
+    {% include '_includes/components/forms/errorList' with { errors: errors['firstName'] ?? [] } only %}
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-lastName">{{ 'Last Name'|t }}</label>
     <input type="text" id="{{ idName }}-lastName" class="w-full" :class="{ 'border-red-600': hasErrors('lastName') }" name="{{ modelName }}[lastName]" value="{{ model ? model.lastName : '' }}">
-    {% include '_includes/components/forms/errorList' with { key: 'lastName' } only %}
+    {% include '_includes/components/forms/errorList' with { errors: errors['lastName'] ?? [] } only %}
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-address1">{{ 'Address 1'|t }}</label>
-    <input type="text" id="{{ idName }}-address1" class="w-full" :class="{ 'border-red-600': hasErrors('address1') }" name="{{ modelName }}[address1]" value="{{ model ? model.address1 : '' }}">
-    {% include '_includes/components/forms/errorList' with { key: 'address1' } only %}
+    <input type="text" id="{{ idName }}-address1" class="w-full {{ 'address1' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[address1]" value="{{ model ? model.address1 : '' }}">
+    {% include '_includes/components/forms/errorList' with { errors: errors['address1'] ?? [] } only %}
   </div>
 
   <div class="mt-3">
     <label for="{{ idName }}-address2">{{ 'Address 2'|t }} <small class="text-gray-500">({{ 'optional'|t }})</small></label>
     <input type="text" id="{{ idName }}-address2" class="w-full" :class="{ 'border-red-600': hasErrors('address2') }" name="{{ modelName }}[address2]" value="{{ model ? model.address2 : '' }}">
-    {% include '_includes/components/forms/errorList' with { key: 'address2' } only %}
+    {% include '_includes/components/forms/errorList' with { errors: errors['address2'] ?? [] } only %}
   </div>
 
   <div class="flex -mx-4 mt-3">
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-city">{{ 'City'|t }}</label>
       <input type="text" id="{{ idName }}-city" class="w-full" :class="{ 'border-red-600': hasErrors('city') }" name="{{ modelName }}[city]" value="{{ model ? model.city : '' }}">
-      {% include '_includes/components/forms/errorList' with { key: 'city' } only %}
+      {% include '_includes/components/forms/errorList' with { errors: errors['city'] ?? [] } only %}
     </div>
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-zipCode">{{ 'Zip Code'|t }}</label>
       <input type="text" id="{{ idName }}-zipCode" class="w-full" :class="{ 'border-red-600': hasErrors('zipCode') }" name="{{ modelName }}[zipCode]" value="{{ model ? model.zipCode : '' }}">
-      {% include '_includes/components/forms/errorList' with { key: 'zipCode' } only %}
+      {% include '_includes/components/forms/errorList' with { errors: errors['zipCode'] ?? [] } only %}
     </div>
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-phone">{{ 'Phone'|t }} <small class="text-gray-500">({{ 'optional'|t }})</small></label>
     <input type="text" id="{{ idName }}-phone" class="w-full" :class="{ 'border-red-600': hasErrors('phone') }" name="{{ modelName }}[phone]" value="{{ model ? model.phone : '' }}">
-    {% include '_includes/components/forms/errorList' with { key: 'phone' } only %}
+    {% include '_includes/components/forms/errorList' with { errors: errors['phone'] ?? [] } only %}
   </div>
   <div class="flex -mx-4 mt-3">
     <div class="flex-1 mx-4">
@@ -68,13 +69,13 @@
           {% endfor %}
         </select>
       </div>
-      {% include '_includes/components/forms/errorList' with { key: 'countryId' } only %}
+      {% include '_includes/components/forms/errorList' with { errors: errors['countryId'] ?? [] } only %}
     </div>
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-state">{{ 'State'|t }} <small class="text-gray-500" x-show="!showStateSelect">({{ 'optional'|t }})</small></label>
       {% set options = (model and states[model.countryId] is defined ? states[model.countryId] : []) %}
       <div class="select w-full" x-show="showStateSelect">
-        <select :id="stateSelectId" class="w-full {{ model and model.getErrors('stateValue')|length ? 'border-red-600' : '' }}" name="{{ modelName }}[stateValue]" x-model="stateId">
+        <select :id="stateSelectId" class="w-full" name="{{ modelName }}[stateValue]" x-model="stateId">
           <template x-for="(state, index) in states()" :key="state.id" x-if="states().length">
             <option :value="state.id" x-text="state.name" :selected="stateSelected(state)"></option>
           </template>
@@ -83,12 +84,12 @@
       <input
           type="text"
           :id="stateTextId"
-          class="w-full {{ model and model.getErrors('stateValue')|length ? 'border-red-600' : '' }}"
+          class="w-full"
           :name="!showStateSelect ? '{{ modelName }}[stateValue]' : ''"
-          value="{{ model ? model.stateName : '' }}"
+          value="{{ model ? model.stateValue : '' }}"
           x-show="!showStateSelect"
       >
-      {% include '_includes/components/forms/errorList' with { key: 'stateValue' } only %}
+      {% include '_includes/components/forms/errorList' with { errors: errors['stateValue'] ?? [] } only %}
     </div>
   </div>
 </div>
