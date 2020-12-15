@@ -1,12 +1,10 @@
-<!-- Template: {{ _self }}.twig -->
-{% set key = key is not defined ? false : key %}
+{% set errors = errors is not defined ? [] : errors %}
 
-{% if key %}
-  <template x-if="hasErrors('{{ key }}')">
-    <ul class="text-red-600">
-      <template x-for="error in getErrors('{{ key }}')">
-        <li x-text="error"></li>
-      </template>
-    </ul>
-  </template>
+{% if errors|length %}
+  <!-- Template: {{ _self }}.twig -->
+  <ul class="text-red-600">
+    {% for err in errors %}
+      <li>{{ err }}</li>
+    {% endfor %}
+  </ul>
 {% endif %}
