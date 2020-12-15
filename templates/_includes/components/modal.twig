@@ -26,7 +26,11 @@
           <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Loading</div>
         </template>
         <div :class="{ 'hidden': !contentLoaded }">
-          {{ sprig('_includes/components/modals/_body', {}, { id: 'modal-body', class: 'h-full w-full overflow-auto flex flex-col'  }) }}
+          {{ sprig('_includes/components/modals/_body', {}, {
+            id: 'modal-body',
+            class: 'h-full w-full overflow-auto flex flex-col',
+            's-include': '#modal-body .modal-body'
+          }) }}
         </div>
     </div>
   </div>
