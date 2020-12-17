@@ -1,0 +1,51 @@
+{% set paymentSources = craft.commerce.paymentSources.getAllPaymentSourcesByUserId(currentUser.id) %}
+
+<!-- Template: {{ _self }}.twig -->
+<div class="space-y-2">
+  {% if paymentSources|length %}
+    {% for paymentSource in paymentSources %}
+      <div class="option-select">
+        <div>
+          <div class="flex justify-between items-center">
+            <strong>{{ paymentSource.description }}</strong>
+            <div>
+              <form
+                  sprig
+                  s-val:card-deleted="true"
+                  s-method="post"
+                  s-action="commerce/payment-sources/delete"
+                  s-confirm="{{ 'Are you sure you wish to delete this card?'|t }}"
+                  s-indicator="#payment-sources-indicator"
+              >
+                {{ hiddenInput('id', paymentSource.id) }}
+
+                <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+  <div x-data="modalButton('card', {}, 'slideout')">
+    <a class="option-select cursor-pointer text-black" href="#" x-on:click.prevent="open($dispatch)">
+      <div>
+        <div class="flex justify-between items-center">
+          <strong>{{ 'Add a card'|t }}</strong>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+{% if cardDeleted is defined and cardDeleted %}
+  <script>
+    window.dispatchEvent(new CustomEvent('notification', {
+        detail: {
+            type: 'notice',
+            message: '{{ 'Card deleted'|t }}'
+        }
+    }));
+  </script>
+{% endif %}
