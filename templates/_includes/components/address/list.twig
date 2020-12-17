@@ -1,21 +1,13 @@
 {% set customer = craft.commerce.customers.getCustomer() %}
 
+<!-- Template: {{ _self }}.twig -->
 <div class="space-y-2">
   {% for address in customer.getAddresses() %}
     <div class="option-select">
       <div>
         {% include '_includes/components/address/lines' with { address: address } %}
-        <div x-data="{
-                      handleSubmit: function(ev) {
-                        if (confirm('{{ "Are you sure you wish to delete this address?"|t }}')) {
-                            ev.target.submit();
-                        }
-                      }
-                  }">
-          <form method="post" action="" x-on:submit.prevent="handleSubmit($event)">
-            {{ csrfInput() }}
-
-            {{ actionInput('commerce/customer-addresses/delete') }}
+        <div>
+          <form sprig s-method="post" s-action="commerce/customer-addresses/delete" s-confirm="{{ "Are you sure you wish to delete this address?"|t }}">
             {{ hiddenInput('id', address.id) }}
 
             <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
