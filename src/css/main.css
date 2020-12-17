@@ -33,6 +33,7 @@
 @import 'components/button';
 @import 'components/modal';
 @import 'components/option-select';
+@import 'components/spinner';
 
 /* Tailwind utilities */
 @import 'tailwindcss/utilities';
