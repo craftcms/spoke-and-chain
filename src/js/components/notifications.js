@@ -43,3 +43,14 @@ window.notifications = function() {
         }
     }
 };
+
+window.addNotification = function(type = 'notice', message = null) {
+    if (type && message) {
+        window.dispatchEvent(new CustomEvent('notification', {
+            detail: {
+                type: type,
+                message: message
+            }
+        }));
+    }
+};
