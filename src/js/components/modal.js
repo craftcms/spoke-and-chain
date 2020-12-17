@@ -91,3 +91,7 @@ window.modalButton = function(handle = null, data = {}, type = 'slideout') {
         }
     }
 };
+
+window.closeModal = function() {
+    window.dispatchEvent(new CustomEvent('closemodal'));
+};
