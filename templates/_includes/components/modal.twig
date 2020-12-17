@@ -23,12 +23,16 @@
     </template>
     <div class="modal-container absolute w-1/2 bg-white shadow-l transition transform duration-300 translate-x-0" :class="{ 'translate-x-full': !show  }">
         <template x-if="show && !contentLoaded">
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Loading</div>
+          <div class="relative w-full h-full">
+            <div class="spinner-overlay spinner-overlay--show">
+              {% include '_includes/components/spinner' %}
+            </div>
+          </div>
         </template>
-        <div :class="{ 'hidden': !contentLoaded }">
+        <div class="h-full" :class="{ 'hidden': !contentLoaded }">
           {{ sprig('_includes/components/modals/_body', {}, {
             id: 'modal-body',
-            class: 'h-full w-full overflow-auto flex flex-col',
+            class: 'h-full w-full',
             's-include': '#modal-body .modal-body'
           }) }}
         </div>
