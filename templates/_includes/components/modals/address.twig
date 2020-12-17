@@ -7,36 +7,46 @@
 <!-- Template: {{ _self }}.twig -->
 <form
     sprig
-    class="h-full w-full overflow-auto flex flex-col"
+    class="h-full w-full overflow-auto flex flex-col relative"
     s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
     s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
     s-val:data='{{ data|json_encode }}'
     s-val:type='{{ type }}'
+    x-data="{ submitting: false }"
+    x-on:submit="submitting = true"
 >
-  <div class="px-12 py-8 text-center bg-gray-200">
-    <h2>{{ 'Edit Address'|t }}</h2>
-  </div>
 
-  <div class="p-12 flex-1 overflow-auto">
+  {% set body %}
     {% if data %}
       {% if address is same as (null) %}
         <p>{{ 'Uanble to find address.'|t }}</p>
       {% else %}
-          {% include '_includes/components/address/fields' with {
-            modelName: 'address',
-            model: address,
-            outputIdField: true,
-            errors: address.getErrors()
-          } %}
+        {% include '_includes/components/address/fields' with {
+          modelName: 'address',
+          model: address,
+          outputIdField: true,
+          errors: address.getErrors()
+        } %}
       {% endif %}
     {% endif %}
-  </div>
+  {% endset %}
 
-  <div x-data="{}" class="px-12 py-8 text-center bg-gray-200">
-    <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ 'Cancel'|t }}</a>
+  {% set buttons %}
     {% if data %}
       <input class="button submit" type="submit" value="{{ 'Save'|t }}">
     {% endif %}
+  {% endset %}
+
+  {% include '_includes/components/modals/_inner' with {
+    heading: 'Edit Address'|t,
+    body: body,
+    buttons: buttons,
+    closeButton: true,
+    closeButtonText: 'Cancel'|t
+  } %}
+
+  <div class="spinner-overlay" :class="{ 'spinner-overlay--show': submitting }">
+    {% include '_includes/components/spinner' %}
   </div>
 </form>
 
@@ -44,12 +54,7 @@
     // Refresh other components
     {% if success is defined and success %}
       htmx.trigger(htmx.find('#address-list'), 'refresh');
-      window.dispatchEvent(new CustomEvent('closemodal'));
-      window.dispatchEvent(new CustomEvent('notification', {
-          detail: {
-              type: 'notice',
-              message: '{{ data and data.id == 'new' ? 'Address added'|t : 'Address updated'|t }}'
-          }
-      }));
+      closeModal();
+      addNotification('notice', '{{ data and data.id == 'new' ? 'Address added'|t : 'Address updated'|t }}');
     {% endif %}
 </script>

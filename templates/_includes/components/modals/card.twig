@@ -6,16 +6,15 @@
 <form
     sprig
     id="fields-{{ gateway.id }}"
-    class="h-full w-full overflow-auto flex flex-col"
+    class="h-full w-full overflow-auto flex flex-col relative"
     s-method="post"
     s-action="commerce/payment-sources/add"
     s-indicator="#payment-sources-indicator"
+    x-data="{ submitting: false }"
+    x-on:submit="submitting = true"
 >
-  <div class="px-12 py-8 text-center bg-gray-200">
-    <h2>{{ 'Add Card'|t }}</h2>
-  </div>
 
-  <div class="p-12 flex-1 overflow-auto">
+  {% set body %}
     {% if gateway and gateway.supportsPaymentSources() %}
       {{ hiddenInput('gatewayId', gateway.id) }}
 
@@ -30,13 +29,24 @@
     {% else %}
       <p>{{ 'Gateway does not support payment sources'|t }}</p>
     {% endif %}
-  </div>
+  {% endset %}
 
-  <div x-data="{}" class="px-12 py-8 text-center bg-gray-200">
-    <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ 'Cancel'|t }}</a>
+  {% set buttons %}
     {% if gateway and gateway.supportsPaymentSources() %}
       <input class="button submit" type="submit" value="{{ 'Save'|t }}">
     {% endif %}
+  {% endset %}
+
+  {% include '_includes/components/modals/_inner' with {
+    heading: 'Add Card'|t,
+    body: body,
+    buttons: buttons,
+    closeButton: true,
+    closeButtonText: 'Cancel'|t
+  } %}
+
+  <div class="spinner-overlay" :class="{ 'spinner-overlay--show': submitting }">
+    {% include '_includes/components/spinner' %}
   </div>
 </form>
 
@@ -44,12 +54,7 @@
     // Refresh other components
     {% if success is defined and success %}
       htmx.trigger(htmx.find('#payment-sources-list'), 'refresh');
-      window.dispatchEvent(new CustomEvent('closemodal'));
-      window.dispatchEvent(new CustomEvent('notification', {
-          detail: {
-              type: 'notice',
-              message: '{{ 'Card added'|t }}'
-          }
-      }));
+      closeModal();
+      addNotification('notice', '{{ 'Card added'|t }}');
     {% endif %}
 </script>
