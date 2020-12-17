@@ -1,0 +1,55 @@
+{# Varaibles #}
+{% set gateways = craft.commerce.gateways.allCustomerEnabledGateways %}
+{% set gateway = gateways|length ? gateways|first : null %}
+
+<!-- Template: {{ _self }}.twig -->
+<form
+    sprig
+    id="fields-{{ gateway.id }}"
+    class="h-full w-full overflow-auto flex flex-col"
+    s-method="post"
+    s-action="commerce/payment-sources/add"
+    s-indicator="#payment-sources-indicator"
+>
+  <div class="px-12 py-8 text-center bg-gray-200">
+    <h2>{{ 'Add Card'|t }}</h2>
+  </div>
+
+  <div class="p-12 flex-1 overflow-auto">
+    {% if gateway and gateway.supportsPaymentSources() %}
+      {{ hiddenInput('gatewayId', gateway.id) }}
+
+      {% include '_includes/components/forms/creditCard' with {
+        paymentForm: gateway.getPaymentFormModel()
+      } %}
+
+      <div class="pt-4">
+        <label for="card-description">{{ 'Card Description'|t }}</label>
+        <input id="card-description" class="w-full" type="text" name="description" value="" maxlength="70" autocomplete="off" placeholder="{{ 'Card description'|t }}">
+      </div>
+    {% else %}
+      <p>{{ 'Gateway does not support payment sources'|t }}</p>
+    {% endif %}
+  </div>
+
+  <div x-data="{}" class="px-12 py-8 text-center bg-gray-200">
+    <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ 'Cancel'|t }}</a>
+    {% if gateway and gateway.supportsPaymentSources() %}
+      <input class="button submit" type="submit" value="{{ 'Save'|t }}">
+    {% endif %}
+  </div>
+</form>
+
+<script>
+    // Refresh other components
+    {% if success is defined and success %}
+      htmx.trigger(htmx.find('#payment-sources-list'), 'refresh');
+      window.dispatchEvent(new CustomEvent('closemodal'));
+      window.dispatchEvent(new CustomEvent('notification', {
+          detail: {
+              type: 'notice',
+              message: '{{ 'Card added'|t }}'
+          }
+      }));
+    {% endif %}
+</script>
