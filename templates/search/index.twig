@@ -1,0 +1,89 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set searchNav = [
+  {
+    searchType: 'products',
+    title: 'Products',
+  },
+  {
+    searchType: 'articles',
+    title: 'Articles',
+  },
+] %}
+
+{% set searchQuery = craft.app.request.getQueryParam('q') %}
+
+{# Search products #}
+{% set productQueryOptions = {
+  type: 'bike'
+} %}
+{% set productQuery = craft.products(productQueryOptions) %}
+{% set products = productQuery.search(searchQuery).all() %}
+
+{# Search articles #}
+{% set articles = craft.entries({
+  section: 'articles',
+}).search(searchQuery).all() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  
+  <div class="bg-gray-100 pt-12">
+    <div class="max-w-xl mx-auto sm:text-center">
+      <h1 class="text-4xl mt-0">Search results for “{{ searchQuery }}”</h1>
+
+      <form action="/search" class="max-w-sm mx-auto mt-4">
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            {{ svg('@webroot/icons/search.svg')|attr({
+              class: 'text-gray-500 w-6 h-6',
+            }) }}
+          </div>
+
+          <input id="search-input" name="q" type="search"
+                 placeholder="Search Spoke & Chain…" value="{{ searchQuery }}" class="full-w pl-10"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 p-8">
+    <div class="mt-12 max-w-6xl mx-auto">
+      {% if products|length == 0 and articles|length == 0 %}
+        <div class="text-center pb-12">
+          <h2 class="text-2xl">No results found</h2>
+          <p>We can't find any results based on your search</p>
+        </div>
+      {% endif %}
+
+      {% if products|length > 0 %}
+        <h2 class="mt-12 text-2xl">{{ products|length }} products</h2>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
+          {% for product in products %}
+            {% include '_includes/components/cards/product' with {
+              title: product.title,
+              image: product.mainImage.one(),
+              url: product.url,
+              price: product.defaultPriceAsCurrency
+            } only %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if articles|length > 0 %}
+        <h2 class="mt-12 text-2xl">{{ articles|length }} articles</h2>
+
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
+          {% for article in articles %}
+            {% include '_includes/components/cards/article' with {
+              article: article,
+            } only %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,5 +1,20 @@
 window.header = function() {
     return {
+        showSearch: false,
+        openSearch($nextTick) {
+            this.showSearch = true
+            $nextTick(() => {
+                const $searchInput = document.querySelector('#search-input')
+                $searchInput.focus()
+
+                // Put the cursor at the end of the text
+                $searchInput.selectionStart = $searchInput.selectionEnd = $searchInput.value.length;
+            })
+        },
+        closeSearch() {
+            this.showSearch = false
+        },
+
         showNav: false,
         showCartMenu: false,
         openCartMenu() {
