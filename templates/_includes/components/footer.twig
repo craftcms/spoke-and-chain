@@ -1,5 +1,8 @@
 <!-- Template: {{ _self }}.twig -->
 {# Variables #}
+{% set bikeCategories = craft.categories({
+    group: 'bikeTypes'
+}).all() %}
 
 {# Output #}
 <footer>
@@ -10,33 +13,16 @@
                     <div class="md:grid md:grid-cols-2 md:gap-8">
                         <div>
                             <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                                Solutions
+                                Bikes
                             </h4>
                             <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Marketing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Analytics
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Commerce
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Insights
-                                    </a>
-                                </li>
+                                {% for bikeCategory in bikeCategories %}
+                                    <li>
+                                        <a class="text-base leading-6 text-gray-500 hover:text-gray-900" href="{{ bikeCategory.url }}">
+                                            {{ bikeCategory.title }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="mt-12 md:mt-0">
