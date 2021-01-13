@@ -34,16 +34,15 @@
 
   <div class="bg-gray-200">
     <div id="buy" class="container py-8">
-      {# Meta Details #}
       <form method="post">
         {{ csrfInput() }}
         {{ actionInput('commerce/cart/update-cart') }}
         {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
 
-        <div class="flex">
+        <div class="lg:flex lg:justify-between">
           {# Product Title #}
-          <div class="w-1/4">
-            <h1>{{ product.title }}</h1>
+          <div class="lg:w-1/4">
+            <h1 class="mt-0">{{ product.title }}</h1>
             <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
             {% if defaultVariant.onSale %}
               <div>
@@ -53,40 +52,38 @@
           </div>
 
           {# Product Variants #}
-          <div class="mx-auto">
-            <div class="flex justify-center">
-              {# Colors #}
-              {% if productColors %}
-                <div class="flex">
-                  {% for color in productColors %}
-                    <div class="h-4 w-4 rounded-full mr-1"
-                         style="background-color: {{ color.color }}"
-                         aria-label="{{ color.title }}"
-                         title="{{ color.title }}">
-                      <span class="visuallyhidden">{{ color.title }}</span>
-                    </div>
-                  {% endfor %}
-                </div>
-              {% endif %}
+          <div class="mt-6 lg:mt-0 lg:flex lg:justify-center">
+            {# Colors #}
+            {% if productColors %}
+              <div class="flex">
+                {% for color in productColors %}
+                  <div class="h-5 w-5 rounded-full mt-3 mr-3"
+                       style="background-color: {{ color.color }}"
+                       aria-label="{{ color.title }}"
+                       title="{{ color.title }}">
+                    <span class="visuallyhidden">{{ color.title }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
 
-              {# Variants #}
+            {# Variants #}
+            <div class="mt-6 lg:mt-0">
+              <select name="purchasableId">
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}"
+                          {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
+                {% endfor %}
+              </select>
+
               <div>
-                <select name="purchasableId">
-                  {% for variant in product.variants %}
-                    <option value="{{ variant.id }}"
-                            {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
-                  {% endfor %}
-                </select>
-
-                <div>
-                  <a href="#">{{ 'Size chart'|t('site') }}</a>
-                </div>
+                <a href="#">{{ 'Size chart'|t('site') }}</a>
               </div>
             </div>
           </div>
 
           {# Product Buy #}
-          <div class="w-1/4 text-right">
+          <div class="mt-6 lg:mt-0 lg:w-1/4 lg:text-right lg:flex lg:items-center lg:justify-end">
             <input class="button" type="submit" name="submit"
                    value="{{ 'Add to cart'|t('site') }}">
           </div>
