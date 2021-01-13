@@ -91,7 +91,9 @@
                     </div>
 
                     <input id="search-input" name="q" type="search"
-                           placeholder="Search Spoke & Chain…" value="{{ searchQuery }}" class="full-w pl-10"/>
+                           placeholder="Search Spoke & Chain…" value="{{ searchQuery }}" class="full-w pl-10"
+                           @keydown.escape="showSearch = false"
+                    />
                   </div>
                 </form>
 
