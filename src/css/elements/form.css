@@ -66,6 +66,7 @@ textarea {
 [type="url"],
 textarea,
 select {
+    @apply appearance-none;
     @apply rounded;
     @apply border border-gray-500;
     @apply py-2 px-4;
