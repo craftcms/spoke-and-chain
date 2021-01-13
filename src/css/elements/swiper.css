@@ -1,0 +1,24 @@
+.swiper-button-prev,
+.swiper-button-next {
+    @apply px-4 py-8 text-gray-500 text-sm;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    @apply text-2xl;
+}
+
+@media (min-width: 1024px) {
+    .swiper-button-prev {
+        @apply ml-12;
+    }
+
+    .swiper-button-next {
+        @apply mr-12;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        @apply text-4xl;
+    }
+}
