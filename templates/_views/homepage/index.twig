@@ -27,9 +27,21 @@
       <div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {% for bikeCategory in bikeCategories %}
+            {% set mainImage = bikeCategory.mainImage.one() %}
+            {% set thumbUrl = null %}
+
+            {% if mainImage %}
+              {% set thumb = {
+                width: 2000,
+                height: 1000,
+              } %}
+
+              {% set thumbUrl = mainImage.getUrl(thumb) %}
+            {% endif %}
+
             {% include '_includes/components/cards/category' with {
               title: bikeCategory.title,
-              image: null,
+              image: thumbUrl,
               url: bikeCategory.url,
             } only %}
           {% endfor %}
