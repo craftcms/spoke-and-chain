@@ -144,11 +144,11 @@ select {
 }
 
 .checkbox {
-    @apply .rounded;
+    @apply rounded;
 }
 
 .radio {
-    @apply .rounded-full;
+    @apply rounded-full;
 }
 
 .checkbox:checked,

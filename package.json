@@ -25,7 +25,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/register": "^7.11.5",
     "@babel/runtime": "^7.11.2",
-    "autoprefixer": "^10.0.0",
+    "autoprefixer": "^10.2.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -49,7 +49,7 @@
     "mini-css-extract-plugin": "^0.11.2",
     "moment": "^2.29.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.4",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^4.0.2",
     "postcss-normalize": "^9.0.0",
@@ -142,6 +142,6 @@
   "dependencies": {
     "alpinejs": "^2.7.3",
     "swiper": "^6.3.5",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^2.0.2"
   }
 }

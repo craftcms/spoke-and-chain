@@ -40,5 +40,5 @@
 }
 
 .option-select input[type=radio]:focus ~ label {
-    @apply shadow-outline;
+    @apply ring;
 }
