@@ -2,6 +2,7 @@
 {% extends '_layouts/site' %}
 
 {# Variables #}
+{% set fixedHeader = false %}
 {% set defaultVariant = product.defaultVariant %}
 {% set productColors = product.colors.all() %}
 {% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
