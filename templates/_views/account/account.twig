@@ -1,19 +1,5 @@
 {% requireLogin %}
 
-{# Notice updates #}
-{% set updatedQueryString = craft.app.request.getQueryParam('updated', false) %}
-{% if updatedQueryString and updatedQueryString == 'cardadded' %}
-  {% do craft.app.session.setFlash('notice', 'Card added'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'carddeleted' %}
-  {% do craft.app.session.setFlash('notice', 'Card deleted'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'address' %}
-  {% do craft.app.session.setFlash('notice', 'Address updated'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'addressadded' %}
-  {% do craft.app.session.setFlash('notice', 'Address added'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'addressdeleted' %}
-  {% do craft.app.session.setFlash('notice', 'Address deleted'|t) %}
-{% endif %}
-
 {# Layout #}
 {% extends '_layouts/site' %}
 
@@ -50,7 +36,7 @@
           {{ sprig('_includes/components/payment/sourcesList', {}, {
             id: 'payment-sources-list',
             's-include': '#payment-sources-list',
-            's-indicator': '#payment-sources-loading'
+            's-indicator': '#payment-sources-indicator'
           }) }}
           <div id="payment-sources-indicator" class="spinner-overlay">
             {% include '_includes/components/spinner' %}
@@ -67,16 +53,14 @@
         <div class="w-full md:w-2/3 md:pr-16">
           {{ sprig('_includes/components/address/list', {}, {
             id: 'address-list',
-            's-include': '#address-list'
+            's-include': '#address-list',
+            's-indicator': '#address-list-indicator'
           }) }}
+          <div id="address-list-indicator" class="spinner-overlay">
+            {% include '_includes/components/spinner' %}
+          </div>
         </div>
       </div>
     </div>
   </div>
 {% endblock %}
-
-{% js at endBody %}
-  {% if updatedQueryString %}
-    window.quickReplaceUri = '{{ entry.url }}';
-  {% endif %}
-{% endjs %}
