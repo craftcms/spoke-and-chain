@@ -66,6 +66,7 @@ textarea {
 [type="url"],
 textarea,
 select {
+    @apply appearance-none;
     @apply rounded;
     @apply border border-gray-500;
     @apply py-2 px-4;
@@ -143,11 +144,11 @@ select {
 }
 
 .checkbox {
-    @apply .rounded;
+    @apply rounded;
 }
 
 .radio {
-    @apply .rounded-full;
+    @apply rounded-full;
 }
 
 .checkbox:checked,
