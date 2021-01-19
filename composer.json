@@ -6,7 +6,7 @@
     "craftcms/redactor": "^2.8",
     "nystudio107/craft-twigpack": "^1.2",
     "oberon/starfield": "^1.0",
-    "putyourlightson/craft-sprig": "dev-feature/route-params as 1.1.1",
+    "putyourlightson/craft-sprig": "^1.3.1",
     "solspace/craft-freeform": "^3.9",
     "vlucas/phpdotenv": "^3.4.0"
   },
