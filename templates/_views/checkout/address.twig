@@ -1,9 +1,3 @@
-{# Pre layout #}
-{% set updatedQueryString = craft.app.request.getQueryParam('updated', false) %}
-{% if updatedQueryString and updatedQueryString == 'address' %}
-  {% do craft.app.session.setFlash('notice', 'Address updated'|t) %}
-{% endif %}
-
 {# Layout #}
 {% extends '_layouts/site' %}
 
@@ -32,7 +26,7 @@
     <div class="container flex justify-center">
       <div class="w-full max-w-2xl">
         <form method="post" x-data="{
-          shippingAddress: '{{ currentUser and addresses|length and cart.shippingAddressId ? cart.shippingAddressId : '' }}',
+          shippingAddress: {{ currentUser and addresses|length and cart.shippingAddressId ? cart.shippingAddressId : 'null' }},
         }">
           {{ csrfInput() }}
           {{ actionInput('commerce/cart/update-cart') }}
@@ -44,36 +38,21 @@
 
             <h2 class="text-2xl mb-4">{{ 'Shipping Address'|t }}</h2>
             <div class="space-y-6">
-                <div class="space-y-2">
+                <div class="space-y-2 relative">
                     {% if currentUser and addresses|length %}
-                        {% for address in addresses %}
-                            <div class="option-select">
-                                <input id="shipping-address-{{ address.id }}" type="radio" name="shippingAddressId" value="{{ address.id }}" x-model="shippingAddress">
-
-                                <label for="shipping-address-{{ address.id }}">
-                                  {% include '_includes/components/address/lines' with { address: address } %}
-                                </label>
-                                {% include '_includes/components/address/editButton' with {
-                                  address: address,
-                                  redirectUrl: entry.uri
-                                } %}
-                            </div>
-                        {% endfor %}
-
-                        <div class="option-select">
-                            <input id="shipping-address-new" type="radio" name="shippingAddressId" value="" x-model="shippingAddress">
-
-                            <label for="shipping-address-new">
-                              <strong>{{ 'Add address'|t }}</strong>
-                            </label>
-                        </div>
-                        <template x-if="shippingAddress == ''">
-                            {% include '_includes/components/address/fields' with {
-                                modelName: 'shippingAddress',
-                                model: cart.getErrors()|length and 'shippingAddress.' in cart.getErrors()|keys|join('||') ? cart.shippingAddress : {}
-                            } %}
-                        </template>
-
+                      {{ sprig('_includes/components/address/list', {
+                          showDelete: false,
+                          model: 'shippingAddress',
+                          radio: 'shippingAddressId',
+                        }, {
+                          id: 'shipping-address-list',
+                          class: 'address-list',
+                          's-include': '#shipping-address-list',
+                          's-indicator': '#shipping-address-list-indicator'
+                      }) }}
+                      <div id="shipping-address-list-indicator" class="spinner-overlay">
+                        {% include '_includes/components/spinner' %}
+                      </div>
                     {% else %}
                         <div>
                             {% include '_includes/components/address/fields' with {
@@ -96,50 +75,38 @@
                         <label class="ml-2" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
                     </div>
 
-                    <template x-if="!billingSameAsShipping">
-                      <div class="mt-4">
-                        <div>
-                          <h2 class="text-2xl mb-4">{{ 'Billing Address'|t }}</h2>
-                        </div>
-                        <div class="space-y-2">
-                          {% if currentUser and addresses|length %}
-                            {% for address in addresses %}
-                              <div class="option-select">
-                                <input id="billing-address-{{ address.id }}" type="radio" name="billingAddressId" value="{{ address.id }}" x-model="billingAddress">
-
-                                <label for="billing-address-{{ address.id }}">
-                                  {% for key, line in address.addressLines %}
-                                    {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>
-                                  {% endfor %}
-                                </label>
-                              </div>
-                            {% endfor %}
-
-                            <div class="option-select">
-                              <input id="billing-address-new" type="radio" name="billingAddressId" value="" x-model="billingAddress">
-
-                              <label for="billing-address-new">
-                                <strong>{{ 'Add address'|t }}</strong>
-                              </label>
-                            </div>
-                            <template x-if="billingAddress == ''">
-                              {% include '_includes/components/address/fields' with {
-                                modelName: 'billingAddress',
-                                model: {}
-                              } %}
-                            </template>
-                          {% else %}
-                            <div>
-                              {% include '_includes/components/address/fields' with {
-                                modelName: 'billingAddress',
-                                model: cart.billingAddress,
-                                outputIdField: not (cart.billingAddress and cart.shippingAddress and cart.billingAddress.id == cart.shippingAddress.id)
-                              } %}
-                            </div>
-                          {% endif %}
-                        </div>
+                    <div class="mt-4" :class="{ hidden: billingSameAsShipping }">
+                      <div>
+                        <h2 class="text-2xl mb-4">{{ 'Billing Address'|t }}</h2>
                       </div>
-                    </template>
+                      <div class="space-y-2 relative">
+                        {{ sprig('_includes/components/address/list', {
+                          showDelete: false,
+                          model: 'billingAddress',
+                          radio: 'billingAddressId',
+                        }, {
+                          id: 'billing-address-list',
+                          class: 'address-list',
+                          's-include': '#billing-address-list',
+                          's-indicator': '#billing-address-list-indicator',
+                        }) }}
+                        <div id="billing-address-list-indicator" class="spinner-overlay">
+                          {% include '_includes/components/spinner' %}
+                        </div>
+                        {% if currentUser and addresses|length %}
+
+                        {% else %}
+                          <div>
+                            {% include '_includes/components/address/fields' with {
+                              modelName: 'billingAddress',
+                              model: cart.billingAddress,
+                              outputIdField: not (cart.billingAddress and cart.shippingAddress and cart.billingAddress.id == cart.shippingAddress.id)
+                            } %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+
                 </div>
 
                 <div class="text-right">
@@ -151,9 +118,3 @@
     </div>
   </div>
 {% endblock %}
-
-{% js at endBody %}
-    {% if updatedQueryString and updatedQueryString == 'address' %}
-      window.quickReplaceUri = '/{{ entry.uri }}';
-    {% endif %}
-{% endjs %}

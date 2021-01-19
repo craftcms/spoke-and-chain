@@ -1,11 +1,25 @@
 {% set customer = craft.commerce.customers.getCustomer() %}
+{% set model = model is not defined ? 'address' : model %}
+{% set radio = radio is not defined ? null : radio %}
+{% set showDelete = showDelete is not defined ? true : showDelete %}
 
 <!-- Template: {{ _self }}.twig -->
 <div class="space-y-2">
   {% for address in customer.getAddresses() %}
     <div class="option-select">
-      <div>
-        {% include '_includes/components/address/lines' with { address: address } %}
+      {% if model and radio %}
+        <input id="{{ model }}-{{ address.id }}" type="radio" name="{{ radio }}" value="{{ address.id }}" x-model="{{ model }}">
+      {% endif %}
+
+      {% if model %}
+        <label for="{{ model }}-{{ address.id }}">
+      {% endif %}
+      {% include '_includes/components/address/lines' with { address: address } %}
+      {% if model %}
+        </label>
+      {% endif %}
+
+      {% if showDelete %}
         <div>
           <form sprig s-method="post" s-action="commerce/customer-addresses/delete" s-confirm="{{ "Are you sure you wish to delete this address?"|t }}">
             {{ hiddenInput('id', address.id) }}
@@ -13,7 +27,7 @@
             <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
           </form>
         </div>
-      </div>
+      {% endif %}
       {% include '_includes/components/address/editButton' with {
         address: address,
         redirectUrl: '',
