@@ -1,24 +1,9 @@
 {% requireLogin %}
 
-{# Notice updates #}
-{% set updatedQueryString = craft.app.request.getQueryParam('updated', false) %}
-{% if updatedQueryString and updatedQueryString == 'cardadded' %}
-  {% do craft.app.session.setFlash('notice', 'Card added'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'carddeleted' %}
-  {% do craft.app.session.setFlash('notice', 'Card deleted'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'address' %}
-  {% do craft.app.session.setFlash('notice', 'Address updated'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'addressadded' %}
-  {% do craft.app.session.setFlash('notice', 'Address added'|t) %}
-{% elseif updatedQueryString and updatedQueryString == 'addressdeleted' %}
-  {% do craft.app.session.setFlash('notice', 'Address deleted'|t) %}
-{% endif %}
-
 {# Layout #}
 {% extends '_layouts/site' %}
 
 {# Variables #}
-{% set paymentSources = craft.commerce.paymentSources.getAllPaymentSourcesByUserId(currentUser.id) %}
 {% set customer = craft.commerce.customers.getCustomer() %}
 
 {# Blocks #}
@@ -26,7 +11,7 @@
   <!-- Template: {{ _self }}.twig -->
   <div class="bg-gray-100 py-8">
     <div class="max-w-4xl mx-auto space-y-6">
-      <h1 class="text-4xl text-center">Account</h1>
+      <h1 class="text-4xl text-center">{{ 'Account'|t }}</h1>
     </div>
   </div>
 
@@ -47,61 +32,14 @@
         <div class="w-full pb-4 md:pb-0 md:w-1/3">
           <h2 class="text-2xl">{{ 'Credit Cards'|t }}</h2>
         </div>
-        <div class="w-full md:w-2/3 space-y-2 md:pr-16">
-          {% if paymentSources|length %}
-            {% for paymentSource in paymentSources %}
-              <div class="option-select">
-                <div>
-                  <div class="flex justify-between items-center">
-                    <strong>{{ paymentSource.description }}</strong>
-                    <div x-data="{
-                      handleSubmit: function(ev) {
-                          if (confirm('{{ "Are you sure you wish to delete this card?"|t }}')) {
-                              ev.target.submit();
-                          }
-                      }
-                    }">
-                      <form method="post" action="" x-on:submit.prevent="handleSubmit($event)">
-                        {{ csrfInput() }}
-                        {{ redirectInput(siteUrl(entry.uri, { updated: 'carddeleted' })) }}
-                        {{ actionInput('commerce/payment-sources/delete') }}
-                        {{ hiddenInput('id', paymentSource.id) }}
-
-                        <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            {% endfor %}
-          {% endif %}
-          <div x-data="modalButton({
-              header: '{{ "Add a card"|t }}',
-              type: 'slideout',
-              url: '{{ siteUrl("ajax/account/card") }}',
-              action: 'commerce/payment-sources/add',
-              errorKey: 'cardadded',
-              redirect: '{{ siteUrl(entry.uri, { updated: 'card' }) }}',
-              buttons: [
-                {
-                  label: '{{ "Cancel"|t }}',
-                  type: 'close',
-                  prevent: true
-                },
-                {
-                  label: '{{ "Save"|t }}',
-                  type: 'submit',
-                  class: 'submit',
-                }
-              ]
-            })">
-            <a class="option-select cursor-pointer text-black" href="#" x-on:click.prevent="open($dispatch)">
-              <div>
-                <div class="flex justify-between items-center">
-                  <strong>{{ 'Add a card'|t }}</strong>
-                </div>
-              </div>
-            </a>
+        <div class="w-full md:w-2/3 md:pr-16 relative">
+          {{ sprig('_includes/components/payment/sourcesList', {}, {
+            id: 'payment-sources-list',
+            's-include': '#payment-sources-list',
+            's-indicator': '#payment-sources-indicator'
+          }) }}
+          <div id="payment-sources-indicator" class="spinner-overlay">
+            {% include '_includes/components/spinner' %}
           </div>
         </div>
       </div>
@@ -112,68 +50,18 @@
           <h2 class="text-2xl">{{ 'Addresses'|t }}</h2>
         </div>
 
-        <div class="w-full md:w-2/3 space-y-2 md:pr-16">
-          {% for address in customer.getAddresses() %}
-          	<div class="option-select">
-              <div>
-                {% include '_includes/components/address/lines' with { address: address } %}
-                <div x-data="{
-                    handleSubmit: function(ev) {
-                      if (confirm('{{ "Are you sure you wish to delete this address?"|t }}')) {
-                          ev.target.submit();
-                      }
-                    }
-                }">
-                  <form method="post" action="" x-on:submit.prevent="handleSubmit($event)">
-                    {{ csrfInput() }}
-                    {{ redirectInput(siteUrl(entry.uri, { updated: 'addressdeleted' })) }}
-                    {{ actionInput('commerce/customer-addresses/delete') }}
-                    {{ hiddenInput('id', address.id) }}
-
-                    <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
-                  </form>
-                </div>
-              </div>
-              {% include '_includes/components/address/editButton' with {
-                address: address,
-                redirectUrl: entry.uri,
-              } %}
-            </div>
-          {% endfor %}
-          <div x-data="modalButton({
-              header: '{{ "Add an address"|t }}',
-              type: 'slideout',
-              url: '{{ siteUrl("ajax/address/edit", { id: 'new' }) }}',
-              action: 'commerce/customer-addresses/save',
-              errorKey: 'addresserrors',
-              redirect: '{{ siteUrl(entry.uri, { updated: 'addressadded' }) }}',
-              buttons: [
-                {
-                  label: '{{ "Cancel"|t }}',
-                  type: 'close',
-                  prevent: true
-                },
-                {
-                  label: '{{ "Add"|t }}',
-                  type: 'submit',
-                  class: 'submit',
-                }
-              ]
-          })">
-            <a class="option-select text-black" href="#" x-on:click.prevent="open($dispatch)">
-              <div>
-                <strong>{{ 'Add address'|t }}</strong>
-              </div>
-            </a>
+        <div class="w-full md:w-2/3 md:pr-16">
+          {{ sprig('_includes/components/address/list', {}, {
+            id: 'address-list',
+            class: 'address-list',
+            's-include': '#address-list',
+            's-indicator': '#address-list-indicator'
+          }) }}
+          <div id="address-list-indicator" class="spinner-overlay">
+            {% include '_includes/components/spinner' %}
           </div>
         </div>
       </div>
     </div>
   </div>
 {% endblock %}
-
-{% js at endBody %}
-  {% if updatedQueryString %}
-    window.quickReplaceUri = '{{ entry.url }}';
-  {% endif %}
-{% endjs %}

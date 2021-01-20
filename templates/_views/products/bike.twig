@@ -303,18 +303,7 @@
             </div>
 
             {% if reviews|length > 1 %}
-              <div x-data="modalButton({
-              header: '{{ "{product} Reviews"|t('site', { product: product.title }) }}',
-              type: 'slideout',
-              url: '{{ siteUrl("ajax/product/reviews", { id: product.id }) }}',
-              buttons: [
-                {
-                  label: '{{ "Close"|t }}',
-                  type: 'close',
-                  prevent: true
-                }
-              ]
-            })" class="mt-4">
+              <div x-data="modalButton('reviews', { id: {{ product.id }}, title: '{{ product.title|e('js') }}' }, 'slideout')" class="mt-4">
                 <a class="button" href="#"
                    x-on:click.prevent="open($dispatch)">{{ 'See all reviews'|t }}</a>
               </div>

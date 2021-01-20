@@ -1,33 +1,56 @@
 window.notifications = function() {
     return {
         duration: 3000,
-        noticeVisible: false,
-        errorVisible: false,
-        init: function() {
-            this.$nextTick(() => {
-                this.noticeVisible = true
-                this.errorVisible = true
+        visible: false,
+        type: 'notice',
+        message: null,
 
-                setTimeout(function() {
-                    this.noticeVisible = false
-                }.bind(this), this.duration)
+        show: function(options) {
+            if (options.type) {
+                this.type = options.type;
+            }
 
-                setTimeout(function() {
-                    this.errorVisible = false
-                }.bind(this), this.duration * 2)
-            })
+            if (options.message) {
+                this.message = options.message;
+            }
+
+            this.visible = true;
+
+            setTimeout(function() {
+                this.visible = false;
+            }.bind(this), this.duration);
         },
 
         effects: {
+            ['x-transition:enter']() {
+                return 'transition transform ease-out duration-300';
+            },
+            ['x-transition:enter-start']() {
+                return '-translate-y-full';
+            },
+            ['x-transition:enter-end']() {
+                return 'translate-y-0';
+            },
             ['x-transition:leave']() {
-                return 'transition ease-out duration-300';
+                return 'transition transform ease-out duration-300';
             },
             ['x-transition:leave-start']() {
-                return 'opacity-100';
+                return 'translate-y-0';
             },
             ['x-transition:leave-end']() {
-                return 'opacity-0';
+                return '-translate-y-full';
             },
         }
+    }
+};
+
+window.addNotification = function(type = 'notice', message = null) {
+    if (type && message) {
+        window.dispatchEvent(new CustomEvent('notification', {
+            detail: {
+                type: type,
+                message: message
+            }
+        }));
     }
 };

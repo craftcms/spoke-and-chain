@@ -1,0 +1,17 @@
+{% set closeButton = closeButton is not defined ? false : closeButton %}
+{% set closeButtonText = closeButtonText is not defined ? 'Close'|t : closeButtonText %}
+
+<div class="px-12 py-8 text-center bg-gray-200">
+  <h2>{{ heading }}</h2>
+</div>
+
+<div class="p-12 flex-1 overflow-auto">
+  {{ body }}
+</div>
+
+<div class="px-12 py-8 text-center bg-gray-200">
+  {% if closeButton %}
+    <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ closeButtonText }}</a>
+  {% endif %}
+  {{ buttons }}
+</div>

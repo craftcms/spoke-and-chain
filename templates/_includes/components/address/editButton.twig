@@ -4,27 +4,9 @@
 
 {% if address %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="absolute top-1/2 right-0 pr-4 sm:pr-8 transform -translate-y-1/2" x-data="modalButton({
-    header: '{{ "Edit Address"|t }}',
-    type: 'slideout',
-    url: '{{ siteUrl("ajax/address/edit", { id: address.id }) }}',
-    action: 'commerce/customer-addresses/save',
-    errorKey: 'address{{ address.id }}errors',
-    redirect: '{{ siteUrl(redirectUrl, redirectParams) }}',
-    buttons: [
-      {
-        label: '{{ "Cancel"|t }}',
-        type: 'close',
-        prevent: true
-      },
-      {
-        label: '{{ "Save"|t }}',
-        type: 'submit',
-        class: 'submit',
-      }
-    ]
-  })">
-    <a href="#" @click.prevent="open($dispatch)">
+  <div class="absolute top-1/2 right-0 pr-4 sm:pr-8 transform -translate-y-1/2"
+       x-data="modalButton('address', { id: {{ address ? address.id : '\'new\'' }}, method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
+    <a href="#" x-on:click.prevent="open($dispatch)">
       {{ 'Edit'|t }}
     </a>
   </div>

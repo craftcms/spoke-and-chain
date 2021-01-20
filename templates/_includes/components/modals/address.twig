@@ -1,0 +1,64 @@
+{% set data = data is not defined ? '' : data %}
+{% set data = not data is iterable ? data|json_decode : data %}
+{% if address is not defined or (address is defined and not address is instance of('craft\\commerce\\models\\Address')) %}
+  {% set address = data.id and data.id == 'new' ? create('craft\\commerce\\models\\Address') : data.id ? craft.commerce.customers.customer.addressById(data.id) : null %}
+{% endif %}
+
+<!-- Template: {{ _self }}.twig -->
+<form
+    sprig
+    class="h-full w-full overflow-auto flex flex-col relative"
+    s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
+    s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
+    s-val:data='{{ data|json_encode }}'
+    s-val:type='{{ type }}'
+    x-data="{ submitting: false }"
+    x-on:submit="submitting = true"
+>
+
+  {% set body %}
+    {% if data %}
+      {% if address is same as (null) %}
+        <p>{{ 'Uanble to find address.'|t }}</p>
+      {% else %}
+        {% include '_includes/components/address/fields' with {
+          modelName: 'address',
+          model: address,
+          outputIdField: true,
+          errors: address.getErrors()
+        } %}
+      {% endif %}
+    {% endif %}
+  {% endset %}
+
+  {% set buttons %}
+    {% if data %}
+      <input class="button submit" type="submit" value="{{ 'Save'|t }}">
+    {% endif %}
+  {% endset %}
+
+  {% include '_includes/components/modals/_inner' with {
+    heading: 'Edit Address'|t,
+    body: body,
+    buttons: buttons,
+    closeButton: true,
+    closeButtonText: 'Cancel'|t
+  } %}
+
+  <div class="spinner-overlay" :class="{ 'spinner-overlay--show': submitting }">
+    {% include '_includes/components/spinner' %}
+  </div>
+</form>
+
+<script>
+    // Refresh other components
+    {% if success is defined and success %}
+      var addressLists = htmx.findAll('.address-list');
+      addressLists.forEach(function(list) {
+          htmx.trigger(list, 'refresh');
+      });
+
+      closeModal();
+      addNotification('notice', '{{ data and data.id == 'new' ? 'Address added'|t : 'Address updated'|t }}');
+    {% endif %}
+</script>
