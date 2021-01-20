@@ -4,26 +4,22 @@
 {% set title = data and data.title is defined and data.title ? '{title} Reviews'|t('site', { title: data.title }) : 'Reviews'|t %}
 
 <!-- Template: {{ _self }}.twig -->
-<div class="h-full w-full overflow-auto flex flex-col">
-  {% if reviews|length %}
-    <div class="px-12 py-8 text-center bg-gray-200">
-      <h2>{{ title }}</h2>
-    </div>
-
-    <div class="p-12">
+<div class="h-full w-full overflow-auto flex flex-col relative">
+  {% set body %}
+    {% if reviews|length %}
       {% for review in reviews %}
         <div {% if not loop.first %}class="border-t border-gray-300 mt-4 pt-4"{% endif %}>
           {% include '_includes/components/products/review' with { review: review } only %}
         </div>
       {% endfor %}
-    </div>
-  {% else %}
-    <div class="p-12">
+    {% else %}
       <p>{{ 'Uanble to find reviews.'|t }}</p>
-    </div>
-  {% endif %}
+    {% endif %}
+  {% endset %}
 
-  <div x-data="{}" class="px-12 py-8 text-center bg-gray-200">
-    <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ 'Close'|t }}</a>
-  </div>
+  {% include '_includes/components/modals/_inner' with {
+    heading: title,
+    body: body,
+    closeButton: true,
+  } %}
 </div>
