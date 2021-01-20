@@ -1,0 +1,17 @@
+{
+  "env": {
+    "SITE_URL": "http://spokeandchain.test/",
+    "CP_TRIGGER": "admin",
+    "CP_LOGIN": "admin",
+    "CP_PASSWORD": "password",
+    "ENABLE_LIGHTHOUSE": true,
+    "ENABLE_PA11Y": true
+  },
+  "lighthouse": {
+    "performance": 0,
+    "accessibility": 90,
+    "best-practices": 0,
+    "seo": 0,
+    "pwa": 0
+  }
+}
