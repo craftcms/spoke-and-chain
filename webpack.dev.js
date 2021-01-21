@@ -26,7 +26,9 @@ const configureDevServer = () => {
         hot: true,
         // hotOnly: true,
         allowedHosts: [
+            'host.docker.internal',
             '.craft.test',
+            '.nitro',
         ],
         overlay: true,
         stats: 'errors-only',
