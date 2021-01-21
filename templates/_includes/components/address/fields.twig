@@ -7,6 +7,7 @@
 {% set outputIdField = outputIdField is defined ? outputIdField : true %}
 {% set idName = model and model.id ? modelName ~ '-' ~ model.id : modelName %}
 
+<!-- Template: {{ _self }}.twig -->
 <div x-data="addresses()" x-init="
   modelId = '{{ model and model.id ? model.id : "null" }}';
   countryId = {{ countryId ? "'#{countryId}'"|raw : 'null' }};
