@@ -68,8 +68,8 @@ textarea,
 select {
     @apply appearance-none;
     @apply rounded;
-    @apply border border-gray-500;
-    @apply py-2 px-4;
+    @apply border border-gray-300;
+    @apply py-2 px-3;
     @apply w-full;
     @apply outline-none;
     color: inherit;
