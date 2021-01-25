@@ -40,6 +40,12 @@
           text: lineItem.description,
         }) }}
         <div>{{ lineItem.sku }}</div>
+        {% if form %}
+          <div x-data="{}">
+            <input id="remove-{{ lineItem.id }}" type="hidden" name="lineItems[{{ lineItem.id }}][remove]" value="0">
+            <a href="#" class="text-red-600 text-sm cursor-pointer" x-on:click.prevent="if (confirm('{{ 'Are you sure you want to remove {product}?'|t({ product: lineItem.description }) }}')) { htmx.find('#remove-{{ lineItem.id }}').value = 1; htmx.trigger(htmx.find('#cart'), 'submit') } ">{{ 'Remove'|t }}</a>
+          </div>
+        {% endif %}
       </div>
 
       {# Quantity #}
@@ -50,8 +56,9 @@
               id="qty-{{ lineItem.id }}"
               class="qty"
               name="lineItems[{{ lineItem.id }}][qty]"
-              type="text"
+              type="number"
               value="{{ lineItem.qty }}"
+              required
           >
         {% else %}
           {{ 'Quantity'|t }}: {{ lineItem.qty }}

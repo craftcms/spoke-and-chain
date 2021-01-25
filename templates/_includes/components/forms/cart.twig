@@ -8,7 +8,8 @@
   {{ entry.body }}
 {% else %}
   <form id="cart" sprig s-method="post" s-action="commerce/cart/update-cart"
-        s-trigger="submit, keyup delay:0.3s from:.qty" s-indicator="#cart-indicator">
+        s-trigger="submit, keyup delay:0.5s from:.qty, change delay:0.5s from:.qty"
+        s-indicator="#cart-indicator">
 
     {% for lineItem in cart.lineItems %}
       {% include '_includes/components/order/lineItem' with {
@@ -26,7 +27,9 @@
         } only %}
 
         <div class="pt-4">
-          <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">
+          <noscript>
+            <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">
+          </noscript>
           {% if checkoutPage %}
             <a class="button submit" href="{{ checkoutPage.url }}">{{ 'Checkout'|t }}</a>
           {% endif %}
@@ -35,3 +38,13 @@
     </div>
   </form>
 {% endif %}
+
+<script>
+    // Refresh other components
+    {% if success is defined and success and flashes is defined and flashes|length %}
+      {% set notice = flashes.notice ?? null %}
+      {% if notice %}
+        addNotification('notice', '{{ notice|e('js') }}');
+      {% endif %}
+    {% endif %}
+</script>
