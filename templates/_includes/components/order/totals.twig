@@ -18,11 +18,11 @@
         <div x-data="{ show: {{ form ? 'false' : 'true' }} }">
           {% if not order.couponCode and form %}
             <template x-if="!show">
-              <a href="#" @click.prevent="show=true;">{{ 'Enter coupon'|t }}</a>
+              <a href="#" x-on:click.prevent="show=true;">{{ 'Enter coupon'|t }}</a>
             </template>
           {% elseif order.couponCode and form %}
             <template x-if="show==false">
-              <div class="text-right">{{ order.couponCode }} <a href="#" @click.prevent="show=true;">{{ 'edit'|t }}</a></div>
+              <div class="text-right">{{ order.couponCode }} <a href="#" x-on:click.prevent="show=true;">{{ 'edit'|t }}</a></div>
             </template>
           {% else %}
             <div class="text-right">{{ order.couponCode }}</div>
