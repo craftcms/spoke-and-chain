@@ -29,8 +29,11 @@
           {% endif %}
           {% if form %}
             <template x-if="show">
-              <div>
-                <input type="text" name="couponCode" value="{{ order.couponCode }}">
+              <div class="flex items-center">
+                <input type="submit" class="button button--small" name="apply" value="{{ 'Apply'|t }}">
+                <div class="pl-2">
+                  <input type="text" name="couponCode" value="{{ order.couponCode }}">
+                </div>
               </div>
             </template>
           {% endif %}
