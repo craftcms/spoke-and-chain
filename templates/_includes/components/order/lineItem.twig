@@ -7,48 +7,52 @@
 {% set mainImage = not isCompleted and purchasable and purchasable.product ? purchasable.product.mainImage.one() : null %}
 
 {% if lineItem %}
-    <div class="flex flex-wrap items-center border-b border-gray-300 py-8">
+  <div class="flex flex-wrap items-center border-b border-gray-300 py-8">
     {# Image #}
     <div class="w-full md:w-1/3 lg:w-1/5 md:pr-6">
+      {% set lineItemImage %}
+        <div class="aspect-ratio-product-card">
+          <div class="aspect-inner overflow-hidden relative">
+            {% if mainImage %}
+              <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
+                   src="{{ mainImage.url }}" alt="{{ mainImage.title }}">
+            {% else %}
+              {% include '_includes/components/order/snapshotImage' with { lineItem: lineItem } %}
+            {% endif %}
+          </div>
+        </div>
+      {% endset %}
       {% if purchasable %}
         <a class="block" href="{{ purchasable.product.url }}">
-      {% endif %}
-          <div class="aspect-ratio-product-card">
-            <div class="aspect-inner overflow-hidden relative">
-              {% if mainImage %}
-                <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full" src="{{ mainImage.url }}" alt="{{ mainImage.title }}">
-              {% else %}
-                {% include '_includes/components/order/snapshotImage' with { lineItem: lineItem } %}
-              {% endif %}
-            </div>
-          </div>
-      {% if purchasable %}
+          {{ lineItemImage }}
         </a>
+      {% else %}
+        {{ lineItemImage }}
       {% endif %}
     </div>
 
     <div class="flex flex-wrap items-center w-full md:w-2/3 lg:w-4/5">
       {# Product #}
       <div class="w-full lg:w-1/2 md:pr-6">
-        {% if purchasable %}
-          <a class="font-bold text-xl text-black" class="block" href="{{ purchasable.product.url }}">
-        {% else %}
-          <div class="font-bold text-xl text-black">
-        {% endif %}
-            {{ lineItem.description }}
-        {% if purchasable %}
-          </a>
-        {% else %}
-          </div>
-        {% endif %}
+        {{ tag(purchasable ? 'a' : div, {
+          class: "font-bold text-xl text-black block",
+          href: purchasable ? purchasable.product.url : null,
+          text: lineItem.description,
+        }) }}
         <div>{{ lineItem.sku }}</div>
       </div>
 
       {# Quantity #}
       <div class="w-1/2 lg:w-1/4 md:pr-6">
         {% if form %}
-          <label for="qty">{{ 'Quantity'|t }}</label>
-          <input id="qty" name="lineItems[{{ lineItem.id }}][qty]" type="text" value="{{ lineItem.qty }}">
+          <label for="qty-{{ lineItem.id }}">{{ 'Quantity'|t }}</label>
+          <input
+              id="qty-{{ lineItem.id }}"
+              class="qty"
+              name="lineItems[{{ lineItem.id }}][qty]"
+              type="text"
+              value="{{ lineItem.qty }}"
+          >
         {% else %}
           {{ 'Quantity'|t }}: {{ lineItem.qty }}
         {% endif %}

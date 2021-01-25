@@ -2,7 +2,6 @@
 {% extends '_layouts/site' %}
 
 {# Variables #}
-{% set checkoutPage = craft.entries({ section: 'checkout', type: 'checkout' }).one() %}
 
 {# Blocks #}
 {% block content %}
@@ -16,39 +15,15 @@
 
   {# Cart #}
   <div class="container flex justify-center">
-    <div class="border-t border-gray-300 w-full max-w-5xl">
-      {% if not cart.lineItems|length %}
-        {{ entry.body }}
-      {% else %}
-        <form method="post">
-          {{ csrfInput() }}
-          {{ actionInput('commerce/cart/update-cart') }}
-
-          {% for lineItem in cart.lineItems %}
-            {% include '_includes/components/order/lineItem' with {
-              lineItem: lineItem,
-              form: true,
-              isCompleted: cart.isCompleted
-            } only %}
-          {% endfor %}
-
-          <div class="flex justify-end">
-            <div class="w-full xl:w-4/5 pt-4">
-              {% include '_includes/components/order/totals' with {
-                order: cart,
-                form: true
-              } only %}
-
-              <div class="pt-4">
-                <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">
-                {% if checkoutPage %}
-                  <a class="button submit" href="{{ checkoutPage.url }}">{{ 'Checkout'|t }}</a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </form>
-      {% endif %}
+    <div class="border-t border-gray-300 w-full max-w-5xl relative">
+      {{ sprig('_includes/components/forms/cart', {
+        entryId: entry.id
+      }, {
+        id: 'cart-sprig',
+      }) }}
+      <div id="cart-indicator" class="spinner-overlay">
+        {% include '_includes/components/spinner' %}
+      </div>
     </div>
   </div>
 {% endblock %}
