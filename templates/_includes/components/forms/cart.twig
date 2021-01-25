@@ -1,0 +1,37 @@
+{# Variables #}
+{% set entry = craft.entries({ id: entryId }).one() %}
+{% set checkoutPage = craft.entries({ section: 'checkout', type: 'checkout' }).one() %}
+{% set cart = cart is not defined ? craft.commerce.carts.getCart() : cart %}
+
+<!-- Template: {{ _self }}.twig -->
+{% if not cart.lineItems|length %}
+  {{ entry.body }}
+{% else %}
+  <form id="cart" sprig s-method="post" s-action="commerce/cart/update-cart"
+        s-trigger="submit, keyup delay:0.3s from:.qty" s-indicator="#cart-indicator">
+
+    {% for lineItem in cart.lineItems %}
+      {% include '_includes/components/order/lineItem' with {
+        lineItem: lineItem,
+        form: true,
+        isCompleted: cart.isCompleted
+      } only %}
+    {% endfor %}
+
+    <div class="flex justify-end">
+      <div class="w-full xl:w-4/5 pt-4">
+        {% include '_includes/components/order/totals' with {
+          order: cart,
+          form: true
+        } only %}
+
+        <div class="pt-4">
+          <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">
+          {% if checkoutPage %}
+            <a class="button submit" href="{{ checkoutPage.url }}">{{ 'Checkout'|t }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </form>
+{% endif %}
