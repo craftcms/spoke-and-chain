@@ -9,6 +9,7 @@
 {# Variables #}
 {% set successPage = craft.entries({ section: 'checkout', type: 'success' }).one() %}
 {% set paymentSources = craft.commerce.paymentSources.allPaymentSourcesByUserId(currentUser.id ?? null) %}
+{% set paymentSourceId = currentUser and paymentSources|length ? paymentSources[0].id : false %}
 {% set paymentForm = paymentForm is defined ? paymentForm : (cart.gatewayId ? cart.gateway.paymentFormModel() : null)  %}
 
 {# Blocks #}
@@ -22,7 +23,7 @@
     </div>
   </div>
 
-  <form method="post" x-data="{ id: {{ cart.paymentSourceId ? cart.paymentSourceId : 'false' }}, type: '{{ cart.paymentSourceId ? 'source' : 'gateway' }}' }">
+  <form method="post" x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }">
     {{ csrfInput() }}
     {{ actionInput('commerce/payments/pay') }}
     {{ redirectInput(successPage ?
@@ -70,20 +71,15 @@
           <div class="w-full lg:w-4/5">
             {% if currentUser %}
               {% if paymentSources|length %}
-                <div class="space-y-2">
-                  {% for paymentSource in paymentSources %}
-                    <div class="option-select">
-                      <input id="payment-source-{{ paymentSource.id }}" type="radio" name="paymentSourceId" value="{{ paymentSource.id }}" x-model="id"/>
-
-                      <label for="payment-source-{{ paymentSource.id }}">
-                        <div class="flex justify-between items-center">
-                          <strong>{{ paymentSource.description }}</strong>
-                          <span class="">{{ 'Saved card'|t }}</span>
-                        </div>
-                      </label>
-                    </div>
-                  {% endfor %}
-
+                {{ sprig('_includes/components/payment/sourcesList', {
+                  radio: true,
+                  account: false
+                }, {
+                  id: 'payment-sources-list',
+                  's-include': '#payment-sources-list',
+                  's-indicator': '#payment-sources-indicator',
+                }) }}
+                <div class="pt-2">
                   <div class="option-select">
                     <input id="payment-source-new" type="radio" name="paymentSourceId" value="" x-model="id"/>
 
