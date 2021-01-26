@@ -315,6 +315,11 @@
   </div>
 
   {% if product.showForm and form %}
-    {% include '_includes/components/content/form' with { block: { form: form, heading: 'Get in touch with us' } } only %}
+    {% include '_includes/components/content/form' with {
+      block: {
+        form: form,
+        heading: 'Have a question? Ask us!'|t
+      }
+    } only %}
   {% endif %}
 {% endblock %}

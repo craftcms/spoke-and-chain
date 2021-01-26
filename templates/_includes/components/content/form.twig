@@ -3,55 +3,15 @@
 {% set isFirst = isFirst is not defined ? false : isFirst %}
 {% set isLast = isLast is not defined ? false : isLast %}
 {% set form = block ? block.form : null %}
-{% set queryString = craft.app.request.getQueryString() ? craft.app.request.getQueryString()|replace('form=success', '')|replace('&&', '&') : '' %}
-{% set queryString = queryString|slice(0, 1) == '&' ? queryString|slice(1, (queryString|length - 1)) : queryString %}
-{% set queryString = queryString|slice(-1, 1) == '&' ? queryString|slice(0, (queryString|length - 1)) : queryString %}
-
-{% set url = queryString
-  ? craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '?' ~ queryString)
-  : (craft.app.request.getQueryString() and not queryString
-    ? craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '')
-    : craft.app.request.getUrl()) %}
 
 {% if block and form %}
-  <!-- Template: {{ _self }}.twig -->
-  {{ form.renderTag({
-      returnUrl: siteUrl(url, { form: 'success'} )
-  }) }}
-    <div class="bg-white py-8 mt-8">
-      <div class="container flex justify-center">
-        <div class="w-full max-w-xl">
-          {% if block.heading %}
-            <h3>{{ block.heading }}</h3>
-          {% endif %}
-
-          {% for row in form %}
-            <div class="{{ form.customAttributes.rowClass }}">
-              {% for field in row %}
-                {% set fieldName = 'input-{{ loop.parent.loop.index }}-{{ loop.index }}' %}
-                <div x-data="{
-                    hasErrors(key) { return {{ field.errors|length ? 'true' : 'false' }}; },
-                    getErrors(key) { return {{ field.errors|json_encode }}; }
-                }" class="{{ form.customAttributes.columnClass }} pt-4"{{ field.rulesHtmlData }}>
-                  <label for="{{ fieldName }}">{{ field.label }}</label>
-                  {{ field.renderInput({ class: field.errors|length ? 'border-red-600' : '' ,errorClass: 'hidden' }) }}
-                  {% include '_includes/components/forms/errorList' with { key: fieldName } only %}
-                </div>
-              {% endfor %}
-            </div>
-          {% endfor %}
-
-          <div class="mt-4">
-            <button class="button submit" type="submit">{{ 'Send'|t }}</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  {{ form.renderClosingTag }}
+  {{ sprig('_includes/components/forms/contact',
+    {
+      formId: form.id,
+      heading: block and block.heading is defined ? block.heading : false,
+    },
+    {
+      id: 'contact-' ~ form.id
+    }
+  ) }}
 {% endif %}
-
-{% js at endBody %}
-  {% if craft.app.request.getQueryString() %}
-    window.quickReplaceUri = encodeURI('{{ url|raw }}');
-  {% endif %}
-{% endjs %}
