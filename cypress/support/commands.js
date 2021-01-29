@@ -24,6 +24,25 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+Cypress.Commands.add("cpVisit", (url, options) => {
+    cy.visit('/' + Cypress.env('CP_TRIGGER') + url, options)
+})
+
+Cypress.Commands.add("login", (loginName, password) => {
+    if (!loginName) {
+        loginName = Cypress.env('CP_LOGIN')
+    }
+
+    if (!password) {
+        password = Cypress.env('CP_PASSWORD')
+    }
+
+    cy.request('POST', Cypress.env('SITE_URL') + 'index.php?p=admin/actions/users/login', {
+        loginName,
+        password
+    })
+})
+
 Cypress.Commands.add("runAudit", () => {
     if(Cypress.env('ENABLE_LIGHTHOUSE')) {
         cy.lighthouse()
