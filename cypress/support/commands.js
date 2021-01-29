@@ -37,10 +37,12 @@ Cypress.Commands.add("login", (loginName, password) => {
         password = Cypress.env('CP_PASSWORD')
     }
 
-    cy.request('POST', Cypress.env('SITE_URL') + 'index.php?p=admin/actions/users/login', {
-        loginName,
-        password
-    })
+    cy.cpVisit('/')
+
+    cy.get('input[name=username]').type(loginName);
+    cy.get('input[name=password]').type(password);
+    cy.get('#login-form').submit();
+    cy.cpVisit('/dashboard')
 })
 
 Cypress.Commands.add("runAudit", () => {
