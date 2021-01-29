@@ -5,9 +5,11 @@ html {
   @apply box-border;
   font-size: 100%;
   text-size-adjust: 100%;
-  scroll-behavior: smooth;
 }
 
+html.smooth-scroll {
+  scroll-behavior: smooth;
+}
 
 /*
  * Border-box *all the things*, as suggested in:

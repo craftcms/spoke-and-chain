@@ -13,10 +13,7 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-import "cypress-audit/commands";
-
-// Import commands.js using ES2015 syntax:
 import './commands'
+import './disable-smooth-scroll'
+import 'cypress-audit/commands'
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
