@@ -1,44 +1,41 @@
 <!-- Template: {{ _self }}.twig -->
-{# Macros #}
-{% import '_includes/macros' as _macros %}
+
 {% spaceless %}
   {# Params #}
   {% set materials = materials is not defined ? [] : materials %}
   {% set heading = heading is not defined ? null : heading %}
   {% set showHeading = showHeading is not defined ? false : showHeading %}
-  {% set urlFilterParams = urlFilterParams is not defined ? {material: []} : urlFilterParams %}
-
-  {# Variables #}
-  {% set url = craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '') %}
-  {% set selectedMaterials = urlFilterParams.material %}
+  {% set selectedMaterials = selectedMaterials is not defined ? [] : selectedMaterials %}
 {% endspaceless %}
 
 {# Output #}
 {% if materials|length %}
-  {% if heading and showHeading %}
-    <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
-  {% endif %}
-  <ul class="mt-2 -mx-3">
-    {% for materialCategory in materials -%}
-      {%- set materialParams = (materialCategory.slug in selectedMaterials ? selectedMaterials : selectedMaterials|merge([materialCategory.slug])) -%}
-      {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
-      <li class="my-1">
-        {% if materialCategory.slug in selectedMaterials -%}
-          {%- set materialParams = selectedMaterials|filter(s => s != materialCategory.slug) -%}
-          {%- set filterParams = urlFilterParams|merge({ material: materialParams }) -%}
-        {% endif %}
-
-        <a class="flex justify-start w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
-          {% if materialCategory.slug in selectedMaterials %}
-            <span class="w-5 h-5 overflow-hidden mr-1 relative">
-              {% set svgClasses = 'w-full h-full fill-current block transition-translate duration-500 ease-in-out transform absolute top-0 left-0' %}
-              {{ svg('@webroot/icons/checkmark.svg')|attr({ class: svgClasses ~ ' translate-x-0 group-hover:-translate-x-full' }) }}
-              {{ svg('@webroot/icons/cross.svg')|attr({ class: svgClasses ~ ' translate-x-full group-hover:translate-x-0' }) }}
-            </span>
-          {% endif %}
-          <span>{{ materialCategory.title }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div>
+    <template x-for="material in materials">
+      <input type="hidden" name="materials[]" :value="material">
+    </template>
+    {% if heading and showHeading %}
+      <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
+    {% endif %}
+    <ul class="mt-2 -mx-3">
+      {% for materialCategory in materials -%}
+        <li class="my-1">
+          <a
+              class="flex justify-start w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded"
+              href="{{ urls[materialCategory.slug] ?? '' }}"
+              x-on:click.prevent="toggle('materials', '{{ materialCategory.slug }}')"
+          >
+            {% if materialCategory.slug in selectedMaterials %}
+              <span class="w-5 h-5 overflow-hidden mr-1 relative">
+                {% set svgClasses = 'w-full h-full fill-current block transition-translate duration-500 ease-in-out transform absolute top-0 left-0' %}
+                {{ svg('@webroot/icons/checkmark.svg')|attr({ class: svgClasses ~ ' translate-x-0 group-hover:-translate-x-full' }) }}
+                {{ svg('@webroot/icons/cross.svg')|attr({ class: svgClasses ~ ' translate-x-full group-hover:translate-x-0' }) }}
+              </span>
+            {% endif %}
+            <span>{{ materialCategory.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endif %}

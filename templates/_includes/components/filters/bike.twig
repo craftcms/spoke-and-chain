@@ -1,23 +1,29 @@
 <!-- Template: {{ _self }}.twig -->
-{% import '_includes/macros' as _macros %}
 
 {# Params #}
 {% set types = types is not defined ? [] : types %}
-{% set selected = selected is not defined ? null : selected %}
-{% set urlFilterParams = urlFilterParams is not defined ? {} : urlFilterParams %}
+{% set selected = selected is not defined ? '' : selected %}
+{% set urls = urls is not defined ? {} : urls %}
 
 {# Variables #}
 
 {# Output #}
 {% if types|length %}
-  <ul class="-mx-3">
-    {% for bikeCategory in types %}
-      <li class="my-1">
-            <a class="flex items-center font-medium text-black hover:bg-gray-200 block px-3 py-1 rounded {{ selected == bikeCategory.id ? 'bg-gray-300' : '' }}" href="{{ _macros.filterSiteUrl(bikeCategory.url, urlFilterParams) }}">
-                {{ svg('@webroot/icons/mountain.svg')|attr({ class: 'text-red-600 fill-current inline-block w-5 h-5 mr-2' }) }}
-                {{ bikeCategory.title }}
-            </a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div>
+    <input class="filter" type="hidden" name="type" x-model="type">
+    <ul class="-mx-3">
+      {% for bikeCategory in types %}
+        <li class="my-1">
+              <a
+                  class="flex items-center font-medium text-black hover:bg-gray-200 block px-3 py-1 rounded {{ selected == bikeCategory.slug ? 'bg-gray-300' : '' }}"
+                  href="{{ urls[bikeCategory.slug] ?? '' }}"
+                  x-on:click.prevent="setType('{{ bikeCategory.slug }}')"
+              >
+                  {{ svg('@webroot/icons/mountain.svg')|attr({ class: 'text-red-600 fill-current inline-block w-5 h-5 mr-2' }) }}
+                  {{ bikeCategory.title }}
+              </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endif %}

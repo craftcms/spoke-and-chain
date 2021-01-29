@@ -1,42 +1,37 @@
 <!-- Template: {{ _self }}.twig -->
-{# Macros #}
-{% import '_includes/macros' as _macros %}
+
 {% spaceless %}
   {# Params #}
   {% set colors = colors is not defined ? [] : colors %}
   {% set heading = heading is not defined ? null : heading %}
   {% set showHeading = showHeading is not defined ? false : showHeading %}
-  {% set urlFilterParams = urlFilterParams is not defined ? {colors: []} : urlFilterParams %}
-
-  {# Variables #}
-  {% set url = craft.app.request.getUrl()|replace('?' ~ craft.app.request.getQueryString(), '') %}
-  {% set selectedColors = urlFilterParams.colors %}
+  {% set urls = urls is not defined ? {} : urls %}
+  {% set selectedColors = selectedColors is not defined ? [] : selectedColors %}
 {% endspaceless %}
 
 {# Output #}
 {% if colors|length %}
-  {% if heading and showHeading %}
-    <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
-  {% endif %}
-  <ul class="mt-2">
-    {% for colorCategory in colors -%}
-      {%- set colorParams = urlFilterParams.colors %}
-      {%- set colorParams = (colorCategory.slug in colorParams ? colorParams : colorParams|merge([colorCategory.slug])) -%}
-      {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
-
-      {% if colorCategory.slug in selectedColors -%}
-        {%- set colorParams = selectedColors|filter(s => s != colorCategory.slug) -%}
-        {%- set filterParams = urlFilterParams|merge({ colors: colorParams }) -%}
-      {% endif %}
-
-      <li class="my-1">
-        <a class="flex items-center font-medium text-black hover:text-red-600" href="{{ _macros.filterSiteUrl(url, filterParams) }}">
-          <span class="mr-2 flex rounded-full p-0.5 border {{ colorCategory.slug in selectedColors ? 'border-gray-900' : 'border-transparent' }}">
-            <span class="inline-block h-5 w-5 rounded-full" style="background-color: {{ colorCategory.color }}"></span>
-          </span>
-          <span>{{ colorCategory.title }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div>
+    <template x-for="color in colors">
+      <input type="hidden" name="colors[]" :value="color">
+    </template>
+    {% if heading and showHeading %}
+      <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
+    {% endif %}
+    <ul class="mt-2">
+      {% for colorCategory in colors -%}
+        <li class="my-1">
+          <a class="flex items-center font-medium text-black hover:text-red-600"
+             href="{{ urls[colorCategory.slug] ?? '' }}"
+             x-on:click.prevent="toggle('colors', '{{ colorCategory.slug }}')"
+          >
+            <span class="mr-2 flex rounded-full p-0.5 border {{ colorCategory.slug in selectedColors ? 'border-gray-900' : 'border-transparent' }}">
+              <span class="inline-block h-5 w-5 rounded-full" style="background-color: {{ colorCategory.color }}"></span>
+            </span>
+            <span>{{ colorCategory.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endif %}
