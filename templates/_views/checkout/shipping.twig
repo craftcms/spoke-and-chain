@@ -18,7 +18,7 @@
 
   <div class="container flex justify-center py-12">
     <div class="w-full max-w-2xl">
-      <form method="post">
+      <form id="checkout-shipping-method" method="post">
         {{ csrfInput() }}
         {{ actionInput('commerce/cart/update-cart') }}
         {{ redirectInput(summaryPage ? summaryPage.uri : 'checkout/summary') }}

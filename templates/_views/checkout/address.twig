@@ -25,7 +25,7 @@
   <div class="container py-12">
     <div class="container flex justify-center">
       <div class="w-full max-w-2xl">
-        <form method="post" x-data="{
+        <form id="checkout-address" method="post" x-data="{
           shippingAddress: {{ currentUser and addresses|length and cart.shippingAddressId ? cart.shippingAddressId : 'null' }},
         }">
           {{ csrfInput() }}

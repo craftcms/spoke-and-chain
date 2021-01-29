@@ -33,7 +33,7 @@
 
           <h2 class="text-2xl mb-4">Checkout with your account</h2>
 
-          <form method="post" class="space-y-6" accept-charset="UTF-8">
+          <form id="user-checkout" method="post" class="space-y-6" accept-charset="UTF-8">
             {{ csrfInput() }}
             {{ actionInput('users/login') }}
             {% if addressPage %}
@@ -78,7 +78,7 @@
 
           <h2 class="text-2xl mb-4">Guest checkout</h2>
 
-          <form method="post" class="space-y-6">
+          <form id="guest-checkout" method="post" class="space-y-6">
             {{ csrfInput() }}
             {{ actionInput('commerce/cart/update-cart') }}
             {{ redirectInput((addressPage ? addressPage.uri : 'checkout/address')) }}
