@@ -3,7 +3,7 @@
     "SITE_URL": "http://spokeandchain.test/",
     "CP_TRIGGER": "admin",
     "CP_LOGIN": "admin",
-    "CP_PASSWORD": "password",
+    "CP_PASSWORD": "NewPassword",
     "ENABLE_LIGHTHOUSE": true,
     "ENABLE_PA11Y": true
   },
