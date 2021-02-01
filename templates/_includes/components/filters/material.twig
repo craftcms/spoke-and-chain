@@ -11,6 +11,7 @@
 {# Output #}
 {% if materials|length %}
   <div>
+    <input type="hidden" name="materials[]" value="">
     <template x-for="material in materials">
       <input type="hidden" name="materials[]" :value="material">
     </template>

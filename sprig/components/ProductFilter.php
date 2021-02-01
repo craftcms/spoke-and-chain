@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://craftcms.com/
+ * @copyright Copyright (c) Pixel & Tonic, Inc.
+ * @license https://craftcms.github.io/license/
+ */
+
 namespace sprig\components;
 
 use Craft;
@@ -16,6 +22,13 @@ use putyourlightson\sprig\base\Component;
  * Class ProductFilter
  *
  * @package sprig\components
+ * @property-read ElementInterface[] $products
+ * @property-read array[] $filterUrlsByType
+ * @property-read Category[]|null|array $materialFilters
+ * @property-read Category[]|null|array $colorFilters
+ * @property-read array $sortOptions
+ * @property-read mixed $pushUrl
+ * @property-read bool $isAllBikes
  * @property-read void $types
  */
 class ProductFilter extends Component
@@ -26,12 +39,12 @@ class ProductFilter extends Component
     public $type;
 
     /**
-     * @var array
+     * @var array|string
      */
     public $colors = [];
 
     /**
-     * @var array
+     * @var array|string
      */
     public $materials = [];
 
@@ -49,6 +62,11 @@ class ProductFilter extends Component
      * @var bool
      */
     public $saveState = true;
+
+    /**
+     * @var string|int
+     */
+    public $elementId;
 
     /**
      * @inheritdoc
@@ -78,6 +96,25 @@ class ProductFilter extends Component
     /**
      * @inheritdoc
      */
+    public function init()
+    {
+        parent::init();
+
+        if (is_string($this->colors)) {
+            $this->colors = (!$this->colors) ? [] : explode('|', $this->colors);
+        }
+
+        if (is_string($this->materials)) {
+            $this->materials = (!$this->materials) ? [] : explode('|', $this->materials);
+        }
+
+        $this->colors = array_filter($this->colors);
+        $this->materials = array_filter($this->materials);
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function attributes()
     {
         $attributes = parent::attributes();
@@ -97,8 +134,8 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getTypes() {
-
+    public function getTypes()
+    {
         if ($this->_types != null) {
             return $this->_types;
         }
@@ -114,8 +151,8 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getMaterialFilters() {
-
+    public function getMaterialFilters()
+    {
         if ($this->_materials != null) {
             return $this->_materials;
         }
@@ -132,8 +169,8 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getColorFilters() {
-
+    public function getColorFilters()
+    {
         if ($this->_colors != null) {
             return $this->_colors;
         }
@@ -156,12 +193,13 @@ class ProductFilter extends Component
         $query = Craft::$app->getElements()->createElementQuery(Product::class);
         $query->type('bike');
 
-        $productIds = [];
+        $colorProductIds = [];
+        $materialProductIds = [];
         if (!empty($this->colors)) {
             $selectedColors = array_filter($this->getColorFilters(), function($c) {
                 return in_array($c->slug, $this->colors);
             });
-            $productIds = Craft::$app->getElements()
+            $colorProductIds = Craft::$app->getElements()
                 ->createElementQuery(Product::class)
                 ->relatedTo(['or', ['targetElement' => $selectedColors, 'field' => 'colors']])
                 ->ids();
@@ -171,14 +209,25 @@ class ProductFilter extends Component
             $selectedMaterials = array_filter($this->getMaterialFilters(), function($m) {
                 return in_array($m->slug, $this->materials);
             });
-            $productIds = array_unique(array_merge(Craft::$app->getElements()
+            $materialProductIds = Craft::$app->getElements()
                 ->createElementQuery(Product::class)
                 ->relatedTo(['or', ['targetElement' => $selectedMaterials, 'field' => 'material']])
-                ->ids()));
+                ->ids();
         }
 
-        if (!empty($productIds)) {
-            $query->id($productIds);
+        if (!empty($colorProductIds) || !empty($materialProductIds)) {
+            if (!empty($colorProductIds) && !empty($materialProductIds)) {
+                $commonIds = array_intersect($colorProductIds, $materialProductIds);
+
+                // If there are no common products we can't return anything
+                if (empty($commonIds)) {
+                    return [];
+                }
+
+                $query->id($commonIds);
+            } else {
+                $query->id(!empty($colorProductIds) ? $colorProductIds : $materialProductIds);
+            }
         }
 
         if ($this->type) {
@@ -256,55 +305,12 @@ class ProductFilter extends Component
         return $urls;
     }
 
-    private function _getUrlParams($key = null, $value = null)
-    {
-        $urlParams = [];
-        if ($this->sort) {
-            $urlParams['sort'] = $this->sort;
-        }
-
-        if (!empty($this->colors)) {
-            $urlParams['colors'] = $this->colors;
-        }
-
-        if (!empty($this->materials)) {
-            $urlParams['materials'] = $this->materials;
-        }
-
-        $valueKey = isset($urlParams[$key]) ? array_search($value, $urlParams[$key]) : false;
-        if ($key && $value && $valueKey === false) {
-            $urlParams[$key] = array_merge($urlParams[$key] ?? [], [$value]);
-        } else if ($valueKey >= 0) {
-            unset($urlParams[$key][$valueKey]);
-        }
-
-        foreach ($urlParams as $key => &$urlParam) {
-            if (empty($urlParam)) {
-                unset($urlParams[$key]);
-                continue;
-            }
-
-            if (is_array($urlParam)) {
-                $urlParam = implode('|', $urlParam);
-            }
-        }
-
-        return $urlParams;
-    }
-
-    private function _getLandingEntry()
-    {
-        if ($this->_landingEntry != null) {
-            return $this->_landingEntry;
-        }
-
-        $this->_landingEntry = Craft::$app->getElements()->createElementQuery(Entry::class)
-            ->type('bikesLanding')
-            ->one();
-
-        return $this->_landingEntry;
-    }
-
+    /**
+     * Returns the URL that should be used in push state.
+     *
+     * @return string
+     * @throws \yii\base\Exception
+     */
     public function getPushUrl()
     {
         $page = $this->type ? ArrayHelper::firstWhere($this->getTypes(), 'slug', $this->type) : $this->_getLandingEntry();
@@ -319,5 +325,69 @@ class ProductFilter extends Component
     public function getIsAllBikes(): bool
     {
         return $this->type ? true : false;
+    }
+
+    /**
+     * Generate the URL query string parameters for use in generating filter URLS.
+     *
+     * @param null $key
+     * @param null $value
+     * @return array
+     */
+    private function _getUrlParams($key = null, $value = null)
+    {
+        $urlParams = [];
+        if ($this->sort) {
+            $urlParams['sort'] = $this->sort;
+        }
+
+        if (!empty($this->colors)) {
+            $urlParams['colors'] = $this->colors;
+            sort($urlParams['colors']);
+        }
+
+        if (!empty($this->materials)) {
+            $urlParams['materials'] = $this->materials;
+            sort($urlParams['materials']);
+        }
+
+        $valueKey = isset($urlParams[$key]) ? array_search($value, $urlParams[$key]) : false;
+        if ($key && $value && $valueKey === false) {
+            $urlParams[$key] = array_merge($urlParams[$key] ?? [], [$value]);
+            sort($urlParams[$key]);
+        } else if ($valueKey >= 0) {
+            unset($urlParams[$key][$valueKey]);
+        }
+
+        foreach ($urlParams as $k => &$urlParam) {
+            if (empty($urlParam)) {
+                unset($urlParams[$k]);
+                continue;
+            }
+
+            if (is_array($urlParam)) {
+                $urlParam = implode('|', $urlParam);
+            }
+        }
+
+        return $urlParams;
+    }
+
+    /**
+     * Return the landing page entry.
+     *
+     * @return Entry|null
+     */
+    private function _getLandingEntry()
+    {
+        if ($this->_landingEntry != null) {
+            return $this->_landingEntry;
+        }
+
+        $this->_landingEntry = Craft::$app->getElements()->createElementQuery(Entry::class)
+            ->type('bikesLanding')
+            ->one();
+
+        return $this->_landingEntry;
     }
 }
