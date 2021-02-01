@@ -95,3 +95,11 @@ Cypress.Commands.add("addProductToCart", () => {
         .click();
 })
 
+Cypress.Commands.add("navigateToCart", () => {
+    cy.get('button.cart-toggle')
+        .click();
+
+    cy.get('div.cart-menu a')
+        .contains('Cart')
+        .click();
+})
