@@ -1,6 +1,6 @@
 describe('Products', () => {
     beforeEach(function() {
-        cy.login()
+        cy.cpLogin()
     })
 
     it(`shows an error when trying to save an empty product`, function () {

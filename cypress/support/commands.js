@@ -28,7 +28,7 @@ Cypress.Commands.add("cpVisit", (url, options) => {
     cy.visit('/' + Cypress.env('CP_TRIGGER') + url, options)
 })
 
-Cypress.Commands.add("login", (loginName, password) => {
+Cypress.Commands.add("cpLogin", (loginName, password) => {
     if (!loginName) {
         loginName = Cypress.env('CP_LOGIN')
     }
