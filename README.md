@@ -94,3 +94,15 @@ npm run build
 ```
 
 This will build all the files into the `web/dist` folder ready to be committed.
+
+### Testing
+
+Cypress tests cover multiple parts of the website:
+- **CP** – Make sure that the content structure is defined properly.
+- **Front-end** – Check that the different sections of the website work as expected.
+- **Accessibility** – Check that the website complies with WCAG 2.0 guidelines.
+
+Open the Cypress Test Runner from the project root:
+```
+npx cypress open
+```
