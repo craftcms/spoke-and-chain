@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://craftcms.com/
+ * @copyright Copyright (c) Pixel & Tonic, Inc.
+ * @license https://craftcms.github.io/license/
+ */
+
 namespace sprig\components;
 
 use Craft;
@@ -95,11 +101,11 @@ class ProductFilter extends Component
         parent::init();
 
         if (is_string($this->colors)) {
-           $this->colors = (!$this->colors) ? [] : explode('|', $this->colors);
+            $this->colors = (!$this->colors) ? [] : explode('|', $this->colors);
         }
 
         if (is_string($this->materials)) {
-           $this->materials = (!$this->materials) ? [] : explode('|', $this->materials);
+            $this->materials = (!$this->materials) ? [] : explode('|', $this->materials);
         }
     }
 
@@ -125,8 +131,8 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getTypes() {
-
+    public function getTypes()
+    {
         if ($this->_types != null) {
             return $this->_types;
         }
@@ -142,8 +148,8 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getMaterialFilters() {
-
+    public function getMaterialFilters()
+    {
         if ($this->_materials != null) {
             return $this->_materials;
         }
@@ -160,8 +166,8 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getColorFilters() {
-
+    public function getColorFilters()
+    {
         if ($this->_colors != null) {
             return $this->_colors;
         }
@@ -295,6 +301,7 @@ class ProductFilter extends Component
 
         return $urls;
     }
+
     /**
      * Returns the URL that should be used in push state.
      *
@@ -349,10 +356,9 @@ class ProductFilter extends Component
             unset($urlParams[$key][$valueKey]);
         }
 
-
-        foreach ($urlParams as $key => &$urlParam) {
+        foreach ($urlParams as $k => &$urlParam) {
             if (empty($urlParam)) {
-                unset($urlParams[$key]);
+                unset($urlParams[$k]);
                 continue;
             }
 
