@@ -83,3 +83,15 @@ Cypress.Commands.add("setViewportSize", (size) => {
         cy.viewport(size)
     }
 })
+
+Cypress.Commands.add("addProductToCart", () => {
+    cy.visit('/bikes')
+
+    // Add a product to the cart
+    cy.get('a.product-card').first()
+        .click()
+
+    cy.get('#buy input[type=submit]')
+        .click();
+})
+
