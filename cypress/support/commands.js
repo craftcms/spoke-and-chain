@@ -45,6 +45,23 @@ Cypress.Commands.add("cpLogin", (loginName, password) => {
     cy.cpVisit('/dashboard')
 })
 
+Cypress.Commands.add("login", (loginName, password) => {
+    if (!loginName) {
+        loginName = Cypress.env('CP_LOGIN')
+    }
+
+    if (!password) {
+        password = Cypress.env('CP_PASSWORD')
+    }
+
+    cy.visit('/account/login')
+
+    cy.get('input[name=loginName]').type(loginName);
+    cy.get('input[name=password]').type(password);
+    cy.get('#login-form').submit();
+    cy.visit('/')
+})
+
 Cypress.Commands.add("runAudit", () => {
     if(Cypress.env('ENABLE_LIGHTHOUSE')) {
         cy.lighthouse()

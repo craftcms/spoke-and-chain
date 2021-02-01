@@ -9,7 +9,7 @@
     </div>
 
     <div class="max-w-sm mx-auto space-y-6 mt-8">
-      <form method="post" accept-charset="UTF-8" class="space-y-4">
+      <form id="login-form" method="post" accept-charset="UTF-8" class="space-y-4">
         {{ csrfInput() }}
         {{ actionInput('users/login') }}
 
