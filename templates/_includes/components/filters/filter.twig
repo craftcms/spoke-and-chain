@@ -75,6 +75,6 @@
 
     // Push state URL
     if (window.location != '{{ pushUrl }}') {
-      history.pushState(window.currentState, '', '{{ pushUrl }}')
+      history.pushState(window.currentState, '', '{{ pushUrl|raw }}')
     }
 </script>

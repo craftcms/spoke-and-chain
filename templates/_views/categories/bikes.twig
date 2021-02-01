@@ -1,6 +1,11 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
+{% set type = entry is defined ? '' : category.slug %}
+{% set colorsQuery = craft.app.request.getQueryParam('colors', '') %}
+{% set materialsQuery = craft.app.request.getQueryParam('materials', '') %}
+{% set sort = craft.app.request.getQueryParam('sort', '') %}
+
 {% block content %}
   {% set mainImage = null %}
 
@@ -29,11 +34,16 @@
     } only %}
   </div>
 
-  <div x-data="filter()" x-init="init($nextTick)"
+  <div x-data="filter()" x-init='init({ type: "{{ type }}", colors: {{ (colorsQuery ? colorsQuery|split('|') : [])|json_encode|raw }}, materials: {{ (materialsQuery ? materialsQuery|split('|') : [])|json_encode|raw }}, sort: "{{ sort }}" }, $nextTick)'
       class="relative"
   >
     {{ sprig('ProductFilter',
-      {},
+      {
+        type: type,
+        colors: colorsQuery,
+        materials: materialsQuery,
+        sort: sort,
+      },
       {
         id: 'filter',
         's-trigger': 'refresh, change from:.filter',

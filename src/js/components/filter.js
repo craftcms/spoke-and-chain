@@ -15,12 +15,12 @@ window.filter = function() {
         sort: '',
         _nt: null,
         state: {},
-        filterPreviousState: [],
         saveState: true,
 
-        init($nextTick) {
+        init(state, $nextTick) {
             let _this = this;
             this._nt = $nextTick;
+            this.setFromState(state);
 
             // Using window variables to avoid alpine proxying all the data
             window.addEventListener('saveFilterState', function(ev) {
