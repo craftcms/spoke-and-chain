@@ -74,7 +74,7 @@
             <div class="lg:max-w-xs lg:w-full flex justify-end items-center">
               <div class="flex items-center">
                 <div class="flex">
-                  <button class="inline-block px-4 py-2 text-black hover:text-red-600"
+                  <button class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
                           @click="openSearch($nextTick)">
                     {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
                   </button>
@@ -89,7 +89,7 @@
             <div class="absolute left-0 py-3 pl-4 pr-12 lg:px-0 bg-white right-0 z-30">
 
               <div class="max-w-2xl mx-auto flex items-center relative">
-                <form action="/search" class="flex-1">
+                <form id="search-form" action="/search" class="flex-1">
                   <div class="relative">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       {{ svg('@webroot/icons/search.svg')|attr({
