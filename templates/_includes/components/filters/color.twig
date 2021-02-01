@@ -12,6 +12,7 @@
 {# Output #}
 {% if colors|length %}
   <div>
+    <input type="hidden" name="colors[]" value="">
     <template x-for="color in colors">
       <input type="hidden" name="colors[]" :value="color">
     </template>

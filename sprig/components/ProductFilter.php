@@ -107,6 +107,9 @@ class ProductFilter extends Component
         if (is_string($this->materials)) {
             $this->materials = (!$this->materials) ? [] : explode('|', $this->materials);
         }
+
+        $this->colors = array_filter($this->colors);
+        $this->materials = array_filter($this->materials);
     }
 
     /**
