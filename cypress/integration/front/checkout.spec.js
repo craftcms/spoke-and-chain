@@ -1,4 +1,4 @@
-const sizes = require('../viewport-sizes')
+const sizes = require('../../viewport-sizes')
 
 describe('Checkout', () => {
     beforeEach(() => {
