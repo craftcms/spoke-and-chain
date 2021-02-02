@@ -3,6 +3,7 @@ describe('Cart', () => {
         cy.addProductToCart()
         cy.navigateToCart()
 
+        // Make sure that the cart contains at least one item
         cy.get('div.line-item')
             .its('length')
             .should('be.gt', 0)
