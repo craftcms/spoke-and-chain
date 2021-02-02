@@ -28,4 +28,26 @@ describe('Cart', () => {
             cy.get('#line-item-' + lineItemId).should('not.exist')
         })
     })
+
+    it(`should be able to apply a discount code`, function () {
+        cy.addProductToCart()
+        cy.navigateToCart()
+
+        // Click link to enter a coupon
+        cy.get('form#cart a.coupon-trigger')
+            .click()
+
+        // Use the `15OFF` coupon code
+        cy.get('form#cart input[name=couponCode]')
+            .type('15OFF')
+
+        // Apply the coupon
+        cy.get('form#cart input[type=submit].coupon-apply')
+            .click()
+
+        // Check that the cart contains a discount row
+        cy.get('form#cart div.discount-row')
+            .its('length')
+            .should('be.gt', 0)
+    })
 })
