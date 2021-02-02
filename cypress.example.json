@@ -2,7 +2,7 @@
   "env": {
     "SITE_URL": "http://spokeandchain.test/",
     "CP_TRIGGER": "admin",
-    "CP_LOGIN": "admin",
+    "CP_LOGIN": "support@craftcms.com",
     "CP_PASSWORD": "NewPassword",
     "ENABLE_LIGHTHOUSE": true,
     "ENABLE_PA11Y": true
