@@ -102,6 +102,11 @@ Cypress tests cover multiple parts of the website:
 - **Front-end** – Check that the different sections of the website work as expected.
 - **Accessibility** – Check that the website complies with WCAG 2.0 guidelines.
 
+First you need to define environment variables for Cypress. Copy the `cypress.example.json` file to `cypress.json` and adjust it to your needs:
+```
+cp cypress.example.json cypress.json
+```
+
 Open the Cypress Test Runner from the project root:
 ```
 npx cypress open
