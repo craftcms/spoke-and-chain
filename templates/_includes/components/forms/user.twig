@@ -1,0 +1,46 @@
+{% set errors = errors is not defined ? [] : errors %}
+{% set errorKeys = errors and errors|length ? errors|keys : [] %}
+
+<!-- Template: {{ _self }}.twig -->
+<form sprig s-method="post" s-action="users/save-user" accept-charset="UTF-8" s-indicator="#user-indicator">
+  {{ hiddenInput('userId', currentUser.id) }}
+
+  <div class="mt-3">
+    <label for="user-email">{{ 'Email'|t }}</label>
+    <input type="text" id="user-email" class="w-full {{ 'email' in errorKeys ? 'border-red-600' : '' }}" name="email" value="{{ user is defined and errors|length ? user.email : currentUser.email }}">
+    {% include '_includes/components/forms/errorList' with { errors: errors['email'] ?? [] } only %}
+  </div>
+
+  <div class="mt-3">
+    <label for="user-new-password">{{ 'New Password'|t }}</label>
+    {% if newPasswordHelp %}
+      <p class="text-sm text-gray-600 mb-2">{{ newPasswordHelp }}</p>
+    {% endif %}
+    <input type="password" id="user-new-password" class="w-full {{ 'newPassword' in errorKeys ? 'border-red-600' : '' }}" name="newPassword" value="">
+    {% include '_includes/components/forms/errorList' with { errors: errors['newPassword'] ?? [] } only %}
+  </div>
+
+  <hr class="mt-3">
+
+  <div class="mt-3">
+    <label for="user-current-password">{{ 'Current Password'|t }}</label>
+    {% if currentPasswordHelp %}
+      <p class="text-sm text-gray-600 mb-2">{{ currentPasswordHelp }}</p>
+    {% endif %}
+    <input type="password" id="user-current-password" class="w-full {{ 'currentPassword' in errorKeys ? 'border-red-600' : '' }}" name="currentPassword" value="">
+    {% include '_includes/components/forms/errorList' with { errors: errors['currentPassword'] ?? [] } only %}
+  </div>
+
+  <div class="mt-3">
+    <input class="button submit" type="submit" value="{{ 'Save'|t }}">
+  </div>
+</form>
+
+{% if success is defined and success and flashes is defined and flashes|length and not errors|length %}
+  <script>
+    {% set notice = flashes.notice ?? null %}
+    {% if notice %}
+      addNotification('notice', '{{ notice|e('js') }}');
+    {% endif %}
+  </script>
+{% endif %}
