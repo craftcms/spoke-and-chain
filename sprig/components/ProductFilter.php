@@ -115,6 +115,28 @@ class ProductFilter extends Component
     /**
      * @inheritdoc
      */
+    protected function defineRules(): array
+    {
+        $rules = parent::defineRules();
+
+        $rules[] = [
+            [
+                'type',
+                'colors',
+                'materials',
+                'sort',
+                'currentPushUrl',
+                'saveState',
+                'elementId',
+            ], 'safe'
+        ];
+
+        return $rules;
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function attributes()
     {
         $attributes = parent::attributes();
