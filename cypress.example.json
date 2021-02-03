@@ -7,7 +7,7 @@
     "ENABLE_LIGHTHOUSE": true,
     "LIGHTHOUSE_OPTIONS": {
       "performance": 0,
-      "accessibility": 80,
+      "accessibility": 90,
       "best-practices": 0,
       "seo": 0,
       "pwa": 0
