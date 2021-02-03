@@ -5,7 +5,7 @@ sizes.forEach((size) => {
         beforeEach(function() {
             cy.setViewportSize(size)
         })
-        
+
         it(`should show two plans`, function () {
             cy.visit('/services')
 
