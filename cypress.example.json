@@ -5,13 +5,17 @@
     "CP_LOGIN": "support@craftcms.com",
     "CP_PASSWORD": "NewPassword",
     "ENABLE_LIGHTHOUSE": true,
-    "ENABLE_PA11Y": true
-  },
-  "lighthouse": {
-    "performance": 0,
-    "accessibility": 90,
-    "best-practices": 0,
-    "seo": 0,
-    "pwa": 0
+    "LIGHTHOUSE_OPTIONS": {
+      "performance": 0,
+      "accessibility": 80,
+      "best-practices": 0,
+      "seo": 0,
+      "pwa": 0
+    },
+    "ENABLE_PA11Y": false,
+    "PA11Y_OPTIONS": {
+      "runners": ["htmlcs"],
+      "standard": "WCAG2AA"
+    }
   }
 }

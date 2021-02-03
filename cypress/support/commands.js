@@ -64,15 +64,11 @@ Cypress.Commands.add("login", (loginName, password) => {
 
 Cypress.Commands.add("runAudit", () => {
     if(Cypress.env('ENABLE_LIGHTHOUSE')) {
-        cy.lighthouse()
+        cy.lighthouse(Cypress.env('LIGHTHOUSE_OPTIONS'))
     }
 
     if(Cypress.env('ENABLE_PA11Y')) {
-        cy.pa11y({
-            runners: ['htmlcs'],
-            threshold: 20,
-            standard: 'WCAG2AA',
-        });
+        cy.pa11y(Cypress.env('PA11Y_OPTIONS'));
     }
 })
 
