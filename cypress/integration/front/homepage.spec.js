@@ -1,16 +1,24 @@
-describe('Homepage', () => {
-    it(`should show an “All bikes” button`, function () {
-        cy.visit('/')
+const sizes = require('../../viewport-sizes')
 
-        cy.get('a.button')
-            .contains('Browse all bikes')
-    })
+sizes.forEach((size) => {
+    describe(`Homepage on ${size} screen`, () => {
+        beforeEach(function() {
+            cy.setViewportSize(size)
+        })
 
-    it(`should show bike categories`, function () {
-        cy.visit('/')
+        it(`should show an “All bikes” button`, function () {
+            cy.visit('/')
 
-        cy.get('a.category-card')
-            .its('length')
-            .should('be.gt', 0)
+            cy.get('a.button')
+                .contains('Browse all bikes')
+        })
+
+        it(`should show bike categories`, function () {
+            cy.visit('/')
+
+            cy.get('a.category-card')
+                .its('length')
+                .should('be.gt', 0)
+        })
     })
 })

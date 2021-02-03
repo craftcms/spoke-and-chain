@@ -1,47 +1,52 @@
-describe('Account', () => {
-    beforeEach(function() {
-        cy.login()
-    })
+const sizes = require('../../viewport-sizes')
 
-    it(`should contain an Orders section`, function () {
-        cy.visit('/')
+sizes.forEach((size) => {
+    describe(`Account on ${size} screen`, () => {
+        beforeEach(function() {
+            cy.setViewportSize(size)
+            cy.login()
+        })
 
-        cy.get('#header .cart-toggle')
-            .click()
+        it(`should contain an Orders section`, function() {
+            cy.visit('/')
 
-        cy.get('#header .cart-menu a')
-            .contains('Orders')
-            .click()
+            cy.get('#header .cart-toggle')
+                .click()
 
-        cy.get('h1')
-            .contains('Orders')
-    })
+            cy.get('#header .cart-menu a')
+                .contains('Orders')
+                .click()
 
-    it(`should contain an Membership section`, function () {
-        cy.visit('/')
+            cy.get('h1')
+                .contains('Orders')
+        })
 
-        cy.get('#header .cart-toggle')
-            .click()
+        it(`should contain an Membership section`, function() {
+            cy.visit('/')
 
-        cy.get('#header .cart-menu a')
-            .contains('Membership')
-            .click()
+            cy.get('#header .cart-toggle')
+                .click()
 
-        cy.get('h1')
-            .contains('Membership')
-    })
+            cy.get('#header .cart-menu a')
+                .contains('Membership')
+                .click()
 
-    it(`should contain an Settings section`, function () {
-        cy.visit('/')
+            cy.get('h1')
+                .contains('Membership')
+        })
 
-        cy.get('#header .cart-toggle')
-            .click()
+        it(`should contain an Settings section`, function() {
+            cy.visit('/')
 
-        cy.get('#header .cart-menu a')
-            .contains('Settings')
-            .click()
+            cy.get('#header .cart-toggle')
+                .click()
 
-        cy.get('h1')
-            .contains('Account')
+            cy.get('#header .cart-menu a')
+                .contains('Settings')
+                .click()
+
+            cy.get('h1')
+                .contains('Account')
+        })
     })
 })

@@ -1,9 +1,17 @@
-describe('Services', () => {
-    it(`should show two plans`, function () {
-        cy.visit('/articles')
+const sizes = require('../../viewport-sizes')
 
-        cy.get('a.article-card')
-            .its('length')
-            .should('be.gt', 0)
+sizes.forEach((size) => {
+    describe(`Services on ${size} screen`, () => {
+        beforeEach(function() {
+            cy.setViewportSize(size)
+        })
+
+        it(`should show two plans`, function () {
+            cy.visit('/articles')
+
+            cy.get('a.article-card')
+                .its('length')
+                .should('be.gt', 0)
+        })
     })
 })

@@ -1,16 +1,15 @@
 const sizes = require('../../viewport-sizes')
 
-describe('Checkout', () => {
-    beforeEach(() => {
-        // Define the user fixture
-        cy.fixture('user').as('user')
-    })
-
-    sizes.forEach((size) => {
-        it(`should add a product to the cart and checkout as guest on ${size} screen`, function () {
-            // Set the viewport
+sizes.forEach((size) => {
+    describe(`Checkout on ${size} screen`, () => {
+        beforeEach(() => {
             cy.setViewportSize(size)
 
+            // Define the user fixture
+            cy.fixture('user').as('user')
+        })
+
+        it(`should add a product to the cart and checkout as guest`, function () {
             // Add a product to the cart
             cy.visit('/product/san-quentin-24')
 
@@ -73,12 +72,6 @@ describe('Checkout', () => {
             // Success
             cy.get('h1')
                 .contains('Success')
-
         })
     })
-
-    // it("should add a product to the cart and checkout as logged-in user", function () {
-    // })
-
-    // responsive tests
 })
