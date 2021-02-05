@@ -35,6 +35,7 @@
 
 /* Components */
 @import 'components/button';
+@import 'components/header';
 @import 'components/modal';
 @import 'components/option-select';
 @import 'components/spinner';

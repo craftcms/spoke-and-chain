@@ -9,11 +9,11 @@ window.header = function() {
             const $body = document.querySelector('body')
 
             if (this.showNav) {
-                $html.classList.add('overflow-y-scroll', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
-                $body.classList.add('overflow-y-hidden', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
+                $html.classList.add('showing-nav')
+                $body.classList.add('showing-nav')
             } else {
-                $html.classList.remove('overflow-y-scroll', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
-                $body.classList.remove('overflow-y-hidden', 'lg:overflow-y-auto', 'h-full', 'lg:h-auto')
+                $html.classList.remove('showing-nav')
+                $body.classList.remove('showing-nav')
             }
         },
 
