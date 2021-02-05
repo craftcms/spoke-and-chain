@@ -19,8 +19,12 @@
                   href="{{ urls[bikeCategory.slug] ?? '' }}"
                   x-on:click.prevent="setType('{{ bikeCategory.slug }}')"
               >
-                  {{ svg('@webroot/icons/mountain.svg')|attr({ class: 'text-red-600 fill-current inline-block w-5 h-5 mr-2' }) }}
-                  {{ bikeCategory.title }}
+                {% set icon = bikeCategory.icon.one() %}
+                {% if icon %}
+                  {{ svg(icon)|attr({ class: 'text-red-600 fill-current inline-block w-5 h-5 mr-2' }) }}
+                {% endif %}
+                
+                {{ bikeCategory.title }}
               </a>
         </li>
       {% endfor %}
