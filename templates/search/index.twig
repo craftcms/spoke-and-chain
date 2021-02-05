@@ -31,7 +31,7 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
 
-  <div class="bg-gray-100 pt-12">
+  <div class="bg-gray-100 pt-12 px-6">
     <div class="max-w-xl mx-auto sm:text-center">
       <h1 class="text-4xl mt-0">Search results for “{{ searchQuery }}”</h1>
 
@@ -50,7 +50,7 @@
     </div>
   </div>
 
-  <div class="bg-gray-100 p-8">
+  <div class="bg-gray-100 py-8 px-6">
     <div class="mt-12 max-w-6xl mx-auto">
       {% if products|length == 0 and articles|length == 0 %}
         <div class="text-center pb-12">
