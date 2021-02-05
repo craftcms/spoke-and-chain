@@ -6,7 +6,7 @@
 {% set attrs = {
   id: 'contact-' ~ form.id
 } %}
-{% set attrs = attributes is defined ? attrs|merge(attributes) : attr %}
+{% set attrs = attributes is defined ? attrs|merge(attributes) : attrs %}
 
 {% if form %}
   {{ sprig('_includes/components/forms/contact',
