@@ -19,9 +19,7 @@
     <input type="password" id="user-new-password" class="w-full {{ 'newPassword' in errorKeys ? 'border-red-600' : '' }}" name="newPassword" value="">
     {% include '_includes/components/forms/errorList' with { errors: errors['newPassword'] ?? [] } only %}
   </div>
-
-  <hr class="mt-3">
-
+  
   <div class="mt-3">
     <label for="user-current-password">{{ 'Current Password'|t }}</label>
     {% if currentPasswordHelp %}
