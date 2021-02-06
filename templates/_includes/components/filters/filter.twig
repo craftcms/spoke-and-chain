@@ -6,7 +6,7 @@
   <div class="container py-6">
     <div class="md:flex">
       <div class="md:w-1/5 md:mr-12 mb-6">
-        <button class="button w-full md:hidden" @click="showFilters = !showFilters">{{ 'Filters'|t }}</button>
+        <button class="button w-full md:hidden" x-on:click="showFilters = !showFilters">{{ 'Filters'|t }}</button>
 
         <div class="mt-4 md:mt-0" :class="{'hidden md:block': !showFilters}">
           {% include '_includes/components/filters/bike' with {
