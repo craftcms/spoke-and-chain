@@ -8,9 +8,11 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  <div class="container py-4 text-center">
-    <h1>{{ entry.heading }}</h1>
-    <h2>{{ entry.subheading }}</h2>
+  <div class="px-6 py-12 max-w-xl mx-auto text-center">
+    <h1 class="text-3xl mt-0">{{ entry.heading }}</h1>
+    {% if entry.subheading %}
+      <p class="text-lg text-gray-700">{{ entry.subheading }}</p>
+    {% endif %}
   </div>
 
   {# Cart #}

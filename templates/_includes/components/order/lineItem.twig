@@ -43,7 +43,7 @@
         {% if form %}
           <div x-data="{}">
             <input id="remove-{{ lineItem.id }}" type="hidden" name="lineItems[{{ lineItem.id }}][remove]" value="0">
-            <a id="remove-trigger-{{ lineItem.id }}" href="#" class="text-red-600 text-sm cursor-pointer" x-on:click.prevent="if (confirm('{{ 'Are you sure you want to remove {product}?'|t({ product: lineItem.description }) }}')) { htmx.find('#remove-{{ lineItem.id }}').value = 1; htmx.trigger(htmx.find('#cart'), 'submit') } ">{{ 'Remove'|t }}</a>
+            <a id="remove-trigger-{{ lineItem.id }}" href="#" class="cursor-pointer" x-on:click.prevent="if (confirm('{{ 'Are you sure you want to remove {product}?'|t({ product: lineItem.description }) }}')) { htmx.find('#remove-{{ lineItem.id }}').value = 1; htmx.trigger(htmx.find('#cart'), 'submit') } ">{{ 'Remove'|t }}</a>
           </div>
         {% endif %}
       </div>
