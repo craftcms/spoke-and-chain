@@ -1,6 +1,7 @@
 <div class="relative" @click.away="showCartMenu = false" @keydown.escape="showCartMenu = false">
     <div class="flex">
         <button
+                aria-label="Cart"
                 @click="showCartMenu = !showCartMenu"
                 @keydown.escape="showCartMenu = false"
                 class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600 cursor-pointer">
