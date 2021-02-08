@@ -130,11 +130,12 @@
                         <fieldset class="w-full">
                             <label for="language" class="sr-only">Language</label>
                             {% include '_includes/components/forms/select' with {
-                              options: [
-                                { value: 'en', label: 'English', selected: true },
-                                { value: 'de', label: 'German' },
-                                { value: 'fr', label: 'French' },
-                              ]
+                                id: 'language',
+                                options: [
+                                    { value: 'en', label: 'English', selected: true },
+                                    { value: 'de', label: 'German' },
+                                    { value: 'fr', label: 'French' },
+                                ]
                             } %}
                         </fieldset>
                     </form>
