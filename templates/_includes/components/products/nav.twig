@@ -3,7 +3,7 @@
     <div class="relative lg:container lg:flex lg:items-center lg:justify-between">
       <h1 class="text-base font-bold float-left lg:float-none mt-3 mb-3 lg:mb-3 flex-1">{{ product.title }}</h1>
 
-      <div id="product-nav-tray" class="overflow-hidden float-right w-full lg:float-none lg:w-auto" :class="{
+      <div id="product-nav-tray" class="float-right w-full lg:float-none lg:w-auto" :class="{
         'transition-all duration-500': false,
         'duration-500 max-h-0 tray-invisible lg:visible lg:max-h-none': !productNavVisible,
         'duration-1000 max-h-screen tray-visible': productNavVisible,
@@ -11,9 +11,8 @@
       >
         <ul id="product-nav-items" class="mt-2 lg:mt-0 lg:mr-4 text-sm font-medium flex-1 flex flex-col lg:flex-row justify-center"
             :class="{
-              'transition duration-500': true,
               'opacity-0 lg:opacity-100': !productNavVisible,
-              'opacity-100 delay-200': productNavVisible,
+              'transition duration-500 opacity-100 delay-200': productNavVisible,
             }"
         >
           <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
