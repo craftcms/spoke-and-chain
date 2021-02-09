@@ -28,7 +28,7 @@
                         </h4>
                         <form class="mt-4 space-y-4 sm:max-w-xs">
                             <fieldset class="w-full">
-                                <label for="language" class="sr-only">Language</label>
+                                <label for="language" class="sr-only">{{ 'Language'|t }}</label>
                                 {% include '_includes/components/forms/select' with {
                                   options: [
                                     { value: 'en', label: 'English', selected: true },
