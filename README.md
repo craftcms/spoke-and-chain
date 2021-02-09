@@ -111,3 +111,8 @@ Open the Cypress Test Runner from the project root:
 ```
 npx cypress open
 ```
+
+Open accessibility tests only:
+```
+npx cypress open --config testFiles=./front/a11y/*.spec.js
+```

@@ -74,7 +74,7 @@
             <div class="lg:max-w-xs lg:w-full flex justify-end items-center">
               <div class="flex items-center">
                 <div class="flex">
-                  <button class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
+                  <button aria-label="Search" class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
                           @click="openSearch($nextTick)">
                     {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
                   </button>
