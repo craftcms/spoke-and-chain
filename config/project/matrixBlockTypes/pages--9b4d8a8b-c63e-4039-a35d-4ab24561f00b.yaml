@@ -1,0 +1,72 @@
+field: b9cb6112-ebae-420b-bae9-a54c387419f6
+fieldLayouts:
+  a07d3103-a401-4270-a15f-172faf15aade:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a004cfa0-a7f8-419b-8343-d6670a0a52e8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  18ab3594-a62d-4903-9c6c-b791d64fd4ad:
+    contentColumnType: string
+    fieldGroup: null
+    handle: pages
+    instructions: ''
+    name: Pages
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: 'Add a page'
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5'
+        - singles
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  a004cfa0-a7f8-419b-8343-d6670a0a52e8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: pages
+name: Pages
+sortOrder: 1

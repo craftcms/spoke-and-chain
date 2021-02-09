@@ -23,5 +23,18 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b9cb6112-ebae-420b-bae9-a54c387419f6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Nav
+        sortOrder: 2
 handle: footer
 name: Footer
