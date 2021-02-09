@@ -1,147 +1,48 @@
 <!-- Template: {{ _self }}.twig -->
 {# Variables #}
-{% set bikeCategories = craft.categories({
-    group: 'bikeTypes'
-}).all() %}
+{% set footerNav = footer.footerNav|length ? footer.footerNav.all() : [] %}
 
 {# Output #}
 <footer>
     <div class="container">
         <div class="mt-8 py-8">
-            <div class="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
-                <div class="grid grid-cols-2 gap-8 xl:col-span-4">
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                                Bikes
-                            </h4>
-                            <ul class="mt-4 space-y-4">
-                                {% for bikeCategory in bikeCategories %}
-                                    <li>
-                                        <a class="text-base leading-6 text-gray-500 hover:text-gray-900" href="{{ bikeCategory.url }}">
-                                            {{ bikeCategory.title }}
-                                        </a>
-                                    </li>
+            {% if footerNav|length %}
+                <div class="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
+                    <div class="grid grid-cols-2 gap-8 xl:col-span-4">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            {% for col in footerNav|slice(0, 2) %}
+                                {% include '_includes/components/footer/column' with { col: col } %}
+                            {% endfor %}
+                        </div>
+                        {% if footerNav|length > 2 %}
+                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                                {% for col in footerNav|slice(2, 2) %}
+                                    {% include '_includes/components/footer/column' with { col: col } %}
                                 {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                                Support
-                            </h4>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Pricing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Documentation
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Guides
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        API Status
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            </div>
+                        {% endif %}
                     </div>
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                                Company
-                            </h4>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Jobs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Press
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Partners
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                                Legal
-                            </h4>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Claim
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Privacy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                        Terms
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-12 xl:mt-0 space-y-4">
-                    <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
-                        {{ footer.subheading }}
-                    </h4>
-                    <form class="mt-4 space-y-4 sm:max-w-xs">
-                        <fieldset class="w-full">
-                            <label for="language" class="sr-only">Language</label>
-                            {% include '_includes/components/forms/select' with {
-                              options: [
-                                { value: 'en', label: 'English', selected: true },
-                                { value: 'de', label: 'German' },
-                                { value: 'fr', label: 'French' },
-                              ]
-                            } %}
-                        </fieldset>
-                    </form>
+                    <div class="mt-12 xl:mt-0 space-y-4">
+                        <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
+                            {{ footer.subheading }}
+                        </h4>
+                        <form class="mt-4 space-y-4 sm:max-w-xs">
+                            <fieldset class="w-full">
+                                <label for="language" class="sr-only">Language</label>
+                                {% include '_includes/components/forms/select' with {
+                                  options: [
+                                    { value: 'en', label: 'English', selected: true },
+                                    { value: 'de', label: 'German' },
+                                    { value: 'fr', label: 'French' },
+                                  ]
+                                } %}
+                            </fieldset>
+                        </form>
 
-                    {% include '_includes/components/modal' %}
+                        {% include '_includes/components/modal' %}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
             <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
                 <div class="flex space-x-6 md:order-2">
                     <a href="https://github.com/pixelandtonic/spoke-and-chain" rel="external" class="text-gray-600 hover:text-gray-500">
