@@ -1,4 +1,3 @@
-<!-- Template: {{ _self }}.twig -->
 {# Params #}
 {% set title = title is not defined ? null : title %}
 {% set button = button is not defined ? null : button %}
@@ -12,6 +11,7 @@
 
 {# Output #}
 {% if title or image or button %}
+  <!-- Template: {{ _self }}.twig -->
   <div class="{{ aspectClass }}">
     <div class="aspect-inner bg-cover bg-center" {% if image %}style="background-image: url({{image}});"{% endif %}>
       <div class="bg-black bg-opacity-50 h-full">

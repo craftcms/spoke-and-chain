@@ -19,9 +19,7 @@
 
   <div class="py-12">
     {# Heading #}
-    <div class="container py-4 text-center">
-      <h1 class="text-4xl mb-12">{{ entry.title }}</h1>
-    </div>
+    {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
     <div class="container flex justify-center">
       <div class="w-full max-w-5xl flex flex-wrap">

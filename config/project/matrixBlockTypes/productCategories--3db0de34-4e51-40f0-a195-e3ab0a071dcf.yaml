@@ -1,0 +1,73 @@
+field: b9cb6112-ebae-420b-bae9-a54c387419f6
+fieldLayouts:
+  007ad558-50e4-45ef-a6bf-44c60060e91e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  d5599be5-4ce7-4f5f-997b-843257caca75:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e1227ec6-29cc-4c76-8ef1-a091a264b805:
+    contentColumnType: string
+    fieldGroup: null
+    handle: productCategories
+    instructions: ''
+    name: 'Product Categories'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: ''
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: false
+      source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+handle: productCategories
+name: 'Product Categories'
+sortOrder: 2

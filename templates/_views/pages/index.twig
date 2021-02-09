@@ -5,14 +5,9 @@
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="bg-gray-200">
+  <div>
     {# Heading #}
-    <div class="container flex justify-center pt-8">
-      <div class="w-full max-w-3xl">
-        <p>{{ entry.postDate|date('F j, Y') }}</p>
-        <h1>{{ entry.title }}</h1>
-      </div>
-    </div>
+    {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
     {# Article Content #}
     {% for block in contentBlocks %}

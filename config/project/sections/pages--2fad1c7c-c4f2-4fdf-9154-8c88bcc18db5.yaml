@@ -18,7 +18,7 @@ siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81:
     enabledByDefault: true
     hasUrls: true
-    template: _views/index
+    template: _views/pages/index
     uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: 1
