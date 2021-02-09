@@ -5,6 +5,8 @@
 {% set fixedHeader = false %}
 {% set defaultVariant = product.defaultVariant %}
 {% set productColors = product.colors.all() %}
+{% set hasOverview = product.body ? true : false %}
+{% set hasGeometry = product.geometry|length ? true : false %}
 {% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
 {% set hasReviews = reviews and reviews|length %}
 {% set averageRating = hasReviews ? 0 : false %}
@@ -22,7 +24,11 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   {# Product Nav #}
-  {% include '_includes/components/products/nav' %}
+  {% include '_includes/components/products/nav' with {
+    hasOverview : product.body ? true : false,
+    hasGeometry : product.geometry|length ? true : false,
+    hasReviews: hasReviews,
+  } %}
 
   {% if images|length %}
     <div>
@@ -97,196 +103,54 @@
   <div class="bg-white py-8">
     <div class="container">
       <div class="max-w-3xl mx-auto">
-        <div id="overview" class="pt-16">
-          <h2 class="text-xl">Overview</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
-            cumque repudiandae sit! At consectetur cumque dolorem,
-            facilis, incidunt non nostrum quisquam sequi veniam,
-            voluptas voluptatibus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
-            cumque repudiandae sit! At consectetur cumque dolorem,
-            facilis, incidunt non nostrum quisquam sequi veniam,
-            voluptas voluptatibus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
-            cumque repudiandae sit! At consectetur cumque dolorem,
-            facilis, incidunt non nostrum quisquam sequi veniam,
-            voluptas voluptatibus.
-          </p>
-        </div>
-        <div id="components" class="pt-16">
-          <h2 class="text-xl">Components</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
-            cumque repudiandae sit! At consectetur cumque dolorem,
-            facilis, incidunt non nostrum quisquam sequi veniam,
-            voluptas voluptatibus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Aliquam distinctio dolor pariatur saepe. Accusamus
-            cumque repudiandae sit! At consectetur cumque dolorem,
-            facilis, incidunt non nostrum quisquam sequi veniam,
-            voluptas voluptatibus.
-          </p>
-        </div>
-        <div id="geometry" class="pt-16">
-          <h2 class="text-xl">Geometry</h2>
 
-          <img class="w-full mt-4"
-               src="https://s3.amazonaws.com/craft-marinbikes/images/bikes/geometry/_bikeGeometry2048Wide/21_MRN_GEO_ALL_MULTITRAC_2048px.jpg"/>
-
-          <div class="overflow-x-auto block max-w-full">
-            <table class="data w-full mt-8">
-              <thead>
-              <tr>
-                <th><span class="visuallyhidden">Type</span></th>
-                <th class="text-center">S</th>
-                <th class="text-center">M</th>
-                <th class="text-center">L</th>
-                <th class="text-center">XL</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="pl-0">Stack (A)</td>
-                <td class="text-center">619</td>
-                <td class="text-center">628</td>
-                <td class="text-center">632</td>
-                <td class="text-center">643</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Reach (B)</td>
-                <td class="text-center">430</td>
-                <td class="text-center">455</td>
-                <td class="text-center">480</td>
-                <td class="text-center">515</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Headtube Angle (C)</td>
-                <td class="text-center">63.5</td>
-                <td class="text-center">63.5</td>
-                <td class="text-center">63.5</td>
-                <td class="text-center">63.5</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Headtube Length (D)</td>
-                <td class="text-center">100</td>
-                <td class="text-center">110</td>
-                <td class="text-center">115</td>
-                <td class="text-center">130</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Seattube Angle (Effective) (E)</td>
-                <td class="text-center">78</td>
-                <td class="text-center">78</td>
-                <td class="text-center">78</td>
-                <td class="text-center">78</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Seattube Length (F)</td>
-                <td class="text-center">390</td>
-                <td class="text-center">400</td>
-                <td class="text-center">425</td>
-                <td class="text-center">430</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Toptupe (Effective) (G)</td>
-                <td class="text-center">561.7</td>
-                <td class="text-center">589</td>
-                <td class="text-center">615</td>
-                <td class="text-center">652</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Bottom Bracket Height (H)</td>
-                <td class="text-center">342</td>
-                <td class="text-center">342</td>
-                <td class="text-center">342</td>
-                <td class="text-center">342</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Bottom Bracket Drop (I)</td>
-                <td class="text-center">35</td>
-                <td class="text-center">35</td>
-                <td class="text-center">35</td>
-                <td class="text-center">35</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Chainstay (J)</td>
-                <td class="text-center">430</td>
-                <td class="text-center">430</td>
-                <td class="text-center">430</td>
-                <td class="text-center">430</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Wheelbase (K)</td>
-                <td class="text-center">1199</td>
-                <td class="text-center">1229</td>
-                <td class="text-center">1256</td>
-                <td class="text-center">1297</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Standover Height (Carbon) (L)</td>
-                <td class="text-center">690</td>
-                <td class="text-center">694</td>
-                <td class="text-center">695</td>
-                <td class="text-center">698</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Standover Height (Aluminum) (L)
-                </td>
-                <td class="text-center">714</td>
-                <td class="text-center">716</td>
-                <td class="text-center">732</td>
-                <td class="text-center">734</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Fork Offset (M)</td>
-                <td class="text-center">44</td>
-                <td class="text-center">44</td>
-                <td class="text-center">44</td>
-                <td class="text-center">44</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Seatpost Diameter</td>
-                <td class="text-center">30.9</td>
-                <td class="text-center">30.9</td>
-                <td class="text-center">30.9</td>
-                <td class="text-center">30.9</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Handlebar Width</td>
-                <td class="text-center">780</td>
-                <td class="text-center">780</td>
-                <td class="text-center">780</td>
-                <td class="text-center">780</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Stem Length</td>
-                <td class="text-center">35</td>
-                <td class="text-center">35</td>
-                <td class="text-center">35</td>
-                <td class="text-center">35</td>
-              </tr>
-              <tr>
-                <td class="pl-0">Crank Length</td>
-                <td class="text-center">170</td>
-                <td class="text-center">170</td>
-                <td class="text-center">170</td>
-                <td class="text-center">170</td>
-              </tr>
-              </tbody>
-            </table>
+        {# Overview #}
+        {% if hasOverview %}
+          <div id="overview" class="pt-16">
+            <h2 class="text-xl">{{ 'Overview'|t }}</h2>
+            {{ product.body }}
           </div>
-        </div>
+        {% endif %}
+
+        {# Geometry #}
+        {% if hasGeometry %}
+          <div id="geometry" class="pt-16">
+            <h2 class="text-xl">Geometry</h2>
+
+            <img class="w-full mt-4"
+                 src="https://s3.amazonaws.com/craft-marinbikes/images/bikes/geometry/_bikeGeometry2048Wide/21_MRN_GEO_ALL_MULTITRAC_2048px.jpg"/>
+
+            <div class="overflow-x-auto block max-w-full">
+              <table class="data w-full mt-8">
+                {% for row in product.geometry %}
+                  {% if loop.first %}
+                    <thead>
+                      <tr>
+                        <th><span class="visuallyhidden">{{ 'Type'|t }}</span></th>
+                        <th class="text-center">{{ 'S'|t }}</th>
+                        <th class="text-center">{{ 'M'|t }}</th>
+                        <th class="text-center">{{ 'L'|t }}</th>
+                        <th class="text-center">{{ 'XL'|t }}</th>
+                      </tr>
+                    </thead>
+                  {% endif %}
+                  <tbody>
+                    <tr>
+                      <td class="pl-0">{{ row.piece }}</td>
+                      <td class="text-center">{{ row.s }}</td>
+                      <td class="text-center">{{ row.m }}</td>
+                      <td class="text-center">{{ row.l }}</td>
+                      <td class="text-center">{{ row.xl }}</td>
+                    </tr>
+                  {% if loop.last %}
+                  </tbody>
+                  {% endif %}
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        {% endif %}
+
 
         {# Reviews #}
         {% if hasReviews %}

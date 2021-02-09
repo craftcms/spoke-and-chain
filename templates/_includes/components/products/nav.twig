@@ -15,26 +15,25 @@
               'transition duration-500 opacity-100 delay-200': productNavVisible,
             }"
         >
-          <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
-            <a
-                    class="block lg:inline-block text-gray-900 lg:px-4 py-2"
-                    href="#overview">Overview</a>
-          </li>
-          <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
-            <a
-                    class="block lg:inline-block text-gray-900 lg:px-4 py-2"
-                    href="#components">Components</a>
-          </li>
-          <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
-            <a
-                    class="block lg:inline-block text-gray-900 lg:px-4 py-2"
-                    href="#geometry">Geometry</a>
-          </li>
+          {% if hasOverview %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#overview">{{ 'Overview'|t }}</a>
+            </li>
+          {% endif %}
+          {% if hasGeometry %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#geometry">{{ 'Geometry'|t }}</a>
+            </li>
+          {% endif %}
           {% if hasReviews is defined and hasReviews %}
             <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
               <a
                       class="block lg:inline-block text-gray-900 lg:px-4 py-2"
-                      href="#reviews">Reviews</a>
+                      href="#reviews">{{ 'Reviews'|t }}</a>
             </li>
           {% endif %}
         </ul>
@@ -53,7 +52,7 @@
             </svg>
           </template>
         </button>
-        <a href="#buy" class="button submit text-sm">Shop</a>
+        <a href="#buy" class="button submit text-sm">{{ 'Buy'|t }}</a>
       </div>
       <div class="clear-both lg:clear-none lg:hidden"></div>
     </div>
