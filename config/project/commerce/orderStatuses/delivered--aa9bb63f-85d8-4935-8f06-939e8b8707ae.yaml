@@ -3,4 +3,4 @@ default: false
 description: ''
 handle: delivered
 name: Delivered
-sortOrder: 99
+sortOrder: 4

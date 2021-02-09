@@ -3,4 +3,4 @@ default: false
 description: ''
 handle: confirmed
 name: Confirmed
-sortOrder: 99
+sortOrder: 2
