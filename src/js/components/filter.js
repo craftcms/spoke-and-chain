@@ -47,10 +47,8 @@ window.filter = function() {
         },
 
         toggle(key, value) {
-            console.log('toggle', 'key', 'value');
             var idx = this[key].indexOf(value);
             if (idx == -1) {
-                console.log('add', key, value);
                 this[key].push(value);
             } else {
                 if (this[key].length == 1) {
@@ -58,8 +56,6 @@ window.filter = function() {
                 } else {
                     delete this[key][idx];
                 }
-                console.log('remove', key, value);
-                console.log('remove', this[key]);
             }
 
             this.refresh();
@@ -72,6 +68,9 @@ window.filter = function() {
         },
 
         refresh() {
+            // always hide mobile filter list when selecting a filter
+            this.showFilters = false;
+
             this._nt(function() { htmx.trigger(htmx.find('#filter'), 'refresh')});
         }
     };

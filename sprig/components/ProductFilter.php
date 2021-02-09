@@ -142,13 +142,14 @@ class ProductFilter extends Component
         $attributes = parent::attributes();
 
         $attributes[] = 'colorFilters';
+        $attributes[] = 'filterCount';
+        $attributes[] = 'filterUrlsByType';
         $attributes[] = 'isAllBikes';
         $attributes[] = 'materialFilters';
         $attributes[] = 'products';
         $attributes[] = 'pushUrl';
         $attributes[] = 'sortOptions';
         $attributes[] = 'types';
-        $attributes[] = 'filterUrlsByType';
 
         return $attributes;
     }
@@ -347,6 +348,11 @@ class ProductFilter extends Component
     public function getIsAllBikes(): bool
     {
         return $this->type ? true : false;
+    }
+
+    public function getFilterCount()
+    {
+        return ($this->type ? 1 : 0) + count($this->colors) + count($this->materials);
     }
 
     /**
