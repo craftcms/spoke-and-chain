@@ -13,11 +13,7 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   {# Heading #}
-  <div class="bg-gray-300">
-    <div class="container py-4 text-center">
-      <h1>{{ entry.title }}</h1>
-    </div>
-  </div>
+  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
   <div class="container flex justify-center">
     <div class="w-full max-w-5xl">

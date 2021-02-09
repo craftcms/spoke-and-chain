@@ -16,11 +16,7 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  <div class="bg-gray-300">
-    <div class="container py-4 text-center">
-      <h1>{{ entry.title }}</h1>
-    </div>
-  </div>
+  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
   <div class="container py-12">
     <div class="container flex justify-center">

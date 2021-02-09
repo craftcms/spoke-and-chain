@@ -17,11 +17,7 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  <div class="bg-gray-300">
-    <div class="container py-4 text-center">
-      <h1>{{ entry.title }}</h1>
-    </div>
-  </div>
+  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
   <form id="checkout-payment" method="post" x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }">
     {{ csrfInput() }}
