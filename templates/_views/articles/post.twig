@@ -1,8 +1,3 @@
-{% set formSuccessQueryString = craft.app.request.getQueryParam('form', false) %}
-{% if formSuccessQueryString and formSuccessQueryString == 'success' %}
-  {% do craft.app.session.setFlash('notice', 'Form submitted.'|t) %}
-{% endif %}
-
 {# Layout #}
 {% extends '_layouts/site' %}
 {% set contentBlocks = entry.contentBuilder.all() %}
