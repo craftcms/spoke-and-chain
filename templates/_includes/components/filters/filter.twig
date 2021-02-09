@@ -36,11 +36,14 @@
           {% endif %}
 
           <hr class="my-6">
-          <select name="sort" id="" x-on:change="refresh()" x-model="sort">
-            {% for opt in sortOptions %}
-              <option value="{{ opt.value }}" {{ opt.selected }}>{{ opt.label }}</option>
-            {% endfor %}
-          </select>
+          {% include '_includes/components/forms/select' with {
+            options: sortOptions,
+            name: 'sort',
+            attributes: {
+              'x-on:change': 'refresh()',
+              'x-model': 'sort'
+            }
+          } %}
         </div>
       </div>
       <div class="w-full md:w-4/5">
