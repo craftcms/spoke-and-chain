@@ -47,16 +47,23 @@
         </div>
       </div>
       <div class="w-full md:w-4/5">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
-          {% for product in products %}
-            {% include '_includes/components/cards/product' with {
-              title: product.title,
-              image: product.mainImage.one(),
-              url: product.url,
-              price: product.defaultPriceAsCurrency
-            } only %}
-          {% endfor %}
+        <div class="text-right text-gray-600 pb-4">
+          {{ '{num} product(s)'|t('site', { num: productCount }) }}
         </div>
+        {% if not products|length %}
+          <p class="text-center text-xl">{{ 'No products avaiable.'|t }}</p>
+        {% else %}
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
+            {% for product in products %}
+              {% include '_includes/components/cards/product' with {
+                title: product.title,
+                image: product.mainImage.one(),
+                url: product.url,
+                price: product.defaultPriceAsCurrency
+              } only %}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
