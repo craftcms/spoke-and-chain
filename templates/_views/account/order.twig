@@ -1,8 +1,5 @@
 {% requireLogin %}
 
-{# Layout #}
-{% extends '_layouts/site' %}
-
 {# Variables #}
 {% set ordersPage = craft.entries({ section: 'account', type: 'orders' }).one() %}
 {% if slug is not defined or not slug %}
@@ -13,6 +10,14 @@
   shortNumber: slug,
 }).user(currentUser).one() %}
 
+{% set crumbs = [
+  { label: "Account"|t('site'), url: url('account') },
+  { label: "Orders"|t('site'), url: ordersPage ? ordersPage.url : siteUrl('account/orders') },
+] %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
@@ -21,9 +26,6 @@
       <h1 class="text-4xl text-center">{{ 'Order'|t }} {{ slug }}</h1>
       <div class="text-center mt-2">
         {% include '_includes/components/order/orderStatus' with { orderStatus: order.orderStatus, prefix: 'Status'|t } %}
-      </div>
-      <div class="text-center mt-2">
-        <a href="{{ ordersPage ? ordersPage.url : siteUrl('account/orders') }}">{{ 'Back to orders'|t }}</a>
       </div>
     </div>
   </div>
