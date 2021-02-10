@@ -17,8 +17,8 @@
     </div>
 
     <template x-if="showCartMenu">
-        <div class="cart-menu origin-top-right absolute right-0 mt-2 z-0 w-48 rounded-md shadow-lg w-64">
-            <div class="p-6 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+        <div class="cart-menu origin-top-right absolute right-0 border-t lg:border-none border-white lg:mt-0.5 pt-3 z-0 w-64">
+            <div class="p-6 rounded-b-md border-r border-l border-b border-gray-300 bg-white shadow-lg" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <div class="space-y-4">
                     {% if lineItems|length %}
                         <div>
