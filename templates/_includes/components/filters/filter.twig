@@ -6,7 +6,7 @@
   <div class="container py-6">
     <div class="md:flex">
       <div class="md:w-1/5 md:mr-12 mb-6">
-        <button class="button w-full md:hidden" x-on:click="showFilters = !showFilters">{{ 'Filters'|t }}</button>
+        <button class="button w-full md:hidden" x-on:click="showFilters = !showFilters">{{ 'Filters'|t }}{{ filterCount ? " (#{filterCount})" : '' }}</button>
 
         <div class="mt-4 md:mt-0" :class="{'hidden md:block': !showFilters}">
           {% include '_includes/components/filters/bike' with {
@@ -47,16 +47,24 @@
         </div>
       </div>
       <div class="w-full md:w-4/5">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
-          {% for product in products %}
-            {% include '_includes/components/cards/product' with {
-              title: product.title,
-              image: product.mainImage.one(),
-              url: product.url,
-              price: product.defaultPriceAsCurrency
-            } only %}
-          {% endfor %}
+        <div class="text-right text-gray-600 pb-4">
+          {{ '{num} product(s)'|t('site', { num: productCount }) }}
         </div>
+        {% if not products|length %}
+          <p class="text-center text-xl">{{ 'No products avaiable.'|t }}</p>
+        {% else %}
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
+            {% for product in products %}
+              {% include '_includes/components/cards/product' with {
+                title: product.title,
+                image: product.mainImage.one(),
+                url: product.url,
+                price: product.getDefaultVariant().priceAsCurrency,
+                salePrice: product.getDefaultVariant().salePriceAsCurrency,
+              } only %}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

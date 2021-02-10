@@ -3,4 +3,4 @@ default: false
 description: ''
 handle: inTransit
 name: 'In Transit'
-sortOrder: 99
+sortOrder: 3

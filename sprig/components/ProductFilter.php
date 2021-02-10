@@ -29,6 +29,8 @@ use putyourlightson\sprig\base\Component;
  * @property-read array $sortOptions
  * @property-read mixed $pushUrl
  * @property-read bool $isAllBikes
+ * @property-read int $filterCount
+ * @property-read int $productCount
  * @property-read void $types
  */
 class ProductFilter extends Component
@@ -94,6 +96,11 @@ class ProductFilter extends Component
     private $_landingEntry;
 
     /**
+     * @var null|Product[]
+     */
+    private $_products;
+
+    /**
      * @inheritdoc
      */
     public function init()
@@ -142,13 +149,15 @@ class ProductFilter extends Component
         $attributes = parent::attributes();
 
         $attributes[] = 'colorFilters';
+        $attributes[] = 'filterCount';
+        $attributes[] = 'filterUrlsByType';
         $attributes[] = 'isAllBikes';
         $attributes[] = 'materialFilters';
+        $attributes[] = 'productCount';
         $attributes[] = 'products';
         $attributes[] = 'pushUrl';
         $attributes[] = 'sortOptions';
         $attributes[] = 'types';
-        $attributes[] = 'filterUrlsByType';
 
         return $attributes;
     }
@@ -211,6 +220,10 @@ class ProductFilter extends Component
      */
     public function getProducts(): array
     {
+        if ($this->_products !== null) {
+            return $this->_products;
+        }
+
         /** @var ProductQuery $query */
         $query = Craft::$app->getElements()->createElementQuery(Product::class);
         $query->type('bike');
@@ -265,7 +278,9 @@ class ProductFilter extends Component
             $query->orderBy('postDate ' . $direction);
         }
 
-        return $query->all();
+        $this->_products = $query->all();
+
+        return $this->_products;
     }
 
     /**
@@ -347,6 +362,22 @@ class ProductFilter extends Component
     public function getIsAllBikes(): bool
     {
         return $this->type ? true : false;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProductCount()
+    {
+        return count($this->getProducts());
+    }
+
+    /**
+     * @return int
+     */
+    public function getFilterCount()
+    {
+        return ($this->type ? 1 : 0) + count($this->colors) + count($this->materials);
     }
 
     /**

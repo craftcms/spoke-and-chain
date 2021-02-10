@@ -1,0 +1,164 @@
+field: a42d1365-22cd-445e-9e10-43dc721bddbe
+fieldLayouts:
+  4e683645-3a9f-4fa8-96a1-8de2cc285fe0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6d832652-3b7e-417c-8a96-14965cdfd744
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3815aa30-9bf2-4a2b-8d16-00fd08c68e86
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ee205f0d-9016-48b3-8c84-df68b08003cd
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7f531774-b9c9-4fde-8708-762f09ef7191
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6443fbe4-a797-4f2a-8b81-c76619128990
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3815aa30-9bf2-4a2b-8d16-00fd08c68e86:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ariaLabel
+    instructions: ''
+    name: 'Aria Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6443fbe4-a797-4f2a-8b81-c76619128990:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonUrl
+    instructions: 'Use this field if you require linking to a custom URL that is not an entry or category.'
+    name: 'Button URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6d832652-3b7e-417c-8a96-14965cdfd744:
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: ''
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7f531774-b9c9-4fde-8708-762f09ef7191:
+    contentColumnType: string
+    fieldGroup: null
+    handle: categoryLink
+    instructions: 'Select a category to link to (leave blank if using the button URL).'
+    name: 'Category Link'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: false
+      source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  ee205f0d-9016-48b3-8c84-df68b08003cd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryLink
+    instructions: 'Select and entry to link to (leave this blank when linking to a category or using the button URL)'
+    name: 'Entry Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:21dd60d6-92a7-4e82-8884-7dbe57d73c6c'
+        - 'section:506e9a86-f8ca-4f35-bffc-21da95813979'
+        - 'section:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+        - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5'
+        - singles
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: button
+name: Button
+sortOrder: 1
