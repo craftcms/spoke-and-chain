@@ -1,3 +1,10 @@
+{# Params #}
+{% set hasOverview = hasOverview is not defined ? false : hasOverview %}
+{% set hasReviews = hasReviews is not defined ? false : hasReviews %}
+{% set hasGeomentry = hasGeomentry is not defined ? false : hasGeomentry %}
+{% set hasForm = hasForm is not defined ? false : hasForm %}
+
+<!-- Template: {{ _self }}.twig -->
 <div id="product-nav" x-data="productNav()" @scroll.window="onScroll" class="sticky top-0 z-10 h-16">
   <div class="absolute w-full px-6 bg-gray-200 border-b border-gray-300 py-2">
     <div class="relative lg:container lg:flex lg:items-center lg:justify-between">
