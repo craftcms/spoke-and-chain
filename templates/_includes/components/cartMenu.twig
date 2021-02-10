@@ -1,3 +1,10 @@
+{# Params #}
+{% set lineItems = lineItems is not defined ? [] : lineItems %}
+{% set shipping = shipping is not defined ? false : shipping %}
+{% set discount = discount is not defined ? false : discount %}
+{% set total = total is not defined ? false : total %}
+
+<!-- Template: {{ _self }}.twig -->
 <div class="relative" @click.away="showCartMenu = false" @keydown.escape="showCartMenu = false">
     <div class="flex">
         <button
@@ -13,9 +20,34 @@
         <div class="cart-menu origin-top-right absolute right-0 mt-2 z-0 w-48 rounded-md shadow-lg w-64">
             <div class="p-6 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <div class="space-y-4">
-                    <div class="text-center text-base text-gray-500 p-8 rounded border-gray-300 border border-dashed">
-                      {{ 'Cart Overview'|t }}
-                    </div>
+                    {% if lineItems|length %}
+                        <div>
+                            {% for item in lineItems %}
+                                <div class="flex justify-between text-sm {% if not loop.first %}border-t border-dashed border-gray-300 mt-2 pt-2{% endif %}">
+                                    <div>
+                                        {{ item.description }}<br>
+                                        <span class="text-xs text-gray-600">x {{ item.qty }}</span>
+                                    </div>
+                                    <div>
+                                        {{ item.totalAsCurrency }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="border-t border-gray-200 mt-2 pt-2 text-right">
+                                {% if shipping %}
+                                    <div class="text-gray-600 text-xs">{{ 'Shipping'|t }}: {{ shipping }}</div>
+                                {% endif %}
+                                {% if discount %}
+                                    <div class="text-gray-600 text-xs">{{ 'Discount'|t }}: {{ discount }}</div>
+                                {% endif %}
+                                <div class="text-sm">{{ 'Total'|t }}: {{ total }}</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="text-center text-base text-gray-500 p-8 rounded border-gray-300 border border-dashed">
+                          {{ 'No items'|t }}
+                        </div>
+                    {% endif %}
                     <div>
                         <a class="button submit w-full text-center" href="{{ cartPage.url }}">Check Out</a>
                     </div>

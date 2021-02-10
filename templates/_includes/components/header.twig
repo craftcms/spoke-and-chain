@@ -80,7 +80,12 @@
                   </button>
                 </div>
 
-                {% include '_includes/components/cartMenu' %}
+                {% include '_includes/components/cartMenu' with {
+                  lineItems: cart.lineItems,
+                  shipping: cart.totalShippingCost == 0 ? false : cart.totalShippingCostAsCurrency,
+                  discount: cart.totalDiscount == 0 ? false : cart.totalDiscountAsCurrency,
+                  total: cart.totalPriceAsCurrency
+                } %}
               </div>
             </div>
           </div>
