@@ -22,7 +22,7 @@
 
               {% if button %}
                 <div class="text-4xl">
-                  <a href="{{buttonUrl}}" title="{{ buttonTitle }}" class="button submit">{{ button }}</a>
+                  <a href="{{ buttonUrl }}" title="{{ buttonTitle }}" aria-label="{{ buttonTitle }}" class="button submit">{{ button }}</a>
                 </div>
               {% endif %}
             </div>
