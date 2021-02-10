@@ -19,6 +19,7 @@
 {% endfor %}
 {% set form = product.showForm ? craft.freeform.form('product', {}) : null %}
 {% set images = product.productImages.all() %}
+{% set geometryReference = bikes.mainImage.one() ?? null %}
 
 {# Blocks #}
 {% block content %}
@@ -116,8 +117,9 @@
           <div id="geometry" class="pt-16">
             <h2 class="text-xl">Geometry</h2>
 
-            <img class="w-full mt-4"
-                 src="https://s3.amazonaws.com/craft-marinbikes/images/bikes/geometry/_bikeGeometry2048Wide/21_MRN_GEO_ALL_MULTITRAC_2048px.jpg"/>
+            {% if geometryReference %}
+              <img class="w-full mt-4" src="{{ geometryReference.getUrl() }}"/>
+            {% endif %}
 
             <div class="overflow-x-auto block max-w-full">
               <table class="data w-full mt-8">
