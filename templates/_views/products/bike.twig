@@ -28,6 +28,7 @@
     hasOverview : product.body ? true : false,
     hasGeometry : product.geometry|length ? true : false,
     hasReviews: hasReviews,
+    hasForm: product.showForm and form,
   } %}
 
   {% if images|length %}
@@ -76,16 +77,14 @@
 
             {# Variants #}
             <div class="mt-6 lg:mt-0">
-              <select name="purchasableId">
-                {% for variant in product.variants %}
-                  <option value="{{ variant.id }}"
-                          {% if not variant.hasStock() %}disabled{% endif %}>{{ variant.title }}{% if not variant.hasStock() %} - {{ 'Out of stock'|t('site') }}{% endif %}</option>
-                {% endfor %}
-              </select>
-
-              <div>
-                <a href="#">{{ 'Size chart'|t('site') }}</a>
-              </div>
+              {% include '_includes/components/forms/select' with {
+                name: 'purchasableId',
+                options: product.variants|map((v) => {
+                  value: v.id,
+                  label: v.title,
+                  disabled: not v.hasStock()
+                })
+              } %}
             </div>
           </div>
 
@@ -179,11 +178,13 @@
   </div>
 
   {% if product.showForm and form %}
-    {% include '_includes/components/content/form' with {
-      block: {
-        form: form,
-        heading: 'Have a question? Ask us!'|t
-      }
-    } only %}
+    <div id="question">
+      {% include '_includes/components/content/form' with {
+        block: {
+          form: form,
+          heading: 'Have a question? Ask us!'|t
+        }
+      } only %}
+    </div>
   {% endif %}
 {% endblock %}

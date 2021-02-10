@@ -36,6 +36,13 @@
                       href="#reviews">{{ 'Reviews'|t }}</a>
             </li>
           {% endif %}
+          {% if hasForm is defined and hasForm %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#question">{{ 'Ask'|t }}</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
 

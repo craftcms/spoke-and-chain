@@ -43,7 +43,8 @@
     >
       {% for opt in options %}
         {% set selected = opt.selected ?? false %}
-        <option value="{{ opt.value }}" {{ selected ? 'selected' : '' }}>{{ opt.label }}</option>
+        {% set disabled = opt.disabled ?? false %}
+        <option value="{{ opt.value }}" {{ selected ? 'selected' : '' }} {{ disabled ? 'disabled' : '' }}>{{ opt.label }}</option>
       {% endfor %}
     </select>
   {% endif %}
