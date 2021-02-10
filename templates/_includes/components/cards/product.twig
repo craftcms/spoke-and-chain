@@ -4,6 +4,7 @@
 {% set image = image is not defined ? null : image %}
 {% set url = url is not defined ? null : url %}
 {% set price = price is not defined ? null : price %}
+{% set salePrice = salePrice is not defined ? null : salePrice %}
 
 {% set thumbUrl = null %}
 
@@ -33,7 +34,11 @@
         {{ title }}
       </div>
       <div>
-        {{ price }}
+        {% if salePrice %}
+          <del class="text-xs text-gray-600">{{ price }}</del> {{ salePrice }}
+        {% else %}
+          {{ price }}
+        {% endif %}
       </div>
     </div>
   </a>

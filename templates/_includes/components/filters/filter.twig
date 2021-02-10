@@ -59,7 +59,8 @@
                 title: product.title,
                 image: product.mainImage.one(),
                 url: product.url,
-                price: product.defaultPriceAsCurrency
+                price: product.getDefaultVariant().priceAsCurrency,
+                salePrice: product.getDefaultVariant().salePriceAsCurrency,
               } only %}
             {% endfor %}
           </div>
