@@ -13,11 +13,7 @@
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="bg-gray-100 py-8">
-    <div class="max-w-4xl mx-auto space-y-6">
-      <h1 class="text-4xl text-center">{{ 'Account Settings'|t }}</h1>
-    </div>
-  </div>
+  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
   <div class="container flex justify-center">
     <div class="w-full max-w-4xl">
