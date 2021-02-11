@@ -12,84 +12,114 @@
   section: 'account',
   type: 'membership',
 }).one() ?? null %}
+{% set servicesPage = craft.entries({
+  section: 'servicesLanding',
+}).one() ?? null %}
 {% set settingsPage = craft.entries({
   section: 'account',
   type: 'settings',
 }).one() ?? null %}
+{% set hasSubscriptions = craft.subscriptions({
+  isSuspended: false,
+  isExpired: false,
+  isCanceled: false,
+}).user(currentUser).exists() %}
 
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="bg-gray-100 py-8 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl text-center">{{ entry.title }}</h1>
-      <div class="mt-16 md:grid md:grid-cols-3 md:gap-12">
+  <div class="bg-gray-100 py-8">
+    {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
-        {# Orders #}
-        {% if ordersPage %}
-          <div>
-            <h2 class="text-2xl">{{ ordersPage.title }}</h2>
-            {% if ordersPage.subheading %}
-              <div class="mt-2">{{ ordersPage.subheading }}</div>
-            {% endif %}
-            <ul class="mt-2">
-              <li>
-                <a href="{{ ordersPage.getUrl() }}">
-                  {{ 'See your orders'|t }}
-                  {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        {% endif %}
+    <div class="py-8 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="md:grid md:grid-cols-3 md:gap-12">
 
-        {# Membership #}
-        {% if membershipPage %}
-          <div class="mt-8 md:mt-0">
-            <h2 class="text-2xl">{{ membershipPage.title }}</h2>
-            {% if membershipPage.subheading %}
-              <div class="mt-2">{{ membershipPage.subheading }}</div>
-            {% endif %}
-            <ul class="mt-2">
-              <li>
-                <a href="{{ membershipPage.getUrl() }}">
-                  {{ 'See your membership'|t }}
-                  {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        {% endif %}
+          {# Orders #}
+          {% if ordersPage %}
+            <div>
+              <div class="flex justify-start items-center">
+                <div class="mr-2">
+                  {{ svg('@webroot/icons/box.svg')|attr({ class: 'w-5 h-5' }) }}
+                </div>
+                <h2 class="text-2xl">{{ ordersPage.title }}</h2>
+              </div>
+              {% if ordersPage.subheading %}
+                <div class="mt-2">{{ ordersPage.subheading }}</div>
+              {% endif %}
+              <ul class="mt-2">
+                <li>
+                  <a href="{{ ordersPage.getUrl() }}">
+                    {{ 'See your orders'|t }}
+                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          {% endif %}
 
-        {# Account Settings #}
-        {% if settingsPage %}
-          <div class="mt-8 md:mt-0">
-            <h2 class="text-2xl">{{ settingsPage.title }}</h2>
-            {% if settingsPage.subheading %}
-              <div class="mt-2">{{ settingsPage.subheading }}</div>
-            {% endif %}
-            <ul class="mt-2">
-              <li>
-                <a href="{{ settingsPage.getUrl() ~ '#email-password' }}">
-                  {{ 'Email and password'|t }}
-                  {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
-                </a>
-              </li>
-              <li>
-                <a href="{{ settingsPage.getUrl() ~ '#credit-cards' }}">
-                  {{ 'Credit cards'|t }}
-                  {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
-                </a>
-              </li>
-              <li>
-                <a href="{{ settingsPage.getUrl() ~ '#addresses' }}">
-                  {{ 'Addresses'|t }}
-                  {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        {% endif %}
+          {# Membership #}
+          {% if membershipPage %}
+            <div class="mt-8 md:mt-0">
+              <div class="flex justify-start items-center">
+                <div class="mr-2">
+                  {{ svg('@webroot/icons/address-card.svg')|attr({ class: 'w-5 h-5' }) }}
+                </div>
+                <h2 class="text-2xl">{{ membershipPage.title }}</h2>
+              </div>
+              {% if membershipPage.subheading %}
+                <div class="mt-2">{{ membershipPage.subheading }}</div>
+              {% endif %}
+              <ul class="mt-2">
+                <li>
+                  <a href="{{ hasSubscriptions ? membershipPage.getUrl() : servicesPage.getUrl() }}">
+                    {% if hasSubscriptions %}
+                      {{ membershipPage.plainText1 }}
+                    {% else %}
+                      {{ membershipPage.plainText2 }}
+                    {% endif %}
+                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          {% endif %}
+
+          {# Account Settings #}
+          {% if settingsPage %}
+            <div class="mt-8 md:mt-0">
+              <div class="flex justify-start items-center">
+                <div class="mr-2">
+                  {{ svg('@webroot/icons/cog.svg')|attr({ class: 'w-5 h-5' }) }}
+                </div>
+                <h2 class="text-2xl">{{ settingsPage.title }}</h2>
+              </div>
+              {% if settingsPage.subheading %}
+                <div class="mt-2">{{ settingsPage.subheading }}</div>
+              {% endif %}
+              <ul class="mt-2">
+                <li>
+                  <a href="{{ settingsPage.getUrl() ~ '#email-password' }}">
+                    {{ 'Email and password'|t }}
+                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ settingsPage.getUrl() ~ '#credit-cards' }}">
+                    {{ 'Credit cards'|t }}
+                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ settingsPage.getUrl() ~ '#addresses' }}">
+                    {{ 'Addresses'|t }}
+                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
