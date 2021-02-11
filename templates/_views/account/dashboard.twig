@@ -8,10 +8,10 @@
   section: 'account',
   type: 'orders',
 }).one() ?? null %}
-{#{% set membershipPage = craft.entries({#}
-{#  section: 'account',#}
-{#  type: 'membership',#}
-{#}).one() ?? null %}#}
+{% set membershipPage = craft.entries({
+  section: 'account',
+  type: 'membership',
+}).one() ?? null %}
 {% set settingsPage = craft.entries({
   section: 'account',
   type: 'settings',
@@ -24,6 +24,8 @@
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl text-center">{{ entry.title }}</h1>
       <div class="mt-16 md:grid md:grid-cols-3 md:gap-12">
+
+        {# Orders #}
         {% if ordersPage %}
           <div>
             <h2 class="text-2xl">{{ ordersPage.title }}</h2>
@@ -40,18 +42,24 @@
             </ul>
           </div>
         {% endif %}
-        <div class="mt-8 md:mt-0">
-          <h2 class="text-2xl">Membership</h2>
-          <div class="mt-2">Subscribe or cancel your membership to our services.</div>
-          <ul class="mt-2">
-            <li>
-              <a href="{{ url('account/membership') }}">
-                See your membership
-                {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        {# Membership #}
+        {% if membershipPage %}
+          <div class="mt-8 md:mt-0">
+            <h2 class="text-2xl">{{ membershipPage.title }}</h2>
+            {% if membershipPage.subheading %}
+              <div class="mt-2">{{ membershipPage.subheading }}</div>
+            {% endif %}
+            <ul class="mt-2">
+              <li>
+                <a href="{{ membershipPage.getUrl() }}">
+                  {{ 'See your membership'|t }}
+                  {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
 
         {# Account Settings #}
         {% if settingsPage %}

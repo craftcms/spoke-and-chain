@@ -27,6 +27,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf
+            instructions: 'Used on the account dashboard page'
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca
             instructions: ''
             label: 'New Password Help Text'
