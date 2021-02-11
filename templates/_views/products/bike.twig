@@ -164,7 +164,9 @@
 
             <div class="mt-4">
               <h3>{{ 'Most Recent Review'|t }}</h3>
-              {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
+              <div class="mt-4">
+                {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
+              </div>
             </div>
 
             {% if reviews|length > 1 %}
@@ -175,18 +177,18 @@
             {% endif %}
           </div>
         {% endif %}
+
+        {% if product.showForm and form %}
+          <div class="mt-12" id="question">
+            {% include '_includes/components/content/form' with {
+              block: {
+                form: form,
+                heading: 'Have a question? Ask us!'|t
+              }
+            } only %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
-
-  {% if product.showForm and form %}
-    <div id="question">
-      {% include '_includes/components/content/form' with {
-        block: {
-          form: form,
-          heading: 'Have a question? Ask us!'|t
-        }
-      } only %}
-    </div>
-  {% endif %}
 {% endblock %}
