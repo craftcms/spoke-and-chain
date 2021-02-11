@@ -12,7 +12,8 @@ label {
     @apply block;
 }
 
-label + input {
+label + input,
+label + textarea {
     @apply mt-2;
 }
 
