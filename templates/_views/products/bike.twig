@@ -158,12 +158,42 @@
           <div id="reviews" class="pt-16">
             <div>
               <h2 class="text-xl">{{ 'Reviews'|t }}</h2>
-              <p>{{ '{number} review(s)'|t('site', { number: reviews|length }) }}</p>
-              <p>{{ 'Average review {number}/5'|t('site', { number: averageRating }) }}</p>
+
+              <div class="mt-1 flex items-center">
+                <div class="flex text-yellow-500 -ml-1 mr-2">
+                  {% for i in range(1, 5) %}
+                    {% if i < averageRating %}
+                      {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
+                    {% else %}
+                      {% set averageRatingFloor = averageRating|round(0, 'floor') %}
+                      {% set averageRatingCeil = averageRating|round(0, 'ceil') %}
+
+                      {% if averageRatingFloor < averageRating and averageRatingCeil == i%}
+                        <div class="relative">
+                          {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
+
+                          <div class="absolute top-0 left-0 w-1/2 overflow-hidden" style="width: {{ ((averageRating - averageRatingFloor) * 100) }}%;">
+                            {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
+                          </div>
+                        </div>
+                      {% else %}
+                        {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
+                      {% endif %}
+
+                    {% endif %}
+                  {% endfor %}
+                </div>
+
+                <div>
+                  {{ '{number}/5'|t('site', { number: averageRating }) }}
+                </div>
+              </div>
+
+              <div class="mt-2 text-gray-500 text-sm">{{ '{number} review(s)'|t('site', { number: reviews|length }) }}</div>
             </div>
 
-            <div class="mt-4">
-              <h3>{{ 'Most Recent Review'|t }}</h3>
+            <div class="mt-6">
+              <h3 class="text-lg">{{ 'Most Recent Review'|t }}</h3>
               <div class="mt-4">
                 {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
               </div>

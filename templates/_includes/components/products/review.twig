@@ -4,10 +4,12 @@
   <!-- Template: {{ _self }}.twig -->
   <div>
     <div><strong>{{ review.title }}</strong></div>
-    <div class="text-gray-500">{{ review.postDate|date('F j, Y') }}</div>
-    <div class="mt-1 flex text-yellow-500">
+    <div class="mt-1 text-gray-500 text-sm">{{ review.postDate|date('F j, Y') }}</div>
+    <div class="mt-1 -ml-1 flex">
       {% for i in range(1, 5) %}
-        {{ svg('@webroot/icons/star'~ (i > review.stars ? '-line' ) ~'.svg')|attr({ class: 'w-4 h-4' }) }}
+        {{ svg('@webroot/icons/star.svg')|attr({
+          class: (i <= review.stars ? 'text-yellow-500' : 'text-gray-300') ~ ' w-5 h-5'
+        }) }}
       {% endfor %}
     </div>
 
