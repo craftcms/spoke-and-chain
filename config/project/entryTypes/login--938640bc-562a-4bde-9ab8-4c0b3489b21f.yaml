@@ -32,7 +32,7 @@ handle: login
 hasTitleField: true
 name: Login
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
-sortOrder: 3
+sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

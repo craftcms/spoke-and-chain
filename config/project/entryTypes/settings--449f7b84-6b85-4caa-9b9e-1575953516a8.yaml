@@ -46,11 +46,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: account
+handle: settings
 hasTitleField: true
-name: Account
+name: Settings
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
-sortOrder: 1
+sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,5 +1,5 @@
 fieldLayouts:
-  2001d55a-3bd3-4600-8ee8-e3ef1b6899de:
+  b65f1701-2a95-4c2e-990d-e3637f4671f5:
     tabs:
       -
         elements:
@@ -28,11 +28,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: orders
+handle: dashboard
 hasTitleField: true
-name: Orders
+name: Dashboard
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
-sortOrder: 3
+sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

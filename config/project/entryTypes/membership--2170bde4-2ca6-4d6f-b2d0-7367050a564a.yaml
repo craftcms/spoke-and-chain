@@ -1,5 +1,5 @@
 fieldLayouts:
-  2001d55a-3bd3-4600-8ee8-e3ef1b6899de:
+  f5681def-99aa-4ac3-8696-1fb1135f4419:
     tabs:
       -
         elements:
@@ -28,11 +28,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: orders
+handle: membership
 hasTitleField: true
-name: Orders
+name: Membership
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
-sortOrder: 3
+sortOrder: 5
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
