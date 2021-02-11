@@ -4,9 +4,7 @@
 {% set cart = cart is not defined ? craft.commerce.carts.getCart() : cart %}
 
 <!-- Template: {{ _self }}.twig -->
-{% if not cart.lineItems|length %}
-  {{ entry.body }}
-{% else %}
+{% if cart.lineItems|length %}
   <form id="cart" sprig s-method="post" s-action="commerce/cart/update-cart"
         s-trigger="submit, keyup delay:0.5s from:.qty, change delay:0.5s from:.qty"
         s-indicator="#cart-indicator">
