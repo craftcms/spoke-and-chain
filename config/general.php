@@ -26,6 +26,8 @@ return [
 
         'postLoginRedirect' => 'account',
 
+        'autoLoginAfterAccountActivation' => true,
+
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => App::env('SECURITY_KEY'),
 
