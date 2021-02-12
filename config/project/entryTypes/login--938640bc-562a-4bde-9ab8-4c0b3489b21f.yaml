@@ -26,6 +26,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca
+            instructions: ''
+            label: 'Forgot Password Text'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d
+            instructions: ''
+            label: 'Register Text'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 handle: login
