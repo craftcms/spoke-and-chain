@@ -35,6 +35,7 @@
                   <input id="coupon" class="{{ not order.getErrors('couponCode')|length ?: 'border-red-600' }}" type="text" name="couponCode" value="{{ order.couponCode }}" placeholder="{{ "Coupon Code"|t }}">
 
                   <div class="mt-2">
+                    <button class="coupon-apply button button--small" x-on:click.prevent="show = false">{{ 'Cancel'|t }}</button>
                     <input type="submit" class="coupon-apply button submit button--small" name="apply" value="{{ 'Apply'|t }}">
                   </div>
                 </div>
