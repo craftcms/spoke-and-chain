@@ -1,7 +1,7 @@
 /*!
  * @project        Spoke & Chain
- * @name           styles.3e1abddb08f4531373cd.js
+ * @name           styles.2ed46da369a6e5cd2c98.js
  * @author         Pixel & Tonic
- * @build          Fri, Feb 12, 2021 1:14 PM Europe/Paris
+ * @build          Fri, Feb 12, 2021 7:29 PM Europe/Paris
  * @copyright      Copyright (c) 2021 Pixel & Tonic
  */
