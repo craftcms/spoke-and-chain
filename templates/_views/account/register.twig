@@ -1,35 +1,27 @@
+{% if currentUser %}
+  {% redirect 'account' %}
+{% endif %}
+
 {# Layout #}
 {% extends '_layouts/site' %}
+
+{# Variables #}
+{% set errors = user is not defined ? [] : user.getErrors() %}
+{% set errorKeys = errors and errors|length ? errors|keys : [] %}
 
 {# Blocks #}
 {% block content %}
   <div class="bg-gray-100 py-8">
     <div class="text-center">
-      <h1 class="text-4xl">{{ 'Create an account'|t }}</h1>
+      <h1 class="text-4xl">{{ entry.title }}</h1>
     </div>
-
-    {% macro errorList(errors) %}
-      {% if errors %}
-        {{ ul(errors, {class: 'errors mt-1 ml-5 list-square text-red-600 text-sm'}) }}
-      {% endif %}
-    {% endmacro %}
 
     <div class="max-w-sm mx-auto space-y-6 mt-8">
       <form method="post" accept-charset="UTF-8" class="space-y-4">
         {{ csrfInput() }}
         {{ actionInput('users/save-user') }}
+        {{ hiddenInput('successMessage', 'Registration complete.'|t|hash) }}
         {{ redirectInput('') }}
-
-        <div>
-          <label for="username">Username</label>
-          {{ input('text', 'username', user.username ?? null, {
-            id: 'username',
-          }) }}
-
-          {% if user is defined %}
-            {{ _self.errorList(user.getErrors('username')) }}
-          {% endif %}
-        </div>
 
         <div>
           <label for="firstName">First Name</label>
@@ -37,9 +29,7 @@
             id: 'firstName',
           }) }}
 
-          {% if user is defined %}
-            {{ _self.errorList(user.getErrors('firstName')) }}
-          {% endif %}
+          {% include '_includes/components/forms/errorList' with { errors: errors['firstName'] ?? [] } only %}
         </div>
 
         <div>
@@ -48,9 +38,7 @@
             id: 'lastName',
           }) }}
 
-          {% if user is defined %}
-            {{ _self.errorList(user.getErrors('lastName')) }}
-          {% endif %}
+          {% include '_includes/components/forms/errorList' with { errors: errors['lastName'] ?? [] } only %}
         </div>
 
         <div>
@@ -59,9 +47,7 @@
             id: 'email',
           }) }}
 
-          {% if user is defined %}
-            {{ _self.errorList(user.getErrors('email')) }}
-          {% endif %}
+          {% include '_includes/components/forms/errorList' with { errors: errors['email'] ?? [] } only %}
         </div>
 
         <div>
@@ -70,14 +56,12 @@
             id: 'password',
           }) }}
 
-          {% if user is defined %}
-            {{ _self.errorList(user.getErrors('password')) }}
-          {% endif %}
+          {% include '_includes/components/forms/errorList' with { errors: errors['password'] ?? [] } only %}
         </div>
 
-        <button class="button submit w-full" type="submit">Register</button>
+        <button class="button submit w-full" type="submit">{{ 'Register'|t }}</button>
 
-        <p><a href="{{ loginPage.url }}">Already have an account? Sign in now.</a></p>
+        <p><a href="{{ loginPage.url }}">{{ 'Already have an account? Sign in now.'|t }}</a></p>
       </form>
     </div>
   </div>
