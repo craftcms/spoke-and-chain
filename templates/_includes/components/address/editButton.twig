@@ -4,10 +4,11 @@
 
 {% if address %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="absolute top-1/2 right-0 pr-4 sm:pr-8 transform -translate-y-1/2"
-       x-data="modalButton('address', { id: {{ address ? address.id : '\'new\'' }}, method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
-    <a href="#" x-on:click.prevent="open($dispatch)">
-      {{ 'Edit'|t }}
-    </a>
+  <div class="absolute text-right mt-4 top-0 right-0 pr-4 sm:pr-8">
+    <div x-data="modalButton('address', { id: {{ address ? address.id : '\'new\'' }}, method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
+      <a href="#" x-on:click.prevent="open($dispatch)">
+        {{ 'Edit'|t }}
+      </a>
+    </div>
   </div>
 {% endif %}

@@ -22,18 +22,17 @@
       {% for materialCategory in materials -%}
         <li class="my-1">
           <a
-              class="flex justify-start w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded"
+              class="{% if materialCategory.slug in selectedMaterials %}bg-gray-200 {% endif %}flex justify-between w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded"
               href="{{ urls[materialCategory.slug] ?? '' }}"
               x-on:click.prevent="toggle('materials', '{{ materialCategory.slug }}')"
           >
+            <span>{{ materialCategory.title }}</span>
+
             {% if materialCategory.slug in selectedMaterials %}
-              <span class="w-5 h-5 overflow-hidden mr-1 relative">
-                {% set svgClasses = 'w-full h-full fill-current block transition-translate duration-500 ease-in-out transform absolute top-0 left-0' %}
-                {{ svg('@webroot/icons/checkmark.svg')|attr({ class: svgClasses ~ ' translate-x-0 group-hover:-translate-x-full' }) }}
-                {{ svg('@webroot/icons/cross.svg')|attr({ class: svgClasses ~ ' translate-x-full group-hover:translate-x-0' }) }}
+              <span class="w-5 h-5 overflow-hidden ml-1 -mr-1 relative">
+                {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-full h-full fill-current block absolute top-0 left-0' }) }}
               </span>
             {% endif %}
-            <span>{{ materialCategory.title }}</span>
           </a>
         </li>
       {% endfor %}

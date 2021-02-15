@@ -19,19 +19,20 @@
         </label>
       {% endif %}
 
-      {% if showDelete %}
-        <div>
-          <form sprig s-method="post" s-action="commerce/customer-addresses/delete" s-confirm="{{ "Are you sure you wish to delete this address?"|t }}">
-            {{ hiddenInput('id', address.id) }}
-
-            <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
-          </form>
-        </div>
-      {% endif %}
       {% include '_includes/components/address/editButton' with {
         address: address,
         redirectUrl: '',
       } %}
+
+      {% if showDelete %}
+        <div class="absolute text-right mb-4 bottom-0 right-0 pr-4 sm:pr-8">
+          <form sprig s-method="post" s-action="commerce/customer-addresses/delete" s-confirm="{{ "Are you sure you wish to delete this address?"|t }}">
+            {{ hiddenInput('id', address.id) }}
+
+            <input class="button chromeless" type="submit" value="{{ 'Delete'|t }}"/>
+          </form>
+        </div>
+      {% endif %}
     </div>
   {% endfor %}
   <div x-data="modalButton('address', { id: 'new', method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">

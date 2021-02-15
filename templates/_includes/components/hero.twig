@@ -5,9 +5,10 @@
 {% set buttonTitle = buttonTitle is not defined ? null : buttonTitle %}
 {% set image = image is not defined ? null : image %}
 {% set short = short is not defined ? false : short %}
+{% set aspectClass = aspectClass ?? null %}
 
 {# Variables #}
-{% set aspectClass = short ? 'aspect-ratio-hero-short' : 'aspect-ratio-hero' %}
+{% set aspectClass = aspectClass ?? (short ? 'aspect-ratio-hero-short' : 'aspect-ratio-hero') %}
 
 {# Output #}
 {% if title or image or button %}

@@ -22,7 +22,7 @@
 .option-select > label {
     @apply border-gray-300;
     @apply block;
-    @apply border-2;
+    @apply border;
     @apply p-4;
     @apply rounded;
 }
@@ -30,13 +30,14 @@
 .option-select > div:first-child {
     @apply border-gray-300;
     @apply block;
-    @apply border-2;
+    @apply border;
     @apply p-4;
     @apply rounded;
 }
 
 .option-select > input[type=radio]:checked ~ label {
     @apply border-blue-700;
+    @apply border-2;
 }
 
 .option-select input[type=radio]:focus ~ label {

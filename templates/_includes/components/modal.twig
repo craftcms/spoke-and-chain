@@ -21,7 +21,7 @@
           @click="closeModal()">
       </div>
     </template>
-    <div class="modal-container absolute w-1/2 bg-white shadow-l transition transform duration-300 translate-x-0" :class="{ 'translate-x-full': !show  }">
+    <div class="modal-container absolute w-full max-w-screen-sm bg-white shadow-l transition transform duration-300 translate-x-0" :class="{ 'translate-x-full': !show  }">
         <template x-if="show && !contentLoaded">
           <div class="relative w-full h-full">
             <div class="spinner-overlay spinner-overlay--show">
