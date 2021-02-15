@@ -81,6 +81,7 @@
                 </div>
 
                 {% include '_includes/components/cartMenu' with {
+                  qty: cart.totalQty,
                   lineItems: cart.lineItems,
                   shipping: cart.totalShippingCost == 0 ? false : cart.totalShippingCostAsCurrency,
                   discount: cart.totalDiscount == 0 ? false : cart.totalDiscountAsCurrency,
