@@ -29,4 +29,14 @@
     .button.submit:hover {
         @apply bg-red-700;
     }
+
+    .button.chromeless {
+        @apply bg-transparent;
+        @apply border-0;
+        @apply p-0;
+        @apply font-normal;
+        @apply text-blue-600;
+        @apply rounded-none;
+        @apply leading-none;
+    }
 }
