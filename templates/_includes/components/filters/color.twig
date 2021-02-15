@@ -34,7 +34,7 @@
             </span>
 
             {% if colorCategory.slug in selectedColors %}
-              <span class="w-5 h-5 overflow-hidden ml-1 -mr-1 relative text-gray-500">
+              <span class="w-5 h-5 overflow-hidden ml-1 -mr-1 relative">
                 {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-full h-full fill-current block absolute top-0 left-0' }) }}
               </span>
             {% endif %}
