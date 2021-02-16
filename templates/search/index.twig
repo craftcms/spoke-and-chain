@@ -64,12 +64,14 @@
         <h2 class="mt-12 text-2xl">{{ products|length }} products</h2>
         <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
           {% for product in products %}
+            {% set defaultVariant = product.getDefaultVariant() %}
             {% include '_includes/components/cards/product' with {
               title: product.title,
               image: product.mainImage[0] ?? null,
               url: product.url,
-              price: product.defaultPriceAsCurrency,
-              product: product,
+              price: defaultVariant.priceAsCurrency,
+              salePrice: defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : false,
+              averageRating: craft.reviews.getAverageRatingByProductId(product.id),
             } only %}
           {% endfor %}
         </div>
