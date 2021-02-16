@@ -1,12 +1,9 @@
 .spinner {
-    @apply flex justify-between items-center;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1rem;
+    @apply flex justify-between items-center w-10 h-10 text-base;
 }
 
 .spinner > div {
-    @apply bg-blue-700 rounded;
+    @apply bg-gray-500 rounded;
     height: 100%;
     width: 15%;
 
