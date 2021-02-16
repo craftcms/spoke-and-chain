@@ -9,14 +9,8 @@
 {% set hasGeometry = product.geometry|length ? true : false %}
 {% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
 {% set hasReviews = reviews and reviews|length %}
-{% set averageRating = hasReviews ? 0 : false %}
+{% set averageRating = hasReviews ? craft.reviews.getAverageRatingByProductId(product.id) : false %}
 {% set mostRecentReview = hasReviews ? reviews|first : false %}
-{% for review in reviews %}
-  {% set averageRating = averageRating + review.stars %}
-  {% if loop.last %}
-    {% set averageRating = (averageRating / reviews|length)|round(1) %}
-  {% endif %}
-{% endfor %}
 {% set form = product.showForm ? craft.freeform.form('product', {}) : null %}
 {% set images = product.productImages.all() %}
 {% set geometryReference = bikes.mainImage.one() ?? null %}
@@ -46,7 +40,7 @@
       <form method="post">
         {{ csrfInput() }}
         {{ actionInput('commerce/cart/update-cart') }}
-        {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
+        {{ hiddenInput('successMessage', 'Added {name} to the cart.'|t('site', { name: product.title })|hash) }}
 
         <div class="lg:flex lg:justify-between">
           {# Product Title #}

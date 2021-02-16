@@ -4,9 +4,10 @@
 {% set isLast = isLast is not defined ? false : isLast %}
 
 {% if block and block.body %}
+  {% set isIntro = block.intro ?? false %}
   <!-- Template: {{ _self }}.twig -->
   <div class="container mt-8 flex justify-center">
-    <div class="w-full max-w-3xl">
+    <div class="w-full max-w-3xl {{ isIntro ? 'text-lg' : '' }}">
       {{ block.body }}
     </div>
   </div>

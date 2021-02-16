@@ -5,6 +5,7 @@
 {% set url = url is not defined ? null : url %}
 {% set price = price is not defined ? null : price %}
 {% set salePrice = salePrice is not defined ? null : salePrice %}
+{% set averageRating = averageRating is not defined ? null : averageRating %}
 
 {% set thumbUrl = null %}
 
@@ -17,17 +18,6 @@
 
   {% set thumbUrl = image.getUrl(thumb) %}
 {% endif %}
-
-{% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
-{% set hasReviews = reviews and reviews|length %}
-{% set averageRating = hasReviews ? 0 : false %}
-
-{% for review in reviews %}
-  {% set averageRating = averageRating + review.stars %}
-  {% if loop.last %}
-    {% set averageRating = (averageRating / reviews|length)|round(1) %}
-  {% endif %}
-{% endfor %}
 
 
 {# Output #}
@@ -58,7 +48,7 @@
           {% endif %}
         </div>
       </div>
-      {% if averageRating %}
+      {% if not averageRating is same as(null) %}
         <div class="flex items-center text-gray-500 text-sm">
           <div class="mr-1">
             {{ averageRating }}

@@ -61,6 +61,16 @@
         {% endif %}
 
         <div class="flex flex-wrap border-t border-gray-300 py-8">
+          <div class="w-full lg:w-1/5">
+            <h3>{{ 'Your Info'|t }}</h3>
+          </div>
+
+          <div class="w-full md:w-4/5">
+            {% include '_includes/components/order/totals' with { order: cart } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-wrap border-t border-gray-300 py-8">
           <div class="w-full pb-4 lg:pb-0 lg:w-1/5">
             <h3>{{ 'Payment Info'|t }}</h3>
           </div>
@@ -104,16 +114,6 @@
             {% else %}
               {% include '_includes/components/forms/creditCard' with { paymentForm: paymentForm } %}
             {% endif %}
-          </div>
-        </div>
-
-        <div class="flex flex-wrap border-t border-gray-300 py-8">
-          <div class="w-full lg:w-1/5">
-            <h3>{{ 'Your Info'|t }}</h3>
-          </div>
-
-          <div class="w-full md:w-4/5">
-            {% include '_includes/components/order/totals' with { order: cart } only %}
           </div>
 
           <div class="w-full text-right pt-4">

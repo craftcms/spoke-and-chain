@@ -5,6 +5,10 @@ use Craft;
 use craft\commerce\elements\Product;
 use craft\commerce\elements\Variant;
 use craft\commerce\models\Address;
+use craft\elements\Entry;
+use craft\events\ModelEvent;
+use craft\web\twig\variables\CraftVariable;
+use modules\services\Reviews;
 use yii\base\Event;
 
 /**
@@ -63,6 +67,26 @@ class Module extends \yii\base\Module
             if (!empty($attributes) && array_key_exists('mainImage', $attributes) && $mainImage = $attributes['mainImage']->one()) {
                 $event->fieldData['mainImage'] = $mainImage->id;
             }
+        });
+
+        Event::on(Entry::class, Entry::EVENT_AFTER_SAVE, function(ModelEvent $event) {
+            if ($event->sender && $event->sender->section->handle == 'reviews') {
+                Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
+            }
+        });
+
+        Event::on(Entry::class, Entry::EVENT_AFTER_DELETE, function(ModelEvent $event) {
+            if ($event->sender && $event->sender->section->handle == 'reviews') {
+                Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
+            }
+        });
+
+        Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function(Event $e) {
+            /** @var CraftVariable $variable */
+            $variable = $e->sender;
+
+            // Attach reviews services
+            $variable->set('reviews', Reviews::class);
         });
 
         if (\Craft::$app->env === 'dev') {
