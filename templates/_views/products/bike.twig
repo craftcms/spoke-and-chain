@@ -61,16 +61,20 @@
           </div>
 
           {# Product Variants #}
-          <div class="mt-6 lg:mt-0 lg:flex lg:justify-center">
+          <div class="mt-6 lg:mt-0 lg:flex lg:justify-center lg:items-center">
             {# Colors #}
             {% if productColors %}
-              <div class="flex">
+              <div class="flex mr-2">
                 {% for color in productColors %}
-                  <div class="h-5 w-5 rounded-full mt-3 mr-3"
-                       style="background-color: {{ color.color }}"
-                       aria-label="{{ color.title }}"
-                       title="{{ color.title }}">
-                    <span class="visuallyhidden">{{ color.title }}</span>
+                  <div class="flex lg:flex-col text-xs text-gray-800 items-center mr-3">
+                    <div class="h-5 w-5 rounded-full mr-1 lg:mr-0"
+                         style="background-color: {{ color.color }}"
+                         aria-label="{{ color.title }}"
+                         title="{{ color.title }}">
+                    </div>
+                    <div class="lg:mt-1">
+                      {{ color.title }}
+                    </div>
                   </div>
                 {% endfor %}
               </div>
