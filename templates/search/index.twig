@@ -17,7 +17,8 @@
 
 {# Search products #}
 {% set productQueryOptions = {
-  type: 'bike'
+  type: 'bike',
+  with: ['mainImage']
 } %}
 {% set productQuery = craft.products(productQueryOptions) %}
 {% set products = productQuery.search(searchQuery).all() %}
@@ -65,7 +66,7 @@
           {% for product in products %}
             {% include '_includes/components/cards/product' with {
               title: product.title,
-              image: product.mainImage.one(),
+              image: product.mainImage[0] ?? null,
               url: product.url,
               price: product.defaultPriceAsCurrency,
               product: product,

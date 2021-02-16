@@ -80,7 +80,7 @@
             {% for product in products %}
               {% include '_includes/components/cards/product' with {
                 title: product.title,
-                image: product.mainImage.one(),
+                image: product.mainImage[0] ?? null,
                 url: product.url,
                 price: product.getDefaultVariant().priceAsCurrency,
                 salePrice: product.getDefaultVariant().salePriceAsCurrency,

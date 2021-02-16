@@ -228,6 +228,9 @@ class ProductFilter extends Component
         $query = Craft::$app->getElements()->createElementQuery(Product::class);
         $query->type('bike');
 
+        // Eager loading
+        $query->with(['mainImage']);
+
         $colorProductIds = [];
         $materialProductIds = [];
         if (!empty($this->colors)) {
