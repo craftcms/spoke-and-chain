@@ -40,7 +40,7 @@
       <form method="post">
         {{ csrfInput() }}
         {{ actionInput('commerce/cart/update-cart') }}
-        {{ hiddenInput('cartUpdatedNotice', 'Added {name} to the cart.'|t('site', { name: product.title })) }}
+        {{ hiddenInput('successMessage', 'Added {name} to the cart.'|t('site', { name: product.title })|hash) }}
 
         <div class="lg:flex lg:justify-between">
           {# Product Title #}
