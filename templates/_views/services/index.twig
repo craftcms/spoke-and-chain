@@ -22,7 +22,7 @@
 
 
   {% if plans|length %}
-    <div class="container">
+    <div class="container pt-8">
       <div class="max-w-4xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
         {% for plan in plans %}
           {% set planInfo = plan.getInformation() ?? null %}
