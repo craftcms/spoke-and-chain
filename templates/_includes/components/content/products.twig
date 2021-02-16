@@ -12,7 +12,8 @@
         {% include '_includes/components/cards/product' with {
           title: product.title,
           image: product.mainImage.one(),
-          url: product.url
+          url: product.url,
+          product: product,
         } only %}
       {% endfor %}
     </div>

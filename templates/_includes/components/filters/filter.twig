@@ -84,6 +84,7 @@
                 url: product.url,
                 price: product.getDefaultVariant().priceAsCurrency,
                 salePrice: product.getDefaultVariant().salePriceAsCurrency,
+                product: product,
               } only %}
             {% endfor %}
           </div>

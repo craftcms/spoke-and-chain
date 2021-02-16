@@ -18,6 +18,17 @@
   {% set thumbUrl = image.getUrl(thumb) %}
 {% endif %}
 
+{% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
+{% set hasReviews = reviews and reviews|length %}
+{% set averageRating = hasReviews ? 0 : false %}
+
+{% for review in reviews %}
+  {% set averageRating = averageRating + review.stars %}
+  {% if loop.last %}
+    {% set averageRating = (averageRating / reviews|length)|round(1) %}
+  {% endif %}
+{% endfor %}
+
 
 {# Output #}
 {% if title or image %}
@@ -29,17 +40,34 @@
     </div>
 
     {# Meta #}
-    <div class="mt-4 text-black">
-      <div class="text-lg font-medium">
-        {{ title }}
+    <div class="mt-4 text-black flex items-start">
+      <div class="flex-1">
+        <div class="text-lg font-medium">
+          {{ title }}
+        </div>
+        <div class="mt-1">
+          {% if salePrice %}
+            <div>
+              {{ salePrice }}
+            </div>
+            <div class="-mt-1">
+              <del class="text-xs text-gray-500 leading-3">{{ price }}</del>
+            </div>
+          {% else %}
+            {{ price }}
+          {% endif %}
+        </div>
       </div>
-      <div>
-        {% if salePrice %}
-          <del class="text-xs text-gray-600">{{ price }}</del> {{ salePrice }}
-        {% else %}
-          {{ price }}
-        {% endif %}
-      </div>
+      {% if averageRating %}
+        <div class="flex items-center text-gray-500 text-sm">
+          <div class="mr-1">
+            {{ averageRating }}
+          </div>
+          <div>
+            {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-4 h-4' }) }}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </a>
 {% endif %}
