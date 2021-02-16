@@ -8,29 +8,17 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   {% include '_includes/components/hero' with {
-    title: 'Bike Service',
-    image: 'https://source.unsplash.com/rMPr-UhfaXI/2400x1609',
+    title: {{ entry.title }},
+    image: entry.mainImage.one(),
   } only %}
 
-  <div class="max-w-2xl mx-auto p-8">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-  </div>
-
-  <div class="max-w-4xl mx-auto">
-    <img alt="Bike repair" src="https://source.unsplash.com/GKLmVfcXl0o/2048x1313" />
-  </div>
-
-  <div class="max-w-2xl mx-auto p-8">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem dolore eos molestias repellendus suscipit vero voluptate! A dolores enim esse incidunt magnam nobis officiis, quidem reprehenderit sapiente unde voluptate.</p>
-  </div>
+  {% for block in entry.contentBuilder.all() %}
+    {% include '_includes/components/content/' ~ block.type.handle with {
+      block: block,
+      isFirst: loop.first,
+      isLast: loop.last,
+    } %}
+  {% endfor %}
 
 
   {% if plans|length %}
