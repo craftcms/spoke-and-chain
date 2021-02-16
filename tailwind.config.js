@@ -27,6 +27,9 @@ module.exports = {
             },
             spacing: {
                 '0.5': '0.125rem',
+            },
+            fontSize: {
+                xxs: '.625rem'
             }
         },
         listStyleType: {
