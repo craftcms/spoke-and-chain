@@ -8,7 +8,7 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   {% include '_includes/components/hero' with {
-    title: {{ entry.title }},
+    title: entry.title,
     image: entry.mainImage.one(),
   } only %}
 
