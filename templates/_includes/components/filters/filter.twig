@@ -63,6 +63,18 @@
               'x-model': 'sort'
             }
           } %}
+
+          {% if type or colors|length or materials|length or sort %}
+            <hr class="my-6">
+            <div>
+              <button class="button button--small w-full" x-on:click="clear()">
+                <div class="flex items-center">
+                  {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-5 h-5 fill-current block' }) }}
+                  <span>{{ 'Clear filters'|t }}</span>
+                </div>
+              </button>
+            </div>
+          {% endif %}
         </div>
       </div>
 
