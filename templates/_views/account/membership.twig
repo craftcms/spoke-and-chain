@@ -9,6 +9,11 @@
 
 {# Variables #}
 {% set plans = craft.commerce.plans.getAllEnabledPlans() %}
+{% set existingSubscription = currentUser ? craft.subscriptions({
+  isSuspended: false,
+  isExpired: false,
+  isCanceled: false,
+}).user(currentUser).one() : null %}
 {% set subscriptionHistory = craft.subscriptions({
   status: null,
   orderBy: 'id DESC',
@@ -18,7 +23,16 @@
 
 {# Output #}
 {% block content %}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% set subContent = null %}
+  {% if existingSubscription %}
+    {% set subContent %}
+      <div class="mt-2 text-sm">
+        <div><strong>{{ 'Current subscription'|t }}:</strong> {{ existingSubscription.plan.name }}</div>
+        <div><strong>{{ 'Next payment date'|t }}:</strong> {{ existingSubscription.nextPaymentDate|date('Y-m-d') }}</div>
+      </div>
+    {% endset %}
+  {% endif %}
+  {% include '_includes/components/pages/heading' with { heading: entry.title, subContent: subContent } %}
 
   {% if plans|length %}
     <div class="container pt-8 relative">

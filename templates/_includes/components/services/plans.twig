@@ -4,7 +4,7 @@
   isSuspended: false,
   isExpired: false,
   isCanceled: false,
-}).user(currentUser).one() : [] %}
+}).user(currentUser).one() : null %}
 {% set show = show is not defined ? false : show %}
 {% set membershipPage = craft.entries({ section: 'account', type: 'membership' }).one() %}
 
