@@ -35,7 +35,7 @@
     </div>
   {% endif %}
 
-  <div class="bg-gray-200">
+  <div class="bg-gray-100">
     <div id="buy" class="container py-8">
       <form method="post">
         {{ csrfInput() }}
@@ -46,25 +46,46 @@
           {# Product Title #}
           <div class="lg:w-1/4">
             <h1 class="mt-0">{{ product.title }}</h1>
-            <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
-            {% if defaultVariant.onSale %}
+            <div class="mt-1 flex items-start  leading-5">
               <div>
-                <del>{{ defaultVariant.priceAsCurrency }}</del>
+                <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
+                {% if defaultVariant.onSale %}
+                  <div>
+                    <del class="block mt-1 text-xs text-gray-500">{{ defaultVariant.priceAsCurrency }}</del>
+                  </div>
+                {% endif %}
+                <div>
+                  <del class="block mt-1 text-xs text-gray-500">{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</del>
+                </div>
               </div>
-            {% endif %}
+              {% if not averageRating is same as(null) %}
+                <a href="#reviews" class="ml-6 flex items-center text-gray-500 text-sm">
+                  <div class="mr-1">
+                    {{ averageRating }}
+                  </div>
+                  <div>
+                    {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-4 h-4' }) }}
+                  </div>
+                </a>
+              {% endif %}
+            </div>
           </div>
 
           {# Product Variants #}
-          <div class="mt-6 lg:mt-0 lg:flex lg:justify-center">
+          <div class="mt-6 lg:mt-0 lg:flex lg:justify-center lg:items-center">
             {# Colors #}
             {% if productColors %}
-              <div class="flex">
+              <div class="flex mr-2">
                 {% for color in productColors %}
-                  <div class="h-5 w-5 rounded-full mt-3 mr-3"
-                       style="background-color: {{ color.color }}"
-                       aria-label="{{ color.title }}"
-                       title="{{ color.title }}">
-                    <span class="visuallyhidden">{{ color.title }}</span>
+                  <div class="flex lg:flex-col text-xs text-gray-800 items-center mr-3">
+                    <div class="h-5 w-5 rounded-full mr-1 lg:mr-0"
+                         style="background-color: {{ color.color }}"
+                         aria-label="{{ color.title }}"
+                         title="{{ color.title }}">
+                    </div>
+                    <div class="lg:mt-1">
+                      {{ color.title }}
+                    </div>
                   </div>
                 {% endfor %}
               </div>
@@ -85,7 +106,7 @@
 
           {# Product Buy #}
           <div class="mt-6 lg:mt-0 lg:w-1/4 lg:text-right lg:flex lg:items-center lg:justify-end">
-            <input class="button" type="submit" name="submit"
+            <input class="button w-full sm:w-auto" type="submit" name="submit"
                    value="{{ 'Add to cart'|t('site') }}">
           </div>
         </div>
