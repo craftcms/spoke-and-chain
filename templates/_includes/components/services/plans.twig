@@ -1,0 +1,38 @@
+{# Variables #}
+{% set plans = craft.commerce.plans.getAllEnabledPlans() %}
+{% set existingSubscription = currentUser ? craft.subscriptions({
+  isSuspended: false,
+  isExpired: false,
+  isCanceled: false,
+}).user(currentUser).one() : [] %}
+{% set show = show is not defined ? false : show %}
+{% set membershipPage = craft.entries({ section: 'account', type: 'membership' }).one() %}
+
+{# Output #}
+{% if plans|length %}
+
+  {% if existingSubscription and not show %}
+    <div class="max-w-3xl mx-auto bg-gray-100 p-8">
+      <p>{{ 'You already have an active subscription. Subscriptions can be managed in your account.'|t }}</p>
+      <p><a href="{{ membershipPage ? membershipPage.getUrl() : siteUrl('account/membership') }}">{{ 'Go to my account'|t }}</a></p>
+    </div>
+  {% else %}
+    <!-- Template: {{ _self }}.twig -->
+    <div class="max-w-4xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
+      {% for plan in plans %}
+        {% include '_includes/components/services/plan' with {
+          plan: plan,
+          existingSubscription: existingSubscription
+        } only %}
+      {% endfor %}
+    </div>
+    {% if success is defined and success and flashes is defined %}
+      {% set notice = flashes['notice'] ?? null %}
+      {% if notice %}
+        <script>
+          addNotification('notice', '{{ notice ? notice|e('js') : 'Subscription activated'|t }}');
+        </script>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endif %}

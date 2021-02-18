@@ -7,7 +7,72 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{# Blocks #}
+{# Variables #}
+{% set plans = craft.commerce.plans.getAllEnabledPlans() %}
+{% set subscriptionHistory = craft.subscriptions({
+  status: null,
+  orderBy: 'id DESC',
+  user: currentUser,
+}).all() %}
+
+
+{# Output #}
 {% block content %}
   {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+
+  {% if plans|length %}
+    <div class="container pt-8 relative">
+      {{ sprig('_includes/components/services/plans', { show: 'true' } ,{ id: 'services-plans' }) }}
+      <div id="plans-indicator" class="spinner-overlay">
+        {% include '_includes/components/spinner' %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if subscriptionHistory|length %}
+    <div class="container pt-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-center border-b border-gray-300 pb-4 mb-4">{{ 'Membership History'|t }}</h2>
+        <table class="w-full text-sm">
+          <thead>
+            <tr>
+              <th class="px-2 py-1">{{ 'Plan'|t }}</th>
+              <th class="px-2 py-1">{{ 'Status'|t }}</th>
+              <th class="px-2 py-1">{{ 'Next Payment'|t }}</th>
+              <th class="px-2 py-1">{{ 'End Date'|t }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for subscription in subscriptionHistory %}
+              {% set bgClass = cycle(['bg-gray-100', ''], loop.index0) %}
+              <tr {{ attr({ class: bgClass }) }}>
+                <td class="px-2 py-1">{{ subscription.plan.name }}</td>
+                <td class="px-2 py-1">
+                  {% if subscription.isCanceled %}
+                    {{ 'Cancelled'|t }}
+                  {% elseif subscription.isExpired %}
+                    {{ 'Expired'|t }}
+                  {% else %}
+                    {{ 'Active'|t }}
+                  {% endif %}
+                </td>
+                <td class="px-2 py-1">
+                  {% if not subscription.isExpired and not subscription.isCanceled %}
+                    {{ '{payment} on {date}'|t('site', { payment: subscription.getNextPaymentAmount(), date: subscription.nextPaymentDate|date('Y-m-d') }) }}
+                  {% endif %}
+                </td>
+                <td class="px-2 py-1">
+                  {% if subscription.isExpired %}
+                    Expired on: {{ subscription.dateExpired|date('Y-m-d') }}
+                  {% elseif subscription.isCanceled %}
+                    Cancelled on: {{ subscription.dateCanceled|date('Y-m-d') }}<br>Expires on: {{ subscription.nextPaymentDate|date('Y-m-d') }}
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {% endif %}
 {% endblock %}
