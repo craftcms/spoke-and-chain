@@ -27,12 +27,17 @@
       {% endfor %}
     </div>
     {% if success is defined and success and flashes is defined %}
-      {% set notice = flashes['notice'] ?? null %}
-      {% if notice %}
-        <script>
-          addNotification('notice', '{{ notice ? notice|e('js') : 'Subscription activated'|t }}');
-        </script>
-      {% endif %}
+      <script>
+        var subHistory = htmx.find('#subscription-history');
+        if (subHistory) {
+            htmx.trigger(subHistory, 'refresh');
+        }
+
+        {% set notice = flashes['notice'] ?? null %}
+        {% if notice %}
+            addNotification('notice', '{{ notice ? notice|e('js') : 'Subscription activated'|t }}');
+        {% endif %}
+      </script>
     {% endif %}
   {% endif %}
 {% endif %}
