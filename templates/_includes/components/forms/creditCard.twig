@@ -28,7 +28,7 @@
 
 <fieldset>
   <div class="flex flex-wrap -mx-1 pt-4">
-    <div class="w-full md:w-2/3 px-1">
+    <div class="w-full md:w-3/5 px-1">
       <label for="card-number">{{ 'Card Number'|t }}</label>
       <input type="text" name="number" autocomplete="false" value="{{ paymentForm.number ?? '' }}">
       {% if paymentForm and paymentForm.getErrors('number') %}
@@ -38,11 +38,11 @@
       {% endif %}
     </div>
 
-    <div class="w-full md:w-1/3 px-1">
+    <div class="w-full md:w-2/5 px-1">
       <div class="flex -mx-1 pt-4 md:pt-0">
         <div class="w-full md:w-2/3 px-1">
-          <label for="expiry">{{ 'Expiry'|t }}</label>
-          <input id="expiry" type="text" name="expiry" placeholder="{{ 'MM'|t ~ ' / ' ~ 'YYYY'|t }}" value="{{ paymentForm.expiry ?? '' }}">
+          <label for="expiry">{{ 'Expiry'|t }} <span class="text-xs">(MM / YYYY)</span></label>
+          <input id="expiry" type="text" name="expiry" value="{{ paymentForm.expiry ?? '' }}">
         </div>
         <div class="w-full md:w-1/3 px-1">
           <label for="cvv">{{ 'CVV'|t }}</label>
