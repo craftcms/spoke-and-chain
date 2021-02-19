@@ -4,8 +4,11 @@ window.modal = function() {
         modalType: 'centered', // modal type 'centered' or 'slideout'
         show: false,
         showWrapper: false,
+        _nt: null,
 
-        init: function() {
+        init: function($nextTick) {
+            this._nt = $nextTick;
+
             htmx.on('htmx:beforeSwap', function(event) {
                 if (event.detail.target.getAttribute('id') == 'modal-body') {
                     this.contentLoaded = false;
@@ -24,13 +27,28 @@ window.modal = function() {
             this.showWrapper = true
 
             this.modalType = type
+
+            this._nt(() => {
+                document.querySelector('#modal').focus();
+            })
         },
-        closeModal: function() {
+
+        closeModal: function($nextTick) {
             this.show = false
             this.contentLoaded = false
             setTimeout(function() {
                 this.showWrapper = false
             }.bind(this), 500)
+
+            let previousFocusEl = window.previousFocus ? document.querySelector(window.previousFocus) : false;
+            console.log(previousFocusEl);
+            if (previousFocusEl) {
+                console.log('re-focus', previousFocusEl);
+                this._nt(() => {
+                    previousFocusEl.focus();
+                });
+                window.previousFocus = null;
+            }
         },
 
         handleEscape() {
@@ -81,12 +99,16 @@ window.modal = function() {
 
 window.modalButton = function(handle = null, data = {}, type = 'slideout') {
     return {
-        open: function($dispatch) {
+        open: function($dispatch, previousFocusSelector) {
             if (handle) {
                 htmx.find('#modal-handle').value = handle;
                 htmx.find('#modal-data').value = JSON.stringify(data);
                 htmx.trigger(htmx.find('#modal-body'), 'refresh');
                 $dispatch('openmodal', type);
+                if (previousFocusSelector) {
+                    window.previousFocus = previousFocusSelector;
+                    console.log('saving', previousFocusSelector);
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 {# Modal #}
-<div x-data="modal()" class="relative z-30" x-init="init()">
+<div id="modal" tabindex="-1" x-data="modal()" class="relative z-30" x-init="init($nextTick)">
   <template
       x-on:openmodal.window="openModal($event.detail)"
       x-on:closemodal.window="closeModal()"

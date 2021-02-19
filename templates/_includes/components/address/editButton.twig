@@ -6,7 +6,7 @@
   <!-- Template: {{ _self }}.twig -->
   <div class="absolute text-right mt-4 top-0 right-0 pr-4 sm:pr-8">
     <div x-data="modalButton('address', { id: {{ address ? address.id : '\'new\'' }}, method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
-      <button class="text-blue-600" x-on:click.prevent="open($dispatch)">
+      <button id="edit-address-{{ address ? address.id : 'new' }}" class="text-blue-600" x-on:click.prevent="open($dispatch, '#edit-address-{{ address ? address.id : 'new' }}')">
         {{ 'Edit'|t }}
       </button>
     </div>
