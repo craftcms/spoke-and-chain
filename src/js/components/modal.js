@@ -41,9 +41,7 @@ window.modal = function() {
             }.bind(this), 500)
 
             let previousFocusEl = window.previousFocus ? document.querySelector(window.previousFocus) : false;
-            console.log(previousFocusEl);
             if (previousFocusEl) {
-                console.log('re-focus', previousFocusEl);
                 this._nt(() => {
                     previousFocusEl.focus();
                 });
@@ -107,7 +105,6 @@ window.modalButton = function(handle = null, data = {}, type = 'slideout') {
                 $dispatch('openmodal', type);
                 if (previousFocusSelector) {
                     window.previousFocus = previousFocusSelector;
-                    console.log('saving', previousFocusSelector);
                 }
             }
         }
