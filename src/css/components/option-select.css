@@ -1,6 +1,11 @@
 .option-select {
     @apply block;
     @apply relative;
+    @apply w-full;
+}
+
+button.option-select {
+    @apply text-left;
 }
 
 .option-select > input[type=radio] {

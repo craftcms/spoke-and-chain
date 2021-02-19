@@ -42,13 +42,13 @@
   {% endif %}
   {% if account %}
     <div x-data="modalButton('card', {}, 'slideout')">
-      <a class="option-select cursor-pointer text-black" href="#" x-on:click.prevent="open($dispatch)">
+      <button class="option-select cursor-pointer text-black" x-on:click.prevent="open($dispatch)">
         <div>
           <div class="flex justify-between items-center">
             <strong>{{ 'Add a card'|t }}</strong>
           </div>
         </div>
-      </a>
+      </button>
     </div>
   {% endif %}
 </div>
