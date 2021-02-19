@@ -14,9 +14,9 @@
       <div class="text-right">{{ order.totalTaxAsCurrency }}</div>
     </div>
     {% if form or order.couponCode %}
-      <div class="flex items-center w-full justify-between pb-1">
+      <div x-data="{ show: {{ show }}, showInput(nxt) { this.show = true; nxt(function() {document.querySelector('#coupon').focus();}); } }" class="flex w-full justify-between pb-1" x-bind:class="{ 'items-center': !show, 'items-start': show }">
         <div>{{ 'Coupon'|t }}</div>
-        <div x-data="{ show: {{ show }}, showInput(nxt) { this.show = true; nxt(function() {document.querySelector('#coupon').focus();}); } }">
+        <div>
           {% if not order.couponCode and form %}
             <template x-if="!show">
               <a class="coupon-trigger" href="#" x-on:click.prevent="showInput($nextTick)">{{ 'Enter coupon'|t }}</a>
@@ -32,7 +32,8 @@
             <template x-if="show">
               <div class="flex items-center">
                 <div class="pl-2">
-                  <input id="coupon" class="{{ not order.getErrors('couponCode')|length ?: 'border-red-600' }}" type="text" name="couponCode" value="{{ order.couponCode }}" placeholder="{{ "Coupon Code"|t }}">
+                  <label for="coupon">{{ 'Coupon Code'|t }}</label>
+                  <input id="coupon" class="{{ not order.getErrors('couponCode')|length ?: 'border-red-600' }}" type="text" name="couponCode" value="{{ order.couponCode }}">
 
                   <div class="mt-2">
                     <button class="coupon-apply button button--small" x-on:click.prevent="show = false">{{ 'Cancel'|t }}</button>
