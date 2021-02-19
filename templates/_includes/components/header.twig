@@ -64,7 +64,7 @@
                 <div id="nav" class="absolute lg:relative z-20 border-t lg:border-t-0 border-gray-200 bg-white w-full top-0 left-0 bottom-0 right-0 lg:inset-auto mt-16 lg:mt-0 overflow-y-auto lg:overflow-y-visible"
                      :class="{'hidden': !showNav, 'lg:block': true}">
                   <div class="px-8 lg:px-0">
-                    {% include '_includes/components/nav' with {} only %}
+                    {% include '_includes/components/nav' with { currentEntryId: entry is defined ? entry.id : false } only %}
                   </div>
                 </div>
               {% endif %}
