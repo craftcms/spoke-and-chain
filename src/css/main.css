@@ -32,7 +32,6 @@
 @import 'utilities/center';
 @import 'utilities/hide';
 @import 'utilities/table-data';
-@import 'utilities/visually-hidden';
 
 /* Components */
 @import 'components/button';
