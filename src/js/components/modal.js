@@ -29,7 +29,7 @@ window.modal = function() {
             this.modalType = type
 
             this._nt(() => {
-                document.querySelector('#modal').focus();
+                document.querySelector('#modal').focus({ preventScroll: true });
             })
         },
 
