@@ -54,11 +54,8 @@
                     <del class="block mt-1 text-xs text-gray-500">{{ defaultVariant.priceAsCurrency }}</del>
                   </div>
                 {% endif %}
-                <div>
-                  <del class="block mt-1 text-xs text-gray-500">{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</del>
-                </div>
               </div>
-              {% if not averageRating is same as(null) %}
+              {% if not averageRating is same as(null) and not averageRating is same as(false) %}
                 <a href="#reviews" class="ml-6 flex items-center text-gray-500 text-sm">
                   <div class="mr-1">
                     {{ averageRating }}
