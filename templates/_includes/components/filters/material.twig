@@ -16,7 +16,7 @@
       <input type="hidden" name="materials[]" :value="material">
     </template>
     {% if heading and showHeading %}
-      <h4 class="uppercase text-xs text-gray-600">{{ heading }}</h4>
+      <h3 class="uppercase text-xs text-gray-600">{{ heading }}</h3>
     {% endif %}
     <ul class="mt-2 -mx-3">
       {% for materialCategory in materials -%}
