@@ -22,9 +22,12 @@
       {% for materialCategory in materials -%}
         <li class="my-1">
           <a
+              id="material-filter-{{ materialCategory.id }}"
               class="{% if materialCategory.slug in selectedMaterials %}bg-gray-200 {% endif %}flex justify-between w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded"
               href="{{ urls[materialCategory.slug] ?? '' }}"
-              x-on:click.prevent="toggle('materials', '{{ materialCategory.slug }}')"
+              x-on:click.prevent="toggle('materials', '{{ materialCategory.slug }}', $event)"
+              role="checkbox"
+              aria-controls="products-list"
           >
             <span>{{ materialCategory.title }}</span>
 

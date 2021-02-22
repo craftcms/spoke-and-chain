@@ -67,15 +67,16 @@
             options: sortOptions,
             name: 'sort',
             attributes: {
-              'x-on:change': 'refresh()',
-              'x-model': 'sort'
+              'x-on:change': 'focusElement = "sort"; refresh()',
+              'x-model': 'sort',
+              'aria-controls': 'products-list',
             }
           } %}
 
           {% if type or colors|length or materials|length or sort %}
             <hr class="my-6">
             <div>
-              <button class="button button--small w-full" x-on:click="clear()">
+              <button class="button button--small w-full" x-on:click="clear()" aria-controls="products-list">
                 <div class="flex items-center">
                   {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-5 h-5 fill-current block' }) }}
                   <span>{{ 'Clear filters'|t }}</span>
@@ -86,7 +87,7 @@
         </div>
       </div>
 
-      <div class="px-6 md:p-0 w-full md:w-4/5">
+      <div id="products-list" role="region" aria-live="polite" class="px-6 md:p-0 w-full md:w-4/5">
         <div class="text-right text-gray-600 pb-4">
           {{ '{num} product(s)'|t('site', { num: productCount }) }}
         </div>

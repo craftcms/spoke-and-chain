@@ -22,9 +22,13 @@
     <ul class="mt-2 -mx-3">
       {% for colorCategory in colors -%}
         <li class="my-1">
-          <a class="{{ colorCategory.slug in selectedColors ? 'bg-gray-200' : '' }} flex items-center justify-between font-medium text-black hover:text-red-600 px-3 py-1 rounded"
+          <a
+             id="color-filter-{{ colorCategory.id }}"
+             class="{{ colorCategory.slug in selectedColors ? 'bg-gray-200' : '' }} flex items-center justify-between font-medium text-black hover:text-red-600 px-3 py-1 rounded"
              href="{{ urls[colorCategory.slug] ?? '' }}"
-             x-on:click.prevent="toggle('colors', '{{ colorCategory.slug }}')"
+             x-on:click.prevent="toggle('colors', '{{ colorCategory.slug }}', $event)"
+             role="checkbox"
+             aria-controls="products-list"
           >
             <span class="flex items-center">
               <span class="mr-2 flex rounded-full p-0.5 border {{ colorCategory.slug in selectedColors ? 'border-gray-700' : 'border-transparent' }}">

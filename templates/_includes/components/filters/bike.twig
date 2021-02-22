@@ -19,9 +19,12 @@
       {% for bikeCategory in types %}
         <li>
           <a
+              id="bike-type-filter-{{ bikeCategory.id }}"
               class="flex items-center font-medium text-black hover:bg-gray-200 block px-3 py-1 rounded {{ selected == bikeCategory.slug ? 'bg-gray-300' : '' }}"
               href="{{ urls[bikeCategory.slug] ?? '' }}"
-              x-on:click.prevent="setType('{{ bikeCategory.slug }}')"
+              x-on:click.prevent="setType('{{ bikeCategory.slug }}', $event)"
+              role="radio"
+              aria-controls="products-list"
           >
             {% set icon = bikeCategory.icon.one() %}
             {% if icon %}

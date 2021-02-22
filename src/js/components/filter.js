@@ -16,6 +16,7 @@ window.filter = function() {
         _nt: null,
         state: {},
         saveState: true,
+        focusElement: null,
 
         init(state, $nextTick) {
             let _this = this;
@@ -37,6 +38,19 @@ window.filter = function() {
                     _this.refresh();
                 }
             });
+
+            htmx.on('htmx:afterSwap', function(event) {
+                if (event.detail.target.getAttribute('id') == 'filter') {
+                    _this._nt(function() {
+                        var el = _this.focusElement ? document.querySelector('#' + _this.focusElement) : null;
+                        // Re-focus the element that made the call.
+                        if (el) {
+                            el.focus();
+                            _this.focusElement = null;
+                        }
+                    });
+                }
+            });
         },
 
         setFromState(state) {
@@ -46,7 +60,7 @@ window.filter = function() {
             this.sort = state.sort;
         },
 
-        toggle(key, value) {
+        toggle(key, value, $event) {
             var idx = this[key].indexOf(value);
             if (idx == -1) {
                 this[key].push(value);
@@ -70,17 +84,23 @@ window.filter = function() {
             this.refresh();
         },
 
-        setType(val) {
+        setType(val, $event) {
+            var el = $event.target || $event.srcElement;
+            console.log(el, el.id);
+            this.focusElement = el.id;
             this.type = val == this.type ? '' : val;
 
             this.refresh();
         },
 
         refresh() {
+            var _this = this;
             // always hide mobile filter list when selecting a filter
             this.showFilters = false;
 
-            this._nt(function() { htmx.trigger(htmx.find('#filter'), 'refresh')});
+            this._nt(function() {
+                htmx.trigger(htmx.find('#filter'), 'refresh');
+            });
         }
     };
 };
