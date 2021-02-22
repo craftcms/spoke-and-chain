@@ -4,12 +4,18 @@
 {% set shipping = shipping is not defined ? false : shipping %}
 {% set discount = discount is not defined ? false : discount %}
 {% set total = total is not defined ? false : total %}
+{% set cartLabel = 'Cart'|t %}
+{% if qty == 1 %}
+  {% set cartLabel = 'Cart ({qty} item)'|t('site', {qty: qty}) %}
+{% elseif qty %}
+  {% set cartLabel = 'Cart ({qty} items)'|t('site', {qty: qty}) %}
+{% endif %}
 
 <!-- Template: {{ _self }}.twig -->
 <div class="relative" @click.away="showCartMenu = false" @keydown.escape="showCartMenu = false">
     <div class="flex relative">
         <button
-                aria-label="Cart"
+                aria-label="{{ cartLabel }}"
                 @click="showCartMenu = !showCartMenu"
                 @keydown.escape="showCartMenu = false"
                 class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600 cursor-pointer">
