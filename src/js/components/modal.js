@@ -1,25 +1,55 @@
 window.modal = function() {
     return {
+        bodyId: 'modal-body',
         contentLoaded: false,
+        focusableElements: [],
         modalType: 'centered', // modal type 'centered' or 'slideout'
         show: false,
         showWrapper: false,
         _nt: null,
+        _focusableElementSelector: 'button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])',
 
         init: function($nextTick) {
+            var _this = this;
             this._nt = $nextTick;
 
             htmx.on('htmx:beforeSwap', function(event) {
-                if (event.detail.target.getAttribute('id') == 'modal-body') {
+                if (event.detail.target.getAttribute('id') == this.bodyId) {
                     this.contentLoaded = false;
+                    this.focusableElements = [];
                 }
             }.bind(this));
 
             htmx.on('htmx:afterSwap', function(event) {
-                if (event.detail.target.getAttribute('id') == 'modal-body') {
+                if (event.detail.target.getAttribute('id') == this.bodyId) {
                     this.contentLoaded = true;
+                    this.refreshFocusableElements();
                 }
             }.bind(this));
+
+            var dc = document;
+            document.addEventListener('keydown', function(e) {
+                var isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+                if (!isTabPressed || !_this.show || !_this.contentLoaded) {
+                    return;
+                }
+
+                var ffe = _this.getFirstFocusableElement();
+                var lfe = _this.getLastFocusableElement();
+
+                if (e.shiftKey) {
+                    if (document.activeElement === ffe && lfe) {
+                        lfe.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lfe && ffe) {
+                        ffe.focus();
+                        e.preventDefault();
+                    }
+                }
+            });
         },
 
         openModal: function(type = 'slideout') {
@@ -54,6 +84,33 @@ window.modal = function() {
                 this.closeModal();
             }
         },
+
+        refreshFocusableElements() {
+            var modal = document.querySelector('#' + this.bodyId);
+            if (!modal) {
+                this.focusableElements = [];
+                return;
+            }
+
+            this.focusableElements = modal.querySelectorAll(this._focusableElementSelector);
+        },
+
+        getFirstFocusableElement() {
+            if (!this.focusableElements.length) {
+                return null;
+            }
+
+            return this.focusableElements[0];
+        },
+
+        getLastFocusableElement() {
+            if (!this.focusableElements.length) {
+                return null;
+            }
+
+            return this.focusableElements[this.focusableElements.length - 1];
+        },
+
         modalEffects: {
             ['x-transition:enter']() {
                 if (this.modalType == 'slideout') {
