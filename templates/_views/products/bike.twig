@@ -130,7 +130,7 @@
             <h2 class="text-xl">Geometry</h2>
 
             {% if geometryReference %}
-              <img class="w-full mt-4" src="{{ geometryReference.getUrl() }}"/>
+              <img class="w-full mt-4" src="{{ geometryReference.getUrl() }}" alt="{{ '{product} geometry diagram'|t('site', { product: product.title }) }}"/>
             {% endif %}
 
             <div class="overflow-x-auto block max-w-full">
