@@ -19,7 +19,7 @@
   {% set body %}
     {% if data %}
       {% if address is same as (null) %}
-        <p>{{ 'Uanble to find address.'|t }}</p>
+        <p>{{ 'Unable to find address.'|t }}</p>
       {% else %}
         {% include '_includes/components/address/fields' with {
           modelName: 'address',
