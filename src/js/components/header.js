@@ -19,6 +19,7 @@ window.header = function() {
 
         // Search
         showSearch: false,
+        searchFocused: false,
         openSearch($nextTick) {
             this.showSearch = true
             $nextTick(() => {
@@ -33,6 +34,12 @@ window.header = function() {
         },
         closeSearch() {
             this.showSearch = false
+        },
+        onSearchFocus() {
+            this.searchFocused = true
+        },
+        onSearchBlur() {
+            this.searchFocused = false
         },
 
         // Cart

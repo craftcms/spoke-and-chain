@@ -6,122 +6,170 @@
 
 {# Output #}
 <header id="header" x-data="header()"
-        class="z-20"
+        class="z-20 bg-white fixed top-0 left-0 right-0 flex flex-col h-16 overflow-hidden transition-all"
         {% if fixedHeader %}
           :class="{
-            'sticky top-0': !showNav,
-            'absolute inset-0': showNav,
+            'delay-300 duration-300': !showNav,
+            'show-nav h-full duration-500': showNav,
           }"
         {% else %}
           :class="{
             'relative': !showNav,
-            'fixed bottom-0 top-0 left-0 right-0': showNav,
+            'show-nav fixed bottom-0 top-0 left-0 right-0': showNav,
             'lg:bottom-auto': true,
           }"
         {% endif %}
 >
-  <div id="main-nav" class="text-lg font-medium border-b border-solid border-gray-300">
-    <div class="bg-white">
-      <div class="px-4 lg:px-0 lg:container">
-        <div class="flex">
-          <div class="py-3 flex flex-1">
-            <div class="flex flex-1 justify-between items-center">
-              <!-- Mobile menu button -->
-              <div class="lg:hidden">
-                <button @click="toggleNav()"
-                        class="toggle-nav inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-                        aria-label="Main menu" aria-expanded="false">
-                  <svg class="toggle-open block h-6 w-6"
-                       :class="{'hidden': showNav}"
-                       xmlns="http://www.w3.org/2000/svg" fill="none"
-                       viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16"/>
-                  </svg>
+  <div id="main-nav" class="bg-white text-lg font-medium" :class="{
+          'search-focused': searchFocused,
+        }">
+    <div id="main-nav-inner" class="px-4 lg:px-0 lg:container transition duration-500">
+      <div class="flex">
+        <div class="py-3 flex flex-1">
+          <div class="flex flex-1 justify-between items-center">
+            <!-- Mobile menu button -->
+            <div class="lg:hidden">
+              <button @click="toggleNav()"
+                      class="toggle-nav inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+                      aria-label="Main menu" aria-expanded="false">
+                <svg class="toggle-open block h-6 w-6"
+                     :class="{'hidden': showNav}"
+                     xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
 
-                  <svg class="toggle-close h-6 w-6"
-                       :class="{'hidden': !showNav}"
-                       xmlns="http://www.w3.org/2000/svg" fill="none"
-                       viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"/>
-                  </svg>
+                <svg class="toggle-close h-6 w-6"
+                     :class="{'hidden': !showNav}"
+                     xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
+            </div>
+
+            {# Brand #}
+            <div class="lg:max-w-xs lg:w-full flex-1 lg:flex-none flex items-center justify-center lg:justify-start">
+              <a
+                      title="{{ siteName }}"
+                      class="inline-block px-4 py-2 text-black hover:text-red-600"
+                      href="/">{{ svg('@webroot/icons/logo.svg')|attr({ class: 'fill-current' }) }}</a>
+            </div>
+
+            {# Nav #}
+            {% if showNav %}
+              <div id="nav"
+                   :class="{
+                      'bg-white w-full lg:block': true,
+                      'mt-32 lg:mt-0': true,
+                      'absolute lg:relative z-20 top-0 left-0 right-0 bottom-0 lg:inset-auto': true,
+                      'overflow-y-auto lg:overflow-y-visible': true,
+                      'border-t lg:border-t-0 border-gray-200': true,
+                      'transition transform duration-500': true,
+                      'opacity-0': !showNav || searchFocused,
+                      'opacity-100 delay-300': showNav && searchFocused,
+                      'lg:opacity-100': true,
+                   }">
+                <div class="px-8 lg:px-0">
+                  {% include '_includes/components/nav' with {} only %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {# Search & Cart #}
+          <div class="lg:max-w-xs lg:w-full flex justify-end items-center">
+            <div class="flex items-center">
+              <div class="hidden lg:flex">
+                <button aria-label="Search"
+                        class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
+                        @click="openSearch($nextTick)">
+                  {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
                 </button>
               </div>
 
-              {# Brand #}
-              <div class="lg:max-w-xs lg:w-full flex-1 lg:flex-none flex items-center justify-center lg:justify-start">
-                <a
-                        title="{{ siteName }}"
-                        class="inline-block px-4 py-2 text-black hover:text-red-600"
-                        href="/">{{ svg('@webroot/icons/logo.svg')|attr({ class: 'fill-current' }) }}</a>
-              </div>
-
-              {# Nav #}
-              {% if showNav %}
-                <div id="nav" class="absolute lg:relative z-20 border-t lg:border-t-0 border-gray-200 bg-white w-full top-0 left-0 bottom-0 right-0 lg:inset-auto mt-16 lg:mt-0 overflow-y-auto lg:overflow-y-visible"
-                     :class="{'hidden': !showNav, 'lg:block': true}">
-                  <div class="px-8 lg:px-0">
-                    {% include '_includes/components/nav' with {} only %}
-                  </div>
-                </div>
-              {% endif %}
+              {% include '_includes/components/cartMenu' with {
+                qty: cart.totalQty,
+                lineItems: cart.lineItems,
+                shipping: cart.totalShippingCost == 0 ? false : cart.totalShippingCostAsCurrency,
+                discount: cart.totalDiscount == 0 ? false : cart.totalDiscountAsCurrency,
+                total: cart.totalPriceAsCurrency
+              } %}
             </div>
+          </div>
+        </div>
 
-            {# Search & Cart #}
-            <div class="lg:max-w-xs lg:w-full flex justify-end items-center">
-              <div class="flex items-center">
-                <div class="flex">
-                  <button aria-label="Search" class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
-                          @click="openSearch($nextTick)">
-                    {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
-                  </button>
+        {# Desktop Search #}
+        <template x-if="showSearch">
+          <div class="absolute left-0 py-3 pl-4 pr-12 lg:px-0 bg-white right-0 z-30">
+
+            <div class="max-w-2xl mx-auto flex items-center relative">
+              <form id="search-form" action="/search" class="flex-1">
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    {{ svg('@webroot/icons/search.svg')|attr({
+                      class: 'text-gray-500 w-6 h-6',
+                    }) }}
+                  </div>
+
+                  <input id="search-input" name="q" type="search"
+                         placeholder="Search Spoke & Chain…"
+                         value="{{ searchQuery }}" class="full-w pl-10"
+                         @keydown.escape="showSearch = false"
+                  />
                 </div>
+              </form>
 
-                {% include '_includes/components/cartMenu' with {
-                  qty: cart.totalQty,
-                  lineItems: cart.lineItems,
-                  shipping: cart.totalShippingCost == 0 ? false : cart.totalShippingCostAsCurrency,
-                  discount: cart.totalDiscount == 0 ? false : cart.totalDiscountAsCurrency,
-                  total: cart.totalPriceAsCurrency
-                } %}
+              <div class="absolute right-0 transform translate-x-full -mr-3">
+                <button @click="closeSearch()" class="flex items-center">
+                  {{ svg('@webroot/icons/times-light.svg')|attr({
+                    class: 'w-6 h-6',
+                  }) }}
+                </button>
               </div>
             </div>
           </div>
+        </template>
+      </div>
 
-          <template x-if="showSearch">
-            <div class="absolute left-0 py-3 pl-4 pr-12 lg:px-0 bg-white right-0 z-30">
-
-              <div class="max-w-2xl mx-auto flex items-center relative">
-                <form id="search-form" action="/search" class="flex-1">
-                  <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      {{ svg('@webroot/icons/search.svg')|attr({
-                        class: 'text-gray-500 w-6 h-6',
-                      }) }}
-                    </div>
-
-                    <input id="search-input" name="q" type="search"
-                           placeholder="Search Spoke & Chain…" value="{{ searchQuery }}" class="full-w pl-10"
-                           @keydown.escape="showSearch = false"
-                    />
-                  </div>
-                </form>
-
-                <div class="absolute right-0 transform translate-x-full -mr-3">
-                  <button @click="closeSearch()" class="flex items-center">
-                    {{ svg('@webroot/icons/times-light.svg')|attr({
-                      class: 'w-6 h-6',
-                    }) }}
-                  </button>
-                </div>
-              </div>
-
+      {# Mobile Search #}
+      <div
+              class="transition duration-500 border-b border-solid border-gray-200 -mx-4 px-4"
+              :class="{
+                'opacity-0 delay-200': !showNav,
+                'opacity-100 delay-100': showNav,
+              }">
+        <form
+                action="/search"
+                class="search-form lg:hidden pt-0 pb-4"
+                :class="{
+                  '': !showNav,
+                  'search-focused': searchFocused,
+                }">
+          <div class="search-field relative flex items-center">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              {{ svg('@webroot/icons/search.svg')|attr({
+                class: 'text-gray-500 w-6 h-6',
+              }) }}
             </div>
-          </template>
-        </div>
+
+            <input id="search-input" name="q" type="search"
+                   x-on:focus="onSearchFocus"
+                   x-on:blur="onSearchBlur"
+                   placeholder="Search Spoke & Chain…"
+                   value="{{ searchQuery }}" class="full-w pl-10"
+                   autocomplete="off"
+                   @keydown.escape="showSearch = false"
+            />
+            <div class="search-cancel ml-4">
+              <a href="#">Cancel</a>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
