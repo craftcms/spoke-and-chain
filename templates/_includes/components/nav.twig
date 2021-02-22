@@ -1,13 +1,14 @@
 <!-- Template: {{ _self }}.twig -->
 {# Variables #}
 {% set currentEntryId = currentEntryId is not defined ? false : currentEntryId %}
+{% set isBikeCategory = isBikeCategory is not defined ? false : isBikeCategory %}
 {% set navItems = [] %}
 {% set bikesLanding = craft.entries({ section: 'bikesLanding' }).one() ?? null %}
 {% if bikesLanding %}
   {% set navItems = navItems|merge([{
     label: bikesLanding.title,
     url: bikesLanding.url,
-    selected: bikesLanding.id == currentEntryId
+    selected: (currentEntryId and bikesLanding.id == currentEntryId) or isBikeCategory
   }]) %}
 {% endif %}
 {% set servicesLanding = craft.entries({ section: 'servicesLanding' }).one() ?? null %}
@@ -41,7 +42,7 @@
     <ul class="list-none p-0 flex flex-col lg:flex-row justify-center">
       {% for item in navItems %}
         <li class="border-b border-gray-200 lg:border-b-0">
-          <a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="{{ item.url }}">{{ item.label }}{% if item.selected %} <span class="sr-only">({{ 'Current page'|t }})</span>{% endif %}</a>
+          <a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="{{ item.url }}">{{ item.label }}{% if item.selected %} <span class="sr-only">({{ isBikeCategory ? 'Current section'|t : 'Current page'|t }})</span>{% endif %}</a>
         </li>
       {% endfor %}
     </ul>
