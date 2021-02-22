@@ -4,9 +4,9 @@
   <!-- Template: {{ _self }}.twig -->
   <div>
     {% if col.heading %}
-      <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
+      <h3 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
         {{ col.heading }}
-      </h4>
+      </h3>
     {% endif %}
     {% set links = col.type.handle == 'pages' ? col.pages.all() : col.productCategories.all()%}
     {% if links|length %}
