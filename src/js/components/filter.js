@@ -61,6 +61,15 @@ window.filter = function() {
             this.refresh();
         },
 
+        clear() {
+            this.type = '';
+            this.colors = [];
+            this.materials = [];
+            this.sort = '';
+
+            this.refresh();
+        },
+
         setType(val) {
             this.type = val == this.type ? '' : val;
 

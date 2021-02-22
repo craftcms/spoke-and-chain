@@ -36,10 +36,10 @@
     </div>
   {% endfor %}
   <div x-data="modalButton('address', { id: 'new', method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
-    <a class="option-select text-black" href="#" x-on:click.prevent="open($dispatch)">
+    <button id="add-address" class="option-select text-black" x-on:click.prevent="open($dispatch, '#add-address')">
       <div>
         <strong>{{ 'Add address'|t }}</strong>
       </div>
-    </a>
+    </button>
   </div>
 </div>

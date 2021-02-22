@@ -1,6 +1,6 @@
 color: green
 default: true
 description: ''
-handle: recieved
-name: Recieved
+handle: received
+name: Received
 sortOrder: 1

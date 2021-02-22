@@ -14,7 +14,13 @@
 
 {% block main %}
   <!-- Site/Main -->
-  {% block content %}{% endblock %}
+  <main>
+    {% include '_includes/components/notifications' %}
+
+    {% include '_includes/components/crumbs' %}
+
+    {% block content %}{% endblock %}
+  </main>
 {% endblock %}
 
 {% block footer %}

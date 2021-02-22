@@ -7,8 +7,6 @@
   <body class="relative font-sans overflow-x-hidden m-0 pt-16 {% if bodyClass is defined %} {{ bodyClass }}{% endif %}">
     {% block header %}{% endblock %}
 
-    {% include '_includes/components/notifications' %}
-
     {% block main %}{% endblock %}
 
     {% block footer %}{% endblock %}

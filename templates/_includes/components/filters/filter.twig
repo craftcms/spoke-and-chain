@@ -6,6 +6,8 @@
   <div class="md:container md:py-8">
     <div class="md:flex">
       <div class="bg-white md:bg-transparent px-6 py-4 md:w-1/5 md:mr-12 mb-6">
+        <h2 class="sr-only">{{ 'Filters'|t }}</h2>
+
         <button class="-ml-4 px-4 py-2 inline-flex items-center md:hidden"
                 x-on:click="showFilters = !showFilters">
           <svg class="toggle-open block h-5 w-5 mr-2"
@@ -29,6 +31,7 @@
 
         <div class="mt-4 md:mt-0" :class="{'hidden md:block': !showFilters}">
           {% include '_includes/components/filters/bike' with {
+            heading: 'Bike Types'|t,
             types: types,
             selected: type,
             urls: filterUrlsByType.types,
@@ -36,7 +39,7 @@
           {% if colorFilters|length %}
             <hr class="my-6">
             {% include '_includes/components/filters/color' with {
-              heading: 'Color'|t('site'),
+              heading: 'Color'|t,
               showHeading: true,
               colors: colorFilters,
               urls: filterUrlsByType.colors,
@@ -46,7 +49,7 @@
           {% if materialFilters|length %}
             <hr class="my-6">
             {% include '_includes/components/filters/material' with {
-              heading: 'Material'|t('site'),
+              heading: 'Material'|t,
               showHeading: true,
               materials: materialFilters,
               urls: filterUrlsByType.materials,
@@ -55,7 +58,12 @@
           {% endif %}
 
           <hr class="my-6">
+
+          <h3 class="uppercase text-xs text-gray-600">{{ 'Sort'|t }}</h3>
+          <label for="sort" class="sr-only">{{ 'Sort'|t }}</label>
           {% include '_includes/components/forms/select' with {
+            wrapperClass: 'relative mt-2',
+            id: 'sort',
             options: sortOptions,
             name: 'sort',
             attributes: {
@@ -63,6 +71,18 @@
               'x-model': 'sort'
             }
           } %}
+
+          {% if type or colors|length or materials|length or sort %}
+            <hr class="my-6">
+            <div>
+              <button class="button button--small w-full" x-on:click="clear()">
+                <div class="flex items-center">
+                  {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-5 h-5 fill-current block' }) }}
+                  <span>{{ 'Clear filters'|t }}</span>
+                </div>
+              </button>
+            </div>
+          {% endif %}
         </div>
       </div>
 
@@ -73,7 +93,7 @@
         {% if not products|length %}
           <div class="md:mt-16 py-16 text-center">
             {{ svg('@webroot/icons/bike.svg')|attr({ class: 'inline-block text-red-400 w-16 h-16' }) }}
-            <p class="mt-2 text-gray-800">{{ 'No products avaiable.'|t }}</p>
+            <p class="mt-2 text-gray-800">{{ 'No products available.'|t }}</p>
           </div>
         {% else %}
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">

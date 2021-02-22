@@ -1,4 +1,31 @@
+{% set loginPage = craft.entries({ section: 'account', type: 'login' }).one() %}
 {% set plan = plan is not defined ? null : plan %}
+{% set existingSubscription = existingSubscription is not defined ? [] : existingSubscription %}
+
+{% set isLoggedIn = currentUser and loginPage is defined and loginPage %}
+{% set isSubscribed = existingSubscription and plan.id in existingSubscription.planId %}
+
+{% set confirm = false %}
+{% set formAction = 'commerce/subscriptions/' %}
+{% if isLoggedIn and isSubscribed %}
+  {% set formAction = formAction ~ 'cancel' %}
+  {% set confirm = true %}
+  {% set confirmMessage = 'Are you sure you want to cancel your subscription?'|t %}
+{% elseif isLoggedIn and not isSubscribed and existingSubscription %}
+  {% set formAction = formAction ~ 'switch' %}
+  {% set confirm = true %}
+  {% set confirmMessage = 'Are you sure you want to switch your subscription?'|t %}
+{% else %}
+  {% set formAction = formAction ~ 'subscribe' %}
+{% endif %}
+
+{% set attrs = {
+  's-method': 'post',
+  's-action': formAction,
+  's-indicator': "#plans-indicator",
+  's-confirm': confirm ? confirmMessage : '',
+} %}
+
 {% set planInfo = plan ? plan.getInformation() : null %}
 {% set paymentSources = plan ? craft.commerce.
   getPaymentSources().
@@ -9,53 +36,65 @@
 %}
 
 {% if plan %}
-  {% set existingSubscriptions = craft.subscriptions({
-    isSuspended: false,
-    isExpired: false,
-    isCanceled: false,
-  }).user(currentUser).all() %}
-  {% set existingSubscriptionsPlanHandles = existingSubscriptions|length ? existingSubscriptions|map(sub => sub.plan.handle) : [] %}
   {% set name = planInfo ? planInfo.title : plan.name %}
 
   <!-- Template: {{ _self }}.twig -->
-  <div class="services-plan bg-gray-100 p-8">
-    {% if name %}
-      <h2 class="text-2xl text-center">{{ name }}</h2>
-    {% endif %}
-
-    {% if planInfo and planInfo.planFeatures|length %}
-      <div class="mt-4">
-        <ul class="space-y-4">
-          {% for feature in planInfo.planFeatures %}
-            <li class="pl-8 relative">
-              <svg class="w-6 h-6 text-green-500 absolute translate -translate-y-full top-0 left-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-
-              {{ feature.feature }}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-
-    <div class="mt-8">
-      {% if not currentUser and loginPage is defined and loginPage %}
-        <a class="button submit w-full" href="{{ loginPage.getUrl() }}">{{ 'Login to buy'|t }}</a>
-      {% elseif currentUser and existingSubscriptionsPlanHandles|length and plan.handle in existingSubscriptionsPlanHandles %}
-        <p>{{ 'Already subscribed'|t }}</p>
-      {% elseif currentUser %}
-        <form method="post">
-          {{ csrfInput() }}
-          {{ actionInput('commerce/subscriptions/subscribe') }}
-          {{ hiddenInput('planUid', plan.uid|hash) }}
-          {% if not paymentSources|length %}
-            {% include '_includes/components/forms/creditCard' with { paymentForm: plan.getGateway().getPaymentFormModel() } %}
-          {% endif %}
-
-          <button class="button" type="submit">{{ 'Subscribe'|t }}</button>
-        </form>
+  <form sprig {{ attr(attrs) }}>
+    <div class="services-plan {{ isLoggedIn and isSubscribed ? 'bg-blue-100 border border-blue-400' : 'bg-gray-100' }} p-8 relative">
+      {% if isLoggedIn and isSubscribed %}
+        <div class="absolute top-0 transform translate -translate-y-1/2 left-1/2 -translate-x-1/2 bg-blue-400 rounded-full flex items-center px-2 py-1">
+          <svg class="w-4 h-4 text-blue-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          <strong class="text-blue-100 uppercase tracking-wider text-xs">{{ 'Active'|t }}</strong>
+        </div>
       {% endif %}
+
+      {% if name %}
+        <h2 class="text-2xl text-center">{{ name }}</h2>
+      {% endif %}
+
+      {% if planInfo and planInfo.planFeatures|length %}
+        <div class="mt-4">
+          <ul class="space-y-4">
+            {% for feature in planInfo.planFeatures %}
+              <li class="pl-8 relative">
+                <svg class="w-6 h-6 text-green-500 absolute translate -translate-y-full top-0 left-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+
+                {{ feature.feature }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      <div class="mt-8">
+        {% if not isLoggedIn %}
+          <a class="button submit" href="{{ loginPage.getUrl() }}">{{ 'Login to subscribe'|t }}</a>
+        {% elseif isLoggedIn and isSubscribed %}
+          {{ hiddenInput('subscriptionUid', existingSubscription.uid|hash) }}
+          {{ hiddenInput('successMessage', 'Subscription cancelled'|t|hash) }}
+
+          <button class="button" type="submit">{{ 'Cancel'|t }}</button>
+        {% elseif isLoggedIn and not isSubscribed and existingSubscription %}
+            {{ hiddenInput('subscriptionUid', existingSubscription.uid|hash) }}
+            {{ hiddenInput('planUid', plan.uid|hash) }}
+            {{ hiddenInput('successMessage', 'Subscription switched'|t|hash) }}
+
+            <button class="button" type="submit">{{ 'Switch'|t }}</button>
+        {% elseif isLoggedIn %}
+            {{ hiddenInput('planUid', plan.uid|hash) }}
+            {{ hiddenInput('successMessage', 'Subscription activated'|t|hash) }}
+
+            {% if not paymentSources|length %}
+              {% include '_includes/components/forms/creditCard' with { paymentForm: plan.getGateway().getPaymentFormModel() } %}
+            {% endif %}
+
+            <button class="button" type="submit">{{ 'Subscribe'|t }}</button>
+        {% endif %}
+      </div>
     </div>
-  </div>
+  </form>
 {% endif %}

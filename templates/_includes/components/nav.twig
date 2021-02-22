@@ -1,12 +1,14 @@
 <!-- Template: {{ _self }}.twig -->
 {# Variables #}
+{% set currentEntryId = currentEntryId is not defined ? false : currentEntryId %}
+{% set isBikeCategory = isBikeCategory is not defined ? false : isBikeCategory %}
 {% set navItems = [] %}
 {% set bikesLanding = craft.entries({ section: 'bikesLanding' }).one() ?? null %}
 {% if bikesLanding %}
   {% set navItems = navItems|merge([{
     label: bikesLanding.title,
     url: bikesLanding.url,
-    selected: false
+    selected: (currentEntryId and bikesLanding.id == currentEntryId) or isBikeCategory
   }]) %}
 {% endif %}
 {% set servicesLanding = craft.entries({ section: 'servicesLanding' }).one() ?? null %}
@@ -14,7 +16,7 @@
   {% set navItems = navItems|merge([{
     label: servicesLanding.title,
     url: servicesLanding.url,
-    selected: false
+    selected: servicesLanding.id == currentEntryId
   }]) %}
 {% endif %}
 {% set articlesLanding = craft.entries({ section: 'articlesLanding' }).one() ?? null %}
@@ -22,12 +24,17 @@
   {% set navItems = navItems|merge([{
     label: articlesLanding.title,
     url: articlesLanding.url,
-    selected: false
+    selected: articlesLanding.id == currentEntryId
   }]) %}
 {% endif %}
-{% set navItems = navItems|merge([
-  { label: 'Contact', url: '/contact', selected: false },
-]) %}
+{% set contact = craft.entries({ section: 'contact' }).one() ?? null %}
+{% if contact %}
+  {% set navItems = navItems|merge([{
+    label: contact.title,
+    url: contact.url,
+    selected: contact.id == currentEntryId
+  }]) %}
+{% endif %}
 
 {# Output #}
 {% if navItems|length %}
@@ -35,7 +42,7 @@
     <ul class="list-none p-0 flex flex-col lg:flex-row justify-center">
       {% for item in navItems %}
         <li class="border-b border-gray-200 lg:border-b-0">
-          <a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="{{ item.url }}">{{ item.label }}</a>
+          <a class="block lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="{{ item.url }}">{{ item.label }}{% if item.selected %} <span class="sr-only">({{ isBikeCategory ? 'Current section'|t : 'Current page'|t }})</span>{% endif %}</a>
         </li>
       {% endfor %}
     </ul>
