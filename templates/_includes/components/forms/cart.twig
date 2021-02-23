@@ -6,7 +6,7 @@
 <!-- Template: {{ _self }}.twig -->
 {% if cart.lineItems|length %}
   <form id="cart" sprig s-method="post" s-action="commerce/cart/update-cart"
-        s-trigger="submit, keyup delay:0.5s from:.qty, change delay:0.5s from:.qty"
+        s-trigger="submit, change delay:0.5s from:.qty, updateForm from:.qty"
         s-indicator="#cart-indicator">
 
     {% for lineItem in cart.lineItems %}

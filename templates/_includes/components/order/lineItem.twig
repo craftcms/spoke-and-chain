@@ -49,15 +49,17 @@
       </div>
 
       {# Quantity #}
-      <div class="w-1/2 lg:w-1/4 md:pr-6">
+      <div x-data="{}" class="w-1/2 lg:w-1/4 md:pr-6">
         {% if form %}
-          <label for="qty-{{ lineItem.id }}">{{ 'Quantity'|t }}</label>
+          <label for="qty-{{ lineItem.id }}" >{{ 'Quantity'|t }}</label>
           <input
               id="qty-{{ lineItem.id }}"
               class="qty"
               name="lineItems[{{ lineItem.id }}][qty]"
-              type="number"
+              type="text"
               value="{{ lineItem.qty }}"
+              {# Only trigger a change on keyup for a numeric value  #}
+              x-on:keyup.debounce.400="if ($event.key !== 'Tab' && $event.keyCode !== 9 && isFinite($event.key)) { htmx.trigger($event.target, 'updateForm'); }"
               required
           >
         {% else %}
