@@ -86,7 +86,7 @@ window.filter = function() {
 
         setType(val, $event) {
             var el = $event.target || $event.srcElement;
-            console.log(el, el.id);
+
             this.focusElement = el.id;
             this.type = val == this.type ? '' : val;
 
