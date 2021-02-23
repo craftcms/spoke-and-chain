@@ -51,7 +51,7 @@
                 <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
                 {% if defaultVariant.onSale %}
                   <div>
-                    <del aria-label="{{ 'Reduced from {price}'|t('site', { price: defaultVariant.priceAsCurrency }) }}" class="block mt-1 text-xs text-gray-500">{{ defaultVariant.priceAsCurrency }}</del>
+                    <s aria-label="{{ 'Reduced from {price}'|t('site', { price: defaultVariant.priceAsCurrency }) }}" class="block mt-1 text-xs text-gray-500">{{ defaultVariant.priceAsCurrency }}</s>
                   </div>
                 {% endif %}
               </div>

@@ -41,7 +41,7 @@
               {{ salePrice }}
             </div>
             <div class="-mt-1">
-              <del class="text-xs text-gray-500 leading-3">{{ price }}</del>
+              <s aria-label="{{ 'Reduced from {price}'|t('site', { price: price }) }}" class="text-xs text-gray-500 leading-3">{{ price }}</s>
             </div>
           {% else %}
             {{ price }}
