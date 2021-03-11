@@ -17,7 +17,7 @@
   {{ body }}
 </div>
 
-<div class="px-12 py-8 text-center bg-gray-200">
+<div class="px-12 py-8 text-center bg-gray-200 space-x-1">
   {% if closeButton %}
     <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ closeButtonText }}</a>
   {% endif %}
