@@ -20,6 +20,8 @@ use craft\commerce\Plugin;
 use craft\commerce\records\Transaction;
 use craft\commerce\services\Emails;
 use craft\console\Controller;
+use craft\elements\db\UserQuery;
+use craft\elements\Entry;
 use craft\elements\User;
 use craft\errors\ElementException;
 use craft\helpers\Console;
@@ -40,42 +42,52 @@ class CreateDemoDataController extends Controller
     /**
      * Maximum number of carts to generate per day.
      */
-    private const CARTS_PER_DAY_MAX = 3;
+    const CARTS_PER_DAY_MAX = 3;
 
     /**
      * Maximum number of customers to generate.
      */
-    private const CUSTOMERS_MAX = 50;
+    const CUSTOMERS_MAX = 50;
 
     /**
      * Minimum number of customers to generate.
      */
-    private const CUSTOMERS_MIN = 40;
+    const CUSTOMERS_MIN = 40;
 
     /**
      * Maximum number of orders to generate per day.
      */
-    private const ORDERS_PER_DAY_MAX = 3;
+    const ORDERS_PER_DAY_MAX = 3;
 
     /**
      * Maximum number of products per order/cart.
      */
-    private const PRODUCTS_PER_ORDER_MAX = 3;
+    const PRODUCTS_PER_ORDER_MAX = 3;
 
     /**
      * The start date of when orders should begin generating.
      */
-    private const START_DATE_INTERVAL = 'P40D';
+    const START_DATE_INTERVAL = 'P40D';
 
     /**
      * Maximum number of users to generate.
      */
-    private const USERS_MAX = 30;
+    const USERS_MAX = 30;
 
     /**
      * Minimum number of users to generate.
      */
-    private const USERS_MIN = 20;
+    const USERS_MIN = 20;
+
+    /**
+     * Minimum number of reviews per product.
+     */
+    const REVIEWS_PER_PRODUCT_MIN = 0;
+
+    /**
+     * Maximum number of reviews per product.
+     */
+    const REVIEWS_PER_PRODUCT_MAX = 20;
 
     /**
      * @var Generator|null
@@ -151,6 +163,8 @@ class CreateDemoDataController extends Controller
         $this->_createGuestCustomers();
 
         $this->_createOrders();
+
+        $this->_createReviews();
         $this->stdout('Finished creating demo data' . PHP_EOL, Console::FG_GREEN);
     }
 
@@ -163,7 +177,7 @@ class CreateDemoDataController extends Controller
      * @throws \yii\base\Exception
      * @throws \yii\base\InvalidConfigException
      */
-    private function _createUsers(): void
+    private function _createUsers()
     {
         for ($i = 0; $i < random_int(self::USERS_MIN, self::USERS_MAX); $i++) {
             $firstName = $this->_faker->firstName();
@@ -201,7 +215,7 @@ class CreateDemoDataController extends Controller
                 'lastName' => $lastName,
             ]);
 
-            $this->stdout('Created user: ' . $attributes['fullName'] . PHP_EOL, Console::FG_YELLOW);
+            $this->stdout('Creating user: ' . $attributes['fullName'] . PHP_EOL, Console::FG_PURPLE);
         }
     }
 
@@ -232,7 +246,7 @@ class CreateDemoDataController extends Controller
             }
 
             $this->_guestCustomers[] = $attributes;
-            $this->stdout('Created guest customer: ' . $attributes['firstName'] . ' ' . $attributes['lastName'] . PHP_EOL, Console::FG_YELLOW);
+            $this->stdout('Creating guest customer: ' . $attributes['firstName'] . ' ' . $attributes['lastName'] . PHP_EOL, Console::FG_RED);
         }
     }
 
@@ -303,7 +317,7 @@ class CreateDemoDataController extends Controller
      *
      * @throws \Exception
      */
-    private function _createOrders(): void
+    private function _createOrders()
     {
         $date = new DateTime();
         while ($date->format('Y-m-d') >= $this->_startDate->format('Y-m-d')) {
@@ -397,7 +411,7 @@ class CreateDemoDataController extends Controller
      * @throws \yii\base\Exception
      * @throws \yii\base\InvalidConfigException
      */
-    private function _createOrderElement(DateTime $date, bool $isCompleted = true): void
+    private function _createOrderElement(DateTime $date, bool $isCompleted = true)
     {
         $customer = $this->_getRandomCustomer(random_int(0, 1));
 
@@ -451,7 +465,7 @@ class CreateDemoDataController extends Controller
      * @param Order $order
      * @throws \craft\commerce\errors\TransactionException
      */
-    private function _createTransactionForOrder(Order $order): void
+    private function _createTransactionForOrder(Order $order)
     {
         if ($order->isCompleted) {
             $transaction = Plugin::getInstance()->getTransactions()->createTransaction($order, null);
@@ -459,6 +473,52 @@ class CreateDemoDataController extends Controller
             $transaction->status = Transaction::STATUS_SUCCESS;
 
             Plugin::getInstance()->getTransactions()->saveTransaction($transaction);
+        }
+    }
+
+    private function _createReviews()
+    {
+        $reviewsSection = Craft::$app->getSections()->getSectionByHandle('reviews');
+        /** @var UserQuery $authorQuery */
+        $authorQuery = Craft::$app->getElements()->createElementQuery(User::class);
+        $author = $authorQuery->admin(true)->orderBy('id ASC')->one();
+
+        if (!$reviewsSection || !$author) {
+            return;
+        }
+
+        $startDateInterval = new DateInterval(self::START_DATE_INTERVAL);
+
+        foreach ($this->_products as $product) {
+            for ($i = 0; $i <= random_int(self::REVIEWS_PER_PRODUCT_MIN, self::REVIEWS_PER_PRODUCT_MAX); $i++) {
+                $reviewDate = new DateTime();
+                $reviewDate->sub(new DateInterval('P' . random_int(0, $startDateInterval->days) . 'D'));
+                $reviewDate = $this->_setTime($reviewDate);
+
+                /** @var Entry $review */
+                $review = Craft::createObject([
+                    'class' => Entry::class,
+                    'attributes' => [
+                        'authorId' => $author->id,
+                        'postDate' => $reviewDate,
+                    ]
+                ]);
+
+                $review->sectionId = $reviewsSection->id;
+                $review->typeId = $reviewsSection->getEntryTypes()[0]->id;
+                $review->title = $this->_faker->randomLetter . '. ' . $this->_faker->lastName;
+
+                $paragraphs = $this->_faker->paragraphs(random_int(0, 3));
+                $stars = $this->_faker->optional(0.2, 5)->numberBetween(1, 5);
+                $review->setFieldValues([
+                    'body' => '<p>' . implode('</p><p>', $paragraphs) . '</p>',
+                    'product' => [$product->id],
+                    'stars' => $stars,
+                ]);
+
+                $this->stdout('Creating ' . $stars . ' star review for ' . $product->title. PHP_EOL, Console::FG_BLUE);
+                Craft::$app->getElements()->saveElement($review);
+            }
         }
     }
 }
