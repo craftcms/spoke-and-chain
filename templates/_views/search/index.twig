@@ -34,7 +34,7 @@
 
   <div class="bg-gray-100 pt-12 px-6">
     <div class="max-w-xl mx-auto sm:text-center">
-      <h1 class="text-4xl mt-0">Search results for “{{ searchQuery }}”</h1>
+      <h1 class="text-4xl mt-0">{{ 'Search results for “{query}”'|t('site', { query: searchQuery }) }}</h1>
 
       <form action="/search" class="max-w-sm mx-auto mt-4">
         <div class="relative">
@@ -45,7 +45,7 @@
           </div>
 
           <input id="search-input" name="q" type="search"
-                 placeholder="Search Spoke & Chain…" value="{{ searchQuery }}" class="full-w pl-10"/>
+                 placeholder="{{ 'Search Spoke & Chain…'|t }}" value="{{ searchQuery }}" class="full-w pl-10"/>
         </div>
       </form>
     </div>
@@ -55,8 +55,8 @@
     <div class="mt-12 max-w-6xl mx-auto">
       {% if products|length == 0 and articles|length == 0 %}
         <div class="text-center pb-12">
-          <h2 class="text-2xl">No results found</h2>
-          <p>We can't find any results based on your search</p>
+          <h2 class="text-2xl">{{ entry.plainText1 ? entry.plainText1 : 'No results found'|t }}</h2>
+          <p>{{ entry.plainText2 ? entry.plainText2 : 'We can\'t find any results based on your search'|t }}</p>
         </div>
       {% endif %}
 
