@@ -1,0 +1,56 @@
+fieldLayouts:
+  26ed06a3-4c9a-4566-be88-6ff2aa950ddf:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca
+            instructions: ''
+            label: 'No Results Heading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d
+            instructions: ''
+            label: 'No Results Text'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: search
+hasTitleField: false
+name: Search
+section: a47082e1-a4c7-48c4-b08e-e84d5dae0956
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
