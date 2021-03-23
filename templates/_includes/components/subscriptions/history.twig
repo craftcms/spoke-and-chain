@@ -8,24 +8,24 @@
 {# Output #}
 {% if subscriptionHistory|length %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="container pt-8">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-center border-b border-gray-300 pb-4 mb-4">{{ 'Membership History'|t }}</h2>
-      <table class="w-full text-sm">
+  <div class="container py-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center text-xl">{{ 'Membership History'|t }}</h2>
+      <table class="mt-4 w-full text-sm border-t border-gray-100 border-solid">
         <thead>
         <tr>
-          <th class="px-2 py-1">{{ 'Plan'|t }}</th>
-          <th class="px-2 py-1">{{ 'Status'|t }}</th>
-          <th class="px-2 py-1">{{ 'Next Payment'|t }}</th>
-          <th class="px-2 py-1">{{ 'End Date'|t }}</th>
+          <th class="px-2 py-4">{{ 'Plan'|t }}</th>
+          <th class="px-2 py-4">{{ 'Status'|t }}</th>
+          <th class="px-2 py-4">{{ 'Next Payment'|t }}</th>
+          <th class="px-2 py-4">{{ 'End Date'|t }}</th>
         </tr>
         </thead>
         <tbody>
         {% for subscription in subscriptionHistory %}
           {% set bgClass = cycle(['bg-gray-100', ''], loop.index0) %}
           <tr {{ attr({ class: bgClass }) }}>
-            <td class="px-2 py-1">{{ subscription.plan.name }}</td>
-            <td class="px-2 py-1">
+            <td class="px-2 py-4">{{ subscription.plan.name }}</td>
+            <td class="px-2 py-4">
               {% if subscription.isCanceled %}
                 {{ 'Cancelled'|t }}
               {% elseif subscription.isExpired %}
