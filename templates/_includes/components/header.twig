@@ -3,6 +3,7 @@
 {% set showNav = showNav is not defined ? true : showNav %}
 {% set fixedHeader = fixedHeader is not defined ? true : fixedHeader %}
 {% set searchQuery = craft.app.request.getQueryParam('q') %}
+{% set searchPage = craft.entries({ section: 'search' }).one() %}
 
 {# Output #}
 <header id="header" x-data="header()"
@@ -87,13 +88,15 @@
           {# Search & Cart #}
           <div class="lg:max-w-xs lg:w-full flex justify-end items-center">
             <div class="flex items-center">
-              <div class="hidden lg:flex">
-                <button aria-label="Search"
-                        class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
-                        @click="openSearch($nextTick)">
-                  {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
-                </button>
-              </div>
+                {% if searchPage %}
+                  <div class="hidden lg:flex">
+                    <button aria-label="Search"
+                            class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
+                            @click="openSearch($nextTick)">
+                      {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
+                    </button>
+                  </div>
+                {% endif %}
 
               {% include '_includes/components/cartMenu' with {
                 qty: cart.totalQty,
@@ -111,7 +114,7 @@
           <div class="absolute left-0 py-3 pl-4 pr-12 lg:px-0 bg-white right-0 z-30">
 
             <div class="max-w-2xl mx-auto flex items-center relative">
-              <form id="search-form" action="/search" class="flex-1">
+              <form id="search-form" action="{{ searchPage ? searchPage.url : '/search' }}" class="flex-1">
                 <div class="relative">
                   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     {{ svg('@webroot/icons/search.svg')|attr({
@@ -147,7 +150,7 @@
                 'opacity-100 delay-100': showNav,
               }">
         <form
-                action="/search"
+                action="{{ searchPage ? searchPage.url : '/search' }}"
                 class="search-form lg:hidden pt-0 pb-4"
                 :class="{
                   '': !showNav,
@@ -169,7 +172,7 @@
                    @keydown.escape="showSearch = false"
             />
             <div class="search-cancel ml-4">
-              <a href="#">Cancel</a>
+              <a href="#">{{ 'Cancel'|t }}</a>
             </div>
           </div>
         </form>
