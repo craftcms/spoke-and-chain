@@ -29,18 +29,19 @@ They are used in the `webpack-dev-server`. The key to this when using [nitro](ht
 
 This is because the project using twigpack and needs to be able to communicate with webpack dev server to enable hot module replacement.
 
-The best way to set this up is to find out what your computer's local IP address is on your network. One way to do this is to run the following command in terminal.
+Using [nitro](https://github.com/craftcms/nitro) version 2 the loopback IP address is made easier with `host.docker.internal`.
+
+Your env file will end up looking something like the following:
 
 ```
-ipconfig getifaddr en0
-```
-
-This should output an IP address e.g. `192.168.1.123`. Using this IP address we can set up the environment variables in the following way.
-
-```
-DEVSERVER_PUBLIC=http://192.168.1.123:8080
+# webpack dev server
+DEVSERVER_PUBLIC=http://127.0.0.1:8080
 DEVSERVER_PORT=8080
-DEVSERVER_HOST=192.168.1.123
+DEVSERVER_HOST=127.0.0.1
+
+# Twigpack
+TWIGPACK_MANIFEST_PATH=http://host.docker.internal:8080/
+TWIGPACK_PUBLIC_PATH=http://host.docker.internal:8080/
 ```
 
 The port can be any port number of your choosing.
