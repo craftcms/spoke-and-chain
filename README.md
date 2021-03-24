@@ -23,7 +23,7 @@ cp .env.example .env
 
 #### Notable environment variables
 
-`DEVSERVER_PUBLIC`, `DEVSERVER_PORT` and `DEVSERVER_HOST` are environment variables that are used when locally developing the CSS and JS within the project.
+`DEVSERVER_PUBLIC`, `DEVSERVER_PORT`, `DEVSERVER_HOST`, `TWIGPACK_MANIFEST_PATH` and `TWIGPACK_PUBLIC_PATH` are environment variables that are used when locally developing the CSS and JS within the project.
 
 They are used in the `webpack-dev-server`. The key to this when using [nitro](https://github.com/craftcms/nitro) is that it needs to be accessible from within the VM.
 
