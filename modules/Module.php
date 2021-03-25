@@ -69,13 +69,13 @@ class Module extends \yii\base\Module
             }
         });
 
-        Event::on(Entry::class, Entry::EVENT_AFTER_SAVE, function(ModelEvent $event) {
+        Event::on(Entry::class, Entry::EVENT_AFTER_SAVE, function($event) {
             if ($event->sender && $event->sender->section->handle == 'reviews') {
                 Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
             }
         });
 
-        Event::on(Entry::class, Entry::EVENT_AFTER_DELETE, function(ModelEvent $event) {
+        Event::on(Entry::class, Entry::EVENT_AFTER_DELETE, function($event) {
             if ($event->sender && $event->sender->section->handle == 'reviews') {
                 Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
             }
