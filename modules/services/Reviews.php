@@ -64,7 +64,7 @@ class Reviews extends BaseObject
         $query = Craft::$app->getElements()->createElementQuery(Entry::class);
         $query->section('reviews');
         $query->with(['product']);
-        $query->enabledForSite(true);
+        $query->status('live');
         $reviews = $query->all();
 
         $reviewsByProductId = [];
