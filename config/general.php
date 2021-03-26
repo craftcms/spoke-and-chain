@@ -32,6 +32,8 @@ return [
         'securityKey' => App::env('SECURITY_KEY'),
 
         'useEmailAsUsername' => true,
+
+        'generateTransformsBeforePageLoad' => true,
     ],
 
     // Dev environment settings
