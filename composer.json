@@ -4,6 +4,7 @@
     "craftcms/cms": "^3.5.10",
     "craftcms/commerce": "^3.2",
     "craftcms/redactor": "^2.8",
+    "ether/logs": "^3.0",
     "fakerphp/faker": "^1.9",
     "nystudio107/craft-twigpack": "^1.2",
     "oberon/starfield": "^1.0",
