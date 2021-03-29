@@ -30,6 +30,11 @@ module.exports = {
             },
             fontSize: {
                 xxs: '.625rem'
+            },
+            transitionProperty: {
+                height: 'height',
+                position: 'top, right, bottom, left',
+                spacing: 'margin, padding',
             }
         },
         listStyleType: {
