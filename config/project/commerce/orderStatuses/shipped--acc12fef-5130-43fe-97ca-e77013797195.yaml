@@ -1,6 +1,6 @@
 color: yellow
 default: false
 description: ''
-handle: inTransit
-name: 'In Transit'
+handle: shipped
+name: Shipped
 sortOrder: 3
