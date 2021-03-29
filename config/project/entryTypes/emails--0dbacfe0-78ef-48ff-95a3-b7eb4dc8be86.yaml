@@ -26,6 +26,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 handle: emails
