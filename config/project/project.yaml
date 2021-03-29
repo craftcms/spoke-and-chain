@@ -1,8 +1,18 @@
-dateModified: 1617005638
+dateModified: 1617009114
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke and Chain'
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    encryptionMethod: ''
+    host: $EMAIL_HOST
+    password: ''
+    port: $EMAIL_PORT
+    timeout: '10'
+    useAuthentication: ''
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
 plugins:
   aws-s3:
     edition: standard
