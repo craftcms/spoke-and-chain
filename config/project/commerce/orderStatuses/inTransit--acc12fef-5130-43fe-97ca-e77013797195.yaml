@@ -1,6 +1,0 @@
-color: yellow
-default: false
-description: ''
-handle: inTransit
-name: 'In Transit'
-sortOrder: 3

@@ -1,0 +1,25 @@
+{% extends '_layouts/special' %}
+{% set emailContent = craft.entries({
+    section: 'emails',
+    slug: 'shipped',
+}).one() %}
+
+{% block head %}
+    <title>{{ 'Order Shipped'|t }}: {{ order.shortNumber }}</title>
+{% endblock %}
+
+{% block header %}
+    {% if emailContent %}
+        <div class="container flex justify-center">
+            <div class="w-full max-w-5xl">
+                {% if emailContent.heading %}
+                    <h1 class="pb-4">{{ emailContent.heading }}</h1>
+                {% endif %}
+
+                {% if emailContent.body %}
+                    {{ emailContent.body }}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
