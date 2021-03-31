@@ -13,52 +13,57 @@ use craft\helpers\App;
 return [
     // Global settings
     '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
+        // https://craftcms.com/docs/3.x/config/config-settings.html#allowadminchanges
+        'allowAdminChanges' => true,
+
+        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+        'devMode' => false,
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#disallowrobots
+        'disallowRobots' => true,
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#defaultweekstartday
         'defaultWeekStartDay' => 1,
 
-        // Whether generated URLs should omit "index.php"
+        // https://craftcms.com/docs/3.x/config/config-settings.html#omitscriptnameinurls
         'omitScriptNameInUrls' => true,
 
-        // Control panel trigger word
+        // https://craftcms.com/docs/3.x/config/config-settings.html#cptrigger
         'cpTrigger' => 'admin',
 
+        // https://craftcms.com/docs/3.x/config/config-settings.html#loginpath
         'loginPath' => 'account/login',
 
+        // https://craftcms.com/docs/3.x/config/config-settings.html#postloginredirect
         'postLoginRedirect' => 'account',
 
+        // https://craftcms.com/docs/3.x/config/config-settings.html#autologinafteraccountactivation
         'autoLoginAfterAccountActivation' => true,
 
-        // The secure key Craft will use for hashing and encrypting data
+        // https://craftcms.com/docs/3.x/config/config-settings.html#securitykey
         'securityKey' => App::env('SECURITY_KEY'),
 
+        // https://craftcms.com/docs/3.x/config/config-settings.html#useemailasusername
         'useEmailAsUsername' => true,
 
+        // https://craftcms.com/docs/3.x/config/config-settings.html#generatetransformsbeforepageload
         'generateTransformsBeforePageLoad' => true,
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#errortemplateprefix
+        'errorTemplatePrefix' => '_errors/'
     ],
 
     // Dev environment settings
     'dev' => [
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
-
-        // Prevent crawlers from indexing pages and following links
         'disallowRobots' => true,
     ],
 
     // Staging environment settings
-    'staging' => [
-        'devMode' => false,
-
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,
-    ],
+    'staging' => [],
 
     // Production environment settings
     'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 ];
