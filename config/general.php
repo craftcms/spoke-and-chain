@@ -16,41 +16,41 @@ return [
         // https://craftcms.com/docs/3.x/config/config-settings.html#allowadminchanges
         'allowAdminChanges' => true,
 
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => false,
-
-        // https://craftcms.com/docs/3.x/config/config-settings.html#disallowrobots
-        'disallowRobots' => true,
-
-        // https://craftcms.com/docs/3.x/config/config-settings.html#defaultweekstartday
-        'defaultWeekStartDay' => 1,
-
-        // https://craftcms.com/docs/3.x/config/config-settings.html#omitscriptnameinurls
-        'omitScriptNameInUrls' => true,
+        // https://craftcms.com/docs/3.x/config/config-settings.html#autologinafteraccountactivation
+        'autoLoginAfterAccountActivation' => true,
 
         // https://craftcms.com/docs/3.x/config/config-settings.html#cptrigger
         'cpTrigger' => 'admin',
 
+        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+        'devMode' => false,
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#defaultweekstartday
+        'defaultWeekStartDay' => 1,
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#disallowrobots
+        'disallowRobots' => true,
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#errortemplateprefix
+        'errorTemplatePrefix' => '_errors/',
+
+        // https://craftcms.com/docs/3.x/config/config-settings.html#generatetransformsbeforepageload
+        'generateTransformsBeforePageLoad' => true,
+
         // https://craftcms.com/docs/3.x/config/config-settings.html#loginpath
         'loginPath' => 'account/login',
 
+        // https://craftcms.com/docs/3.x/config/config-settings.html#omitscriptnameinurls
+        'omitScriptNameInUrls' => true,
+
         // https://craftcms.com/docs/3.x/config/config-settings.html#postloginredirect
         'postLoginRedirect' => 'account',
-
-        // https://craftcms.com/docs/3.x/config/config-settings.html#autologinafteraccountactivation
-        'autoLoginAfterAccountActivation' => true,
 
         // https://craftcms.com/docs/3.x/config/config-settings.html#securitykey
         'securityKey' => App::env('SECURITY_KEY'),
 
         // https://craftcms.com/docs/3.x/config/config-settings.html#useemailasusername
         'useEmailAsUsername' => true,
-
-        // https://craftcms.com/docs/3.x/config/config-settings.html#generatetransformsbeforepageload
-        'generateTransformsBeforePageLoad' => true,
-
-        // https://craftcms.com/docs/3.x/config/config-settings.html#errortemplateprefix
-        'errorTemplatePrefix' => '_errors/'
     ],
 
     // Dev environment settings
