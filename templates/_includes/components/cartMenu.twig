@@ -18,11 +18,11 @@
                 aria-label="{{ cartLabel }}"
                 @click="showCartMenu = !showCartMenu"
                 @keydown.escape="showCartMenu = false"
-                class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600 cursor-pointer">
+                class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600">
             {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-6 h-6' }) }}
         </button>
         {% if qty %}
-            <div class="pointer-events-none absolute inline-block bottom-0 right-0 text-xxs rounded-full bg-gray-200 px-1.5 py-0.5 leading-3">{{ qty }}</div>
+            <div class="pointer-events-none absolute inline-block bottom-0.5 right-0.5 text-xxs rounded-full bg-gray-200 px-1.5 py-0.5 leading-3">{{ qty }}</div>
         {% endif %}
     </div>
 
