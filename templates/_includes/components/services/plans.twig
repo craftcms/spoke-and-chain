@@ -18,7 +18,7 @@
     </div>
   {% else %}
     <!-- Template: {{ _self }}.twig -->
-    <div class="max-w-4xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div class="max-w-3xl mx-auto grid grid-cols-1 gap-6 md:grid-cols-2">
       {% for plan in plans %}
         {% include '_includes/components/services/plan' with {
           plan: plan,

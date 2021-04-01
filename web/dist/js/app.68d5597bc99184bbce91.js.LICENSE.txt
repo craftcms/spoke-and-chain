@@ -1,0 +1,13 @@
+/*!
+ * @project        Spoke & Chain
+<<<<<<< HEAD:web/dist/js/app.539c6e08fa2cf3b32040.js.LICENSE.txt
+ * @name           app.539c6e08fa2cf3b32040.js
+ * @author         Pixel & Tonic
+ * @build          Wed, Mar 31, 2021 1:51 PM Europe/London
+=======
+ * @name           app.68d5597bc99184bbce91.js
+ * @author         Pixel & Tonic
+ * @build          Wed, Mar 31, 2021 4:43 PM Europe/Paris
+>>>>>>> d052f4f1285e851e72ee26dbc2dee18e24fb59fc:web/dist/js/app.68d5597bc99184bbce91.js.LICENSE.txt
+ * @copyright      Copyright (c) 2021 Pixel & Tonic
+ */

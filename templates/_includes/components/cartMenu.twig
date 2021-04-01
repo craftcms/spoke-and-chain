@@ -27,18 +27,18 @@
     </div>
 
     <template x-if="showCartMenu">
-        <div class="cart-menu origin-top-right absolute right-0 border-t lg:border-none border-white lg:mt-0.5 pt-3 z-0 w-64">
-            <div class="p-6 rounded-b-md border-r border-l border-b border-gray-300 bg-white shadow-lg" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+        <div class="cart-menu origin-top-right absolute right-0 border-t lg:border-none border-white mt-3 pt-0 z-0 w-72">
+            <div class="px-6 py-3 rounded-md border border-gray-300 bg-white shadow-lg" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <div class="space-y-4">
                     {% if lineItems|length %}
                         <div>
                             {% for item in lineItems %}
-                                <div class="flex justify-between text-sm {% if not loop.first %}border-t border-dashed border-gray-300 mt-2 pt-2{% endif %}">
+                                <div class="flex justify-between text-sm {% if not loop.first %}border-t border-gray-200 mt-2 pt-2{% endif %}">
                                     <div>
-                                        {{ item.description }}<br>
-                                        <span class="text-xs text-gray-600">x {{ item.qty }}</span>
+                                        <div class="font-medium">{{ item.description }}</div>
+                                        <span class="text-xs text-gray-400">× {{ item.qty }}</span>
                                     </div>
-                                    <div>
+                                    <div class="ml-4">
                                         {{ item.totalAsCurrency }}
                                     </div>
                                 </div>
@@ -50,17 +50,17 @@
                                 {% if discount %}
                                     <div class="text-gray-600 text-xs">{{ 'Discount'|t }}: {{ discount }}</div>
                                 {% endif %}
-                                <div class="text-sm">{{ 'Total'|t }}: {{ total }}</div>
+                                <div class="text-sm font-bold">{{ 'Total'|t }}: {{ total }}</div>
                             </div>
                         </div>
+                        <div>
+                            <a class="button submit w-full text-center" href="{{ cartPage.url }}">Check Out</a>
+                        </div>
                     {% else %}
-                        <div class="text-center text-base text-gray-500 p-8 rounded border-gray-300 border border-dashed">
-                          {{ 'No items'|t }}
+                        <div class="text-center text-base text-gray-500 border-b border-gray-200 pt-5 pb-8">
+                          {{ 'Your cart is empty.'|t }}
                         </div>
                     {% endif %}
-                    <div>
-                        <a class="button submit w-full text-center" href="{{ cartPage.url }}">Check Out</a>
-                    </div>
                     <div>
                         {% if cartPage is defined %}
                             <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">

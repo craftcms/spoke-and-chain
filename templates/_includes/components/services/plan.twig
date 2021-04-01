@@ -20,6 +20,7 @@
 {% endif %}
 
 {% set attrs = {
+  'class': 'md:flex',
   's-method': 'post',
   's-action': formAction,
   's-indicator': "#plans-indicator",
@@ -40,18 +41,18 @@
 
   <!-- Template: {{ _self }}.twig -->
   <form sprig {{ attr(attrs) }}>
-    <div class="services-plan {{ isLoggedIn and isSubscribed ? 'bg-blue-100 border border-blue-400' : 'bg-gray-100' }} p-8 relative">
+    <div class="services-plan md:flex-1 rounded-lg {{ isLoggedIn and isSubscribed ? 'bg-blue-100 border-2 border-blue-400' : 'bg-gray-100' }} p-8 relative">
       {% if isLoggedIn and isSubscribed %}
         <div class="absolute top-0 transform translate -translate-y-1/2 left-1/2 -translate-x-1/2 bg-blue-400 rounded-full flex items-center px-2 py-1">
           <svg class="w-4 h-4 text-blue-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>
-          <strong class="text-blue-100 uppercase tracking-wider text-xs">{{ 'Active'|t }}</strong>
+          <strong class="text-blue-100 uppercase tracking-wider text-xs">{{ 'Current Plan'|t }}</strong>
         </div>
       {% endif %}
 
       {% if name %}
-        <h2 class="text-2xl text-center">{{ name }}</h2>
+        <h2 class="text-2xl">{{ name }}</h2>
       {% endif %}
 
       {% if planInfo and planInfo.planFeatures|length %}
@@ -77,13 +78,13 @@
           {{ hiddenInput('subscriptionUid', existingSubscription.uid|hash) }}
           {{ hiddenInput('successMessage', 'Subscription cancelled'|t|hash) }}
 
-          <button class="button" type="submit">{{ 'Cancel'|t }}</button>
+          <button class="button w-full" type="submit">{{ 'Cancel your subscription'|t }}</button>
         {% elseif isLoggedIn and not isSubscribed and existingSubscription %}
             {{ hiddenInput('subscriptionUid', existingSubscription.uid|hash) }}
             {{ hiddenInput('planUid', plan.uid|hash) }}
             {{ hiddenInput('successMessage', 'Subscription switched'|t|hash) }}
 
-            <button class="button" type="submit">{{ 'Switch'|t }}</button>
+            <button class="button w-full" type="submit">{{ 'Switch to this plan'|t }}</button>
         {% elseif isLoggedIn %}
             {{ hiddenInput('planUid', plan.uid|hash) }}
             {{ hiddenInput('successMessage', 'Subscription activated'|t|hash) }}
