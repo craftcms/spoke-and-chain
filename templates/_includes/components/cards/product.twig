@@ -7,25 +7,26 @@
 {% set salePrice = salePrice is not defined ? null : salePrice %}
 {% set averageRating = averageRating is not defined ? null : averageRating %}
 
-{% set thumbUrl = null %}
-
-{% if image %}
-  {% set thumb = {
-    mode: 'fit',
-    width: 600,
-    height: 400,
-  } %}
-
-  {% set thumbUrl = image.getUrl(thumb) %}
-{% endif %}
-
-
 {# Output #}
 {% if title or image %}
   <a class="product-card flex flex-col rounded-md bg-white p-8" href="{{ url }}" aria-label="{{ title }}">
     <div class="flex-1 flex items-center">
-      {% if thumbUrl %}
-        <img alt="{{ image.title }}" src="{{ thumbUrl }}" />
+      {% if image %}
+          {% include '_includes/components/images/responsive' with {
+              class: 'w-full',
+              image: image,
+              sizes: {
+                  '425px': '320px',
+                  '639px': '527px',
+                  '767px': '284px',
+                  '1023px': '188px',
+                  '1279px': '295px',
+                  '1439px': '236px',
+                  'all': '320px',
+              },
+              srcset: ['527w', '320w', '295w', '284w', '236w', '188w'],
+              transform: { width: 380, height: 253, },
+          } %}
       {% endif %}
     </div>
 
