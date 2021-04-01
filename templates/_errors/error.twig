@@ -1,0 +1,45 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+{% set errorEntry = statusCode is defined ? craft.entries({
+    section: 'errorPages',
+    slug: statusCode,
+}).one() : null %}
+
+{% set heading = errorEntry ? (errorEntry.heading ? errorEntry.heading : errorEntry.title) : 'Something went wrong!'|t %}
+{% set body = errorEntry ? errorEntry.plainText1 : 'Please return to the homepage and try again, sorry for any inconvenience this may have caused.'|t %}
+{% set image = errorEntry ? errorEntry.mainImage.one() : null %}
+
+{# Blocks #}
+{% block content %}
+    <!-- Template: {{ _self }}.twig -->
+    <div>
+        <div class="container relative">
+            <div class="relative overflow-hidden sm:aspect-ratio-error-image">
+                {% if image %}
+                    <div class="absolute inset-0 flex items-center">
+                        {% include '_includes/components/images/responsive' with {
+                            class: 'object-cover w-full h-full',
+                            image: image,
+                            sizes: {
+                                '639px': '592px',
+                                '767px': '720px',
+                                '1023px': '976px',
+                                '1439px': '1400px',
+                                'all': '1440px',
+                            },
+                            srcset: ['1440w', '1400w', '976w', '720w', '592w'],
+                            transform: { width: 320, height: 180, },
+                        } %}
+                    </div>
+                {% endif %}
+                <div class="absolute inset-0 bg-black opacity-75"></div>
+                <div class="relative sm:absolute sm:inset-0 text-white p-8">
+                    <div class="w-full h-full flex flex-col items-center justify-center">
+                        <h1 class="text-center lg:text-3xl xl:text-4xl">{{ heading }}</h1>
+                        <p class="pt-4 max-w-xl text-center lg:text-xl xl:text-2xl">{{ body }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
