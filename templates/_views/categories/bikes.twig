@@ -15,20 +15,9 @@
     {% set mainImage = category.mainImage.one() %}
   {% endif %}
 
-  {% set thumbUrl = null %}
-
-  {% if mainImage %}
-    {% set thumb = {
-      width: 2000,
-      height: 1000,
-    } %}
-
-    {% set thumbUrl = mainImage.getUrl(thumb) %}
-  {% endif %}
-
   <div class="bg-gray-700">
     {% include '_includes/components/hero' with {
-      image: thumbUrl,
+      image: mainImage,
       title: entry is defined ? entry.title : category.title,
       short: true,
     } only %}

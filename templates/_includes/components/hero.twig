@@ -13,23 +13,42 @@
 {# Output #}
 {% if title or image or button %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="{{ aspectClass }}">
-    <div class="aspect-inner bg-cover bg-center" {% if image %}style="background-image: url({{image}});"{% endif %}>
-      <div class="bg-black bg-opacity-50 h-full">
-        <div class="container h-full">
-          <div class="flex items-center w-full h-full">
-            <div class="mx-auto font-bold text-white text-center">
-              <h1 class="text-4xl">{{ title }}</h1>
-
-              {% if button %}
-                <div class="text-4xl">
-                  <a href="{{ buttonUrl }}" title="{{ buttonTitle }}" aria-label="{{ buttonTitle }}" class="button submit">{{ button }}</a>
-                </div>
-              {% endif %}
-            </div>
-          </div>
+    <div class="{{ aspectClass }}">
+        <div class="absolute inset-0">
+            {% include '_includes/components/images/responsive' with {
+                class: 'object-cover w-full h-full',
+                image: image,
+                sizes: {
+                    '320px': '320px',
+                    '425px': '425px',
+                    '639px': '640px',
+                    '767px': '768px',
+                    '1023px': '1024px',
+                    '1279px': '1280px',
+                    '1439px': '1440px',
+                    'all': '1440px',
+                },
+                srcset: ['1440w', '1280w', '1024w', '900w', '768w', '640w', '425w', '320w'],
+                transform: { width: 380, height: 152, },
+            } %}
         </div>
-      </div>
+        <div class="aspect-inner">
+            <div class="relative bg-black bg-opacity-50 h-full">
+                <div class="container h-full">
+                    <div class="flex items-center w-full h-full">
+                        <div class="mx-auto font-bold text-white text-center">
+                            <h1 class="text-4xl">{{ title }}</h1>
+
+                            {% if button %}
+                                <div class="text-4xl">
+                                    <a href="{{ buttonUrl }}" title="{{ buttonTitle }}" aria-label="{{ buttonTitle }}"
+                                       class="button submit">{{ button }}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 {% endif %}

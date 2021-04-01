@@ -21,7 +21,7 @@
     {% endif %}
     <div>
       {% include '_includes/components/hero' with {
-        image: heroImage ? heroImage.getUrl() : null,
+        image: heroImage,
         title: entry.heading,
         button: heroButton ? heroButton.label : null,
         buttonTitle: heroButton ? (heroButton.ariaLabel ? heroButton.ariaLabel : heroButton.label) : null ,
