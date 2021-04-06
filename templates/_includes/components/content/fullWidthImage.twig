@@ -6,9 +6,22 @@
 
 {% if block and image %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="aspect-ratio-hero mt-8">
-    <div class="aspect-inner overflow-hidden relative">
-      <img class="absolute transform left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full" src="{{ image.url }}" alt="{{ image.title }}">
+    <div>
+        {% include '_includes/components/images/responsive' with {
+            class: 'w-full',
+            image: image,
+            sizes: {
+                '320px': '320px',
+                '425px': '425px',
+                '639px': '640px',
+                '767px': '768px',
+                '1023px': '1024px',
+                '1279px': '1280px',
+                '1439px': '1440px',
+                'all': '1440px',
+            },
+            srcset: ['1440w', '1280w', '1024w', '900w', '768w', '640w', '425w', '320w'],
+            transform: { width: 380, height: 152, },
+        } %}
     </div>
-  </div>
 {% endif %}
