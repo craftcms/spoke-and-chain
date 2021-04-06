@@ -6,7 +6,7 @@
 {% if block and block.body %}
   {% set isIntro = block.intro ?? false %}
   <!-- Template: {{ _self }}.twig -->
-  <div class="container mt-8 flex justify-center">
+  <div class="container pt-8 flex justify-center pb-8">
     <div class="w-full max-w-3xl {{ isIntro ? 'text-lg' : '' }}">
       {{ block.body }}
     </div>
