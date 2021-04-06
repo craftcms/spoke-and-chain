@@ -53,10 +53,6 @@
         padding-top: calc((2 / 3) * 100%);
     }
 
-    .aspect-ratio-article-card:before {
-        padding-top: calc((1.15 / 2) * 100%);
-    }
-
     .aspect-ratio-error-image:before {
         padding-top: calc((9 / 16) * 100%);
     }
