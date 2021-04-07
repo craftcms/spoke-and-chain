@@ -16,12 +16,12 @@
     src: image.url,
     alt: image.title,
 } : null %}
+{% if transform and image %}{% do image.setTransform(transform) %}{% endif %}
 {% set tagOptions = class ? tagOptions|merge({ class: class }) : tagOptions %}
 {% set tagOptions = srcset and image ? tagOptions|merge({ srcset: image.getSrcset(srcset) }) : tagOptions %}
 {% set tagOptions = sizes ? tagOptions|merge({ sizes: sizes|map((width, max) => max != 'all' ? "(max-width: #{max}) #{width}" : width)|join(', ') }) : tagOptions %}
 
 {# Output #}
 {% if image and tagOptions %}
-    {%- if transform -%}{% do image.setTransform(transform) %}{%- endif -%}
     {{ tag('img', tagOptions) }}
 {% endif %}

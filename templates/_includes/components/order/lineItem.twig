@@ -13,17 +13,25 @@
         {% if showImage %}
             <div class="w-full md:w-1/3 lg:w-1/5 md:pr-6">
                 {% set lineItemImage %}
-                    <div class="aspect-ratio-product-card">
-                        <div class="aspect-inner overflow-hidden relative">
-                            {% if mainImage %}
-                                <img
-                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
-                                    src="{{ mainImage.url }}" alt="{{ mainImage.title }}">
-                            {% else %}
-                                {% include '_includes/components/order/snapshotImage' with { lineItem: lineItem } %}
-                            {% endif %}
-                        </div>
-                    </div>
+                    {% if mainImage %}
+                        {% include '_includes/components/images/responsive' with {
+                            class: 'w-full',
+                            image: mainImage,
+                            sizes: {
+                                '320px': '272px',
+                                '425px': '377px',
+                                '767px': '592px',
+                                '1023px': '216px',
+                                '1279px': '171px',
+                                '1439px': '181px',
+                                'all': '181px',
+                            },
+                            srcset: ['592w', '377w', '272w', '216w', '181w', '171w'],
+                            transform: { width: 272, height: 143, },
+                        } %}
+                    {% else %}
+                        {% include '_includes/components/order/snapshotImage' with { lineItem: lineItem } %}
+                    {% endif %}
                 {% endset %}
                 {% if purchasable %}
                     <a class="block" href="{{ purchasable.product.url }}">
