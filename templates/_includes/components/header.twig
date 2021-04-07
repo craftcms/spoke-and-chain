@@ -6,19 +6,13 @@
 {% set searchPage = craft.entries({ section: 'search' }).one() %}
 
 <header id="header" x-data="header()"
-        class="z-10 bg-white fixed top-0 left-0 right-0 h-16 transition-height"
-        {% if fixedHeader %}
-            :class="{
+        class="z-20 bg-white top-0 left-0 right-0 h-16 transition-height"
+        :class="{
+            'fixed': {{ fixedHeader ? 'true' : 'false' }},
+            'absolute': {{ fixedHeader ? 'false' : 'true' }},
             'delay-300 duration-300': !showNav,
             'show-nav h-full lg:h-auto duration-500': showNav,
-          }"
-        {% else %}
-            :class="{
-            'relative': !showNav,
-            'show-nav fixed bottom-0 top-0 left-0 right-0': showNav,
-            'lg:-mt-16 lg:bottom-auto': true,
-          }"
-        {% endif %}
+        }"
 >
     <div class="absolute h-16 w-full flex items-center px-4 border-b border-transparent"
          :class="{
