@@ -41,7 +41,7 @@
 
   <!-- Template: {{ _self }}.twig -->
   <form sprig {{ attr(attrs) }}>
-    <div class="services-plan md:flex md:flex-col md:flex-1 rounded-lg {{ isLoggedIn and isSubscribed ? 'bg-blue-100 border-2 border-blue-400' : 'bg-gray-100' }} p-8 relative">
+    <div class="services-plan md:flex md:flex-col md:flex-1 rounded-lg {{ isLoggedIn and isSubscribed ? 'bg-blue-50 border-2 border-blue-400' : 'bg-gray-100' }} p-8 relative">
       <div class="flex-1">
           {% if isLoggedIn and isSubscribed %}
               <div class="absolute top-0 transform translate -translate-y-1/2 left-1/2 -translate-x-1/2 bg-blue-400 rounded-full flex items-center pl-2 pr-3 py-1">
