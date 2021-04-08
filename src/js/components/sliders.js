@@ -1,5 +1,5 @@
-import Swiper, {Navigation} from 'swiper';
-Swiper.use([Navigation]);
+import Swiper, {Navigation, Pagination, Keyboard} from 'swiper';
+Swiper.use([Navigation, Pagination, Keyboard]);
 
 window.sliders = function() {
     let sliderElements = document.querySelectorAll('[data-slider]');
