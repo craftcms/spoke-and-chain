@@ -185,7 +185,7 @@
             {% if showNav %}
                 <!-- mobile nav -->
                 <div
-                        class="px-4 transition-opacity duration-500"
+                        class="transition-opacity duration-500"
                         :class="{
                             'opacity-100': !searchFocused,
                             'opacity-0': searchFocused
@@ -198,10 +198,12 @@
                                 'h-0 delay-500': searchFocused
                             }"
                     >
-                        {% include '_includes/components/nav' with {
-                            currentEntryId: entry is defined ? entry.id : false,
-                            isBikeCategory: category is defined and category.group.handle == 'bikeTypes' ? true : false,
-                        } only %}
+                        <div class="px-4 py-1">
+                            {% include '_includes/components/nav' with {
+                                currentEntryId: entry is defined ? entry.id : false,
+                                isBikeCategory: category is defined and category.group.handle == 'bikeTypes' ? true : false,
+                            } only %}
+                        </div>
                     </div>
                 </div>
             {% endif %}
