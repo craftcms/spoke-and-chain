@@ -37,6 +37,19 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 2
 handle: orders
 hasTitleField: true
 name: Orders
