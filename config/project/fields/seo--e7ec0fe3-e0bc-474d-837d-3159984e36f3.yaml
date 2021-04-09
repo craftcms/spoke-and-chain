@@ -8,7 +8,6 @@ settings:
   elementDisplayPreviewType: google
   facebookTabEnabled: ''
   generalEnabledFields:
-    - mainEntityOfPage
     - seoTitle
     - seoDescription
     - seoImage
