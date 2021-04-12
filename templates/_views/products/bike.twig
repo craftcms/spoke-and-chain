@@ -61,7 +61,7 @@
                     {{ averageRating }}
                   </div>
                   <div>
-                    {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-4 h-4' }) }}
+                    {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-4 h-4', 'aria-label': "Stars"|t('site') }) }}
                   </div>
                 </a>
               {% endif %}
