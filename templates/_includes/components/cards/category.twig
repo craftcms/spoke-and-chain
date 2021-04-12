@@ -7,9 +7,9 @@
 {# Output #}
 {% if title or image %}
     {% if url %}
-        <a class="category-card aspect-ratio-category-card" href="{{ url }}" aria-label="{{ title }}">
+        <a class="category-card aspect-ratio-category-card bg-gray-500" href="{{ url }}" aria-label="{{ title }}">
     {% else %}
-        <div class="category-card aspect-ratio-category-card">
+        <div class="category-card aspect-ratio-category-card bg-gray-500">
     {% endif %}
     <div class="aspect-inner">
         {% if image %}
