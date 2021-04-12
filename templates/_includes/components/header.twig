@@ -97,7 +97,7 @@
                     </form>
 
                     <div class="absolute right-0 transform translate-x-full -mr-3">
-                        <button @click="closeSearch()" class="flex items-center">
+                        <button @click="closeSearch()" aria-label="{{ 'Close search'|t('site') }}" class="flex items-center">
                             {{ svg('@webroot/icons/times-light.svg')|attr({
                                 class: 'w-6 h-6',
                             }) }}
