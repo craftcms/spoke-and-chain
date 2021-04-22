@@ -52,44 +52,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3815aa30-9bf2-4a2b-8d16-00fd08c68e86:
-    contentColumnType: text
-    fieldGroup: null
-    handle: ariaLabel
-    instructions: ''
-    name: 'Aria Label'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  6443fbe4-a797-4f2a-8b81-c76619128990:
-    contentColumnType: text
-    fieldGroup: null
-    handle: buttonUrl
-    instructions: 'Use this field if you require linking to a custom URL that is not an entry or category.'
-    name: 'Button URL'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   6d832652-3b7e-417c-8a96-14965cdfd744:
     contentColumnType: text
     fieldGroup: null
@@ -133,6 +95,44 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
+  3815aa30-9bf2-4a2b-8d16-00fd08c68e86:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ariaLabel
+    instructions: ''
+    name: 'Aria Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6443fbe4-a797-4f2a-8b81-c76619128990:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonUrl
+    instructions: 'Use this field if you require linking to a custom URL that is not an entry or category.'
+    name: 'Button URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   ee205f0d-9016-48b3-8c84-df68b08003cd:
     contentColumnType: string
     fieldGroup: null
