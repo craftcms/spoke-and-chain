@@ -25,20 +25,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  03f1355e-67b8-457a-b8e9-20cbc34af8c4:
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: intro
-    instructions: ''
-    name: Intro
-    searchable: false
-    settings:
-      default: false
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2:
     contentColumnType: text
     fieldGroup: null
@@ -67,6 +53,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  03f1355e-67b8-457a-b8e9-20cbc34af8c4:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: intro
+    instructions: ''
+    name: Intro
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
 handle: body
 name: Body
 sortOrder: 1
