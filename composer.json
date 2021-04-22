@@ -1,8 +1,8 @@
 {
   "require": {
     "craftcms/aws-s3": "^1.2",
-    "craftcms/cms": "^3.5.10",
-    "craftcms/commerce": "^3.2",
+    "craftcms/cms": "^3.6.12",
+    "craftcms/commerce": "^3.3.0",
     "craftcms/redactor": "^2.8",
     "ether/logs": "^3.0",
     "fakerphp/faker": "^1.9",
@@ -26,7 +26,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.2.5"
     }
   },
   "scripts": {
