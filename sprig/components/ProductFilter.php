@@ -229,7 +229,7 @@ class ProductFilter extends Component
         $query->type('bike');
 
         // Eager loading
-        $query->with(['mainImage']);
+        $query->with(['bikeType', 'colors', 'mainImage']);
 
         $colorProductIds = [];
         $materialProductIds = [];

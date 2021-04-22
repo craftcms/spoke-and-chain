@@ -18,7 +18,7 @@
 {# Search products #}
 {% set productQueryOptions = {
   type: 'bike',
-  with: ['mainImage']
+  with: ['bikeType', 'colors', 'mainImage']
 } %}
 {% set productQuery = craft.products(productQueryOptions) %}
 {% set products = productQuery.search(searchQuery).all() %}
@@ -69,6 +69,8 @@
               title: product.title,
               image: product.mainImage[0] ?? null,
               url: product.url,
+              colors: product.colors,
+              type: product.bikeType[0] ?? null,
               price: defaultVariant.priceAsCurrency,
               salePrice: defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : false,
               averageRating: craft.reviews.getAverageRatingByProductId(product.id),

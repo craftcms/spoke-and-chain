@@ -4,12 +4,33 @@
 {% set image = image is not defined ? null : image %}
 {% set url = url is not defined ? null : url %}
 {% set price = price is not defined ? null : price %}
+{% set type = type is not defined ? null : type %}
+{% set colors = colors is not defined ? [] : colors %}
 {% set salePrice = salePrice is not defined ? null : salePrice %}
 {% set averageRating = averageRating is not defined ? null : averageRating %}
+{% if ariaLabel is not defined %}
+    {% set ariaLabel = title %}
+    {% if colors|length == 1 %}
+        {% set ariaLabel = '{title}. {color} {type} bike. {price}'|t('site', {
+            title: title,
+            color: colors[0],
+            type: type,
+            price: salePrice ? salePrice : price
+        }) %}
+    {% elseif colors|length > 1 %}
+        {% set ariaLabel = '{title}. {color1} and {color2} {type} bike. {price}'|t('site', {
+            title: title,
+            color1: colors[0].title,
+            color2: colors[1].title,
+            type: type,
+            price: salePrice ? salePrice : price
+        }) %}
+    {% endif %}
+{% endif %}
 
 {# Output #}
 {% if title or image %}
-  <a class="product-card flex flex-col rounded-md bg-white p-8" href="{{ url }}" aria-label="{{ title }}">
+  <a class="product-card flex flex-col rounded-md bg-white p-8" href="{{ url }}" aria-label="{{ ariaLabel }}">
     <div class="flex-1 flex items-center">
       {% if image %}
           {% include '_includes/components/images/responsive' with {

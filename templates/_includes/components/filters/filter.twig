@@ -104,6 +104,8 @@
                 title: product.title,
                 image: product.mainImage[0] ?? null,
                 url: product.url,
+                colors: product.colors,
+                type: product.bikeType[0] ?? null,
                 price: defaultVariant.priceAsCurrency,
                 salePrice: defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : false,
                 averageRating: craft.reviews.getAverageRatingByProductId(product.id)
