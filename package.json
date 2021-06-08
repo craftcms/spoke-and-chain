@@ -140,7 +140,7 @@
   },
   "dependencies": {
     "alpinejs": "^2.7.3",
-    "swiper": "^6.3.5",
+    "swiper": "^6.6.1",
     "tailwindcss": "^2.0.2"
   }
 }
