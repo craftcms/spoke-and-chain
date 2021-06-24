@@ -39,7 +39,7 @@ class SeedController extends Controller
     /**
      * @var string
      */
-    public string $dumpfile = 'europa-museum-3.7.0-beta.2.sql';
+    public string $dumpfile = 'spoke-and-chain-3.7.0-beta.3.sql';
 
     /**
      * @var int Duration in seconds to wait between retries
