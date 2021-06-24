@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/aws-s3": "^1.2",
-    "craftcms/cms": "^3.6.12",
+    "craftcms/cms": "^3.7.0-beta.3",
     "craftcms/commerce": "^3.3.0",
     "craftcms/redactor": "^2.8",
     "ether/logs": "^3.0",
