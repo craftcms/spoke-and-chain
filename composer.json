@@ -18,7 +18,8 @@
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/",
+      "modules\\": "modules",
+      "modules\\demos\\": "modules/demos/src/",
       "sprig\\components\\": "sprig/components/"
     }
   },
