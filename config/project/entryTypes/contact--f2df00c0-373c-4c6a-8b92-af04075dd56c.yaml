@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 31a2d43c-7290-4d37-a001-865d49555f73
+            fieldUid: 31a2d43c-7290-4d37-a001-865d49555f73 # Address
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b0e92218-875e-4e1f-8457-ec090e59278a
+            fieldUid: b0e92218-875e-4e1f-8457-ec090e59278a # Opening Times
             instructions: null
             label: null
             required: false
@@ -54,7 +54,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b0c13f72-1314-4872-b963-24bc1c170d1f
+            fieldUid: b0c13f72-1314-4872-b963-24bc1c170d1f # Map
             instructions: null
             label: null
             required: false
@@ -67,7 +67,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -80,7 +80,7 @@ fieldLayouts:
 handle: contact
 hasTitleField: false
 name: Contact
-section: 9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1
+section: 9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1 # Contact
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

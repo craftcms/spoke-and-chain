@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: ''
             label: 'Geometry Reference'
             required: ''
@@ -16,3 +16,4 @@ fieldLayouts:
         sortOrder: 1
 handle: bikes
 name: Bikes
+sortOrder: 0

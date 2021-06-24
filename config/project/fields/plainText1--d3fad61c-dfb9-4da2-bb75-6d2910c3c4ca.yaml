@@ -1,5 +1,6 @@
+columnSuffix: null
 contentColumnType: text
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: plainText1
 instructions: ''
 name: 'Plain Text 1'
@@ -11,7 +12,7 @@ settings:
   columnType: null
   initialRows: '4'
   multiline: ''
-  placeholder: ''
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

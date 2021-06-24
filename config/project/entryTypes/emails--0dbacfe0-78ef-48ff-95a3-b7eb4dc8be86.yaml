@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039
+            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
 handle: emails
 hasTitleField: true
 name: Emails
-section: 5075e975-0eb8-4e62-9ae7-9d8cd88348eb
+section: 5075e975-0eb8-4e62-9ae7-9d8cd88348eb # Emails
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

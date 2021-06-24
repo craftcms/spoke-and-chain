@@ -1,3 +1,4 @@
+defaultPlacement: end
 enableVersioning: true
 handle: articlesLanding
 name: Articles
@@ -15,7 +16,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  5712e1f3-7800-493e-b74b-c2887dc25c81:
+  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke and Chain
     enabledByDefault: true
     hasUrls: true
     template: _views/articles/index

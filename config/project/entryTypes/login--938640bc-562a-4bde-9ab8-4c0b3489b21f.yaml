@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
             instructions: ''
             label: 'Forgot Password Text'
             required: ''
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
             instructions: ''
             label: 'Register Text'
             required: ''
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
 handle: login
 hasTitleField: true
 name: Login
-section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
+section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
 sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null

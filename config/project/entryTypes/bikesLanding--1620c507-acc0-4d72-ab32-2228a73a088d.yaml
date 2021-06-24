@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -53,7 +53,7 @@ fieldLayouts:
 handle: bikesLanding
 hasTitleField: false
 name: Bikes
-section: 384841aa-9783-4efd-a81f-0f4aa159ab33
+section: 384841aa-9783-4efd-a81f-0f4aa159ab33 # Bikes
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

@@ -31,7 +31,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -44,7 +44,7 @@ fieldLayouts:
 handle: register
 hasTitleField: true
 name: Register
-section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
+section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
 sortOrder: 6
 titleFormat: null
 titleTranslationKeyFormat: null

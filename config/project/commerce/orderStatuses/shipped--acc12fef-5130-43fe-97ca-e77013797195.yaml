@@ -2,7 +2,7 @@ color: yellow
 default: false
 description: ''
 emails:
-  a9d8c265-1ab4-4dc0-8408-7889d17f4e02: a9d8c265-1ab4-4dc0-8408-7889d17f4e02
+  a9d8c265-1ab4-4dc0-8408-7889d17f4e02: a9d8c265-1ab4-4dc0-8408-7889d17f4e02 # Order Shipped
 handle: shipped
 name: Shipped
 sortOrder: 3
