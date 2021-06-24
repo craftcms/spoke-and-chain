@@ -3,7 +3,7 @@
 /vendor
 /node_modules
 .DS_Store
-/web/local-volumes
+!spoke-and-chain-*.sql
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
