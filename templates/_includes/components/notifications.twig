@@ -6,6 +6,7 @@
     <div x-spread="effects"
          class="w-full flex justify-center pt-8">
       <div
+          role="alert"
           class="notification rounded text-white shadow-lg px-4 py-2"
           :class="{ 'bg-red-600': type == 'error', 'bg-blue-500': type == 'notice' }"
           x-text="message">
