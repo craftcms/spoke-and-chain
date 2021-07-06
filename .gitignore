@@ -3,7 +3,7 @@
 /vendor
 /node_modules
 .DS_Store
-!spoke-and-chain-*.sql
+!seed.sql
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
