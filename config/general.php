@@ -13,6 +13,7 @@ use craft\helpers\App;
 return [
     // Global settings
     '*' => [
+
         // https://craftcms.com/docs/3.x/config/config-settings.html#allowadminchanges
         'allowAdminChanges' => true,
 
@@ -51,19 +52,18 @@ return [
 
         // https://craftcms.com/docs/3.x/config/config-settings.html#useemailasusername
         'useEmailAsUsername' => true,
+
+        'aliases' => [
+            '@web' => App::env('DEFAULT_SITE_URL'),
+        ],
     ],
 
     // Dev environment settings
-    'dev' => [
+    'local' => [
         'devMode' => true,
         'disallowRobots' => true,
     ],
 
-    // Staging environment settings
-    'staging' => [],
-
-    // Production environment settings
     'production' => [
-        'allowAdminChanges' => false,
     ],
 ];
