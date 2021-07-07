@@ -87,7 +87,7 @@ class SeedController extends Controller
     {
         $this->runAction('admin-user'),
         $this->runAction('freeform-data', ['contact']),
-        $this->runAction('refresh-news'),
+        $this->runAction('refresh-articles'),
 
         return ExitCode::OK;
     }
@@ -155,10 +155,10 @@ class SeedController extends Controller
         return $errorCount ? ExitCode::UNSPECIFIED_ERROR : ExitCode::OK;
     }
 
-    public function actionRefreshNews(): int
+    public function actionRefreshArticles(): int
     {
-        $this->stdout("Refreshing news ... " . PHP_EOL);
-        $entries = Entry::find()->section('newsArticles');
+        $this->stdout("Refreshing articles ... " . PHP_EOL);
+        $entries = Entry::find()->section('articles');
 
         foreach ($entries->all() as $entry) {
             $entry->postDate = $this->_faker->dateTimeInInterval('-1 months', '-5 days');
