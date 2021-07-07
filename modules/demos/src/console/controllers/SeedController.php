@@ -85,9 +85,9 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
-        $this->runAction('admin-user'),
-        $this->runAction('freeform-data', ['contact']),
-        $this->runAction('refresh-articles'),
+        $this->runAction('admin-user');
+        $this->runAction('freeform-data', ['contact']);
+        $this->runAction('refresh-articles');
 
         return ExitCode::OK;
     }
