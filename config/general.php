@@ -56,6 +56,11 @@ return [
         'aliases' => [
             '@web' => App::env('DEFAULT_SITE_URL'),
         ],
+
+        'defaultSearchTermOptions' => [
+            'subLeft' => true,
+            'subRight' => true,
+        ],
     ],
 
     // Dev environment settings
