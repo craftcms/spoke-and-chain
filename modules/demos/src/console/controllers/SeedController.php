@@ -157,7 +157,7 @@ class SeedController extends Controller
 
     public function actionRefreshArticles(): int
     {
-        $this->stdout("Refreshing articles ... " . PHP_EOL);
+        $this->stdout("Refreshing articles ... ");
         $entries = Entry::find()->section('articles');
 
         foreach ($entries->all() as $entry) {
@@ -166,6 +166,8 @@ class SeedController extends Controller
         }
 
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        return ExitCode::OK;
     }
 
     /**
