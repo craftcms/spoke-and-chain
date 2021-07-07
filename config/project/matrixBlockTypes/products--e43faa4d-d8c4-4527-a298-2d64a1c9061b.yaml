@@ -1,11 +1,11 @@
-field: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9
+field: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Builder
 fieldLayouts:
   bd5cdfbd-9eb4-42c1-a500-37732ab3f1c7:
     tabs:
       -
         elements:
           -
-            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c
+            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Products
             instructions: null
             label: null
             required: false
@@ -16,7 +16,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  d6666f58-4d11-4bd3-b5bd-bc92b52a538c:
+  d6666f58-4d11-4bd3-b5bd-bc92b52a538c: # Products
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: products

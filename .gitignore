@@ -3,7 +3,7 @@
 /vendor
 /node_modules
 .DS_Store
-/web/local-volumes
+!seed.sql
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

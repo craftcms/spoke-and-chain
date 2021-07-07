@@ -139,8 +139,8 @@
     }
   },
   "dependencies": {
-    "alpinejs": "^2.7.3",
+    "alpinejs": "^2.8.2",
     "swiper": "^6.3.5",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.2.0"
   }
 }

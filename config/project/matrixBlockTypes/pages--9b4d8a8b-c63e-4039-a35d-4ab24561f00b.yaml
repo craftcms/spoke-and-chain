@@ -1,11 +1,11 @@
-field: b9cb6112-ebae-420b-bae9-a54c387419f6
+field: b9cb6112-ebae-420b-bae9-a54c387419f6 # Footer Nav
 fieldLayouts:
   a07d3103-a401-4270-a15f-172faf15aade:
     tabs:
       -
         elements:
           -
-            fieldUid: a004cfa0-a7f8-419b-8343-d6670a0a52e8
+            fieldUid: a004cfa0-a7f8-419b-8343-d6670a0a52e8 # Heading
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad
+            fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad # Pages
             instructions: null
             label: null
             required: false
@@ -25,7 +25,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  18ab3594-a62d-4903-9c6c-b791d64fd4ad:
+  18ab3594-a62d-4903-9c6c-b791d64fd4ad: # Pages
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: pages
@@ -40,7 +41,7 @@ fields:
       showSiteMenu: false
       source: null
       sources:
-        - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5'
+        - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Pages
         - singles
       targetSiteId: null
       validateRelatedElements: false
@@ -48,7 +49,8 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  a004cfa0-a7f8-419b-8343-d6670a0a52e8:
+  a004cfa0-a7f8-419b-8343-d6670a0a52e8: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -62,7 +64,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

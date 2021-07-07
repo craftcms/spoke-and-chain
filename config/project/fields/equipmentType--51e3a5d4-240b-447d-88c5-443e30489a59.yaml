@@ -1,5 +1,6 @@
+columnSuffix: null
 contentColumnType: string
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: equipmentType
 instructions: ''
 name: 'Equipment Type'
@@ -13,7 +14,7 @@ settings:
   localizeRelations: false
   selectionLabel: ''
   showSiteMenu: true
-  source: 'group:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd'
+  source: 'group:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

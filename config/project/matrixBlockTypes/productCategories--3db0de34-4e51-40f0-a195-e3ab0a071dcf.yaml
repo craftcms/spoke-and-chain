@@ -1,11 +1,11 @@
-field: b9cb6112-ebae-420b-bae9-a54c387419f6
+field: b9cb6112-ebae-420b-bae9-a54c387419f6 # Footer Nav
 fieldLayouts:
   007ad558-50e4-45ef-a6bf-44c60060e91e:
     tabs:
       -
         elements:
           -
-            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75
+            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Heading
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805
+            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Product Categories
             instructions: null
             label: null
             required: false
@@ -25,7 +25,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  d5599be5-4ce7-4f5f-997b-843257caca75:
+  d5599be5-4ce7-4f5f-997b-843257caca75: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -39,12 +40,13 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  e1227ec6-29cc-4c76-8ef1-a091a264b805:
+  e1227ec6-29cc-4c76-8ef1-a091a264b805: # Product Categories
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: productCategories
@@ -60,7 +62,7 @@ fields:
       localizeRelations: false
       selectionLabel: ''
       showSiteMenu: false
-      source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57'
+      source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
       sources: '*'
       targetSiteId: null
       validateRelatedElements: false

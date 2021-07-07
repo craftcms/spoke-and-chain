@@ -1,5 +1,6 @@
+columnSuffix: null
 contentColumnType: string(7)
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: color
 instructions: ''
 name: Color

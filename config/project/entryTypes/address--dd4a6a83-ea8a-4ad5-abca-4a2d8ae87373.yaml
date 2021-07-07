@@ -31,7 +31,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -44,7 +44,7 @@ fieldLayouts:
 handle: address
 hasTitleField: true
 name: Address
-section: f6e39d3c-bc6d-4fac-b921-c655cde09804
+section: f6e39d3c-bc6d-4fac-b921-c655cde09804 # Checkout
 sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null

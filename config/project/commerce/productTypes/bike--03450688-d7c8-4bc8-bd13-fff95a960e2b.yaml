@@ -34,7 +34,7 @@ productFieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039
+            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ productFieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 19549c94-cebb-4606-a533-aaef9dc49de7
+            fieldUid: 19549c94-cebb-4606-a533-aaef9dc49de7 # Geometry
             instructions: null
             label: null
             required: false
@@ -52,7 +52,7 @@ productFieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5f3f9d21-e4a4-40d6-b80f-a92d99e02926
+            fieldUid: 5f3f9d21-e4a4-40d6-b80f-a92d99e02926 # Show Form
             instructions: null
             label: null
             required: false
@@ -65,7 +65,7 @@ productFieldLayouts:
       -
         elements:
           -
-            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
             required: false
@@ -74,7 +74,7 @@ productFieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 705abccb-1d21-44fe-a3f7-87530e29cd34
+            fieldUid: 705abccb-1d21-44fe-a3f7-87530e29cd34 # Product Images
             instructions: null
             label: null
             required: false
@@ -87,7 +87,7 @@ productFieldLayouts:
       -
         elements:
           -
-            fieldUid: f3de475b-4a85-4e74-b144-4ff3e464f057
+            fieldUid: f3de475b-4a85-4e74-b144-4ff3e464f057 # Bike Type
             instructions: null
             label: null
             required: false
@@ -96,7 +96,7 @@ productFieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 06e900c5-0757-485f-bda2-2875772bbe25
+            fieldUid: 06e900c5-0757-485f-bda2-2875772bbe25 # Colors
             instructions: null
             label: null
             required: false
@@ -105,7 +105,7 @@ productFieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 03b7bc53-c8e9-48e4-8f45-da16de73909b
+            fieldUid: 03b7bc53-c8e9-48e4-8f45-da16de73909b # Material
             instructions: null
             label: null
             required: false
@@ -129,7 +129,7 @@ productFieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -141,7 +141,7 @@ productFieldLayouts:
         sortOrder: 5
 productTitleFormat: ''
 siteSettings:
-  5712e1f3-7800-493e-b74b-c2887dc25c81:
+  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke and Chain
     hasUrls: true
     template: _views/products/bike
     uriFormat: 'product/{slug}'

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: null
             label: null
             required: false
@@ -40,7 +40,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
@@ -53,7 +53,7 @@ fieldLayouts:
 handle: orders
 hasTitleField: true
 name: Orders
-section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c
+section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
 sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -1,5 +1,6 @@
+columnSuffix: null
 contentColumnType: string
-fieldGroup: d52553ad-dd63-4dfd-8740-d53484afbcb3
+fieldGroup: d52553ad-dd63-4dfd-8740-d53484afbcb3 # Product
 handle: mainImage
 instructions: ''
 name: 'Main Image'
