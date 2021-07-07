@@ -1,4 +1,4 @@
-baseUrl: $PRIMARY_SITE_URL
+baseUrl: $DEFAULT_SITE_URL
 enabled: true
 handle: default
 hasUrls: true
