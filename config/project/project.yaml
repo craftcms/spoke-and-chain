@@ -1,4 +1,4 @@
-dateModified: 1625690834
+dateModified: 1626134058
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke and Chain'
@@ -199,10 +199,6 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
-  logs:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.0
   redactor:
     edition: standard
     enabled: true
@@ -268,5 +264,6 @@ system:
   edition: pro
   live: true
   name: 'Spoke and Chain'
+  retryDuration: null
   schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
