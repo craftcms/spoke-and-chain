@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "722bf070c107334f659b189531766318",
+    "content-hash": "d8c04c77fda8506c09d79b9faa9d1d9f",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -496,11 +496,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.0-beta.5",
+            "version": "3.7.0-beta.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/d2d02998aeff3f95c50cf636baa2f06927e6f43c",
-                "reference": "d2d02998aeff3f95c50cf636baa2f06927e6f43c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/e387e74f860637ca6b8fd82498ce83192dea406f",
+                "reference": "e387e74f860637ca6b8fd82498ce83192dea406f",
                 "shasum": ""
             },
             "require": {
@@ -521,7 +521,7 @@
                 "ext-zip": "*",
                 "guzzlehttp/guzzle": "^6.5.5|^7.2.0",
                 "laminas/laminas-feed": "~2.12.3|^2.13.1",
-                "league/flysystem": "^1.1.3",
+                "league/flysystem": "^1.1.4",
                 "league/oauth2-client": "^2.6.0",
                 "mikehaertl/php-shellcommand": "^1.6.3",
                 "php": ">=7.2.5",
@@ -584,7 +584,7 @@
                 "docs": "https://craftcms.com/docs/3.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2021-06-29T17:01:38+00:00"
+            "time": "2021-07-09T17:24:09+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -833,11 +833,6 @@
         {
             "name": "davechild/textstatistics",
             "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DaveChild/Text-Statistics.git",
-                "reference": "dd16252a5c78fad6f8ea4fcd7e55d14fd07b1382"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/DaveChild/Text-Statistics/zipball/dd16252a5c78fad6f8ea4fcd7e55d14fd07b1382",
@@ -846,9 +841,6 @@
             },
             "require": {
                 "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.2.*"
             },
             "suggest": {
                 "ext-bcmath": "More accurate floating point calculations.",
@@ -865,7 +857,6 @@
                     "DaveChild\\TextStatistics": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -879,10 +870,6 @@
             ],
             "description": "PHP package to measure the readability of text according to various algorithms.",
             "homepage": "https://github.com/DaveChild/Text-Statistics",
-            "support": {
-                "issues": "https://github.com/DaveChild/Text-Statistics/issues",
-                "source": "https://github.com/DaveChild/Text-Statistics/tree/master"
-            },
             "time": "2018-06-19T09:25:42+00:00"
         },
         {
@@ -1151,45 +1138,6 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2021-01-21T10:13:20+00:00"
-        },
-        {
-            "name": "ether/logs",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ethercreative/logs.git",
-                "reference": "dd2861b3b76a8cd9a49e31d6756292218ca6fae9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/logs/zipball/dd2861b3b76a8cd9a49e31d6756292218ca6fae9",
-                "reference": "dd2861b3b76a8cd9a49e31d6756292218ca6fae9",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "logs",
-                "name": "Logs",
-                "developer": "Ether Creative",
-                "developerUrl": "https://ethercreative.co.uk",
-                "class": "ether\\logs\\Logs",
-                "schemaVersion": "3.0.0"
-            },
-            "autoload": {
-                "psr-4": {
-                    "ether\\logs\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Access logs from the CP",
-            "support": {
-                "issues": "https://github.com/ethercreative/logs",
-                "source": "https://github.com/ethercreative/logs/tree/master"
-            },
-            "time": "2019-11-25T16:59:18+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -2536,11 +2484,6 @@
         {
             "name": "nystudio107/craft-plugin-manifest",
             "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-plugin-manifest.git",
-                "reference": "65a5ddb78a6fcaefb85841f82d6196aa93c8f455"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/nystudio107/craft-plugin-manifest/zipball/65a5ddb78a6fcaefb85841f82d6196aa93c8f455",
@@ -2556,7 +2499,6 @@
                     "nystudio107\\pluginmanifest\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2574,23 +2516,17 @@
             ],
             "support": {
                 "docs": "https://github.com/nystudio107/craft-plugin-manifest/blob/v1/README.md",
-                "issues": "https://github.com/nystudio107/craft-plugin-manifest/issues",
-                "source": "https://github.com/nystudio107/craft-plugin-manifest/tree/1.0.4"
+                "issues": "https://github.com/nystudio107/craft-plugin-manifest/issues"
             },
             "time": "2021-05-07T02:18:23+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.3.43",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "c74c121a557ffb1b284cf3f73285920dfda28c10"
-            },
+            "version": "3.3.44",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/c74c121a557ffb1b284cf3f73285920dfda28c10",
-                "reference": "c74c121a557ffb1b284cf3f73285920dfda28c10",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/29bf7a577b7845cc47b25c91e81dd9a92aae0001",
+                "reference": "29bf7a577b7845cc47b25c91e81dd9a92aae0001",
                 "shasum": ""
             },
             "require": {
@@ -2599,10 +2535,6 @@
                 "nystudio107/craft-plugin-manifest": "^1.0.4",
                 "php-science/textrank": "^1.0.3",
                 "sunra/php-simple-html-dom-parser": "^1.5.2"
-            },
-            "require-dev": {
-                "codeception/codeception": "^3.0",
-                "vlucas/phpdotenv": "^3.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -2616,7 +2548,6 @@
                     "nystudio107\\seomatic\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2628,38 +2559,32 @@
             ],
             "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
-                "Craft",
-                "JSON-LD",
-                "Sitemap",
                 "cms",
+                "craft",
                 "craft-plugin",
                 "craftcms",
                 "facebook",
+                "json-ld",
                 "meta",
                 "seo",
                 "seomatic",
+                "sitemap",
                 "tags",
                 "twitter"
             ],
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
-                "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.43"
+                "issues": "https://nystudio107.com/plugins/seomatic/support"
             },
-            "time": "2021-06-08T17:10:11+00:00"
+            "time": "2021-07-10T02:24:09+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
-            "version": "1.2.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-twigpack.git",
-                "reference": "53d8eb90a72c4fa9e7a907a943a15ab0ea6d90cd"
-            },
+            "version": "1.2.15",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-twigpack/zipball/53d8eb90a72c4fa9e7a907a943a15ab0ea6d90cd",
-                "reference": "53d8eb90a72c4fa9e7a907a943a15ab0ea6d90cd",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigpack/zipball/b6fbb07ab1fb84d7bcc90995275b35e529827426",
+                "reference": "b6fbb07ab1fb84d7bcc90995275b35e529827426",
                 "shasum": ""
             },
             "require": {
@@ -2677,7 +2602,6 @@
                     "nystudio107\\twigpack\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2699,10 +2623,9 @@
             ],
             "support": {
                 "docs": "https://nystudio107.com/plugins/twigpack/documentation",
-                "issues": "https://nystudio107.com/plugins/twigpack/support",
-                "source": "https://github.com/nystudio107/craft-twigpack/tree/1.2.14"
+                "issues": "https://nystudio107.com/plugins/twigpack/support"
             },
-            "time": "2021-04-28T21:08:54+00:00"
+            "time": "2021-07-12T02:46:01+00:00"
         },
         {
             "name": "oberon/starfield",
@@ -2907,11 +2830,6 @@
         {
             "name": "php-science/textrank",
             "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-Science/TextRank.git",
-                "reference": "cfa7480c9e136492109602473c242c1788279a4d"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/PHP-Science/TextRank/zipball/cfa7480c9e136492109602473c242c1788279a4d",
@@ -2923,9 +2841,6 @@
                 "ext-mbstring": "*",
                 "php": ">=7.2"
             },
-            "require-dev": {
-                "phpunit/phpunit": "9.*"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2935,7 +2850,6 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2955,10 +2869,6 @@
                 "summarization",
                 "textrank"
             ],
-            "support": {
-                "issues": "https://github.com/PHP-Science/TextRank/issues",
-                "source": "https://github.com/PHP-Science/TextRank/tree/1.2.1"
-            },
             "time": "2021-02-27T07:54:19+00:00"
         },
         {
@@ -3950,11 +3860,6 @@
         {
             "name": "sunra/php-simple-html-dom-parser",
             "version": "v1.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
-                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/75b9b1cb64502d8f8c04dc11b5906b969af247c6",
@@ -3971,7 +3876,6 @@
                     "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3993,10 +3897,6 @@
                 "html",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/sunra/php-simple-html-dom-parser/issues",
-                "source": "https://github.com/sunra/php-simple-html-dom-parser/tree/master"
-            },
             "time": "2016-11-22T22:57:47+00:00"
         },
         {
