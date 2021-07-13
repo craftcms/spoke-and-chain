@@ -50,7 +50,7 @@ fieldLayouts:
 handle: bikeTypes
 name: 'Bike Types'
 siteSettings:
-  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke and Chain
+  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
     hasUrls: true
     template: _views/categories/bikes
     uriFormat: 'bikes/{slug}'

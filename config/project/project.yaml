@@ -1,7 +1,7 @@
-dateModified: 1626196309
+dateModified: 1626205172
 email:
   fromEmail: support@craftcms.com
-  fromName: 'Spoke and Chain'
+  fromName: 'Spoke & Chain'
   replyToEmail: null
   template: ''
   transportSettings:
@@ -25,7 +25,7 @@ meta:
     03b7bc53-c8e9-48e4-8f45-da16de73909b: Material # Material
     3db0de34-4e51-40f0-a195-e3ab0a071dcf: 'Product Categories' # Product Categories
     03f1355e-67b8-457a-b8e9-20cbc34af8c4: Intro # Intro
-    4b6d893d-380e-4fbc-970b-ed925fba9aaf: 'Spoke and Chain' # Spoke and Chain
+    4b6d893d-380e-4fbc-970b-ed925fba9aaf: 'Spoke & Chain' # Spoke & Chain
     4ddf421a-c279-4733-9b0c-2df498c98ec8: Image # Image
     5a97754b-a6d0-41f2-ba98-cf145d689df1: Colors # Colors
     5f3f9d21-e4a4-40d6-b80f-a92d99e02926: 'Show Form' # Show Form
@@ -65,7 +65,7 @@ meta:
     4735edf8-ae6c-4f28-a8df-338ca5637aab: Button # Button
     5075e975-0eb8-4e62-9ae7-9d8cd88348eb: Emails # Emails
     5572edd6-3495-4a53-8f09-68bb6c53d79a: 'Main Image' # Main Image
-    5712e1f3-7800-493e-b74b-c2887dc25c81: 'Spoke and Chain' # Spoke and Chain
+    5712e1f3-7800-493e-b74b-c2887dc25c81: 'Spoke & Chain' # Spoke & Chain
     6443fbe4-a797-4f2a-8b81-c76619128990: 'Button URL' # Button URL
     8680f635-edfc-4169-a039-4c4a489258d7: Homepage # Homepage
     19549c94-cebb-4606-a533-aaef9dc49de7: Geometry # Geometry
@@ -270,7 +270,7 @@ plugins:
 system:
   edition: pro
   live: false
-  name: 'Spoke and Chain'
+  name: 'Spoke & Chain'
   retryDuration: null
   schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
