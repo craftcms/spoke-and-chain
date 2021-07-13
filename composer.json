@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/aws-s3": "^1.2",
-    "craftcms/cms": "dev-develop#996a4933ddef0d259be9bf1d5fee3bcf61705bf0 as 3.7.0",
+    "craftcms/cms": "dev-develop#6948a8ab4b64a0224ba69cccb5c5a4deea196b19 as 3.7.0",
     "craftcms/commerce": "3.3.5.1",
     "craftcms/redactor": "^2.8",
     "fakerphp/faker": "^1.9",
