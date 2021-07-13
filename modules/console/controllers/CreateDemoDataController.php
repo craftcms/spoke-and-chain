@@ -246,7 +246,7 @@ class CreateDemoDataController extends Controller
             }
 
             $this->_guestCustomers[] = $attributes;
-            $this->stdout('Creating guest customer: ' . $attributes['firstName'] . ' ' . $attributes['lastName'] . PHP_EOL, Console::FG_RED);
+            $this->stdout('Creating guest customer: ' . $attributes['firstName'] . ' ' . $attributes['lastName'] . PHP_EOL, Console::FG_CYAN);
         }
     }
 
@@ -322,14 +322,14 @@ class CreateDemoDataController extends Controller
         $date = new DateTime();
         while ($date->format('Y-m-d') >= $this->_startDate->format('Y-m-d')) {
             // Carts
-            $this->stdout('Creating carts for: ' . $date->format('Y-m-d') . PHP_EOL, Console::FG_YELLOW);
+            $this->stdout('Creating carts for: ' . $date->format('Y-m-d') . PHP_EOL, Console::FG_GREY);
             for ($i = 1; $i <= random_int(1, self::CARTS_PER_DAY_MAX); $i++) {
                 $date = $this->_setTime($date);
                 $this->_createOrderElement($date, false);
             }
 
             // Orders
-            $this->stdout('Creating orders for: ' . $date->format('Y-m-d') . PHP_EOL, Console::FG_YELLOW);
+            $this->stdout('Creating orders for: ' . $date->format('Y-m-d') . PHP_EOL, Console::FG_GREY);
             for ($j = 1; $j <= random_int(1, self::ORDERS_PER_DAY_MAX); $j++) {
                 $date = $this->_setTime($date);
                 $this->_createOrderElement($date);
@@ -498,12 +498,10 @@ class CreateDemoDataController extends Controller
                 /** @var Entry $review */
                 $review = Craft::createObject([
                     'class' => Entry::class,
-                    'attributes' => [
-                        'authorId' => $author->id,
-                        'postDate' => $reviewDate,
-                    ]
                 ]);
 
+                $review->authorId = $author->id;
+                $review->postDate = $reviewDate;
                 $review->sectionId = $reviewsSection->id;
                 $review->typeId = $reviewsSection->getEntryTypes()[0]->id;
                 $review->title = $this->_faker->randomLetter . '. ' . $this->_faker->lastName;
