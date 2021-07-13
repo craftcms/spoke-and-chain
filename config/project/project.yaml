@@ -1,4 +1,4 @@
-dateModified: 1626195384
+dateModified: 1626195798
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke and Chain'
@@ -134,6 +134,10 @@ plugins:
     edition: pro
     enabled: true
     schemaVersion: 3.4.11
+  default-dashboard:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   freeform:
     edition: pro
     enabled: true

@@ -1,6 +1,6 @@
 bcc: null
 cc: null
-enabled: true
+enabled: false
 language: orderLanguage
 name: 'Order Received'
 plainTextTemplatePath: ''

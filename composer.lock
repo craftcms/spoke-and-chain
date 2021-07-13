@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "853154d9bfe8f5e05a5983b9c8039f24",
+    "content-hash": "8c2eaa280dd507a7a182f924aacc474c",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -5415,6 +5415,105 @@
                 "templating"
             ],
             "time": "2021-05-16T12:12:47+00:00"
+        },
+        {
+            "name": "verbb/base",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/verbb-base.git",
+                "reference": "006cc4979e2b7669234a90bb7347129fe0185eb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/006cc4979e2b7669234a90bb7347129fe0185eb8",
+                "reference": "006cc4979e2b7669234a90bb7347129fe0185eb8",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "yii-module",
+            "autoload": {
+                "psr-4": {
+                    "verbb\\base\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
+            "support": {
+                "docs": "https://github.com/verbb/verbb-base",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/verbb-base/issues?state=open",
+                "rss": "https://github.com/verbb/verbb-base/commits/v2.atom",
+                "source": "https://github.com/verbb/verbb-base"
+            },
+            "time": "2021-03-17T20:54:49+00:00"
+        },
+        {
+            "name": "verbb/default-dashboard",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/default-dashboard.git",
+                "reference": "7d76c4791039f746ae51c2544ee8a4f30667615d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/7d76c4791039f746ae51c2544ee8a4f30667615d",
+                "reference": "7d76c4791039f746ae51c2544ee8a4f30667615d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "verbb/base": "^1.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Default Dashboard",
+                "handle": "default-dashboard",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/default-dashboard/master/CHANGELOG.md",
+                "class": "verbb\\defaultdashboard\\DefaultDashboard"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\defaultdashboard\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "A Craft CMS plugin to set default dashboard widgets for users.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/verbb/default-dashboard",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/default-dashboard/issues?state=open",
+                "rss": "https://github.com/verbb/default-dashboard/commits/v2.atom",
+                "source": "https://github.com/verbb/default-dashboard"
+            },
+            "time": "2020-04-16T01:08:23+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
