@@ -9,7 +9,7 @@
     <div class="container">
         <div class="mt-8 py-8">
             {% if footerNav|length %}
-                <div class="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
+                <div class="pb-8 xl:grid xl:grid-cols-4 xl:gap-8">
                     <div class="grid grid-cols-2 gap-8 xl:col-span-4">
                         <div class="md:grid md:grid-cols-2 md:gap-8">
                             {% for col in footerNav|slice(0, 2) %}
@@ -24,6 +24,7 @@
                             </div>
                         {% endif %}
                     </div>
+                    {# TODO implement when the demo has multi site
                     <div class="mt-12 xl:mt-0 space-y-4">
                         <h4 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
                             {{ footer.subheading }}
@@ -44,6 +45,7 @@
 
                         {% include '_includes/components/modal' %}
                     </div>
+                    #}
                 </div>
             {% endif %}
             <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
