@@ -1,7 +1,7 @@
 <!-- Template: {{ _self }}.twig -->
 {# Params #}
 {% set lineItem = lineItem is not defined ? null : lineItem %}
-{% set purchasable = lineItem ? lineItem.getPurchasable() : null %}
+{% set purchasable = purchasable is defined ? purchasable : (lineItem ? lineItem.getPurchasable() : null) %}
 {% set form = form is not defined ? false : form %}
 {% set isCompleted = isCompleted is not defined ? true : isCompleted %}
 {% set mainImage = not isCompleted and purchasable and purchasable.product ? purchasable.product.mainImage.one() : null %}
@@ -46,7 +46,7 @@
         <div class="flex flex-wrap items-center w-full {{ showImage ? 'md:w-2/3 lg:w-4/5' : '' }}">
             {# Product #}
             <div class="w-full lg:w-1/2 md:pr-6">
-                {{ tag(purchasable ? 'a' : div, {
+                {{ tag(purchasable ? 'a' : 'div', {
                     class: "font-bold text-xl text-black block",
                     href: purchasable ? purchasable.product.url : null,
                     text: lineItem.description,
