@@ -196,6 +196,8 @@ class SeedController extends Controller
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
 
+        sleep(5);
+
         return ExitCode::OK;
     }
 
