@@ -269,7 +269,7 @@ plugins:
     schemaVersion: 1.0.0
 system:
   edition: pro
-  live: true
+  live: false
   name: 'Spoke and Chain'
   retryDuration: null
   schemaVersion: 3.7.7

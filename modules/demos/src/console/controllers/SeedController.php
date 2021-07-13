@@ -196,7 +196,7 @@ class SeedController extends Controller
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
 
-        sleep(5);
+        Craft::$app->projectConfig->set('system.live', true, null, false);
 
         return ExitCode::OK;
     }
