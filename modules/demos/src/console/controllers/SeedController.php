@@ -160,9 +160,6 @@ class SeedController extends Controller
         $this->_startDate = $startDate->sub($interval);
 
         $this->_faker = \Faker\Factory::create();
-        $this->_countries = Plugin::getInstance()->getCountries()->getAllEnabledCountries();
-        $this->_products = Craft::$app->getElements()->createElementQuery(Product::class)->all();
-        $this->_orderStatuses = Plugin::getInstance()->getOrderStatuses()->getAllOrderStatuses();
     }
 
     /**
@@ -209,7 +206,7 @@ class SeedController extends Controller
      */
     public function actionAdminUser(): int
     {
-        $this->stdout('Creating admin user ... ');
+        $this->stdout('Creating admin user ... ' . PHP_EOL);
 
         $user = new User([
             'username' => $this->username,
@@ -237,7 +234,7 @@ class SeedController extends Controller
      */
     public function actionFreeformData(string $formHandle): int
     {
-        $this->stdout("Seeding Freeform data ..." . PHP_EOL);
+        $this->stdout('Seeding Freeform data ... ' . PHP_EOL);
 
         $freeform = Freeform::getInstance();
         $form = $freeform->forms->getFormByHandle($formHandle)->getForm();
@@ -267,7 +264,7 @@ class SeedController extends Controller
 
     public function actionRefreshArticles(): int
     {
-        $this->stdout("Refreshing articles ... ");
+        $this->stdout('Refreshing articles ... ' . PHP_EOL);
         $entries = Entry::find()->section('articles');
 
         foreach ($entries->all() as $entry) {
@@ -286,7 +283,7 @@ class SeedController extends Controller
      */
     public function actionWaitForDb(int $maxTime = 0): int
     {
-        $this->stdout("Waiting for database ..." . PHP_EOL);
+        $this->stdout('Waiting for database ... ' . PHP_EOL);
         $retries = 0;
         $startTime = time();
 
@@ -374,7 +371,9 @@ class SeedController extends Controller
      */
     private function _createUsers()
     {
-        for ($i = 0; $i < random_int(self::USERS_MIN, self::USERS_MAX); $i++) {
+        $this->stdout('Creating users ... ' . PHP_EOL);
+        $numUsers = random_int(self::USERS_MIN, self::USERS_MAX);
+        for ($i = 1; $i <= $numUsers; $i++) {
             $firstName = $this->_faker->firstName();
             $lastName = $this->_faker->lastName;
             $email = $this->_faker->unique()->email;
@@ -384,6 +383,7 @@ class SeedController extends Controller
                 'username' => $email,
                 'fullName' => $firstName . ' ' . $lastName,
             ];
+            $this->stdout("    - [{$i}/{$numUsers}] Creating user " . $attributes['fullName'] . ' ... ');
 
             /** @var User $user */
             $user = Craft::createObject([
@@ -409,9 +409,10 @@ class SeedController extends Controller
                 'firstName' => $firstName,
                 'lastName' => $lastName,
             ]);
-
-            $this->stdout('Creating user: ' . $attributes['fullName'] . PHP_EOL, Console::FG_PURPLE);
+            $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
         }
+
+        $this->stdout('Done creating users' . PHP_EOL, Console::FG_GREEN);
     }
 
     /**
@@ -422,7 +423,10 @@ class SeedController extends Controller
      */
     private function _createGuestCustomers()
     {
-        for ($i = 0; $i < random_int(self::CUSTOMERS_MIN, self::CUSTOMERS_MAX); $i++) {
+        $this->stdout('Creating customers...' . PHP_EOL);
+        $numCustomers = random_int(self::CUSTOMERS_MIN, self::CUSTOMERS_MAX);
+        for ($i = 0; $i <= $numCustomers; $i++) {
+            /** @var Customer $customer */
             $customer = Craft::createObject(['class' => Customer::class]);
             Plugin::getInstance()->getCustomers()->saveCustomer($customer);
 
@@ -434,6 +438,7 @@ class SeedController extends Controller
                 'addresses' => [],
             ];
 
+            $this->stdout("    - [{$i}/{$numCustomers}] Creating guest customer " . $attributes['firstName'] . ' ' . $attributes['lastName'] . ' ... ');
             for ($j = 0; $j <= random_int(1, 3); $j++) {
                 $address = $this->_createAddress($attributes['firstName'], $attributes['lastName'], $customer);
 
@@ -441,8 +446,10 @@ class SeedController extends Controller
             }
 
             $this->_guestCustomers[] = $attributes;
-            $this->stdout('Creating guest customer: ' . $attributes['firstName'] . ' ' . $attributes['lastName'] . PHP_EOL, Console::FG_CYAN);
+            $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
         }
+
+        $this->stdout('Done creating customers' . PHP_EOL, Console::FG_GREEN);
     }
 
     /**
@@ -489,6 +496,10 @@ class SeedController extends Controller
      */
     private function _getRandomCountry(): Country
     {
+        if (empty($this->_countries)) {
+            $this->_countries = Plugin::getInstance()->getCountries()->getAllEnabledCountries();
+        }
+
         return $this->_faker->randomElement($this->_countries);
     }
 
@@ -514,24 +525,29 @@ class SeedController extends Controller
      */
     private function _createOrders()
     {
+        $this->stdout('Creating orders...' . PHP_EOL);
         $date = new DateTime();
         while ($date->format('Y-m-d') >= $this->_startDate->format('Y-m-d')) {
             // Carts
-            $this->stdout('Creating carts for: ' . $date->format('Y-m-d') . PHP_EOL, Console::FG_GREY);
+            $this->stdout('    - [' . $date->format('Y-m-d') . '] Creating carts ... ');
             for ($i = 1; $i <= random_int(1, self::CARTS_PER_DAY_MAX); $i++) {
                 $date = $this->_setTime($date);
                 $this->_createOrderElement($date, false);
             }
+            $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
             // Orders
-            $this->stdout('Creating orders for: ' . $date->format('Y-m-d') . PHP_EOL, Console::FG_GREY);
+            $this->stdout('    - [' . $date->format('Y-m-d') . '] Creating orders ... ');
             for ($j = 1; $j <= random_int(1, self::ORDERS_PER_DAY_MAX); $j++) {
                 $date = $this->_setTime($date);
                 $this->_createOrderElement($date);
             }
 
             $date->sub(new DateInterval('P1D'));
+            $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
         }
+
+        $this->stdout('Done creating orders' . PHP_EOL, Console::FG_GREEN);
     }
 
     /**
@@ -581,6 +597,10 @@ class SeedController extends Controller
      */
     private function _getRandomProduct(): Product
     {
+        if (empty($this->_products)) {
+            $this->_products = Craft::$app->getElements()->createElementQuery(Product::class)->all();
+        }
+
         return $this->_faker->randomElement($this->_products);
     }
 
@@ -591,6 +611,10 @@ class SeedController extends Controller
      */
     private function _getRandomOrderStatus(): OrderStatus
     {
+        if (empty($this->_orderStatuses)) {
+            $this->_orderStatuses = Plugin::getInstance()->getOrderStatuses()->getAllOrderStatuses();
+        }
+
         return $this->_faker->randomElement($this->_orderStatuses);
     }
 
@@ -671,6 +695,14 @@ class SeedController extends Controller
         }
     }
 
+    /**
+     * Create product review data
+     *
+     * @throws \Throwable
+     * @throws \craft\errors\ElementNotFoundException
+     * @throws \yii\base\Exception
+     * @throws \yii\base\InvalidConfigException
+     */
     private function _createReviews()
     {
         $reviewsSection = Craft::$app->getSections()->getSectionByHandle('reviews');
@@ -684,7 +716,11 @@ class SeedController extends Controller
 
         $startDateInterval = new DateInterval(self::START_DATE_INTERVAL);
 
+        $this->stdout('Creating reviews ... ' . PHP_EOL);
+        $index = 1;
+        $numProducts = count($this->_products);
         foreach ($this->_products as $product) {
+            $this->stdout("    - [{$index}/{$numProducts}] Creating reviews for " . $product->title . ' ... ');
             for ($i = 0; $i <= random_int(self::REVIEWS_PER_PRODUCT_MIN, self::REVIEWS_PER_PRODUCT_MAX); $i++) {
                 $reviewDate = new DateTime();
                 $reviewDate->sub(new DateInterval('P' . random_int(0, $startDateInterval->days) . 'D'));
@@ -709,9 +745,13 @@ class SeedController extends Controller
                     'stars' => $stars,
                 ]);
 
-                $this->stdout('Creating ' . $stars . ' star review for ' . $product->title. PHP_EOL, Console::FG_BLUE);
                 Craft::$app->getElements()->saveElement($review);
             }
+
+            $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+            $index++;
         }
+
+        $this->stdout('Done creating reviews' . PHP_EOL, Console::FG_GREEN);
     }
 }
