@@ -3,17 +3,27 @@
 {% set isFirst = isFirst is not defined ? false : isFirst %}
 {% set isLast = isLast is not defined ? false : isLast %}
 {% set form = form is defined and form ? form : (block ? block.form : null) %}
-{% set attrs = {
-  id: 'contact-' ~ form.id
-} %}
+{% set container = container is defined ? container : true %}
+{% set attrs = { id: 'contact-' ~ form.id } %}
 {% set attrs = attributes is defined ? attrs|merge(attributes) : attrs %}
 
 {% if form %}
-  {{ sprig('_includes/components/forms/contact',
-    {
-      formId: form.id,
-      heading: block and block.heading is defined ? block.heading : false,
-    },
-    attrs
-  ) }}
+    {% set formOutput %}
+        {{ sprig('_includes/components/forms/contact',
+            {
+                formId: form.id,
+                heading: block and block.heading is defined ? block.heading : false,
+            },
+            attrs
+        ) }}
+    {% endset %}
+
+    {% if container %}
+        <div class="container pb-8">
+            {{ formOutput }}
+        </div>
+    {% else %}
+        {{ formOutput }}
+    {% endif %}
+
 {% endif %}
