@@ -208,7 +208,7 @@ class SeedController extends Controller
      */
     public function actionAdminUser(): int
     {
-        $this->stdout('Creating admin user ... ' . PHP_EOL);
+        $this->stdout('Creating admin user ... ');
 
         $user = new User([
             'username' => $this->username,
@@ -266,7 +266,7 @@ class SeedController extends Controller
 
     public function actionRefreshArticles(): int
     {
-        $this->stdout('Refreshing articles ... ' . PHP_EOL);
+        $this->stdout('Refreshing articles ... ');
         $entries = Entry::find()->section('articles');
 
         foreach ($entries->all() as $entry) {
@@ -306,12 +306,12 @@ class SeedController extends Controller
 
     public function actionCommerceData(): int
     {
-        $this->stdout('Creating demo data' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Seeding Commerce data ... ' . PHP_EOL);
         $this->_createUsers();
         $this->_createGuestCustomers();
         $this->_createOrders();
         $this->_createReviews();
-        $this->stdout('Finished creating demo data' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Done seeding Commerce data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
     }
