@@ -22,6 +22,7 @@ use craft\errors\ElementException;
 use craft\helpers\Console;
 use craft\helpers\DateTimeHelper;
 use craft\helpers\Db;
+use craft\helpers\FileHelper;
 use DateInterval;
 use DateTime;
 use Faker\Generator as FakerGenerator;
@@ -191,14 +192,40 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
+        $this->stdout('Beginning seed ... ' . PHP_EOL);
         $this->runAction('admin-user');
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
-
-        Craft::$app->projectConfig->set('system.live', true, null, false);
-
+        $this->_cleanup();
+        $this->stdout('Seed complete.' . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
+    }
+
+    private function _cleanup()
+    {
+        $this->stdout('Setting system status to online ... ');
+        Craft::$app->projectConfig->set('system.live', true, null, false);
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $this->stdout('Running queue ... ');
+        Craft::$app->queue->run();
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $this->stdout('Clearing data cache ... ');
+        Craft::$app->getCache()->flush();
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $compiledClassesPath = Craft::$app->getPath()->getCompiledClassesPath();
+
+        foreach(FileHelper::findFiles($compiledClassesPath) as $path) {
+            $this->stdout('Dumping file contents of "' . $path . '":'. PHP_EOL .  PHP_EOL);
+            $this->stdout(file_get_contents($path) . PHP_EOL . PHP_EOL);
+        }
+
+        $this->stdout('Clearing compiled classes ... ');
+        FileHelper::removeDirectory($compiledClassesPath);
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
     }
 
     /**
@@ -208,7 +235,7 @@ class SeedController extends Controller
      */
     public function actionAdminUser(): int
     {
-        $this->stdout('Creating admin user ... ' . PHP_EOL);
+        $this->stdout('Creating admin user ... ');
 
         $user = new User([
             'username' => $this->username,
@@ -266,7 +293,7 @@ class SeedController extends Controller
 
     public function actionRefreshArticles(): int
     {
-        $this->stdout('Refreshing articles ... ' . PHP_EOL);
+        $this->stdout('Refreshing articles ... ');
         $entries = Entry::find()->section('articles');
 
         foreach ($entries->all() as $entry) {
@@ -306,12 +333,12 @@ class SeedController extends Controller
 
     public function actionCommerceData(): int
     {
-        $this->stdout('Creating demo data' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Seeding Commerce data ... ' . PHP_EOL);
         $this->_createUsers();
         $this->_createGuestCustomers();
         $this->_createOrders();
         $this->_createReviews();
-        $this->stdout('Finished creating demo data' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Done seeding Commerce data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
     }
