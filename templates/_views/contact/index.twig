@@ -18,7 +18,8 @@
       {% if form %}
         {% include '_includes/components/content/form' with {
           form: form,
-          attributes: { class: 'w-full' }
+          attributes: { class: 'w-full' },
+          container: false,
         } %}
       {% endif %}
     </div>
