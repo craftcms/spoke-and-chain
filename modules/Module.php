@@ -115,27 +115,5 @@ class Module extends \yii\base\Module
                 $variable->set('reviews', Reviews::class);
             }
         );
-
-        if (\Craft::$app->env === 'dev') {
-            \Craft::$container->set(\craft\awss3\Volume::class, function($container, $params, $config) {
-                if (empty($config['id'])) {
-                    return new \craft\awss3\Volume($config);
-                }
-
-                return new \craft\volumes\Local([
-                    'id' => $config['id'],
-                    'uid' => $config['uid'],
-                    'name' => $config['name'],
-                    'handle' => $config['handle'],
-                    'hasUrls' => $config['hasUrls'],
-                    'url' => "@web/local-volumes/{$config['handle']}",
-                    'path' => "@webroot/local-volumes/{$config['handle']}",
-                    'sortOrder' => $config['sortOrder'],
-                    'dateCreated' => $config['dateCreated'],
-                    'dateUpdated' => $config['dateUpdated'],
-                    'fieldLayoutId' => $config['fieldLayoutId'],
-                ]);
-            });
-        }
     }
 }
