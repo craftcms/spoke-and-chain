@@ -1,8 +1,8 @@
 {
   "require": {
     "craftcms/aws-s3": "^1.2",
-    "craftcms/cms": "dev-develop#6948a8ab4b64a0224ba69cccb5c5a4deea196b19 as 3.7.0",
-    "craftcms/commerce": "dev-develop#a0fd8c9c2f13a9f1bb0889393a011fc63a3ce661 as 3.4",
+    "craftcms/cms": "^3.7",
+    "craftcms/commerce": "^3.4",
     "craftcms/redactor": "^2.8",
     "fakerphp/faker": "^1.9",
     "nystudio107/craft-seomatic": "3.3.44",
