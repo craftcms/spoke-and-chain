@@ -47,47 +47,74 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        // Address validation rules
-        Event::on(Address::class, Address::EVENT_DEFINE_RULES, function($event) {
-            $event->rules[] = [[
-                'firstName',
-                'lastName',
-                'address1',
-                'city',
-                'countryId',
-                'zipCode'
-            ], 'required'];
-        });
-
-        Event::on(Variant::class, Variant::EVENT_AFTER_CAPTURE_PRODUCT_SNAPSHOT, function($event) {
-            /** @var Product $product */
-            $product = $event->product;
-            $attributes = $product->getAttributes(['mainImage']);
-
-            if (!empty($attributes) && array_key_exists('mainImage', $attributes) && $mainImage = $attributes['mainImage']->one()) {
-                $event->fieldData['mainImage'] = $mainImage->id;
+        // Add custom address validation rules
+        Event::on(
+            Address::class,
+            Address::EVENT_DEFINE_RULES,
+            function($event) {
+                $event->rules[] = [[
+                    'firstName',
+                    'lastName',
+                    'address1',
+                    'city',
+                    'countryId',
+                    'zipCode'
+                ], 'required'];
             }
-        });
+        );
 
-        Event::on(Entry::class, Entry::EVENT_AFTER_SAVE, function($event) {
-            if ($event->sender && $event->sender->section->handle == 'reviews') {
-                Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
+        // Include a reference to the main product image in the variant snapshot
+        Event::on(
+            Variant::class,
+            Variant::EVENT_AFTER_CAPTURE_PRODUCT_SNAPSHOT,
+            function($event) {
+                /** @var Product $product */
+                $product = $event->product;
+                $attributes = $product->getAttributes(['mainImage']);
+
+                if (!empty($attributes) &&
+                    array_key_exists('mainImage', $attributes) &&
+                    $mainImage = $attributes['mainImage']->one()
+                ) {
+                    $event->fieldData['mainImage'] = $mainImage->id;
+                }
             }
-        });
+        );
 
-        Event::on(Entry::class, Entry::EVENT_AFTER_DELETE, function($event) {
-            if ($event->sender && $event->sender->section->handle == 'reviews') {
-                Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
+        // Clear our custom review cache when a new review is saved
+        Event::on(
+            Entry::class,
+            Entry::EVENT_AFTER_SAVE,
+            function($event) {
+                if ($event->sender && $event->sender->section->handle == 'reviews') {
+                    Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
+                }
             }
-        });
+        );
 
-        Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function(Event $e) {
-            /** @var CraftVariable $variable */
-            $variable = $e->sender;
+        // Clear our custom review cache when a new review is deleted
+        Event::on(
+            Entry::class,
+            Entry::EVENT_AFTER_DELETE,
+            function($event) {
+                if ($event->sender && $event->sender->section->handle == 'reviews') {
+                    Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
+                }
+            }
+        );
 
-            // Attach reviews services
-            $variable->set('reviews', Reviews::class);
-        });
+        // Register our custom Reviews service
+        Event::on(
+            CraftVariable::class,
+            CraftVariable::EVENT_INIT,
+            function(Event $e) {
+                /** @var CraftVariable $variable */
+                $variable = $e->sender;
+
+                // Attach reviews services
+                $variable->set('reviews', Reviews::class);
+            }
+        );
 
         if (\Craft::$app->env === 'dev') {
             \Craft::$container->set(\craft\awss3\Volume::class, function($container, $params, $config) {
