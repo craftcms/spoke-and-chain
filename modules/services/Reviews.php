@@ -28,7 +28,7 @@ class Reviews extends BaseObject
     const CACHE_KEY = 'reviews:averageRatings';
 
     /**
-     * Get the average review rating by the product id.
+     * Get the average review rating by the product ID.
      *
      * @param $id
      * @return mixed|null
@@ -56,7 +56,7 @@ class Reviews extends BaseObject
     }
 
     /**
-     * Create the average ratings cache
+     * Create the average ratings cache.
      */
     private function _cacheAverageRatings(): void
     {
