@@ -1,4 +1,19 @@
 {
+  "name": "craftcms/demo-spoke-and-chain",
+  "description": "Spoke & Chain Demo",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project",
+    "demo",
+    "starter"
+  ],
+  "homepage": "https://craftcms.com/demo",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com"
+  },
   "require": {
     "craftcms/aws-s3": "^1.2",
     "craftcms/cms": "^3.7",
@@ -24,15 +39,10 @@
     }
   },
   "config": {
-    "sort-packages": true,
     "optimize-autoloader": true,
+    "sort-packages": true,
     "platform": {
       "php": "7.2.5"
     }
-  },
-  "scripts": {
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ]
   }
 }
