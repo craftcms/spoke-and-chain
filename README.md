@@ -1,119 +1,137 @@
-# Spoke & Chain
+<h1 align="center">Spoke & Chain Craft Commerce Demo</h1>
 
-Spoke & Chain is the demo site for Craft Commerce.
+![Spoke & Chain homepage](https://raw.githubusercontent.com/craftcms/demo-spoke-and-chain/feature/readme/web/guide/homepage.png?token=AAS7TRZH65GEPDXDZRXNVOTA7MKY2)
 
-## Local development
+## Overview
 
-### Dependencies
+Spoke & Chain is a fictitious bicycle shop custom-built to demonstrate [Craft CMS](https://craftcms.com) and [Craft Commerce](https://craftcms.com/commerce). This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo).
 
-The first step is to install the dependencies for the project. Make sure you are in the project folder.
+We’ve also included instructions below for setting up the demo in a local development environment with [Craft Nitro](https://getnitro.sh).
 
-```
-composer install
-npm install
-```
+Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerce store:
+
+- Articles and pages with custom layouts and flexible content.
+- Front-end global search for products and articles.
+- Categorized products with variants, categories, filtering, and sorting.
+- Customer membership area with subscription-based services, order tracking and returns, and account management.
+- Full, customized checkout process with coupon codes.
+- Configured for healthy SEO and built targeting WCAG AA compliance.
+
+### Development Technologies
+
+- [Craft CMS 3](https://craftcms.com/docs/3.x/)
+- [Craft Commerce 3](https://craftcms.com/docs/commerce/3.x/)
+- PostgreSQL (11.5+) / MySQL (5.7+)
+- PHP (7.2.5+), built on the [Yii 2 framework](https://www.yiiframework.com/)
+- Native Twig templates with reactive [Sprig](https://plugins.craftcms.com/sprig) components
+
+### Front End Dependencies
+
+- [webpack](https://webpack.js.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Alpine.js](https://alpinejs.dev)
+- [Cypress](https://www.cypress.io)
+
+## Local Development
 
 ### Environment
 
-Make sure to duplicate the `.env.example` file and fill out all the details.
+If you’d like to get Spoke & Chain running in a local environment, we recommend using [Craft Nitro](https://getnitro.sh):
 
-```
-cp .env.example .env
-```
+1. Follow Nitro’s [installation instructions](https://craftcms.com/docs/nitro/2.x/installation.html) for your OS.
+2. Make sure you’ve used `nitro db new` to create a MySQL 13 database engine.
+3. Run `nitro create` with the URL to this repository:
+    ```zsh
+    nitro create https://github.com/craftcms/demo-spoke-and-chain spokeandchain
+    ```
+    - hostname: `spokeandchain.nitro`
+    - web root: `web`
+    - PHP version: `8.0`
+    - database? `Y`
+    - database engine: `mysql-8.0-*.database.nitro`
+    - database name: `spokeandchain`
+    - update env file? `Y`
+4. Run `cd spokeandchain` and import the seed database:
+    ```zsh
+    nitro db import seed.sql --name spokeandchain
+    ```
+5. Add a Craft admin account for yourself using `nitro craft users/create`, following the prompts and choosing `yes` for “Make this user an admin?”
+6. Optionally run `nitro craft demos/seed` to add fake users, orders, and form submissions for a more lively demo experience.
 
-#### Notable environment variables
+> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/3.x/installation.html).
 
-`DEVSERVER_PUBLIC`, `DEVSERVER_PORT`, `DEVSERVER_HOST`, `TWIGPACK_MANIFEST_PATH` and `TWIGPACK_PUBLIC_PATH` are environment variables that are used when locally developing the CSS and JS within the project.
+### Front End
 
-They are used in the `webpack-dev-server`. The key to this when using [nitro](https://github.com/craftcms/nitro) is that it needs to be accessible from within the VM.
+Run `npm install` with node 12.19.0 or later. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm install`.)
 
-This is because the project using twigpack and needs to be able to communicate with webpack dev server to enable hot module replacement.
+If you’ve chosen a different environment setup, make sure your `.env` is configured for it. These environment variables are specifically used by `webpack-dev-server`:
 
-Using [nitro](https://github.com/craftcms/nitro) version 2 the loopback IP address is made easier with `host.docker.internal`.
+- `DEVSERVER_PUBLIC`
+- `DEVSERVER_PORT`
+- `DEVSERVER_HOST`
+- `TWIGPACK_MANIFEST_PATH`
+- `TWIGPACK_PUBLIC_PATH`
 
-Your env file will end up looking something like the following:
+You can then run any of the development scripts found in `package.json`:
 
-```
-# webpack dev server
-DEVSERVER_PUBLIC=http://127.0.0.1:8080
-DEVSERVER_PORT=8080
-DEVSERVER_HOST=127.0.0.1
+- `npm run serve` to build and automatically run webpack with hot module reloading for local development
+- `npm run build` to build front end assets for production
 
-# Twigpack
-TWIGPACK_MANIFEST_PATH=http://host.docker.internal:8080/
-TWIGPACK_PUBLIC_PATH=http://host.docker.internal:8080/
-```
+#### PurgeCSS
 
-The port can be any port number of your choosing.
+This project uses PurgeCSS to automatically remove redundant or unused styles generated by Tailwind CSS.
 
-### Developing
+PurgeCSS is disabled by default for the `serve` script, meaning your site will be loaded with every available CSS class. It also means you’ll need to check the site after running `build` to be sure important classes aren’t inadvertently stripped away.
 
-When developing on the project you can simply run the following command
+Classes actively being used should be detected automatically, but you can encourage them to be recognized by making sure full class names appear in your template, stylesheet, and JavaScript files.
 
-```
-npm run serve
-```
-
-This will start the `webpack-dev-server` and show a webpack dashboard in your terminal. You are then free to develop as required with the benefit of hot module replacement.
-
-#### Purge CSS
-
-Purge CSS is running in this project. This is due to using tailwindcss and not wanting to have a bloated CSS file of many redundant/unused CSS.
-
-When actively developing and using the `serve` npm script, purge is not active. This means you will have access to all the of CSS. It also means that you need to make sure you are checking the site after building the files.
-
-It is best to always try to use the full class names when developing this makes it easy for purge to do its thing.
-
-Here is an example of running a loop.
+❌ For example, don’t dynamically combine `text-red-` with a variable for this loop:
 
 ```twig
-{# Bad Example #}
 {% set classes = ['100', '500', '900'] %}
 {% for class in classes %}
   <div class="text-red-{{ class }}"></div>	
 {% endfor %}
+```
 
-{# Good example #}
+✅ Loop through complete class names like so they each appear in full:
+```twig
 {% set classes = ['text-red-100', 'text-red-500', 'text-red-900'] %}
 {% for class in classes %}
   <div class="{{ class }}"></div>	
 {% endfor %}
 ```
 
-Purge will scan the templates and the JS files looking for class names to whitelist to be allowed in the final build files.
-
-If there is no way to avoid programmatic concatenation of class names you can manually add the classes to the `whitelist` array in the `tailwind.config.js` file in the root of the project.
-
-This is parsed by purge and will make sure they are included in the build files. This is also handy if there are any libraries that are being used and need to have their class names included.
-
-### Building
-
-Once you have finished developing, the last thing to do is to build the files this is done with the following command.
-
-```
-npm run build
-```
-
-This will build all the files into the `web/dist` folder ready to be committed.
+If you can’t avoid programmatic concatenation, use Tailwind’s [safelist](https://tailwindcss.com/docs/optimizing-for-production#safelisting-specific-classes) option in `tailwind.config.js`.
 
 ### Testing
 
 Cypress tests cover multiple parts of the website:
-- **CP** – Make sure that the content structure is defined properly.
-- **Front-end** – Check that the different sections of the website work as expected.
-- **Accessibility** – Check that the website complies with WCAG 2.0 guidelines.
 
-First you need to define environment variables for Cypress. Copy the `cypress.example.json` file to `cypress.json` and adjust it to your needs:
+- **control panel** – make sure the content structure is properly defined.
+- **front end** – check that the website’s different sections work as expected.
+- **accessibility** – evaluate the website for WCAG 2.0 compliance.
+
+Set the environment variables Cypress needs to run by copying `cypress.example.json` to `cypress.json` and adjusting it:
+
 ```
 cp cypress.example.json cypress.json
 ```
 
 Open the Cypress Test Runner from the project root:
+
 ```
 npx cypress open
 ```
 
 Open accessibility tests only:
+
 ```
 npx cypress open --config testFiles=./front/a11y/*.spec.js
 ```
+
+## License
+
+The source code of this project is licensed under the [BSD Zero Clause License](LICENSE.MD) unless stated otherwise.
+
+The imagery used by this project is the property of Marin Bikes, and used with permission. You are not free to use it for your own projects.
