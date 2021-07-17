@@ -5,9 +5,7 @@ module.exports = {
             "./templates/**/*.{twig,html}",
             "./src/js/**/*.{js}",
         ],
-        options: {
-            whitelist: []
-        }
+        safelist: []
     },
     theme: {
         container: {
