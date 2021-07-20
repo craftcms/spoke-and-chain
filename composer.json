@@ -31,12 +31,11 @@
     }
   },
   "scripts": {
-      "post-create-project-cmd": [
-        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-        "@composer dump-autoload -o",
-        "@php craft db/restore seed.sql",
-        "@php craft demos/seed"
-      ]
+    "post-create-project-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "@composer dump-autoload -o",
+      "@php craft db/restore seed.sql",
+      "@php craft demos/seed"
     ]
   }
 }
