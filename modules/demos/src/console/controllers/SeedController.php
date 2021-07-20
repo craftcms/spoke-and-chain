@@ -90,26 +90,6 @@ class SeedController extends Controller
     public const REVIEWS_PER_PRODUCT_MAX = 20;
 
     /**
-     * @var string|null
-     */
-    public ?string $email = null;
-
-    /**
-     * @var string|null
-     */
-    public string $username = 'admin';
-
-    /**
-     * @var string|null
-     */
-    public ?string $password = null;
-
-    /**
-     * @var int Duration in seconds to wait between retries
-     */
-    public int $timeout = 2;
-
-    /**
      * @var array
      */
     private $_users = [];
@@ -152,7 +132,7 @@ class SeedController extends Controller
         parent::init();
 
         // Don't let order status emails send while this is running
-        Event::on(Emails::class, Emails::EVENT_BEFORE_SEND_MAIL, function(MailEvent $event) {
+        Event::on(Emails::class, Emails::EVENT_BEFORE_SEND_MAIL, function (MailEvent $event) {
             $event->isValid = false;
         });
 
@@ -164,28 +144,6 @@ class SeedController extends Controller
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function options($actionID): array
-    {
-        $options = parent::options($actionID);
-
-        switch ($actionID) {
-            case 'index':
-            case 'admin-user':
-                $options[] = 'email';
-                $options[] = 'username';
-                $options[] = 'password';
-                break;
-            case 'wait-for-db':
-                $options[] = 'timeout';
-                break;
-        }
-
-        return $options;
-    }
-
-    /**
      * Seeds all data necessary for a working demo
      *
      * @return int
@@ -193,10 +151,19 @@ class SeedController extends Controller
     public function actionIndex(): int
     {
         $this->stdout('Beginning seed ... ' . PHP_EOL);
-        $this->runAction('admin-user');
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
+
+        if ($this->interactive) {
+            $this->stdout("Creating admin user ..." . PHP_EOL);
+            Craft::$app->runAction('users/create', ['admin' => true]);
+            $this->stdout('Done creating admin user.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
+        } else {
+            $this->stdout('Run the following command to create an admin user:' . PHP_EOL);
+            $this->_outputCommand('users/create --admin');
+        }
+
         $this->_cleanup();
         $this->stdout('Seed complete.' . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
@@ -218,41 +185,9 @@ class SeedController extends Controller
 
         $compiledClassesPath = Craft::$app->getPath()->getCompiledClassesPath();
 
-        foreach(FileHelper::findFiles($compiledClassesPath) as $path) {
-            $this->stdout('Dumping file contents of "' . $path . '":'. PHP_EOL .  PHP_EOL);
-            $this->stdout(file_get_contents($path) . PHP_EOL . PHP_EOL);
-        }
-
         $this->stdout('Clearing compiled classes ... ');
         FileHelper::removeDirectory($compiledClassesPath);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-    }
-
-    /**
-     * Creates an admin user
-     *
-     * @return int
-     */
-    public function actionAdminUser(): int
-    {
-        $this->stdout('Creating admin user ... ');
-
-        $user = new User([
-            'username' => $this->username,
-            'newPassword' => $this->password,
-            'email' => $this->email,
-            'admin' => true,
-        ]);
-
-        if (!Craft::$app->getElements()->saveElement($user)) {
-            $this->stderr('failed:' . PHP_EOL . '    - ' . implode(PHP_EOL . '    - ', $user->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
-
-            return ExitCode::UNSPECIFIED_ERROR;
-        }
-
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-
-        return ExitCode::OK;
     }
 
     /**
@@ -303,31 +238,6 @@ class SeedController extends Controller
 
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
-        return ExitCode::OK;
-    }
-
-    /**
-     * @param int $maxTime Maximum time in seconds to wait for database connection
-     * @return int
-     */
-    public function actionWaitForDb(int $maxTime = 0): int
-    {
-        $this->stdout('Waiting for database ... ' . PHP_EOL);
-        $retries = 0;
-        $startTime = time();
-
-        while (!Craft::$app->getIsDbConnectionValid()) {
-            if ($maxTime && (time() - $startTime) > $maxTime) {
-                $this->stderr("Database connection failed: maximum time of $maxTime seconds reached." . PHP_EOL . PHP_EOL, Console::FG_RED);
-                return ExitCode::UNSPECIFIED_ERROR;
-            }
-            $retries++;
-            $this->stdout("    - [{$retries}] Retrying in $this->timeout seconds..." . PHP_EOL, Console::FG_YELLOW);
-            sleep($this->timeout);
-        }
-
-        $totalTime = time() - $startTime;
-        $this->stdout("Database connection successful ($totalTime seconds)." . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
     }
 
