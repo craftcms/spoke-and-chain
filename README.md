@@ -51,12 +51,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
     - database engine: `mysql-8.0-*.database.nitro`
     - database name: `spokeandchain`
     - update env file? `Y`
-4. Run `cd spokeandchain` and import the seed database:
-    ```zsh
-    nitro db import seed.sql --name spokeandchain
-    ```
-5. Add a Craft admin account for yourself using `nitro craft users/create`, following the prompts and choosing `yes` for “Make this user an admin?”
-6. Optionally run `nitro craft demos/seed` to add fake users, orders, and form submissions for a more lively demo experience.
+4. Add a Craft admin account for yourself using `nitro craft users/create --admin`.
 
 > 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/3.x/installation.html).
 
