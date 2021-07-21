@@ -150,34 +150,20 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
-        $this->stdout('Beginning seed ... ' . PHP_EOL);
+        $this->stdout('Beginning seed ... ' . PHP_EOL . PHP_EOL);
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
-
-        if ($this->interactive) {
-            $this->stdout("Creating admin user ..." . PHP_EOL);
-            Craft::$app->runAction('users/create', ['admin' => true]);
-            $this->stdout('Done creating admin user.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
-        } else {
-            $this->stdout('Run the following command to create an admin user:' . PHP_EOL);
-            $this->_outputCommand('users/create --admin');
-        }
-
         $this->_cleanup();
-        $this->stdout('Seed complete.' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Seed complete.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
     }
 
     private function _cleanup()
     {
-        $this->stdout('Setting system status to online ... ');
-        Craft::$app->projectConfig->set('system.live', true, null, false);
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-
-        $this->stdout('Running queue ... ');
+        $this->stdout('Running queue ... ' . PHP_EOL);
         Craft::$app->queue->run();
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Queue finished.' . PHP_EOL, Console::FG_GREEN);
 
         $this->stdout('Clearing data cache ... ');
         Craft::$app->getCache()->flush();
@@ -187,6 +173,10 @@ class SeedController extends Controller
 
         $this->stdout('Clearing compiled classes ... ');
         FileHelper::removeDirectory($compiledClassesPath);
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $this->stdout('Setting system status to online ... ');
+        Craft::$app->projectConfig->set('system.live', true, null, false);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
     }
 
