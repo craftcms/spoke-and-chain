@@ -1,6 +1,6 @@
 {
   "env": {
-    "SITE_URL": "http://spokeandchain.test/",
+    "SITE_URL": "http://spokeandchain.nitro/",
     "CP_TRIGGER": "admin",
     "CP_LOGIN": "support@craftcms.com",
     "CP_PASSWORD": "NewPassword",
