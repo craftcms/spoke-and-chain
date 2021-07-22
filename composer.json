@@ -6,10 +6,12 @@
     "cms",
     "craftcms",
     "craft-commerce",
+    "commerce",
     "project",
     "demo",
     "starter"
   ],
+  "license": "0BSD",
   "homepage": "https://craftcms.com/demo",
   "type": "project",
   "support": {
@@ -40,18 +42,17 @@
     }
   },
   "config": {
-    "optimize-autoloader": true,
     "sort-packages": true,
+    "optimize-autoloader": true,
     "platform": {
-      "php": "7.2.5"
+      "php": "8.0"
     }
   },
   "scripts": {
     "post-create-project-cmd": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-      "@composer dump-autoload -o",
-      "@php craft db/restore seed.sql",
-      "@php craft demos/seed"
+      "@php craft db/restore seed.sql > /dev/null 2>&1",
+      "@php craft demos/seed > /dev/null 2>&1"
     ]
   }
 }
