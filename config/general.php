@@ -37,12 +37,7 @@ return [
         'useEmailAsUsername' => true,
     ],
 
-    // Dev environment settings
-    'local' => [
-        'devMode' => true,
+    'dev' => [
         'disallowRobots' => true,
-    ],
-
-    'production' => [
     ],
 ];

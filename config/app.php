@@ -20,13 +20,18 @@
 use craft\helpers\App;
 
 return [
-    'id' => App::env('APP_ID') ?: 'CraftCMS',
-    'modules' => [
-        'demos' => \modules\demos\Module::class,
-        'spoke' => \modules\Module::class,
+    '*' => [
+        'id' => App::env('APP_ID') ?: 'CraftCMS',
+        'modules' => [
+            'demos' => \modules\demos\Module::class,
+            'spoke' => \modules\Module::class,
+        ],
+        'bootstrap' => ['spoke', 'demos'],
+        'components' => [
+            'mailer' => null,
+        ],
     ],
-    'bootstrap' => ['spoke', 'demos'],
-    'components' => [
-        'mailer' => null,
-    ],
+    'dev' => [
+        'components' => [],
+    ]
 ];
