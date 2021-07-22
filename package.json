@@ -141,6 +141,6 @@
   "dependencies": {
     "alpinejs": "^2.8.2",
     "swiper": "^6.3.5",
-    "tailwindcss": "^2.2.0"
+    "tailwindcss": "^2.2.4"
   }
 }
