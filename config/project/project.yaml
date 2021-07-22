@@ -1,4 +1,4 @@
-dateModified: 1626304248
+dateModified: 1626920412
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -6,9 +6,9 @@ email:
   template: ''
   transportSettings:
     encryptionMethod: ''
-    host: $EMAIL_HOST
+    host: $SMTP_HOST
     password: ''
-    port: $EMAIL_PORT
+    port: $SMTP_PORT
     timeout: '10'
     useAuthentication: ''
     username: ''
