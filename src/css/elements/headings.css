@@ -1,0 +1,51 @@
+/* Headings
+-------------------------------------------------------------------------------- */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    @apply font-bold;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    /* Turn on discretionary ligatures for larger headings. */
+    font-variant-ligatures: discretionary-ligatures;
+}
+
+h1, .h1 {
+    @apply text-2xl;
+}
+
+h1.large,
+.h1.large {
+}
+
+h2, .h2 {
+}
+
+h3, .h3 {
+}
+
+h4, .h4 {
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+p + h2,
+ul + h2 {
+    @apply mt-10;
+}
+
+p + h3,
+ul + h3 {
+    @apply mt-8;
+}

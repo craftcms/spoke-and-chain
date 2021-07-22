@@ -1,0 +1,54 @@
+
+{% set radio = radio is not defined ? false : radio %}
+{% set account = account is not defined ? true : account %}
+{% set paymentSources = craft.commerce.paymentSources.getAllPaymentSourcesByUserId(currentUser.id) %}
+
+<!-- Template: {{ _self }}.twig -->
+<div class="space-y-2">
+  {% if paymentSources|length %}
+    {% for paymentSource in paymentSources %}
+      <div class="option-select">
+        {% if radio %}
+          <input id="payment-source-{{ paymentSource.id }}" type="radio" name="paymentSourceId" value="{{ paymentSource.id }}" x-model="id"/>
+        {% endif %}
+
+        <label for="payment-source-{{ paymentSource.id }}">
+          <div class="flex justify-between items-center">
+            <strong>{{ paymentSource.description }}</strong>
+            {% if not account %}
+              <span>{{ 'Saved card'|t }}</span>
+            {% endif %}
+
+            {% if account %}
+              <div>
+                <form
+                    sprig
+                    s-val:card-deleted="true"
+                    s-method="post"
+                    s-action="commerce/payment-sources/delete"
+                    s-confirm="{{ 'Are you sure you wish to delete this card?'|t }}"
+                    s-indicator="#payment-sources-indicator"
+                >
+                  {{ hiddenInput('id', paymentSource.id) }}
+
+                  <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
+                </form>
+              </div>
+            {% endif %}
+          </div>
+        </label>
+      </div>
+    {% endfor %}
+  {% endif %}
+  {% if account %}
+    <div x-data="modalButton('card', {}, 'slideout')">
+      <button id="add-card" class="option-select cursor-pointer text-black" x-on:click.prevent="open($dispatch, '#add-card')">
+        <div>
+          <div class="flex justify-between items-center">
+            <strong>{{ 'Add a card'|t }}</strong>
+          </div>
+        </div>
+      </button>
+    </div>
+  {% endif %}
+</div>

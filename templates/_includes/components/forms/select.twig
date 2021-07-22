@@ -1,0 +1,62 @@
+{% set id = id is not defined ? null : id %}
+{% set name = name is not defined ? null : name %}
+{% set wrapperClass = wrapperClass is not defined ? 'relative' : wrapperClass %}
+{% set class = class is not defined ? 'appearance-none block w-full bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base leading-6 text-gray-900 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:leading-5' : class %}
+{% set attributes = attributes is not defined ? {} : attributes %}
+{#
+  If complete control of the select output is required use the `select` param.
+  Setting the HTML into a variable and passing it to the component e.g.
+
+  {% set select %}
+    <select>
+      <option value="foo">Bar</option>
+    </select>
+  {% endset %}
+#}
+{% set select = select is not defined ? null : select %}
+{#
+  If no custom control of the select is required simply pass the options as an array of objects with value and label e.g
+
+  {% set options = [
+    { value: 'foo', label: 'bar' },
+    { value: 'one', label: 'two', selected: true },
+  ] %}
+#}
+{% set options = options is not defined ? [] : options %}
+
+<!-- Template: {{ _self }}.twig -->
+<div class="{{ wrapperClass }}">
+  {% if select %}
+    {{ select }}
+  {% elseif options|length %}
+    <select
+        {% if id %}
+          id="{{ id }}"
+        {% endif %}
+        {% if name %}
+          name="{{ name }}"
+        {% endif %}
+        {% if class %}
+          class="{{ class }}"
+        {% endif %}
+        {{ attr(attributes) }}
+    >
+      {% for opt in options %}
+        {% set selected = opt.selected ?? false %}
+        {% set disabled = opt.disabled ?? false %}
+        <option value="{{ opt.value }}" {{ selected ? 'selected' : '' }} {{ disabled ? 'disabled' : '' }}>{{ opt.label }}</option>
+      {% endfor %}
+    </select>
+  {% endif %}
+  <div class="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center"
+       aria-hidden="true">
+    <!-- Heroicon name: chevron-down -->
+    <svg class="h-4 w-4 text-gray-600"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"/>
+    </svg>
+  </div>
+</div>

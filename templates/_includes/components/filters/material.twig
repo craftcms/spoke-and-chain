@@ -1,0 +1,44 @@
+<!-- Template: {{ _self }}.twig -->
+
+{% spaceless %}
+  {# Params #}
+  {% set materials = materials is not defined ? [] : materials %}
+  {% set heading = heading is not defined ? null : heading %}
+  {% set showHeading = showHeading is not defined ? false : showHeading %}
+  {% set selectedMaterials = selectedMaterials is not defined ? [] : selectedMaterials %}
+{% endspaceless %}
+
+{# Output #}
+{% if materials|length %}
+  <div>
+    <input type="hidden" name="materials[]" value="">
+    <template x-for="material in materials">
+      <input type="hidden" name="materials[]" :value="material">
+    </template>
+    {% if heading and showHeading %}
+      <h3 class="uppercase text-xs text-gray-600">{{ heading }}</h3>
+    {% endif %}
+    <ul class="mt-2 -mx-3">
+      {% for materialCategory in materials -%}
+        <li class="my-1">
+          <a
+              id="material-filter-{{ materialCategory.id }}"
+              class="{% if materialCategory.slug in selectedMaterials %}bg-gray-200 {% endif %}flex justify-between w-full items-center group font-medium text-black hover:text-red-600 block px-3 py-1 rounded"
+              href="{{ urls[materialCategory.slug] ?? '' }}"
+              x-on:click.prevent="toggle('materials', '{{ materialCategory.slug }}', $event)"
+              role="checkbox"
+              aria-controls="products-list"
+          >
+            <span>{{ materialCategory.title }}</span>
+
+            {% if materialCategory.slug in selectedMaterials %}
+              <span class="w-5 h-5 overflow-hidden ml-1 -mr-1 relative">
+                {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-full h-full fill-current block absolute top-0 left-0' }) }}
+              </span>
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

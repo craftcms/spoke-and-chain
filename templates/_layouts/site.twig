@@ -1,0 +1,29 @@
+{% extends '_layouts/base' %}
+{% set cart = cart is not defined ? craft.commerce.carts.cart : cart %}
+{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
+{% set accountPage = craft.entries({ section: 'account', type: 'account' }).one() %}
+{% set loginPage = craft.entries({ section: 'account', type: 'login' }).one() %}
+
+{# End Params #}
+{% block header %}
+  <!-- Site/Header -->
+  {% include '_includes/components/header' with {
+    showNav: true
+  } %}
+{% endblock %}
+
+{% block main %}
+  <!-- Site/Main -->
+  <main>
+    {% include '_includes/components/notifications' %}
+
+    {% include '_includes/components/crumbs' %}
+
+    {% block content %}{% endblock %}
+  </main>
+{% endblock %}
+
+{% block footer %}
+  <!-- Site/Footer -->
+  {% include '_includes/components/footer' with { footer: footer } only %}
+{% endblock %}

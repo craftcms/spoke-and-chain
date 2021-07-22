@@ -1,0 +1,25 @@
+{# Params #}
+{% set body = body is not defined ? '' : body %}
+{% set buttons = buttons is not defined ? '' : buttons %}
+{% set heading = heading is not defined ? null : heading %}
+{% set closeButton = closeButton is not defined ? false : closeButton %}
+{% set closeButtonText = closeButtonText is not defined ? 'Close'|t : closeButtonText %}
+
+{# Output #}
+<!-- Template: {{ _self }}.twig -->
+<div class="px-12 py-8 text-center bg-gray-200">
+  {% if heading %}
+    <h2>{{ heading }}</h2>
+  {% endif %}
+</div>
+
+<div class="p-12 flex-1 overflow-auto">
+  {{ body }}
+</div>
+
+<div class="px-12 py-8 text-center bg-gray-200 space-x-1">
+  {% if closeButton %}
+    <a class="button" href="#" x-on:click.prevent="$dispatch('closemodal')">{{ closeButtonText }}</a>
+  {% endif %}
+  {{ buttons }}
+</div>

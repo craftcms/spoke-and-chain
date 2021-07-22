@@ -1,0 +1,26 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+{% set contentBlocks = entry.contentBuilder.all() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="bg-gray-200">
+    {# Heading #}
+    <div class="container flex justify-center pt-8">
+      <div class="w-full max-w-3xl">
+        <p>{{ entry.postDate|date('F j, Y') }}</p>
+        <h1>{{ entry.title }}</h1>
+      </div>
+    </div>
+
+    {# Article Content #}
+    {% for block in contentBlocks %}
+      {% include '_includes/components/content/' ~ block.type.handle with {
+        block: block,
+        isFirst: loop.first,
+        isLast: loop.last,
+      } %}
+    {% endfor %}
+  </div>
+{% endblock %}

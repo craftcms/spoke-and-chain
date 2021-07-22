@@ -1,0 +1,24 @@
+<head>
+    {# Standard Project Meta #}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# Prevent site from being indexed #}
+    <meta name="robots" content="noindex,nofollow">
+    {# /Standard Project Meta #}
+
+    {% include '_includes/layout/favicons' ignore missing with {} only %}
+
+    {# Project Styles #}
+    {{ craft.twigpack.includeCssModule('styles.css', false) }}
+    {# /Project Styles #}
+
+    {# Project Scripts #}
+    <script>
+        var SITE_URL = '{{ siteUrl }}';
+        var CSRF = '{{ craft.app.request.getCsrfToken() }}';
+
+        var addressStates = {{ craft.commerce.states.allEnabledStatesAsListGroupedByCountryId|json_encode|raw }};
+    </script>
+    {# /Project Scripts #}
+</head>

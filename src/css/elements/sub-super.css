@@ -1,0 +1,12 @@
+/* ==========================================================================
+    SUPER AND SUBSCRIPTS
+   ========================================================================== */
+sup {
+  font-variant-position: super;
+}
+
+sub,
+.sinf {
+  font-size: inherit;
+  font-variant-position: sub;
+}

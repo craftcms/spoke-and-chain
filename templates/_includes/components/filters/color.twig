@@ -1,0 +1,50 @@
+<!-- Template: {{ _self }}.twig -->
+
+{% spaceless %}
+  {# Params #}
+  {% set colors = colors is not defined ? [] : colors %}
+  {% set heading = heading is not defined ? null : heading %}
+  {% set showHeading = showHeading is not defined ? false : showHeading %}
+  {% set urls = urls is not defined ? {} : urls %}
+  {% set selectedColors = selectedColors is not defined ? [] : selectedColors %}
+{% endspaceless %}
+
+{# Output #}
+{% if colors|length %}
+  <div>
+    <input type="hidden" name="colors[]" value="">
+    <template x-for="color in colors">
+      <input type="hidden" name="colors[]" :value="color">
+    </template>
+    {% if heading and showHeading %}
+      <h3 class="uppercase text-xs text-gray-600">{{ heading }}</h3>
+    {% endif %}
+    <ul class="mt-2 -mx-3">
+      {% for colorCategory in colors -%}
+        <li class="my-1">
+          <a
+             id="color-filter-{{ colorCategory.id }}"
+             class="{{ colorCategory.slug in selectedColors ? 'bg-gray-200' : '' }} flex items-center justify-between font-medium text-black hover:text-red-600 px-3 py-1 rounded"
+             href="{{ urls[colorCategory.slug] ?? '' }}"
+             x-on:click.prevent="toggle('colors', '{{ colorCategory.slug }}', $event)"
+             role="checkbox"
+             aria-controls="products-list"
+          >
+            <span class="flex items-center">
+              <span class="mr-2 flex rounded-full p-0.5 border {{ colorCategory.slug in selectedColors ? 'border-gray-700' : 'border-transparent' }}">
+                <span class="inline-block h-5 w-5 rounded-full" style="background-color: {{ colorCategory.color }}"></span>
+              </span>
+              <span>{{ colorCategory.title }}</span>
+            </span>
+
+            {% if colorCategory.slug in selectedColors %}
+              <span class="w-5 h-5 overflow-hidden ml-1 -mr-1 relative">
+                {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-full h-full fill-current block absolute top-0 left-0' }) }}
+              </span>
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

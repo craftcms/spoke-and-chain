@@ -1,0 +1,40 @@
+<!-- Template: {{ _self }}.twig -->
+
+{# Params #}
+{% set heading = heading is not defined ? false : heading %}
+{% set types = types is not defined ? [] : types %}
+{% set selected = selected is not defined ? '' : selected %}
+{% set urls = urls is not defined ? {} : urls %}
+
+{# Variables #}
+
+{# Output #}
+{% if types|length %}
+  <div>
+    <input class="filter" type="hidden" name="type" x-model="type">
+    {% if heading %}
+      <h3 class="uppercase text-xs text-gray-600">{{ heading }}</h3>
+    {% endif %}
+    <ul class="space-y-1 mt-2 -mx-3">
+      {% for bikeCategory in types %}
+        <li>
+          <a
+              id="bike-type-filter-{{ bikeCategory.id }}"
+              class="flex items-center font-medium text-black hover:bg-gray-200 block px-3 py-1 rounded {{ selected == bikeCategory.slug ? 'bg-gray-300' : '' }}"
+              href="{{ urls[bikeCategory.slug] ?? '' }}"
+              x-on:click.prevent="setType('{{ bikeCategory.slug }}', $event)"
+              role="radio"
+              aria-controls="products-list"
+          >
+            {% set icon = bikeCategory.icon.one() %}
+            {% if icon %}
+              {{ svg(icon)|attr({ class: 'text-red-600 fill-current inline-block w-5 h-5 mr-2' }) }}
+            {% endif %}
+
+            {{ bikeCategory.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

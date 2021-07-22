@@ -1,0 +1,9 @@
+description: ''
+enabled: true
+fileNameFormat: 'order-invoice-{number}'
+handle: invoice
+isDefault: true
+language: orderLanguage
+name: Invoice
+sortOrder: 9999
+templatePath: _special/pdfs/invoice

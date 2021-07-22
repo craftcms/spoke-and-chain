@@ -1,0 +1,10 @@
+{% set errors = errors is not defined ? [] : errors %}
+
+{% if errors|length %}
+  <!-- Template: {{ _self }}.twig -->
+  <ul class="text-red-600">
+    {% for err in errors %}
+      <li>{{ err }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

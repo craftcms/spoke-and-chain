@@ -1,0 +1,14 @@
+{% if entry is not defined and currentUser %}
+  {% set dashboardPage = craft.entries({
+    section: 'account',
+    type: 'dashboard',
+  }).one() ?? null %}
+  {% redirect dashboardPage ? dashboardPage.getUrl() : '/' %}
+{% elseif entry is not defined %}
+  {% set loginPage = craft.entries({
+    section: 'account',
+    type: 'login',
+  }).one() ?? null %}
+  {% redirect loginPage ? loginPage.getUrl() : '/' %}
+{% endif %}
+{% include '_views/account/' ~ entry.type.handle %}

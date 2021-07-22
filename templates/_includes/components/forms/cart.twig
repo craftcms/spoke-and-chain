@@ -1,0 +1,48 @@
+{# Variables #}
+{% set entry = craft.entries({ id: entryId }).one() %}
+{% set checkoutPage = craft.entries({ section: 'checkout', type: 'checkout' }).one() %}
+{% set cart = cart is not defined ? craft.commerce.carts.getCart() : cart %}
+
+<!-- Template: {{ _self }}.twig -->
+{% if cart.lineItems|length %}
+  <form id="cart" sprig s-method="post" s-action="commerce/cart/update-cart"
+        s-trigger="submit, change delay:0.5s from:.qty, updateForm from:.qty"
+        s-indicator="#cart-indicator">
+
+    {% for lineItem in cart.lineItems %}
+      {% include '_includes/components/order/lineItem' with {
+        lineItem: lineItem,
+        form: true,
+        isCompleted: cart.isCompleted
+      } only %}
+    {% endfor %}
+
+    <div class="flex justify-end">
+      <div class="w-full xl:w-4/5 pt-4">
+        {% include '_includes/components/order/totals' with {
+          order: cart,
+          form: true
+        } only %}
+
+        <div class="pt-4 text-right">
+          <noscript>
+            <input class="button" type="submit" name="submit" value="{{ 'Update cart'|t }}">
+          </noscript>
+          {% if checkoutPage %}
+            <a class="button submit" href="{{ checkoutPage.url }}">{{ 'Checkout'|t }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </form>
+{% endif %}
+
+<script>
+    // Refresh other components
+    {% if success is defined and success and flashes is defined and flashes|length %}
+      {% set notice = flashes.notice ?? null %}
+      {% if notice %}
+        addNotification('notice', '{{ notice|e('js') }}');
+      {% endif %}
+    {% endif %}
+</script>

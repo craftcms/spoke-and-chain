@@ -1,0 +1,24 @@
+{% set col = col is not defined ? null : col %}
+
+{% if col %}
+  <!-- Template: {{ _self }}.twig -->
+  <div>
+    {% if col.heading %}
+      <h3 class="text-sm leading-5 font-semibold text-gray-600 tracking-wider uppercase">
+        {{ col.heading }}
+      </h3>
+    {% endif %}
+    {% set links = col.type.handle == 'pages' ? col.pages.all() : col.productCategories.all()%}
+    {% if links|length %}
+      <ul class="mt-4 space-y-4">
+        {% for link in links %}
+          <li>
+            <a class="text-base leading-6 text-gray-500 hover:text-gray-900" href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endif %}

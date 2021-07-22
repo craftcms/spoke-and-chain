@@ -1,0 +1,71 @@
+{% requireLogin %}
+
+{# Variables #}
+{% set ordersPage = craft.entries({ section: 'account', type: 'orders' }).one() %}
+{% if slug is not defined or not slug %}
+  {% redirect ordersPage ? ordersPage.url : '/account/orders' %}
+{% endif %}
+{% set order = craft.orders({
+  isCompleted: true,
+  shortNumber: slug,
+}).user(currentUser).one() %}
+
+{% set crumbs = [
+  { label: "Account"|t('site'), url: url('account') },
+  { label: "Orders"|t('site'), url: ordersPage ? ordersPage.url : siteUrl('account/orders') },
+] %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="bg-gray-100 py-8">
+    <div class="max-w-4xl mx-auto py-6">
+      <h1 class="text-4xl text-center">{{ 'Order'|t }} {{ slug }}</h1>
+      <div class="text-center mt-2">
+        {% include '_includes/components/order/orderStatus' with { orderStatus: order.orderStatus, prefix: 'Status'|t } %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container flex justify-center">
+    <div class="w-full max-w-5xl">
+      {% for lineItem in order.lineItems %}
+        {% include '_includes/components/order/lineItem' with { lineItem: lineItem } only %}
+      {% endfor %}
+
+      {% if order.shippingAddress %}
+        <div class="flex flex-wrap border-gray-300 py-8">
+          <div class="w-full pb-4 lg:pb-0 lg:w-1/5 pr-6">
+            <h3>{{ 'Address'|t }}</h3>
+          </div>
+          <div class="w-full lg:w-4/5">
+            <div class="flex">
+              <div class="w-1/2">
+                <h4>{{ 'Shipping to'|t }}:</h4>
+                <p>{{ order.shippingAddress.addressLines|join("\n")|nl2br }}</p>
+              </div>
+              <div class="w-1/2">
+                <h4>{{ 'Billing Address'|t }}:</h4>
+
+                <p>{{ order.billingAddress.addressLines|join("\n")|nl2br }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="flex flex-wrap border-t border-gray-300 py-8">
+        <div class="w-full lg:w-1/5">
+          <h3>{{ 'Your Info'|t }}</h3>
+        </div>
+
+        <div class="w-full md:w-4/5">
+          {% include '_includes/components/order/totals' with { order: order } only %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

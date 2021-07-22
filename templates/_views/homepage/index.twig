@@ -1,0 +1,50 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set heroImage = entry.mainImage.one() ?? null %}
+{% set heroButton = entry.button.one() ?? null %}
+{% set bikeCategories = craft.categories({
+  group: 'bikeTypes',
+  with: ['mainImage'],
+}).all() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Hero #}
+  {% if heroImage or heroButton %}
+    {% set buttonUrl = heroButton ? (heroButton.entryLink.one() ?? heroButton.categoryLink.one() ?? heroButton.buttonUrl) : null %}
+    {% if buttonUrl and buttonUrl is iterable and 'craft\\elements' in className(buttonUrl) %}
+      {% set buttonUrl = buttonUrl.getUrl() %}
+    {% endif %}
+    <div>
+      {% include '_includes/components/hero' with {
+        image: heroImage,
+        title: entry.heading,
+        button: heroButton ? heroButton.label : null,
+        buttonTitle: heroButton ? (heroButton.ariaLabel ? heroButton.ariaLabel : heroButton.label) : null ,
+        buttonUrl: buttonUrl,
+        aspectClass: 'aspect-ratio-hero-home'
+      } only %}
+    </div>
+  {% endif %}
+
+  <div class="p-6">
+    {# Bike Categories #}
+    {% if bikeCategories|length %}
+      <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {% for bikeCategory in bikeCategories %}
+            {% include '_includes/components/cards/category' with {
+              title: bikeCategory.title,
+              image: bikeCategory.mainImage[0],
+              url: bikeCategory.url,
+            } only %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

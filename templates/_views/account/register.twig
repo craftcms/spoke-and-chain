@@ -1,0 +1,68 @@
+{% if currentUser %}
+  {% redirect 'account' %}
+{% endif %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set errors = user is not defined ? [] : user.getErrors() %}
+{% set errorKeys = errors and errors|length ? errors|keys : [] %}
+
+{# Blocks #}
+{% block content %}
+  <div class="bg-gray-100 py-8">
+    <div class="text-center">
+      <h1 class="text-4xl">{{ entry.title }}</h1>
+    </div>
+
+    <div class="max-w-sm mx-auto space-y-6 mt-8">
+      <form method="post" accept-charset="UTF-8" class="space-y-4">
+        {{ csrfInput() }}
+        {{ actionInput('users/save-user') }}
+        {{ hiddenInput('successMessage', 'Registration complete.'|t|hash) }}
+        {{ redirectInput('') }}
+
+        <div>
+          <label for="firstName">First Name</label>
+          {{ input('text', 'firstName', user.firstName ?? null, {
+            id: 'firstName',
+          }) }}
+
+          {% include '_includes/components/forms/errorList' with { errors: errors['firstName'] ?? [] } only %}
+        </div>
+
+        <div>
+          <label for="lastName">Last Name</label>
+          {{ input('text', 'lastName', user.lastName ?? null, {
+            id: 'lastName',
+          }) }}
+
+          {% include '_includes/components/forms/errorList' with { errors: errors['lastName'] ?? [] } only %}
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          {{ input('email', 'email', user.email ?? null, {
+            id: 'email',
+          }) }}
+
+          {% include '_includes/components/forms/errorList' with { errors: errors['email'] ?? [] } only %}
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          {{ input('password', 'password', null, {
+            id: 'password',
+          }) }}
+
+          {% include '_includes/components/forms/errorList' with { errors: errors['password'] ?? [] } only %}
+        </div>
+
+        <button class="button submit w-full" type="submit">{{ 'Register'|t }}</button>
+
+        <p><a href="{{ loginPage.url }}">{{ 'Already have an account? Sign in now.'|t }}</a></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

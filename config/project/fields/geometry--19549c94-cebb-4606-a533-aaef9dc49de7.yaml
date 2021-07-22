@@ -1,0 +1,97 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: d52553ad-dd63-4dfd-8740-d53484afbcb3 # Product
+handle: geometry
+instructions: ''
+name: Geometry
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Piece
+            -
+              - handle
+              - piece
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - S
+            -
+              - handle
+              - s
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - M
+            -
+              - handle
+              - m
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col4
+        -
+          __assoc__:
+            -
+              - heading
+              - L
+            -
+              - handle
+              - l
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col5
+        -
+          __assoc__:
+            -
+              - heading
+              - XL
+            -
+              - handle
+              - xl
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

@@ -1,0 +1,15 @@
+body {
+  /* Turn on kerning, standard ligatures, contextual ligatures and proportional, oldstyle numerals, diagonal fractions and ordinals */
+  font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: contextual;
+  font-variant-numeric: proportional-nums;
+  @apply antialiased;
+  @apply text-base;
+  @apply text-gray-900;
+}
+
+:focus,
+button:focus {
+  outline: 3px transparent;
+  @apply ring;
+}

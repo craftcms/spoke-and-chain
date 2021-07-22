@@ -1,0 +1,26 @@
+{# Params #}
+{% set block = block is not defined ? false : block %}
+{% set isFirst = isFirst is not defined ? false : isFirst %}
+{% set isLast = isLast is not defined ? false : isLast %}
+{% set products = block ? block.products.with(['bikeType', 'colors', 'mainImage']).all() : [] %}
+
+{% if block and products and products|length %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="container mt-8 flex justify-center">
+    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for product in products %}
+        {% set defaultVariant = product.getDefaultVariant() %}
+        {% include '_includes/components/cards/product' with {
+          title: product.title,
+          image: product.mainImage[0] ?? null,
+          url: product.url,
+          colors: product.colors,
+          type: product.bikeType[0] ?? null,
+          price: defaultVariant.priceAsCurrency,
+          salePrice: defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : false,
+          averageRating: craft.reviews.getAverageRatingByProductId(product.id),
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

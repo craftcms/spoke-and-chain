@@ -1,0 +1,36 @@
+{% if not devMode %}{% redirect '/' %}{% endif %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set elements = [
+  'headings',
+  'paragraphs',
+  'blockquotes',
+  'buttons',
+  'orderedLists',
+  'unorderedLists',
+  'definitionLists',
+  'figure',
+  'image',
+  'tables',
+  'address',
+  'pre',
+  'forms',
+] %}
+
+{# Blocks #}
+{% block content %}
+  <div class="container">
+    {% for element in elements %}
+      <div class="mt-10">
+        <h2>{{ element }}</h2>
+
+        <div class="mt-5">
+          {% include 'kitchen-sink/' ~ element %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

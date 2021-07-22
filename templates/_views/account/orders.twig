@@ -1,0 +1,30 @@
+{% requireLogin %}
+
+{% set crumbs = [
+  { label: "Account"|t('site'), url: url('account') },
+] %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Vars #}
+{% set orders = craft.orders.user(currentUser).isCompleted(true).orderBy('dateOrdered DESC').all() %}
+
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="bg-gray-100 py-8">
+    <div class="max-w-screen-lg px-6 mx-auto space-y-6">
+      <h1 class="text-4xl text-center">{{ entry.title }}</h1>
+
+      {% if not orders|length %}
+        <p>{{ 'No orders available'|t }}</p>
+      {% else %}
+        {% for order in orders %}
+          {% include '_includes/components/order' with { order: order } %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+defaultPlacement: end
+fieldLayouts:
+  21f5f824-8dec-4655-aea5-cdf2a90708fc:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: e9eeb095-1668-49fe-99a2-36721c1bdbec # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: bikeTypes
+name: 'Bike Types'
+siteSettings:
+  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
+    hasUrls: true
+    template: _views/categories/bikes
+    uriFormat: 'bikes/{slug}'
+structure:
+  maxLevels: 1
+  uid: 9b2d9e9d-d4b8-4c6c-9954-d7680a953e52

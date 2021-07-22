@@ -1,0 +1,6 @@
+color: purple
+default: false
+description: ''
+handle: delivered
+name: Delivered
+sortOrder: 4

@@ -1,0 +1,10 @@
+{% set type = type ?? null %}
+{% set data = data ?? '{}' %}
+
+{{ hiddenInput('type', type, { id: 'modal-handle', class: 'modal-body' }) }}
+{{ hiddenInput('data', data, { id: 'modal-data', class: 'modal-body' }) }}
+
+{# Output child component#}
+{% if type %}
+  {% include '_includes/components/modals/' ~ type with { data: data } %}
+{% endif %}

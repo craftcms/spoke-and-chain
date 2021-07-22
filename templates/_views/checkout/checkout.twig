@@ -1,0 +1,91 @@
+{# Variables #}
+{% set addressPage = craft.entries({ section: 'checkout', type: 'address' }).one() %}
+{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
+
+{# Skip this page if there is a logged in user #}
+{% if currentUser %}
+  {% redirect (addressPage ? addressPage.uri : 'checkout/address') %}
+{% endif %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Blocks #}
+{% block content %}
+  {% if cart and not cart.lineItems|length %}
+    {% redirect cartPage ? cartPage.uri : 'cart' %}
+  {% endif %}
+  <!-- Template: {{ _self }}.twig -->
+
+  <div class="py-12">
+    {# Heading #}
+    {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+
+    <div class="container flex justify-center">
+      <div class="w-full max-w-5xl flex flex-wrap pt-6">
+        {# Login #}
+        <div class="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 px-12">
+          {% if entry.heading %}
+            <h2 class="text-2xl mb-4">{{ entry.heading }}</h2>
+          {% endif %}
+
+          <form id="user-checkout" method="post" class="space-y-6" accept-charset="UTF-8">
+            {{ csrfInput() }}
+            {{ actionInput('users/login') }}
+            {% if addressPage %}
+              {{ redirectInput(addressPage.uri) }}
+            {% endif %}
+
+            <div>
+              <label for="loginName">{{ 'Email'|t }}</label>
+              <input id="loginName" type="text" name="loginName" value="{{ craft.app.user.rememberedUsername }}">
+            </div>
+
+            <div>
+              <label for="password">{{ 'Password'|t }}</label>
+              <input id="password" type="password" name="password">
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <input id="remember-me" class="checkbox" type="checkbox" name="rememberMe" value="1">
+                <label for="remember-me" class="ml-2">{{ 'Remember me'|t }}</label>
+              </div>
+
+              <div class="text-right text-sm">
+                <a href="{{ url('forgotpassword') }}">{{ 'Forgot your password?'|t }}</a>
+              </div>
+            </div>
+
+
+            <input class="button submit" type="submit" value="Login">
+
+            {% if errorMessage is defined %}
+              <p>{{ errorMessage }}</p>
+            {% endif %}
+          </form>
+        </div>
+
+        {# Guest #}
+        <div class="w-full md:w-1/2 pt-6 md:pt-0 px-12">
+          {% if entry.subheading %}
+            <h2>{{ entry.subheading }}</h2>
+          {% endif %}
+
+          <form id="guest-checkout" method="post" class="space-y-6">
+            {{ csrfInput() }}
+            {{ actionInput('commerce/cart/update-cart') }}
+            {{ redirectInput((addressPage ? addressPage.uri : 'checkout/address')) }}
+
+            <div>
+              <label for="email">{{ 'Email'|t }}</label>
+              <input id="email" type="text" name="email" value="{{ cart ? cart.email : '' }}" placeholder="{{ 'Email address'|t }}">
+            </div>
+
+            <input class="button submit" type="submit" name="submit" value="{{ 'Continue as Guest'|t }}">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

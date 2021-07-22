@@ -1,0 +1,20 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 678ed5e4-f5a7-4694-9483-fbc5656b7f95 # SEO
+handle: seo
+instructions: ''
+name: SEO
+searchable: false
+settings:
+  elementDisplayPreviewType: google
+  facebookTabEnabled: ''
+  generalEnabledFields:
+    - seoTitle
+    - seoDescription
+    - seoImage
+  generalTabEnabled: '1'
+  sitemapTabEnabled: ''
+  twitterTabEnabled: ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\seomatic\fields\SeoSettings

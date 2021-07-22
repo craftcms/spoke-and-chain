@@ -1,0 +1,25 @@
+{% set data = data is not defined ? '' : data %}
+{% set data = not data is iterable ? data|json_decode : data %}
+{% set reviews = data and data.id is defined and data.id ? craft.entries({ section: 'reviews', relatedTo: data.id, orderBy: 'postDate DESC' }).all() : null %}
+{% set title = data and data.title is defined and data.title ? '{title} Reviews'|t('site', { title: data.title }) : 'Reviews'|t %}
+
+<!-- Template: {{ _self }}.twig -->
+<div class="h-full w-full overflow-auto flex flex-col relative">
+  {% set body %}
+    {% if reviews|length %}
+      {% for review in reviews %}
+        <div {% if not loop.first %}class="border-t border-gray-300 mt-4 pt-4"{% endif %}>
+          {% include '_includes/components/products/review' with { review: review } only %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>{{ 'Unable to find reviews.'|t }}</p>
+    {% endif %}
+  {% endset %}
+
+  {% include '_includes/components/modals/_inner' with {
+    heading: title,
+    body: body,
+    closeButton: true,
+  } %}
+</div>

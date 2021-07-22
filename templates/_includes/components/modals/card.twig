@@ -1,0 +1,60 @@
+{# Varaibles #}
+{% set gateways = craft.commerce.gateways.allCustomerEnabledGateways %}
+{% set gateway = gateways|length ? gateways|first : null %}
+
+<!-- Template: {{ _self }}.twig -->
+<form
+    sprig
+    id="fields-{{ gateway.id }}"
+    class="h-full w-full overflow-auto flex flex-col relative"
+    s-method="post"
+    s-action="commerce/payment-sources/add"
+    s-indicator="#payment-sources-indicator"
+    x-data="{ submitting: false }"
+    x-on:submit="submitting = true"
+>
+
+  {% set body %}
+    {% if gateway and gateway.supportsPaymentSources() %}
+      {{ hiddenInput('gatewayId', gateway.id) }}
+
+      {% include '_includes/components/forms/creditCard' with {
+        paymentForm: gateway.getPaymentFormModel()
+      } %}
+
+      <div class="pt-4">
+        <label for="card-description">{{ 'Card Description'|t }}</label>
+        <input id="card-description" class="w-full" type="text" name="description" value="" maxlength="70" autocomplete="off">
+      </div>
+    {% else %}
+      <p>{{ 'Gateway does not support payment sources'|t }}</p>
+    {% endif %}
+  {% endset %}
+
+  {% set buttons %}
+    {% if gateway and gateway.supportsPaymentSources() %}
+      <input class="button submit" type="submit" value="{{ 'Save'|t }}">
+    {% endif %}
+  {% endset %}
+
+  {% include '_includes/components/modals/_inner' with {
+    heading: 'Add Card'|t,
+    body: body,
+    buttons: buttons,
+    closeButton: true,
+    closeButtonText: 'Cancel'|t
+  } %}
+
+  <div class="spinner-overlay" :class="{ 'spinner-overlay--show': submitting }">
+    {% include '_includes/components/spinner' %}
+  </div>
+</form>
+
+<script>
+    // Refresh other components
+    {% if success is defined and success %}
+      htmx.trigger(htmx.find('#payment-sources-list'), 'refresh');
+      closeModal();
+      addNotification('notice', '{{ 'Card added'|t }}');
+    {% endif %}
+</script>

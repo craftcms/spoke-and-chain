@@ -1,0 +1,38 @@
+/* ==========================================================================
+    TABLES
+   ========================================================================== */
+
+table {
+  @apply border-collapse;
+
+  /* Turn on lining and proportional numerals
+  font-variant-numeric: lining-nums;
+  font-variant-numeric: proportional-nums;
+  */
+}
+
+tbody,
+caption {
+
+  /* Turn on lining, tabular numerals, slashed zero
+  font-variant-numeric: lining-nums;
+  font-variant-numeric: slashed-zero;
+  font-variant-numeric: tabular-nums;
+   */
+}
+
+th {
+  text-align: inherit;
+}
+
+td,
+th {
+  @apply py-4 px-6;
+}
+
+
+tr {
+
+  &:nth-of-type(odd) {
+  }
+}

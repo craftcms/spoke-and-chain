@@ -1,0 +1,10 @@
+{% set subContent = subContent is not defined ? null : subContent  %}
+<!-- Template: {{ _self }}.twig -->
+<div class="bg-gray-100">
+  <div class="container py-12 text-center">
+    <h1 class="text-4xl text-center">{{ heading }}</h1>
+    {% if subContent %}
+      {{ subContent }}
+    {% endif %}
+  </div>
+</div>

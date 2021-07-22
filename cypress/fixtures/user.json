@@ -1,0 +1,20 @@
+{
+  "firstName": "Ben",
+  "lastName": "David",
+  "email": "ben@craftcms.com",
+  "address": {
+    "firstName": "Ben",
+    "lastName": "David",
+    "address1": "13 rue des Papillons",
+    "city": "Grenoble",
+    "zipCode": "38000",
+    "countryId": "76"
+  },
+  "card": {
+    "firstName": "Ben",
+    "lastName":"David",
+    "number": "4242424242424242",
+    "expiry":"03/2026",
+    "cvv": "123"
+  }
+}

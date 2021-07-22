@@ -1,0 +1,59 @@
+[class^='sm:aspect-ratio-'],
+[class*=' sm:aspect-ratio-'],
+[class^='aspect-ratio-'],
+[class*=' aspect-ratio-'] {
+    @apply block;
+    @apply relative;
+
+    &:before {
+        @apply block;
+        @apply w-full;
+        content: '';
+    }
+
+    & .aspect-inner {
+        @apply absolute;
+        @apply inset-0;
+    }
+}
+
+@responsive {
+    .aspect-ratio-category-card:before {
+        padding-top: calc((2.5 / 4) * 100%);
+    }
+
+    .aspect-ratio-hero:before {
+        padding-top: calc((2 / 5) * 100%);
+
+        @screen xxl {
+            padding-top: 0;
+            height: 36rem;
+        }
+    }
+
+    .aspect-ratio-hero-home:before {
+        padding-top: calc((3 / 5) * 100%);
+
+        @screen xxl {
+            padding-top: 0;
+            height: 36rem;
+        }
+    }
+
+    .aspect-ratio-hero-short:before {
+        padding-top: calc((1 / 3) * 100%);
+
+        @screen xxl {
+            padding-top: 0;
+            height: 24rem;
+        }
+    }
+
+    .aspect-ratio-product-card:before {
+        padding-top: calc((2 / 3) * 100%);
+    }
+
+    .aspect-ratio-error-image:before {
+        padding-top: calc((9 / 16) * 100%);
+    }
+}

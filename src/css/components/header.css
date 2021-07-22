@@ -1,0 +1,9 @@
+/* Disable body scrolling */
+
+html.showing-nav {
+    @apply overflow-y-scroll lg:overflow-y-auto h-full lg:h-auto;
+}
+
+body.showing-nav {
+    @apply overflow-y-hidden lg:overflow-y-auto h-full lg:h-auto;
+}

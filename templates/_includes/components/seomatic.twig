@@ -1,0 +1,3 @@
+{# SEOmatic component template to allow overriding of settings #}
+{% set siteLinksSearchTarget = siteUrl(seomatic.site.siteLinksSearchTarget) %}
+{% do seomatic.site.siteLinksSearchTarget(siteLinksSearchTarget) %}

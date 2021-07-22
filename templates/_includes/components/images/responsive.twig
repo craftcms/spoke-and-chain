@@ -1,0 +1,29 @@
+{# Responsive Images Component #}
+{# Params #}
+{# class: string #}
+{% set class = class is not defined ? null : class %}
+{# srcset: Array of src set sizes #}
+{% set srcset = srcset is not defined ? null : srcset %}
+{# sizes: Key value object of max width and image size descriptor #}
+{% set sizes = sizes is not defined ? null : sizes %}
+{# transform: string or object #}
+{% set transform = transform is not defined ? null : transform %}
+{# image: asset element #}
+{% set image = image is not defined ? null : image %}
+{# showAlt: boolean - whether or not to output the alt attribute #}
+{% set showAlt = showAlt is not defined ? true : showAlt %}
+
+{# Variables #}
+{% set tagOptions = image ? {
+    src: image.url,
+    alt: showAlt ? image.title : null,
+} : null %}
+{% if transform and image %}{% do image.setTransform(transform) %}{% endif %}
+{% set tagOptions = class ? tagOptions|merge({ class: class }) : tagOptions %}
+{% set tagOptions = srcset and image ? tagOptions|merge({ srcset: image.getSrcset(srcset) }) : tagOptions %}
+{% set tagOptions = sizes ? tagOptions|merge({ sizes: sizes|map((width, max) => max != 'all' ? "(max-width: #{max}) #{width}" : width)|join(', ') }) : tagOptions %}
+
+{# Output #}
+{% if image and tagOptions %}
+    {{ tag('img', tagOptions) }}
+{% endif %}

@@ -1,0 +1,42 @@
+@responsive {
+    .button {
+        @apply bg-gray-300;
+        @apply inline-block rounded-md py-2 px-4;
+        @apply border border-transparent;
+        @apply cursor-pointer;
+        @apply text-base leading-6 font-medium text-black;
+        @apply transition duration-150 ease-in-out;
+    }
+
+    .button:hover {
+        @apply bg-gray-400;
+    }
+
+    .button:active {
+        @apply bg-gray-500;
+    }
+
+    .button.button--small {
+        @apply py-1 px-2;
+        @apply text-sm;
+    }
+
+    .button.submit {
+        @apply bg-red-600;
+        @apply text-white;
+    }
+
+    .button.submit:hover {
+        @apply bg-red-700;
+    }
+
+    .button.chromeless {
+        @apply bg-transparent;
+        @apply border-0;
+        @apply p-0;
+        @apply font-normal;
+        @apply text-blue-600;
+        @apply rounded-none;
+        @apply leading-none;
+    }
+}

@@ -1,0 +1,8 @@
+{% set address = address is not defined ? null : address %}
+
+{% if address %}
+  <!-- Template: {{ _self }}.twig -->
+  {% for key, line in address.addressLines %}
+    {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>
+  {% endfor %}
+{% endif %}

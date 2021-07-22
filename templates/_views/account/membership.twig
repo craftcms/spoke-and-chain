@@ -1,0 +1,46 @@
+{% requireLogin %}
+
+{% set crumbs = [
+  { label: "Account"|t('site'), url: url('account') },
+] %}
+
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set plans = craft.commerce.plans.getAllEnabledPlans() %}
+{% set existingSubscription = currentUser ? craft.subscriptions({
+  isSuspended: false,
+  isExpired: false,
+  isCanceled: false,
+}).user(currentUser).one() : null %}
+
+{# Output #}
+{% block content %}
+  {% set subContent = null %}
+  {% if existingSubscription %}
+    {% set subContent %}
+      <div class="mt-2 text-sm">
+        <div><strong>{{ 'Current subscription'|t }}:</strong> {{ existingSubscription.plan.name }}</div>
+        <div><strong>{{ 'Next payment date'|t }}:</strong> {{ existingSubscription.nextPaymentDate|date('Y-m-d') }}</div>
+      </div>
+    {% endset %}
+  {% endif %}
+  {% include '_includes/components/pages/heading' with { heading: entry.title, subContent: subContent } %}
+
+  {% if plans|length %}
+    <div class="container py-16 relative">
+      {{ sprig('_includes/components/services/plans', { show: 'true' } ,{ id: 'services-plans' }) }}
+      <div id="plans-indicator" class="spinner-overlay">
+        {% include '_includes/components/spinner' %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="relative">
+    {{ sprig('_includes/components/subscriptions/history', {}, { id: 'subscription-history', 's-indicator': '#subscription-history-indicator' }) }}
+    <div id="subscription-history-indicator" class="spinner-overlay">
+      {% include '_includes/components/spinner' %}
+    </div>
+  </div>
+{% endblock %}

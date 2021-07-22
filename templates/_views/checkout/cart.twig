@@ -1,0 +1,42 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Heading #}
+  <div class="px-6 py-12 max-w-xl mx-auto text-center">
+    <h1 class="text-3xl mt-0">
+      {% if not cart.lineItems|length %}
+        {{ entry.body }}
+      {% else %}
+        {{ entry.heading }}
+      {% endif %}
+    </h1>
+
+    {% if entry.subheading %}
+      <p class="text-lg text-gray-700">{{ entry.subheading }}</p>
+    {% endif %}
+
+    {% if not cart.lineItems|length %}
+      <p><a href="{{ url('bikes') }}" class="button submit">Continue Shopping</a></p>
+    {% endif %}
+  </div>
+
+  {# Cart #}
+  <div class="container flex justify-center">
+    <div class="{% if cart.lineItems|length %}border-t border-gray-300 {% endif %}w-full max-w-5xl relative">
+      {{ sprig('_includes/components/forms/cart', {
+        entryId: entry.id
+      }, {
+        id: 'cart-sprig',
+      }) }}
+      <div id="cart-indicator" class="spinner-overlay">
+        {% include '_includes/components/spinner' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

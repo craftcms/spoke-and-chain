@@ -1,0 +1,237 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set fixedHeader = false %}
+{% set defaultVariant = product.defaultVariant %}
+{% set productColors = product.colors.all() %}
+{% set hasOverview = product.body ? true : false %}
+{% set hasGeometry = product.geometry|length ? true : false %}
+{% set reviews = craft.entries({ section: 'reviews', relatedTo: product, orderBy: 'postDate DESC' }).all() %}
+{% set hasReviews = reviews and reviews|length %}
+{% set averageRating = hasReviews ? craft.reviews.getAverageRatingByProductId(product.id) : false %}
+{% set mostRecentReview = hasReviews ? reviews|first : false %}
+{% set form = product.showForm ? craft.freeform.form('product', {}) : null %}
+{% set images = product.productImages.all() %}
+{% set geometryReference = bikes.mainImage.one() ?? null %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  {# Product Nav #}
+  {% include '_includes/components/products/nav' with {
+    hasOverview : product.body ? true : false,
+    hasGeometry : product.geometry|length ? true : false,
+    hasReviews: hasReviews,
+    hasForm: product.showForm and form,
+  } %}
+
+  {% if images|length %}
+    <div>
+      {% include '_includes/components/products/slider' with {
+        images: images,
+        id: 'product-slider-' ~ product.id
+      } only %}
+    </div>
+  {% endif %}
+
+  <div class="bg-gray-100">
+    <div id="buy" class="container py-8">
+      <form method="post">
+        {{ csrfInput() }}
+        {{ actionInput('commerce/cart/update-cart') }}
+        {{ hiddenInput('successMessage', 'Added {name} to the cart.'|t('site', { name: product.title })|hash) }}
+
+        <div class="lg:flex lg:justify-between">
+          {# Product Title #}
+          <div class="lg:w-1/4">
+            <h1 class="mt-0">{{ product.title }}</h1>
+            <div class="mt-1 flex items-start  leading-5">
+              <div>
+                <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
+                {% if defaultVariant.onSale %}
+                  <div>
+                    <s aria-label="{{ 'Reduced from {price}'|t('site', { price: defaultVariant.priceAsCurrency }) }}" class="block mt-1 text-xs text-gray-500">{{ defaultVariant.priceAsCurrency }}</s>
+                  </div>
+                {% endif %}
+              </div>
+              {% if not averageRating is same as(null) and not averageRating is same as(false) %}
+                <a href="#reviews" class="ml-6 flex items-center text-gray-600 text-sm">
+                  <div class="mr-1">
+                    {{ averageRating }}
+                  </div>
+                  <div>
+                    {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-4 h-4', 'aria-label': "Stars"|t('site') }) }}
+                  </div>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+          {# Product Variants #}
+          <div class="mt-6 lg:mt-0 lg:flex lg:justify-center lg:items-center">
+            {# Colors #}
+            {% if productColors %}
+              <div class="flex mr-2">
+                {% for color in productColors %}
+                  <div class="flex lg:flex-col text-xs text-gray-800 items-center mr-3">
+                    <div class="h-5 w-5 rounded-full mr-1 lg:mr-0"
+                         style="background-color: {{ color.color }}"
+                         aria-label="{{ color.title }}"
+                         title="{{ color.title }}">
+                    </div>
+                    <div class="lg:mt-1">
+                      {{ color.title }}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {# Variants #}
+            <div class="mt-6 lg:mt-0">
+              {% include '_includes/components/forms/select' with {
+                name: 'purchasableId',
+                options: product.variants|map((v) => {
+                  value: v.id,
+                  label: v.title,
+                  disabled: not v.hasStock()
+                })
+              } %}
+            </div>
+          </div>
+
+          {# Product Buy #}
+          <div class="mt-6 lg:mt-0 lg:w-1/4 lg:text-right lg:flex lg:items-center lg:justify-end">
+            <input class="button w-full sm:w-auto" type="submit" name="submit"
+                   value="{{ 'Add to cart'|t('site') }}">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {# Product Content #}
+  <div class="bg-white py-8">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+
+        {# Overview #}
+        {% if hasOverview %}
+          <div id="overview" class="pt-16">
+            <h2 class="text-xl">{{ 'Overview'|t }}</h2>
+            {{ product.body }}
+          </div>
+        {% endif %}
+
+        {# Geometry #}
+        {% if hasGeometry %}
+          <div id="geometry" class="pt-16">
+            <h2 class="text-xl">Geometry</h2>
+
+            {% if geometryReference %}
+              <img class="w-full mt-4" src="{{ geometryReference.getUrl() }}" alt="{{ '{product} geometry diagram'|t('site', { product: product.title }) }}"/>
+            {% endif %}
+
+            <div class="overflow-x-auto block max-w-full">
+              <table class="data w-full mt-8">
+                {% for row in product.geometry %}
+                  {% if loop.first %}
+                    <thead>
+                      <tr>
+                        <th><span class="visuallyhidden">{{ 'Type'|t }}</span></th>
+                        <th class="text-center">{{ 'S'|t }}</th>
+                        <th class="text-center">{{ 'M'|t }}</th>
+                        <th class="text-center">{{ 'L'|t }}</th>
+                        <th class="text-center">{{ 'XL'|t }}</th>
+                      </tr>
+                    </thead>
+                  {% endif %}
+                  <tbody>
+                    <tr>
+                      <td class="pl-0">{{ row.piece }}</td>
+                      <td class="text-center">{{ row.s }}</td>
+                      <td class="text-center">{{ row.m }}</td>
+                      <td class="text-center">{{ row.l }}</td>
+                      <td class="text-center">{{ row.xl }}</td>
+                    </tr>
+                  {% if loop.last %}
+                  </tbody>
+                  {% endif %}
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        {% endif %}
+
+
+        {# Reviews #}
+        {% if hasReviews %}
+          <div id="reviews" class="pt-16">
+            <div>
+              <h2 class="text-xl">{{ 'Reviews'|t }}</h2>
+
+              <div class="mt-1 flex items-center">
+                <div class="flex text-yellow-500 -ml-1 mr-2">
+                  {% for i in range(1, 5) %}
+                    {% if i < averageRating %}
+                      {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
+                    {% else %}
+                      {% set averageRatingFloor = averageRating|round(0, 'floor') %}
+                      {% set averageRatingCeil = averageRating|round(0, 'ceil') %}
+
+                      {% if averageRatingFloor < averageRating and averageRatingCeil == i%}
+                        <div class="relative">
+                          {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
+
+                          <div class="absolute top-0 left-0 w-1/2 overflow-hidden" style="width: {{ ((averageRating - averageRatingFloor) * 100) }}%;">
+                            {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
+                          </div>
+                        </div>
+                      {% else %}
+                        {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
+                      {% endif %}
+
+                    {% endif %}
+                  {% endfor %}
+                </div>
+
+                <div>
+                  {{ '{number}/5'|t('site', { number: averageRating }) }}
+                </div>
+              </div>
+
+              <div class="mt-2 text-gray-500 text-sm">{{ '{number} review(s)'|t('site', { number: reviews|length }) }}</div>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="text-lg">{{ 'Most Recent Review'|t }}</h3>
+              <div class="mt-4">
+                {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
+              </div>
+            </div>
+
+            {% if reviews|length > 1 %}
+              <div x-data="modalButton('reviews', { id: {{ product.id }}, title: '{{ product.title|e('js') }}' }, 'slideout')" class="mt-4">
+                <a class="button" href="#"
+                   x-on:click.prevent="open($dispatch)">{{ 'See all reviews'|t }}</a>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if product.showForm and form %}
+          <div class="mt-12" id="question">
+            {% include '_includes/components/content/form' with {
+              block: {
+                form: form,
+                heading: 'Have a question? Ask us!'|t
+              },
+              container: false,
+            } only %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

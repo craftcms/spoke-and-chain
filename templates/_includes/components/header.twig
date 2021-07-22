@@ -1,0 +1,212 @@
+<!-- Template: {{ _self }}.twig -->
+{# Variables #}
+{% set showNav = showNav is not defined ? true : showNav %}
+{% set fixedHeader = fixedHeader is not defined ? true : fixedHeader %}
+{% set searchQuery = craft.app.request.getQueryParam('q') %}
+{% set searchPage = craft.entries({ section: 'search' }).one() %}
+
+<header id="header" x-data="header()"
+        class="z-20 bg-white top-0 left-0 right-0 h-16 transition-height"
+        :class="{
+            'fixed': {{ fixedHeader ? 'true' : 'false' }},
+            'absolute': {{ fixedHeader ? 'false' : 'true' }},
+            'delay-300 duration-300': !showNav,
+            'show-nav h-full lg:h-auto duration-500': showNav,
+        }"
+>
+    <div class="absolute h-16 w-full flex items-center px-4 border-b border-transparent"
+         :class="{
+            'transition-position duration-500': true,
+            'border-gray-100': showNav && !searchFocused,
+            'top-0': !searchFocused,
+            '-top-16 border-white': searchFocused
+        }"
+    >
+        <div class="flex flex-1 lg:flex-initial justify-between items-center">
+            <!-- toggle nav -->
+            <button @click="toggleNav()"
+                    class="toggle-nav inline-flex items-center justify-center p-2 text-gray-500 hover:text-red-500 lg:hidden"
+                    aria-label="Main menu"
+                    aria-expanded="false">
+                <!-- open -->
+                <svg class="toggle-open block h-6 w-6"
+                     :class="{'hidden': showNav}"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+
+                <!-- close -->
+                <svg class="toggle-close h-6 w-6"
+                     :class="{'hidden': !showNav}"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+
+            <!-- brand -->
+            <div class="flex-1 flex items-center justify-center lg:flex-initial lg:w-64 lg:justify-start">
+                <a
+                        title="{{ siteName }}"
+                        class="inline-block px-4 py-2 text-black hover:text-red-600"
+                        href="/">{{ svg('@webroot/icons/logo.svg')|attr({ class: 'fill-current' }) }}</a>
+            </div>
+        </div>
+
+        <!-- desktop nav + desktop search -->
+        <div class="hidden lg:block lg:flex-1">
+            <!-- desktop nav -->
+            {% if showNav %}
+                {% include '_includes/components/nav' with {
+                    currentEntryId: entry is defined ? entry.id : false,
+                    isBikeCategory: category is defined and category.group.handle == 'bikeTypes' ? true : false,
+                } only %}
+            {% endif %}
+
+            <!-- desktop search -->
+            <div x-show.transition.opacity.duration.300ms="showSearch" class="py-0 pl-4 pr-12 h-full flex items-center bg-white"
+                 :class="{
+                    'absolute z-20 top-0 left-0 right-0': true,
+                }"
+            >
+                <div class="max-w-2xl w-full mx-auto flex items-center relative">
+                    <form id="search-form" action="{{ searchPage ? searchPage.url : '/search' }}" class="flex-1">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                {{ svg('@webroot/icons/search.svg')|attr({
+                                    class: 'text-gray-500 w-6 h-6',
+                                }) }}
+                            </div>
+
+                            <input id="search-input" name="q" type="search"
+                                   placeholder="Search Spoke & Chain…"
+                                   value="{{ searchQuery }}" class="full-w pl-10"
+                                   @keydown.escape="showSearch = false"
+                            />
+                        </div>
+                    </form>
+
+                    <div class="absolute right-0 transform translate-x-full -mr-3">
+                        <button @click="closeSearch()" aria-label="{{ 'Close search'|t('site') }}" class="flex items-center">
+                            {{ svg('@webroot/icons/times-light.svg')|attr({
+                                class: 'w-6 h-6',
+                            }) }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- desktop search trigger + mobile/desktop cart -->
+        <div class="relative z-10 flex justify-end items-center lg:w-64">
+            <!-- search trigger -->
+            <div class="hidden lg:flex">
+                <button aria-label="Search"
+                        class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
+                        @click="openSearch($nextTick)">
+                    {{ svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) }}
+                </button>
+            </div>
+
+            <!-- cart -->
+            <div class="flex items-center">
+                {% include '_includes/components/cartMenu' with {
+                    qty: cart.totalQty,
+                    lineItems: cart.lineItems,
+                    shipping: cart.totalShippingCost == 0 ? false : cart.totalShippingCostAsCurrency,
+                    discount: cart.totalDiscount == 0 ? false : cart.totalDiscountAsCurrency,
+                    total: cart.totalPriceAsCurrency
+                } %}
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute w-full bottom-0 transition-position duration-500 lg:hidden"
+         :class="{
+        'top-16': !searchFocused,
+        'top-0': searchFocused,
+      }"
+    >
+        <div class="absolute w-full top-0 bottom-0 h-0 overflow-hidden transition-all"
+             :class="{
+                'opacity-0 delay-300 duration-300': !showNav,
+                'opacity-100 h-full duration-500': showNav,
+             }"
+        >
+            <!-- mobile search -->
+            <div class="border-b border-gray-100 px-4 pt-4 pb-4">
+                <form
+                        action="{{ searchPage ? searchPage.url : '/search' }}"
+                        class="search-form"
+                        :class="{
+                  '': !showNav,
+                  'search-focused': searchFocused,
+                }">
+                    <div class="search-field relative flex items-center">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            {{ svg('@webroot/icons/search.svg')|attr({
+                                class: 'text-gray-500 w-6 h-6',
+                            }) }}
+                        </div>
+
+                        <input id="search-input" name="q" type="search"
+                               class="full-w pl-10 mr-0 transition-spacing duration-500"
+                               :class="{
+                                    '-mr-20': !searchFocused,
+                               }"
+                               x-on:focus="onSearchFocus"
+                               x-on:blur="onSearchBlur"
+                               placeholder="Search Spoke & Chain…"
+                               value="{{ searchQuery }}"
+                               autocomplete="off"
+                               @keydown.escape="showSearch = false"
+                        />
+                        <div class="search-cancel ml-4 transition transform opacity-100 duration-500"
+                             :class="{
+                                'translate-x-24': !searchFocused
+                             }"
+                        >
+                            <a href="#">{{ 'Cancel'|t }}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            {% if showNav %}
+                <!-- mobile nav -->
+                <div
+                        class="transition-opacity duration-500"
+                        :class="{
+                            'opacity-100': !searchFocused,
+                            'opacity-0': searchFocused
+                        }"
+                >
+                    <div
+                            class="overflow-hidden transition-height"
+                            :class="{
+                                'h-full': !searchFocused,
+                                'h-0 delay-500': searchFocused
+                            }"
+                    >
+                        <div class="px-4 py-1">
+                            {% include '_includes/components/nav' with {
+                                currentEntryId: entry is defined ? entry.id : false,
+                                isBikeCategory: category is defined and category.group.handle == 'bikeTypes' ? true : false,
+                            } only %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</header>

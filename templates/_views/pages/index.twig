@@ -1,0 +1,21 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+{% set contentBlocks = entry.contentBuilder.all() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  <div>
+    {# Heading #}
+    {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+
+    {# Article Content #}
+    {% for block in contentBlocks %}
+      {% include '_includes/components/content/' ~ block.type.handle with {
+        block: block,
+        isFirst: loop.first,
+        isLast: loop.last,
+      } %}
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,139 @@
+<!-- Template: {{ _self }}.twig -->
+<input type="hidden" name="currentPushUrl" value="{{ pushUrl }}">
+<input type="hidden" name="saveState" x-model="saveState">
+
+<div class="bg-gray-100">
+  <div class="md:container md:py-8">
+    <div class="md:flex">
+      <div class="bg-white md:bg-transparent px-6 py-4 md:w-1/5 md:mr-12 mb-6">
+        <h2 class="sr-only">{{ 'Filters'|t }}</h2>
+
+        <button class="-ml-4 px-4 py-2 inline-flex items-center md:hidden"
+                x-on:click="showFilters = !showFilters">
+          <svg class="toggle-open block h-5 w-5 mr-2"
+               :class="{'hidden': showFilters}"
+               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+               fill="currentColor">
+            <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"/>
+          </svg>
+
+          <svg class="toggle-close h-5 w-5 mr-2"
+               :class="{'hidden': !showFilters}"
+               xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+
+          {{ 'Filters'|t }}{{ filterCount ? " (#{filterCount})" : '' }}
+        </button>
+
+        <div class="mt-4 md:mt-0" :class="{'hidden md:block': !showFilters}">
+          {% include '_includes/components/filters/bike' with {
+            heading: 'Bike Types'|t,
+            types: types,
+            selected: type,
+            urls: filterUrlsByType.types,
+          } only %}
+          {% if colorFilters|length %}
+            <hr class="my-6">
+            {% include '_includes/components/filters/color' with {
+              heading: 'Color'|t,
+              showHeading: true,
+              colors: colorFilters,
+              urls: filterUrlsByType.colors,
+              selectedColors: colors,
+            } only %}
+          {% endif %}
+          {% if materialFilters|length %}
+            <hr class="my-6">
+            {% include '_includes/components/filters/material' with {
+              heading: 'Material'|t,
+              showHeading: true,
+              materials: materialFilters,
+              urls: filterUrlsByType.materials,
+              selectedMaterials: materials,
+            } only %}
+          {% endif %}
+
+          <hr class="my-6">
+
+          <h3 class="uppercase text-xs text-gray-600">{{ 'Sort'|t }}</h3>
+          <label for="sort" class="sr-only">{{ 'Sort'|t }}</label>
+          {% include '_includes/components/forms/select' with {
+            wrapperClass: 'relative mt-2',
+            id: 'sort',
+            options: sortOptions,
+            name: 'sort',
+            attributes: {
+              'x-on:change': 'focusElement = "sort"; refresh()',
+              'x-model': 'sort',
+              'aria-controls': 'products-list',
+            }
+          } %}
+
+          {% if type or colors|length or materials|length or sort %}
+            <hr class="my-6">
+            <div>
+              <button class="button button--small w-full" x-on:click="clear()" aria-controls="products-list">
+                <div class="flex items-center">
+                  {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-5 h-5 fill-current block' }) }}
+                  <span>{{ 'Clear filters'|t }}</span>
+                </div>
+              </button>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div id="products-list" role="region" aria-live="polite" class="px-6 md:p-0 w-full md:w-4/5">
+        <div class="text-right text-gray-600 pb-4">
+          {{ '{num} product(s)'|t('site', { num: productCount }) }}
+        </div>
+        {% if not products|length %}
+          <div class="md:mt-16 py-16 text-center">
+            {{ svg('@webroot/icons/bike.svg')|attr({ class: 'inline-block text-red-400 w-16 h-16' }) }}
+            <p class="mt-2 text-gray-800">{{ 'No products available.'|t }}</p>
+          </div>
+        {% else %}
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 xl:grid-cols-3 grid-flow-row auto-rows-max">
+            {% for product in products %}
+              {% set defaultVariant = product.getDefaultVariant() %}
+              {% include '_includes/components/cards/product' with {
+                title: product.title,
+                image: product.mainImage[0] ?? null,
+                url: product.url,
+                colors: product.colors,
+                type: product.bikeType[0] ?? null,
+                price: defaultVariant.priceAsCurrency,
+                salePrice: defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : false,
+                averageRating: craft.reviews.getAverageRatingByProductId(product.id)
+              } only %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    var currentState = {
+        sort: '{{ sort }}',
+        colors: {{ colors|json_encode|raw }},
+        materials: {{ materials|json_encode|raw }},
+        type: '{{ type }}'
+    };
+
+    {% if saveState and saveState != 'false' %}
+    window.dispatchEvent(new CustomEvent('saveFilterState', {
+        detail: currentState
+    }))
+    {% endif %}
+
+    // Push state URL
+    if (window.location != '{{ pushUrl }}') {
+        history.pushState(window.currentState, '', '{{ pushUrl|raw }}')
+    }
+</script>

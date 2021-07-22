@@ -1,0 +1,61 @@
+{% set order = order is not defined ? null : order %}
+{% set form = form is not defined ? false : form %}
+{% set show = not form or (form and order.getErrors('couponCode')|length) ? 'true' : 'false' %}
+
+{% if order %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="pb-3">
+    <div class="flex items-center w-full justify-between pb-1">
+      <div>{{ 'Shipping'|t }}</div>
+      <div class="text-right">{{ order.totalShippingCostAsCurrency }}</div>
+    </div>
+    <div class="flex items-center w-full justify-between pb-1">
+      <div>{{ 'Tax'|t }}</div>
+      <div class="text-right">{{ order.totalTaxAsCurrency }}</div>
+    </div>
+    {% if form or order.couponCode %}
+      <div x-data="{ show: {{ show }}, showInput(nxt) { this.show = true; nxt(function() {document.querySelector('#coupon').focus();}); } }" class="flex w-full justify-between pb-1" x-bind:class="{ 'items-center': !show, 'items-start': show }">
+        <div>{{ 'Coupon'|t }}</div>
+        <div>
+          {% if not order.couponCode and form %}
+            <template x-if="!show">
+              <a class="coupon-trigger" href="#" x-on:click.prevent="showInput($nextTick)">{{ 'Enter coupon'|t }}</a>
+            </template>
+          {% elseif order.couponCode and form and not order.getErrors('couponCode')|length %}
+            <template x-if="show==false">
+              <div class="text-right">{{ order.couponCode }} <a href="#" x-on:click.prevent="showInput($nextTick)">{{ 'edit'|t }}</a></div>
+            </template>
+          {% elseif order.couponCode and not form %}
+            <div class="text-right">{{ order.couponCode }}</div>
+          {% endif %}
+          {% if form %}
+            <template x-if="show">
+              <div class="flex items-center">
+                <div class="pl-2">
+                  <label for="coupon">{{ 'Coupon Code'|t }}</label>
+                  <input id="coupon" class="{{ not order.getErrors('couponCode')|length ?: 'border-red-600' }}" type="text" name="couponCode" value="{{ order.couponCode }}">
+
+                  <div class="mt-2">
+                    <button class="coupon-apply button button--small" x-on:click.prevent="show = false">{{ 'Cancel'|t }}</button>
+                    <input type="submit" class="coupon-apply button submit button--small" name="apply" value="{{ 'Apply'|t }}">
+                  </div>
+                </div>
+              </div>
+              {% include '_includes/components/forms/errorList' with { errors: order.getErrors('couponCode') } %}
+            </template>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+    {% if order.totalDiscount != 0 %}
+      <div class="discount-row flex items-center w-full justify-between pb-1">
+        <div>{{ 'Discount'|t }}</div>
+        <div class="text-right">{{ order.totalDiscountAsCurrency }}</div>
+      </div>
+    {% endif %}
+  </div>
+  <div class="flex items-center w-full justify-between py-4 border-t border-gray-300 font-bold text-xl">
+    <div>Total</div>
+    <div class="text-right">{{ order.totalPriceAsCurrency }}</div>
+  </div>
+{% endif %}

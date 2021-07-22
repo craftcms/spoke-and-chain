@@ -1,0 +1,23 @@
+/* ==========================================================================
+    LISTS
+   ========================================================================== */
+
+/*
+* There's a reason it's called 'hanging punctuation'and bullets should be outdented.
+* See: http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2
+*/
+ul {
+  list-style-position: outside;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+dl {
+
+}
+
+dt {
+
+}

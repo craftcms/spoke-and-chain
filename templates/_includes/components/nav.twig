@@ -1,0 +1,50 @@
+<!-- Template: {{ _self }}.twig -->
+{# Variables #}
+{% set currentEntryId = currentEntryId is not defined ? false : currentEntryId %}
+{% set isBikeCategory = isBikeCategory is not defined ? false : isBikeCategory %}
+{% set navItems = [] %}
+{% set bikesLanding = craft.entries({ section: 'bikesLanding' }).one() ?? null %}
+{% if bikesLanding %}
+  {% set navItems = navItems|merge([{
+    label: bikesLanding.title,
+    url: bikesLanding.url,
+    selected: (currentEntryId and bikesLanding.id == currentEntryId) or isBikeCategory
+  }]) %}
+{% endif %}
+{% set servicesLanding = craft.entries({ section: 'servicesLanding' }).one() ?? null %}
+{% if servicesLanding %}
+  {% set navItems = navItems|merge([{
+    label: servicesLanding.title,
+    url: servicesLanding.url,
+    selected: servicesLanding.id == currentEntryId
+  }]) %}
+{% endif %}
+{% set articlesLanding = craft.entries({ section: 'articlesLanding' }).one() ?? null %}
+{% if articlesLanding %}
+  {% set navItems = navItems|merge([{
+    label: articlesLanding.title,
+    url: articlesLanding.url,
+    selected: articlesLanding.id == currentEntryId
+  }]) %}
+{% endif %}
+{% set contact = craft.entries({ section: 'contact' }).one() ?? null %}
+{% if contact %}
+  {% set navItems = navItems|merge([{
+    label: contact.title,
+    url: contact.url,
+    selected: contact.id == currentEntryId
+  }]) %}
+{% endif %}
+
+{# Output #}
+{% if navItems|length %}
+  <nav>
+    <ul class="list-none p-0 flex flex-col lg:flex-row justify-center">
+      {% for item in navItems %}
+        <li class="border-b border-gray-200 lg:border-b-0">
+          <a class="block font-medium lg:inline-block px-0 lg:px-4 py-2 text-black hover:text-red-600" href="{{ item.url }}">{{ item.label }}{% if item.selected %} <span class="sr-only">({{ isBikeCategory ? 'Current section'|t : 'Current page'|t }})</span>{% endif %}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pdfs
+name: PDFs
+propagationMethod: all
+siteSettings:
+  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

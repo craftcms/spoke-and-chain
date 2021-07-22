@@ -1,0 +1,32 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set plans = craft.commerce.plans.getAllEnabledPlans() %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+  {% include '_includes/components/hero' with {
+    title: entry.title,
+    image: entry.mainImage.one(),
+  } only %}
+
+  {% for block in entry.contentBuilder.all() %}
+    {% include '_includes/components/content/' ~ block.type.handle with {
+      block: block,
+      isFirst: loop.first,
+      isLast: loop.last,
+    } %}
+  {% endfor %}
+
+
+  {% if plans|length %}
+    <div class="container pt-8 relative">
+      {{ sprig('_includes/components/services/plans', {} ,{ id: 'services-plans' }) }}
+      <div id="plans-indicator" class="spinner-overlay">
+        {% include '_includes/components/spinner' %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

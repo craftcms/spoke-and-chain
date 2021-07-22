@@ -1,0 +1,43 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{% spaceless %}
+  {# Variables #}
+  {% set featuredArticle = craft.entries({
+    section: 'articles',
+  }).one() %}
+  {% set articles = craft.entries({
+    section: 'articles',
+    offset: 1
+  }).all() %}
+{% endspaceless %}
+
+{# Blocks #}
+{% block content %}
+  <div class="bg-gray-200 py-8">
+    <div class="max-w-6xl mx-auto">
+      {# Heading #}
+      <div class="container">
+        <h1 class="text-4xl text-center">{{ entry.title }}</h1>
+      </div>
+
+      {# Article List #}
+      <div class="container mt-8">
+        <div>
+          {% include '_includes/components/cards/article' with {
+            article: featuredArticle,
+            horizontal: true
+          } only %}
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {% for article in articles %}
+              {% include '_includes/components/cards/article' with {
+                article: article,
+              } only %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

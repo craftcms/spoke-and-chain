@@ -1,0 +1,53 @@
+{% set form = formId is defined and formId ? craft.freeform.form(formId, {
+  formAttributes: {
+    sprig: true,
+    's-indicator': '#form-indicator-' ~ formId,
+    's-action': 'freeform/api/form',
+    's-method': 'post',
+  }
+}) : null %}
+
+{% if form %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="relative">
+    {{ form.renderTag() }}
+    <div class="flex justify-center">
+      <div class="w-full max-w-3xl">
+        {% if heading %}
+          <h2 class="text-xl">{{ heading }}</h2>
+        {% endif %}
+
+        {% for row in form %}
+          <div class="{{ form.customAttributes.rowClass }}">
+            {% for field in row %}
+              {% set fieldName = 'input-' ~ loop.parent.loop.index ~ '-' ~ loop.index %}
+              <div class="{{ form.customAttributes.columnClass }} pt-4"{{ field.rulesHtmlData }}>
+                <label for="{{ fieldName }}">{{ field.label }}</label>
+                {{ field.renderInput({ id:fieldName, class: field.errors|length ? 'border-red-600' : '' , errorClass: 'hidden' }) }}
+                {% include '_includes/components/forms/errorList' with { errors: field.errors } only %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+
+        <div class="mt-4">
+          <button class="button submit" type="submit">{{ 'Send'|t }}</button>
+        </div>
+      </div>
+    </div>
+    {{ form.renderClosingTag }}
+    <div id="form-indicator-{{ form.id }}" class="spinner-overlay">
+      {% include '_includes/components/spinner' %}
+    </div>
+  </div>
+
+  {% if success is defined %}
+    <script>
+      {% if success and not form.hasErrors() %}
+          addNotification('notice', '{{ 'Form submitted.'|t }}');
+      {% elseif not success and form.hasErrors() %}
+          addNotification('error', '{{ 'There was a problem with your form submission.'|t }}');
+      {% endif %}
+    </script>
+  {% endif %}
+{% endif %}

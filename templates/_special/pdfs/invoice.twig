@@ -1,0 +1,136 @@
+{% set logo = craft.assets({
+    filename: 'logo.png',
+}).one() %}
+{% set pdf = craft.entries({
+    section: 'pdfs',
+    slug: 'invoice',
+}).one() %}
+<!doctype html>
+<html class="antialiased" lang="{{ craft.app.language | replace('_', '-') }}">
+    <head>
+        {# Standard Project Meta #}
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {# Prevent site from being indexed #}
+        <meta name="robots" content="noindex,nofollow">
+        {# /Standard Project Meta #}
+        {# PDF Styles #}
+        <style>
+            * { box-sizing: border-box; }
+
+            body {
+                font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+                margin: 0;
+                padding: 1rem 0;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 1rem;
+            }
+
+            .block { display: block; }
+
+            .w-full { width: 100%; }
+            .w-half { width: 50%; }
+
+            h1 {
+                padding-bottom: 1rem;
+            }
+
+            h3 { margin-bottom: 0; }
+
+            .mt-8 { margin-top: 2rem; }
+
+            .line-items .line-item {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(209,213,219, 1);
+            }
+
+            .line-items .line-item > .flex > .text-right {
+                font-weight: bold;
+                padding-top: .5rem;
+            }
+
+            .font-bold { font-weight: bold; }
+            .text-xl { font-size: 1.125rem; }
+            .text-xs { font-size: 0.85rem; }
+            .text-center { text-align: center; }
+            .text-right { text-align: right; }
+            .logo { max-width: 25%; }
+        </style>
+        {# /PDF Styles #}
+
+        <title>Order invoice: {{ order.number }}</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <a class="block" href="{{ siteUrl() }}">
+                {% if logo %}
+                    {{ tag('img', { src: logo.getDataUrl(), alt: logo.title, class: 'logo' }) }}
+                {% endif %}
+            </a>
+        </div>
+
+        {% if pdf %}
+            <div class="container mt-8">
+                {% if pdf.heading %}
+                    <h1>{{ pdf.heading }}</h1>
+                {% endif %}
+
+                {% if pdf.body %}
+                    {{ pdf.body }}
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="container mt-8 line-items">
+            {% for lineItem in order.lineItems %}
+                {% include '_includes/components/order/lineItem' with {
+                    lineItem: lineItem,
+                    purchasable: null,
+                    showImage: false,
+                } only %}
+            {% endfor %}
+        </div>
+
+        {% if order.shippingAddress %}
+            <div class="container">
+                <h3>{{ 'Address'|t }}</h3>
+                <table class="w-full">
+                    <tr>
+                        <td class="w-half">
+                            <h4>{{ 'Shipping to'|t }}:</h4>
+                            <p>{{ order.shippingAddress.addressLines|join("\n")|nl2br }}</p>
+
+                        </td>
+                        <td class="w-half">
+                            <h4>{{ 'Billing Address'|t }}:</h4>
+
+                            <p>{{ order.billingAddress.addressLines|join("\n")|nl2br }}</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+
+        <div class="container">
+            <div class="w-full">
+                <h3>{{ 'Your Total'|t }}</h3>
+            </div>
+
+            <div class="w-full lg:w-4/5">
+                {% include '_includes/components/order/totals' with { order: order } only %}
+            </div>
+        </div>
+
+        <div class="container mt-8">
+            <p class="text-center text-xs">
+                &copy; {{ now|date('Y') }} {{ footer.heading }}
+            </p>
+        </div>
+    </body>
+</html>

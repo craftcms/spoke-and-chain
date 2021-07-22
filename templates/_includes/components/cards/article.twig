@@ -1,0 +1,54 @@
+<!-- Template: {{ _self }}.twig -->
+{# Params #}
+{% set horizontal = horizontal is not defined ? false : horizontal %}
+
+{# Variables #}
+{% set title = article.title %}
+{% set date = article.postDate %}
+{% set url = article.url %}
+{% set image = article.mainImage.one() %}
+{% set imageOptions = { class: 'w-full', image: image, transform: { width: 353, height: 207 }} %}
+{% set imageOptions = horizontal ?
+    imageOptions|merge({
+        sizes: {
+            '320px': '272px',
+            '425px': '377px',
+            '639px': '591px',
+            '767px': '390px',
+            '1023px': '476px',
+            '1279px': '647px',
+            '1439px': '732px',
+            'all': '732px',
+        },
+        srcset: ['732w', '647w', '591w', '476w', '390w', '377w', '272w'],
+    })
+    :
+    imageOptions|merge({
+        sizes: {
+            '320px': '272px',
+            '425px': '377px',
+            '639px': '591px',
+            '767px': '284px',
+            '1023px': '348px',
+            '1279px': '309px',
+            '1439px': '352px',
+            'all': '352px',
+        },
+        srcset: ['597w', '377w', '352w', '348w', '309w', '284w', '272w'],
+    })
+%}
+
+{# Output #}
+{% if title %}
+  <a class="article-card group block rounded-md overflow-hidden w-full bg-white {{ horizontal ? 'sm:flex' : '' }}" href="{{ url }}" aria-label="{{ title }}">
+    <div class="{{ horizontal ? 'sm:w-2/3 sm:pr-1' : '' }}">
+        {% if image %}
+            {% include '_includes/components/images/responsive' with imageOptions %}
+        {% endif %}
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl text-gray-900 group-hover:text-red-600">{{ title }}</h2>
+      <p class="text-gray-600 text-sm uppercase">{{ date|date('F j, Y') }}</p>
+    </div>
+  </a>
+{% endif %}

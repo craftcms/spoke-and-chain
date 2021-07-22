@@ -1,0 +1,14 @@
+{% set address = address is not defined ? null : address %}
+{% set redirectUrl = redirectUrl is not defined ? craft.app.request.getUrl() : redirectUrl %}
+{% set redirectParams = redirectParams is not defined ? { updated: 'address' } : redirectParams %}
+
+{% if address %}
+  <!-- Template: {{ _self }}.twig -->
+  <div class="absolute text-right mt-4 top-0 right-0 pr-4 sm:pr-8">
+    <div x-data="modalButton('address', { id: {{ address ? address.id : '\'new\'' }}, method: 'post', action: 'commerce/customer-addresses/save' }, 'slideout')">
+      <button id="edit-address-{{ address ? address.id : 'new' }}" class="text-blue-600" x-on:click.prevent="open($dispatch, '#edit-address-{{ address ? address.id : 'new' }}')">
+        {{ 'Edit'|t }}
+      </button>
+    </div>
+  </div>
+{% endif %}

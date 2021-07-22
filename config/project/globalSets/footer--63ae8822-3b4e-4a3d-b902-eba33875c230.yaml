@@ -1,0 +1,41 @@
+fieldLayouts:
+  99b69fc3-3792-4187-9bbd-0bfd84dc876d:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            instructions: ''
+            label: Copyright
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            instructions: ''
+            label: 'Language Heading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b9cb6112-ebae-420b-bae9-a54c387419f6 # Footer Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Nav
+        sortOrder: 2
+handle: footer
+name: Footer
+sortOrder: 0

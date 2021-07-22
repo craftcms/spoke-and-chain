@@ -1,0 +1,27 @@
+{# Params #}
+{% set block = block is not defined ? false : block %}
+{% set isFirst = isFirst is not defined ? false : isFirst %}
+{% set isLast = isLast is not defined ? false : isLast %}
+{% set image = block ? block.image.one() : null %}
+
+{% if block and image %}
+  <!-- Template: {{ _self }}.twig -->
+    <div>
+        {% include '_includes/components/images/responsive' with {
+            class: 'w-full',
+            image: image,
+            sizes: {
+                '320px': '320px',
+                '425px': '425px',
+                '639px': '640px',
+                '767px': '768px',
+                '1023px': '1024px',
+                '1279px': '1280px',
+                '1439px': '1440px',
+                'all': '1440px',
+            },
+            srcset: ['1440w', '1280w', '1024w', '900w', '768w', '640w', '425w', '320w'],
+            transform: { width: 380, height: 152, },
+        } %}
+    </div>
+{% endif %}

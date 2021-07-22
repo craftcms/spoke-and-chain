@@ -1,0 +1,74 @@
+{# Params #}
+{% set hasOverview = hasOverview is not defined ? false : hasOverview %}
+{% set hasReviews = hasReviews is not defined ? false : hasReviews %}
+{% set hasGeomentry = hasGeomentry is not defined ? false : hasGeomentry %}
+{% set hasForm = hasForm is not defined ? false : hasForm %}
+
+<!-- Template: {{ _self }}.twig -->
+<div id="product-nav" x-data="productNav()" @scroll.window="onScroll" class="sticky top-0 z-10 h-16">
+  <div class="absolute w-full px-6 bg-gray-200 border-b border-gray-300 py-2">
+    <div class="relative lg:container lg:flex lg:items-center lg:justify-between">
+      <h1 class="text-base font-bold float-left lg:float-none mt-3 mb-3 lg:mb-3 flex-1">{{ product.title }}</h1>
+
+      <div id="product-nav-tray" class="float-right w-full lg:float-none lg:w-auto" :class="{
+        'transition-all duration-500': false,
+        'duration-500 max-h-0 tray-invisible lg:visible lg:max-h-none': !productNavVisible,
+        'duration-1000 max-h-screen tray-visible': productNavVisible,
+      }"
+      >
+        <ul id="product-nav-items" class="mt-2 lg:mt-0 lg:mr-4 text-sm font-medium flex-1 flex flex-col lg:flex-row justify-center"
+            :class="{
+              'opacity-0 lg:opacity-100': !productNavVisible,
+              'transition duration-500 opacity-100 delay-200': productNavVisible,
+            }"
+        >
+          {% if hasOverview %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#overview">{{ 'Overview'|t }}</a>
+            </li>
+          {% endif %}
+          {% if hasGeometry %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#geometry">{{ 'Geometry'|t }}</a>
+            </li>
+          {% endif %}
+          {% if hasReviews is defined and hasReviews %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#reviews">{{ 'Reviews'|t }}</a>
+            </li>
+          {% endif %}
+          {% if hasForm is defined and hasForm %}
+            <li class="lg:mx-1 border-t border-gray-300 lg:border-0">
+              <a
+                      class="block lg:inline-block text-gray-900 lg:px-4 py-2"
+                      href="#question">{{ 'Ask'|t }}</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="absolute top-0 right-0 lg:relative lg:top-auto lg:right-auto flex items-center">
+        <button @click="productNavVisible = !productNavVisible" class="px-3 py-2 mr-2 lg:hidden">
+          <template x-if="!productNavVisible">
+            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </template>
+          <template x-if="productNavVisible">
+            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+          </template>
+        </button>
+        <a href="#buy" class="button submit text-sm">{{ 'Buy'|t }}</a>
+      </div>
+      <div class="clear-both lg:clear-none lg:hidden"></div>
+    </div>
+  </div>
+</div>

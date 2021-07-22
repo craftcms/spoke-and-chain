@@ -1,0 +1,71 @@
+{% set paymentForm = paymentForm is not defined ? {} : paymentForm %}
+{% set allowSave = allowSave is not defined ? false : allowSave %}
+
+<!-- Template: {{ _self }}.twig -->
+<fieldset>
+  <div class="flex flex-wrap -mx-1">
+    <div class="w-full md:w-1/2 px-1">
+      <label for="first-name">{{ 'First Name'|t }}</label>
+      <input id="first-name" type="text" name="firstName" autocomplete="false" value="{{ paymentForm.firstName ?? '' }}">
+      {% if paymentForm and paymentForm.getErrors('firstName') %}
+        <div class="mt-2">
+          {% include '_includes/components/forms/errorList' with { errors: paymentForm.getErrors('firstName') } only %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="w-full md:w-1/2 px-1 pt-4 md:pt-0">
+      <label for="last-name">{{ 'Last Name'|t }}</label>
+      <input id="last-name" type="text" name="lastName" autocomplete="false" value="{{ paymentForm.lastName ?? '' }}">
+      {% if paymentForm and paymentForm.getErrors('lastName') %}
+        <div class="mt-2">
+          {% include '_includes/components/forms/errorList' with { errors: paymentForm.getErrors('lastName') } only %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <div class="flex flex-wrap -mx-1 pt-4">
+    <div class="w-full md:w-3/5 px-1">
+      <label for="card-number">{{ 'Card Number'|t }}</label>
+      <input type="text" name="number" autocomplete="false" value="{{ paymentForm.number ?? '' }}">
+      {% if paymentForm and paymentForm.getErrors('number') %}
+        <div class="mt-2">
+          {% include '_includes/components/forms/errorList' with { errors: paymentForm.getErrors('number') } only %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="w-full md:w-2/5 px-1">
+      <div class="flex -mx-1 pt-4 md:pt-0">
+        <div class="w-full md:w-2/3 px-1">
+          <label for="expiry">{{ 'Expiry'|t }} <span class="text-xs">(MM / YYYY)</span></label>
+          <input id="expiry" type="text" name="expiry" value="{{ paymentForm.expiry ?? '' }}">
+        </div>
+        <div class="w-full md:w-1/3 px-1">
+          <label for="cvv">{{ 'CVV'|t }}</label>
+          <input id="cvv" type="text" name="cvv" value="{{ paymentForm.cvv ?? '' }}">
+        </div>
+      </div>
+      {% set cardErrors = [] %}
+      {% for attributeKey in ['expiry', 'cvv'] %}
+        {% set cardErrors = cardErrors|merge(paymentForm.getErrors(attributeKey)) %}
+      {% endfor %}
+      {% if paymentForm and cardErrors|length %}
+        <div class="mt-2">
+          {% include '_includes/components/forms/errorList' with { errors: cardErrors } only %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  {% if allowSave %}
+    <div class="w-full flex justify-start items-center mt-4">
+      <input class="checkbox" id="save-card" type="checkbox" name="savePaymentSource" value="1" />
+      <label class="pl-1" for="save-card">
+        {{ 'Save card'|t }}
+      </label>
+    </div>
+  {% endif %}
+</fieldset>

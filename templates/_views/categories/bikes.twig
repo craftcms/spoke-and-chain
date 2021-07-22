@@ -1,0 +1,46 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{% set type = entry is defined ? '' : category.slug %}
+{% set colorsQuery = craft.app.request.getQueryParam('colors', '') %}
+{% set materialsQuery = craft.app.request.getQueryParam('materials', '') %}
+{% set sort = craft.app.request.getQueryParam('sort', '') %}
+
+{% block content %}
+  {% set mainImage = null %}
+
+  {% if entry is defined %}
+    {% set mainImage = entry.mainImage.one() %}
+  {% elseif category is defined %}
+    {% set mainImage = category.mainImage.one() %}
+  {% endif %}
+
+  <div class="bg-gray-700">
+    {% include '_includes/components/hero' with {
+      image: mainImage,
+      title: entry is defined ? entry.title : category.title,
+      short: true,
+    } only %}
+  </div>
+
+  <div x-data="filter()" x-init='init({ type: "{{ type }}", colors: {{ (colorsQuery ? colorsQuery|split('|') : [])|json_encode|raw }}, materials: {{ (materialsQuery ? materialsQuery|split('|') : [])|json_encode|raw }}, sort: "{{ sort }}" }, $nextTick)'
+      class="relative"
+  >
+    {{ sprig('ProductFilter',
+      {
+        type: type,
+        colors: colorsQuery,
+        materials: materialsQuery,
+        sort: sort,
+      },
+      {
+        id: 'filter',
+        's-trigger': 'refresh, change from:.filter',
+        's-indicator': '#filter-indicator',
+      }
+    ) }}
+    <div id="filter-indicator" class="spinner-overlay">
+      {% include '_includes/components/spinner' %}
+    </div>
+  </div>
+{% endblock %}

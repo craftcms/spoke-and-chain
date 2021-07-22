@@ -1,0 +1,20 @@
+{% set review = review is not defined ? null : review %}
+
+{% if review %}
+  <!-- Template: {{ _self }}.twig -->
+  <div>
+    <div><strong>{{ review.title }}</strong></div>
+    <div class="mt-1 text-gray-500 text-sm">{{ review.postDate|date('F j, Y') }}</div>
+    <div class="mt-1 -ml-1 flex" aria-label="{{ review.stars }}/5">
+      {% for i in range(1, 5) %}
+        {{ svg('@webroot/icons/star.svg')|attr({
+          class: (i <= review.stars ? 'text-yellow-500' : 'text-gray-300') ~ ' w-5 h-5'
+        }) }}
+      {% endfor %}
+    </div>
+
+    <div class="mt-4">
+      {{ review.body }}
+    </div>
+  </div>
+{% endif %}

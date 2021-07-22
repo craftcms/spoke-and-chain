@@ -1,0 +1,8 @@
+.modal.modal-centered .modal-container {
+    height: 80vh;
+    @apply rounded;
+}
+
+.modal.modal-slideout .modal-container {
+    @apply right-0 h-screen;
+}

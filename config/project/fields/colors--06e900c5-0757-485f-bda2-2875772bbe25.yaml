@@ -1,0 +1,24 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d52553ad-dd63-4dfd-8740-d53484afbcb3 # Product
+handle: colors
+instructions: ''
+name: Colors
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add a color'
+  showSiteMenu: true
+  source: 'group:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

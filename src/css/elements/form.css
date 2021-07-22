@@ -1,0 +1,170 @@
+/* ==========================================================================
+    FORMS
+   ========================================================================== */
+
+/* Standardise font rendering */
+fieldset {
+}
+
+label {
+    @apply font-medium;
+    @apply text-sm;
+    @apply block;
+}
+
+label + input,
+label + textarea {
+    @apply mt-2;
+}
+
+legend {
+
+}
+
+select {
+    font: inherit;
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+    @apply block;
+    @apply h-auto;
+    resize: vertical;
+}
+
+button,
+input,
+select {
+}
+
+button,
+input,
+select,
+textarea {
+    @apply appearance-none;
+
+    font: inherit;
+    /* Turns on lining, proportional numerals without clarified zeroes */
+    font-variant-numeric: lining-nums;
+    font-variant-numeric: proportional-nums;
+}
+
+textarea {
+    @apply w-full;
+}
+
+::placeholder {
+    font: inherit;
+}
+
+[type="date"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"],
+textarea,
+select {
+    @apply appearance-none;
+    @apply rounded;
+    @apply border border-gray-300;
+    @apply py-2 px-3;
+    @apply w-full;
+    @apply outline-none;
+    color: inherit;
+}
+
+&::-webkit-input-placeholder {
+
+}
+
+/* De-bork search fields */
+[type="search"] {
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+}
+
+/* Make range inputs behave like textual form controls. */
+[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+/* Fix cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/* Custom checkboxes */
+.checkbox,
+.radio {
+    @apply appearance-none;
+    @apply bg-white;
+    @apply cursor-pointer;
+    @apply inline-block;
+    @apply w-4 h-4;
+    @apply text-blue-700;
+    @apply border border-gray-500;
+}
+
+.checkbox {
+    @apply rounded;
+}
+
+.radio {
+    @apply rounded-full;
+}
+
+.checkbox:checked,
+.radio:checked {
+    background-color: currentColor;
+    @apply bg-no-repeat;
+    @apply border-transparent;
+    @apply border-blue-300;
+}
+
+.checkbox:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L7 8.586 5.707 7.293z'/%3E%3C/svg%3E");
+}
+
+.radio:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+}
+
+/*
+.checkbox::after,
+.radio::after {
+    content: '';
+    @apply absolute;
+    @apply w-4 h-4;
+    @apply bg-white;
+    @apply border border-gray-500;
+    @apply rounded;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.checkbox::before {
+    content: '';
+    @apply block;
+    @apply w-4 h-4;
+    @apply bg-transparent;
+    @apply absolute;
+    @apply bg-no-repeat;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.checkbox-hidden:checked ~ .checkbox::after,
+.radio-hidden:checked ~ .radio::after {
+@apply bg-blue-600;
+@apply border-blue-600;
+}
+*/

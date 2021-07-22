@@ -1,0 +1,26 @@
+/* HTML
+-------------------------------------------------------------------------------- */
+
+html {
+  @apply box-border;
+  font-size: 100%;
+  text-size-adjust: 100%;
+}
+
+html.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/*
+ * Border-box *all the things*, as suggested in:
+ * http:// paulirish.com/2012/box-sizing-border-box-ftw
+ */
+* {
+  @apply box-border;
+  border: 0 solid transparent;
+
+  &::after,
+  &::before {
+    @apply box-border;
+  }
+}

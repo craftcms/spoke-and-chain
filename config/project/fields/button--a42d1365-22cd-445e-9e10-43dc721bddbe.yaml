@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
+handle: button
+instructions: ''
+name: Button
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_button}}'
+  maxBlocks: '1'
+  minBlocks: '0'
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

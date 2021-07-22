@@ -1,0 +1,50 @@
+.option-select {
+    @apply block;
+    @apply relative;
+    @apply w-full;
+}
+
+button.option-select {
+    @apply text-left;
+}
+
+.option-select > input[type=radio] {
+    @apply w-5;
+    @apply h-5;
+    @apply top-0;
+    @apply left-0;
+    @apply w-full;
+    @apply h-full;
+    @apply cursor-pointer;
+    @apply absolute;
+    @apply opacity-75;
+
+    &:focus {
+        @apply shadow-none;
+    }
+}
+
+.option-select > label {
+    @apply border-gray-300;
+    @apply block;
+    @apply border;
+    @apply p-4;
+    @apply rounded;
+}
+
+.option-select > div:first-child {
+    @apply border-gray-300;
+    @apply block;
+    @apply border;
+    @apply p-4;
+    @apply rounded;
+}
+
+.option-select > input[type=radio]:checked ~ label {
+    @apply border-blue-700;
+    @apply border-2;
+}
+
+.option-select input[type=radio]:focus ~ label {
+    @apply ring;
+}

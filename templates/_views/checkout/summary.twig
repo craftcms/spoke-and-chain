@@ -1,0 +1,126 @@
+{% set cart = cart is not defined ? craft.commerce.carts.cart : cart %}
+{# Layout #}
+{% extends '_layouts/site' %}
+{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
+{% if cart is not defined or not cart.lineItems|length %}
+  {% redirect cartPage ? cartPage.uri : 'cart' %}
+{% endif %}
+
+{# Variables #}
+{% set successPage = craft.entries({ section: 'checkout', type: 'success' }).one() %}
+{% set paymentSources = craft.commerce.paymentSources.allPaymentSourcesByUserId(currentUser.id ?? null) %}
+{% set paymentSourceId = currentUser and paymentSources|length ? paymentSources[0].id : false %}
+{% set paymentForm = paymentForm is defined ? paymentForm : (cart.gatewayId ? cart.gateway.paymentFormModel() : null)  %}
+
+{# Blocks #}
+{% block content %}
+  <!-- Template: {{ _self }}.twig -->
+
+  {# Heading #}
+  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+
+  <form id="checkout-payment" method="post" x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }">
+    {{ csrfInput() }}
+    {{ actionInput('commerce/payments/pay') }}
+    {{ redirectInput(successPage ?
+      successPage.uri ~ '?number=' ~ cart.number
+      : '/checkout/success?number=' ~ cart.number
+    ) }}
+    {{ hiddenInput('cancelUrl', entry.uri|hash) }}
+    {{ hiddenInput('orderEmail', cart.email) }}
+
+    <div class="container flex justify-center">
+      <div class="border-t border-gray-300 w-full max-w-5xl">
+        {% for lineItem in cart.lineItems %}
+          {% include '_includes/components/order/lineItem' with { lineItem: lineItem, isCompleted: cart.isCompleted } only %}
+        {% endfor %}
+
+        {% if cart.shippingAddress %}
+          <div class="flex flex-wrap border-gray-300 py-8">
+            <div class="w-full pb-4 lg:pb-0 lg:w-1/5 pr-6">
+              <h3>{{ 'Address'|t }}</h3>
+            </div>
+            <div class="w-full lg:w-4/5">
+              <div class="flex">
+                <div class="w-1/2">
+                  <h4>{{ 'Shipping to'|t }}:</h4>
+                  <p>{{ cart.shippingAddress.addressLines|join("\n")|nl2br }}</p>
+                </div>
+                <div class="w-1/2">
+                  <h4>{{ 'Billing Address'|t }}:</h4>
+
+                  {% if cart.shippingAddressId == cart.billingAddressId %}
+                    <p>{{ 'Same as shipping.'|t }}</p>
+                  {% elseif cart.billingAddress %}
+                    <p>{{ cart.billingAddress.addressLines|join("\n")|nl2br }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="flex flex-wrap border-t border-gray-300 py-8">
+          <div class="w-full lg:w-1/5">
+            <h3>{{ 'Your Total'|t }}</h3>
+          </div>
+
+          <div class="w-full md:w-4/5">
+            {% include '_includes/components/order/totals' with { order: cart } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-wrap border-t border-gray-300 py-8">
+          <div class="w-full pb-4 lg:pb-0 lg:w-1/5">
+            <h3>{{ 'Payment Info'|t }}</h3>
+          </div>
+          <div class="w-full lg:w-4/5">
+            {% if currentUser %}
+              {% if paymentSources|length %}
+                {{ sprig('_includes/components/payment/sourcesList', {
+                  radio: true,
+                  account: false
+                }, {
+                  id: 'payment-sources-list',
+                  's-include': '#payment-sources-list',
+                  's-indicator': '#payment-sources-indicator',
+                }) }}
+                <div class="pt-2">
+                  <div class="option-select">
+                    <input id="payment-source-new" type="radio" name="paymentSourceId" value="" x-model="id"/>
+
+                    <label for="payment-source-new">
+                      <strong>{{ 'Pay with new card'|t }}</strong>
+                    </label>
+                  </div>
+
+                  <template x-if="id == false">
+                    <div>
+                      {% include '_includes/components/forms/creditCard' with {
+                        paymentForm: paymentForm,
+                        allowSave: true
+                      } %}
+                    </div>
+                  </template>
+                </div>
+              {% else %}
+                <div>
+                  {% include '_includes/components/forms/creditCard' with {
+                    paymentForm: paymentForm,
+                    allowSave: true
+                  } %}
+                </div>
+              {% endif %}
+            {% else %}
+              {% include '_includes/components/forms/creditCard' with { paymentForm: paymentForm } %}
+            {% endif %}
+          </div>
+
+          <div class="w-full text-right pt-4">
+            <input class="button submit" type="submit" name="submit" value="{{ 'Pay {total}'|t('site', { total: cart.totalAsCurrency }) }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endblock %}

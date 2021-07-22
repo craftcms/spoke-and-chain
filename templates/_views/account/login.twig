@@ -1,0 +1,62 @@
+{# Layout #}
+{% extends '_layouts/site' %}
+
+{# Variables #}
+{% set registerPage = craft.entries({ section: 'account', type: 'register' }).one() %}
+
+{# Blocks #}
+{% block content %}
+  <div class="bg-gray-100 py-8 px-6">
+    <div class="text-center">
+      <h1 class="text-4xl">{{ entry.title }}</h1>
+    </div>
+
+    <div class="max-w-sm mx-auto space-y-6 mt-8">
+      <form id="login-form" method="post" accept-charset="UTF-8" class="space-y-4">
+        {{ csrfInput() }}
+        {{ actionInput('users/login') }}
+
+        <div>
+          <label for="loginName">{{ 'Email'|t }}</label>
+          {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+            id: 'loginName',
+          }) }}
+        </div>
+
+        <div>
+          <label for="password">{{ 'Password'|t }}</label>
+          {{ input('password', 'password', null, {
+            id: 'password',
+          }) }}
+        </div>
+
+        <div class="flex items-center">
+          {{ input('checkbox', 'rememberMe', '1', {
+            id: 'rememberMe',
+            class: 'checkbox mr-2',
+          }) }}
+
+          <label for="rememberMe">
+            {{ 'Remember me'|t }}
+          </label>
+        </div>
+
+        <div>
+          <button class="button submit w-full" type="submit">{{ 'Login'|t }}</button>
+        </div>
+
+        {% if errorMessage is defined %}
+          {% include '_includes/components/forms/errorList' with { errors: [errorMessage] ?? [] } only %}
+        {% endif %}
+      </form>
+
+      <div>
+        <p class="my-2"><a href="{{ url('reset-password') }}">{{ entry.plainText1 }}</a></p>
+
+        {% if registerPage %}
+          <p class="my-2"><a href="{{ registerPage.getUrl() }}">{{ entry.plainText2 }}</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

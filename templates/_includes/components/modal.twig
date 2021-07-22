@@ -1,0 +1,41 @@
+{# Modal #}
+<div id="modal" tabindex="-1" x-data="modal()" class="relative z-30" x-init="init($nextTick)" x-on:keydown.escape="handleEscape()">
+  <template
+      x-on:openmodal.window="openModal($event.detail)"
+      x-on:closemodal.window="closeModal()"
+  ></template>
+
+  <div
+      class="modal fixed inset-0 flex items-center justify-center"
+      :class="{ 'modal-centered': modalType == 'centered', 'modal-slideout': modalType == 'slideout', 'hidden': !showWrapper }"
+  >
+    <template x-if="show">
+      <div
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-out duration-300"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="modal-overlay absolute w-full h-full bg-black bg-opacity-25 top-0 left-0 cursor-pointer"
+          @click="closeModal()">
+      </div>
+    </template>
+    <div class="modal-container absolute w-full max-w-screen-sm bg-white shadow-l transition transform duration-300 translate-x-0" :class="{ 'translate-x-full': !show  }">
+        <template x-if="show && !contentLoaded">
+          <div class="relative w-full h-full">
+            <div class="spinner-overlay spinner-overlay--show">
+              {% include '_includes/components/spinner' %}
+            </div>
+          </div>
+        </template>
+        <div class="h-full" :class="{ 'hidden': !contentLoaded }">
+          {{ sprig('_includes/components/modals/_body', {}, {
+            id: 'modal-body',
+            class: 'h-full w-full',
+            's-include': '#modal-body .modal-body'
+          }) }}
+        </div>
+    </div>
+  </div>
+</div>

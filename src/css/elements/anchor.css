@@ -1,0 +1,12 @@
+/* ==========================================================================
+    ANCHORS
+   ========================================================================== */
+
+a {
+  /*
+    Create better-looking links in browsers that support them
+   */
+  text-decoration-skip-ink: auto;
+
+  @apply text-blue-600;
+}
