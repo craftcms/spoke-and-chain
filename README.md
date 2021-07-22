@@ -42,7 +42,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
 2. Make sure you’ve used `nitro db new` to create a MySQL 13 database engine.
 3. Run `nitro create` with the URL to this repository:
     ```zsh
-    nitro create https://github.com/craftcms/demo-spoke-and-chain spokeandchain
+    nitro create craftcms/demo-spoke-and-chain spokeandchain
     ```
     - hostname: `spokeandchain.nitro`
     - web root: `web`
