@@ -1,0 +1,10 @@
+* @craftcms/devops
+/src/ @benjamindavid @nfourtythree
+/cypress/ @benjamindavid
+/sprig/components/ @nfourtythree
+/templates/ @benjamindavid @nfourtythree
+/templates/guide/ @craftcms/documenteering
+/web/dist/ @benjamindavid @nfourtythree
+webpack.*.js @benjamindavid @nfourtythree
+tailwind.*.js @benjamindavid @nfourtythree
+README.md @craftcms/documenteering
