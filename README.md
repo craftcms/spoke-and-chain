@@ -4,7 +4,7 @@
 
 ## Overview
 
-Spoke & Chain is a fictitious bicycle shop custom-built to demonstrate [Craft CMS](https://craftcms.com) and [Craft Commerce](https://craftcms.com/commerce). This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo).
+Spoke & Chain is a fictitious bicycle shop custom-built to demonstrate [Craft CMS](https://craftcms.com) and [Craft Commerce](https://craftcms.com/commerce). This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo?kind=spokeandchain).
 
 We’ve also included instructions below for setting up the demo in a local development environment with [Craft Nitro](https://getnitro.sh).
 
