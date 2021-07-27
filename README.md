@@ -39,7 +39,7 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 If you’d like to get Spoke & Chain running in a local environment, we recommend using [Craft Nitro](https://getnitro.sh):
 
 1. Follow Nitro’s [installation instructions](https://craftcms.com/docs/nitro/2.x/installation.html) for your OS.
-2. Make sure you’ve used `nitro db new` to create a MySQL 8 database engine.
+2. Make sure you’ve used `nitro db new` to create a MySQL 8 or MariaDB 10 database engine.
 3. Run `nitro create` with the URL to this repository:
     ```zsh
     nitro create craftcms/spoke-and-chain spokeandchain
@@ -48,7 +48,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
     - web root: `web`
     - PHP version: `8.0`
     - database? `Y`
-    - database engine: `mysql-8.0-*.database.nitro`
+    - database engine: `mysql-8.0-*.database.nitro` (or `mariadb-latest-*.database.nitro`)
     - database name: `spokeandchain`
     - update env file? `Y`
 4. Move to the project directory and add a Craft account for yourself by following the prompts:
