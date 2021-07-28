@@ -1,4 +1,3 @@
-import 'vite/dynamic-import-polyfill';
 import App from '@/vue/App.vue';
 import { createApp } from 'vue';
 import 'alpinejs';
