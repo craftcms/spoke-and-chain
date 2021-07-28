@@ -18,7 +18,9 @@ Related articles & podcasts:
 
 ### Initial setup
 
-All you'll need is [Docker desktop](https://www.docker.com/products/docker-desktop) for your platform installed, then spin up the Spoke & Chain site in local development:
+All you'll need is [Docker desktop](https://www.docker.com/products/docker-desktop) for your platform installed, then spin up the Spoke & Chain site in local development.
+
+Ensure no other local development environments are running that might have port conflicts, then:
 
 1. Clone the git repo with:
 ```
