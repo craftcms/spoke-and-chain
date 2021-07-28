@@ -1,7 +1,7 @@
 CONTAINER?=$(shell basename $(CURDIR))_php_1
 BUILDCHAIN?=$(shell basename $(CURDIR))_vite_1
 
-.PHONY: build clean composer dev npm pulldb restoredb up
+.PHONY: build clean composer dev npm up
 
 build: up
 	docker exec -it ${BUILDCHAIN} npm run build
@@ -17,11 +17,6 @@ craft: up
 dev: up
 npm: up
 	docker exec -it ${BUILDCHAIN} npm \
-		$(filter-out $@,$(MAKECMDGOALS))
-pulldb: up
-	cd scripts/ && ./docker_pull_db.sh
-restoredb: up
-	cd scripts/ && ./docker_restore_db.sh \
 		$(filter-out $@,$(MAKECMDGOALS))
 update:
 	docker-compose down
