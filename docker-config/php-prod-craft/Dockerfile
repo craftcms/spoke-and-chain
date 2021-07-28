@@ -30,6 +30,7 @@ RUN set -eux; \
         nano \
         optipng \
         mysql-client \
+        mariadb-connector-c \
     && \
     # Install PHP extensions
     docker-php-ext-install \
