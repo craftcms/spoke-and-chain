@@ -1,0 +1,54 @@
+{
+  "src/js/app-legacy.ts": {
+    "file": "assets/app-legacy.2cfb3495.js",
+    "src": "src/js/app-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "_vendor-legacy.a3ea0db9.js"
+    ],
+    "dynamicImports": [
+      "src/vue/Confetti-legacy.vue"
+    ]
+  },
+  "_vendor-legacy.a3ea0db9.js": {
+    "file": "assets/vendor-legacy.a3ea0db9.js"
+  },
+  "src/vue/Confetti-legacy.vue": {
+    "file": "assets/Confetti-legacy.8cf57a34.js",
+    "src": "src/vue/Confetti-legacy.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-legacy.a3ea0db9.js"
+    ]
+  },
+  "vite/legacy-polyfills": {
+    "file": "assets/polyfills-legacy.a75b676a.js",
+    "src": "vite/legacy-polyfills",
+    "isEntry": true
+  },
+  "src/js/app.ts": {
+    "file": "assets/app.da534659.js",
+    "src": "src/js/app.ts",
+    "isEntry": true,
+    "imports": [
+      "_vendor.70cf7a7b.js"
+    ],
+    "dynamicImports": [
+      "src/vue/Confetti.vue"
+    ],
+    "css": [
+      "assets/app.ba2fef50.css"
+    ]
+  },
+  "_vendor.70cf7a7b.js": {
+    "file": "assets/vendor.70cf7a7b.js"
+  },
+  "src/vue/Confetti.vue": {
+    "file": "assets/Confetti.d851d110.js",
+    "src": "src/vue/Confetti.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor.70cf7a7b.js"
+    ]
+  }
+}

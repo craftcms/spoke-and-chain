@@ -1,0 +1,75 @@
+{
+  "name": "craftcms/demo-spoke-and-chain",
+  "description": "Spoke & Chain Demo",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-commerce",
+    "commerce",
+    "project",
+    "demo",
+    "starter"
+  ],
+  "license": "0BSD",
+  "homepage": "https://craftcms.com/demo",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com"
+  },
+  "require": {
+    "craftcms/aws-s3": "^1.2",
+    "craftcms/cms": "^3.7",
+    "craftcms/commerce": "^3.4",
+    "craftcms/redactor": "^2.8",
+    "fakerphp/faker": "^1.9",
+    "nystudio107/craft-seomatic": "^3.3.44",
+    "nystudio107/craft-vite": "^1.0",
+    "oberon/starfield": "^1.0",
+    "putyourlightson/craft-sprig": "^1.3.3",
+    "solspace/craft-freeform": "3.11.9",
+    "verbb/default-dashboard": "^1.0",
+    "vlucas/phpdotenv": "^3.4.0",
+    "yiisoft/yii2-redis": "^2.0.6"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules",
+      "modules\\demos\\": "modules/demos/src/",
+      "sprig\\components\\": "sprig/components/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.0"
+    }
+  },
+  "scripts": {
+    "craft-update": [
+      "@pre-craft-update",
+      "@post-craft-update"
+    ],
+    "pre-craft-update": [
+    ],
+    "post-craft-update": [
+      "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+      "@php craft install/check && php craft migrate/all --interactive=0 || exit 0",
+      "@php craft install/check && php craft project-config/apply --interactive=0 || exit 0"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php craft setup/welcome"
+    ],
+    "pre-update-cmd": "@pre-craft-update",
+    "pre-install-cmd": "@pre-craft-update",
+    "post-update-cmd": "@post-craft-update",
+    "post-install-cmd": "@post-craft-update"
+  }
+}

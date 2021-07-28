@@ -1,0 +1,14 @@
+/.env
+/.idea
+/vendor
+/node_modules
+.DS_Store
+!seed.sql
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Cypress
+/cypress.json

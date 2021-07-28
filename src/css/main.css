@@ -6,40 +6,40 @@
 @import 'tailwindcss/components';
 
 /* Elements */
-@import 'elements/abbr';
-@import 'elements/address';
-@import 'elements/anchor';
-@import 'elements/blockquote';
-@import 'elements/body';
-@import 'elements/cite';
-@import 'elements/code';
-@import 'elements/figure';
-@import 'elements/form';
-@import 'elements/headings';
-@import 'elements/html';
-@import 'elements/image';
-@import 'elements/lists';
-@import 'elements/nav';
-@import 'elements/paragraphs';
-@import 'elements/rule';
-@import 'elements/strong';
-@import 'elements/sub-super';
-@import 'elements/swiper';
-@import 'elements/table';
+@import 'elements/abbr.css';
+@import 'elements/address.css';
+@import 'elements/anchor.css';
+@import 'elements/blockquote.css';
+@import 'elements/body.css';
+@import 'elements/cite.css';
+@import 'elements/code.css';
+@import 'elements/figure.css';
+@import 'elements/form.css';
+@import 'elements/headings.css';
+@import 'elements/html.css';
+@import 'elements/image.css';
+@import 'elements/lists.css';
+@import 'elements/nav.css';
+@import 'elements/paragraphs.css';
+@import 'elements/rule.css';
+@import 'elements/strong.css';
+@import 'elements/sub-super.css';
+@import 'elements/swiper.css';
+@import 'elements/table.css';
 
 /* Utilities */
-@import 'utilities/aspect-ratio';
-@import 'utilities/center';
-@import 'utilities/hide';
-@import 'utilities/table-data';
+@import 'utilities/aspect-ratio.css';
+@import 'utilities/center.css';
+@import 'utilities/hide.css';
+@import 'utilities/table-data.css';
 
 /* Components */
-@import 'components/button';
-@import 'components/header';
-@import 'components/modal';
-@import 'components/option-select';
-@import 'components/spinner';
+@import 'components/button.css';
+@import 'components/header.css';
+@import 'components/modal.css';
+@import 'components/option-select.css';
+@import 'components/spinner.css';
 
 /* Tailwind utilities */
 @import 'tailwindcss/utilities';
-@import 'utilities/max-h';
+@import 'utilities/max-h.css';
