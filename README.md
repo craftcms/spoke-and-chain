@@ -1,4 +1,4 @@
-## About khalwat/spoke-and-chain
+## About nystudio107/spoke-and-chain
 
 This is conversion of the Craft CMS demo site [Spoke and Chain](https://craftcms.com/demo) to a Docker-ized setup that uses [Vite.js](https://vitejs.dev/) modern frontend tooling.
 
@@ -14,7 +14,7 @@ All you'll need is [Docker desktop](https://www.docker.com/products/docker-deskt
 
 1. Clone the git repo with:
 ```
-git clone --branch docker-vite https://github.com/khalwat/spoke-and-chain.git
+git clone https://github.com/nystudio107/spoke-and-chain.git
 ```
   
 2. Set up the `.env` file with:
