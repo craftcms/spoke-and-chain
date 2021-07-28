@@ -1,3 +1,109 @@
+## About khalwat/spoke-and-chain
+
+This is conversion of the Craft CMS demo site [Spoke and Chain](https://craftcms.com/demo) to a Docker-ized setup that uses [Vite.js](https://vitejs.dev/) modern frontend tooling.
+
+## Try It Yourself!
+
+### Initial setup
+
+All you'll need is [Docker desktop](https://www.docker.com/products/docker-desktop) for your platform installed, then spin up the Spoke & Chain site in local development:
+
+1. Clone the git repo with:
+```
+git clone --branch docker-vite https://github.com/khalwat/spoke-and-chain.git
+```
+  
+2. Set up the `.env` file with:
+```
+   cd spoke-and-chain && cp cms/example.env cms/.env
+```
+
+3. Start up the site by typing this in the project's root directory:
+```
+make dev
+```
+(the first build will be somewhat lengthy)
+
+4. Once the site is up and running (see below), navigate to:
+```
+http://localhost:8000
+```
+
+The Vite dev server for Hot Module Replacement (HMR) serving of static resources runs off of `http://localhost:3080`
+
+🎉 You're now up and running Nginx, PHP, Postgres, Redis, xdebug, & Vite without having to do any devops!
+
+The first time you do `make dev` it will be slow, because it has to build all of the Docker images.
+
+Subsequent `make dev` commands will be much faster, but still a little slow because we intentionally do a `composer install` and an `npm install` each time, to keep our dependencies in sync.
+
+Wait until you see the following to indicate that the PHP container is ready:
+
+```
+php_1         | Craft is installed.
+php_1         | Applying changes from your project config files ... done
+php_1         | [01-Dec-2020 18:38:46] NOTICE: fpm is running, pid 22
+php_1         | [01-Dec-2020 18:38:46] NOTICE: ready to handle connections
+```
+
+...and the following to indicate that the Vite container is ready:
+```
+vite_1        |   > Local:    http://localhost:3000/
+vite_1        |   > Network:  http://172.28.0.3:3000/
+vite_1        | 
+vite_1        |   ready in 10729ms.
+```
+
+All of the Twig files, JavaScript, Vue components, CSS, and even the Vite config itself will relfect changes immediately Hot Module Replacement, so feel free to edit things and play around.
+
+A password-scrubbed seed database will automatically be installed; you can log into the CP at `http://localhost:8000/admin` via these credentials:
+
+**User:** `admin` \
+**Password:** `password`
+
+### Makefile Project Commands
+
+This project uses Docker to shrink-wrap the devops it needs to run around the project.
+
+To make using it easier, we're using a Makefile and the built-in `make` utility to create local aliases. You can run the following from terminal in the project directory:
+
+- `make dev` - starts up the local dev server listening on `http://localhost:8000/`
+- `make build` - builds the static assets via the Vite buildchain
+- `make clean` - shuts down the Docker containers, removes any mounted volumes (including the database), and then rebuilds the containers from scratch
+- `make update` - causes the project to update to the latest Composer and NPM dependencies
+- `make update-clean` - completely removes `node_modules/` & `vendor/`, then causes the project to update to the latest Composer and NPM dependencies
+- `make composer xxx` - runs the `composer` command passed in, e.g. `make composer install`
+- `make craft xxx` - runs the `craft` [console command](https://craftcms.com/docs/3.x/console-commands.html) passed in, e.g. `make craft project-config/apply` in the php container
+- `make npm xxx` - runs the `npm` command passed in, e.g. `make npm install`
+
+### Things you can try
+
+With the containers up and running, here are a few things you can try:
+
+* Edit a CSS file such as `src/css/components/header.css` to add something like this, and change the colors to see the CSS change instantly via HRM:
+```css
+* {
+  border: 3px solid red;
+}
+```
+
+* Edit the `src/vue/Confetti.vue` vue component, changing the `defaultSize` and see your changes instantly via HMR (the slider will move)
+
+
+### Other notes
+
+To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers) and latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
+```
+make update
+```
+
+To start from scratch by removing `buildchain/node_modules/` & `cms/vendor/`, then update to the latest Composer packages (as constrained by the `cms/composer.json` semvers) and latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
+```
+make update-clean
+```
+
+Here's the full, unmodified Spoke & Chain README.md from Pixel & Tonic:
+
 <h1 align="center">Spoke & Chain Craft Commerce Demo</h1>
 
 ![Spoke & Chain homepage](https://raw.githubusercontent.com/craftcms/spoke-and-chain/HEAD/web/guide/homepage.png)
