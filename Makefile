@@ -5,7 +5,7 @@ RUN?=docker compose run --rm console
 .PHONY: update
 
 update:
-	cp .env.example .env
+	cp .env.docker .env
 	${RUN} php craft db/restore ${DUMPFILE}
 	docker compose up -d
 	${EXEC} composer update

@@ -17,8 +17,6 @@ COPY --chown=www-data:www-data --from=vendor /app/vendor/ ./vendor/
 
 FROM craftcms/cli:8.0 as console
 
-RUN wget -q https://raw.githubusercontent.com/eficode/wait-for/v2.1.2/wait-for && chmod +x wait-for && mv wait-for /usr/local/bin/wait-for
-
 # TODO: this should be in our base image
 USER root
 RUN apk add --no-cache mysql-client mariadb-connector-c
