@@ -19,7 +19,7 @@ git clone --branch docker-vite https://github.com/khalwat/spoke-and-chain.git
   
 2. Set up the `.env` file with:
 ```
-   cd spoke-and-chain && cp cms/example.env cms/.env
+   cd spoke-and-chain && cp cms/.env.example cms/.env
 ```
 
 3. Start up the site by typing this in the project's root directory:
