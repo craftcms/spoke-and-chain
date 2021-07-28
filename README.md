@@ -4,6 +4,8 @@ This is conversion of the Craft CMS demo site [Spoke and Chain](https://craftcms
 
 [![Click to Play Video](https://img.youtube.com/vi/_ShZxcXLeXc/0.jpg)](https://www.youtube.com/watch?v=_ShZxcXLeXc)
 
+(Click to Play Video)
+
 ## Try It Yourself!
 
 ### Initial setup
