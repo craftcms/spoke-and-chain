@@ -28,7 +28,7 @@ make dev
 ```
 (the first build will be somewhat lengthy, ignore the warnings from `queue_1`).
 
-If it appears to hang at `Building php_xdebug`, your PhpStorm or other IDE is likely waiting for a connection; quit PhpStorm or stop it from listening for Xdebug during the initial build.
+If it appears to hang at `Building php_xdebug`, your PhpStorm or other IDE is likely waiting for an XDebug connection; quit PhpStorm or stop it from listening for Xdebug during the initial build.
 
 4. Once the site is up and running (see below), navigate to:
 ```
