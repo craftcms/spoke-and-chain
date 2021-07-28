@@ -26,7 +26,7 @@ git clone --branch docker-vite https://github.com/khalwat/spoke-and-chain.git
 ```
 make dev
 ```
-(the first build will be somewhat lengthy)
+(the first build will be somewhat lengthy, ignore the warnings from `queue_1`)
 
 4. Once the site is up and running (see below), navigate to:
 ```
