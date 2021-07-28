@@ -12,6 +12,7 @@ Related articles & podcasts:
 * [An Annotated Docker Config for Frontend Web Development](https://nystudio107.com/blog/an-annotated-docker-config-for-frontend-web-development) article
 * [Using Make & Makefiles to Automate your Frontend Workflow](https://nystudio107.com/blog/using-make-makefiles-to-automate-your-frontend-workflow) article
 * [Vite.js modern frontend tooling](https://devmode.fm/episodes/vite-js-modern-frontend-tooling) podcast
+* [Introduction to Vite in Craft CMS](https://craftquest.io/livestreams/introduction-to-vite-in-craft-cms) video
 
 ## Try It Yourself!
 
