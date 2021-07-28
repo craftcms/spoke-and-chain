@@ -6,6 +6,12 @@ This is conversion of the Craft CMS demo site [Spoke and Chain](https://craftcms
 
 (Click to Play Video)
 
+Related articles & podcasts:
+
+* [Vite.js Next Generation Frontend Tooling + Craft CMS](https://nystudio107.com/blog/using-vite-js-next-generation-frontend-tooling-with-craft-cms) article
+* [An Annotated Docker Config for Frontend Web Development](https://nystudio107.com/blog/an-annotated-docker-config-for-frontend-web-development) article
+* [Vite.js modern frontend tooling](https://devmode.fm/episodes/vite-js-modern-frontend-tooling) podcast
+
 ## Try It Yourself!
 
 ### Initial setup
@@ -17,9 +23,9 @@ All you'll need is [Docker desktop](https://www.docker.com/products/docker-deskt
 git clone https://github.com/nystudio107/spoke-and-chain.git
 ```
   
-2. Set up the `.env` file with:
+2. Go into the project's directory:
 ```
-   cd spoke-and-chain && cp cms/example.env cms/.env
+   cd spoke-and-chain
 ```
 
 3. Start up the site by typing this in the project's root directory:
