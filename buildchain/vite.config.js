@@ -27,7 +27,6 @@ export default ({ command }) => ({
       criticalBase: '../cms/web/dist/criticalcss/',
       criticalPages: [
         { uri: '/', template: 'index' },
-        { uri: '/bikes', template: 'index' },
       ],
       criticalConfig: {
       }
