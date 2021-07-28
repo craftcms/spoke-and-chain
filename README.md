@@ -37,7 +37,7 @@ http://localhost:8000
 
 The Vite dev server for Hot Module Replacement (HMR) serving of static resources runs off of `http://localhost:3000`
 
-🎉 You're now up and running Nginx, PHP, Postgres, Redis, xdebug, & Vite without having to do any devops!
+🎉 You're now up and running Nginx, PHP, MySQL 8, Redis, Xdebug, & Vite without having to do any devops!
 
 The first time you do `make dev` it will be slow, because it has to build all of the Docker images.
 
