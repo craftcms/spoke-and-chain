@@ -1,0 +1,52 @@
+version: "3.6"
+services:
+  console:
+    build:
+      context: .
+      target: console
+    env_file: &env_file
+      - .env
+    depends_on: &depends_on
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes: &volumes
+      - ./templates:/app/templates
+    command: php craft queue/listen
+
+  web:
+    build:
+      context: .
+      target: web
+    ports:
+      - ${HOST_WEB_PORT}:8080
+    env_file: *env_file
+    depends_on: *depends_on
+    volumes: *volumes
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - ${HOST_DB_PORT}:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      retries: 3
+
+  redis:
+    image: redis:5-alpine
+    ports:
+      - ${HOST_REDIS_PORT}:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+
+volumes:
+  db_data:
