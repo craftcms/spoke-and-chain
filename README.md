@@ -2,6 +2,8 @@
 
 This is conversion of the Craft CMS demo site [Spoke and Chain](https://craftcms.com/demo) to a Docker-ized setup that uses [Vite.js](https://vitejs.dev/) modern frontend tooling.
 
+[![Click to Play Video](https://img.youtube.com/vi/_ShZxcXLeXc/0.jpg)](https://www.youtube.com/watch?v=_ShZxcXLeXc)
+
 ## Try It Yourself!
 
 ### Initial setup
