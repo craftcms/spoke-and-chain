@@ -9,9 +9,9 @@ FROM craftcms/nginx:8.0 as web
 # TODO: this should be in our base image
 USER root
 RUN apk add --no-cache mysql-client mariadb-connector-c
+COPY .docker/default.conf /etc/nginx/conf.d/default.conf
 USER www-data
 
-COPY .docker/default.conf /etc/nginx/conf.d/default.config
 COPY --chown=www-data:www-data . .
 COPY --chown=www-data:www-data --from=vendor /app/vendor/ ./vendor/
 
