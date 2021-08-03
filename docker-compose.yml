@@ -13,6 +13,8 @@ services:
         condition: service_healthy
     volumes: &volumes
       - ./templates:/app/templates
+      - ./config:/app/config
+      - ./web:/app/web
     command: php craft queue/listen
 
   web:
