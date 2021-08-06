@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d771d36980f61febd41cebed76c1b664",
+    "content-hash": "bf77491eb84ba00b3d4a1495fbc9bf0d",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -5046,16 +5046,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.11.9",
+            "version": "3.11.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "760b5b2099b0cd3d8c60ddb96154da1665702919"
+                "reference": "09335eb68e73019ecc1982e2f35d61f098169eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/760b5b2099b0cd3d8c60ddb96154da1665702919",
-                "reference": "760b5b2099b0cd3d8c60ddb96154da1665702919",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/09335eb68e73019ecc1982e2f35d61f098169eaf",
+                "reference": "09335eb68e73019ecc1982e2f35d61f098169eaf",
                 "shasum": ""
             },
             "require": {
@@ -5119,9 +5119,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.11.9"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.11.10"
             },
-            "time": "2021-07-01T14:53:42+00:00"
+            "time": "2021-07-22T16:11:57+00:00"
         },
         {
             "name": "solspace/craft3-commons",
