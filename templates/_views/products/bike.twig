@@ -180,7 +180,7 @@
                       {% set averageRatingFloor = averageRating|round(0, 'floor') %}
                       {% set averageRatingCeil = averageRating|round(0, 'ceil') %}
 
-                      {% if averageRatingFloor < averageRating and averageRatingCeil == i%}
+                      {% if averageRatingFloor < averageRating and averageRatingCeil == i %}
                         <div class="relative">
                           {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
 
