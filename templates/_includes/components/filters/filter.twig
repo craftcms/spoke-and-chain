@@ -89,7 +89,7 @@
 
       <div id="products-list" role="region" aria-live="polite" class="px-6 md:p-0 w-full md:w-4/5">
         <div class="text-right text-gray-600 pb-4">
-          {{ '{num} product(s)'|t('site', { num: productCount }) }}
+          {{ '{num,number} {num,plural,=1{product} other{products}}'|t('site', { num: productCount }) }}
         </div>
         {% if not products|length %}
           <div class="md:mt-16 py-16 text-center">
