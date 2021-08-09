@@ -1,0 +1,27 @@
+<div class="cs-screen">
+    <a href="{{ cpUrl('guide') }}" class="cs-opt">
+        <div class="cs-opt-icon">{{ svg(bookIcon, sanitize=false) }}</div>
+        <h2>{{ "{siteLabel} Guide"|t('app', { 'siteLabel': systemName }) }}</h2>
+        <p>{{ "Exhaustive tour of your custom demo"|t('app') }}</p>
+    </a>
+</div>
+
+<style>
+.widget.modules\\demos\\widgets\\guide a.cs-opt:hover { text-decoration: none; }
+.widget.modules\\demos\\widgets\\guide a.cs-opt:hover h2 { text-decoration: underline; }
+.widget.modules\\demos\\widgets\\guide .pane { padding: 0; overflow: hidden; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen { position: relative; box-sizing: border-box; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg { display: block; margin: 0 auto 14px; width: 50px; height: 50px; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg rect,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg circle,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg ellipse,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg line,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg polyline,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg polygon,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg path,
+.widget.modules\\demos\\widgets\\guide .pane .cs-screen .cs-opt-icon svg text { fill: #cdd8e4; stroke-width: 0; -o-transition: fill linear 100ms; transition: fill linear 100ms; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-opt { display: block; padding: 24px; text-align: center; cursor: pointer; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-opt:hover { background: #f3f7fc; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-opt h2 { margin: -7px 0 0; font-weight: normal; }
+.widget.modules\\demos\\widgets\\guide .pane .cs-opt p { margin-top: 3px; color: #606d7b; }
+</style>
