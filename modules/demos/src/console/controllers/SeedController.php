@@ -649,8 +649,9 @@ class SeedController extends Controller
         $index = 1;
         $numProducts = count($this->_products);
         foreach ($this->_products as $product) {
-            $this->stdout("    - [{$index}/{$numProducts}] Creating reviews for " . $product->title . ' ... ');
-            for ($i = 0; $i <= random_int(self::REVIEWS_PER_PRODUCT_MIN, self::REVIEWS_PER_PRODUCT_MAX); $i++) {
+            $numReviews = random_int(self::REVIEWS_PER_PRODUCT_MIN, self::REVIEWS_PER_PRODUCT_MAX);
+            $this->stdout("    - [{$index}/{$numProducts}] Creating {$numReviews} reviews for " . $product->title . ' ... ');
+            for ($i = 0; $i <= $numReviews; $i++) {
                 $reviewDate = new DateTime();
                 $reviewDate->sub(new DateInterval('P' . random_int(0, $startDateInterval->days) . 'D'));
                 $reviewDate = $this->_setTime($reviewDate);
@@ -671,7 +672,7 @@ class SeedController extends Controller
                 $review->setFieldValues([
                     'body' => '<p>' . implode('</p><p>', $paragraphs) . '</p>',
                     'product' => [$product->id],
-                    'stars' => $stars,
+                    'stars' => (string)$stars,
                 ]);
 
                 Craft::$app->getElements()->saveElement($review);
