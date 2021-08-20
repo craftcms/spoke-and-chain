@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 2
+template: _views/account/index
+uriParts:
+  - account
+uriPattern: account

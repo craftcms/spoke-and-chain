@@ -1,0 +1,19 @@
+fieldLayouts:
+  15235b15-7e3b-41db-9d9a-a8be850b6fc5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
+            instructions: ''
+            label: 'Geometry Reference'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Products
+        sortOrder: 1
+handle: bikes
+name: Bikes
+sortOrder: 0

@@ -1,0 +1,9 @@
+baseUrl: $DEFAULT_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Spoke & Chain'
+primary: true
+siteGroup: 4b6d893d-380e-4fbc-970b-ed925fba9aaf # Spoke & Chain
+sortOrder: 1
