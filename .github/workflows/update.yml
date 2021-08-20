@@ -26,8 +26,6 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
-          title: [🤖] Update dependencies
+          title: "[🤖] Update dependencies"
           branch: feature/update-dependencies
           assignees: timkelty
-
-
