@@ -22,7 +22,7 @@ services:
       context: .
       target: web
     ports:
-      - "${HOST_WEB_PORT:-8080}:8080"
+      - "${HOST_WEB_PORT}:8080"
     env_file: *env_file
     depends_on: *depends_on
     volumes: *volumes
