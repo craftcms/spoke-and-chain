@@ -133,6 +133,6 @@ npx cypress open --config testFiles=./front/a11y/*.spec.js
 
 ## License
 
-The source code of this project is licensed under the [BSD Zero Clause License](LICENSE.MD) unless stated otherwise.
+The source code of this project is licensed under the [BSD Zero Clause License](LICENSE.md) unless stated otherwise.
 
 The imagery used by this project is the property of Marin Bikes, and used with permission. You are not free to use it for your own projects.
