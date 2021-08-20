@@ -18,9 +18,9 @@ jobs:
 
       - name: Copy files to host
         run: |
-          docker cp "$(docker-compose ps -q console)":/app/composer.lock ./ \
-          && docker cp "$(docker-compose ps -q console)":/app/seed.sql ./ \
-          && docker cp "$(docker-compose ps -q console)":/app/config/project ./config/project
+          docker cp "$(docker-compose ps -q console)":/app/composer.lock ./
+          docker cp "$(docker-compose ps -q console)":/app/seed.sql ./
+          docker cp "$(docker-compose ps -q console)":/app/config/project ./config/project
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
