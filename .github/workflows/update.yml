@@ -5,9 +5,6 @@ on:
   schedule:
     - cron: "0 */12 * * *"
 
-  push:
-    branches:
-      - feature/dvo-126-auto-updatepr-bot-for-demos
 jobs:
   update:
     runs-on: ubuntu-latest
