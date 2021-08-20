@@ -29,3 +29,5 @@ jobs:
           title: [🤖] Update dependencies
           branch: feature/update-dependencies
           assignees: timkelty
+
+
