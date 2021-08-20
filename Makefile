@@ -1,6 +1,6 @@
 DUMPFILE?=seed.sql
-EXEC?=docker compose exec console
-RUN?=docker compose run --rm console
+EXEC?=docker-compose exec console
+RUN?=docker-compose run --rm console
 
 .PHONY: update
 
