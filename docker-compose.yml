@@ -11,10 +11,10 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-#    volumes: &volumes
-#      - ./templates:/app/templates
-#      - ./config:/app/config
-#      - ./web:/app/web
+    volumes: &volumes
+      - ./composer.lock:/app/composer.lock
+      - ./config/project:/app/config/project
+      - ./seed.sql:/app/seed.sql
     command: php craft queue/listen
 
   web:
@@ -25,7 +25,7 @@ services:
       - "${HOST_WEB_PORT}:8080"
     env_file: *env_file
     depends_on: *depends_on
-#    volumes: *volumes
+    volumes: *volumes
 
   mysql:
     image: mysql:8.0
