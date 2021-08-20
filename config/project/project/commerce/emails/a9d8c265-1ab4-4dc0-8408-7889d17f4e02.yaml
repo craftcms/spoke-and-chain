@@ -1,0 +1,11 @@
+bcc: null
+cc: null
+enabled: false
+language: orderLanguage
+name: 'Order Shipped'
+plainTextTemplatePath: ''
+recipientType: customer
+replyTo: null
+subject: '{{order.shortNumber}} Shipped!'
+templatePath: _special/emails/shipped
+to: null

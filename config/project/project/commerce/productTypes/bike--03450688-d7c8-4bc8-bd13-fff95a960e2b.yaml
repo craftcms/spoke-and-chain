@@ -1,0 +1,179 @@
+descriptionFormat: '{product.title} - {title}'
+handle: bike
+hasDimensions: false
+hasProductTitleField: true
+hasVariantTitleField: true
+hasVariants: true
+name: Bike
+productFieldLayouts:
+  8104fb3b-ffde-4282-993b-2d27a7bc6bd5:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\ProductTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 19549c94-cebb-4606-a533-aaef9dc49de7 # Geometry
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5f3f9d21-e4a4-40d6-b80f-a92d99e02926 # Show Form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 705abccb-1d21-44fe-a3f7-87530e29cd34 # Product Images
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Images
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: f3de475b-4a85-4e74-b144-4ff3e464f057 # Bike Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 06e900c5-0757-485f-bda2-2875772bbe25 # Colors
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 03b7bc53-c8e9-48e4-8f45-da16de73909b # Material
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Options
+        sortOrder: 3
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\commerce\fieldlayoutelements\VariantsField
+            warning: null
+        name: Variants
+        sortOrder: 4
+      -
+        elements:
+          -
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 5
+productTitleFormat: ''
+siteSettings:
+  5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
+    hasUrls: true
+    template: _views/products/bike
+    uriFormat: 'product/{slug}'
+skuFormat: ''
+titleFormat: '{product.title}'
+variantFieldLayouts:
+  7480375f-d72f-4bf8-806a-2c72045b9880:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\VariantTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1

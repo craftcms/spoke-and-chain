@@ -1,0 +1,6 @@
+color: blue
+default: false
+description: ''
+handle: confirmed
+name: Confirmed
+sortOrder: 2
