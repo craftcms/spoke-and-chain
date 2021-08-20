@@ -1,4 +1,4 @@
-name: Update dependencies & seed db
+name: Update dependencies
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    name: Update dependencies & seed db
+    name: Update dependencies
     steps:
       - uses: actions/checkout@v2
 
