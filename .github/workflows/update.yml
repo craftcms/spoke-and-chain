@@ -1,4 +1,4 @@
-name: Update dependencies & seed db
+name: Update Dependencies & Seed DB
 
 on:
   workflow_dispatch:
@@ -8,11 +8,11 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    name: Update dependencies & seed db
+    name: Update Dependencies & Seed DB
     steps:
       - uses: actions/checkout@v2
 
-      - name: Update
+      - name: Run `make update`
         run: make update
 
       - name: Create Pull Request
