@@ -9,12 +9,12 @@ update:
 	cp .env.docker .env
 	${RUN} php craft db/restore ${DUMPFILE}
 	${COMPOSE} up -d
-	${EXEC} composer update
-	${EXEC} php craft migrate/all
-	${EXEC} php craft project-config/apply --force
-	${EXEC} php craft queue/run
-	${EXEC} php craft gc --delete-all-trashed
-	${EXEC} php craft db/backup ${DUMPFILE} --overwrite
+	${EXEC} composer update --no-interaction
+	${EXEC} php craft migrate/all --interactive=0
+	${EXEC} php craft project-config/apply --force --interactive=0
+	${EXEC} php craft queue/run --interactive=0
+	${EXEC} php craft gc --delete-all-trashed --interactive=0
+	${EXEC} php craft db/backup ${DUMPFILE} --overwrite --interactive=0
 
 seed:
 	${EXEC} console php craft demos/seed

@@ -1,27 +1,16 @@
-name: Update Dependencies
+name: Update dependencies & seed db
 
 on:
-  push:
-    branches: [feature/dvo-126-auto-updatepr-bot-for-demos]
-#  workflow_dispatch:
-#    inputs:
-#      name:
-#        description: 'Person to greet'
-#        required: true
-#        default: 'Mona the Octocat'
-#      home:
-#        description: 'location'
-#        required: false
-#        default: 'The Octoverse'
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    name: Update depencencies
+    name: Update dependencies & seed db
     steps:
       - uses: actions/checkout@v2
 
-      - name: Update Composer & seed data
+      - name: Update
         run: make update
 
       - name: Create Pull Request
