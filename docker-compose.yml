@@ -25,7 +25,7 @@ services:
       - "${HOST_WEB_PORT}:8080"
     env_file: *env_file
     depends_on: *depends_on
-    volumes: *volumes
+#    volumes: *volumes
 
   mysql:
     image: mysql:8.0
