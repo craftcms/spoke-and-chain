@@ -61,7 +61,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
 
 ### Front End
 
-Run `npm install` with node 12.19.0 or later. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm install`.)
+Run `npm install` with node 12. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm install`.)
 
 If you’ve chosen a different environment setup, make sure your `.env` is configured for it. These environment variables are specifically used by `webpack-dev-server`:
 

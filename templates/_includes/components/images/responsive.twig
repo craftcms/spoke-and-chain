@@ -13,12 +13,15 @@
 {# showAlt: boolean - whether or not to output the alt attribute #}
 {% set showAlt = showAlt is not defined ? true : showAlt %}
 
+{# Apply the transform if we have it #}
+{% if transform and image %}{% do image.setTransform(transform) %}{% endif %}
+
 {# Variables #}
 {% set tagOptions = image ? {
     src: image.url,
     alt: showAlt ? image.title : null,
 } : null %}
-{% if transform and image %}{% do image.setTransform(transform) %}{% endif %}
+{% set tagOptions = tagOptions|merge({ width: image.width, height: image.height }) %}
 {% set tagOptions = class ? tagOptions|merge({ class: class }) : tagOptions %}
 {% set tagOptions = srcset and image ? tagOptions|merge({ srcset: image.getSrcset(srcset) }) : tagOptions %}
 {% set tagOptions = sizes ? tagOptions|merge({ sizes: sizes|map((width, max) => max != 'all' ? "(max-width: #{max}) #{width}" : width)|join(', ') }) : tagOptions %}
