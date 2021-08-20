@@ -22,5 +22,3 @@ jobs:
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
-        with:
-          title: [GHA] Update dependencies & seed db
