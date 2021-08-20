@@ -2,7 +2,9 @@ name: Update dependencies & seed db
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - feature/dvo-126-auto-updatepr-bot-for-demos
 jobs:
   update:
     runs-on: ubuntu-latest
