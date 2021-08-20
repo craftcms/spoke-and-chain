@@ -2,6 +2,9 @@ name: Update dependencies & seed db
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
   push:
     branches:
       - feature/dvo-126-auto-updatepr-bot-for-demos
@@ -22,3 +25,7 @@ jobs:
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
+        with:
+          title: [🤖] Update dependencies
+          branch: feature/update-dependencies
+          assignees: timkelty
