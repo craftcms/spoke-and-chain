@@ -1,22 +1,28 @@
 name: Update Dependencies
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-        default: 'The Octoverse'
+  push:
+    branches: [feature/dvo-126-auto-updatepr-bot-for-demos]
+#  workflow_dispatch:
+#    inputs:
+#      name:
+#        description: 'Person to greet'
+#        required: true
+#        default: 'Mona the Octocat'
+#      home:
+#        description: 'location'
+#        required: false
+#        default: 'The Octoverse'
 
 jobs:
   update:
     runs-on: ubuntu-latest
     name: Update depencencies
     steps:
-      - run: |
-          echo "Hello ${{ github.event.inputs.name }}!"
-          echo "- in ${{ github.event.inputs.home }}!"
+      - uses: actions/checkout@v2
+
+      - name: Update Composer & seed data
+        run: make update
+
+      - name: test
+        run: git status
