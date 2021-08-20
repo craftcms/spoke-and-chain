@@ -12,6 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Force permissions
+        run: |
+          sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+
+        run: |
+          ls -al
+
       - run: make update
 
       - run: git status
