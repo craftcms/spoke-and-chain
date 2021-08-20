@@ -12,9 +12,9 @@ services:
       redis:
         condition: service_healthy
     volumes: &volumes
-      - ./composer.lock:/app/composer.lock
-      - ./config/project:/app/config/project
-      - ./seed.sql:/app/seed.sql
+      - "${GITHUB_WORKSPACE}/composer.lock:/app/composer.lock"
+      - "${GITHUB_WORKSPACE}/config/project:/app/config/project"
+      - "${GITHUB_WORKSPACE}/seed.sql:/app/seed.sql"
     command: php craft queue/listen
 
   web:
