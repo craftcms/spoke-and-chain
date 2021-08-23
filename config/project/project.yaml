@@ -1,4 +1,4 @@
-dateModified: 1628256462
+dateModified: 1629720350
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -214,7 +214,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.10
+    schemaVersion: 3.0.11
     settings:
       addHrefLang: true
       addPaginatedHreflang: true
