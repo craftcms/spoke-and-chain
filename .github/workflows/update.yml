@@ -25,5 +25,6 @@ jobs:
         with:
           title: "[🤖] Update dependencies"
           branch: feature/update-dependencies
-          author: shinybrad
+          author: shinybrad <shinybrad@users.noreply.github.com>
           assignees: timkelty
+          reviewers: mattstein
