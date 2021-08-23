@@ -25,4 +25,5 @@ jobs:
         with:
           title: "[🤖] Update dependencies"
           branch: feature/update-dependencies
+          author: shinybrad
           assignees: timkelty
