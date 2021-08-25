@@ -1,4 +1,4 @@
-backups
+backups/*
 !backups/seed.sql
 composer-backups
 config-backups
