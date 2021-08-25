@@ -214,7 +214,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.10
+    schemaVersion: 3.0.11
     settings:
       addHrefLang: true
       addPaginatedHreflang: true

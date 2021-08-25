@@ -23,7 +23,7 @@ services:
     depends_on: *depends_on
 
   mysql:
-    image: mysql:8.0
+    image: mariadb:10.5
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
