@@ -3,6 +3,7 @@
 /vendor
 /node_modules
 .DS_Store
+!seed.sql
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
