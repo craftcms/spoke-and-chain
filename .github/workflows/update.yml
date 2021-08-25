@@ -1,0 +1,31 @@
+name: Update dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    name: Update dependencies
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: make update
+
+      - name: Copy files to host
+        run: |
+          docker cp "$(docker-compose ps -q console)":/app/composer.lock ./
+          docker cp "$(docker-compose ps -q console)":/app/seed.sql ./
+          docker cp "$(docker-compose ps -q console)":/app/config/project ./config/
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: "[🤖] Update dependencies"
+          branch: feature/update-dependencies
+          committer: shinybrad <shinybrad@users.noreply.github.com>
+          author: shinybrad <shinybrad@users.noreply.github.com>
+          assignees: timkelty
+          reviewers: mattstein

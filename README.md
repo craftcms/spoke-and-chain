@@ -61,7 +61,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
 
 ### Front End
 
-Run `npm install` with node 12.19.0 or later. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm install`.)
+Run `npm install` with node 12. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm install`.)
 
 If you’ve chosen a different environment setup, make sure your `.env` is configured for it. These environment variables are specifically used by `webpack-dev-server`:
 
@@ -133,6 +133,6 @@ npx cypress open --config testFiles=./front/a11y/*.spec.js
 
 ## License
 
-The source code of this project is licensed under the [BSD Zero Clause License](LICENSE.MD) unless stated otherwise.
+The source code of this project is licensed under the [BSD Zero Clause License](LICENSE.md) unless stated otherwise.
 
 The imagery used by this project is the property of Marin Bikes, and used with permission. You are not free to use it for your own projects.
