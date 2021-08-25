@@ -18,7 +18,7 @@ update:
 restore:
 	${RUN} php craft db/restore ${DUMPFILE}
 backup:
-	${RUN} php craft db/backup ${DUMPFILE} --overwrite --interactive=0
+	${EXEC} php craft db/backup ${DUMPFILE} --overwrite --interactive=0
 seed:
 	${EXEC} console php craft demos/seed
 	${EXEC} console php craft users/create --admin
