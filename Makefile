@@ -1,14 +1,14 @@
 DUMPFILE ?= seed.sql
 COMPOSE ?= docker-compose
-EXEC ?= ${COMPOSE} exec -T console
-RUN ?= ${COMPOSE} run --rm console
+EXEC ?= ${COMPOSE} exec -T web
+RUN ?= ${COMPOSE} run --rm web
 
-.PHONY: update restore backup seed
+.PHONY: update restore backup seed test
 
 update:
 	cp .env.docker .env
+	${COMPOSE} up -d
 	make restore
-	${COMPOSE} up -d	
 	${EXEC} composer update --no-interaction
 	${EXEC} php craft migrate/all --interactive=0
 	${EXEC} php craft project-config/apply --force --interactive=0
@@ -16,9 +16,11 @@ update:
 	${EXEC} php craft gc --delete-all-trashed --interactive=0
 	make backup
 restore:
-	${RUN} php craft db/restore ${DUMPFILE}
+	${EXEC} php craft db/restore ${DUMPFILE}
 backup:
 	${EXEC} php craft db/backup ${DUMPFILE} --overwrite --interactive=0
 seed:
-	${EXEC} console php craft demos/seed
-	${EXEC} console php craft users/create --admin
+	${EXEC} php craft demos/seed
+test: seed
+	${EXEC} curl -IX GET --fail http://localhost:8080/actions/app/health-check
+	${EXEC} curl -IX GET --fail http://localhost:8080/

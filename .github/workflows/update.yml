@@ -20,6 +20,8 @@ jobs:
           docker cp "$(docker-compose ps -q console)":/app/seed.sql ./
           docker cp "$(docker-compose ps -q console)":/app/config/project ./config/
 
+      - run: make test
+
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
