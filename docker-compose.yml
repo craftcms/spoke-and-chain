@@ -9,8 +9,6 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-      redis:
-        condition: service_healthy
   mysql:
     image: mariadb:10.5
     environment:
@@ -24,11 +22,6 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s
       retries: 3
-
-  redis:
-    image: redis:5-alpine
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
 
 volumes:
   db_data:
