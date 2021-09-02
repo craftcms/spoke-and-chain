@@ -16,9 +16,9 @@ jobs:
 
       - name: Copy files to host
         run: |
-          docker cp "$(docker-compose ps -q console)":/app/composer.lock ./
-          docker cp "$(docker-compose ps -q console)":/app/seed.sql ./
-          docker cp "$(docker-compose ps -q console)":/app/config/project ./config/
+          docker cp "$(docker-compose ps -q web)":/app/composer.lock ./
+          docker cp "$(docker-compose ps -q web)":/app/seed.sql ./
+          docker cp "$(docker-compose ps -q web)":/app/config/project ./config/
 
       - run: make test
 
