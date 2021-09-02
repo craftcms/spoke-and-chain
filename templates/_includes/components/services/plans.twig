@@ -30,12 +30,12 @@
       <script>
         var subHistory = htmx.find('#subscription-history');
         if (subHistory) {
-            htmx.trigger(subHistory, 'refresh');
+          htmx.trigger(subHistory, 'refresh');
         }
 
         {% set notice = flashes['notice'] ?? null %}
         {% if notice %}
-            addNotification('notice', '{{ notice ? notice|e('js') : 'Subscription activated'|t }}');
+          addNotification('notice', '{{ notice ? notice|e('js') : 'Subscription activated'|t }}');
         {% endif %}
       </script>
     {% endif %}

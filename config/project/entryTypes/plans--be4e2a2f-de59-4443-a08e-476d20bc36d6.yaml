@@ -10,8 +10,8 @@ fieldLayouts:
             class: null
             disabled: false
             id: null
-            instructions: null
-            label: null
+            instructions: ''
+            label: 'Plan Name'
             max: null
             min: null
             name: null
@@ -28,9 +28,9 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 144eafb4-8a07-46d0-a4b2-e85237275206 # Plan Features
-            instructions: null
-            label: null
-            required: false
+            instructions: 'Describe plan features, each having its own line.'
+            label: ''
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

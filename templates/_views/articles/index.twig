@@ -32,9 +32,9 @@
 
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {% for article in articles %}
-              {% include '_includes/components/cards/article' with {
-                article: article,
-              } only %}
+            {% include '_includes/components/cards/article' with {
+              article: article,
+            } only %}
           {% endfor %}
         </div>
       </div>

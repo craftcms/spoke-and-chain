@@ -17,7 +17,7 @@ fieldLayouts:
             fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad # Pages
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -30,7 +30,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: pages
-    instructions: ''
+    instructions: 'Select the pages that should be displayed in this column.'
     name: Pages
     searchable: false
     settings:
@@ -38,10 +38,10 @@ fields:
       limit: ''
       localizeRelations: false
       selectionLabel: 'Add a page'
-      showSiteMenu: false
+      showSiteMenu: true
       source: null
       sources:
-        - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Pages
+        - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
         - singles
       targetSiteId: null
       validateRelatedElements: false
@@ -54,7 +54,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: ''
+    instructions: 'Enter an optional column heading.'
     name: Heading
     searchable: false
     settings:

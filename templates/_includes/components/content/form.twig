@@ -8,22 +8,21 @@
 {% set attrs = attributes is defined ? attrs|merge(attributes) : attrs %}
 
 {% if form %}
-    {% set formOutput %}
-        {{ sprig('_includes/components/forms/contact',
-            {
-                formId: form.id,
-                heading: block and block.heading is defined ? block.heading : false,
-            },
-            attrs
-        ) }}
-    {% endset %}
+  {% set formOutput %}
+    {{ sprig('_includes/components/forms/contact',
+      {
+        formId: form.id,
+        heading: block and block.heading is defined ? block.heading : false,
+      },
+      attrs
+    ) }}
+  {% endset %}
 
-    {% if container %}
-        <div class="container pb-8">
-            {{ formOutput }}
-        </div>
-    {% else %}
-        {{ formOutput }}
-    {% endif %}
-
+  {% if container %}
+    <div class="container pb-8">
+      {{ formOutput }}
+    </div>
+  {% else %}
+    {{ formOutput }}
+  {% endif %}
 {% endif %}

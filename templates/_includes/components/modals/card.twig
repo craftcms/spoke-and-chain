@@ -4,14 +4,14 @@
 
 <!-- Template: {{ _self }}.twig -->
 <form
-    sprig
-    id="fields-{{ gateway.id }}"
-    class="h-full w-full overflow-auto flex flex-col relative"
-    s-method="post"
-    s-action="commerce/payment-sources/add"
-    s-indicator="#payment-sources-indicator"
-    x-data="{ submitting: false }"
-    x-on:submit="submitting = true"
+  sprig
+  id="fields-{{ gateway.id }}"
+  class="h-full w-full overflow-auto flex flex-col relative"
+  s-method="post"
+  s-action="commerce/payment-sources/add"
+  s-indicator="#payment-sources-indicator"
+  x-data="{ submitting: false }"
+  x-on:submit="submitting = true"
 >
 
   {% set body %}
@@ -51,10 +51,10 @@
 </form>
 
 <script>
-    // Refresh other components
-    {% if success is defined and success %}
-      htmx.trigger(htmx.find('#payment-sources-list'), 'refresh');
-      closeModal();
-      addNotification('notice', '{{ 'Card added'|t }}');
-    {% endif %}
+  // Refresh other components
+  {% if success is defined and success %}
+    htmx.trigger(htmx.find('#payment-sources-list'), 'refresh');
+    closeModal();
+    addNotification('notice', '{{ 'Card added'|t }}');
+  {% endif %}
 </script>

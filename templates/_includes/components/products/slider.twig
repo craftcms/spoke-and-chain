@@ -3,41 +3,43 @@
 {# Only display nav if we have more than one image #}
 {% set showSliderNav = images|length > 1 %}
 {% set sliderOpts = {
-    allowTouchMove: false
+  allowTouchMove: false
 } %}
 {% if showSliderNav %}
-    {% set sliderOpts = sliderOpts|merge({
-        allowTouchMove: true,
-        keyboard: { enabled: true, pageUpDown: false },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        pagination: { el: '.swiper-pagination', clickable: true },
-    }) %}
+  {% set sliderOpts = sliderOpts|merge({
+    allowTouchMove: true,
+    keyboard: { enabled: true, pageUpDown: false },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    pagination: { el: '.swiper-pagination', clickable: true },
+  }) %}
 {% endif %}
 
 {% if images|length %}
   <!-- Template: {{ _self }}.twig -->
-    <div class="py-8 lg:py-16">
-        <div class="aspect-ratio-hero">
-            <div class="aspect-inner overflow-hidden relative" x-ref="container">
-                <div id="{{ id }}" class="absolute top-0 left-0 w-full h-full swiper-container"
-                     data-slider='{{ sliderOpts|json_encode|raw }}'>
-                    <div class="swiper-wrapper">
-                        {% for image in images %}
-                            <div class="swiper-slide flex justify-center items-center">
-                                <img class="block h-full" src="{{ image.url }}" alt="{{ image.title }}">
-                            </div>
-                        {% endfor %}
-                    </div>
+  <div class="py-8 lg:py-16">
+    <div class="aspect-ratio-hero">
+      <div class="aspect-inner overflow-hidden relative" x-ref="container">
+        <div id="{{ id }}" 
+          class="absolute top-0 left-0 w-full h-full swiper-container" 
+          data-slider='{{ sliderOpts|json_encode|raw }}'
+        >
+          <div class="swiper-wrapper">
+            {% for image in images %}
+              <div class="swiper-slide flex justify-center items-center">
+                <img class="block h-full" src="{{ image.url }}" alt="{{ image.title }}">
+              </div>
+            {% endfor %}
+          </div>
 
-                    {% if showSliderNav %}
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    {% endif %}
-                    {% if showSliderNav %}
-                        <div class="swiper-pagination"></div>
-                    {% endif %}
-                </div>
-            </div>
+          {% if showSliderNav %}
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          {% endif %}
+          {% if showSliderNav %}
+            <div class="swiper-pagination"></div>
+          {% endif %}
         </div>
+      </div>
     </div>
+  </div>
 {% endif %}

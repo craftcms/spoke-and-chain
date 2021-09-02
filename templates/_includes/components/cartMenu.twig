@@ -13,91 +13,91 @@
 
 <!-- Template: {{ _self }}.twig -->
 <div class="relative" @click.away="showCartMenu = false" @keydown.escape="showCartMenu = false">
-    <div class="flex relative">
-        <button
-                aria-label="{{ cartLabel }}"
-                @click="showCartMenu = !showCartMenu"
-                @keydown.escape="showCartMenu = false"
-                class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600">
-            {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-6 h-6' }) }}
-        </button>
-        {% if qty %}
-            <div class="pointer-events-none absolute inline-block bottom-0.5 right-0.5 text-xxs rounded-full bg-gray-200 px-1.5 py-0.5 leading-3">{{ qty }}</div>
-        {% endif %}
-    </div>
+  <div class="flex relative">
+    <button
+      aria-label="{{ cartLabel }}"
+      @click="showCartMenu = !showCartMenu"
+      @keydown.escape="showCartMenu = false"
+      class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600"
+    >
+      {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-6 h-6' }) }}
+    </button>
+    {% if qty %}
+      <div class="pointer-events-none absolute inline-block bottom-0.5 right-0.5 text-xxs rounded-full bg-gray-200 px-1.5 py-0.5 leading-3">{{ qty }}</div>
+    {% endif %}
+  </div>
 
-    <template x-if="showCartMenu">
-        <div class="cart-menu origin-top-right absolute right-0 border-t lg:border-none border-white mt-3 pt-0 z-0 w-72">
-            <div class="px-6 py-3 rounded-md border border-gray-300 bg-white shadow-lg" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                <div class="space-y-4">
-                    {% if lineItems|length %}
-                        <div>
-                            {% for item in lineItems %}
-                                <div class="flex justify-between text-sm {% if not loop.first %}border-t border-gray-200 mt-2 pt-2{% endif %}">
-                                    <div>
-                                        <div class="font-medium">{{ item.description }}</div>
-                                        <span class="text-xs text-gray-400">× {{ item.qty }}</span>
-                                    </div>
-                                    <div class="ml-4">
-                                        {{ item.totalAsCurrency }}
-                                    </div>
-                                </div>
-                            {% endfor %}
-                            <div class="border-t border-gray-200 mt-2 pt-2 text-right">
-                                {% if shipping %}
-                                    <div class="text-gray-600 text-xs">{{ 'Shipping'|t }}: {{ shipping }}</div>
-                                {% endif %}
-                                {% if discount %}
-                                    <div class="text-gray-600 text-xs">{{ 'Discount'|t }}: {{ discount }}</div>
-                                {% endif %}
-                                <div class="text-sm font-bold">{{ 'Total'|t }}: {{ total }}</div>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="button submit w-full text-center" href="{{ cartPage.url }}">Check Out</a>
-                        </div>
-                    {% else %}
-                        <div class="text-center text-base text-gray-500 border-b border-gray-200 pt-5 pb-8">
-                          {{ 'Your cart is empty.'|t }}
-                        </div>
-                    {% endif %}
-                    <div>
-                        {% if cartPage is defined %}
-                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">
-                                {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                                {{ cartPage.title }}
-                            </a>
-                        {% endif %}
-                        <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/orders') }}">
-                            {{ svg('@webroot/icons/box.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                            Orders
-                        </a>
-                        <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/membership') }}">
-                            {{ svg('@webroot/icons/address-card.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                            Membership
-                        </a>
-                        {% if accountPage is defined %}
-                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account') }}">
-                                {{ svg('@webroot/icons/cog.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                                {{ "Account"|t('site') }}
-                            </a>
-                        {% endif %}
-
-                        {% if not currentUser %}
-                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ loginPage.url }}">
-                                {{ svg('@webroot/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                                {{ 'Sign in'|t }}
-                            </a>
-                        {% else %}
-                            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ logoutUrl }}">
-                                {{ svg('@webroot/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
-                                {{ 'Sign out'|t }}
-                            </a>
-                        {% endif %}
-                    </div>
+  <template x-if="showCartMenu">
+    <div class="cart-menu origin-top-right absolute right-0 border-t lg:border-none border-white mt-3 pt-0 z-0 w-72">
+      <div class="px-6 py-3 rounded-md border border-gray-300 bg-white shadow-lg" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+        <div class="space-y-4">
+          {% if lineItems|length %}
+            <div>
+              {% for item in lineItems %}
+                <div class="flex justify-between text-sm {% if not loop.first %}border-t border-gray-200 mt-2 pt-2{% endif %}">
+                  <div>
+                    <div class="font-medium">{{ item.description }}</div>
+                    <span class="text-xs text-gray-400">× {{ item.qty }}</span>
+                  </div>
+                  <div class="ml-4">
+                    {{ item.totalAsCurrency }}
+                  </div>
                 </div>
-
+              {% endfor %}
+              <div class="border-t border-gray-200 mt-2 pt-2 text-right">
+                {% if shipping %}
+                  <div class="text-gray-600 text-xs">{{ 'Shipping'|t }}: {{ shipping }}</div>
+                {% endif %}
+                {% if discount %}
+                  <div class="text-gray-600 text-xs">{{ 'Discount'|t }}: {{ discount }}</div>
+                {% endif %}
+                <div class="text-sm font-bold">{{ 'Total'|t }}: {{ total }}</div>
+              </div>
             </div>
+            <div>
+              <a class="button submit w-full text-center" href="{{ cartPage.url }}">Check Out</a>
+            </div>
+          {% else %}
+            <div class="text-center text-base text-gray-500 border-b border-gray-200 pt-5 pb-8">
+              {{ 'Your cart is empty.'|t }}
+            </div>
+          {% endif %}
+          <div>
+            {% if cartPage is defined %}
+              <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">
+                {{ svg('@webroot/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ cartPage.title }}
+              </a>
+            {% endif %}
+            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/orders') }}">
+              {{ svg('@webroot/icons/box.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+              {{ 'Orders'|t }}
+            </a>
+            <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/membership') }}">
+              {{ svg('@webroot/icons/address-card.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+              {{ 'Membership'|t }}
+            </a>
+            {% if accountPage is defined %}
+              <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account') }}">
+                {{ svg('@webroot/icons/cog.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ "Account"|t('site') }}
+              </a>
+            {% endif %}
+
+            {% if not currentUser %}
+              <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ loginPage.url }}">
+                {{ svg('@webroot/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ 'Sign in'|t }}
+              </a>
+            {% else %}
+              <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ logoutUrl }}">
+                {{ svg('@webroot/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ 'Sign out'|t }}
+              </a>
+            {% endif %}
+          </div>
         </div>
-    </template>
+      </div>
+    </div>
+  </template>
 </div>

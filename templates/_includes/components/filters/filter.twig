@@ -9,11 +9,13 @@
         <h2 class="sr-only">{{ 'Filters'|t }}</h2>
 
         <button class="-ml-4 px-4 py-2 inline-flex items-center md:hidden"
-                x-on:click="showFilters = !showFilters">
+          x-on:click="showFilters = !showFilters"
+        >
           <svg class="toggle-open block h-5 w-5 mr-2"
-               :class="{'hidden': showFilters}"
-               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-               fill="currentColor">
+            :class="{'hidden': showFilters}"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+            fill="currentColor"
+          >
             <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"/>
           </svg>
 
@@ -119,21 +121,21 @@
 </div>
 
 <script>
-    var currentState = {
-        sort: '{{ sort }}',
-        colors: {{ colors|json_encode|raw }},
-        materials: {{ materials|json_encode|raw }},
-        type: '{{ type }}'
-    };
+  var currentState = {
+    sort: '{{ sort }}',
+    colors: {{ colors|json_encode|raw }},
+    materials: {{ materials|json_encode|raw }},
+    type: '{{ type }}'
+  };
 
-    {% if saveState and saveState != 'false' %}
-    window.dispatchEvent(new CustomEvent('saveFilterState', {
-        detail: currentState
-    }))
-    {% endif %}
+  {% if saveState and saveState != 'false' %}
+  window.dispatchEvent(new CustomEvent('saveFilterState', {
+    detail: currentState
+  }))
+  {% endif %}
 
-    // Push state URL
-    if (window.location != '{{ pushUrl }}') {
-        history.pushState(window.currentState, '', '{{ pushUrl|raw }}')
-    }
+  // Push state URL
+  if (window.location != '{{ pushUrl }}') {
+    history.pushState(window.currentState, '', '{{ pushUrl|raw }}')
+  }
 </script>

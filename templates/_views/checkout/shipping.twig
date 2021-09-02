@@ -29,18 +29,18 @@
           </div>
         {% else %}
           <div class="space-y-6">
-              <div class="space-y-2">
-                {% for handle, method in cart.availableShippingMethodOptions %}
-                  <div class="option-select">
-                      <input id="shipping-method-{{ handle }}" type="radio" name="shippingMethodHandle" value="{{ handle }}" {% if handle == cart.shippingMethodHandle %}checked{% endif %}/>
+            <div class="space-y-2">
+              {% for handle, method in cart.availableShippingMethodOptions %}
+                <div class="option-select">
+                  <input id="shipping-method-{{ handle }}" type="radio" name="shippingMethodHandle" value="{{ handle }}" {% if handle == cart.shippingMethodHandle %}checked{% endif %}/>
 
-                      <label for="shipping-method-{{ handle }}">
-                          <strong>{{ method.name }}</strong><br>
-                          <span class="price">{{ method.getPrice()|commerceCurrency(cart.currency) }}</span>
-                      </label>
-                  </div>
-                {% endfor %}
-              </div>
+                  <label for="shipping-method-{{ handle }}">
+                    <strong>{{ method.name }}</strong><br>
+                    <span class="price">{{ method.getPrice()|commerceCurrency(cart.currency) }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </div>
 
             <div class="text-right">
               <input class="button submit" type="submit" value="{{ 'Select Shipping Method'|t }}"/>

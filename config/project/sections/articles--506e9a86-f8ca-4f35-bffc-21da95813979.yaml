@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: articles
-name: 'Article Posts'
+name: Articles
 previewTargets:
   -
     __assoc__:
