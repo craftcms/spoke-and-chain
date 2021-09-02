@@ -1,4 +1,4 @@
-name: Build and Push Docker Images
+name: Build and push docker images
 
 on:
   workflow_dispatch:
@@ -33,4 +33,3 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: craftcms/demo-spokeandchain:latest
-          target: web
