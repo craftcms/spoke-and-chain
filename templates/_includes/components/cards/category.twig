@@ -6,40 +6,40 @@
 
 {# Output #}
 {% if title or image %}
-    {% if url %}
-        <a class="category-card aspect-ratio-category-card bg-gray-500" href="{{ url }}" aria-label="{{ title }}">
-    {% else %}
-        <div class="category-card aspect-ratio-category-card bg-gray-500">
+  {% if url %}
+    <a class="category-card aspect-ratio-category-card bg-gray-500" href="{{ url }}" aria-label="{{ title }}">
+  {% else %}
+    <div class="category-card aspect-ratio-category-card bg-gray-500">
+  {% endif %}
+  <div class="aspect-inner">
+    {% if image %}
+      <div class="absolute inset-0 flex items-center">
+        {% include '_includes/components/images/responsive' with {
+          class: 'object-cover w-full h-full',
+          image: image,
+          sizes: {
+              '425px': '380px',
+              '639px': '592px',
+              '767px': '720px',
+              '1023px': '476px',
+              '1279px': '604px',
+              '1439px': '700px',
+              'all': '900px',
+          },
+          srcset: ['900w', '720w', '700w', '604w', '592w', '476w', '380w'],
+          transform: { width: 380, height: 238, },
+          showAlt: false
+        } %}
+      </div>
     {% endif %}
-    <div class="aspect-inner">
-        {% if image %}
-            <div class="absolute inset-0 flex items-center">
-                {% include '_includes/components/images/responsive' with {
-                    class: 'object-cover w-full h-full',
-                    image: image,
-                    sizes: {
-                        '425px': '380px',
-                        '639px': '592px',
-                        '767px': '720px',
-                        '1023px': '476px',
-                        '1279px': '604px',
-                        '1439px': '700px',
-                        'all': '900px',
-                    },
-                    srcset: ['900w', '720w', '700w', '604w', '592w', '476w', '380w'],
-                    transform: { width: 380, height: 238, },
-                    showAlt: false
-                } %}
-            </div>
-        {% endif %}
-        <div class="bg-black bg-opacity-50 absolute inset-0"></div>
-        <div class="relative flex items-center justify-center h-full w-full text-2xl font-bold text-white">
-            {{ title }}
-        </div>
+    <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+    <div class="relative flex items-center justify-center h-full w-full text-2xl font-bold text-white">
+      {{- title -}}
     </div>
-    {% if url %}
-        </a>
-    {% else %}
-        </div>
-    {% endif %}
+  </div>
+  {% if url %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}
 {% endif %}

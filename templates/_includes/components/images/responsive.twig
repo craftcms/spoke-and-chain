@@ -18,8 +18,8 @@
 
 {# Variables #}
 {% set tagOptions = image ? {
-    src: image.url,
-    alt: showAlt ? image.title : null,
+  src: image.url,
+  alt: showAlt ? image.title : null,
 } : null %}
 {% set tagOptions = tagOptions|merge({ width: image.width, height: image.height }) %}
 {% set tagOptions = class ? tagOptions|merge({ class: class }) : tagOptions %}
@@ -28,5 +28,5 @@
 
 {# Output #}
 {% if image and tagOptions %}
-    {{ tag('img', tagOptions) }}
+  {{ tag('img', tagOptions) }}
 {% endif %}

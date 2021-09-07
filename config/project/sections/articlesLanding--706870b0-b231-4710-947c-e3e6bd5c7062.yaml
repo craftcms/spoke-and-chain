@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: articlesLanding
-name: Articles
+name: 'Articles Landing'
 previewTargets:
   -
     __assoc__:

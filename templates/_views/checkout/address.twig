@@ -32,83 +32,85 @@
             <h2>{{ entry.heading }}</h2>
           {% endif %}
 
-            <h2 class="text-2xl mb-4">{{ 'Shipping Address'|t }}</h2>
-            <div class="space-y-6">
-                <div class="space-y-2 relative">
-                    {% if currentUser and addresses|length %}
-                      {{ sprig('_includes/components/address/list', {
-                          showDelete: false,
-                          model: 'shippingAddress',
-                          radio: 'shippingAddressId',
-                        }, {
-                          id: 'shipping-address-list',
-                          class: 'address-list',
-                          's-include': '#shipping-address-list',
-                          's-indicator': '#shipping-address-list-indicator'
-                      }) }}
-                      <div id="shipping-address-list-indicator" class="spinner-overlay">
-                        {% include '_includes/components/spinner' %}
-                      </div>
-                    {% else %}
-                        <div>
-                            {% include '_includes/components/address/fields' with {
-                                modelName: 'shippingAddress',
-                                model: cart.shippingAddress
-                            } %}
-                        </div>
-                    {% endif %}
+          <h2 class="text-2xl mb-4">
+            {{- 'Shipping Address'|t -}}
+          </h2>
+
+          <div class="space-y-6">
+            <div class="space-y-2 relative">
+              {% if currentUser and addresses|length %}
+                {{ sprig('_includes/components/address/list', {
+                    showDelete: false,
+                    model: 'shippingAddress',
+                    radio: 'shippingAddressId',
+                  }, {
+                    id: 'shipping-address-list',
+                    class: 'address-list',
+                    's-include': '#shipping-address-list',
+                    's-indicator': '#shipping-address-list-indicator'
+                }) }}
+                <div id="shipping-address-list-indicator" class="spinner-overlay">
+                  {% include '_includes/components/spinner' %}
                 </div>
-
-                {# Fallback default for `billingAddressSameAsShipping` #}
-                {{ hiddenInput('billingAddressSameAsShipping', 0) }}
-
-                <div x-data="{
-                  billingSameAsShipping: {{ billingAddressSameAsShipping ? 'true' : 'false' }},
-                  billingAddress: '{{ currentUser and addresses|length and cart.billingAddressId ? cart.billingAddressId : '' }}'
-                }">
-                    <div class="flex items-center">
-                        <input class="checkbox" id="billingSameAsShipping" type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping">
-                        <label class="ml-2" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
-                    </div>
-
-                    <div class="mt-4" :class="{ hidden: billingSameAsShipping }">
-                      <div>
-                        <h2 class="text-2xl mb-4">{{ 'Billing Address'|t }}</h2>
-                      </div>
-                      <div class="space-y-2 relative">
-                        {{ sprig('_includes/components/address/list', {
-                          showDelete: false,
-                          model: 'billingAddress',
-                          radio: 'billingAddressId',
-                        }, {
-                          id: 'billing-address-list',
-                          class: 'address-list',
-                          's-include': '#billing-address-list',
-                          's-indicator': '#billing-address-list-indicator',
-                        }) }}
-                        <div id="billing-address-list-indicator" class="spinner-overlay">
-                          {% include '_includes/components/spinner' %}
-                        </div>
-                        {% if currentUser and addresses|length %}
-
-                        {% else %}
-                          <div>
-                            {% include '_includes/components/address/fields' with {
-                              modelName: 'billingAddress',
-                              model: cart.billingAddress,
-                              outputIdField: not (cart.billingAddress and cart.shippingAddress and cart.billingAddress.id == cart.shippingAddress.id)
-                            } %}
-                          </div>
-                        {% endif %}
-                      </div>
-                    </div>
-
+              {% else %}
+                <div>
+                  {% include '_includes/components/address/fields' with {
+                    modelName: 'shippingAddress',
+                    model: cart.shippingAddress
+                  } %}
                 </div>
-
-                <div class="text-right">
-                    <input class="button submit" type="submit" name="submit" value="{{ 'Next'|t }}">
-                </div>
+              {% endif %}
             </div>
+
+            {# Fallback default for `billingAddressSameAsShipping` #}
+            {{ hiddenInput('billingAddressSameAsShipping', 0) }}
+
+            <div x-data="{
+              billingSameAsShipping: {{ billingAddressSameAsShipping ? 'true' : 'false' }},
+              billingAddress: '{{ currentUser and addresses|length and cart.billingAddressId ? cart.billingAddressId : '' }}'
+            }">
+              <div class="flex items-center">
+                <input class="checkbox" id="billingSameAsShipping" type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping">
+                <label class="ml-2" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
+              </div>
+
+              <div class="mt-4" :class="{ hidden: billingSameAsShipping }">
+                <div>
+                  <h2 class="text-2xl mb-4">{{ 'Billing Address'|t }}</h2>
+                </div>
+                <div class="space-y-2 relative">
+                  {{ sprig('_includes/components/address/list', {
+                    showDelete: false,
+                    model: 'billingAddress',
+                    radio: 'billingAddressId',
+                  }, {
+                    id: 'billing-address-list',
+                    class: 'address-list',
+                    's-include': '#billing-address-list',
+                    's-indicator': '#billing-address-list-indicator',
+                  }) }}
+                  <div id="billing-address-list-indicator" class="spinner-overlay">
+                    {% include '_includes/components/spinner' %}
+                  </div>
+                  {% if currentUser and addresses|length %}
+
+                  {% else %}
+                    <div>
+                      {% include '_includes/components/address/fields' with {
+                        modelName: 'billingAddress',
+                        model: cart.billingAddress,
+                        outputIdField: not (cart.billingAddress and cart.shippingAddress and cart.billingAddress.id == cart.shippingAddress.id)
+                      } %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <input class="button submit" type="submit" name="submit" value="{{ 'Next'|t }}">
+            </div>
+          </div>
         </form>
       </div>
     </div>

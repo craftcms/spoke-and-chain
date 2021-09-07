@@ -12,7 +12,7 @@
     image: entry.mainImage.one(),
   } only %}
 
-  {% for block in entry.contentBuilder.all() %}
+  {% for block in entry.contentBlocks.all() %}
     {% include '_includes/components/content/' ~ block.type.handle with {
       block: block,
       isFirst: loop.first,

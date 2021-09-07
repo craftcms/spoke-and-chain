@@ -1,64 +1,64 @@
 {% set logo = craft.assets({
-    filename: 'logo.png',
+  filename: 'logo.png',
 }).one() %}
 <!doctype html>
 <html class="antialiased" lang="{{ craft.app.language | replace('_', '-') }}">
-    <head>
-        {# Standard Project Meta #}
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {# Prevent site from being indexed #}
-        <meta name="robots" content="noindex,nofollow">
-        {# /Standard Project Meta #}
-        {# Project Styles #}
-        {{ craft.twigpack.includeCssModule('styles.css', false) }}
-        {# /Project Styles #}
+  <head>
+    {# Standard Project Meta #}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# Prevent site from being indexed #}
+    <meta name="robots" content="noindex,nofollow">
+    {# /Standard Project Meta #}
+    {# Project Styles #}
+    {{ craft.twigpack.includeCssModule('styles.css', false) }}
+    {# /Project Styles #}
 
-        {% block head %}{% endblock %}
-    </head>
+    {% block head %}{% endblock %}
+  </head>
 
-    <body class="relative font-sans {% if bodyClass is defined %} {{ bodyClass }}{% endif %}">
-        <div class="mt-8">
-            <div class="container flex justify-center">
-                <div class="w-full max-w-5xl flex items-center justify-between">
-                    <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5">
-                        <a class="block" href="{{ siteUrl() }}">
-                            {% if logo %}
-                                {% include '_includes/components/images/responsive' with {
-                                    class: 'w-full',
-                                    image: logo,
-                                    sizes: {
-                                        '400px': '180px',
-                                        '639px': '300px',
-                                        '767px': '200px',
-                                        '1023px': '180px',
-                                        'all': '200px',
-                                    },
-                                    srcset: ['300w', '230w', '200w', '180w'],
-                                    transform: { width: 200 },
-                                } only %}
-                            {% endif %}
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <body class="relative font-sans {% if bodyClass is defined %} {{ bodyClass }}{% endif %}">
+    <div class="mt-8">
+      <div class="container flex justify-center">
+        <div class="w-full max-w-5xl flex items-center justify-between">
+          <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5">
+            <a class="block" href="{{ siteUrl() }}">
+              {% if logo %}
+                {% include '_includes/components/images/responsive' with {
+                  class: 'w-full',
+                  image: logo,
+                  sizes: {
+                    '400px': '180px',
+                    '639px': '300px',
+                    '767px': '200px',
+                    '1023px': '180px',
+                    'all': '200px',
+                  },
+                  srcset: ['300w', '230w', '200w', '180w'],
+                  transform: { width: 200 },
+                } only %}
+              {% endif %}
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="mt-8">
-            {% block header %}{% endblock %}
-        </div>
+    <div class="mt-8">
+      {% block header %}{% endblock %}
+    </div>
 
-        <div class="mt-8">
-            {% block main %}{% endblock %}
-        </div>
+    <div class="mt-8">
+      {% block main %}{% endblock %}
+    </div>
 
-        {% block footer %}
-            <div class="container py-8">
-                <p class="text-center text-xs leading-6 text-gray-600 md:mt-0">
-                    &copy; {{ now|date('Y') }} {{ footer.heading }}
-                </p>
-            </div>
-        {% endblock %}
-    </body>
+    {% block footer %}
+      <div class="container py-8">
+        <p class="text-center text-xs leading-6 text-gray-600 md:mt-0">
+          &copy; {{ now|date('Y') }} {{ footer.heading }}
+        </p>
+      </div>
+    {% endblock %}
+  </body>
 </html>

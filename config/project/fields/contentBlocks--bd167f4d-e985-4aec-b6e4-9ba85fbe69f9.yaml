@@ -1,12 +1,12 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
-handle: contentBuilder
-instructions: ''
-name: 'Content Builder'
-searchable: false
+handle: contentBlocks
+instructions: 'Use the available block types to compose the page’s main content.'
+name: 'Content Blocks'
+searchable: true
 settings:
-  contentTable: '{{%matrixcontent_contentbuilder}}'
+  contentTable: '{{%matrixcontent_contentblocks}}'
   maxBlocks: ''
   minBlocks: ''
   propagationKeyFormat: null

@@ -6,14 +6,14 @@
 
 <!-- Template: {{ _self }}.twig -->
 <form
-    sprig
-    class="h-full w-full overflow-auto flex flex-col relative"
-    s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
-    s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
-    s-val:data='{{ data|json_encode }}'
-    s-val:type='{{ type }}'
-    x-data="{ submitting: false }"
-    x-on:submit="submitting = true"
+  sprig
+  class="h-full w-full overflow-auto flex flex-col relative"
+  s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
+  s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
+  s-val:data='{{ data|json_encode }}'
+  s-val:type='{{ type }}'
+  x-data="{ submitting: false }"
+  x-on:submit="submitting = true"
 >
 
   {% set body %}
@@ -51,14 +51,14 @@
 </form>
 
 <script>
-    // Refresh other components
-    {% if success is defined and success %}
-      var addressLists = htmx.findAll('.address-list');
-      addressLists.forEach(function(list) {
-          htmx.trigger(list, 'refresh');
-      });
+  // Refresh other components
+  {% if success is defined and success %}
+    var addressLists = htmx.findAll('.address-list');
+    addressLists.forEach(function(list) {
+        htmx.trigger(list, 'refresh');
+    });
 
-      closeModal();
-      addNotification('notice', '{{ data and data.id == 'new' ? 'Address added'|t : 'Address updated'|t }}');
-    {% endif %}
+    closeModal();
+    addNotification('notice', '{{ data and data.id == 'new' ? 'Address added'|t : 'Address updated'|t }}');
+  {% endif %}
 </script>

@@ -5,7 +5,7 @@ fieldLayouts:
         elements:
           -
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
-            instructions: ''
+            instructions: 'Enter copyright text to be displayed in every page footer. (Will automatically be preceded with copyright symbol and year.)'
             label: Copyright
             required: ''
             tip: null
@@ -14,7 +14,7 @@ fieldLayouts:
             width: 100
           -
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
-            instructions: ''
+            instructions: 'Enter a description of the active site’s language to be displayed in the footer. (Not currently implemented.)'
             label: 'Language Heading'
             required: ''
             tip: null

@@ -3,32 +3,33 @@
 
 {# Output #}
 {% if lineItem %}
-    <!-- Template: {{ _self }}.twig -->
-    {% set snapshotImage = lineItem.snapshot.product.mainImage is defined and lineItem.snapshot.product.mainImage ? craft.assets.id(lineItem.snapshot.product.mainImage).one() : null %}
-    {% if snapshotImage %}
-        {% include '_includes/components/images/responsive' with {
-            class: 'w-full',
-            image: snapshotImage,
-            sizes: {
-                '320px': '272px',
-                '425px': '377px',
-                '767px': '592px',
-                '1023px': '216px',
-                '1279px': '171px',
-                '1439px': '181px',
-                'all': '181px',
-            },
-            srcset: ['592w', '377w', '272w', '216w', '181w', '171w'],
-            transform: { width: 272, height: 143, },
-        } %}
-    {% else %}
-        <div class="aspect-ratio-product-card">
-            <div class="aspect-inner overflow-hidden relative">
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gray-200 flex justify-center items-center">
-                    <div class="text-xs text-gray-600">{{ 'Image unavailable'|t }}</div>
-                </div>
-            </div>
+  <!-- Template: {{ _self }}.twig -->
+  {% set snapshotImage = lineItem.snapshot.product.mainImage is defined and lineItem.snapshot.product.mainImage ? craft.assets.id(lineItem.snapshot.product.mainImage).one() : null %}
+  {% if snapshotImage %}
+    {% include '_includes/components/images/responsive' with {
+      class: 'w-full',
+      image: snapshotImage,
+      sizes: {
+        '320px': '272px',
+        '425px': '377px',
+        '767px': '592px',
+        '1023px': '216px',
+        '1279px': '171px',
+        '1439px': '181px',
+        'all': '181px',
+      },
+      srcset: ['592w', '377w', '272w', '216w', '181w', '171w'],
+      transform: { width: 272, height: 143, },
+    } %}
+  {% else %}
+    <div class="aspect-ratio-product-card">
+      <div class="aspect-inner overflow-hidden relative">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gray-200 flex justify-center items-center">
+          <div class="text-xs text-gray-600">
+            {{- 'Image unavailable'|t -}}
+          </div>
         </div>
-    {% endif %}
+      </div>
+    </div>
+  {% endif %}
 {% endif %}

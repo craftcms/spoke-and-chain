@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Builder
+            fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Blocks
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
 handle: articles
 hasTitleField: true
 name: Articles
-section: 506e9a86-f8ca-4f35-bffc-21da95813979 # Article Posts
+section: 506e9a86-f8ca-4f35-bffc-21da95813979 # Articles
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
