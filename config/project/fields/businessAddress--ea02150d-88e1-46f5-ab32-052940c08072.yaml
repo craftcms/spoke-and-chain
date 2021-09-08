@@ -1,0 +1,19 @@
+columnSuffix: zhgorwis
+contentColumnType: text
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
+handle: businessAddress
+instructions: 'Enter the shop’s physical street address.'
+name: 'Business Address'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '3'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
