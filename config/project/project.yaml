@@ -1,4 +1,4 @@
-dateModified: 1631035771
+dateModified: 1631141471
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -19,6 +19,7 @@ meta:
     0f590e76-b015-4dad-b3b6-4bc6e721c244: 'Order Received' # Order Received
     0f952e73-17b8-408c-9c37-3f07a5d16a92: 'Error Pages' # Error Pages
     1e81b434-e226-440b-9bcf-efb22342a5d0: Summary # Summary
+    2a2f0ac5-fb77-412b-8259-4445f3520dae: Shop # Shop
     2af1095c-7195-4f2b-ad59-d4e36ee17dd9: Services # Services
     2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2: Body # Body
     2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5: 'Landing Pages' # Landing Pages
@@ -40,9 +41,9 @@ meta:
     18ab3594-a62d-4903-9c6c-b791d64fd4ad: Pages # Pages
     21dd60d6-92a7-4e82-8884-7dbe57d73c6c: Account # Account
     27dc92a5-4575-4a37-ad4a-09eed2b40038: Page # Page
-    31a2d43c-7290-4d37-a001-865d49555f73: Address # Address
     32faa6bc-a330-408a-b37a-4e8bde606b43: Reviews # Reviews
     51e3a5d4-240b-447d-88c5-443e30489a59: 'Equipment Type' # Equipment Type
+    54f6a656-b4ef-4d80-86dc-2ed613f64056: 'Business Hours' # Business Hours
     63ae8822-3b4e-4a3d-b902-eba33875c230: Footer # Footer
     68e89100-65f8-4cef-9eee-a07652f3e68a: PDFs # PDFs
     77bd0dab-6333-4b99-8a94-7e6042944ba7: Received # Received
@@ -90,8 +91,6 @@ meta:
     aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57: 'Bike Types' # Bike Types
     ab1e76a4-82ae-4059-900e-5f9d8df35d49: Articles # Articles
     acc12fef-5130-43fe-97ca-e77013797195: Shipped # Shipped
-    b0c13f72-1314-4872-b963-24bc1c170d1f: Map # Map
-    b0e92218-875e-4e1f-8457-ec090e59278a: 'Opening Times' # Opening Times
     b9cb6112-ebae-420b-bae9-a54c387419f6: 'Footer Nav' # Footer Nav
     b29c63ea-aba1-4ef6-80be-a0096df13673: Cart # Cart
     ba795823-7853-4c7d-8337-136027e1e738: Bikes # Bikes
@@ -116,6 +115,7 @@ meta:
     e60fd5c1-9f1b-496d-8369-a9daafcc185d: 'Plain Text 2' # Plain Text 2
     e177ffea-3077-40f7-8dda-265effea6592: Form # Form
     e1227ec6-29cc-4c76-8ef1-a091a264b805: 'Product Categories' # Product Categories
+    ea02150d-88e1-46f5-ab32-052940c08072: 'Business Address' # Business Address
     edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf: Subheading # Subheading
     ee205f0d-9016-48b3-8c84-df68b08003cd: 'Entry Link' # Entry Link
     f2df00c0-373c-4c6a-8b92-af04075dd56c: Contact # Contact
@@ -274,6 +274,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
+  store-hours:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
   twigpack:
     edition: standard
     enabled: true

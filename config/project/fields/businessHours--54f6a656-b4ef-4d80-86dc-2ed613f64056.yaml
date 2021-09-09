@@ -1,0 +1,33 @@
+columnSuffix: vmtyuvjf
+contentColumnType: text
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
+handle: businessHours
+instructions: 'Enter the shop’s daily opening and closing hours.'
+name: 'Business Hours'
+searchable: false
+settings:
+  slots:
+    __assoc__:
+      -
+        - open
+        -
+          __assoc__:
+            -
+              - name
+              - 'Opening Time'
+            -
+              - handle
+              - open
+      -
+        - close
+        -
+          __assoc__:
+            -
+              - name
+              - 'Closing Time'
+            -
+              - handle
+              - close
+translationKeyFormat: null
+translationMethod: none
+type: craft\storehours\Field
