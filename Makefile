@@ -8,6 +8,7 @@ WEB_CONTAINER = docker-compose ps -q web
 
 update:
 	cp .env.docker .env
+	${COMPOSE} build
 	${COMPOSE} up -d
 	make restore
 	${EXEC} composer update --no-interaction
