@@ -14,12 +14,6 @@ jobs:
 
       - run: make update
 
-      - name: Copy files to host
-        run: |
-          docker cp "$(docker-compose ps -q web)":/app/composer.lock ./
-          docker cp "$(docker-compose ps -q web)":/app/seed.sql ./
-          docker cp "$(docker-compose ps -q web)":/app/config/project ./config/
-
       - run: make test
 
       - name: Create pull request
