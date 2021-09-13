@@ -1,0 +1,38 @@
+{% set content %}
+
+## Composer & Yii
+
+![](/guide/composer-yii.png)
+
+## Software Updates
+
+![](/guide/software-updates.png)
+
+## Multi-Environment Support
+
+![](/guide/multi-environment-support.png)
+
+## Craft Nitro
+
+![](/guide/craft-nitro.png)
+
+## Project Config
+
+![](/guide/project-config.png)
+
+## Hybrid CMS
+
+![](/guide/hybrid-cms.png)
+
+## Documentation & Community
+
+![](/guide/documentation-community.png)
+
+{% endset %}
+
+{{ content|markdown }}
+
+{% include "guide_template_path/_next" with {
+  label: "Going Further",
+  url: cpUrl('guide/page/going-further')
+} %}

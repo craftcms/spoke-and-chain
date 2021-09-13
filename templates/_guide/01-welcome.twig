@@ -1,0 +1,65 @@
+{% set content %}
+**Welcome to the Spoke & Chain demo!**
+
+Spoke & Chain is a fully-custom ecommerce site for a fictitious bike shop, built with [Craft CMS](https://craftcms.com) and [Craft Commerce](https://craftcms.com/commerce), with fabulous product imagery thanks to the friendly folks at [Marin Bikes](https://www.marinbikes.com).
+
+![](/guide/homepage.png)
+
+This guide you’re reading—courtesy of the [Guide](https://plugins.craftcms.com/guide) Craft CMS plugin—is here to offer a tour of the build.
+
+## Every Craft Site is a Custom Site
+
+If we started with a fresh Craft CMS install there wouldn’t be much to see, because you’re in charge of how you shape your content and however you choose to build the front end.
+
+Craft Commerce similarly provides the building blocks for a custom-tailored ecommerce experience.
+
+We know you’re probably not looking to build a website for a fake bike shop, so we’ll highlight the Craft CMS features you could use to build just about any kind of site, and point out what Craft Commerce brings to help create beautiful, one-of-a-kind online stores.
+
+## Front End
+
+You can jump straight to [the front end]() from anywhere in the Craft control panel by clicking **Spoke & Chain** in the main navigation:
+
+![](/guide/site-link.png)
+
+The front end is built with Twig, Craft’s native templating system, with modern CSS and JavaScript.  
+
+The Spoke & Chain site features...
+
+- [filterable product listings]({{ siteUrl('bikes') }})
+- [member-based subscription services]({{ siteUrl('account/membership') }}) with [account]({{ siteUrl('account/dashboard') }}) and [order]({{ siteUrl('account/orders') }}) management
+- [articles with custom layouts]({{ siteUrl('account/membership') }})
+- global search for products and articles
+- a custom [checkout flow]({{ siteUrl('account/cart') }}) with support for coupon codes
+- an easily-managed [contact form]({{ siteUrl('contact') }})
+
+You may want to browse around the front end to get a feel for it, and order a bike or two. Commerce is configured to use its dummy gateway, so you can safely enter any details you’d like and everything will be deleted when the demo has expired.
+
+Red bikes are 10% off, and you can use code `15OFF` for a 15% discount.
+
+Your site would inevitably look different and may be built with different tools, so we’ll focus our tour primarily on the Craft CMS control panel.
+
+## Control Panel
+
+You’ve clearly made it to the control panel, which is where developers configure your content model and everyone manages content day to day.
+
+Before we go any further, you may want to visit your [account preferences]({{ cpUrl('myaccount#prefs') }}) to make the control panel a little more comfortable. Select the profile menu in the top right corner and click your username. Your **Preferences** tab includes language, formatting and accessibility options that might improve your demo experience:
+
+![](/guide/my-account.png)
+
+You’re looking at a current version of Craft CMS Pro with a minimal set of plugins since we want to emphasize what Craft does out of the box.
+
+The main navigation is off to your left, and depending on your browser width you may need to press the menu button to expand it.
+
+You’re looking at the Craft control panel as an admin so we can see everything all at once; this is the kitchen-sink view:
+
+![](/guide/dashboard.png)
+
+Normally we wouldn’t see **Settings** or **Plugin Store** in production, and each user would see only the things allowed by the [permissions groups]({{ cpUrl('settings/users') }}) you’ve created and assigned.
+{% endset %}
+
+{{ content|markdown }}
+
+{% include "guide_template_path/_next" with {
+  label: "Content in Craft",
+  url: cpUrl('guide/page/content')
+} %}

@@ -1,0 +1,65 @@
+{% set content %}
+Now let’s take a look at editing content in Craft CMS.
+
+Click **Entries** → **Articles** and click any title in the list to have a look at the entry editor.
+
+## Common Fields
+
+![](/guide/common-fields.png)
+
+Most entries have the same basic required fields you’ll see in any CMS:
+
+- **Title** is the primary, human-friendly name for the entry. (The field itself can have a different label that makes sense for the content, like “Service Name” or “Practice Area”.)
+- **Slug** is the unique URL segment for the entry, automatically suggested as you enter a title.
+- **Author** is the user responsible for the entry, which defaults to the one who created it.
+- **Entry Date** and **Expiry Date** determine when the entry should be live on the site, and optionally disappear again. (You can future-date entries to have them appear later.)
+- **Enabled** is a kill switch you can use to drop an entry from the site or prevent it from being published regardless of its other settings.
+
+## Field Types
+
+https://craftcms.com/docs/getting-started-tutorial/configure/modeling.html#fields
+
+### Plain Text
+
+![](/guide/plain-text.png)
+
+### Assets
+
+![](/guide/assets-field.png)
+
+### Categories
+
+![](/guide/categories-field.png)
+
+- point out product categories
+
+### Matrix
+
+![](/guide/matrix-add-block.png)
+
+![](/guide/matrix-menu.png)
+
+## Preview
+
+![](/guide/preview.png)
+
+### Preview Targets
+
+![](/guide/preview-targets.png)
+
+### Sharing Previews
+
+![](/guide/sharing-previews.png)
+
+### Drafts and Versioning
+
+![](/guide/drafts-versioning.png)
+
+{% endset %}
+
+{{ content|markdown }}
+
+{% include "guide_template_path/_next" with {
+  label: "Craft Commerce",
+  url: cpUrl('guide/page/commerce')
+} %}

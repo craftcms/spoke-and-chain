@@ -1,0 +1,69 @@
+{% set content %}
+Let’s take a look at the main places you can organize content in Craft CMS. (Much of what’s here is detailed in our starter tutorial’s [Content in Craft CMS](https://craftcms.com/docs/getting-started-tutorial/configure/modeling.html) page.)
+
+## Common Elements
+
+![](/guide/common-elements.png)
+
+### Entries
+
+![](/guide/entries.png)
+
+#### Channels
+
+![](/guide/channels.png)
+
+#### Structures
+
+![](/guide/structures.png)
+
+#### Singles
+
+![](/guide/singles.png)
+
+### Globals
+
+![](/guide/globals.png)
+
+### Categories
+
+![](/guide/categories.png)
+
+### Assets
+
+![](/guide/assets.png)
+
+#### Asset Editor
+
+![](/guide/asset-editor.png)
+
+### Users
+
+![](/guide/users.png)
+
+## Custom Fields
+
+![](/guide/custom-fields.png)
+
+## Finding Things
+
+### Search
+
+![](/guide/search.png)
+
+### Table Customization
+
+![](/guide/table-customization.png)
+
+### Quick Export
+
+![](/guide/quick-export.png)
+
+{% endset %}
+
+{{ content|markdown }}
+
+{% include "guide_template_path/_next" with {
+  label: "Authoring",
+  url: cpUrl('guide/page/authoring')
+} %}
