@@ -2,6 +2,7 @@ DUMPFILE ?= seed.sql
 COMPOSE ?= docker-compose
 EXEC ?= ${COMPOSE} exec -T web
 RUN ?= ${COMPOSE} run --rm web
+WEB_CONTAINER = docker-compose ps -q web
 
 .PHONY: update restore backup seed test
 
@@ -19,6 +20,10 @@ restore:
 	${EXEC} php craft db/restore ${DUMPFILE}
 backup:
 	${EXEC} php craft db/backup ${DUMPFILE} --overwrite --interactive=0
+	docker cp $(shell ${WEB_CONTAINER}):/app/composer.lock ./
+	docker cp $(shell ${WEB_CONTAINER}):/app/seed.sql ./
+	docker cp $(shell ${WEB_CONTAINER}):/app/config/project ./config/
+
 seed:
 	${EXEC} php craft demos/seed
 test: seed
