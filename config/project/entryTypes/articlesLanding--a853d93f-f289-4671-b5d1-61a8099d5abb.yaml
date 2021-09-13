@@ -42,9 +42,9 @@ fieldLayouts:
         name: SEO
         sortOrder: 2
 handle: articlesLanding
-hasTitleField: true
-name: 'Articles Landing'
-section: 706870b0-b231-4710-947c-e3e6bd5c7062 # Articles Landing
+hasTitleField: false
+name: Articles
+section: 706870b0-b231-4710-947c-e3e6bd5c7062 # Articles
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

@@ -1,0 +1,15 @@
+columnSuffix: null
+contentColumnType: string(500)
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
+handle: map
+instructions: ''
+name: Map
+searchable: false
+settings:
+  maxLength: '500'
+  placeholder: ''
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

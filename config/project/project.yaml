@@ -1,4 +1,4 @@
-dateModified: 1631141471
+dateModified: 1630454859
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -19,10 +19,9 @@ meta:
     0f590e76-b015-4dad-b3b6-4bc6e721c244: 'Order Received' # Order Received
     0f952e73-17b8-408c-9c37-3f07a5d16a92: 'Error Pages' # Error Pages
     1e81b434-e226-440b-9bcf-efb22342a5d0: Summary # Summary
-    2a2f0ac5-fb77-412b-8259-4445f3520dae: Shop # Shop
     2af1095c-7195-4f2b-ad59-d4e36ee17dd9: Services # Services
     2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2: Body # Body
-    2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5: 'Landing Pages' # Landing Pages
+    2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5: Pages # Pages
     03b7bc53-c8e9-48e4-8f45-da16de73909b: Material # Material
     3db0de34-4e51-40f0-a195-e3ab0a071dcf: 'Product Categories' # Product Categories
     03f1355e-67b8-457a-b8e9-20cbc34af8c4: Intro # Intro
@@ -41,9 +40,9 @@ meta:
     18ab3594-a62d-4903-9c6c-b791d64fd4ad: Pages # Pages
     21dd60d6-92a7-4e82-8884-7dbe57d73c6c: Account # Account
     27dc92a5-4575-4a37-ad4a-09eed2b40038: Page # Page
+    31a2d43c-7290-4d37-a001-865d49555f73: Address # Address
     32faa6bc-a330-408a-b37a-4e8bde606b43: Reviews # Reviews
     51e3a5d4-240b-447d-88c5-443e30489a59: 'Equipment Type' # Equipment Type
-    54f6a656-b4ef-4d80-86dc-2ed613f64056: 'Business Hours' # Business Hours
     63ae8822-3b4e-4a3d-b902-eba33875c230: Footer # Footer
     68e89100-65f8-4cef-9eee-a07652f3e68a: PDFs # PDFs
     77bd0dab-6333-4b99-8a94-7e6042944ba7: Received # Received
@@ -54,7 +53,7 @@ meta:
     229f9f29-ca35-402b-973b-8fb12d4d68ec: Customers # Customers
     344f5ef7-49f4-463b-854e-14b57001ee32: Color # Color
     449f7b84-6b85-4caa-9b9e-1575953516a8: Settings # Settings
-    506e9a86-f8ca-4f35-bffc-21da95813979: Articles # Articles
+    506e9a86-f8ca-4f35-bffc-21da95813979: 'Article Posts' # Article Posts
     678ed5e4-f5a7-4694-9483-fbc5656b7f95: SEO # SEO
     705abccb-1d21-44fe-a3f7-87530e29cd34: 'Product Images' # Product Images
     708be4d3-74b6-4389-a32f-aebc64f33b0d: Heading # Heading
@@ -77,7 +76,7 @@ meta:
     384841aa-9783-4efd-a81f-0f4aa159ab33: Bikes # Bikes
     520350fa-6eaf-4bc0-9568-687055d5b462: Form # Form
     562224df-c083-4f48-b0b3-7bdcb9bd8df9: Material # Material
-    706870b0-b231-4710-947c-e3e6bd5c7062: 'Articles Landing' # Articles Landing
+    706870b0-b231-4710-947c-e3e6bd5c7062: Articles # Articles
     938640bc-562a-4bde-9ab8-4c0b3489b21f: Login # Login
     03450688-d7c8-4bc8-bd13-fff95a960e2b: Bike # Bike
     45736170-97df-40d3-95b7-41f641c8d3d0: 'Public Schema' # Public Schema
@@ -85,16 +84,18 @@ meta:
     a3bf7c5e-7238-4c5d-bb83-0f4080941958: Dummy # Dummy
     a9d8c265-1ab4-4dc0-8408-7889d17f4e02: 'Order Shipped' # Order Shipped
     a42d1365-22cd-445e-9e10-43dc721bddbe: Button # Button
-    a853d93f-f289-4671-b5d1-61a8099d5abb: 'Articles Landing' # Articles Landing
+    a853d93f-f289-4671-b5d1-61a8099d5abb: Articles # Articles
     a47082e1-a4c7-48c4-b08e-e84d5dae0956: Search # Search
     aa9bb63f-85d8-4935-8f06-939e8b8707ae: Delivered # Delivered
     aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57: 'Bike Types' # Bike Types
     ab1e76a4-82ae-4059-900e-5f9d8df35d49: Articles # Articles
     acc12fef-5130-43fe-97ca-e77013797195: Shipped # Shipped
+    b0c13f72-1314-4872-b963-24bc1c170d1f: Map # Map
+    b0e92218-875e-4e1f-8457-ec090e59278a: 'Opening Times' # Opening Times
     b9cb6112-ebae-420b-bae9-a54c387419f6: 'Footer Nav' # Footer Nav
     b29c63ea-aba1-4ef6-80be-a0096df13673: Cart # Cart
     ba795823-7853-4c7d-8337-136027e1e738: Bikes # Bikes
-    bd167f4d-e985-4aec-b6e4-9ba85fbe69f9: 'Content Blocks' # Content Blocks
+    bd167f4d-e985-4aec-b6e4-9ba85fbe69f9: 'Content Builder' # Content Builder
     be4e2a2f-de59-4443-a08e-476d20bc36d6: Plans # Plans
     c6eb6f01-8c28-440f-afa6-6b7563ae7a47: Success # Success
     c31c5919-08e9-4f36-a47e-1c2c169b993a: 'Error Pages' # Error Pages
@@ -115,7 +116,6 @@ meta:
     e60fd5c1-9f1b-496d-8369-a9daafcc185d: 'Plain Text 2' # Plain Text 2
     e177ffea-3077-40f7-8dda-265effea6592: Form # Form
     e1227ec6-29cc-4c76-8ef1-a091a264b805: 'Product Categories' # Product Categories
-    ea02150d-88e1-46f5-ab32-052940c08072: 'Business Address' # Business Address
     edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf: Subheading # Subheading
     ee205f0d-9016-48b3-8c84-df68b08003cd: 'Entry Link' # Entry Link
     f2df00c0-373c-4c6a-8b92-af04075dd56c: Contact # Contact
@@ -158,14 +158,10 @@ plugins:
       blockedIpAddresses: null
       blockedKeywords: null
       blockedKeywordsError: 'Invalid Entry Data'
-      clientDigestFrequency: 1
-      clientDigestRecipients: null
       customErrorMessage: null
       customHoneypotName: null
       defaultTemplates: true
       defaultView: dashboard
-      digestFrequency: 1
-      digestOnlyOnProduction: false
       digestRecipients: null
       displayFeed: true
       emailTemplateDirectory: null
@@ -173,14 +169,13 @@ plugins:
       fieldDisplayOrder: name
       fillWithGet: false
       footerScripts: false
-      formFieldShowOnlyAllowedForms: false
       formSubmitDisable: false
       formSubmitExpiration: null
       formTemplateDirectory: null
       formattingTemplate: flexbox.html
       freeformHoneypot: true
       freeformHoneypotEnhancement: false
-      hideBannerDemo: true
+      hideBannerDemo: false
       hideBannerOldFreeform: false
       minimumSubmitTime: null
       pluginName: null
@@ -191,13 +186,11 @@ plugins:
       recaptchaEnabled: false
       recaptchaErrorMessage: 'Please verify that you are not a robot.'
       recaptchaKey: null
-      recaptchaLazyLoad: false
       recaptchaMinScore: 0.5
       recaptchaSecret: null
       recaptchaSize: normal
       recaptchaTheme: light
       recaptchaType: v2_checkbox
-      rememberPageSubmitOrder: true
       removeNewlines: false
       renderFormHtmlInCpViews: true
       salesforce_client_id: null
@@ -205,7 +198,6 @@ plugins:
       salesforce_password: null
       salesforce_username: null
       scriptInsertLocation: footer
-      scriptInsertType: pointers
       sessionEntryMaxCount: 50
       sessionEntryTTL: 10800
       showErrorsForBlockedEmails: false
@@ -215,9 +207,6 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
-      twigInHtml: true
-      twigInHtmlIsolatedMode: true
-      updateSearchIndexes: true
   redactor:
     edition: standard
     enabled: true
@@ -274,10 +263,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
-  store-hours:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.2
   twigpack:
     edition: standard
     enabled: true

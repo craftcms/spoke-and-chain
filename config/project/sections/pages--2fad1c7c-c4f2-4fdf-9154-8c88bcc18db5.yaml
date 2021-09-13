@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: pages
-name: 'Landing Pages'
+name: Pages
 previewTargets:
   -
     __assoc__:

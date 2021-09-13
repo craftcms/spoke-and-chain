@@ -1,4 +1,4 @@
-field: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Blocks
+field: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Builder
 fieldLayouts:
   bd5cdfbd-9eb4-42c1-a500-37732ab3f1c7:
     tabs:
@@ -8,7 +8,7 @@ fieldLayouts:
             fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Products
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -21,7 +21,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: products
-    instructions: 'Select up to three products to promote.'
+    instructions: ''
     name: Products
     searchable: false
     settings:

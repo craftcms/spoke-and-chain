@@ -1,13 +1,13 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
-handle: footerNav
+handle: contentBuilder
 instructions: ''
-name: 'Footer Nav'
+name: 'Content Builder'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_footernav}}'
-  maxBlocks: '4'
+  contentTable: '{{%matrixcontent_contentbuilder}}'
+  maxBlocks: ''
   minBlocks: ''
   propagationKeyFormat: null
   propagationMethod: all

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fe103a57776950f23ea5109faed34d0",
+    "content-hash": "bf77491eb84ba00b3d4a1495fbc9bf0d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.192.1",
+            "version": "3.193.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "60b618429c040b4a1f567cf9ee56b3d2d14fe54b"
+                "reference": "d5080f7a1bb63569c19b8de06f787808eca70cc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/60b618429c040b4a1f567cf9ee56b3d2d14fe54b",
-                "reference": "60b618429c040b4a1f567cf9ee56b3d2d14fe54b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d5080f7a1bb63569c19b8de06f787808eca70cc6",
+                "reference": "d5080f7a1bb63569c19b8de06f787808eca70cc6",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.192.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.193.2"
             },
-            "time": "2021-09-07T18:32:31+00:00"
+            "time": "2021-09-10T18:21:27+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -737,16 +737,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.11",
+            "version": "3.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "97447d4bedc9151052ec0d080672905584b0b6e1"
+                "reference": "5ef08e43edd54898ffab729170a4abcc605f1c54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/97447d4bedc9151052ec0d080672905584b0b6e1",
-                "reference": "97447d4bedc9151052ec0d080672905584b0b6e1",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/5ef08e43edd54898ffab729170a4abcc605f1c54",
+                "reference": "5ef08e43edd54898ffab729170a4abcc605f1c54",
                 "shasum": ""
             },
             "require": {
@@ -842,7 +842,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-08-31T17:01:50+00:00"
+            "time": "2021-09-08T17:55:28+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1116,65 +1116,6 @@
                 "source": "https://github.com/craftcms/server-check"
             },
             "time": "2021-08-18T14:46:23+00:00"
-        },
-        {
-            "name": "craftcms/store-hours",
-            "version": "2.1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/craftcms/store-hours.git",
-                "reference": "820671b90b3de8824edf2ccbe5493fd0216623c8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/820671b90b3de8824edf2ccbe5493fd0216623c8",
-                "reference": "820671b90b3de8824edf2ccbe5493fd0216623c8",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-beta.20"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Store Hours",
-                "handle": "store-hours",
-                "schemaVersion": "1.0.2",
-                "changelogUrl": "https://raw.githubusercontent.com/craftcms/store-hours/v2/CHANGELOG.md",
-                "downloadUrl": "https://github.com/craftcms/store-hours/archive/v2.zip"
-            },
-            "autoload": {
-                "psr-4": {
-                    "craft\\storehours\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel & Tonic",
-                    "homepage": "https://pixelandtonic.com/"
-                }
-            ],
-            "description": "This plugin adds a new “Store Hours” field type to Craft, for collecting the opening and closing hours of a business for each day of the week.",
-            "keywords": [
-                "cms",
-                "craftcms",
-                "hours",
-                "html",
-                "json",
-                "store",
-                "yii2"
-            ],
-            "support": {
-                "docs": "https://github.com/craftcms/store-hours",
-                "email": "support@craftcms.com",
-                "issues": "https://github.com/craftcms/store-hours/issues?state=open",
-                "rss": "https://github.com/craftcms/store-hours/commits/v2.atom",
-                "source": "https://github.com/craftcms/store-hours"
-            },
-            "time": "2018-11-02T01:31:39+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -3567,16 +3508,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.4.6",
+            "version": "3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "bc43327cbf16bf138ce19151e410bd665d4b2f2b"
+                "reference": "0924cccc70c34f4401a227be16a92a89d3f2744a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/bc43327cbf16bf138ce19151e410bd665d4b2f2b",
-                "reference": "bc43327cbf16bf138ce19151e410bd665d4b2f2b",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/0924cccc70c34f4401a227be16a92a89d3f2744a",
+                "reference": "0924cccc70c34f4401a227be16a92a89d3f2744a",
                 "shasum": ""
             },
             "require": {
@@ -3630,7 +3571,7 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.6"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.8"
             },
             "funding": [
                 {
@@ -3638,7 +3579,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-30T19:18:23+00:00"
+            "time": "2021-09-09T19:26:47+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -8117,62 +8058,6 @@
             "time": "2019-12-13T02:57:54+00:00"
         },
         {
-            "name": "wbrowar/guide",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wbrowar/craft-guide.git",
-                "reference": "915e812d815b78bc7dcd30bffaebf7eb4a0b5a02"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wbrowar/craft-guide/zipball/915e812d815b78bc7dcd30bffaebf7eb4a0b5a02",
-                "reference": "915e812d815b78bc7dcd30bffaebf7eb4a0b5a02",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.5.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Guide",
-                "handle": "guide",
-                "hasCpSettings": true,
-                "hasCpSection": true,
-                "changelogUrl": "https://raw.githubusercontent.com/wbrowar/craft-guide/master/CHANGELOG.md",
-                "class": "wbrowar\\guide\\Guide"
-            },
-            "autoload": {
-                "psr-4": {
-                    "wbrowar\\guide\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Will Browar",
-                    "homepage": "https://wbrowar.com"
-                }
-            ],
-            "description": "A CMS Guide for Craft CMS.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "guide"
-            ],
-            "support": {
-                "docs": "https://github.com/wbrowar/craft-guide/blob/master/README.md",
-                "issues": "https://github.com/wbrowar/craft-guide/issues",
-                "source": "https://github.com/wbrowar/craft-guide/tree/2.2.1"
-            },
-            "time": "2020-10-31T15:06:20+00:00"
-        },
-        {
             "name": "webmozart/assert",
             "version": "1.10.0",
             "source": {
@@ -9103,5 +8988,5 @@
     "platform-overrides": {
         "php": "8.0"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
