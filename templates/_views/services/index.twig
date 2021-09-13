@@ -23,7 +23,7 @@
 
   {% if plans|length %}
     <div class="container pt-8 relative">
-      {{ sprig('_includes/components/services/plans', {} ,{ id: 'services-plans' }) }}
+      {{ sprig('_includes/components/services/plans', {}, { id: 'services-plans' }) }}
       <div id="plans-indicator" class="spinner-overlay">
         {% include '_includes/components/spinner' %}
       </div>
