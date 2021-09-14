@@ -15,41 +15,50 @@
       <div class="overflow-x-auto">
         <table class="mt-4 min-w-full w-full text-sm border-t border-gray-100 border-solid">
           <thead>
-          <tr>
-            <th class="px-2 py-4 whitespace-nowrap">{{ 'Plan'|t }}</th>
-            <th class="px-2 py-4 whitespace-nowrap">{{ 'Status'|t }}</th>
-            <th class="px-2 py-4 whitespace-nowrap">{{ 'Next Payment'|t }}</th>
-            <th class="px-2 py-4 whitespace-nowrap">{{ 'End Date'|t }}</th>
-          </tr>
+            <tr>
+              <th class="px-2 py-4 text-left whitespace-nowrap">{{ 'Plan'|t }}</th>
+              <th class="px-2 py-4 text-left whitespace-nowrap">{{ 'Status'|t }}</th>
+              <th class="px-2 py-4 text-left whitespace-nowrap">{{ 'Next Payment'|t }}</th>
+              <th class="px-2 py-4 text-left whitespace-nowrap">{{ 'End Date'|t }}</th>
+            </tr>
           </thead>
           <tbody>
-          {% for subscription in subscriptionHistory %}
-            {% set bgClass = cycle(['bg-gray-100', ''], loop.index0) %}
-            <tr {{ attr({ class: bgClass }) }}>
-              <td class="px-2 py-4 whitespace-nowrap">{{ subscription.plan.name }}</td>
-              <td class="px-2 py-4 whitespace-nowrap">
-                {% if subscription.isCanceled %}
-                  {{ 'Cancelled'|t }}
-                {% elseif subscription.isExpired %}
-                  {{ 'Expired'|t }}
-                {% else %}
-                  {{ 'Active'|t }}
-                {% endif %}
-              </td>
-              <td class="px-2 py-4 whitespace-nowrap">
-                {% if not subscription.isExpired and not subscription.isCanceled %}
-                  {{ '{payment} on {date}'|t('site', { payment: subscription.getNextPaymentAmount(), date: subscription.nextPaymentDate|date('Y-m-d') }) }}
-                {% endif %}
-              </td>
-              <td class="px-2 py-4 whitespace-nowrap">
-                {% if subscription.isExpired %}
-                  Expired on: {{ subscription.dateExpired|date('Y-m-d') }}
-                {% elseif subscription.isCanceled %}
-                  Cancelled on: {{ subscription.dateCanceled|date('Y-m-d') }}<br>Expires on: {{ subscription.nextPaymentDate|date('Y-m-d') }}
-                {% endif %}
-              </td>
-            </tr>
-          {% endfor %}
+            {% for subscription in subscriptionHistory %}
+              {% set bgClass = cycle(['bg-gray-100', ''], loop.index0) %}
+              <tr {{ attr({ class: bgClass }) }}>
+                <td class="px-2 py-4 whitespace-nowrap">{{ subscription.plan.name }}</td>
+                <td class="px-2 py-4 whitespace-nowrap">
+                  {% if subscription.isCanceled %}
+                    {{ 'Cancelled'|t }}
+                  {% elseif subscription.isExpired %}
+                    {{ 'Expired'|t }}
+                  {% else %}
+                    {{ 'Active'|t }}
+                  {% endif %}
+                </td>
+                <td class="px-2 py-4 whitespace-nowrap">
+                  {% if not subscription.isExpired and not subscription.isCanceled %}
+                    {% set nextAmount = subscription.getNextPaymentAmount() %}
+                    {% if nextAmount != '-' %}
+                      {{ '{payment} on {date}'|t('site', {
+                        payment: nextAmount,
+                        date: subscription.nextPaymentDate|date('Y-m-d')
+                      }) }}
+                    {% else %}
+                      {{ subscription.nextPaymentDate|date('Y-m-d') }}
+                    {% endif %}
+                  {% endif %}
+                </td>
+                <td class="px-2 py-4 whitespace-nowrap">
+                  {% if subscription.isExpired %}
+                    {{ 'Expired on'|t }}: {{ subscription.dateExpired|date('Y-m-d') }}
+                  {% elseif subscription.isCanceled %}
+                    {{ 'Cancelled on'|t }}: {{ subscription.dateCanceled|date('Y-m-d') -}}
+                    <br>{{ 'Expires on'|t }}: {{ subscription.nextPaymentDate|date('Y-m-d') }}
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>
