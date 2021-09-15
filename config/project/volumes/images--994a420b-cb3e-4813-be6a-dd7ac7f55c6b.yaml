@@ -26,6 +26,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\AssetTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 9b41a7f2-dc44-4ede-8931-b8f5895093f7 # Image Alt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba0c0b5b-813d-4075-acec-9700550b80ae # Image Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 handle: images
@@ -35,6 +53,6 @@ settings:
   path: '@webroot/assets/images'
 sortOrder: 1
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: null
 type: craft\volumes\Local
 url: '@web/assets/images'

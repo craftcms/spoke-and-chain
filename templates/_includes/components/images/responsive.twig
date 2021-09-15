@@ -10,8 +10,12 @@
 {% set transform = transform is not defined ? null : transform %}
 {# image: asset element #}
 {% set image = image is not defined ? null : image %}
+
+{# prep image alt text #}
+{% set imageAlt = image.imageAlt ?? image.title ?? null %}
+
 {# showAlt: boolean - whether or not to output the alt attribute #}
-{% set showAlt = showAlt is not defined ? true : showAlt %}
+{% set showAlt = showAlt ?? true %}
 
 {# Apply the transform if we have it #}
 {% if transform and image %}{% do image.setTransform(transform) %}{% endif %}
@@ -19,7 +23,7 @@
 {# Variables #}
 {% set tagOptions = image ? {
   src: image.url,
-  alt: showAlt ? image.title : null,
+  alt: showAlt ? imageAlt : null,
 } : null %}
 {% set tagOptions = tagOptions|merge({ width: image.width, height: image.height }) %}
 {% set tagOptions = class ? tagOptions|merge({ class: class }) : tagOptions %}
