@@ -26,25 +26,53 @@ Channels are what you’ve probably seen in any CMS: dated posts that follow a c
 
 ![](/guide/structures.png)
 
+Structures are like Channels with one key difference: instead of a flat, date-centric list, you can drag and drop structure entries into whatever order you’d like.
+
+If you’ve ever used a CMS where you’ve had to edit a bunch of individual post dates to get things to appear in a specific order on the site, this is exactly what you’d use a structure for instead. You set the explicit order things should appear in by dragging them into place.
+
 #### Singles
 
 ![](/guide/singles.png)
+
+Singles are great for one-off pages, where you know there will only ever be one. They’re a special single-entry section type, used here for pages like home, about, contact, and landings for articles and services.
 
 ### Globals
 
 ![](/guide/globals.png)
 
+[Globals]({{ cpUrl('globals') }}) are for content that may not be specific to any one entry, but used across multiple pages or throughout the site. Click **Globals** in the main navigation and you’ll see three sets of fields labeled “Shop,” “Bikes,” and “Footer.”
+
+This is where you can edit things like the store hours and address, the site-wide bike geometry diagram, and footer navigation and copyright info.
+
 ### Categories
 
 ![](/guide/categories.png)
+
+[Categories]({{ cpUrl('categories') }}) are hierarchical taxonomies you can establish to organize content. Click **Categories** in the main navigation and you’ll see four groups of categories used for products: “Bike Types,” “Colors,,” “Equipment Types,” and “Material.”
+
+Each category has a handle you can grab to drag it into a different position. These categories are all configured to exist in a single, flat listing—but each could allow however many levels of nesting required by the site’s content model.
 
 ### Assets
 
 ![](/guide/assets.png)
 
+[Assets]({{ cpUrl('assets') }}) are files users can upload to Craft. Click **Assets** in the main navigation and you’ll see the single “Images” asset volume.
+
+An asset volume is like a folder with a fixed name you’d establish when first setting it up. You can right-click a volume to create subfolders within it, and upload files either pressing the **Upload files** button or dragging and dropping them directly into the file listing.
+
+An important part for developers is that each asset volume can use its own storage type: a local folder, Amazon S3, Digital Ocean Spaces, Azure Blob Storage, etc. Craft has a number of storage drivers, but content editors don’t need to know or care about the underlying infrastructure.
+
 #### Asset Editor
 
 ![](/guide/asset-editor.png)
+
+Click any image file. You’ll see a detail view that includes custom **Image Alt** and **Image Caption** fields, along with the uploader and other details. Hover over the image and click the **Edit** button at the top right of the image preview.
+
+This will launch the asset editor, where you can perform basic image manipulation and set a focal point.
+
+The focal point selector is important for art direction because it allows the content author to designate an important area of the image. Developers can build templates or make GraphQL requests for different image sizes, and Craft will automatically crop and size those images taking the focal point into consideration. This means you shouldn’t have to upload more than one variation of an image, which can be time-saving publishing new content and vital if a site’s design changes and requires new image dimensions.
+
+You can double-click an asset preview anywhere in Craft CMS to jump to the editor, and any edits or changes you make to that asset will be used throughout your site.
 
 ### Users
 
