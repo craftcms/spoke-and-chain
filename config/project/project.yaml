@@ -1,4 +1,4 @@
-dateModified: 1631740846
+dateModified: 1631832329
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -35,6 +35,7 @@ meta:
     06e900c5-0757-485f-bda2-2875772bbe25: Colors # Colors
     7bdf6844-d551-446c-97b6-12a24f5348e8: Checkout # Checkout
     7f531774-b9c9-4fde-8708-762f09ef7191: 'Category Link' # Category Link
+    8b2b60fd-6045-4696-b08e-6c601ac1245f: 'Content Managers' # Content Managers
     9b4d8a8b-c63e-4039-a35d-4ab24561f00b: Pages # Pages
     9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1: Contact # Contact
     9b41a7f2-dc44-4ede-8931-b8f5895093f7: 'Image Alt' # Image Alt
@@ -112,6 +113,7 @@ meta:
     dcef5c5f-2446-44fa-8898-1bc3daa2d2fd: 'Equipment Types' # Equipment Types
     dd4a6a83-ea8a-4ad5-abca-4a2d8ae87373: Address # Address
     e7ec0fe3-e0bc-474d-837d-3159984e36f3: SEO # SEO
+    e9aeb271-1582-40b5-b7c8-dc4bed8d7bfe: 'Store Managers' # Store Managers
     e9eeb095-1668-49fe-99a2-36721c1bdbec: Icon # Icon
     e43faa4d-d8c4-4527-a298-2d64a1c9061b: Products # Products
     e60fd5c1-9f1b-496d-8369-a9daafcc185d: 'Plain Text 2' # Plain Text 2
