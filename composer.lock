@@ -3570,16 +3570,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.4.8",
+            "version": "3.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "0924cccc70c34f4401a227be16a92a89d3f2744a"
+                "reference": "21fd6077413ce82fcd0971a7524e027a7bb51e73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/0924cccc70c34f4401a227be16a92a89d3f2744a",
-                "reference": "0924cccc70c34f4401a227be16a92a89d3f2744a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/21fd6077413ce82fcd0971a7524e027a7bb51e73",
+                "reference": "21fd6077413ce82fcd0971a7524e027a7bb51e73",
                 "shasum": ""
             },
             "require": {
@@ -3633,7 +3633,7 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.8"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.10"
             },
             "funding": [
                 {
@@ -3641,7 +3641,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-09T19:26:47+00:00"
+            "time": "2021-09-16T03:00:40+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -5159,16 +5159,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.11.10",
+            "version": "3.11.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "09335eb68e73019ecc1982e2f35d61f098169eaf"
+                "reference": "8e7579acfbab3a30d51dc0d9f828b51e2fd0563e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/09335eb68e73019ecc1982e2f35d61f098169eaf",
-                "reference": "09335eb68e73019ecc1982e2f35d61f098169eaf",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/8e7579acfbab3a30d51dc0d9f828b51e2fd0563e",
+                "reference": "8e7579acfbab3a30d51dc0d9f828b51e2fd0563e",
                 "shasum": ""
             },
             "require": {
@@ -5232,9 +5232,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.11.10"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.11.11"
             },
-            "time": "2021-07-22T16:11:57+00:00"
+            "time": "2021-09-15T15:58:12+00:00"
         },
         {
             "name": "solspace/craft3-commons",
@@ -5272,16 +5272,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.95.0",
+            "version": "v7.96.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "ed372a1f6430b06dda408bb33b27d2be35ceaf07"
+                "reference": "0630fbf3991a8126a747c7bc173e5d3c0dc23b9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/ed372a1f6430b06dda408bb33b27d2be35ceaf07",
-                "reference": "ed372a1f6430b06dda408bb33b27d2be35ceaf07",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/0630fbf3991a8126a747c7bc173e5d3c0dc23b9f",
+                "reference": "0630fbf3991a8126a747c7bc173e5d3c0dc23b9f",
                 "shasum": ""
             },
             "require": {
@@ -5327,9 +5327,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.95.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.96.0"
             },
-            "time": "2021-09-02T02:30:40+00:00"
+            "time": "2021-09-15T22:23:38+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
