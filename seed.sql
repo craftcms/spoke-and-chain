@@ -654,7 +654,7 @@ CREATE TABLE `commerce_discount_usergroups` (
   KEY `commerce_discount_usergroups_userGroupId_idx` (`userGroupId`),
   CONSTRAINT `commerce_discount_usergroups_discountId_fk` FOREIGN KEY (`discountId`) REFERENCES `commerce_discounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `commerce_discount_usergroups_userGroupId_fk` FOREIGN KEY (`userGroupId`) REFERENCES `usergroups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -663,6 +663,7 @@ CREATE TABLE `commerce_discount_usergroups` (
 
 LOCK TABLES `commerce_discount_usergroups` WRITE;
 /*!40000 ALTER TABLE `commerce_discount_usergroups` DISABLE KEYS */;
+INSERT INTO `commerce_discount_usergroups` VALUES (1,2,4,'2021-09-17 22:45:10','2021-09-17 22:45:10','2ef999a6-86ef-4afb-b6db-b675475fc646');
 /*!40000 ALTER TABLE `commerce_discount_usergroups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -712,7 +713,7 @@ CREATE TABLE `commerce_discounts` (
   UNIQUE KEY `commerce_discounts_code_unq_idx` (`code`),
   KEY `commerce_discounts_dateFrom_idx` (`dateFrom`),
   KEY `commerce_discounts_dateTo_idx` (`dateTo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -721,7 +722,7 @@ CREATE TABLE `commerce_discounts` (
 
 LOCK TABLES `commerce_discounts` WRITE;
 /*!40000 ALTER TABLE `commerce_discounts` DISABLE KEYS */;
-INSERT INTO `commerce_discounts` VALUES (1,'15OFF','15% discount','15OFF',0,0,0,0,NULL,NULL,0.0000,0,0,0.0000,'value',0.0000,-0.1500,'discounted',0,0,0,1,1,'matchingLineItems','element','',1,0,1,999,'2021-02-02 02:59:03','2021-07-13 15:22:25','95e6caca-4b96-4baf-908d-5531991ac993','userGroupsAnyOrNone');
+INSERT INTO `commerce_discounts` VALUES (1,'15OFF','15% discount','15OFF',0,0,0,0,NULL,NULL,0.0000,0,0,0.0000,'value',0.0000,-0.1500,'discounted',0,0,0,1,1,'matchingLineItems','element','',1,0,1,999,'2021-02-02 02:59:03','2021-07-13 15:22:25','95e6caca-4b96-4baf-908d-5531991ac993','userGroupsAnyOrNone'),(2,'VIP25','25% discount for VIPs','VIP25',0,0,0,0,NULL,NULL,0.0000,0,0,0.0000,'value',0.0000,-0.2500,'discounted',0,0,0,1,1,'matchingLineItems','element','',1,0,1,999,'2021-09-17 22:41:10','2021-09-17 22:45:10','4a8a478b-1fd0-4fdc-b076-8ebfb42631c9','userGroupsIncludeAll');
 /*!40000 ALTER TABLE `commerce_discounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3147,7 +3148,7 @@ CREATE TABLE `freeform_lock` (
   PRIMARY KEY (`id`),
   KEY `freeform_lock_key_dateCreated_idx` (`key`,`dateCreated`),
   KEY `idx_kzigjhuveejqzogzboaqonqxjgqjwasyvnmy` (`dateCreated`)
-) ENGINE=InnoDB AUTO_INCREMENT=8839 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8841 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3156,7 +3157,7 @@ CREATE TABLE `freeform_lock` (
 
 LOCK TABLES `freeform_lock` WRITE;
 /*!40000 ALTER TABLE `freeform_lock` DISABLE KEYS */;
-INSERT INTO `freeform_lock` VALUES (8824,'freeform-purge-cache-key','2021-09-14 15:44:12','2021-09-14 15:44:12','edae9ee1-37d0-4992-8996-c52831d019f1'),(8825,'freeform-feed-cache-key','2021-09-14 15:44:13','2021-09-14 15:44:13','33765b18-c9b9-455c-97e5-0be1a7f43e38'),(8826,'freeform-digest-cache-key','2021-09-14 15:44:14','2021-09-14 15:44:14','8e7ac932-63d9-4000-94c2-2e651f4fd569'),(8827,'freeform-purge-cache-key','2021-09-15 21:17:30','2021-09-15 21:17:30','0ba22a3f-e4f5-4acd-a12d-ad99e66898d5'),(8828,'freeform-feed-cache-key','2021-09-15 21:17:30','2021-09-15 21:17:30','ef219a4c-421e-4548-b5b3-9b6d4a9993b8'),(8829,'freeform-digest-cache-key','2021-09-15 21:17:31','2021-09-15 21:17:31','7186e16b-c649-4f61-b724-4ad069b8bd77'),(8830,'freeform-purge-cache-key','2021-09-16 21:35:40','2021-09-16 21:35:40','28fda254-5886-4377-834e-6a7b1663cd1d'),(8831,'freeform-feed-cache-key','2021-09-16 21:35:41','2021-09-16 21:35:41','5d30e928-9768-483a-a36a-0bbb8710cdf6'),(8832,'freeform-digest-cache-key','2021-09-16 21:35:41','2021-09-16 21:35:41','3145eeda-e126-43ed-a7be-ea6c0d4d599a'),(8833,'freeform-purge-cache-key','2021-09-16 22:40:42','2021-09-16 22:40:42','65d4fe99-66b7-4cfa-bbef-c238dc2ea659'),(8834,'freeform-purge-cache-key','2021-09-17 18:18:10','2021-09-17 18:18:10','9e1ccbf7-3cfe-4cbc-8cb2-6d6dc26b4a92'),(8835,'freeform-feed-cache-key','2021-09-17 18:18:12','2021-09-17 18:18:12','436e7ea4-a334-4418-ae8b-30a592ef80c1'),(8836,'freeform-digest-cache-key','2021-09-17 18:18:13','2021-09-17 18:18:13','847b53a4-b390-4a2f-bf5d-eebd39c6f346'),(8837,'freeform-purge-cache-key','2021-09-17 19:18:40','2021-09-17 19:18:40','c3619af8-c4b8-41cc-a7d2-f1adece9a96c'),(8838,'freeform-purge-cache-key','2021-09-17 20:19:26','2021-09-17 20:19:26','320370ec-17fa-4cab-b239-4975c8c65f0f');
+INSERT INTO `freeform_lock` VALUES (8824,'freeform-purge-cache-key','2021-09-14 15:44:12','2021-09-14 15:44:12','edae9ee1-37d0-4992-8996-c52831d019f1'),(8825,'freeform-feed-cache-key','2021-09-14 15:44:13','2021-09-14 15:44:13','33765b18-c9b9-455c-97e5-0be1a7f43e38'),(8826,'freeform-digest-cache-key','2021-09-14 15:44:14','2021-09-14 15:44:14','8e7ac932-63d9-4000-94c2-2e651f4fd569'),(8827,'freeform-purge-cache-key','2021-09-15 21:17:30','2021-09-15 21:17:30','0ba22a3f-e4f5-4acd-a12d-ad99e66898d5'),(8828,'freeform-feed-cache-key','2021-09-15 21:17:30','2021-09-15 21:17:30','ef219a4c-421e-4548-b5b3-9b6d4a9993b8'),(8829,'freeform-digest-cache-key','2021-09-15 21:17:31','2021-09-15 21:17:31','7186e16b-c649-4f61-b724-4ad069b8bd77'),(8830,'freeform-purge-cache-key','2021-09-16 21:35:40','2021-09-16 21:35:40','28fda254-5886-4377-834e-6a7b1663cd1d'),(8831,'freeform-feed-cache-key','2021-09-16 21:35:41','2021-09-16 21:35:41','5d30e928-9768-483a-a36a-0bbb8710cdf6'),(8832,'freeform-digest-cache-key','2021-09-16 21:35:41','2021-09-16 21:35:41','3145eeda-e126-43ed-a7be-ea6c0d4d599a'),(8833,'freeform-purge-cache-key','2021-09-16 22:40:42','2021-09-16 22:40:42','65d4fe99-66b7-4cfa-bbef-c238dc2ea659'),(8834,'freeform-purge-cache-key','2021-09-17 18:18:10','2021-09-17 18:18:10','9e1ccbf7-3cfe-4cbc-8cb2-6d6dc26b4a92'),(8835,'freeform-feed-cache-key','2021-09-17 18:18:12','2021-09-17 18:18:12','436e7ea4-a334-4418-ae8b-30a592ef80c1'),(8836,'freeform-digest-cache-key','2021-09-17 18:18:13','2021-09-17 18:18:13','847b53a4-b390-4a2f-bf5d-eebd39c6f346'),(8837,'freeform-purge-cache-key','2021-09-17 19:18:40','2021-09-17 19:18:40','c3619af8-c4b8-41cc-a7d2-f1adece9a96c'),(8838,'freeform-purge-cache-key','2021-09-17 20:19:26','2021-09-17 20:19:26','320370ec-17fa-4cab-b239-4975c8c65f0f'),(8839,'freeform-purge-cache-key','2021-09-17 22:39:46','2021-09-17 22:39:46','08412acb-b06c-4c62-9e20-af91def7d78d'),(8840,'freeform-digest-cache-key','2021-09-17 22:39:47','2021-09-17 22:39:47','5f515fb2-4ed7-4ec6-8028-61d97b977154');
 /*!40000 ALTER TABLE `freeform_lock` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4170,7 +4171,7 @@ CREATE TABLE `queue` (
   PRIMARY KEY (`id`),
   KEY `queue_channel_fail_timeUpdated_timePushed_idx` (`channel`,`fail`,`timeUpdated`,`timePushed`),
   KEY `queue_channel_fail_timeUpdated_delay_idx` (`channel`,`fail`,`timeUpdated`,`delay`)
-) ENGINE=InnoDB AUTO_INCREMENT=8519 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8520 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4481,7 +4482,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES (248,1,'aFZuQctJmUpttgc9PXwm3o1wLRS5XL1i4eRKCR-lz8Epm1jMQQNEonEWQc1oZekzzBMIfK9p4j0njP_btdunguWH9dZhBKl3JE4n','2021-09-16 21:35:49','2021-09-16 22:57:10','84d9c2d3-84a9-45f4-9215-735429462781'),(249,1,'OMkdSdmK6b_-kleUjAJqZDnZUlxOwiqd-_m3PuFTI-lGseuUpp8oeyQtvbS7g2-hi_nhMDHfpzLG5T7IDVOE5Q12fvsukYnCAQBX','2021-09-17 18:18:18','2021-09-17 21:07:57','9e53b2e0-3835-4761-ba13-d16c590b4ff1');
+INSERT INTO `sessions` VALUES (248,1,'aFZuQctJmUpttgc9PXwm3o1wLRS5XL1i4eRKCR-lz8Epm1jMQQNEonEWQc1oZekzzBMIfK9p4j0njP_btdunguWH9dZhBKl3JE4n','2021-09-16 21:35:49','2021-09-16 22:57:10','84d9c2d3-84a9-45f4-9215-735429462781'),(249,1,'OMkdSdmK6b_-kleUjAJqZDnZUlxOwiqd-_m3PuFTI-lGseuUpp8oeyQtvbS7g2-hi_nhMDHfpzLG5T7IDVOE5Q12fvsukYnCAQBX','2021-09-17 18:18:18','2021-09-17 22:45:26','9e53b2e0-3835-4761-ba13-d16c590b4ff1');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5251,4 +5252,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-17 21:08:05
+-- Dump completed on 2021-09-17 22:45:31
