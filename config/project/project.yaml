@@ -1,4 +1,4 @@
-dateModified: 1631141471
+dateModified: 1631832329
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -35,8 +35,10 @@ meta:
     06e900c5-0757-485f-bda2-2875772bbe25: Colors # Colors
     7bdf6844-d551-446c-97b6-12a24f5348e8: Checkout # Checkout
     7f531774-b9c9-4fde-8708-762f09ef7191: 'Category Link' # Category Link
+    8b2b60fd-6045-4696-b08e-6c601ac1245f: 'Content Managers' # Content Managers
     9b4d8a8b-c63e-4039-a35d-4ab24561f00b: Pages # Pages
     9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1: Contact # Contact
+    9b41a7f2-dc44-4ede-8931-b8f5895093f7: 'Image Alt' # Image Alt
     17eacd1a-f88d-4127-b328-9b69903624fc: Orders # Orders
     18ab3594-a62d-4903-9c6c-b791d64fd4ad: Pages # Pages
     21dd60d6-92a7-4e82-8884-7dbe57d73c6c: Account # Account
@@ -93,6 +95,7 @@ meta:
     acc12fef-5130-43fe-97ca-e77013797195: Shipped # Shipped
     b9cb6112-ebae-420b-bae9-a54c387419f6: 'Footer Nav' # Footer Nav
     b29c63ea-aba1-4ef6-80be-a0096df13673: Cart # Cart
+    ba0c0b5b-813d-4075-acec-9700550b80ae: 'Image Caption' # Image Caption
     ba795823-7853-4c7d-8337-136027e1e738: Bikes # Bikes
     bd167f4d-e985-4aec-b6e4-9ba85fbe69f9: 'Content Blocks' # Content Blocks
     be4e2a2f-de59-4443-a08e-476d20bc36d6: Plans # Plans
@@ -110,6 +113,7 @@ meta:
     dcef5c5f-2446-44fa-8898-1bc3daa2d2fd: 'Equipment Types' # Equipment Types
     dd4a6a83-ea8a-4ad5-abca-4a2d8ae87373: Address # Address
     e7ec0fe3-e0bc-474d-837d-3159984e36f3: SEO # SEO
+    e9aeb271-1582-40b5-b7c8-dc4bed8d7bfe: 'Store Managers' # Store Managers
     e9eeb095-1668-49fe-99a2-36721c1bdbec: Icon # Icon
     e43faa4d-d8c4-4527-a298-2d64a1c9061b: Products # Products
     e60fd5c1-9f1b-496d-8369-a9daafcc185d: 'Plain Text 2' # Plain Text 2
