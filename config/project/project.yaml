@@ -1,4 +1,4 @@
-dateModified: 1631832329
+dateModified: 1631912121
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -50,6 +50,7 @@ meta:
     68e89100-65f8-4cef-9eee-a07652f3e68a: PDFs # PDFs
     77bd0dab-6333-4b99-8a94-7e6042944ba7: Received # Received
     86ec2b26-5d53-4798-8fb0-927890e52039: Body # Body
+    89d30b8d-7f71-4571-bfd3-572a14dc6538: 'VIP Customers' # VIP Customers
     97a0491d-814e-4172-811d-51096a86e67d: Plans # Plans
     144eafb4-8a07-46d0-a4b2-e85237275206: 'Plan Features' # Plan Features
     220feec1-8cc9-4f3e-82da-73c748d0ae0b: PDFs # PDFs

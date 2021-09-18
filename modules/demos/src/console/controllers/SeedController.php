@@ -80,6 +80,21 @@ class SeedController extends Controller
     public const USERS_MIN = 20;
 
     /**
+     * Percentage of customers to give VIP status.
+     */
+    public const VIP_CUSTOMER_PERCENT = 10;
+
+    /**
+     * Group handle for “Customers”.
+     */
+    public const CUSTOMER_GROUP_HANDLE = 'customers';
+
+    /**
+     * Group handle for “VIP Customers”.
+     */
+    public const VIP_CUSTOMER_GROUP_HANDLE = 'vipCustomers';
+
+    /**
      * Minimum number of reviews per product.
      */
     public const REVIEWS_PER_PRODUCT_MIN = 0;
@@ -131,10 +146,14 @@ class SeedController extends Controller
     {
         parent::init();
 
-        // Don't let order status emails send while this is running
-        Event::on(Emails::class, Emails::EVENT_BEFORE_SEND_MAIL, function (MailEvent $event) {
-            $event->isValid = false;
-        });
+        // Don’t let order status emails send while this is running
+        Event::on(
+            Emails::class,
+            Emails::EVENT_BEFORE_SEND_MAIL,
+            function (MailEvent $event) {
+                $event->isValid = false;
+            }
+        );
 
         $startDate = new DateTime();
         $interval = new DateInterval(self::START_DATE_INTERVAL);
@@ -300,16 +319,32 @@ class SeedController extends Controller
      */
     private function _createUsers()
     {
+        $customerGroup = Craft::$app->getUserGroups()->getGroupByHandle(self::CUSTOMER_GROUP_HANDLE);
+        $vipCustomerGroup = Craft::$app->getUserGroups()->getGroupByHandle(self::VIP_CUSTOMER_GROUP_HANDLE);
+
         $this->stdout('Creating users ... ' . PHP_EOL);
         $numUsers = random_int(self::USERS_MIN, self::USERS_MAX);
         for ($i = 1; $i <= $numUsers; $i++) {
             $firstName = $this->_faker->firstName();
             $lastName = $this->_faker->lastName;
             $email = $this->_faker->unique()->email;
+            // Assign everybody to “Customers” group
+            $groups = [$customerGroup];
+
+            // Should we also add this user to the “VIP Customers” group?
+            if ($vipCustomerGroup && $i <= (ceil($numUsers * (self::VIP_CUSTOMER_PERCENT / 100)))) {
+                $groups[] = $vipCustomerGroup;
+            }
+
+            $groupIds = array_map(static function($group) {
+                return $group->id;
+            }, $groups);
 
             $attributes = [
                 'email' => $email,
                 'username' => $email,
+                'firstName' => $firstName,
+                'lastName' => $lastName,
                 'fullName' => $firstName . ' ' . $lastName,
             ];
             $this->stdout("    - [{$i}/{$numUsers}] Creating user " . $attributes['fullName'] . ' ... ');
@@ -324,6 +359,9 @@ class SeedController extends Controller
                 // If a user cannot be saved, simply skip over it and carry on.
                 continue;
             }
+
+            $user->setGroups($groups);
+            Craft::$app->getUsers()->assignUserToGroups($user->id, $groupIds);
 
             $customer = Plugin::getInstance()->getCustomers()->getCustomerByUserId($user->id);
             $attributes['customerId'] = $customer->id;
