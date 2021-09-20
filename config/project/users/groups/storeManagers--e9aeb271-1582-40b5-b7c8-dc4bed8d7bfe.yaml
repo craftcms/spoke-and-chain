@@ -14,6 +14,8 @@ permissions:
   - assignuserpermissions
   - 'assignusergroup:8b2b60fd-6045-4696-b08e-6c601ac1245f' # Content Managers
   - 'assignusergroup:229f9f29-ca35-402b-973b-8fb12d4d68ec' # Customers
+  - 'assignusergroup:e9aeb271-1582-40b5-b7c8-dc4bed8d7bfe' # Store Managers
+  - 'assignusergroup:89d30b8d-7f71-4571-bfd3-572a14dc6538' # VIP Customers
   - assignusergroups
   - administrateusers
   - impersonateusers
@@ -198,3 +200,29 @@ permissions:
   - freeform-resources
   - freeform-pro-exportprofilesmanage
   - freeform-pro-exportprofilesaccess
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:robots'
+  - 'seomatic:global-meta:humans'
+  - 'seomatic:global-meta:ads'
+  - 'seomatic:global-meta'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:sitemap'
+  - 'seomatic:content-meta'
+  - 'seomatic:site-settings:social'
+  - 'seomatic:site-settings'
+  - 'seomatic:tracking-scripts:gtag'
+  - 'seomatic:tracking-scripts:googletagmanager'
+  - 'seomatic:tracking-scripts:facebookpixel'
+  - 'seomatic:tracking-scripts:linkedininsight'
+  - 'seomatic:tracking-scripts:hubspot'
+  - 'seomatic:tracking-scripts:pinteresttag'
+  - 'seomatic:tracking-scripts:fathom'
+  - 'seomatic:tracking-scripts:matomo'
+  - 'seomatic:tracking-scripts:plausible'
+  - 'seomatic:tracking-scripts:googleanalytics'
+  - 'seomatic:tracking-scripts'
