@@ -1,22 +1,28 @@
+{#
+
+Checkout step 2 of 5.
+
+#}
+
 {# Layout #}
 {% extends '_layouts/site' %}
 
 {# Variables #}
 {% set customer = craft.commerce.customers.customer %}
 {% set addresses = customer ? customer.addresses : [] %}
-{% set shippingPage = craft.entries({ section: 'checkout', type: 'shipping' }).one() %}
-{% set checkoutPage = craft.entries({ section: 'checkout', type: 'checkout' }).one() %}
+{% set checkoutPage = craft.entries({ section: 'checkout' }).one() %}
 
 {# Blocks #}
 {% block content %}
   {% if cart and (not cart.email or not cart.lineItems|length)  %}
     {% redirect checkoutPage ? checkoutPage.uri : 'checkout' %}
   {% endif %}
-  {% set billingAddressSameAsShipping = (not cart.shippingAddressId and not cart.billingAddressId) or (cart.shippingAddressId and cart.billingAddressId and cart.shippingAddressId == cart.billingAddressId) %}
+  {% set emptyShippingAndBilling = not cart.shippingAddressId and not cart.billingAddressId %}
+  {% set billingAddressSameAsShipping = emptyShippingAndBilling or (cart.shippingAddressId == cart.billingAddressId) %}
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with { heading: checkoutPage.addressTitle } %}
 
   <div class="container py-12">
     <div class="container flex justify-center">
@@ -26,10 +32,10 @@
         }">
           {{ csrfInput() }}
           {{ actionInput('commerce/cart/update-cart') }}
-          {{ redirectInput(shippingPage ? shippingPage.uri : 'checkout/shipping') }}
+          {{ redirectInput('checkout/shipping') }}
 
-          {% if entry.heading %}
-            <h2>{{ entry.heading }}</h2>
+          {% if checkoutPage.addressTitle %}
+            <h2>{{ checkoutPage.addressTitle }}</h2>
           {% endif %}
 
           <h2 class="text-2xl mb-4">
@@ -108,7 +114,7 @@
             </div>
 
             <div class="text-right">
-              <input class="button submit" type="submit" name="submit" value="{{ 'Next'|t }}">
+              <button class="button submit" type="submit" name="submit">{{ 'Next'|t }}</button>
             </div>
           </div>
         </form>

@@ -33,7 +33,7 @@
 
   {% set buttons %}
     {% if gateway and gateway.supportsPaymentSources() %}
-      <input class="button submit" type="submit" value="{{ 'Save'|t }}">
+      <button class="button submit" type="submit">{{ 'Save'|t }}</button>
     {% endif %}
   {% endset %}
 

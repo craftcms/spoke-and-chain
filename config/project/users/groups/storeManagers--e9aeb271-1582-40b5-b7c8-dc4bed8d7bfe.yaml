@@ -51,16 +51,16 @@ permissions:
   - 'deletepeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
   - 'editpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
   - 'editentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'createentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'publishentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'deleteentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'publishpeerentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'deletepeerentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'editpeerentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'publishpeerentrydrafts:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'deletepeerentrydrafts:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'editpeerentrydrafts:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
-  - 'editentries:f6e39d3c-bc6d-4fac-b921-c655cde09804' # Checkout
+  - 'createentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'publishentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'deleteentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'publishpeerentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'deletepeerentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'editpeerentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'publishpeerentrydrafts:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'deletepeerentrydrafts:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'editpeerentrydrafts:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+  - 'editentries:f6e39d3c-bc6d-4fac-b921-c655cde09804'
   - 'publishentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'publishpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'deletepeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact

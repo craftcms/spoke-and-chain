@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: checkout
-name: Checkout
+handle: cart
+name: Cart
 previewTargets:
   -
     __assoc__:
@@ -19,9 +19,6 @@ siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
     enabledByDefault: true
     hasUrls: true
-    template: _views/checkout/index
-    uriFormat: '{parent.uri}/{slug}'
-structure:
-  maxLevels: 2
-  uid: de07e5ba-bde1-43ad-a8ce-2a9d553214bf
-type: structure
+    template: _views/checkout/cart
+    uriFormat: cartz
+type: single

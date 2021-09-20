@@ -1,0 +1,19 @@
+columnSuffix: ksqtiypj
+contentColumnType: text
+fieldGroup: 1df9fd68-f64e-4a30-b3d3-f9cf692d8da3 # Checkout
+handle: addressTitle
+instructions: 'Enter the title for the checkout address step page.'
+name: 'Address Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

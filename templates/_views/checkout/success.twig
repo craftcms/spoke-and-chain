@@ -1,5 +1,12 @@
+{#
+
+Checkout step 5 of 5.
+
+#}
+
 {% set orderNumber = craft.app.request.getQueryParam('number', null) %}
-{% set order = orderNumber ? craft.orders({ number: orderNumber }).one() : null%}
+{% set order = orderNumber ? craft.orders({ number: orderNumber }).one() : null %}
+{% set checkoutPage = craft.entries({ section: 'checkout' }).one() %}
 {% if not orderNumber or not order %}
   {% redirect '/' %}
 {% endif %}
@@ -13,7 +20,7 @@
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with { heading: checkoutPage.successTitle } %}
 
   <div class="container flex justify-center">
     <div class="w-full max-w-5xl">
@@ -34,7 +41,6 @@
               </div>
               <div class="w-1/2">
                 <h4>{{ 'Billing Address'|t }}:</h4>
-
                 <p>{{ order.billingAddress.addressLines|join("\n")|nl2br }}</p>
               </div>
             </div>

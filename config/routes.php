@@ -19,5 +19,8 @@
  */
 
 return [
-
+    'checkout/address' => ['template' => '_views/checkout/address'],
+    'checkout/shipping' => ['template' => '_views/checkout/shipping'],
+    'checkout/summary' => ['template' => '_views/checkout/summary'],
+    'checkout/success' => ['template' => '_views/checkout/success'],
 ];

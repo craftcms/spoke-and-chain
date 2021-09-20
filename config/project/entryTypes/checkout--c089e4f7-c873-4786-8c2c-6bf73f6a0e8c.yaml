@@ -1,5 +1,5 @@
 fieldLayouts:
-  11289f8a-0349-431d-9d01-5e5b6a0ad4c3:
+  f461b579-fe1b-4658-88c6-f5827554fba3:
     tabs:
       -
         elements:
@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            fieldUid: 4d41a71d-b49b-472f-b717-fc9ed5bbbe4b # Address Title
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            fieldUid: 7f5ef0c4-84e6-4053-a8d6-615278731646 # Shipping Title
             instructions: null
             label: null
             required: false
@@ -45,34 +45,30 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
-            instructions: ''
-            label: 'No items content'
-            required: ''
+            fieldUid: f3b7ce76-fc8d-4e09-ab50-4bf06a196921 # Summary Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 739025c3-1b2e-448a-9842-fd731f468fd8 # Success Title
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 2
-handle: cart
-hasTitleField: true
-name: Cart
-section: f6e39d3c-bc6d-4fac-b921-c655cde09804 # Checkout
-sortOrder: 2
-titleFormat: null
+handle: checkout
+hasTitleField: false
+name: Checkout
+section: f0c4ae74-6ebf-4dcb-ad4c-974f0350cdde # Checkout
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

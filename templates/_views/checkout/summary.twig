@@ -1,3 +1,9 @@
+{#
+
+Checkout step 4 of 5.
+
+#}
+
 {% set cart = cart is not defined ? craft.commerce.carts.cart : cart %}
 {# Layout #}
 {% extends '_layouts/site' %}
@@ -7,7 +13,7 @@
 {% endif %}
 
 {# Variables #}
-{% set successPage = craft.entries({ section: 'checkout', type: 'success' }).one() %}
+{% set checkoutPage = craft.entries({ section: 'checkout' }).one() %}
 {% set paymentSources = craft.commerce.paymentSources.allPaymentSourcesByUserId(currentUser.id ?? null) %}
 {% set paymentSourceId = currentUser and paymentSources|length ? paymentSources[0].id : false %}
 {% set paymentForm = paymentForm is defined ? paymentForm : (cart.gatewayId ? cart.gateway.paymentFormModel() : null)  %}
@@ -17,22 +23,22 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with { heading: checkoutPage.summaryTitle } %}
 
   <form id="checkout-payment" method="post" x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }">
     {{ csrfInput() }}
     {{ actionInput('commerce/payments/pay') }}
-    {{ redirectInput(successPage ?
-      successPage.uri ~ '?number=' ~ cart.number
-      : '/checkout/success?number=' ~ cart.number
-    ) }}
-    {{ hiddenInput('cancelUrl', entry.uri|hash) }}
+    {{ redirectInput('/checkout/success?number=' ~ cart.number) }}
+    {{ hiddenInput('cancelUrl', 'checkout/summary'|hash) }}
     {{ hiddenInput('orderEmail', cart.email) }}
 
     <div class="container flex justify-center">
       <div class="border-t border-gray-300 w-full max-w-5xl">
         {% for lineItem in cart.lineItems %}
-          {% include '_includes/components/order/lineItem' with { lineItem: lineItem, isCompleted: cart.isCompleted } only %}
+          {% include '_includes/components/order/lineItem' with {
+            lineItem: lineItem,
+            isCompleted: cart.isCompleted
+          } only %}
         {% endfor %}
 
         {% if cart.shippingAddress %}
@@ -117,7 +123,9 @@
           </div>
 
           <div class="w-full text-right pt-4">
-            <input class="button submit" type="submit" name="submit" value="{{ 'Pay {total}'|t('site', { total: cart.totalAsCurrency }) }}">
+            <button class="button submit" type="submit" name="submit">
+              {{- 'Pay {total}'|t('site', { total: cart.totalAsCurrency }) -}}
+            </button>
           </div>
         </div>
       </div>

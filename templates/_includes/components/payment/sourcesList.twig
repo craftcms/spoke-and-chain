@@ -30,8 +30,7 @@
                     s-indicator="#payment-sources-indicator"
                 >
                   {{ hiddenInput('id', paymentSource.id) }}
-
-                  <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
+                  <button class="button button--small" type="submit">{{ 'Delete'|t }}</button>
                 </form>
               </div>
             {% endif %}
