@@ -9,7 +9,7 @@
 
 {# Blocks #}
 {% block content %}
-  {% if cart and (not cart.email or not cart.lineItems|length)  %}
+  {% if cart and (not cart.email or not cart.lineItems|length) %}
     {% redirect checkoutPage ? checkoutPage.uri : 'checkout' %}
   {% endif %}
   {% set billingAddressSameAsShipping = (not cart.shippingAddressId and not cart.billingAddressId) or (cart.shippingAddressId and cart.billingAddressId and cart.shippingAddressId == cart.billingAddressId) %}
