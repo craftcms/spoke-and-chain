@@ -78,24 +78,58 @@ You can double-click an asset preview anywhere in Craft CMS to jump to the edito
 
 ![](/guide/users.png)
 
+[Users]({{ cpUrl('users') }}) are the last major content type, even though it might seem odd to think of people as content.  
+Click **Users** in the main navigation to see the “All users” list with a submenu of admins and groups.
+
+A user is a person with a name and an email address. A user’s permissions determine what they’re able to access, which could range from nothing at all (with no control panel access) to an admin that has every available permission by default.
+
+User groups are named permission sets you can create for assigning to different types of users, and a user can belong to zero or more groups where the permissions will be additive. You can also add to an individual user’s permissions, which can be handy if you want to give one person access to something specific without having to create another custom group just for that person.
+
+Take a look at Spoke & Chain’s **Content Managers** group settings by visiting **Settings** → **Users** and clicking the **Content Managers** group. In that detailed list of permissions, you’ll see that this group can access most of the control panel to edit content, without the ability to manage users, change site settings, or access system utilities or form submissions.
+
+The **Store Managers** group is a custom demo group created for users that aren’t system administrators but should be able to manage the site’s products and orders in addition to editing content.
+
+Finally, we’ve added **Customers** and **VIP Customers** groups. The former is the **Default User Group** (in **Settings** → **Users** → **Settings**), meaning it’s applied to all newly-registered accounts on the front end. We created **VIP Customers** for store managers to identify a subset of customers for special promotions—but we’ll come back to that.
+
+You can create as many users and user groups as you’d like for your project.
+
 ## Custom Fields
 
 ![](/guide/custom-fields.png)
 
+Each of these content types—Entries, Globals, Categories, Assets, and Users—has a critical thing in common, and it’s one of the key features of Craft CMS: each one can have its own custom field layout.
+
+Under the hood, Craft calls these things “element types,” and every element type can have however many custom fields you’d like to add to it. This means your content can be structured and stored according to your design requirements.
+
+Put on your developer hat for a moment and have a look at **Settings** → **Sections** → **Articles**. Its **Settings** tab describes that section’s type and how it uses URLs. Choose the **Entry Types** tab and click **Articles**. Here you’ll see the **Field Layout** editor, which is where a developer would drag the custom fields they’ve created into the field layout for that section.
+
+You’d use this field layout editor to assign custom fields to any of those element types we just looked at.
+
 ## Finding Things
+
+As a site’s body of content grows and evolves, it’s important to be able to sort through and find the content you need to work with.
 
 ### Search
 
 ![](/guide/search.png)
 
+You can quickly search through content anywhere you see a search field. You can tailor any search with Craft’s [advanced syntax](https://craftcms.com/docs/3.x/searching.html) and optionally have a developer configure your site to make global customizations to search behavior with Craft’s [defaultSearchTermOptions setting](https://craftcms.com/docs/3.x/config/config-settings.html#defaultsearchtermoptions).
+
 ### Table Customization
+
+Listings of Entries, Categories, Assets, and Users can all be customized with any custom submenu headings and groupings you’d prefer. You can also adjust the columns that are displayed for each entry type, making it easier to see and sort on the information that’s important for that type of content.
+
+Click on **Entries**, for example, and then click the gear icon directly beneath the submenu. This opens a customization modal you can use to adjust your listings:
 
 ![](/guide/table-customization.png)
 
 ### Quick Export
 
+The bottom right of each listing table has an **Export...** button you can use to export the listings to CSV, JSON, or XML format:
+
 ![](/guide/quick-export.png)
 
+This can be useful for content audits and planning where you might need to take a step back from your content and see it in a spreadsheet or another tool.
 {% endset %}
 
 {{ content|markdown }}
