@@ -187,7 +187,9 @@
                         <div class="relative">
                           {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
 
-                          <div class="absolute top-0 left-0 w-1/2 overflow-hidden" style="width: {{ ((averageRating - averageRatingFloor) * 100) }}%;">
+                          <div class="absolute top-0 left-0 w-1/2 overflow-hidden"
+                               style="width: {{ ((averageRating - averageRatingFloor) * 100) }}%;"
+                          >
                             {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
                           </div>
                         </div>
@@ -205,21 +207,29 @@
               </div>
 
               <div class="mt-2 text-gray-500 text-sm">
-                {{- '{num, number} {num,plural,=1{review} other{reviews}}'|t('site', { num: reviews|length }) -}}
+                {{- '{num, number} {num,plural,=1{review} other{reviews}}'|t('site', {
+                  num: reviews|length
+                }) -}}
               </div>
             </div>
 
             <div class="mt-6">
               <h3 class="text-lg">{{ 'Most Recent Review'|t }}</h3>
               <div class="mt-4">
-                {% include '_includes/components/products/review' with { review: mostRecentReview } only %}
+                {% include '_includes/components/products/review' with {
+                  review: mostRecentReview
+                } only %}
               </div>
             </div>
 
             {% if reviews|length > 1 %}
-              <div x-data="modalButton('reviews', { id: {{ product.id }}, title: '{{ product.title|e('js') }}' }, 'slideout')" class="mt-4">
-                <a class="button" href="#"
-                   x-on:click.prevent="open($dispatch)">{{ 'See all reviews'|t }}</a>
+              <div x-data="modalButton('reviews', { id: {{ product.id }}, title: '{{ product.title|e('js') }}' }, 'slideout')"
+                   class="mt-4"
+              >
+                <a class="button"
+                   href="#"
+                   x-on:click.prevent="open($dispatch)"
+                >{{ 'See all reviews'|t }}</a>
               </div>
             {% endif %}
           </div>
