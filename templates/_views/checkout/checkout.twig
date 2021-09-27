@@ -38,17 +38,26 @@
 
             <div>
               <label for="loginName">{{ 'Email'|t }}</label>
-              <input id="loginName" type="text" name="loginName" value="{{ craft.app.user.rememberedUsername }}">
+              <input id="loginName"
+                     type="text"
+                     name="loginName"
+                     value="{{ craft.app.user.rememberedUsername }}"
+              />
             </div>
 
             <div>
               <label for="password">{{ 'Password'|t }}</label>
-              <input id="password" type="password" name="password">
+              <input id="password" type="password" name="password"/>
             </div>
 
             <div class="flex items-center justify-between">
               <div class="flex items-center">
-                <input id="remember-me" class="checkbox" type="checkbox" name="rememberMe" value="1">
+                <input id="remember-me"
+                       name="rememberMe"
+                       type="checkbox"
+                       value="1"
+                       class="checkbox"
+                />
                 <label for="remember-me" class="ml-2">{{ 'Remember me'|t }}</label>
               </div>
 
@@ -57,7 +66,7 @@
               </div>
             </div>
 
-            <input class="button submit" type="submit" value="Login">
+            <button class="button submit" type="submit">{{ 'Login'|t }}</button>
 
             {% if errorMessage is defined %}
               <p>{{ errorMessage }}</p>
@@ -78,10 +87,18 @@
 
             <div>
               <label for="email">{{ 'Email'|t }}</label>
-              <input id="email" type="text" name="email" value="{{ cart ? cart.email : '' }}" placeholder="{{ 'Email address'|t }}">
+              <input id="email"
+                     type="text"
+                     name="email" 
+                     value="{{ cart ? cart.email : '' }}"
+                     placeholder="{{ 'Email address'|t }}"
+              />
             </div>
 
-            <input class="button submit" type="submit" name="submit" value="{{ 'Continue as Guest'|t }}">
+            <button type="submit"
+                    name="submit"
+                    class="button submit"
+            />{{ 'Continue as Guest'|t }}</button>
           </form>
         </div>
       </div>

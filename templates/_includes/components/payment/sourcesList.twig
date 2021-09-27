@@ -9,7 +9,12 @@
     {% for paymentSource in paymentSources %}
       <div class="option-select">
         {% if radio %}
-          <input id="payment-source-{{ paymentSource.id }}" type="radio" name="paymentSourceId" value="{{ paymentSource.id }}" x-model="id"/>
+          <input id="payment-source-{{ paymentSource.id }}"
+                 type="radio"
+                 name="paymentSourceId"
+                 value="{{ paymentSource.id }}"
+                 x-model="id"
+          />
         {% endif %}
 
         <label for="payment-source-{{ paymentSource.id }}">
@@ -30,8 +35,7 @@
                     s-indicator="#payment-sources-indicator"
                 >
                   {{ hiddenInput('id', paymentSource.id) }}
-
-                  <input class="button button--small" type="submit" value="{{ 'Delete'|t }}"/>
+                  <button class="button button--small" type="submit">{{ 'Delete'|t }}</button>
                 </form>
               </div>
             {% endif %}
@@ -42,7 +46,10 @@
   {% endif %}
   {% if account %}
     <div x-data="modalButton('card', {}, 'slideout')">
-      <button id="add-card" class="option-select cursor-pointer text-black" x-on:click.prevent="open($dispatch, '#add-card')">
+      <button id="add-card"
+              class="option-select cursor-pointer text-black"
+              x-on:click.prevent="open($dispatch, '#add-card')"
+      >
         <div>
           <div class="flex justify-between items-center">
             <strong>{{ 'Add a card'|t }}</strong>

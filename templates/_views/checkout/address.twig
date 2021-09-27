@@ -70,7 +70,13 @@
               billingAddress: '{{ currentUser and addresses|length and cart.billingAddressId ? cart.billingAddressId : '' }}'
             }">
               <div class="flex items-center">
-                <input class="checkbox" id="billingSameAsShipping" type="checkbox" name="billingAddressSameAsShipping" x-model="billingSameAsShipping" :checked="billingSameAsShipping">
+                <input id="billingSameAsShipping"
+                      type="checkbox"
+                      name="billingAddressSameAsShipping"
+                      x-model="billingSameAsShipping"
+                      :checked="billingSameAsShipping"
+                      class="checkbox"
+                />
                 <label class="ml-2" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
               </div>
 
@@ -93,7 +99,7 @@
                     {% include '_includes/components/spinner' %}
                   </div>
                   {% if currentUser and addresses|length %}
-
+                    {# ¯\_(ツ)_/¯ #}
                   {% else %}
                     <div>
                       {% include '_includes/components/address/fields' with {
@@ -108,7 +114,7 @@
             </div>
 
             <div class="text-right">
-              <input class="button submit" type="submit" name="submit" value="{{ 'Next'|t }}">
+              <button class="button submit" type="submit" name="submit">{{ 'Next'|t }}</button>
             </div>
           </div>
         </form>
