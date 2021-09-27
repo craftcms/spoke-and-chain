@@ -19,7 +19,10 @@
   {# Heading #}
   {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
-  <form id="checkout-payment" method="post" x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }">
+  <form id="checkout-payment" 
+        method="post" 
+        x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }"
+  >
     {{ csrfInput() }}
     {{ actionInput('commerce/payments/pay') }}
     {{ redirectInput(successPage ?
@@ -32,7 +35,10 @@
     <div class="container flex justify-center">
       <div class="border-t border-gray-300 w-full max-w-5xl">
         {% for lineItem in cart.lineItems %}
-          {% include '_includes/components/order/lineItem' with { lineItem: lineItem, isCompleted: cart.isCompleted } only %}
+          {% include '_includes/components/order/lineItem' with {
+            lineItem: lineItem,
+            isCompleted: cart.isCompleted
+          } only %}
         {% endfor %}
 
         {% if cart.shippingAddress %}
@@ -66,7 +72,9 @@
           </div>
 
           <div class="w-full md:w-4/5">
-            {% include '_includes/components/order/totals' with { order: cart } only %}
+            {% include '_includes/components/order/totals' with {
+              order: cart
+            } only %}
           </div>
         </div>
 
@@ -117,7 +125,9 @@
           </div>
 
           <div class="w-full text-right pt-4">
-            <input class="button submit" type="submit" name="submit" value="{{ 'Pay {total}'|t('site', { total: cart.totalAsCurrency }) }}">
+            <button class="button submit" type="submit" name="submit">
+              {{- 'Pay {total}'|t('site', { total: cart.totalAsCurrency }) -}}
+            </button>
           </div>
         </div>
       </div>

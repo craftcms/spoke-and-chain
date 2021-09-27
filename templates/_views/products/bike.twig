@@ -103,11 +103,9 @@
 
           {# Product Buy #}
           <div class="mt-6 lg:mt-0 lg:w-1/4 lg:text-right lg:flex lg:items-center lg:justify-end">
-            <input class="button w-full sm:w-auto"
-              type="submit" 
-              name="submit" 
-              value="{{ 'Add to cart'|t('site') }}"
-            >
+            <button class="button w-full sm:w-auto" type="submit" name="submit">
+              {{- 'Add to cart'|t('site') -}}
+            </button>
           </div>
         </div>
       </form>
