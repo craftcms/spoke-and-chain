@@ -19,8 +19,8 @@
   {# Heading #}
   {% include '_includes/components/pages/heading' with { heading: entry.title } %}
 
-  <form id="checkout-payment" 
-        method="post" 
+  <form id="checkout-payment"
+        method="post"
         x-data="{ id: {{ paymentSourceId ?: 'false' }}, type: '{{ paymentSourceId ? 'source' : 'gateway' }}' }"
   >
     {{ csrfInput() }}
@@ -44,16 +44,22 @@
         {% if cart.shippingAddress %}
           <div class="flex flex-wrap border-gray-300 py-8">
             <div class="w-full pb-4 lg:pb-0 lg:w-1/5 pr-6">
-              <h3>{{ 'Address'|t }}</h3>
+              <h3>
+                {{- 'Address'|t -}}
+              </h3>
             </div>
             <div class="w-full lg:w-4/5">
               <div class="flex">
                 <div class="w-1/2">
-                  <h4>{{ 'Shipping to'|t }}:</h4>
+                  <h4>
+                    {{ 'Shipping To'|t ~ ':' -}}
+                  </h4>
                   <p>{{ cart.shippingAddress.addressLines|join("\n")|nl2br }}</p>
                 </div>
                 <div class="w-1/2">
-                  <h4>{{ 'Billing Address'|t }}:</h4>
+                  <h4>
+                    {{ 'Billing Address'|t ~ ':' -}}
+                  </h4>
 
                   {% if cart.shippingAddressId == cart.billingAddressId %}
                     <p>{{ 'Same as shipping.'|t }}</p>
@@ -68,7 +74,9 @@
 
         <div class="flex flex-wrap border-t border-gray-300 py-8">
           <div class="w-full lg:w-1/5">
-            <h3>{{ 'Your Total'|t }}</h3>
+            <h3>
+              {{- 'Your Total'|t -}}
+            </h3>
           </div>
 
           <div class="w-full md:w-4/5">
@@ -80,7 +88,9 @@
 
         <div class="flex flex-wrap border-t border-gray-300 py-8">
           <div class="w-full pb-4 lg:pb-0 lg:w-1/5">
-            <h3>{{ 'Payment Info'|t }}</h3>
+            <h3>
+              {{- 'Payment Info'|t -}}
+            </h3>
           </div>
           <div class="w-full lg:w-4/5">
             {% if currentUser %}
@@ -95,7 +105,10 @@
                 }) }}
                 <div class="pt-2">
                   <div class="option-select">
-                    <input id="payment-source-new" type="radio" name="paymentSourceId" value="" x-model="id"/>
+                    {{ input('radio', 'paymentSourceId', '', {
+                      id: 'payment-source-new',
+                      'x-model': 'id'
+                    }) }}
 
                     <label for="payment-source-new">
                       <strong>{{ 'Pay with new card'|t }}</strong>
@@ -120,7 +133,9 @@
                 </div>
               {% endif %}
             {% else %}
-              {% include '_includes/components/forms/creditCard' with { paymentForm: paymentForm } %}
+              {% include '_includes/components/forms/creditCard' with {
+                paymentForm: paymentForm
+              } %}
             {% endif %}
           </div>
 
