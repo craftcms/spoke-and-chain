@@ -1,6 +1,6 @@
 {# Variables #}
-{% set addressPage = craft.entries({ section: 'checkout', type: 'address' }).one() %}
-{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
+{% set addressPage = craft.entries({ section: 'checkoutAddress' }).one() %}
+{% set cartPage = craft.entries({ section: 'cart' }).one() %}
 
 {# Skip this page if there is a logged in user #}
 {% if currentUser %}

@@ -1,8 +1,6 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{# Variables #}
-
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
@@ -22,7 +20,7 @@
     {% endif %}
 
     {% if not cart.lineItems|length %}
-      <p><a href="{{ url('bikes') }}" class="button submit">Continue Shopping</a></p>
+      <p><a href="{{ url('bikes') }}" class="button submit">{{ 'Continue Shopping'|t }}</a></p>
     {% endif %}
   </div>
 

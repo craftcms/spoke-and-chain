@@ -1,13 +1,15 @@
-{% set cart = cart is not defined ? craft.commerce.carts.cart : cart %}
 {# Layout #}
 {% extends '_layouts/site' %}
-{% set cartPage = craft.entries({ section: 'checkout', type: 'cart' }).one() %}
+
+{% set cartPage = craft.entries({ section: 'cart' }).one() %}
+{# @var cart \craft\commerce\elements\Order #}
+{% set cart = cart is not defined ? craft.commerce.carts.cart : cart %}
 {% if cart is not defined or not cart.lineItems|length %}
   {% redirect cartPage ? cartPage.uri : 'cart' %}
 {% endif %}
 
 {# Variables #}
-{% set successPage = craft.entries({ section: 'checkout', type: 'success' }).one() %}
+{% set successPage = craft.entries({ type: 'checkoutSuccess' }).one() %}
 {% set paymentSources = craft.commerce.paymentSources.allPaymentSourcesByUserId(currentUser.id ?? null) %}
 {% set paymentSourceId = currentUser and paymentSources|length ? paymentSources[0].id : false %}
 {% set paymentForm = paymentForm is defined ? paymentForm : (cart.gatewayId ? cart.gateway.paymentFormModel() : null)  %}
@@ -17,7 +19,9 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with {
+    heading: entry.heading ?? entry.title
+  } %}
 
   <form id="checkout-payment"
         method="post"
@@ -52,13 +56,13 @@
               <div class="flex">
                 <div class="w-1/2">
                   <h4>
-                    {{ 'Shipping To'|t ~ ':' -}}
+                    {{- 'Shipping To'|t ~ ':' -}}
                   </h4>
                   <p>{{ cart.shippingAddress.addressLines|join("\n")|nl2br }}</p>
                 </div>
                 <div class="w-1/2">
                   <h4>
-                    {{ 'Billing Address'|t ~ ':' -}}
+                    {{- 'Billing Address'|t ~ ':' -}}
                   </h4>
 
                   {% if cart.shippingAddressId == cart.billingAddressId %}

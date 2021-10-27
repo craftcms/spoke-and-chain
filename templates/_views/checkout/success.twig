@@ -7,13 +7,13 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{# Variables #}
-
 {# Output #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with {
+    heading: entry.heading ?? entry.title
+  } %}
 
   <div class="container flex justify-center">
     <div class="w-full max-w-5xl">
@@ -38,7 +38,7 @@
               </div>
               <div class="w-1/2">
                 <h4>
-                  {{ 'Billing Address'|t ~ ':' -}}
+                  {{- 'Billing Address'|t ~ ':' -}}
                 </h4>
 
                 <p>{{ order.billingAddress.addressLines|join("\n")|nl2br }}</p>

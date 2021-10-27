@@ -1,5 +1,5 @@
 fieldLayouts:
-  8f51964e-7902-4d8d-ab14-cab2d58bda50:
+  232a3fe3-acb0-47f2-83bd-79e104d39576:
     tabs:
       -
         elements:
@@ -26,6 +26,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            instructions: ''
+            label: 'Login Heading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            instructions: ''
+            label: 'Guest Heading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
       -
@@ -41,11 +59,11 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
-handle: success
+handle: checkout
 hasTitleField: true
-name: Success
-section: f6e39d3c-bc6d-4fac-b921-c655cde09804 # Checkout
-sortOrder: 6
-titleFormat: null
+name: Checkout
+section: 70e125cc-65ea-4a3f-a65f-a5c91efcbfe7 # Checkout
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
