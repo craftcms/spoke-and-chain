@@ -37,7 +37,7 @@
     {{ hiddenInput('orderEmail', cart.email) }}
 
     <div class="container flex justify-center">
-      <div class="border-t border-gray-300 w-full max-w-5xl">
+      <div class="border-gray-300 w-full max-w-5xl">
         {% for lineItem in cart.lineItems %}
           {% include '_includes/components/order/lineItem' with {
             lineItem: lineItem,
