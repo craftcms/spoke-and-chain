@@ -3,10 +3,11 @@
 {% set isFirst = isFirst is not defined ? false : isFirst %}
 {% set isLast = isLast is not defined ? false : isLast %}
 {% set image = block ? block.image.one() : null %}
+{% set imageCaption = image.imageCaption ?? null %}
 
 {% if block and image %}
   <!-- Template: {{ _self }}.twig -->
-  <div>
+  <{{ imageCaption ? 'figure' : 'div' }}>
     {% include '_includes/components/images/responsive' with {
       class: 'w-full',
       image: image,
@@ -21,7 +22,12 @@
         'all': '1440px',
       },
       srcset: ['1440w', '1280w', '1024w', '900w', '768w', '640w', '425w', '320w'],
-      transform: { width: 380, height: 152, },
+      transform: { width: 380, height: 152 },
     } %}
-  </div>
+    {% if imageCaption %}
+      <figcaption class="px-6 py-3 text-gray-600 text-sm text-center">
+        {{- imageCaption -}}
+      </figcaption>
+    {% endif %}
+  </{{ imageCaption ? 'figure' : 'div' }}>
 {% endif %}

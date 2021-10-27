@@ -25,14 +25,19 @@
         {% if not cart.availableShippingMethodOptions|length %}
           <p>{{ 'No shipping methods available.'|t }}</p>
           <div>
-            <a class="button" href="{{ summaryPage ? summaryPage.url : siteUrl('checkout/summary') }}">{{ 'Continue'|t }}</a>
+            <a href="{{ summaryPage ? summaryPage.url : siteUrl('checkout/summary') }}"
+               class="button"
+            >{{ 'Continue'|t }}</a>
           </div>
         {% else %}
           <div class="space-y-6">
             <div class="space-y-2">
               {% for handle, method in cart.availableShippingMethodOptions %}
                 <div class="option-select">
-                  <input id="shipping-method-{{ handle }}" type="radio" name="shippingMethodHandle" value="{{ handle }}" {% if handle == cart.shippingMethodHandle %}checked{% endif %}/>
+                  {{ input('radio', 'shippingMethodHandle', handle, {
+                    id: 'shipping-method-'~handle,
+                    checked: handle == cart.shippingMethodHandle
+                  }) }}
 
                   <label for="shipping-method-{{ handle }}">
                     <strong>{{ method.name }}</strong><br>
@@ -43,7 +48,7 @@
             </div>
 
             <div class="text-right">
-              <input class="button submit" type="submit" value="{{ 'Select Shipping Method'|t }}"/>
+              <button class="button submit" type="submit">{{ 'Select Shipping Method'|t }}</button>
             </div>
           </div>
         {% endif %}

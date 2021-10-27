@@ -1,0 +1,19 @@
+columnSuffix: fvwsnctz
+contentColumnType: text
+fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
+handle: imageAlt
+instructions: 'Describe the image contents for accessibility and SEO.'
+name: 'Image Alt'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: '1'
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
