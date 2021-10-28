@@ -119,10 +119,27 @@ class Module extends \yii\base\Module
 
         if (Craft::$app->getRequest()->isCpRequest) {
             // Add our custom “Checkout Pages” source for content editors
+
+            $singleHandles = [
+              'checkout',
+              'checkoutAddress',
+              'checkoutShipping',
+              'checkoutSummary',
+              'checkoutSuccess',
+            ];
+
+            $sectionIds = [];
+
+            foreach ($singleHandles as $handle) {
+                if ($section = Craft::$app->getSections()->getSectionByHandle($handle)) {
+                    $sectionIds[] = $section->id;
+                }
+            }
+
             Event::on(
                 Element::class,
                 Element::EVENT_REGISTER_SOURCES,
-                static function(RegisterElementSourcesEvent $event) {
+                static function(RegisterElementSourcesEvent $event) use ($sectionIds) {
                     $insertAfter = 2;
                     $event->sources = array_merge(
                         array_slice($event->sources, 0, $insertAfter, true),
@@ -131,9 +148,8 @@ class Module extends \yii\base\Module
                                 'key' => 'checkout',
                                 'label' => Craft::t('site', 'Checkout Pages'),
                                 'criteria' => [
-                                    'where' => ['LIKE', 'title', 'Checkout']
+                                    'sectionId' => $sectionIds
                                 ],
-                                'defaultSort' => ['title', 'asc']
                             ]
                         ],
                         array_slice($event->sources, $insertAfter)
