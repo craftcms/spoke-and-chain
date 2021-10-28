@@ -116,5 +116,30 @@ class Module extends \yii\base\Module
                 $variable->set('reviews', Reviews::class);
             }
         );
+
+        if (Craft::$app->getRequest()->isCpRequest) {
+            // Add our custom “Checkout Pages” source for content editors
+            Event::on(
+                Element::class,
+                Element::EVENT_REGISTER_SOURCES,
+                static function(RegisterElementSourcesEvent $event) {
+                    $insertAfter = 2;
+                    $event->sources = array_merge(
+                        array_slice($event->sources, 0, $insertAfter, true),
+                        [
+                            [
+                                'key' => 'checkout',
+                                'label' => Craft::t('site', 'Checkout Pages'),
+                                'criteria' => [
+                                    'where' => ['LIKE', 'title', 'Checkout']
+                                ],
+                                'defaultSort' => ['title', 'asc']
+                            ]
+                        ],
+                        array_slice($event->sources, $insertAfter)
+                    );
+                }
+            );
+        }
     }
 }
