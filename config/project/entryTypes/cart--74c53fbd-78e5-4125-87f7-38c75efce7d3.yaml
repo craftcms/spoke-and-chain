@@ -1,5 +1,5 @@
 fieldLayouts:
-  de8ae67e-244e-4edc-8d84-d3e2f3c8dc92:
+  d6bab467-3ac2-4092-9bf6-30c86263d0c5:
     tabs:
       -
         elements:
@@ -26,6 +26,33 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
+            instructions: ''
+            label: 'No items content'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
       -
@@ -41,11 +68,11 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
-handle: shipping
+handle: cart
 hasTitleField: true
-name: Shipping
-section: f6e39d3c-bc6d-4fac-b921-c655cde09804 # Checkout
-sortOrder: 4
-titleFormat: null
+name: Cart
+section: 7e2085d8-34c4-41a9-81fc-db0fef15293f # Cart
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

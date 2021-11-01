@@ -2,14 +2,16 @@
 {% extends '_layouts/site' %}
 
 {# Variables #}
-{% set summaryPage = craft.entries({ section: 'checkout', type: 'summary' }).one() %}
+{% set summaryPage = craft.entries({ section: 'checkoutSummary' }).one() %}
 
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with {
+    heading: entry.heading ?? entry.title
+  } %}
 
   <div class="container flex justify-center py-12">
     <div class="w-full max-w-2xl">

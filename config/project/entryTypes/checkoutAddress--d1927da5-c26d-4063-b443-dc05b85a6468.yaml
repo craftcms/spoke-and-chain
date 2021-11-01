@@ -1,5 +1,5 @@
 fieldLayouts:
-  1dee80f3-40a8-4890-8ea4-34115fd49b90:
+  2c848203-93d2-43d6-ae56-ba3061b45736:
     tabs:
       -
         elements:
@@ -26,6 +26,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
       -
@@ -41,11 +50,11 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
-handle: address
+handle: checkoutAddress
 hasTitleField: true
-name: Address
-section: f6e39d3c-bc6d-4fac-b921-c655cde09804 # Checkout
-sortOrder: 3
-titleFormat: null
+name: 'Checkout: Address'
+section: 33b8424b-2140-4fc1-a0bb-6b07da33b045 # Checkout: Address
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
