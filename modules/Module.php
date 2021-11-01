@@ -119,7 +119,6 @@ class Module extends \yii\base\Module
 
         if (Craft::$app->getRequest()->isCpRequest) {
             // Add our custom “Checkout Pages” source for content editors
-
             $singleHandles = [
               'checkout',
               'checkoutAddress',
@@ -130,16 +129,27 @@ class Module extends \yii\base\Module
 
             $sectionIds = [];
 
+            // Get the ID for each single’s handle
             foreach ($singleHandles as $handle) {
                 if ($section = Craft::$app->getSections()->getSectionByHandle($handle)) {
                     $sectionIds[] = $section->id;
                 }
             }
 
+            // Get each single’s corresponding entry ID
+            $entryIdsBySectionId = Entry::find()
+                ->select(['sectionId', 'elements.id'])
+                ->sectionId($sectionIds)
+                ->pairs();
+
+            $entryIds = array_map(static function($sectionId) use ($entryIdsBySectionId) {
+                return $entryIdsBySectionId[$sectionId];
+            }, $sectionIds);
+
             Event::on(
                 Element::class,
                 Element::EVENT_REGISTER_SOURCES,
-                static function(RegisterElementSourcesEvent $event) use ($sectionIds) {
+                static function(RegisterElementSourcesEvent $event) use ($entryIds) {
                     $insertAfter = 2;
                     $event->sources = array_merge(
                         array_slice($event->sources, 0, $insertAfter, true),
@@ -148,7 +158,8 @@ class Module extends \yii\base\Module
                                 'key' => 'checkout',
                                 'label' => Craft::t('site', 'Checkout Pages'),
                                 'criteria' => [
-                                    'sectionId' => $sectionIds
+                                    'id' => $entryIds,
+                                    'fixedOrder' => true,
                                 ],
                             ]
                         ],
