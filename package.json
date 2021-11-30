@@ -33,7 +33,7 @@
     "create-symlink-webpack-plugin": "^1.0.1",
     "css-loader": "^4.3.0",
     "cssnano": "^4.1.10",
-    "cypress": "^6.4.0",
+    "cypress": "^6.9.1",
     "cypress-audit": "^0.3.0",
     "dotenv": "^8.2.0",
     "file-loader": "^6.1.0",
