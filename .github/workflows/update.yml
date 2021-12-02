@@ -2,13 +2,21 @@ name: Update dependencies
 
 on:
   workflow_dispatch:
+    inputs:
+      dockerhub_push:
+        default: true
+        required: true
+        type: boolean
   schedule:
     - cron: "0 */12 * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   update:
     runs-on: ubuntu-latest
     name: Update dependencies
+    outputs:
+      changes_detected: ${{ steps.auto_commit.outputs.changes_detected == 'true' }}
     steps:
       - uses: actions/checkout@v2
 
@@ -16,11 +24,30 @@ jobs:
 
       - run: make test
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v3
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        id: auto_commit
         with:
-          title: "[🤖] Update dependencies"
-          branch: feature/update-dependencies
-          committer: shinybrad <shinybrad@users.noreply.github.com>
-          author: shinybrad <shinybrad@users.noreply.github.com>
-          assignees: timkelty
+          commit_user_name: shinybrad
+          commit_user_email: shinybrad@users.noreply.github.com
+          commit_author: shinybrad <shinybrad@users.noreply.github.com>
+
+      - name: Bump version and push tag
+        if: steps.auto_commit.outputs.changes_detected == 'true'
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create a GitHub release
+        if: steps.auto_commit.outputs.changes_detected == 'true'
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+
+      - uses: benc-uk/workflow-dispatch@v1
+        if: ${{ steps.auto_commit.outputs.changes_detected == 'true' && (github.event.inputs.dockerhub_push || github.event_name == 'schedule') }}
+        with:
+          workflow: Build and push docker images
+          token: ${{ secrets.PAT }}
