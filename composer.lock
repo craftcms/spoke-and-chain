@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.208.0",
+            "version": "3.208.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fef9c7a9b0d65014a40cc7451da9e420e6f0eaa0"
+                "reference": "d497414c1c4ae55145493f720f7b4d12afe92c02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fef9c7a9b0d65014a40cc7451da9e420e6f0eaa0",
-                "reference": "fef9c7a9b0d65014a40cc7451da9e420e6f0eaa0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d497414c1c4ae55145493f720f7b4d12afe92c02",
+                "reference": "d497414c1c4ae55145493f720f7b4d12afe92c02",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.208.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.208.1"
             },
-            "time": "2021-12-02T19:14:25+00:00"
+            "time": "2021-12-03T19:16:12+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -3340,16 +3340,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.55.0",
+            "version": "2.55.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "b46249911cba301e9eb3f05af68cf2aacc1f9d05"
+                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/b46249911cba301e9eb3f05af68cf2aacc1f9d05",
-                "reference": "b46249911cba301e9eb3f05af68cf2aacc1f9d05",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8c2a18ce3e67c34efc1b29f64fe61304368259a2",
+                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2",
                 "shasum": ""
             },
             "require": {
@@ -3432,7 +3432,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-02T16:53:55+00:00"
+            "time": "2021-12-03T14:59:52+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-manifest",
