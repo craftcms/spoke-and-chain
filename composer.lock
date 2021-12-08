@@ -741,16 +741,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.24",
+            "version": "3.7.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "2e6b98c885da7d5a150e6eb4851710c32bbf71f7"
+                "reference": "15e5f35d0bdc16053ff79ffbf6dd228f4f368393"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2e6b98c885da7d5a150e6eb4851710c32bbf71f7",
-                "reference": "2e6b98c885da7d5a150e6eb4851710c32bbf71f7",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/15e5f35d0bdc16053ff79ffbf6dd228f4f368393",
+                "reference": "15e5f35d0bdc16053ff79ffbf6dd228f4f368393",
                 "shasum": ""
             },
             "require": {
@@ -846,7 +846,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-12-02T18:33:06+00:00"
+            "time": "2021-12-07T17:01:54+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -2480,16 +2480,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "db581851a092246ad99e12d4fddf105184924c71"
+                "reference": "6fe0842909638ca6bea8401b7e8168fb154bffb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/db581851a092246ad99e12d4fddf105184924c71",
-                "reference": "db581851a092246ad99e12d4fddf105184924c71",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/6fe0842909638ca6bea8401b7e8168fb154bffb5",
+                "reference": "6fe0842909638ca6bea8401b7e8168fb154bffb5",
                 "shasum": ""
             },
             "require": {
@@ -2535,20 +2535,20 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-11-10T11:33:52+00:00"
+            "time": "2021-12-07T21:06:58+00:00"
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.4",
+            "version": "1.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
+                "reference": "c995bb0c23c58c9813d081f9523c9b7bb496698e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
-                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c995bb0c23c58c9813d081f9523c9b7bb496698e",
+                "reference": "c995bb0c23c58c9813d081f9523c9b7bb496698e",
                 "shasum": ""
             },
             "require": {
@@ -2621,7 +2621,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.8"
             },
             "funding": [
                 {
@@ -2629,7 +2629,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-06-23T21:56:05+00:00"
+            "time": "2021-11-28T21:50:23+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -5118,16 +5118,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.12.8",
+            "version": "3.12.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "5762b174959ac4d51dec625813659dc51978ea79"
+                "reference": "fb0535fc3d3e0af7dc0553507030e660087ad512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/5762b174959ac4d51dec625813659dc51978ea79",
-                "reference": "5762b174959ac4d51dec625813659dc51978ea79",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/fb0535fc3d3e0af7dc0553507030e660087ad512",
+                "reference": "fb0535fc3d3e0af7dc0553507030e660087ad512",
                 "shasum": ""
             },
             "require": {
@@ -5136,7 +5136,7 @@
                 "egulias/email-validator": "^2.1|^3.0",
                 "ext-json": "*",
                 "hashids/hashids": "^2.0|^3.0|^4.0",
-                "league/flysystem": "1.1.4",
+                "league/flysystem": "^1.1.4",
                 "nesbot/carbon": "^1.22.1|^2.19",
                 "phpoffice/phpspreadsheet": "^1.6.0",
                 "solspace/craft3-commons": "^1.0.21",
@@ -5192,9 +5192,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.8"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.9.1"
             },
-            "time": "2021-12-02T20:37:57+00:00"
+            "time": "2021-12-07T21:19:55+00:00"
         },
         {
             "name": "solspace/craft3-commons",
