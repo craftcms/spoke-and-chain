@@ -923,20 +923,20 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "3.4.8",
+            "version": "3.4.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "9efb44290f3ed1c013bebc10fc497928f3483ab2"
+                "reference": "6d1ac22888e05677424ea19996d33efe46467256"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/9efb44290f3ed1c013bebc10fc497928f3483ab2",
-                "reference": "9efb44290f3ed1c013bebc10fc497928f3483ab2",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/6d1ac22888e05677424ea19996d33efe46467256",
+                "reference": "6d1ac22888e05677424ea19996d33efe46467256",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.7.0",
+                "craftcms/cms": "^3.7.25",
                 "dompdf/dompdf": "^1.0.2",
                 "ibericode/vat": "^1.1.2",
                 "iio/libmergepdf": "^4.0",
@@ -955,7 +955,7 @@
             "type": "craft-plugin",
             "extra": {
                 "handle": "commerce",
-                "version": "3.4.8",
+                "version": "3.4.9.2",
                 "name": "Craft Commerce",
                 "description": "Create beautifully bespoke ecommerce experiences",
                 "developer": "Pixel & Tonic",
@@ -972,7 +972,7 @@
                 "proprietary"
             ],
             "description": "Craft Commerce",
-            "homepage": "https://craftcommerce.com",
+            "homepage": "https://craftcms.com/commerce",
             "keywords": [
                 "cms",
                 "commerce",
@@ -987,7 +987,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2021-11-26T00:37:43+00:00"
+            "time": "2021-12-15T11:55:09+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
