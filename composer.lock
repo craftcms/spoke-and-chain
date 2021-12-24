@@ -922,16 +922,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "3.4.9.2",
+            "version": "3.4.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "6d1ac22888e05677424ea19996d33efe46467256"
+                "reference": "690e9a7954f9088460d12e025f77fad12dc0a42f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/6d1ac22888e05677424ea19996d33efe46467256",
-                "reference": "6d1ac22888e05677424ea19996d33efe46467256",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/690e9a7954f9088460d12e025f77fad12dc0a42f",
+                "reference": "690e9a7954f9088460d12e025f77fad12dc0a42f",
                 "shasum": ""
             },
             "require": {
@@ -954,7 +954,7 @@
             "type": "craft-plugin",
             "extra": {
                 "handle": "commerce",
-                "version": "3.4.9.2",
+                "version": "3.4.9.3",
                 "name": "Craft Commerce",
                 "description": "Create beautifully bespoke ecommerce experiences",
                 "developer": "Pixel & Tonic",
@@ -986,7 +986,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2021-12-15T11:55:09+00:00"
+            "time": "2021-12-23T22:09:34+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -5197,16 +5197,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.12.10",
+            "version": "3.12.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "e613b6a8d3771da750d968b6818c5d87f37ec1ba"
+                "reference": "6d435fcc0e939bf8cfc9d760905d7cbca11261e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/e613b6a8d3771da750d968b6818c5d87f37ec1ba",
-                "reference": "e613b6a8d3771da750d968b6818c5d87f37ec1ba",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/6d435fcc0e939bf8cfc9d760905d7cbca11261e2",
+                "reference": "6d435fcc0e939bf8cfc9d760905d7cbca11261e2",
                 "shasum": ""
             },
             "require": {
@@ -5271,9 +5271,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.10"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.11"
             },
-            "time": "2021-12-20T15:39:58+00:00"
+            "time": "2021-12-23T17:50:01+00:00"
         },
         {
             "name": "solspace/craft3-commons",
