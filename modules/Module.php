@@ -6,7 +6,8 @@ use craft\commerce\elements\Product;
 use craft\commerce\elements\Variant;
 use craft\commerce\models\Address;
 use craft\elements\Entry;
-use craft\events\ModelEvent;
+use craft\base\Element;
+use craft\events\RegisterElementSourcesEvent;
 use craft\web\twig\variables\CraftVariable;
 use modules\services\Reviews;
 use yii\base\Event;
@@ -25,7 +26,7 @@ use yii\base\Event;
  *
  *     'bootstrap' => ['my-module']
  *
- * Learn more about Yii module development in Yii's documentation:
+ * Learn more about Yii module development in Yii’s documentation:
  * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
  */
 class Module extends \yii\base\Module
@@ -33,7 +34,7 @@ class Module extends \yii\base\Module
     /**
      * Initializes the module.
      */
-    public function init()
+    public function init(): void
     {
         // Set a @modules alias pointed to the modules/ directory
         Craft::setAlias('@modules', __DIR__);
@@ -86,7 +87,7 @@ class Module extends \yii\base\Module
             Entry::class,
             Entry::EVENT_AFTER_SAVE,
             function($event) {
-                if ($event->sender && $event->sender->section->handle == 'reviews') {
+                if ($event->sender && $event->sender->section->handle === 'reviews') {
                     Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
                 }
             }
@@ -97,7 +98,7 @@ class Module extends \yii\base\Module
             Entry::class,
             Entry::EVENT_AFTER_DELETE,
             function($event) {
-                if ($event->sender && $event->sender->section->handle == 'reviews') {
+                if ($event->sender && $event->sender->section->handle === 'reviews') {
                     Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
                 }
             }
@@ -107,13 +108,65 @@ class Module extends \yii\base\Module
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
-            function(Event $e) {
+            function(Event $event) {
                 /** @var CraftVariable $variable */
-                $variable = $e->sender;
+                $variable = $event->sender;
 
                 // Attach reviews services
                 $variable->set('reviews', Reviews::class);
             }
         );
+
+        if (Craft::$app->getRequest()->isCpRequest) {
+            // Add our custom “Checkout Pages” source for content editors
+            $singleHandles = [
+              'checkout',
+              'checkoutAddress',
+              'checkoutShipping',
+              'checkoutSummary',
+              'checkoutSuccess',
+            ];
+
+            $sectionIds = [];
+
+            // Get the ID for each single’s handle
+            foreach ($singleHandles as $handle) {
+                if ($section = Craft::$app->getSections()->getSectionByHandle($handle)) {
+                    $sectionIds[] = $section->id;
+                }
+            }
+
+            // Get each single’s corresponding entry ID
+            $entryIdsBySectionId = Entry::find()
+                ->select(['sectionId', 'elements.id'])
+                ->sectionId($sectionIds)
+                ->pairs();
+
+            $entryIds = array_map(static function($sectionId) use ($entryIdsBySectionId) {
+                return $entryIdsBySectionId[$sectionId];
+            }, $sectionIds);
+
+            Event::on(
+                Element::class,
+                Element::EVENT_REGISTER_SOURCES,
+                static function(RegisterElementSourcesEvent $event) use ($entryIds) {
+                    $insertAfter = 2;
+                    $event->sources = array_merge(
+                        array_slice($event->sources, 0, $insertAfter, true),
+                        [
+                            [
+                                'key' => 'checkout',
+                                'label' => Craft::t('site', 'Checkout Pages'),
+                                'criteria' => [
+                                    'id' => $entryIds,
+                                    'fixedOrder' => true,
+                                ],
+                            ]
+                        ],
+                        array_slice($event->sources, $insertAfter)
+                    );
+                }
+            );
+        }
     }
 }

@@ -1,8 +1,6 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{# Variables #}
-
 {# Blocks #}
 {% block content %}
   <!-- Template: {{ _self }}.twig -->
@@ -18,24 +16,22 @@
     </h1>
 
     {% if entry.subheading %}
-      <p class="text-lg text-gray-700">
-        {{- entry.subheading -}}
-      </p>
+      <p class="text-lg text-gray-700">{{ entry.subheading }}</p>
     {% endif %}
 
     {% if not cart.lineItems|length %}
-      <p>
-        <a href="{{ url('bikes') }}" class="button submit">
-          {{- 'Continue Shopping'|t -}}
-        </a>
-      </p>
+      <p><a href="{{ url('bikes') }}" class="button submit">{{ 'Continue Shopping'|t }}</a></p>
     {% endif %}
   </div>
 
   {# Cart #}
   <div class="container flex justify-center">
     <div class="{% if cart.lineItems|length %}border-t border-gray-300 {% endif %}w-full max-w-5xl relative">
-      {{ sprig('_includes/components/forms/cart', { entryId: entry.id }, { id: 'cart-sprig' }) }}
+      {{ sprig('_includes/components/forms/cart', {
+        entryId: entry.id
+      }, {
+        id: 'cart-sprig',
+      }) }}
       <div id="cart-indicator" class="spinner-overlay">
         {% include '_includes/components/spinner' %}
       </div>

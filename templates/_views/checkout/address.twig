@@ -4,8 +4,8 @@
 {# Variables #}
 {% set customer = craft.commerce.customers.customer %}
 {% set addresses = customer ? customer.addresses : [] %}
-{% set shippingPage = craft.entries({ section: 'checkout', type: 'shipping' }).one() %}
-{% set checkoutPage = craft.entries({ section: 'checkout', type: 'checkout' }).one() %}
+{% set shippingPage = craft.entries({ section: 'checkoutShipping' }).one() %}
+{% set checkoutPage = craft.entries({ section: 'checkout' }).one() %}
 
 {# Blocks #}
 {% block content %}
@@ -16,7 +16,9 @@
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
-  {% include '_includes/components/pages/heading' with { heading: entry.title } %}
+  {% include '_includes/components/pages/heading' with {
+    heading: entry.heading ?? entry.title
+  } %}
 
   <div class="container py-12">
     <div class="container flex justify-center">
@@ -70,13 +72,12 @@
               billingAddress: '{{ currentUser and addresses|length and cart.billingAddressId ? cart.billingAddressId : '' }}'
             }">
               <div class="flex items-center">
-                <input id="billingSameAsShipping"
-                      type="checkbox"
-                      name="billingAddressSameAsShipping"
-                      x-model="billingSameAsShipping"
-                      :checked="billingSameAsShipping"
-                      class="checkbox"
-                />
+                {{ input('checkbox', 'billingAddressSameAsShipping', null, {
+                  id: 'billingSameAsShipping',
+                  class: 'checkbox',
+                  'x-model': 'billingSameAsShipping',
+                  ':checked': 'billingSameAsShipping',
+                }) }}
                 <label class="ml-2" for="billingSameAsShipping">{{ 'Use address for billing'|t }}</label>
               </div>
 

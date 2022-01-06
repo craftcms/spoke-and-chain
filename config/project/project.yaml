@@ -1,4 +1,4 @@
-dateModified: 1632164897
+dateModified: 1638479049
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -18,7 +18,6 @@ meta:
     0dbacfe0-78ef-48ff-95a3-b7eb4dc8be86: Emails # Emails
     0f590e76-b015-4dad-b3b6-4bc6e721c244: 'Order Received' # Order Received
     0f952e73-17b8-408c-9c37-3f07a5d16a92: 'Error Pages' # Error Pages
-    1e81b434-e226-440b-9bcf-efb22342a5d0: Summary # Summary
     2a2f0ac5-fb77-412b-8259-4445f3520dae: Shop # Shop
     2af1095c-7195-4f2b-ad59-d4e36ee17dd9: Services # Services
     2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2: Body # Body
@@ -33,7 +32,7 @@ meta:
     6aa1ad27-db4b-4af9-8658-d93eff3d4512: Common # Common
     6d832652-3b7e-417c-8a96-14965cdfd744: Label # Label
     06e900c5-0757-485f-bda2-2875772bbe25: Colors # Colors
-    7bdf6844-d551-446c-97b6-12a24f5348e8: Checkout # Checkout
+    7e2085d8-34c4-41a9-81fc-db0fef15293f: Cart # Cart
     7f531774-b9c9-4fde-8708-762f09ef7191: 'Category Link' # Category Link
     8b2b60fd-6045-4696-b08e-6c601ac1245f: 'Content Managers' # Content Managers
     9b4d8a8b-c63e-4039-a35d-4ab24561f00b: Pages # Pages
@@ -41,13 +40,19 @@ meta:
     9b41a7f2-dc44-4ede-8931-b8f5895093f7: 'Image Alt' # Image Alt
     17eacd1a-f88d-4127-b328-9b69903624fc: Orders # Orders
     18ab3594-a62d-4903-9c6c-b791d64fd4ad: Pages # Pages
+    20eb0536-818f-47ab-b3d8-762b36d90162: 'Checkout: Success' # Checkout: Success
     21dd60d6-92a7-4e82-8884-7dbe57d73c6c: Account # Account
     27dc92a5-4575-4a37-ad4a-09eed2b40038: Page # Page
     32faa6bc-a330-408a-b37a-4e8bde606b43: Reviews # Reviews
+    33b8424b-2140-4fc1-a0bb-6b07da33b045: 'Checkout: Address' # Checkout: Address
+    42b7e744-7597-4a2c-991e-8ba00290c19f: Checkout # Checkout
     51e3a5d4-240b-447d-88c5-443e30489a59: 'Equipment Type' # Equipment Type
     54f6a656-b4ef-4d80-86dc-2ed613f64056: 'Business Hours' # Business Hours
+    58f90099-0367-42d6-a8e0-076eab66373b: 'Checkout: Summary' # Checkout: Summary
     63ae8822-3b4e-4a3d-b902-eba33875c230: Footer # Footer
     68e89100-65f8-4cef-9eee-a07652f3e68a: PDFs # PDFs
+    70e125cc-65ea-4a3f-a65f-a5c91efcbfe7: Checkout # Checkout
+    74c53fbd-78e5-4125-87f7-38c75efce7d3: Cart # Cart
     77bd0dab-6333-4b99-8a94-7e6042944ba7: Received # Received
     86ec2b26-5d53-4798-8fb0-927890e52039: Body # Body
     89d30b8d-7f71-4571-bfd3-572a14dc6538: 'VIP Customers' # VIP Customers
@@ -76,7 +81,7 @@ meta:
     21814db2-4816-41e4-bdc9-7d25e0869666: Register # Register
     56579ab7-dd43-426d-a734-d7fbc26fa861: Search # Search
     60203e95-0439-4fdf-a99f-b85c845abc12: Homepage # Homepage
-    73150d2f-c0ce-44c6-a07a-1521dd2e2c5c: Shipping # Shipping
+    92145d02-d68b-4c71-a8be-fa082467d8fc: 'Checkout: Shipping' # Checkout: Shipping
     384841aa-9783-4efd-a81f-0f4aa159ab33: Bikes # Bikes
     520350fa-6eaf-4bc0-9568-687055d5b462: Form # Form
     562224df-c083-4f48-b0b3-7bdcb9bd8df9: Material # Material
@@ -92,27 +97,28 @@ meta:
     a47082e1-a4c7-48c4-b08e-e84d5dae0956: Search # Search
     aa9bb63f-85d8-4935-8f06-939e8b8707ae: Delivered # Delivered
     aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57: 'Bike Types' # Bike Types
+    ab006600-8f38-47a9-a12d-6627bcac15d9: 'Checkout: Shipping' # Checkout: Shipping
     ab1e76a4-82ae-4059-900e-5f9d8df35d49: Articles # Articles
     acc12fef-5130-43fe-97ca-e77013797195: Shipped # Shipped
     b9cb6112-ebae-420b-bae9-a54c387419f6: 'Footer Nav' # Footer Nav
-    b29c63ea-aba1-4ef6-80be-a0096df13673: Cart # Cart
     ba0c0b5b-813d-4075-acec-9700550b80ae: 'Image Caption' # Image Caption
     ba795823-7853-4c7d-8337-136027e1e738: Bikes # Bikes
     bd167f4d-e985-4aec-b6e4-9ba85fbe69f9: 'Content Blocks' # Content Blocks
     be4e2a2f-de59-4443-a08e-476d20bc36d6: Plans # Plans
-    c6eb6f01-8c28-440f-afa6-6b7563ae7a47: Success # Success
+    c3af370d-8c71-468a-b040-1583d3342b27: 'Checkout: Summary' # Checkout: Summary
     c31c5919-08e9-4f36-a47e-1c2c169b993a: 'Error Pages' # Error Pages
+    c41d2205-c49f-48ac-9313-177916b70313: 'Checkout: Success' # Checkout: Success
     c72e6534-fbe0-487c-8612-387f5ec5f0c5: 'Full Width Image' # Full Width Image
     cb3481b3-e34c-4104-b4da-6f86236f44ca: Product # Product
     d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca: 'Plain Text 1' # Plain Text 1
     d64cd626-dade-430d-98d1-9b9be69592c0: Services # Services
+    d1927da5-c26d-4063-b443-dc05b85a6468: 'Checkout: Address' # Checkout: Address
     d5599be5-4ce7-4f5f-997b-843257caca75: Heading # Heading
     d6666f58-4d11-4bd3-b5bd-bc92b52a538c: Products # Products
     d52553ad-dd63-4dfd-8740-d53484afbcb3: Product # Product
     dc8a137a-73b2-4265-8824-3bae6e662462: Confirmed # Confirmed
     dcd08ed8-faa8-45a2-8716-27077ce6410f: Invoice # Invoice
     dcef5c5f-2446-44fa-8898-1bc3daa2d2fd: 'Equipment Types' # Equipment Types
-    dd4a6a83-ea8a-4ad5-abca-4a2d8ae87373: Address # Address
     e7ec0fe3-e0bc-474d-837d-3159984e36f3: SEO # SEO
     e9aeb271-1582-40b5-b7c8-dc4bed8d7bfe: 'Store Managers' # Store Managers
     e9eeb095-1668-49fe-99a2-36721c1bdbec: Icon # Icon
@@ -126,7 +132,6 @@ meta:
     f2df00c0-373c-4c6a-8b92-af04075dd56c: Contact # Contact
     f3c02b05-5d6b-423e-96b9-0071d0284f5b: Dashboard # Dashboard
     f3de475b-4a85-4e74-b144-4ff3e464f057: 'Bike Type' # Bike Type
-    f6e39d3c-bc6d-4fac-b921-c655cde09804: Checkout # Checkout
     fa42e7b9-0e6f-4d2b-8bf7-9fb4e1cc9010: Body # Body
     fcaf6130-3481-4680-bf31-2ee9b178c554: Stars # Stars
     ffe46793-3b3a-449d-a04e-5481d759fb9f: Reviews # Reviews
@@ -138,7 +143,7 @@ plugins:
   commerce:
     edition: pro
     enabled: true
-    schemaVersion: 3.4.11
+    schemaVersion: 3.4.12
   default-dashboard:
     edition: standard
     enabled: true
@@ -152,7 +157,7 @@ plugins:
   freeform:
     edition: pro
     enabled: true
-    schemaVersion: 3.3.2
+    schemaVersion: 3.5.1
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: null
