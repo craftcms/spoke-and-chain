@@ -17,43 +17,79 @@ Most entries have the same basic required fields you’ll see in any CMS:
 
 ## Field Types
 
-https://craftcms.com/docs/getting-started-tutorial/configure/modeling.html#fields
+Craft’s flexible content modeling is facilitated by the ability to add any number of custom fields to the element types we just looked at on the Content page. These can be the [fields Craft ships with](https://craftcms.com/docs/getting-started-tutorial/configure/modeling.html#fields) and many more available [on the plugin store](https://plugins.craftcms.com/categories/fields). (Or even your own field types, if you want to build and add your own!)
+
+Let’s look at some of Spoke & Chain’s custom fields and some content editing features.
 
 ### Plain Text
 
 ![](/guide/plain-text.png)
 
+Plain Text fields, like this **Heading** on the homepage, are for simple, unstyled text. They can be single- or multi-line and optionally have character limits.
+
 ### Assets
 
 ![](/guide/assets-field.png)
+
+Assets fields make it easy to upload or select files. Each field can be configured to specify how many files are allowed, where files can be uploaded to and chosen from, what types of files are acceptable, etc. This **Main Image** field on the homepage is re-used in a few other places (like the Services page) where it has the exact same effect on the front end.
+
+You can double-click a file to edit its details in place and use the asset editor we saw earlier. Since this is a relational field, any changes you make to assets will be maintained across the entire site.
 
 ### Categories
 
 ![](/guide/categories-field.png)
 
-- point out product categories
+Our bicycle products (**Commerce** → **Products**) use multiple Categories fields for establishing relationships to the categories managed in the **Categories** section of the control panel. Each field can designate whichever category groups should be available for the content author to select. In this case, the **Colors** field only allows selection from the “Colors” category group, while the **Material** field limits selection to the “Material” category group.
+
+Like the Assets field above, you can double-click any category to edit its name and fields in a slideout panel. Any changes you make will be maintained for that category across the site.
 
 ### Matrix
 
 ![](/guide/matrix-add-block.png)
 
+You can pick any page in **Entries** → **Landing Pages** to see an example of a Matrix field.
+
+Matrix is a powerful, complex field type that works great with modular design systems. You’d configure a Matrix field with any number of blocks, which are specific named groupings of whatever fields you want. Content authors can add and arrange these blocks to compose content, and developers get clean, predictable data to work with building the front end.
+
 ![](/guide/matrix-menu.png)
+
+Matrix blocks can be easily rearranged, collapsed, and even individually disabled if their content isn’t ready to be published.
+
+You’ll see a rich text Redactor field and lightswitch field in the **Body** block here as well, which you could use outside of Matrix blocks. Any fields that are available can be used on their own and inside Matrix blocks—how you choose to use them is totally up to you.
 
 ## Preview
 
 ![](/guide/preview.png)
 
+To see what a page is going to look like before publishing it, press the **Preview** button.
+
+This slides open a pane that displays whatever content you’re currently editing, and it will update as you make changes. You can preview the page content in desktop, tablet, and mobile formats as well.
+
 ### Preview Targets
 
 ![](/guide/preview-targets.png)
+
+It makes sense that you’d want to see an entry or product’s detail page, but you might also want to see what your edits will look like somewhere else on the site. This is exactly what Craft’s Preview Targets are for. You can configure whatever preview options you’d like for each section, maybe to see an item on the homepage or in product listings.
+
+A third-party plugin called [SEOmatic](https://plugins.craftcms.com/seomatic) programmatically adds its own **Social Media Preview** target here as well, so you can see how the article would appear in Google search results, and on Twitter or Facebook.
 
 ### Sharing Previews
 
 ![](/guide/sharing-previews.png)
 
+Any of those preview targets we just looked at can be shared easily.
+
+Press the **View** button and click a preview target. This opens a new browser tab or window with a full-screen preview. The URL includes a special token specifically for this preview, and Craft will maintain it as you browse the site. The token expires after [one day by default](https://craftcms.com/docs/3.x/config/config-settings.html#previewtokenduration), but you can change that to whatever time limit you’d prefer.
+
+This is a convenient way of sharing content for review with people that may not have access to the Craft CMS control panel, on top of being a way to see your content exactly how it will appear once published.
+
 ### Drafts and Versioning
 
 ![](/guide/drafts-versioning.png)
+
+Click on the dropdown menu just to the right of the page title. Any time you publish changes, create a draft, or make edits, this is where you’ll be able to get back to them. You can use **Preview** and **View** the same way with anything in this menu, and Craft will prompt you to decide what to do with any unsaved edits.
+
+Changed fields will also be highlighted in the editor so you’re able to quickly spot differences between unpublished content and the live version.
 
 {% endset %}
 
