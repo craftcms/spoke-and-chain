@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.208.10",
+            "version": "3.209.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a7802ac9289e0c4de2c76cfe0ea0f11f72955754"
+                "reference": "77c14dd84704d2db6c5c4d6a8c1226337e4e6783"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a7802ac9289e0c4de2c76cfe0ea0f11f72955754",
-                "reference": "a7802ac9289e0c4de2c76cfe0ea0f11f72955754",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/77c14dd84704d2db6c5c4d6a8c1226337e4e6783",
+                "reference": "77c14dd84704d2db6c5c4d6a8c1226337e4e6783",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.208.10"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.2"
             },
-            "time": "2022-01-05T19:19:54+00:00"
+            "time": "2022-01-10T19:14:32+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -2549,16 +2549,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.6.4",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "830a36d93aeaf06e540e90ec031babb3c6eafadb"
+                "reference": "cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/830a36d93aeaf06e540e90ec031babb3c6eafadb",
-                "reference": "830a36d93aeaf06e540e90ec031babb3c6eafadb",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1",
+                "reference": "cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1",
                 "shasum": ""
             },
             "require": {
@@ -2569,8 +2569,8 @@
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~2.3.0",
-                "phpbench/phpbench": "^0.17.1",
-                "phpunit/phpunit": "~9.3.7",
+                "phpbench/phpbench": "^1.0",
+                "phpunit/phpunit": "^9.3.7",
                 "psalm/plugin-phpunit": "^0.16.0",
                 "vimeo/psalm": "^4.7"
             },
@@ -2604,7 +2604,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-12-29T14:33:01+00:00"
+            "time": "2022-01-10T11:18:55+00:00"
         },
         {
             "name": "league/flysystem",
@@ -8020,16 +8020,16 @@
         },
         {
             "name": "voku/stringy",
-            "version": "6.4.4",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Stringy.git",
-                "reference": "b8b2ac807e99209b499a8f9b88eed7aea9649da8"
+                "reference": "ab6a3236369503758f851fd22f1b39f91f99d498"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Stringy/zipball/b8b2ac807e99209b499a8f9b88eed7aea9649da8",
-                "reference": "b8b2ac807e99209b499a8f9b88eed7aea9649da8",
+                "url": "https://api.github.com/repos/voku/Stringy/zipball/ab6a3236369503758f851fd22f1b39f91f99d498",
+                "reference": "ab6a3236369503758f851fd22f1b39f91f99d498",
                 "shasum": ""
             },
             "require": {
@@ -8111,7 +8111,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-21T05:57:02+00:00"
+            "time": "2022-01-06T21:09:13+00:00"
         },
         {
             "name": "voku/urlify",
@@ -8432,6 +8432,7 @@
                 "source": "https://github.com/yii2tech/ar-softdelete",
                 "wiki": "https://github.com/yii2tech/ar-softdelete/wiki"
             },
+            "abandoned": true,
             "time": "2019-07-30T11:05:57+00:00"
         },
         {
