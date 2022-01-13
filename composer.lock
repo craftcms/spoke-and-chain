@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.3",
+            "version": "3.209.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "1c351046d8fd46961f4d020d38624d46065134cf"
+                "reference": "784e5ccc1b544db5018a41fc4dbfeda4c7d436b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1c351046d8fd46961f4d020d38624d46065134cf",
-                "reference": "1c351046d8fd46961f4d020d38624d46065134cf",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/784e5ccc1b544db5018a41fc4dbfeda4c7d436b3",
+                "reference": "784e5ccc1b544db5018a41fc4dbfeda4c7d436b3",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.4"
             },
-            "time": "2022-01-11T19:13:42+00:00"
+            "time": "2022-01-12T19:14:37+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -922,16 +922,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "3.4.9.3",
+            "version": "3.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "690e9a7954f9088460d12e025f77fad12dc0a42f"
+                "reference": "17a1cfbd0df4455ab0ad2f003f506e05b9b1a521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/690e9a7954f9088460d12e025f77fad12dc0a42f",
-                "reference": "690e9a7954f9088460d12e025f77fad12dc0a42f",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/17a1cfbd0df4455ab0ad2f003f506e05b9b1a521",
+                "reference": "17a1cfbd0df4455ab0ad2f003f506e05b9b1a521",
                 "shasum": ""
             },
             "require": {
@@ -954,7 +954,7 @@
             "type": "craft-plugin",
             "extra": {
                 "handle": "commerce",
-                "version": "3.4.9.3",
+                "version": "3.4.10",
                 "name": "Craft Commerce",
                 "description": "Create beautifully bespoke ecommerce experiences",
                 "developer": "Pixel & Tonic",
@@ -986,7 +986,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2021-12-23T22:09:34+00:00"
+            "time": "2022-01-12T16:07:09+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -3553,16 +3553,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.4.21",
+            "version": "3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "cab8c6dc3190092918b5899ace67101fb596c3a4"
+                "reference": "8ff2e5735bc72b73a346c70a0c1a371a832d1a1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/cab8c6dc3190092918b5899ace67101fb596c3a4",
-                "reference": "cab8c6dc3190092918b5899ace67101fb596c3a4",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/8ff2e5735bc72b73a346c70a0c1a371a832d1a1b",
+                "reference": "8ff2e5735bc72b73a346c70a0c1a371a832d1a1b",
                 "shasum": ""
             },
             "require": {
@@ -3616,7 +3616,7 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.21"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.22"
             },
             "funding": [
                 {
@@ -3624,7 +3624,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-13T20:08:46+00:00"
+            "time": "2022-01-12T18:24:39+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -5304,16 +5304,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.108.0",
+            "version": "v7.109.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "81524a3087612f1b41846b9cd6deb80150af985b"
+                "reference": "01d53390c0628cb2c702131f1854d76d2022fd25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/81524a3087612f1b41846b9cd6deb80150af985b",
-                "reference": "81524a3087612f1b41846b9cd6deb80150af985b",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/01d53390c0628cb2c702131f1854d76d2022fd25",
+                "reference": "01d53390c0628cb2c702131f1854d76d2022fd25",
                 "shasum": ""
             },
             "require": {
@@ -5358,9 +5358,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.108.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.109.0"
             },
-            "time": "2021-12-22T16:40:02+00:00"
+            "time": "2022-01-12T16:19:43+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
