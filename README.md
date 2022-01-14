@@ -51,12 +51,16 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
     - database engine: `mysql-8.0-*.database.nitro` (or `mariadb-latest-*.database.nitro`)
     - database name: `spokeandchain`
     - update env file? `Y`
-4. Optionally seed demo data:
+4. Restore the initial database
+   ```zsh
+   nitro craft db/restore seed.sql
+   ```
+5. Optionally seed demo data:
    ```zsh
    nitro craft demos/seed
    ```
    > ⚠️ The Craft site is offline by default, and the seeder turns it on when it’s finished. If you skip this step, you’ll need to manually bring the site online by navigating to **Settings** → **General Settings** and switching **System Status** to “Online”.
-5. Move to the project directory and add a Craft account for yourself by following the prompts:
+6. Move to the project directory and add a Craft account for yourself by following the prompts:
     ```zsh
     cd spokeandchain
     nitro craft users/create --admin
