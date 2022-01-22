@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.9",
+            "version": "3.209.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "610edb3dca29698b65cf5d7cd7196bc87af7a9de"
+                "reference": "45082e9fac26bdbc5db504639373374084f616d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/610edb3dca29698b65cf5d7cd7196bc87af7a9de",
-                "reference": "610edb3dca29698b65cf5d7cd7196bc87af7a9de",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45082e9fac26bdbc5db504639373374084f616d3",
+                "reference": "45082e9fac26bdbc5db504639373374084f616d3",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.10"
             },
-            "time": "2022-01-20T19:16:31+00:00"
+            "time": "2022-01-21T19:18:51+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -456,23 +456,23 @@
         },
         {
             "name": "composer/pcre",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "3d322d715c43a1ac36c7fe215fa59336265500f2"
+                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/3d322d715c43a1ac36c7fe215fa59336265500f2",
-                "reference": "3d322d715c43a1ac36c7fe215fa59336265500f2",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/67a32d7d6f9f560b726ab25a061b38ff3a80c560",
+                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.2 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1",
+                "phpstan/phpstan": "^1.3",
                 "phpstan/phpstan-strict-rules": "^1.1",
                 "symfony/phpunit-bridge": "^4.2 || ^5"
             },
@@ -507,7 +507,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/1.0.0"
+                "source": "https://github.com/composer/pcre/tree/1.0.1"
             },
             "funding": [
                 {
@@ -523,7 +523,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-06T15:17:27+00:00"
+            "time": "2022-01-21T20:24:37+00:00"
         },
         {
             "name": "composer/semver",
@@ -814,16 +814,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.30",
+            "version": "3.7.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "354d6cc25588fef33336798583ec60540cf7d210"
+                "reference": "5c17ca766e18c2b4722b24b9d3216fcf8808f858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/354d6cc25588fef33336798583ec60540cf7d210",
-                "reference": "354d6cc25588fef33336798583ec60540cf7d210",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/5c17ca766e18c2b4722b24b9d3216fcf8808f858",
+                "reference": "5c17ca766e18c2b4722b24b9d3216fcf8808f858",
                 "shasum": ""
             },
             "require": {
@@ -918,7 +918,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-01-20T18:47:39+00:00"
+            "time": "2022-01-21T22:33:24+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -2545,16 +2545,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.7.0",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1"
+                "reference": "bcd869e2fe88d567800057c1434f2380354fe325"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1",
-                "reference": "cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/bcd869e2fe88d567800057c1434f2380354fe325",
+                "reference": "bcd869e2fe88d567800057c1434f2380354fe325",
                 "shasum": ""
             },
             "require": {
@@ -2600,7 +2600,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-01-10T11:18:55+00:00"
+            "time": "2022-01-21T15:50:46+00:00"
         },
         {
             "name": "league/flysystem",
@@ -5190,16 +5190,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.12.11",
+            "version": "3.12.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "6d435fcc0e939bf8cfc9d760905d7cbca11261e2"
+                "reference": "9b41a7d2af4d93cbd799cb22470a660dab942070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/6d435fcc0e939bf8cfc9d760905d7cbca11261e2",
-                "reference": "6d435fcc0e939bf8cfc9d760905d7cbca11261e2",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/9b41a7d2af4d93cbd799cb22470a660dab942070",
+                "reference": "9b41a7d2af4d93cbd799cb22470a660dab942070",
                 "shasum": ""
             },
             "require": {
@@ -5264,9 +5264,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.11"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.12"
             },
-            "time": "2021-12-23T17:50:01+00:00"
+            "time": "2022-01-21T19:23:17+00:00"
         },
         {
             "name": "solspace/craft3-commons",
