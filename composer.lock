@@ -1098,20 +1098,23 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.8.8",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "c0272678a9d9bdc3990b36079e42667acdcd7016"
+                "reference": "1fdc24225b4b7a9e8afa2052abda0d101c81b41c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/c0272678a9d9bdc3990b36079e42667acdcd7016",
-                "reference": "c0272678a9d9bdc3990b36079e42667acdcd7016",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/1fdc24225b4b7a9e8afa2052abda0d101c81b41c",
+                "reference": "1fdc24225b4b7a9e8afa2052abda0d101c81b41c",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.5.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.96"
             },
             "type": "craft-plugin",
             "extra": {
@@ -1149,7 +1152,7 @@
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom",
                 "source": "https://github.com/craftcms/redactor"
             },
-            "time": "2021-08-02T08:18:53+00:00"
+            "time": "2022-01-31T15:50:45+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -3553,16 +3556,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.4.22",
+            "version": "3.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "8ff2e5735bc72b73a346c70a0c1a371a832d1a1b"
+                "reference": "39163ac58ad0ac22a8befb7287de6904bc2df9ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/8ff2e5735bc72b73a346c70a0c1a371a832d1a1b",
-                "reference": "8ff2e5735bc72b73a346c70a0c1a371a832d1a1b",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/39163ac58ad0ac22a8befb7287de6904bc2df9ef",
+                "reference": "39163ac58ad0ac22a8befb7287de6904bc2df9ef",
                 "shasum": ""
             },
             "require": {
@@ -3616,7 +3619,7 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.22"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.23"
             },
             "funding": [
                 {
@@ -3624,7 +3627,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-12T18:24:39+00:00"
+            "time": "2022-01-31T17:14:16+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
