@@ -4714,22 +4714,22 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "1.10.4",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "527b84b25fe94a5c51f98db8721f9d875e5d972f"
+                "reference": "90fbaacba0daacb88956e6b8ef7dfa50e037eaff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/527b84b25fe94a5c51f98db8721f9d875e5d972f",
-                "reference": "527b84b25fe94a5c51f98db8721f9d875e5d972f",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/90fbaacba0daacb88956e6b8ef7dfa50e037eaff",
+                "reference": "90fbaacba0daacb88956e6b8ef7dfa50e037eaff",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.3.0",
                 "phpdocumentor/reflection-docblock": "^5.2.0",
-                "putyourlightson/craft-sprig-core": "^1.1.4"
+                "putyourlightson/craft-sprig-core": "^1.2.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -4763,20 +4763,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-22T10:18:56+00:00"
+            "time": "2022-02-01T21:50:37+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "1.1.6",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "7a457a0a45296b4384442e64921af6cd2b4794ee"
+                "reference": "5510dad2e122a80d987ea5f5288f53d89df91b25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/7a457a0a45296b4384442e64921af6cd2b4794ee",
-                "reference": "7a457a0a45296b4384442e64921af6cd2b4794ee",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/5510dad2e122a80d987ea5f5288f53d89df91b25",
+                "reference": "5510dad2e122a80d987ea5f5288f53d89df91b25",
                 "shasum": ""
             },
             "require": {
@@ -4804,7 +4804,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2021-11-08T11:03:32+00:00"
+            "time": "2022-02-01T21:40:58+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5193,16 +5193,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.12.12.1",
+            "version": "3.12.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "ca9b3ba0f99faa44c983830b67149f03ca7cdeb8"
+                "reference": "720c4368f4f417aacd3ee4e136b4495150301414"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/ca9b3ba0f99faa44c983830b67149f03ca7cdeb8",
-                "reference": "ca9b3ba0f99faa44c983830b67149f03ca7cdeb8",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/720c4368f4f417aacd3ee4e136b4495150301414",
+                "reference": "720c4368f4f417aacd3ee4e136b4495150301414",
                 "shasum": ""
             },
             "require": {
@@ -5267,9 +5267,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.12.1"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.12.13"
             },
-            "time": "2022-01-26T19:51:45+00:00"
+            "time": "2022-02-01T20:33:41+00:00"
         },
         {
             "name": "solspace/craft3-commons",
