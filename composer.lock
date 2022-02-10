@@ -923,16 +923,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "3.4.10.1",
+            "version": "3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "142a2011afbe14d0f8ec810b181dc4dd839eb05d"
+                "reference": "b5f017a0ff5c92633c75e28b5499f00f786bc938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/142a2011afbe14d0f8ec810b181dc4dd839eb05d",
-                "reference": "142a2011afbe14d0f8ec810b181dc4dd839eb05d",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/b5f017a0ff5c92633c75e28b5499f00f786bc938",
+                "reference": "b5f017a0ff5c92633c75e28b5499f00f786bc938",
                 "shasum": ""
             },
             "require": {
@@ -955,7 +955,7 @@
             "type": "craft-plugin",
             "extra": {
                 "handle": "commerce",
-                "version": "3.4.10.1",
+                "version": "3.4.11",
                 "name": "Craft Commerce",
                 "description": "Create beautifully bespoke ecommerce experiences",
                 "developer": "Pixel & Tonic",
@@ -987,7 +987,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-01-13T10:10:05+00:00"
+            "time": "2022-02-10T05:54:48+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
