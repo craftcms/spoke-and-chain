@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.22",
+            "version": "3.209.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2f8a8c885daf45fe9f919312a66a68115d6733b5"
+                "reference": "6082f5df05e5c725a44a310649a922b32bbeec54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2f8a8c885daf45fe9f919312a66a68115d6733b5",
-                "reference": "2f8a8c885daf45fe9f919312a66a68115d6733b5",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6082f5df05e5c725a44a310649a922b32bbeec54",
+                "reference": "6082f5df05e5c725a44a310649a922b32bbeec54",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.22"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.23"
             },
-            "time": "2022-02-10T19:14:07+00:00"
+            "time": "2022-02-11T19:13:32+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -990,6 +990,52 @@
             "time": "2022-02-10T05:54:48+00:00"
         },
         {
+            "name": "craftcms/html-field",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/html-field.git",
+                "reference": "8070d78ed621e7f5b5919b6d98d6cdeb91b3db15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/8070d78ed621e7f5b5919b6d98d6cdeb91b3db15",
+                "reference": "8070d78ed621e7f5b5919b6d98d6cdeb91b3db15",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.6.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.96"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "craft\\htmlfield\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Base class for Craft CMS field types with HTML values.",
+            "support": {
+                "docs": "https://github.com/craftcms/html-field/blob/main/README.md",
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/html-field/issues?state=open",
+                "rss": "https://github.com/craftcms/html-field/commits/main.atom",
+                "source": "https://github.com/craftcms/html-field"
+            },
+            "time": "2022-02-11T20:44:07+00:00"
+        },
+        {
             "name": "craftcms/oauth2-craftid",
             "version": "1.0.0.1",
             "source": {
@@ -1099,20 +1145,21 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.9.1",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "2f3d9dbe86e13203ccd66ff25ceeca1708dd243a"
+                "reference": "453849dca051258b34351ec6a46096a1c50ae610"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/2f3d9dbe86e13203ccd66ff25ceeca1708dd243a",
-                "reference": "2f3d9dbe86e13203ccd66ff25ceeca1708dd243a",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/453849dca051258b34351ec6a46096a1c50ae610",
+                "reference": "453849dca051258b34351ec6a46096a1c50ae610",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.5.0"
+                "craftcms/cms": "^3.6.0",
+                "craftcms/html-field": "^1.0.4"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.96"
@@ -1153,7 +1200,7 @@
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom",
                 "source": "https://github.com/craftcms/redactor"
             },
-            "time": "2022-02-07T10:51:12+00:00"
+            "time": "2022-02-11T20:57:18+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -3559,16 +3606,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.4.24",
+            "version": "3.4.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "e588aab4a53cfdcbe71f5979042143ecc2303c80"
+                "reference": "538d19583acb391728cffd7c824bf88de4983352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/e588aab4a53cfdcbe71f5979042143ecc2303c80",
-                "reference": "e588aab4a53cfdcbe71f5979042143ecc2303c80",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/538d19583acb391728cffd7c824bf88de4983352",
+                "reference": "538d19583acb391728cffd7c824bf88de4983352",
                 "shasum": ""
             },
             "require": {
@@ -3622,7 +3669,7 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.24"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.4.25"
             },
             "funding": [
                 {
@@ -3630,7 +3677,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-10T15:07:00+00:00"
+            "time": "2022-02-11T17:12:37+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
