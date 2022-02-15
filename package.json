@@ -67,7 +67,7 @@
     "webapp-webpack-plugin": "^2.7.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dashboard": "^3.2.1",
+    "webpack-dashboard": "^3.3.7",
     "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^5.1.4",
