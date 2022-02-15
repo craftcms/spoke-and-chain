@@ -7634,16 +7634,16 @@
         },
         {
             "name": "voku/anti-xss",
-            "version": "4.1.36",
+            "version": "4.1.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/anti-xss.git",
-                "reference": "0d8f17f7298a6ffa7bc30b01e44f10e8a7460322"
+                "reference": "728e158427a263917f33b0a29eb75d866bd18d17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/anti-xss/zipball/0d8f17f7298a6ffa7bc30b01e44f10e8a7460322",
-                "reference": "0d8f17f7298a6ffa7bc30b01e44f10e8a7460322",
+                "url": "https://api.github.com/repos/voku/anti-xss/zipball/728e158427a263917f33b0a29eb75d866bd18d17",
+                "reference": "728e158427a263917f33b0a29eb75d866bd18d17",
                 "shasum": ""
             },
             "require": {
@@ -7689,7 +7689,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/anti-xss/issues",
-                "source": "https://github.com/voku/anti-xss/tree/4.1.36"
+                "source": "https://github.com/voku/anti-xss/tree/4.1.37"
             },
             "funding": [
                 {
@@ -7713,20 +7713,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-27T07:19:19+00:00"
+            "time": "2022-02-15T01:57:51+00:00"
         },
         {
             "name": "voku/arrayy",
-            "version": "7.8.14",
+            "version": "7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "c0e81f658abde496422441f7659c13055e8e021a"
+                "reference": "8c56970123b8c6d62d3583f0ba1eb6846b62d913"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/c0e81f658abde496422441f7659c13055e8e021a",
-                "reference": "c0e81f658abde496422441f7659c13055e8e021a",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/8c56970123b8c6d62d3583f0ba1eb6846b62d913",
+                "reference": "8c56970123b8c6d62d3583f0ba1eb6846b62d913",
                 "shasum": ""
             },
             "require": {
@@ -7796,7 +7796,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-21T19:47:30+00:00"
+            "time": "2022-02-15T10:43:00+00:00"
         },
         {
             "name": "voku/email-check",
