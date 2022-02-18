@@ -1145,16 +1145,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.10.2",
+            "version": "2.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "2cf54b2e99dfb472789eb8ab026c01855c61bdd0"
+                "reference": "d77630362e415ee95cbf7aa95b746bbfe8c30232"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/2cf54b2e99dfb472789eb8ab026c01855c61bdd0",
-                "reference": "2cf54b2e99dfb472789eb8ab026c01855c61bdd0",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/d77630362e415ee95cbf7aa95b746bbfe8c30232",
+                "reference": "d77630362e415ee95cbf7aa95b746bbfe8c30232",
                 "shasum": ""
             },
             "require": {
@@ -1200,7 +1200,7 @@
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom",
                 "source": "https://github.com/craftcms/redactor"
             },
-            "time": "2022-02-17T13:45:27+00:00"
+            "time": "2022-02-18T07:29:48+00:00"
         },
         {
             "name": "craftcms/server-check",
