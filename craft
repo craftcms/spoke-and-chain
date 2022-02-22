@@ -16,9 +16,18 @@ if (class_exists('Dotenv\Dotenv') && file_exists(CRAFT_BASE_PATH.'/.env')) {
     Dotenv\Dotenv::create(CRAFT_BASE_PATH)->load();
 }
 
-// Load and run Craft
 define('CRAFT_STREAM_LOG', true);
 define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
+
+if ($storagePath = getenv('CRAFT_STORAGE_PATH')) {
+    define('CRAFT_STORAGE_PATH', $storagePath);
+}
+
+if ($ephemeral = getenv('CRAFT_EPHEMERAL')) {
+    define('CRAFT_EPHEMERAL', filter_var($ephemeral, FILTER_VALIDATE_BOOL));
+}
+
+// Load and run Craft
 /** @var craft\console\Application $app */
 $app = require CRAFT_VENDOR_PATH.'/craftcms/cms/bootstrap/console.php';
 $exitCode = $app->run();
