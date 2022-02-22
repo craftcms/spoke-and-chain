@@ -22,7 +22,7 @@ return [
         // Public server config
         'server' => [
             'manifestPath' => '@webroot/dist',
-            'publicPath' => '/',
+            'publicPath' => App::env('S3_BASE_URL') ?: '/',
         ],
         // webpack-dev-server config
         'devServer' => [

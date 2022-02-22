@@ -50,9 +50,21 @@ handle: images
 hasUrls: true
 name: Images
 settings:
-  path: '@webroot/assets/images'
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: ''
+  cfPrefix: ''
+  expires: ''
+  keyId: ''
+  makeUploadsPublic: '1'
+  region: $AWS_REGION
+  secret: ''
+  storageClass: ''
+  subfolder: assets/images
 sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
-type: craft\volumes\Local
-url: '@web/assets/images'
+type: craft\awss3\Volume
+url: $S3_BASE_URL

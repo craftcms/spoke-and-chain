@@ -2,6 +2,7 @@
 
 namespace modules\demos;
 
+use craft\helpers\App;
 use modules\demos\widgets\Guide;
 
 use Craft;
@@ -10,6 +11,8 @@ use craft\events\RegisterTemplateRootsEvent;
 use craft\services\Dashboard;
 use craft\web\View;
 use yii\base\Event;
+use craft\awss3\Volume as AwsVolume;
+use craft\volumes\Local as LocalVolume;
 
 class Module extends \yii\base\Module
 {
@@ -24,6 +27,10 @@ class Module extends \yii\base\Module
         }
 
         parent::init();
+
+        if (App::env('CRAFT_USE_LOCAL_VOLUMES')) {
+            $this->_useLocalVolumes();
+        }
 
         Event::on(
             View::class,
@@ -41,5 +48,28 @@ class Module extends \yii\base\Module
                 $event->types[] = Guide::class;
             }
         );
+    }
+
+    private function _useLocalVolumes()
+    {
+        Craft::$container->set(AwsVolume::class, function ($container, $params, $config) {
+            if (empty($config['id'])) {
+                return new AwsVolume($config);
+            }
+
+            return new LocalVolume([
+                'id' => $config['id'],
+                'uid' => $config['uid'],
+                'name' => $config['name'],
+                'handle' => $config['handle'],
+                'hasUrls' => $config['hasUrls'],
+                'url' => "@web/{$config['subfolder']}",
+                'path' => "@webroot/{$config['subfolder']}",
+                'sortOrder' => $config['sortOrder'],
+                'dateCreated' => $config['dateCreated'],
+                'dateUpdated' => $config['dateUpdated'],
+                'fieldLayoutId' => $config['fieldLayoutId'],
+            ]);
+        });
     }
 }
