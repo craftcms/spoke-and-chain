@@ -21,7 +21,7 @@ return [
         ],
         // Public server config
         'server' => [
-            'manifestPath' => '@webroot/dist',
+            'manifestPath' => '@webroot/assets/dist',
             'publicPath' => App::env('S3_BASE_URL') ?: '/',
         ],
         // webpack-dev-server config
@@ -40,7 +40,7 @@ return [
         // Local files config
         'localFiles' => [
             'basePath' => '@webroot/',
-            'criticalPrefix' => 'dist/criticalcss/',
+            'criticalPrefix' => 'assets/dist/criticalcss/',
             'criticalSuffix' => '_critical.min.css',
         ],
     ],

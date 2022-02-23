@@ -3,7 +3,7 @@
 
 Spoke & Chain is a fully-custom ecommerce site for a fictitious bike shop, built with [Craft CMS](https://craftcms.com) and [Craft Commerce](https://craftcms.com/commerce), with fabulous product imagery thanks to the friendly folks at [Marin Bikes](https://www.marinbikes.com).
 
-![](/guide/homepage.png)
+![]({{ alias('@assetBaseUrl/assets/guide/homepage.png') }})
 
 This guide you’re reading—courtesy of the [Guide](https://plugins.craftcms.com/guide) Craft CMS plugin—is here to offer a tour of the build.
 
@@ -19,7 +19,7 @@ We know you’re probably not looking to build a website for a fake bike shop, s
 
 You can jump straight to [the front end]() from anywhere in the Craft control panel by clicking **Spoke & Chain** in the main navigation:
 
-![](/guide/site-link.png)
+![]({{ alias('@assetBaseUrl/assets/guide/site-link.png') }})
 
 The front end is built with Twig, Craft’s native templating system, with modern CSS and JavaScript.  
 
@@ -44,7 +44,7 @@ You’ve clearly made it to the control panel, which is where developers configu
 
 Before we go any further, you may want to visit your [account preferences]({{ cpUrl('myaccount#prefs') }}) to make the control panel a little more comfortable. Select the profile menu in the top right corner and click your username. Your **Preferences** tab includes language, formatting and accessibility options that might improve your demo experience:
 
-![](/guide/my-account.png)
+![]({{ alias('@assetBaseUrl/assets/guide/my-account.png') }})
 
 You’re looking at a current version of Craft CMS Pro with a minimal set of plugins since we want to emphasize what Craft does out of the box.
 
@@ -52,7 +52,7 @@ The main navigation is off to your left, and depending on your browser width you
 
 You’re looking at the Craft control panel as an admin so we can see everything all at once; this is the kitchen-sink view:
 
-![](/guide/dashboard.png)
+![]({{ alias('@assetBaseUrl/assets/guide/dashboard.png') }})
 
 Normally we wouldn’t see **Settings** or **Plugin Store** in production, and each user would see only the things allowed by the [permissions groups]({{ cpUrl('settings/users') }}) you’ve created and assigned.
 {% endset %}

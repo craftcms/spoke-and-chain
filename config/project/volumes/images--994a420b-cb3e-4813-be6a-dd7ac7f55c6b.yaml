@@ -62,7 +62,7 @@ settings:
   region: $AWS_REGION
   secret: ''
   storageClass: ''
-  subfolder: assets/images
+  subfolder: assets/volumes/images
 sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: null

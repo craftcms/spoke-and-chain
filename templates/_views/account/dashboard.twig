@@ -40,7 +40,7 @@
             <div>
               <div class="flex justify-start items-center">
                 <div class="mr-2">
-                  {{ svg('@webroot/icons/box.svg')|attr({ class: 'w-5 h-5' }) }}
+                  {{ svg('@webroot/assets/icons/box.svg')|attr({ class: 'w-5 h-5' }) }}
                 </div>
                 <h2 class="text-2xl">{{ ordersPage.title }}</h2>
               </div>
@@ -51,7 +51,7 @@
                 <li>
                   <a href="{{ ordersPage.getUrl() }}">
                     {{ 'See your orders'|t }}
-                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                    {{ svg('@webroot/assets/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
                   </a>
                 </li>
               </ul>
@@ -63,7 +63,7 @@
             <div class="mt-8 md:mt-0">
               <div class="flex justify-start items-center">
                 <div class="mr-2">
-                  {{ svg('@webroot/icons/address-card.svg')|attr({ class: 'w-5 h-5' }) }}
+                  {{ svg('@webroot/assets/icons/address-card.svg')|attr({ class: 'w-5 h-5' }) }}
                 </div>
                 <h2 class="text-2xl">{{ membershipPage.title }}</h2>
               </div>
@@ -78,7 +78,7 @@
                     {% else %}
                       {{ membershipPage.plainText2 }}
                     {% endif %}
-                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                    {{ svg('@webroot/assets/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
                   </a>
                 </li>
               </ul>
@@ -90,7 +90,7 @@
             <div class="mt-8 md:mt-0">
               <div class="flex justify-start items-center">
                 <div class="mr-2">
-                  {{ svg('@webroot/icons/cog.svg')|attr({ class: 'w-5 h-5' }) }}
+                  {{ svg('@webroot/assets/icons/cog.svg')|attr({ class: 'w-5 h-5' }) }}
                 </div>
                 <h2 class="text-2xl">{{ settingsPage.title }}</h2>
               </div>
@@ -101,19 +101,19 @@
                 <li>
                   <a href="{{ settingsPage.getUrl() ~ '#email-password' }}">
                     {{ 'Email and password'|t }}
-                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                    {{ svg('@webroot/assets/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
                   </a>
                 </li>
                 <li>
                   <a href="{{ settingsPage.getUrl() ~ '#credit-cards' }}">
                     {{ 'Credit cards'|t }}
-                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                    {{ svg('@webroot/assets/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
                   </a>
                 </li>
                 <li>
                   <a href="{{ settingsPage.getUrl() ~ '#addresses' }}">
                     {{ 'Addresses'|t }}
-                    {{ svg('@webroot/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
+                    {{ svg('@webroot/assets/icons/chevron-right.svg')|attr({ class: 'w-4 h-4' }) }}
                   </a>
                 </li>
               </ul>

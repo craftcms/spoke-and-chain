@@ -14,13 +14,13 @@ module.exports = {
             css: "./src/css/",
             js: "./src/js/"
         },
-        dist: "./web/dist/",
+        dist: "./web/assets/dist/",
         templates: "./templates/"
     },
     urls: {
         live: process.env.LIVE_SITE_URL || "http://example.com",
         local: process.env.PRIMARY_SITE_URL || "http://local.craft.test/",
-        publicPath: process.env.PUBLIC_PATH || "/dist/"
+        publicPath: process.env.PUBLIC_PATH || "/assets/dist/"
     },
     vars: {
         cssName: "styles"

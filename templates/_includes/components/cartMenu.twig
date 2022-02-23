@@ -20,7 +20,7 @@
       @keydown.escape="showCartMenu = false"
       class="cart-toggle inline-block px-4 py-2 text-black hover:text-red-600"
     >
-      {{ svg('@webroot/dist/img/icons/cart.svg')|attr({ class: 'w-6 h-6' }) }}
+      {{ svg('@webroot/assets/icons/cart.svg')|attr({ class: 'w-6 h-6' }) }}
     </button>
     {% if qty %}
       <div class="pointer-events-none absolute inline-block bottom-0.5 right-0.5 text-xxs rounded-full bg-gray-200 px-1.5 py-0.5 leading-3">{{ qty }}</div>
@@ -65,33 +65,33 @@
           <div>
             {% if cartPage is defined %}
               <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ cartPage.url }}">
-                {{ svg('@webroot/dist/img/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ svg('@webroot/assets/icons/cart.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
                 {{ cartPage.title }}
               </a>
             {% endif %}
             <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/orders') }}">
-              {{ svg('@webroot/dist/img/icons/box.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+              {{ svg('@webroot/assets/icons/box.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
               {{ 'Orders'|t }}
             </a>
             <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account/membership') }}">
-              {{ svg('@webroot/dist/img/icons/address-card.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+              {{ svg('@webroot/assets/icons/address-card.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
               {{ 'Membership'|t }}
             </a>
             {% if accountPage is defined %}
               <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ url('account') }}">
-                {{ svg('@webroot/dist/img/icons/cog.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ svg('@webroot/assets/icons/cog.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
                 {{ "Account"|t('site') }}
               </a>
             {% endif %}
 
             {% if not currentUser %}
               <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ loginPage.url }}">
-                {{ svg('@webroot/dist/img/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ svg('@webroot/assets/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
                 {{ 'Sign in'|t }}
               </a>
             {% else %}
               <a class="block rounded flex items-center px-4 py-2 -mx-4 text-sm leading-5 text-blue-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" href="{{ logoutUrl }}">
-                {{ svg('@webroot/dist/img/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
+                {{ svg('@webroot/assets/icons/user--avatar--filled--alt.svg')|attr({ class: 'w-5 h-5 mr-2' }) }}
                 {{ 'Sign out'|t }}
               </a>
             {% endif %}

@@ -3,14 +3,14 @@ Let’s take a look at the main places you can organize content in Craft CMS. (M
 
 ## Common Elements
 
-![](/guide/common-elements.png)
+![]({{ alias('@assetBaseUrl/assets/guide/common-elements.png') }})
 
 This site doesn’t have a lot of content, but it’s built with the main types you might utilize in your own project.
 It’s where most editors would spend their time in the control panel managing content.
 
 ### Entries
 
-![](/guide/entries.png)
+![]({{ alias('@assetBaseUrl/assets/guide/entries.png') }})
 
 The [Entries]({{ cpUrl('entries') }}) section is where most content is likely to live. Click **Entries** in the main navigation, and the **All entries** submenu will list everything in this area.
 
@@ -18,13 +18,13 @@ The submenu is further broken down into Craft’s major sections we call “Sect
 
 #### Channels
 
-![](/guide/channels.png)
+![]({{ alias('@assetBaseUrl/assets/guide/channels.png') }})
 
 Channels are what you’ve probably seen in any CMS: dated posts that follow a common format. Spoke & Chain has an “Articles” channel with timely fake announcements, “Emails” and “PDFs” channels for managing customer notification and invoice content, an “Error Pages” channel for custom error page messaging, a “Reviews” channel with demo entries that could have been imported or synced from an outside system for a live site, and a “Plans” channel for managing subscription plan content.
 
 #### Structures
 
-![](/guide/structures.png)
+![]({{ alias('@assetBaseUrl/assets/guide/structures.png') }})
 
 Structures are like Channels with one key difference: instead of a flat, date-centric list, you can drag and drop structure entries into whatever order you’d like.
 
@@ -32,17 +32,17 @@ If you’ve ever used a CMS where you’ve had to edit a bunch of individual pos
 
 #### Singles
 
-![](/guide/singles.png)
+![]({{ alias('@assetBaseUrl/assets/guide/singles.png') }})
 
 Singles are great for one-off pages, where you know there will only ever be one. They’re a special single-entry section type, used here for pages like home, about, contact, and landings for articles and services.
 
-![](/guide/custom-source.png)
+![]({{ alias('@assetBaseUrl/assets/guide/custom-source.png') }})
 
 For this project, we’ve also used a few lines of code to add a custom source called “Checkout Pages.” This isolates the Singles used for the checkout process for ease of editing.
 
 ### Globals
 
-![](/guide/globals.png)
+![]({{ alias('@assetBaseUrl/assets/guide/globals.png') }})
 
 [Globals]({{ cpUrl('globals') }}) are for content that may not be specific to any one entry, but used across multiple pages or throughout the site. Click **Globals** in the main navigation and you’ll see three sets of fields labeled “Shop,” “Bikes,” and “Footer.”
 
@@ -50,7 +50,7 @@ This is where you can edit things like the store hours and address, the site-wid
 
 ### Categories
 
-![](/guide/categories.png)
+![]({{ alias('@assetBaseUrl/assets/guide/categories.png') }})
 
 [Categories]({{ cpUrl('categories') }}) are hierarchical taxonomies you can establish to organize content. Click **Categories** in the main navigation and you’ll see four groups of categories used for products: “Bike Types,” “Colors,” “Equipment Types,” and “Material.”
 
@@ -58,7 +58,7 @@ Each category has a handle you can grab to drag it into a different position. Th
 
 ### Assets
 
-![](/guide/assets.png)
+![]({{ alias('@assetBaseUrl/assets/guide/assets.png') }})
 
 [Assets]({{ cpUrl('assets') }}) are files users can upload to Craft. Click **Assets** in the main navigation and you’ll see the single “Images” asset volume.
 
@@ -68,7 +68,7 @@ An important part for developers is that each asset volume can use its own stora
 
 #### Asset Editor
 
-![](/guide/asset-editor.png)
+![]({{ alias('@assetBaseUrl/assets/guide/asset-editor.png') }})
 
 Click any image file. You’ll see a detail view that includes custom **Image Alt** and **Image Caption** fields, along with the uploader and other details. Hover over the thumbnail and click the **Edit** button at the top right of the image preview.
 
@@ -80,7 +80,7 @@ You can double-click an asset preview anywhere in Craft CMS to jump to the edito
 
 ### Users
 
-![](/guide/users.png)
+![]({{ alias('@assetBaseUrl/assets/guide/users.png') }})
 
 [Users]({{ cpUrl('users') }}) are the last major content type, even though it might seem odd to think of people as content.
 Click **Users** in the main navigation to see the “All users” list with a submenu of admins and groups.
@@ -99,7 +99,7 @@ You can create as many users and user groups as you’d like for your project.
 
 ## Custom Fields
 
-![](/guide/custom-fields.png)
+![]({{ alias('@assetBaseUrl/assets/guide/custom-fields.png') }})
 
 Each of these content types—Entries, Globals, Categories, Assets, and Users—has a critical thing in common, and it’s one of the key features of Craft CMS: each one can have its own custom field layout.
 
@@ -115,7 +115,7 @@ As a site’s body of content grows and evolves, it’s important to be able to 
 
 ### Search
 
-![](/guide/search.png)
+![]({{ alias('@assetBaseUrl/assets/guide/search.png') }})
 
 You can quickly search through content anywhere you see a search field. You can tailor any search with Craft’s [advanced syntax](https://craftcms.com/docs/3.x/searching.html) and optionally have a developer configure your site to make global customizations to search behavior with Craft’s [defaultSearchTermOptions setting](https://craftcms.com/docs/3.x/config/config-settings.html#defaultsearchtermoptions).
 
@@ -125,13 +125,13 @@ Listings of Entries, Categories, Assets, and Users can all be customized with an
 
 Click on **Entries**, for example, and then click the gear icon directly beneath the submenu. This opens a customization modal you can use to adjust your listings:
 
-![](/guide/table-customization.png)
+![]({{ alias('@assetBaseUrl/assets/guide/table-customization.png') }})
 
 ### Quick Export
 
 The bottom right of each listing table has an **Export...** button you can use to export the listings to CSV, JSON, or XML format:
 
-![](/guide/quick-export.png)
+![]({{ alias('@assetBaseUrl/assets/guide/quick-export.png') }})
 
 This can be useful for content audits and planning where you might need to take a step back from your content and see it in a spreadsheet or another tool.
 {% endset %}
