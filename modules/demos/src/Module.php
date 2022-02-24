@@ -28,7 +28,7 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        if (App::env('CRAFT_USE_LOCAL_VOLUMES')) {
+        if (!App::env('S3_BUCKET')) {
             $this->_useLocalVolumes();
         }
 
