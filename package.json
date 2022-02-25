@@ -140,6 +140,7 @@
   },
   "dependencies": {
     "alpinejs": "^2.8.2",
+    "sanitize.css": "^12.0.1",
     "swiper": "^6.8.4",
     "tailwindcss": "^2.2.19"
   }
