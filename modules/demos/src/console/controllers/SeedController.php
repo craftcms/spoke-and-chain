@@ -15,6 +15,7 @@ use craft\commerce\Plugin;
 use craft\commerce\records\Transaction;
 use craft\commerce\services\Emails;
 use craft\console\Controller;
+use craft\elements\db\ElementQuery;
 use craft\elements\db\UserQuery;
 use craft\elements\Entry;
 use craft\elements\User;
@@ -178,6 +179,13 @@ class SeedController extends Controller
         return ExitCode::OK;
     }
 
+    public function actionClean(): int
+    {
+        $this->deleteElements(Submission::find()->isSpam(null), 'submissions');
+        $this->runAction('delete-commerce-data');
+        return ExitCode::OK;
+    }
+
     private function _cleanup()
     {
         $this->stdout('Running queue ... ' . PHP_EOL);
@@ -252,7 +260,7 @@ class SeedController extends Controller
 
     public function actionCommerceData(): int
     {
-        $this->stdout('Seeding Commerce data ... ' . PHP_EOL);
+        $this->stdout('Seeding Commerce data ... ' . PHP_EOL . PHP_EOL);
         $this->_createUsers();
         $this->_createGuestCustomers();
         $this->_createOrders();
@@ -260,6 +268,56 @@ class SeedController extends Controller
         $this->stdout('Done seeding Commerce data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
+    }
+
+    public function actionDeleteCommerceData(): int
+    {
+        $customersService = Plugin::getInstance()->getCustomers();
+
+        foreach ($customersService->getAllCustomers() as $customer) {
+            $customersService->deleteCustomer($customer);
+        }
+        $this->deleteElements(User::find()->group([
+            self::CUSTOMER_GROUP_HANDLE,
+            self::VIP_CUSTOMER_GROUP_HANDLE,
+        ]), 'customers');
+        $this->deleteElements(Entry::find()->section('reviews'), 'reviews');
+        $this->deleteElements(Order::find(), 'orders');
+        // $this->deleteElements(Cart::find(), 'orders');
+
+        $customersService->purgeOrphanedCustomers();
+        Plugin::getInstance()->getCarts()->purgeIncompleteCarts();
+
+        return ExitCode::OK;
+    }
+
+    private function deleteElements(ElementQuery $query, string $label = 'elements'): void
+    {
+        $count = $query ->count();
+        $errorCount = 0;
+        $this->stdout("Deleting $label ..." . PHP_EOL);
+
+        foreach ($query->all() as $element) {
+            $i = isset($i) ? $i + 1 : 1;
+            $this->stdout("    - [{$i}/{$count}] Deleting element {$element->title} ... ");
+            try {
+                $success = Craft::$app->getElements()->deleteElement($element, true);
+                if ($success) {
+                    $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+                } else {
+                    $this->stderr('failed: ' . implode(', ', $element->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
+                    $errorCount++;
+                }
+            } catch (\Throwable $e) {
+                $this->stderr('error: ' . $e->getMessage() . PHP_EOL, Console::FG_RED);
+                $errorCount++;
+            }
+        }
+        $message = "Done deleting $label.";
+        if ($errorCount) {
+            $message .= " ($errorCount errors)";
+        }
+        $this->stdout($message . PHP_EOL . PHP_EOL, Console::FG_GREEN);
     }
 
     private function _createFormSubmission(Form $form): Submission
