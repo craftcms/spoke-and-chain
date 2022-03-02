@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.211.0",
+            "version": "3.211.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "be209936fc1c70bb2e842cad2f3550ebb12d4eb8"
+                "reference": "fa6b2cc2df7563b775b346d60da4d36c06062ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/be209936fc1c70bb2e842cad2f3550ebb12d4eb8",
-                "reference": "be209936fc1c70bb2e842cad2f3550ebb12d4eb8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fa6b2cc2df7563b775b346d60da4d36c06062ce1",
+                "reference": "fa6b2cc2df7563b775b346d60da4d36c06062ce1",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.211.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.211.1"
             },
-            "time": "2022-02-28T19:50:29+00:00"
+            "time": "2022-03-01T19:17:13+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -814,16 +814,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.34",
+            "version": "3.7.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "5176602f4ad33769dcee05ccafc0d4d8b894f80a"
+                "reference": "72f6e6e1a81b82608f48378bc15780f558388ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5176602f4ad33769dcee05ccafc0d4d8b894f80a",
-                "reference": "5176602f4ad33769dcee05ccafc0d4d8b894f80a",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/72f6e6e1a81b82608f48378bc15780f558388ef0",
+                "reference": "72f6e6e1a81b82608f48378bc15780f558388ef0",
                 "shasum": ""
             },
             "require": {
@@ -919,7 +919,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-02-22T18:34:09+00:00"
+            "time": "2022-03-01T20:05:01+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -5383,16 +5383,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.114.0",
+            "version": "v7.115.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "63be231686c6874befb5b3a47fb8effb4c30b78b"
+                "reference": "a1c528a5076b80dc156601505994870d23313a73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/63be231686c6874befb5b3a47fb8effb4c30b78b",
-                "reference": "63be231686c6874befb5b3a47fb8effb4c30b78b",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/a1c528a5076b80dc156601505994870d23313a73",
+                "reference": "a1c528a5076b80dc156601505994870d23313a73",
                 "shasum": ""
             },
             "require": {
@@ -5437,9 +5437,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.114.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.115.0"
             },
-            "time": "2022-02-15T22:48:31+00:00"
+            "time": "2022-03-01T22:45:01+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
