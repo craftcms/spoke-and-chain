@@ -36,7 +36,7 @@ return [
         'omitScriptNameInUrls' => true,
         'postLoginRedirect' => 'account',
         'securityKey' => App::env('SECURITY_KEY'),
-        'useEmailAsUsername' => false,
+        'useEmailAsUsername' => true,
     ],
 
     'dev' => [
