@@ -20,6 +20,7 @@ return [
             '@assetBaseUrl' => App::env('S3_BASE_URL') ?: App::env('DEFAULT_SITE_URL'),
         ],
         'allowAdminChanges' => true,
+        'allowUpdates' => false,
         'autoLoginAfterAccountActivation' => true,
         'cpTrigger' => 'admin',
         'defaultSearchTermOptions' => [
