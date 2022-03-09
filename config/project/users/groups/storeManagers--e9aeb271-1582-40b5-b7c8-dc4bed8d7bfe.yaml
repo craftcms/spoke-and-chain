@@ -2,178 +2,127 @@ description: ''
 handle: storeManagers
 name: 'Store Managers'
 permissions:
-  - accesssitewhensystemisoff
+  - accesscp
   - accesscpwhensystemisoff
   - accessplugin-commerce
   - accessplugin-freeform
   - accessplugin-seomatic
-  - accesscp
-  - customizesources
-  - registerusers
-  - moderateusers
-  - assignuserpermissions
-  - 'assignusergroup:8b2b60fd-6045-4696-b08e-6c601ac1245f' # Content Managers
-  - 'assignusergroup:229f9f29-ca35-402b-973b-8fb12d4d68ec' # Customers
-  - 'assignusergroup:e9aeb271-1582-40b5-b7c8-dc4bed8d7bfe' # Store Managers
-  - 'assignusergroup:89d30b8d-7f71-4571-bfd3-572a14dc6538' # VIP Customers
-  - assignusergroups
+  - accesssitewhensystemisoff
   - administrateusers
-  - impersonateusers
-  - editusers
-  - deleteusers
-  - 'createentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'publishentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'deleteentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'publishpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'deletepeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'editpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'publishpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'deletepeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'editpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'editentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'createentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'deleteentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'deletepeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'editpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'deletepeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'editpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'editentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'publishpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'deletepeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'editpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'editentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'publishentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'publishpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'deletepeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'editpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'editentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'publishentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'publishpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'deletepeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'editpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'editentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'createentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'publishentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'deleteentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'publishpeerentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'deletepeerentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'editpeerentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'publishpeerentrydrafts:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'deletepeerentrydrafts:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'editpeerentrydrafts:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
-  - 'editentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'assignusergroup:229f9f29-ca35-402b-973b-8fb12d4d68ec' # Customers
+  - 'assignusergroup:89d30b8d-7f71-4571-bfd3-572a14dc6538' # VIP Customers
+  - 'assignusergroup:8b2b60fd-6045-4696-b08e-6c601ac1245f' # Content Managers
+  - 'assignusergroup:e9aeb271-1582-40b5-b7c8-dc4bed8d7bfe' # Store Managers
+  - assignusergroups
+  - assignuserpermissions
+  - commerce-capturepayment
+  - commerce-deleteorders
+  - commerce-editorders
+  - commerce-managecustomers
+  - commerce-manageorders
+  - commerce-manageproducts
+  - 'commerce-manageproducttype:03450688-d7c8-4bc8-bd13-fff95a960e2b' # Bike
+  - commerce-managepromotions
+  - commerce-manageshipping
+  - commerce-managestoresettings
+  - commerce-managesubscriptions
+  - commerce-managetaxes
+  - commerce-refundpayment
   - 'createentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'deleteentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'deletepeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'editpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'deletepeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'editpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'editentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'publishpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'deletepeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'editpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'editentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'createentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'publishentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'deleteentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'publishpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'deletepeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'editpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'publishpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'deletepeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'editpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'editentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'createentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
   - 'createentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'publishentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'deleteentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'publishpeerentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'deletepeerentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'editpeerentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'publishpeerentrydrafts:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'deletepeerentrydrafts:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'editpeerentrydrafts:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'editentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
-  - 'createentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'publishentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'deleteentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'publishpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'deletepeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'editpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'publishpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'deletepeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'editpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'editentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'createentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
   - 'createentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'createentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'createentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'createentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'createfoldersinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - customizesources
+  - 'deleteentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'deleteentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'deleteentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'deleteentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
   - 'deleteentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'deleteentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'deleteentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'deleteentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'deletefilesandfoldersinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'deletepeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'deletepeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'deletepeerentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'deletepeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
   - 'deletepeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'editpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'deletepeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'deletepeerentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'deletepeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'deletepeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'deletepeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'deletepeerentrydrafts:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'deletepeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
   - 'deletepeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'editpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'editentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'publishpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'deletepeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'deletepeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'deletepeerentrydrafts:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'deletepeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'deletepeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'deletepeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'deletepeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'deletepeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'editpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'editentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'publishentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'publishpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
   - 'deletepeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'editpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - 'deletepeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - deleteusers
+  - 'editcategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'editcategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'editcategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'editcategories:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'editentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'editentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'editentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'editentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'editentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'editentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'editentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'editentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'editentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'editentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'editentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'editentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'editentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
   - 'editentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
   - 'editglobalset:2a2f0ac5-fb77-412b-8259-4445f3520dae' # Shop
-  - 'editglobalset:ba795823-7853-4c7d-8337-136027e1e738' # Bikes
   - 'editglobalset:63ae8822-3b4e-4a3d-b902-eba33875c230' # Footer
-  - 'editcategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
-  - 'editcategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
-  - 'editcategories:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
-  - 'editcategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
-  - 'saveassetinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'createfoldersinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'deletefilesandfoldersinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'replacefilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'editglobalset:ba795823-7853-4c7d-8337-136027e1e738' # Bikes
   - 'editimagesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'editpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'editpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'editpeerentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'editpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'editpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'editpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'editpeerentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'editpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'editpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'editpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'editpeerentrydrafts:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'editpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'editpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'editpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'editpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'editpeerentrydrafts:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'editpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'editpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'editpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'editpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'editpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'editpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
   - 'editpeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'replacepeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'deletepeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'editpeerimagesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'viewpeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'viewvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'commerce-manageproducttype:03450688-d7c8-4bc8-bd13-fff95a960e2b' # Bike
-  - commerce-manageproducts
-  - commerce-editorders
-  - commerce-deleteorders
-  - commerce-capturepayment
-  - commerce-refundpayment
-  - commerce-manageorders
-  - commerce-managecustomers
-  - commerce-managepromotions
-  - commerce-managesubscriptions
-  - commerce-manageshipping
-  - commerce-managetaxes
-  - commerce-managestoresettings
+  - editusers
+  - freeform-access-quick-export
   - freeform-dashboardaccess
-  - freeform-submissionsread
-  - 'freeform-submissionsread:1'
-  - 'freeform-submissionsread:2'
-  - 'freeform-submissionsread:3'
-  - freeform-submissionsreadindividual
-  - freeform-submissionsmanage
-  - 'freeform-submissionsmanage:1'
-  - 'freeform-submissionsmanage:2'
-  - 'freeform-submissionsmanage:3'
-  - freeform-submissionsmanageindividual
-  - freeform-submissionsaccess
+  - freeform-fieldsaccess
+  - freeform-fieldsmanage
+  - freeform-formsaccess
   - freeform-formscreate
   - freeform-formsdelete
   - freeform-formsmanage
@@ -181,13 +130,64 @@ permissions:
   - 'freeform-formsmanage:2'
   - 'freeform-formsmanage:3'
   - freeform-formsmanageindividual
-  - freeform-formsaccess
-  - freeform-fieldsmanage
-  - freeform-fieldsaccess
-  - freeform-notificationsmanage
   - freeform-notificationsaccess
-  - freeform-access-quick-export
-  - freeform-pro-exportprofilesmanage
+  - freeform-notificationsmanage
   - freeform-pro-exportprofilesaccess
-  - freeform-settingsaccess
+  - freeform-pro-exportprofilesmanage
   - freeform-resources
+  - freeform-settingsaccess
+  - freeform-submissionsaccess
+  - freeform-submissionsmanage
+  - 'freeform-submissionsmanage:1'
+  - 'freeform-submissionsmanage:2'
+  - 'freeform-submissionsmanage:3'
+  - freeform-submissionsmanageindividual
+  - freeform-submissionsread
+  - 'freeform-submissionsread:1'
+  - 'freeform-submissionsread:2'
+  - 'freeform-submissionsread:3'
+  - freeform-submissionsreadindividual
+  - impersonateusers
+  - moderateusers
+  - 'publishentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'publishentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'publishentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'publishentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'publishentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'publishentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'publishentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'publishentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'publishentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'publishentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'publishentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'publishentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'publishentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'publishentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - 'publishpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'publishpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'publishpeerentries:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'publishpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'publishpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'publishpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'publishpeerentries:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'publishpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'publishpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'publishpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'publishpeerentrydrafts:220feec1-8cc9-4f3e-82da-73c748d0ae0b' # PDFs
+  - 'publishpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'publishpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'publishpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'publishpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'publishpeerentrydrafts:5075e975-0eb8-4e62-9ae7-9d8cd88348eb' # Emails
+  - 'publishpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'publishpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'publishpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'publishpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'publishpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'publishpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - registerusers
+  - 'replacefilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'replacepeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'saveassetinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'viewpeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'viewvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
