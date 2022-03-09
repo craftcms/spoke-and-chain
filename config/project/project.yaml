@@ -1,4 +1,4 @@
-dateModified: 1646438817
+dateModified: 1646848969
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -162,42 +162,45 @@ plugins:
     schemaVersion: 3.6.3
     settings:
       ajaxByDefault: false
-      alertNotificationRecipients: null
+      alertNotificationRecipients: ''
+      autoScroll: true
       autoScrollToErrors: true
-      badgeType: all
+      badgeType: ''
       blockedEmails: null
       blockedEmailsError: 'Invalid Email Address'
       blockedIpAddresses: null
       blockedKeywords: null
       blockedKeywordsError: 'Invalid Entry Data'
-      clientDigestFrequency: 1
-      clientDigestRecipients: null
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: '1'
+      clientDigestRecipients: ''
       customErrorMessage: null
       customHoneypotName: null
       defaultTemplates: true
       defaultView: dashboard
-      digestFrequency: 1
-      digestOnlyOnProduction: false
-      digestRecipients: null
-      displayFeed: true
+      digestFrequency: '1'
+      digestOnlyOnProduction: ''
+      digestRecipients: ''
+      displayFeed: ''
       emailTemplateDirectory: null
       emailTemplateStorage: db
+      exportLabels: ''
       fieldDisplayOrder: name
       fillWithGet: false
       footerScripts: false
-      formFieldShowOnlyAllowedForms: false
+      formFieldShowOnlyAllowedForms: ''
       formSubmitDisable: false
       formSubmitExpiration: null
       formTemplateDirectory: null
       formattingTemplate: flexbox.html
       freeformHoneypot: true
       freeformHoneypotEnhancement: false
-      hideBannerDemo: true
+      hideBannerDemo: '1'
       hideBannerOldFreeform: false
       minimumSubmitTime: null
-      pluginName: null
+      pluginName: ''
       purgableSpamAgeInDays: null
-      purgableSubmissionAgeInDays: null
+      purgableSubmissionAgeInDays: '0'
       purgableUnfinalizedAssetAgeInMinutes: 180
       recaptchaBehaviour: display_error
       recaptchaEnabled: false
@@ -210,14 +213,20 @@ plugins:
       recaptchaTheme: light
       recaptchaType: v2_checkbox
       rememberPageSubmitOrder: true
-      removeNewlines: false
+      removeNewlines: ''
       renderFormHtmlInCpViews: true
       salesforce_client_id: null
       salesforce_client_secret: null
       salesforce_password: null
       salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
       scriptInsertLocation: footer
       scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
       sessionEntryMaxCount: 50
       sessionEntryTTL: 10800
       showErrorsForBlockedEmails: false
@@ -227,9 +236,10 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
       twigInHtml: true
       twigInHtmlIsolatedMode: true
-      updateSearchIndexes: true
+      updateSearchIndexes: '1'
   guide:
     edition: lite
     enabled: true
