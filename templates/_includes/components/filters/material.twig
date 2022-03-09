@@ -1,12 +1,12 @@
 <!-- Template: {{ _self }}.twig -->
 
-{% spaceless %}
+{% apply spaceless %}
   {# Params #}
   {% set materials = materials is not defined ? [] : materials %}
   {% set heading = heading is not defined ? null : heading %}
   {% set showHeading = showHeading is not defined ? false : showHeading %}
   {% set selectedMaterials = selectedMaterials is not defined ? [] : selectedMaterials %}
-{% endspaceless %}
+{% endapply %}
 
 {# Output #}
 {% if materials|length %}

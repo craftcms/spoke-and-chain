@@ -1,4 +1,4 @@
-{% if craft.app.request.isAjax %}{% spaceless %}{% block ajax %}{% endblock %}{% endspaceless %}{% else %}
+{% if craft.app.request.isAjax %}{% apply spaceless %}{% block ajax %}{% endblock %}{% endapply %}{% else %}
 {% include '_includes/components/seomatic' %}
 <!doctype html>
 <html class="antialiased smooth-scroll" lang="{{ craft.app.language | replace('_', '-') }}">

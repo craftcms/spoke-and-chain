@@ -1,13 +1,13 @@
 <!-- Template: {{ _self }}.twig -->
 
-{% spaceless %}
+{% apply spaceless %}
   {# Params #}
   {% set colors = colors is not defined ? [] : colors %}
   {% set heading = heading is not defined ? null : heading %}
   {% set showHeading = showHeading is not defined ? false : showHeading %}
   {% set urls = urls is not defined ? {} : urls %}
   {% set selectedColors = selectedColors is not defined ? [] : selectedColors %}
-{% endspaceless %}
+{% endapply %}
 
 {# Output #}
 {% if colors|length %}
