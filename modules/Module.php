@@ -4,9 +4,10 @@ namespace modules;
 use Craft;
 use craft\commerce\elements\Product;
 use craft\commerce\elements\Variant;
-use craft\commerce\models\Address;
+use craft\elements\Address;
 use craft\elements\Entry;
 use craft\base\Element;
+use craft\base\Model;
 use craft\events\RegisterElementSourcesEvent;
 use craft\web\twig\variables\CraftVariable;
 use modules\services\Reviews;
@@ -51,7 +52,7 @@ class Module extends \yii\base\Module
         // Add custom address validation rules
         Event::on(
             Address::class,
-            Address::EVENT_DEFINE_RULES,
+            Model::EVENT_DEFINE_RULES,
             function($event) {
                 $event->rules[] = [[
                     'firstName',
