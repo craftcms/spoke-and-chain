@@ -4,6 +4,7 @@
 /node_modules
 .DS_Store
 !seed.sql
+/web/cpresources
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
