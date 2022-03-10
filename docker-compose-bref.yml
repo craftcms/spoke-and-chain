@@ -1,0 +1,50 @@
+version: "3.7"
+services:
+  web:
+    image: bref/fpm-dev-gateway
+    build:
+      context: .
+      dockerfile: ./Dockerfile.bref
+      target: web
+    ports:
+      - '8000:80'
+    volumes:
+      - ./:/var/task:ro
+    depends_on:
+      - php
+    environment:
+      HANDLER: web/index.php
+      DOCUMENT_ROOT: web
+  php:
+    image: bref/local
+    build:
+      context: .
+      dockerfile: ./Dockerfile.bref
+      target: php
+    environment:
+      HANDLER: web/index.php
+    volumes:
+      - ./:/var/task/:ro
+  postgres:
+    image: postgres:13-alpine
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${DB_USER}", "-d", "${DB_DATABASE}"]
+      interval: 5s
+      retries: 3
+
+  redis:
+    image: redis:5-alpine
+    #    ports:
+    #      - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+volumes:
+  db_data:
