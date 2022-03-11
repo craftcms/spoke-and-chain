@@ -6,9 +6,7 @@ use craft\helpers\App;
 use modules\demos\widgets\Guide;
 
 use Craft;
-use craft\events\RegisterComponentTypesEvent;
 use craft\events\RegisterTemplateRootsEvent;
-use craft\services\Dashboard;
 use craft\web\View;
 use yii\base\Event;
 use craft\awss3\Volume as AwsVolume;
@@ -38,14 +36,6 @@ class Module extends \yii\base\Module
             function(RegisterTemplateRootsEvent $event) {
                 $event->roots['modules'] = __DIR__ . '/templates';
                 //Craft::dd(__DIR__ . '/templates');
-            }
-        );
-
-        Event::on(
-            Dashboard::class,
-            Dashboard::EVENT_REGISTER_WIDGET_TYPES,
-            static function(RegisterComponentTypesEvent $event) {
-                $event->types[] = Guide::class;
             }
         );
     }
