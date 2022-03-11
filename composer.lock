@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.212.5",
+            "version": "3.212.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ed69594b385233bb895342e18008cd811e8225e7"
+                "reference": "fcb57b1f840938813e83f521e169914a076b3be9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ed69594b385233bb895342e18008cd811e8225e7",
-                "reference": "ed69594b385233bb895342e18008cd811e8225e7",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fcb57b1f840938813e83f521e169914a076b3be9",
+                "reference": "fcb57b1f840938813e83f521e169914a076b3be9",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.212.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.212.6"
             },
-            "time": "2022-03-09T19:19:58+00:00"
+            "time": "2022-03-10T19:14:38+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -991,23 +991,23 @@
         },
         {
             "name": "craftcms/html-field",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/html-field.git",
-                "reference": "d8ae4e3e4862a008ce50589eb7c90caf4fc0e2a2"
+                "reference": "fd3d400643fccbe27583102f581640f465987a06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/html-field/zipball/d8ae4e3e4862a008ce50589eb7c90caf4fc0e2a2",
-                "reference": "d8ae4e3e4862a008ce50589eb7c90caf4fc0e2a2",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/fd3d400643fccbe27583102f581640f465987a06",
+                "reference": "fd3d400643fccbe27583102f581640f465987a06",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.6.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.96"
+                "craftcms/phpstan": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -1033,7 +1033,7 @@
                 "rss": "https://github.com/craftcms/html-field/commits/main.atom",
                 "source": "https://github.com/craftcms/html-field"
             },
-            "time": "2022-02-16T09:33:08+00:00"
+            "time": "2022-03-10T14:39:24+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
