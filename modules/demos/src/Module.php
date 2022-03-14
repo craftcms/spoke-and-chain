@@ -26,8 +26,10 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        if (!App::env('S3_BUCKET')) {
-            $this->_useLocalVolumes();
+        if (!App::env('FS_HANDLE') && !App::env('S3_BUCKET')) {
+            putenv('FS_HANDLE=imagesLocal');
+            $_SERVER['FS_HANDLE'] = 'imagesLocal';
+            $_ENV['FS_HANDLE'] = 'imagesLocal';
         }
 
         Event::on(
@@ -38,28 +40,5 @@ class Module extends \yii\base\Module
                 //Craft::dd(__DIR__ . '/templates');
             }
         );
-    }
-
-    private function _useLocalVolumes()
-    {
-        Craft::$container->set(AwsVolume::class, function ($container, $params, $config) {
-            if (empty($config['id'])) {
-                return new AwsVolume($config);
-            }
-
-            return new LocalVolume([
-                'id' => $config['id'],
-                'uid' => $config['uid'],
-                'name' => $config['name'],
-                'handle' => $config['handle'],
-                'hasUrls' => $config['hasUrls'],
-                'url' => "@web/{$config['subfolder']}",
-                'path' => "@webroot/{$config['subfolder']}",
-                'sortOrder' => $config['sortOrder'],
-                'dateCreated' => $config['dateCreated'],
-                'dateUpdated' => $config['dateUpdated'],
-                'fieldLayoutId' => $config['fieldLayoutId'],
-            ]);
-        });
     }
 }

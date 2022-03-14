@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ea0044a3-a4b3-4b95-90fe-1e8afb016aef
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0e99f047-036e-4647-8498-3d2aeed7218e
             warning: null
             width: 100
           -
@@ -42,23 +44,59 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4b9b4dec-c11f-48ce-a663-7e62b72c278d
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: d96de62e-69c3-4bde-b990-5f7c678b6df2
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5eddb0b9-d028-4b82-9802-e0f12c7a5d78
+            warning: null
+            width: 100
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 10db7100-bd21-4406-b591-ec609b54cc02
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+          -
+            fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Blocks
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8bd81555-4cde-40d7-83cc-54e4f6468c15
+            warning: null
+            width: 100
+        name: Content
+        uid: 73256197-0428-4f3c-8743-a6ed424816c1
 handle: articles
 hasTitleField: true
 name: Articles

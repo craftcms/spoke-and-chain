@@ -1,4 +1,4 @@
-dateModified: 1646854294
+dateModified: 1647291030
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -13,6 +13,33 @@ email:
     useAuthentication: ''
     username: ''
   transportType: craft\mail\transportadapters\Smtp
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: ''
+      cfPrefix: ''
+      expires: ''
+      keyId: ''
+      makeUploadsPublic: true
+      region: $AWS_REGION
+      secret: ''
+      storageClass: ''
+      subfolder: assets/volumes/images
+    type: craft\awss3\Fs
+    url: $S3_BASE_URL
+  imagesLocal:
+    hasUrls: true
+    name: 'Images (local)'
+    settings:
+      path: '@webroot/assets/volumes/images'
+    type: craft\fs\Local
+    url: '@web/assets/volumes/images'
 meta:
   __names__:
     0dbacfe0-78ef-48ff-95a3-b7eb4dc8be86: Emails # Emails
@@ -139,12 +166,12 @@ plugins:
   aws-s3:
     edition: standard
     enabled: true
-    schemaVersion: '1.2'
+    schemaVersion: '2.0'
   commerce:
     edition: pro
     enabled: true
     licenseKey: SI24H20R5SQCC22FZMXL94F7
-    schemaVersion: 3.4.12
+    schemaVersion: 4.0.0
   default-dashboard:
     edition: standard
     enabled: true
@@ -159,7 +186,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: 5MSLVVCLNO91XX5P8MBVKF1N
-    schemaVersion: 3.6.3
+    schemaVersion: 3.6.2
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: ''
@@ -319,5 +346,5 @@ system:
   live: true
   name: 'Spoke & Chain'
   retryDuration: null
-  schemaVersion: 3.7.33
+  schemaVersion: 4.0.0.5
   timeZone: America/Los_Angeles

@@ -23,24 +23,40 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: cbed023e-963a-4c26-9789-0dd43d922ea7
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: e1d70527-c621-482e-bd34-35d131b5c4f8
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
             label: null
-            required: false
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 32a3638e-3fa9-41ae-8b12-d5d5ab0628c1
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+        name: Content
+        uid: 5672767c-7b59-4068-85fc-4f9bf7c8c096
 handle: articlesLanding
 hasTitleField: true
 name: 'Articles Landing'

@@ -23,42 +23,80 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 19b14b9a-abd3-4fd4-a22c-638f393b2130
             warning: null
             width: 100
           -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: ''
+            instructions: null
             label: 'No Results Heading'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ec91d04f-0db5-4f82-8358-e3b676950f08
             warning: null
             width: 100
           -
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: ''
-            label: 'No Results Text'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Content
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
-            label: null
+            label: 'No Results Text'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 997fdcd5-ca94-44b2-9f33-38d10144d0a9
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+        name: Content
+        uid: a8d72bee-2930-4ff0-b7fc-f42d4dd60db9
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 21738e29-097d-4af8-af9d-4694100c8941
+            warning: null
+            width: 100
+          -
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            instructions: null
+            label: 'No Results Heading'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7406bd58-e17b-4f67-a7f3-def997597a4e
+            warning: null
+            width: 100
+          -
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            instructions: null
+            label: 'No Results Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53900f33-7f63-4548-a581-12f6c36461a9
+            warning: null
+            width: 100
+        name: Content
+        uid: bfd951cf-f2ce-4ec4-9b9b-60720dc9f1d3
 handle: search
 hasTitleField: false
 name: Search

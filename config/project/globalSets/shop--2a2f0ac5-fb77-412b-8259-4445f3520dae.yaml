@@ -10,6 +10,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 7d0cb93a-1a69-46ba-810d-fe72ba047f14
             warning: null
             width: 100
           -
@@ -19,10 +20,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 99355b2e-4f96-44f8-8f3b-00feceaacd3d
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 7d889504-d465-4e94-8d50-b604aa671bcd
 handle: shop
 name: Shop
 sortOrder: 1

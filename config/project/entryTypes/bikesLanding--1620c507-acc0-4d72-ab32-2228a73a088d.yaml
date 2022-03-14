@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d44bdee3-b69a-41b5-acc7-e98e9c47d2f6
             warning: null
             width: 100
           -
@@ -33,23 +34,49 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1b12f8c7-a69c-4f35-9ced-180ea8c36f00
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: d497cbe8-be16-468d-917a-5a62b44ec85c
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 43693437-55b4-42fe-bd32-e80bcdcf77ae
+            warning: null
+            width: 100
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4f08c1b9-52e7-4d9a-b3f1-ed3f4e15cdc3
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+        name: Content
+        uid: a8d80af2-c512-4a5f-bc41-86abaa6657ce
 handle: bikesLanding
 hasTitleField: false
 name: Bikes

@@ -25,10 +25,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: fc0070dc-b0f8-48e5-bcd2-af2d0791ba2e
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 2d7e7d63-aa81-4d1e-bce1-ff6bdee29da1
 handle: equipmentTypes
 name: 'Equipment Types'
 siteSettings:

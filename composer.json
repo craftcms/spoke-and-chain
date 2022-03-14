@@ -28,7 +28,8 @@
     "nystudio107/craft-twigpack": "4.0.0-beta.2",
     "oberon/starfield": "dev-craft-4",
     "putyourlightson/craft-sprig": "2.0.0-alpha.1",
-    "vlucas/phpdotenv": "^3.4.0"
+    "vlucas/phpdotenv": "^3.4.0",
+    "solspace/craft-freeform": "dev-craft4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
@@ -44,6 +45,10 @@
     {
       "type": "git",
       "url": "https://github.com/mattstein/craft-starfield.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/brandonkelly/craft3-freeform"
     }
   ],
   "config": {

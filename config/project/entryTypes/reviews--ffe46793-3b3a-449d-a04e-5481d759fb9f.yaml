@@ -10,7 +10,7 @@ fieldLayouts:
             class: null
             disabled: false
             id: null
-            instructions: ''
+            instructions: null
             label: Name
             max: null
             min: null
@@ -23,16 +23,18 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ed042c5f-5b09-4c0d-a67d-7f456d0d9dc0
             warning: null
             width: 100
           -
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
-            instructions: ''
+            instructions: null
             label: Review
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c7bf1e07-c092-4642-888f-76ef52df6a54
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3ac2c1ea-5d9a-4210-8998-e7d2dfec6f7a
             warning: null
             width: 100
           -
@@ -51,10 +54,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 71d9afb6-c8f9-4c74-9be4-24cbbdf75c6b
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: e4658e53-d171-4ffa-a1f0-330c1b32ae88
 handle: reviews
 hasTitleField: true
 name: Reviews

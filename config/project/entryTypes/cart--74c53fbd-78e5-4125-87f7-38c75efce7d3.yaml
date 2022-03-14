@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 561d48f2-83dd-4b8a-9837-a53a8cf85be9
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ee185932-1a07-4c9d-9a71-de9e14e1d578
             warning: null
             width: 100
           -
@@ -42,32 +44,79 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 59ff5274-92a5-4952-872b-dccc93cbd5c3
             warning: null
             width: 100
           -
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
-            instructions: ''
+            instructions: null
             label: 'No items content'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: fa0ecb98-2e9c-4c84-a20b-6afdece94548
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 0162ec3a-312a-408a-94b3-de147b30c96c
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a46a3bfa-bc29-415b-906a-4abbc1482108
+            warning: null
+            width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: cb457cb9-ef42-4518-a001-4502c1149eeb
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3f56ec4-d969-47b9-9877-0fc97ddc95ca
+            warning: null
+            width: 100
+          -
+            fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
+            instructions: null
+            label: 'No items content'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4f9ce05-9a64-4b3f-81aa-bba1b99956d2
+            warning: null
+            width: 100
+        name: Content
+        uid: 736ca1f0-e8f0-4e57-99cc-5d630da1421b
 handle: cart
 hasTitleField: true
 name: Cart

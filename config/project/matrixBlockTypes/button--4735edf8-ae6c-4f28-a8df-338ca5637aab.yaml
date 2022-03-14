@@ -11,6 +11,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5312c5ef-5fd9-46fd-af92-004cb1c772de
             warning: null
             width: 100
           -
@@ -20,6 +21,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3c571548-6ef8-4614-b6db-a9c06d1d272f
             warning: null
             width: 100
           -
@@ -29,6 +31,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 49312cc0-e854-4a52-a59d-3090eeb73c29
             warning: null
             width: 100
           -
@@ -38,6 +41,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9912c380-33c8-4a24-a3e7-fe4aec8a3832
             warning: null
             width: 100
           -
@@ -47,26 +51,27 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 82c8264d-9540-460e-b376-86ff83b1d01c
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 5c0ec307-6fc1-4af2-a005-17246a76c043
 fields:
   6d832652-3b7e-417c-8a96-14965cdfd744: # Label
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: label
-    instructions: ''
+    instructions: null
     name: Label
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -84,10 +89,11 @@ fields:
       allowLimit: false
       allowMultipleSources: false
       allowSelfRelations: false
-      branchLimit: '1'
-      limit: null
+      branchLimit: 1
       localizeRelations: false
-      selectionLabel: ''
+      maxRelations: null
+      minRelations: null
+      selectionLabel: null
       showSiteMenu: false
       source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
       sources: '*'
@@ -102,16 +108,16 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: ariaLabel
-    instructions: ''
+    instructions: null
     name: 'Aria Label'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -128,10 +134,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -147,9 +153,10 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
-      limit: '1'
       localizeRelations: false
-      selectionLabel: ''
+      maxRelations: 1
+      minRelations: null
+      selectionLabel: null
       showSiteMenu: false
       source: null
       sources:

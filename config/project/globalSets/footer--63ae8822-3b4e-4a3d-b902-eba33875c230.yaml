@@ -7,22 +7,24 @@ fieldLayouts:
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: 'Enter copyright text to be displayed in every page footer. (Will automatically be preceded with copyright symbol and year.)'
             label: Copyright
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 814e5cc6-760d-444d-9c99-d34a4e0201d5
             warning: null
             width: 100
           -
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: 'Enter a description of the active site’s language to be displayed in the footer. (Not currently implemented.)'
             label: 'Language Heading'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1e4cb79d-ce82-4067-a664-9076d4717677
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: b9f3ef9d-0b4a-4a52-a072-af77eee69dbd
       -
         elements:
           -
@@ -32,10 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 85bc29d8-eef8-483f-b8ba-97c015782511
             warning: null
             width: 100
         name: Nav
-        sortOrder: 2
+        uid: a6140917-68a5-4551-9c41-643c12825ff3
 handle: footer
 name: Footer
 sortOrder: 3

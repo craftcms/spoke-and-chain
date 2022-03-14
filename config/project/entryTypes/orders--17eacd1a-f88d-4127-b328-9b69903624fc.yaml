@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 62af59fb-c393-4102-9e7b-7e0bb3e5be1f
             warning: null
             width: 100
           -
@@ -33,23 +34,49 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: bd201cef-aa1d-4a24-9fbc-79bd818b150d
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: adc4d68e-6771-4e87-aeef-35d65791fc51
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0000d9af-940c-4c28-9e97-2258adec4d48
+            warning: null
+            width: 100
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 59360654-5a40-4f42-b93b-437ce6ad1805
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+        name: Content
+        uid: d816722e-a752-4785-8f1f-6031668a4ec8
 handle: orders
 hasTitleField: true
 name: Orders

@@ -1,4 +1,4 @@
-description: ''
+description: null
 handle: contentManagers
 name: 'Content Managers'
 permissions:
@@ -13,15 +13,12 @@ permissions:
   - 'createentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
   - 'createentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
   - 'createentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'createfoldersinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - customizesources
   - 'deleteentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
   - 'deleteentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
   - 'deleteentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
   - 'deleteentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
   - 'deleteentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
   - 'deleteentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'deletefilesandfoldersinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'deletepeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
   - 'deletepeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
   - 'deletepeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
@@ -40,79 +37,102 @@ permissions:
   - 'deletepeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'deletepeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
   - 'deletepeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'deletepeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'editcategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
-  - 'editcategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
-  - 'editcategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
-  - 'editcategories:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
-  - 'editentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'editentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'editentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'editentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'editentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'editentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'editentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'editentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'editentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'editentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'editentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'editentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
   - 'editglobalset:2a2f0ac5-fb77-412b-8259-4445f3520dae' # Shop
   - 'editglobalset:63ae8822-3b4e-4a3d-b902-eba33875c230' # Footer
   - 'editglobalset:ba795823-7853-4c7d-8337-136027e1e738' # Bikes
-  - 'editimagesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'editpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'editpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'editpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'editpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'editpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'editpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'editpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'editpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'editpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'editpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'editpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'editpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'editpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'editpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'editpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'editpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'editpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'editpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'editpeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'editpeerimagesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'publishentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'publishentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'publishentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'publishentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'publishentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'publishentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'publishentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'publishentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'publishentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'publishpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'publishpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'publishpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'publishpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
-  - 'publishpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
-  - 'publishpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
-  - 'publishpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
-  - 'publishpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
-  - 'publishpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
-  - 'publishpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
-  - 'publishpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
-  - 'publishpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'publishpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
-  - 'publishpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
-  - 'publishpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'replacefilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'replacepeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'saveassetinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'viewpeerfilesinvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
-  - 'viewvolume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'viewassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'saveassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'deleteassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'replacefiles:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'editimages:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'viewpeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'savepeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'replacepeerfiles:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'deletepeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'editpeerimages:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'createfolders:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'viewcategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'savecategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'deletecategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'viewpeercategorydrafts:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'savepeercategorydrafts:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'deletepeercategorydrafts:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  - 'viewcategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'savecategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'deletecategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'viewpeercategorydrafts:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'savepeercategorydrafts:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'deletepeercategorydrafts:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
+  - 'viewcategories:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'savecategories:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'deletecategories:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'viewpeercategorydrafts:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'savepeercategorydrafts:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'deletepeercategorydrafts:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
+  - 'viewcategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'savecategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'deletecategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'viewpeercategorydrafts:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'savepeercategorydrafts:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'deletepeercategorydrafts:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
+  - 'viewentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'saveentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'viewpeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'savepeerentrydrafts:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'viewpeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'savepeerentries:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+  - 'viewentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'saveentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'viewpeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'savepeerentrydrafts:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'viewpeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'savepeerentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+  - 'viewentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'saveentries:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'viewpeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'savepeerentrydrafts:706870b0-b231-4710-947c-e3e6bd5c7062' # Articles Landing
+  - 'viewentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'saveentries:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'viewpeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'savepeerentrydrafts:384841aa-9783-4efd-a81f-0f4aa159ab33' # Bikes
+  - 'viewentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'saveentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'viewpeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'savepeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
+  - 'viewentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'saveentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'viewpeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'savepeerentrydrafts:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'viewpeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'savepeerentries:0f952e73-17b8-408c-9c37-3f07a5d16a92' # Error Pages
+  - 'viewentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'saveentries:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'viewpeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'savepeerentrydrafts:60203e95-0439-4fdf-a99f-b85c845abc12' # Homepage
+  - 'viewentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'saveentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'viewpeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'savepeerentrydrafts:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'viewpeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'savepeerentries:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+  - 'viewentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'saveentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'viewpeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'savepeerentrydrafts:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'viewpeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'savepeerentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
+  - 'viewentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'saveentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'viewpeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'savepeerentrydrafts:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'viewpeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'savepeerentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
+  - 'viewentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'saveentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'viewpeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'savepeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
+  - 'viewentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - 'saveentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - 'viewpeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - 'savepeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
+  - 'assignusergroup:8b2b60fd-6045-4696-b08e-6c601ac1245f' # Content Managers

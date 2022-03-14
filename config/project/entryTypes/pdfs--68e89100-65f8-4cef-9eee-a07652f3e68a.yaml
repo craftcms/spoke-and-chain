@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e0f100b9-4d2d-4567-ada0-c763a3c1ca17
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a54d183e-7397-49c6-8552-fa4dbd27441e
             warning: null
             width: 100
           -
@@ -42,10 +44,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4f4b3bf8-a3a3-4109-b6ea-13180aec6d8d
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 49ec1351-cdf1-4cdb-9a30-2f5a77fa22c8
 handle: pdfs
 hasTitleField: true
 name: PDFs

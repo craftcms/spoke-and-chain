@@ -7,8 +7,8 @@ name: 'Footer Nav'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_footernav}}'
-  maxBlocks: '4'
-  minBlocks: ''
+  maxBlocks: 4
+  minBlocks: null
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null

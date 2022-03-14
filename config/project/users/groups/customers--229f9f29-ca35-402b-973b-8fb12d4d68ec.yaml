@@ -1,3 +1,5 @@
-description: ''
+description: null
 handle: customers
 name: Customers
+permissions:
+  - 'assignusergroup:229f9f29-ca35-402b-973b-8fb12d4d68ec' # Customers

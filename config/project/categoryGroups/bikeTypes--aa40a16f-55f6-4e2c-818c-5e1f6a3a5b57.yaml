@@ -25,6 +25,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: 23841f27-29ba-4a65-ae19-2973e703bc00
             warning: null
             width: 100
           -
@@ -34,6 +35,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ab63d6b6-4f88-4cef-9d3f-606002f52bf3
             warning: null
             width: 100
           -
@@ -43,10 +45,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2bb3a632-d93f-482b-8ba3-499e3bf12848
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 387d68e7-a0d7-4b2e-83e9-3e94f1fc5ec2
 handle: bikeTypes
 name: 'Bike Types'
 siteSettings:

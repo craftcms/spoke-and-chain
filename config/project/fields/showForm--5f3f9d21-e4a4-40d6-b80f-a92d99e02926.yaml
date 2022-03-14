@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: boolean
 fieldGroup: d52553ad-dd63-4dfd-8740-d53484afbcb3 # Product
 handle: showForm
-instructions: ''
+instructions: null
 name: 'Show Form'
 searchable: false
 settings:

@@ -7,8 +7,8 @@ name: 'Content Blocks'
 searchable: true
 settings:
   contentTable: '{{%matrixcontent_contentblocks}}'
-  maxBlocks: ''
-  minBlocks: ''
+  maxBlocks: null
+  minBlocks: null
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null

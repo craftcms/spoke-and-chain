@@ -1,4 +1,4 @@
-description: ''
+description: null
 enabled: true
 fileNameFormat: 'order-invoice-{number}'
 handle: invoice

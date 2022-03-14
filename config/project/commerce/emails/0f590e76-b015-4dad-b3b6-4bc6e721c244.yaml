@@ -3,7 +3,7 @@ cc: null
 enabled: false
 language: orderLanguage
 name: 'Order Received'
-plainTextTemplatePath: ''
+plainTextTemplatePath: null
 recipientType: customer
 replyTo: null
 subject: 'We''ve got it! Thanks for your order!'

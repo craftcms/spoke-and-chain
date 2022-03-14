@@ -2,14 +2,15 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: product
-instructions: ''
+instructions: null
 name: Product
 searchable: false
 settings:
   allowSelfRelations: false
-  limit: '1'
   localizeRelations: false
-  selectionLabel: ''
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
   showSiteMenu: true
   source: null
   sources: '*'

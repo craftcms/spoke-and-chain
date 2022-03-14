@@ -11,6 +11,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d0e97bea-8697-4afa-9270-2d73b0f0c799
             warning: null
             width: 100
           -
@@ -20,10 +21,11 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9bf65e99-ab15-4e4f-95a5-525f6ac35b70
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 46a8ecc6-3e5e-4a43-8b55-055b059ff0af
 fields:
   18ab3594-a62d-4903-9c6c-b791d64fd4ad: # Pages
     columnSuffix: null
@@ -35,8 +37,9 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
-      limit: ''
       localizeRelations: false
+      maxRelations: null
+      minRelations: null
       selectionLabel: 'Add a page'
       showSiteMenu: true
       source: null
@@ -60,10 +63,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null

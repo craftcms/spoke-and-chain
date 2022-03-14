@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: text
 fieldGroup: 678ed5e4-f5a7-4694-9483-fbc5656b7f95 # SEO
 handle: seo
-instructions: ''
+instructions: null
 name: SEO
 searchable: false
 settings:

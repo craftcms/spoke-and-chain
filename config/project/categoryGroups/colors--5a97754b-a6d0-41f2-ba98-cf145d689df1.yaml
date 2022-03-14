@@ -25,6 +25,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: f2f6ecbc-cc1a-4015-8574-15c3ed359863
             warning: null
             width: 100
           -
@@ -34,10 +35,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0099dfe8-9d62-46fc-998d-0ae71a022daa
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 4ad019b8-af7e-49b1-b642-6ab2af8fdbea
 handle: colors
 name: Colors
 siteSettings:

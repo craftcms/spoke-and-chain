@@ -11,6 +11,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c7eabce9-a70c-4ec2-9ce4-724e9e9b32a5
             warning: null
             width: 100
           -
@@ -20,10 +21,11 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0b939901-31b3-44ff-ae3c-4e6ad5b0490b
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: bea798e1-1f9b-484e-85ea-64b2eb9c78b9
 fields:
   d5599be5-4ce7-4f5f-997b-843257caca75: # Heading
     columnSuffix: null
@@ -36,10 +38,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -57,10 +59,11 @@ fields:
       allowLimit: false
       allowMultipleSources: false
       allowSelfRelations: false
-      branchLimit: ''
-      limit: null
+      branchLimit: null
       localizeRelations: false
-      selectionLabel: ''
+      maxRelations: null
+      minRelations: null
+      selectionLabel: null
       showSiteMenu: true
       source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
       sources: '*'

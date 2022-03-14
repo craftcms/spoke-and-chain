@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5d83a998-be4c-4478-b3ae-503484116086
             warning: null
             width: 100
           -
@@ -33,23 +34,49 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2f38c7d3-d17d-44ec-afa2-a1e8d665b2e2
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: d904d6ed-a1e3-4093-b1f7-0b321023e9c6
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 4df11dc4-a072-49ad-8d07-35e597734c12
+            warning: null
+            width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 65035f11-efaa-440f-a6ce-b9ec4c160913
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+        name: Content
+        uid: 779fed99-7362-491c-ad4b-6e446143562c
 handle: checkoutAddress
 hasTitleField: true
 name: 'Checkout: Address'

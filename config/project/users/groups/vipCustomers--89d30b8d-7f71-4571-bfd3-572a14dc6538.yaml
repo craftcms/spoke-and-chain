@@ -1,3 +1,5 @@
-description: ''
+description: null
 handle: vipCustomers
 name: 'VIP Customers'
+permissions:
+  - 'assignusergroup:89d30b8d-7f71-4571-bfd3-572a14dc6538' # VIP Customers

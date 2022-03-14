@@ -31,6 +31,7 @@ productFieldLayouts:
             tip: null
             title: null
             type: craft\commerce\fieldlayoutelements\ProductTitleField
+            uid: 70ff1d0c-40d7-4391-aa71-421eae489ddb
             warning: null
             width: 100
           -
@@ -40,6 +41,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 46532c77-b96b-4cf0-9b90-c26645cb403a
             warning: null
             width: 100
           -
@@ -49,6 +51,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 05beaa0f-a0f2-4d59-ac5c-18a84db6526f
             warning: null
             width: 100
           -
@@ -58,10 +61,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 908ddd31-9756-4c37-a746-1c1899c54706
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: c533dded-0edb-4b1d-8807-0e2973485136
       -
         elements:
           -
@@ -71,6 +75,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f30d77c0-43c6-4a76-8f15-ff62429e0137
             warning: null
             width: 100
           -
@@ -80,10 +85,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4869b233-0b0b-4315-a9d2-db27707adad9
             warning: null
             width: 100
         name: Images
-        sortOrder: 2
+        uid: b249908c-82af-4b9b-8dd6-051039531757
       -
         elements:
           -
@@ -93,6 +99,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f26e813e-4219-44eb-bf0e-5574c0dab304
             warning: null
             width: 100
           -
@@ -102,6 +109,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 22191898-d14f-4b7a-a9b9-37addf22ca05
             warning: null
             width: 100
           -
@@ -111,10 +119,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 94839541-5923-4fc2-a1f7-582769b3fb80
             warning: null
             width: 100
         name: Options
-        sortOrder: 3
+        uid: 52d8a48c-9803-4731-baa1-fb190cdf6250
       -
         elements:
           -
@@ -123,9 +132,10 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\commerce\fieldlayoutelements\VariantsField
+            uid: bd670d41-9084-4f38-81d1-52af456549f9
             warning: null
         name: Variants
-        sortOrder: 4
+        uid: 2098ddec-442a-4b65-9f97-3e2c3687df08
       -
         elements:
           -
@@ -135,10 +145,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ae52e449-2619-4e43-ac00-2185dd3a3b46
             warning: null
             width: 100
         name: SEO
-        sortOrder: 5
+        uid: 8884bdcc-7a75-466d-a9ef-421c714bd561
 productTitleFormat: ''
 siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
@@ -146,7 +157,6 @@ siteSettings:
     template: _views/products/bike
     uriFormat: 'product/{slug}'
 skuFormat: ''
-titleFormat: '{product.title}'
 variantFieldLayouts:
   7480375f-d72f-4bf8-806a-2c72045b9880:
     tabs:
@@ -173,7 +183,9 @@ variantFieldLayouts:
             tip: null
             title: null
             type: craft\commerce\fieldlayoutelements\VariantTitleField
+            uid: d8a0e678-0c31-41f0-a269-c625e121bef2
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: de6cef88-f6ea-47e4-87e6-6d8eac64fced
+variantTitleFormat: '{product.title}'

@@ -23,7 +23,8 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a3f5f766-0030-438b-ac78-1a18ee867c8d
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f933a41d-2a23-4957-a7e2-c35a6ae46990
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 7d1cb57b-8aba-4285-aa0c-522902aff273
             warning: null
             width: 100
           -
@@ -51,23 +54,69 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5b6c152d-f124-4f96-bf95-55738bccfc94
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 5f862652-662b-4495-ac37-598b4f5d0167
       -
         elements:
           -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 942cdc0f-7769-453a-b80d-dffef3e1a9f0
+            warning: null
+            width: 100
+          -
+            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6c5ab834-8826-48f2-860a-ed7e73053901
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98d5a840-370a-4ca7-a92e-c3bd18030368
+            warning: null
+            width: 100
+          -
+            fieldUid: a42d1365-22cd-445e-9e10-43dc721bddbe # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3eabb14e-d2cf-434e-aeed-c49471a5e344
+            warning: null
+            width: 100
+        name: Content
+        uid: 77ddae1b-62bb-46c3-b9a5-1b7856b0ae50
 handle: homepage
 hasTitleField: false
 name: Homepage

@@ -23,42 +23,80 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 02a56040-c5a8-4879-913d-eb32b917ef89
             warning: null
             width: 100
           -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: ''
+            instructions: null
             label: 'Forgot Password Text'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0d819bc2-3819-42f2-935e-2869a5b21bfc
             warning: null
             width: 100
           -
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: ''
-            label: 'Register Text'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Content
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
-            label: null
+            label: 'Register Text'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c4c59c83-4609-4ce3-96c1-d71f18e09027
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+        name: Content
+        uid: bc24f0e0-1306-4518-a060-aa41a29d56a7
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ef248265-a733-4e1a-9bba-157106c93c25
+            warning: null
+            width: 100
+          -
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            instructions: null
+            label: 'Forgot Password Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5d04f0d-b801-40a2-b72d-74a93f4cc5e2
+            warning: null
+            width: 100
+          -
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            instructions: null
+            label: 'Register Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8e31303-0438-4389-a2fb-7f8e31314071
+            warning: null
+            width: 100
+        name: Content
+        uid: 7ab70eab-b1f0-433a-b346-0a1733d81e24
 handle: login
 hasTitleField: true
 name: Login

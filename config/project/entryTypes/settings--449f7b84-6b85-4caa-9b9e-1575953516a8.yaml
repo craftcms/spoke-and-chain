@@ -23,51 +23,100 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2fbc2afd-810b-4b90-ba12-04337e06f904
             warning: null
             width: 100
           -
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: 'Used on the account dashboard page'
-            label: ''
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: ''
-            label: 'New Password Help Text'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: ''
-            label: 'Current Password Help Text'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Content
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
-            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 89726af4-c07b-4e9a-8455-391b9f68db43
             warning: null
             width: 100
-        name: SEO
-        sortOrder: 2
+          -
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            instructions: null
+            label: 'New Password Help Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3b48ee8-9d30-4239-a23c-83d9db952af6
+            warning: null
+            width: 100
+          -
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            instructions: null
+            label: 'Current Password Help Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfab2061-e769-4f0f-a98e-769900b8bd49
+            warning: null
+            width: 100
+        name: Content
+        uid: 8a95ab6d-0f4d-4399-90e3-d6d918f6a126
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b206dc62-3b91-4927-9b03-cc432b147e0b
+            warning: null
+            width: 100
+          -
+            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            instructions: 'Used on the account dashboard page'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a834047f-fbff-46eb-bda1-49d73ddf6a34
+            warning: null
+            width: 100
+          -
+            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            instructions: null
+            label: 'New Password Help Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64745136-7e2c-4bd2-af48-d5d55db72484
+            warning: null
+            width: 100
+          -
+            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            instructions: null
+            label: 'Current Password Help Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9769de65-ea09-4704-9cc3-7cbf764f3c54
+            warning: null
+            width: 100
+        name: Content
+        uid: 91a4ab97-0a7b-473f-b609-cec212d19e80
 handle: settings
 hasTitleField: true
 name: Settings

@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: text
 fieldGroup: d52553ad-dd63-4dfd-8740-d53484afbcb3 # Product
 handle: geometry
-instructions: ''
+instructions: null
 name: Geometry
 searchable: false
 settings:
@@ -90,8 +90,9 @@ settings:
             -
               - type
               - singleline
-  maxRows: ''
-  minRows: ''
+  defaults: null
+  maxRows: null
+  minRows: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Table

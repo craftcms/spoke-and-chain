@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: text
 fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: planFeatures
-instructions: ''
+instructions: null
 name: 'Plan Features'
 searchable: false
 settings:
@@ -26,8 +26,9 @@ settings:
             -
               - type
               - singleline
-  maxRows: ''
-  minRows: ''
+  defaults: null
+  maxRows: null
+  minRows: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Table
