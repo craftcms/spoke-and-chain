@@ -2,19 +2,18 @@
 
 namespace modules\demos\console\controllers;
 
+use CommerceGuys\Addressing\Subdivision\Subdivision;
 use Craft;
 use craft\commerce\elements\Order;
 use craft\commerce\elements\Product;
 use craft\commerce\events\MailEvent;
-use craft\commerce\models\Address;
-use craft\commerce\models\Country;
-use craft\commerce\models\Customer;
 use craft\commerce\models\OrderStatus;
-use craft\commerce\models\State;
+use craft\commerce\models\Store;
 use craft\commerce\Plugin;
 use craft\commerce\records\Transaction;
 use craft\commerce\services\Emails;
 use craft\console\Controller;
+use craft\elements\Address;
 use craft\elements\db\ElementQuery;
 use craft\elements\db\UserQuery;
 use craft\elements\Entry;
@@ -108,32 +107,37 @@ class SeedController extends Controller
     /**
      * @var array
      */
-    private $_users = [];
+    private array $_users = [];
 
     /**
      * @var array
      */
-    private $_guestCustomers = [];
+    private array $_guestCustomers = [];
 
     /**
      * @var array
      */
-    private $_countries = [];
+    private array $_countries = [];
 
     /**
      * @var Product[]|array
      */
-    private $_products = [];
+    private array $_products = [];
 
     /**
      * @var OrderStatus[]|array
      */
-    private $_orderStatuses = [];
+    private array $_orderStatuses = [];
 
     /**
      * @var DateTime|null
      */
-    private $_startDate;
+    private ?DateTime $_startDate;
+
+    /**
+     * @var Store|null
+     */
+    private ?Store $_store = null;
 
     /**
      * @var FakerGenerator
@@ -161,6 +165,7 @@ class SeedController extends Controller
         $this->_startDate = $startDate->sub($interval);
 
         $this->_faker = \Faker\Factory::create();
+        $this->_store = Plugin::getInstance()->getStore()->getStore();
     }
 
     /**
@@ -172,7 +177,7 @@ class SeedController extends Controller
     {
         $this->stdout('Beginning seed ... ' . PHP_EOL . PHP_EOL);
         $this->runAction('freeform-data', ['contact']);
-        $this->runAction('refresh-articles');
+        // $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
         $this->_cleanup();
         $this->stdout('Seed complete.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
@@ -250,9 +255,10 @@ class SeedController extends Controller
 
         foreach ($entries->all() as $entry) {
             $entry->postDate = $this->_faker->dateTimeInInterval('-1 months', '-5 days');
-            Craft::$app->elements->saveElement($entry);
+            Craft::$app->elements->saveElement(element: $entry, updateSearchIndex: false);
         }
 
+        Craft::$app->getSearch()->indexElementAttributes(element: $entry);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
@@ -272,20 +278,10 @@ class SeedController extends Controller
 
     public function actionDeleteCommerceData(): int
     {
-        $customersService = Plugin::getInstance()->getCustomers();
-
-        foreach ($customersService->getAllCustomers() as $customer) {
-            $customersService->deleteCustomer($customer);
-        }
-        $this->deleteElements(User::find()->group([
-            self::CUSTOMER_GROUP_HANDLE,
-            self::VIP_CUSTOMER_GROUP_HANDLE,
-        ]), 'customers');
-        $this->deleteElements(Entry::find()->section('reviews'), 'reviews');
         $this->deleteElements(Order::find(), 'orders');
-        // $this->deleteElements(Cart::find(), 'orders');
+        $this->deleteElements(User::find()->status(User::STATUS_INACTIVE), 'customers');
+        $this->deleteElements(Entry::find()->section('reviews'), 'reviews');
 
-        $customersService->purgeOrphanedCustomers();
         Plugin::getInstance()->getCarts()->purgeIncompleteCarts();
 
         return ExitCode::OK;
@@ -421,19 +417,14 @@ class SeedController extends Controller
             $user->setGroups($groups);
             Craft::$app->getUsers()->assignUserToGroups($user->id, $groupIds);
 
-            $customer = Plugin::getInstance()->getCustomers()->getCustomerByUserId($user->id);
-            $attributes['customerId'] = $customer->id;
-
-            $attributes['addresses'] = [];
+            $addresses = [];
             for ($j = 0; $j < random_int(1, 3); $j++) {
-                $attributes['addresses'][] = $this->_createAddress($firstName, $lastName, $customer);
+                $addresses[] = $this->_createAddress($firstName, $lastName, $user);
             }
 
-            $this->_users[] = array_merge($attributes, [
-                'id' => $user->id,
-                'firstName' => $firstName,
-                'lastName' => $lastName,
-            ]);
+            Craft::$app->getUsers()->activateUser($user);
+
+            $this->_users[] = $user->toArray() + compact('addresses');
             $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
         }
 
@@ -451,26 +442,23 @@ class SeedController extends Controller
         $this->stdout('Creating customers...' . PHP_EOL);
         $numCustomers = random_int(self::CUSTOMERS_MIN, self::CUSTOMERS_MAX);
         for ($i = 0; $i <= $numCustomers; $i++) {
-            /** @var Customer $customer */
-            $customer = Craft::createObject(['class' => Customer::class]);
-            Plugin::getInstance()->getCustomers()->saveCustomer($customer);
 
-            $attributes = [
-                'customerId' => $customer->id,
-                'email' => $this->_faker->email,
-                'firstName' => $this->_faker->firstName(),
-                'lastName' => $this->_faker->lastName,
-                'addresses' => [],
-            ];
+            $customer = Craft::$app->getUsers()->ensureUserByEmail($this->_faker->email);
 
-            $this->stdout("    - [{$i}/{$numCustomers}] Creating guest customer " . $attributes['firstName'] . ' ' . $attributes['lastName'] . ' ... ');
+            $customer->firstName = $this->_faker->firstName();
+            $customer->lastName = $this->_faker->lastName;
+
+            Craft::$app->getElements()->saveElement($customer, false);
+
+            $this->stdout("    - [{$i}/{$numCustomers}] Creating guest customer " . $customer->firstName . ' ' . $customer->lastName . ' ... ');
+            $addresses = [];
             for ($j = 0; $j <= random_int(1, 3); $j++) {
-                $address = $this->_createAddress($attributes['firstName'], $attributes['lastName'], $customer);
+                $address = $this->_createAddress($customer->firstName, $customer->lastName, $customer);
 
-                $attributes['addresses'][] = $address;
+                $addresses[] = $address;
             }
 
-            $this->_guestCustomers[] = $attributes;
+            $this->_guestCustomers[] = $customer->toArray() + compact('addresses');
             $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
         }
 
@@ -480,14 +468,14 @@ class SeedController extends Controller
     /**
      * Create and save address data.
      *
-     * @param $firstName
-     * @param $lastName
-     * @param $customer
+     * @param string $firstName
+     * @param string $lastName
+     * @param User $customer
      * @return Address
      * @throws \yii\base\Exception
      * @throws \yii\base\InvalidConfigException
      */
-    private function _createAddress($firstName, $lastName, $customer)
+    private function _createAddress(string $firstName, string $lastName, User $customer)
     {
         $country = $this->_getRandomCountry();
 
@@ -495,52 +483,55 @@ class SeedController extends Controller
         $address = Craft::createObject([
             'class' => Address::class,
             'attributes' => [
+                'ownerId' => $customer->id,
                 'firstName' => $firstName,
                 'lastName' => $lastName,
-                'address1' => $this->_faker->streetAddress,
-                'city' => $this->_faker->city,
-                'zipCode' => $this->_faker->postcode,
-                'countryId' => $country->id,
+                'addressLine1' => $this->_faker->streetAddress,
+                'locality' => $this->_faker->city,
+                'postalCode' => $this->_faker->postcode,
+                'countryCode' => $country,
             ]
         ]);
 
-        /** @var State $state */
-        if ($country->isStateRequired && $state = $this->_getRandomStateFromCountry($country)) {
-            $address->setStateValue($state->id);
+        $addressFormat = Craft::$app->getAddresses()->getAddressFormatRepository()->get($country);
+
+        if ($addressFormat->getAdministrativeAreaType() !== null && $subdivision = $this->_getRandomStateFromCountry($country)) {
+            $address->administrativeArea = $subdivision->getCode();
         }
 
-        Plugin::getInstance()->getCustomers()->saveAddress($address, $customer, false);
+        Craft::$app->getElements()->saveElement($address, false);
 
         return $address;
     }
 
 
     /**
-     * @return Country
+     * @return string Country code
      * @throws \Exception
      */
-    private function _getRandomCountry(): Country
+    private function _getRandomCountry(): string
     {
         if (empty($this->_countries)) {
-            $this->_countries = Plugin::getInstance()->getCountries()->getAllEnabledCountries();
+            $this->_countries = $this->_store->getCountries();
         }
 
         return $this->_faker->randomElement($this->_countries);
     }
 
     /**
-     * @param Country $country
-     * @return mixed|null
+     * @param string $country
+     * @return Subdivision|null
      * @throws \Exception
      */
-    private function _getRandomStateFromCountry(Country $country)
+    private function _getRandomStateFromCountry(string $country): ?Subdivision
     {
-        $states = $country->getStates();
-        if (empty($states)) {
+        $subdivisions = Craft::$app->getAddresses()->getSubdivisionRepository()->getAll([$country]);
+
+        if (empty($subdivisions)) {
             return null;
         }
 
-        return $this->_faker->randomElement($states);
+        return $this->_faker->randomElement($subdivisions);
     }
 
     /**
@@ -660,11 +651,8 @@ class SeedController extends Controller
         $customer = $this->_getRandomCustomer(random_int(0, 1));
 
         $attributes = [
-            'billingAddressId' => $this->_getRandomAddressFromCustomer($customer)->id,
-            'shippingAddressId' => $this->_getRandomAddressFromCustomer($customer)->id,
             'dateUpdated' => $date,
             'dateCreated' => $date,
-            'email' => $customer['email'],
         ];
 
         /** @var Order $order */
@@ -673,10 +661,25 @@ class SeedController extends Controller
             'attributes' => $attributes
         ]);
 
-        $order->customerId = $customer['customerId'];
+
+        $order->setCustomerId($customer['id']);
         $order->number = Plugin::getInstance()->getCarts()->generateCartNumber();
 
         Craft::$app->getElements()->saveElement($order);
+
+        /** @var Address $billingAddress */
+        $billingAddress = Craft::$app->getElements()->duplicateElement($this->_getRandomAddressFromCustomer($customer), [
+            'ownerId' => $order->id,
+            'title' => Craft::t('commerce', 'Billing Address'),
+        ]);
+        /** @var Address $shippingAddress */
+        $shippingAddress = Craft::$app->getElements()->duplicateElement($this->_getRandomAddressFromCustomer($customer), [
+            'ownerId' => $order->id,
+            'title' => Craft::t('commerce', 'Shipping Address'),
+        ]);
+
+        $order->setBillingAddress($billingAddress);
+        $order->setShippingAddress($shippingAddress);
 
         $lineItems = [];
         $numProducts = random_int(1, self::PRODUCTS_PER_ORDER_MAX);
@@ -684,7 +687,7 @@ class SeedController extends Controller
             $product = $this->_getRandomProduct();
             // Weight the qty in favour of 1 item
             $qty = random_int(0, 9) < 8 ? 1 : 2;
-            $lineItems[] = Plugin::getInstance()->getLineItems()->createLineItem($order->id, $product->getDefaultVariant()->id, [], $qty);
+            $lineItems[] = Plugin::getInstance()->getLineItems()->createLineItem($order, $product->getDefaultVariant()->id, [], $qty);
         }
 
         $order->setLineItems($lineItems);
