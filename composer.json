@@ -24,7 +24,7 @@
     "craftcms/redactor": "3.0.x-dev",
     "craftcms/store-hours": "v3.x-dev",
     "fakerphp/faker": "^1.9",
-    "nystudio107/craft-seomatic": "4.0.0-beta.3",
+    "nystudio107/craft-seomatic": "4.0.0-beta.4",
     "nystudio107/craft-twigpack": "4.0.0-beta.2",
     "oberon/starfield": "dev-craft-4",
     "putyourlightson/craft-sprig": "2.0.0-alpha.1",
