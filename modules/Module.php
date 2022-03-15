@@ -57,10 +57,10 @@ class Module extends \yii\base\Module
                 $event->rules[] = [[
                     'firstName',
                     'lastName',
-                    'address1',
-                    'city',
-                    'countryId',
-                    'zipCode'
+                    'addressLine1',
+                    'locality',
+                    'countryCode',
+                    'postalCode'
                 ], 'required'];
             }
         );
