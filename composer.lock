@@ -527,16 +527,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.2.9",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649"
+                "reference": "f79c90ad4e9b41ac4dfc5d77bf398cf61fbd718b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/a951f614bd64dcd26137bc9b7b2637ddcfc57649",
-                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649",
+                "url": "https://api.github.com/repos/composer/semver/zipball/f79c90ad4e9b41ac4dfc5d77bf398cf61fbd718b",
+                "reference": "f79c90ad4e9b41ac4dfc5d77bf398cf61fbd718b",
                 "shasum": ""
             },
             "require": {
@@ -588,7 +588,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.2.9"
+                "source": "https://github.com/composer/semver/tree/3.3.0"
             },
             "funding": [
                 {
@@ -604,7 +604,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-04T13:58:43+00:00"
+            "time": "2022-03-15T08:35:57+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -4764,22 +4764,22 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "1.12.0",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "a585265a1281dc5a1087a4ec8207077f14a45a3b"
+                "reference": "6578d6b7965ecc8bead18fc3186fc8a5834df903"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/a585265a1281dc5a1087a4ec8207077f14a45a3b",
-                "reference": "a585265a1281dc5a1087a4ec8207077f14a45a3b",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/6578d6b7965ecc8bead18fc3186fc8a5834df903",
+                "reference": "6578d6b7965ecc8bead18fc3186fc8a5834df903",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.3.0",
                 "phpdocumentor/reflection-docblock": "^5.2.0",
-                "putyourlightson/craft-sprig-core": "^1.3.0"
+                "putyourlightson/craft-sprig-core": "^1.3.1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -4813,20 +4813,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-01T10:14:18+00:00"
+            "time": "2022-03-15T08:59:21+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "59cd8b6d42aec11a2d6815596b0d8d02d9ecb1bd"
+                "reference": "49bf3a0e0e706ab60017e7445b06f3d60837f834"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/59cd8b6d42aec11a2d6815596b0d8d02d9ecb1bd",
-                "reference": "59cd8b6d42aec11a2d6815596b0d8d02d9ecb1bd",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/49bf3a0e0e706ab60017e7445b06f3d60837f834",
+                "reference": "49bf3a0e0e706ab60017e7445b06f3d60837f834",
                 "shasum": ""
             },
             "require": {
@@ -4854,7 +4854,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2022-03-01T10:00:57+00:00"
+            "time": "2022-03-15T08:56:09+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
