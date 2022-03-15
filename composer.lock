@@ -1003,12 +1003,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "efa143a1be6b2c5f13ae12bfa75d24feec8367fa"
+                "reference": "ee44c6920fd95c2b5cbdb3b7315fca8ff6f56790"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/efa143a1be6b2c5f13ae12bfa75d24feec8367fa",
-                "reference": "efa143a1be6b2c5f13ae12bfa75d24feec8367fa",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/ee44c6920fd95c2b5cbdb3b7315fca8ff6f56790",
+                "reference": "ee44c6920fd95c2b5cbdb3b7315fca8ff6f56790",
                 "shasum": ""
             },
             "require": {
@@ -1066,7 +1066,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-03-15T10:32:28+00:00"
+            "time": "2022-03-15T14:52:42+00:00"
         },
         {
             "name": "craftcms/craft-flysystem",
@@ -2598,7 +2598,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.5.0",
+            "version": "v9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2653,7 +2653,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.5.0",
+            "version": "v9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2699,7 +2699,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.5.0",
+            "version": "v9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2747,7 +2747,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.5.0",
+            "version": "v9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",

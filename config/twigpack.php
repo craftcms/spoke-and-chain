@@ -22,7 +22,7 @@ return [
         // Public server config
         'server' => [
             'manifestPath' => '@webroot/assets/dist',
-            'publicPath' => '@assetBaseUrl/assets/dist',
+            'publicPath' => '@assetBaseUrl',
         ],
         // webpack-dev-server config
         'devServer' => [

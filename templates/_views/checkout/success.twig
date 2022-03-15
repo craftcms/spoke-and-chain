@@ -25,7 +25,7 @@
         <div class="flex flex-wrap border-gray-300 py-8">
           <div class="w-full pb-4 lg:pb-0 lg:w-1/5 pr-6">
             <h3>
-              {{- 'Address'|t -}}
+              {{- 'Addresses'|t -}}
             </h3>
           </div>
           <div class="w-full lg:w-4/5">
@@ -34,14 +34,14 @@
                 <h4>
                   {{- 'Shipping To'|t ~ ':' -}}
                 </h4>
-                <p>{{ order.shippingAddress.addressLines|join("\n")|nl2br }}</p>
+                <p>{{ craft.app.addresses.formatAddress(order.shippingAddress)|raw }}</p>
               </div>
               <div class="w-1/2">
                 <h4>
                   {{- 'Billing Address'|t ~ ':' -}}
                 </h4>
 
-                <p>{{ order.billingAddress.addressLines|join("\n")|nl2br }}</p>
+                <p>{{ craft.app.addresses.formatAddress(order.billingAddress)|raw }}</p>
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 window.addresses = function() {
     return {
         modelId: null,
-        countryId: null,
-        stateId: null,
+        countryCode: null,
+        administrativeArea: null,
         modelName: null,
         stateSelectId: null,
         stateTextId: null,
@@ -13,12 +13,13 @@ window.addresses = function() {
             return window.addressStates;
         },
         states() {
-            if (this.countryId && Object.keys(this.allStates()).indexOf(this.countryId) >= 0) {
+            if (this.countryCode && this.allStates()[this.countryCode]) {
                 let states = [];
-                Object.keys(this.allStates()[this.countryId]).forEach(key => {
+
+                Object.keys(this.allStates()[this.countryCode]).forEach(key => {
                     states.push({
                         id: key,
-                        name: this.allStates()[this.countryId][key]
+                        name: key,
                     });
                 });
 
@@ -28,7 +29,7 @@ window.addresses = function() {
             return [];
         },
         stateSelected(state) {
-            return state && state.id == this.stateId;
+            return state && state.id == this.administrativeArea;
         },
         toggleStates() {
 
@@ -53,7 +54,7 @@ window.addresses = function() {
 
         },
         onChange(ev) {
-            this.countryId = ev.target.value;
+            this.countryCode = ev.target.value;
             this.toggleStates();
         },
         getErrors(key) {

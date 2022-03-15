@@ -38,72 +38,72 @@ class ProductFilter extends Component
     /**
      * @var string|null
      */
-    public $type;
+    public ?string $type;
 
     /**
      * @var array|string
      */
-    public $colors = [];
+    public string|array $colors = [];
 
     /**
      * @var array|string
      */
-    public $materials = [];
+    public string|array $materials = [];
 
     /**
      * @var string
      */
-    public $sort = '';
+    public string $sort = '';
 
     /**
      * @var string
      */
-    public $currentPushUrl;
+    public string $currentPushUrl = '';
 
     /**
      * @var bool
      */
-    public $saveState = true;
+    public bool $saveState = true;
 
     /**
      * @var string|int
      */
-    public $elementId;
+    public string|int|null $elementId = null;
 
     /**
      * @inheritdoc
      */
-    protected $_template = '_includes/components/filters/filter';
+    protected ?string $_template = '_includes/components/filters/filter';
 
     /**
      * @var null|array
      */
-    private $_types;
+    private ?array $_types = null;
 
     /**
      * @var null|array
      */
-    private $_materials;
+    private ?array $_materials = null;
 
     /**
      * @var null|array
      */
-    private $_colors;
+    private ?array $_colors = null;
 
     /**
      * @var null|Entry
      */
-    private $_landingEntry;
+    private ?Entry $_landingEntry = null;
 
     /**
      * @var null|Product[]
      */
-    private $_products;
+    private ?array $_products = null;
 
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
 
@@ -144,7 +144,7 @@ class ProductFilter extends Component
     /**
      * @inheritdoc
      */
-    public function attributes()
+    public function attributes(): array
     {
         $attributes = parent::attributes();
 
@@ -165,7 +165,7 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getTypes()
+    public function getTypes(): ?array
     {
         if ($this->_types != null) {
             return $this->_types;
@@ -182,7 +182,7 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getMaterialFilters()
+    public function getMaterialFilters(): ?array
     {
         if ($this->_materials != null) {
             return $this->_materials;
@@ -200,7 +200,7 @@ class ProductFilter extends Component
     /**
      * @return array|Category[]|null
      */
-    public function getColorFilters()
+    public function getColorFilters(): ?array
     {
         if ($this->_colors != null) {
             return $this->_colors;
@@ -351,7 +351,7 @@ class ProductFilter extends Component
      * @return string
      * @throws \yii\base\Exception
      */
-    public function getPushUrl()
+    public function getPushUrl(): string
     {
         $page = $this->type ? ArrayHelper::firstWhere($this->getTypes(), 'slug', $this->type) : $this->_getLandingEntry();
         return UrlHelper::siteUrl($page->uri, $this->_getUrlParams());
@@ -370,7 +370,7 @@ class ProductFilter extends Component
     /**
      * @return int
      */
-    public function getProductCount()
+    public function getProductCount(): int
     {
         return count($this->getProducts());
     }
@@ -378,7 +378,7 @@ class ProductFilter extends Component
     /**
      * @return int
      */
-    public function getFilterCount()
+    public function getFilterCount(): int
     {
         return ($this->type ? 1 : 0) + count($this->colors) + count($this->materials);
     }
@@ -390,7 +390,7 @@ class ProductFilter extends Component
      * @param null $value
      * @return array
      */
-    private function _getUrlParams($key = null, $value = null)
+    private function _getUrlParams($key = null, $value = null): array
     {
         $urlParams = [];
         if ($this->sort) {
@@ -434,7 +434,7 @@ class ProductFilter extends Component
      *
      * @return Entry|null
      */
-    private function _getLandingEntry()
+    private function _getLandingEntry(): ?Entry
     {
         if ($this->_landingEntry != null) {
             return $this->_landingEntry;

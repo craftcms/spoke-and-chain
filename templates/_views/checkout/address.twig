@@ -2,8 +2,7 @@
 {% extends '_layouts/site' %}
 
 {# Variables #}
-{% set customer = craft.commerce.customers.customer %}
-{% set addresses = customer ? customer.addresses : [] %}
+{% set addresses = currentUser ? currentUser.addresses : [] %}
 {% set shippingPage = craft.entries({ section: 'checkoutShipping' }).one() %}
 {% set checkoutPage = craft.entries({ section: 'checkout' }).one() %}
 

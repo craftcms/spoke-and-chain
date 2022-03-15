@@ -121,25 +121,31 @@
 
                   <template x-if="id == false">
                     <div>
-                      {% include '_includes/components/forms/creditCard' with {
-                        paymentForm: paymentForm,
-                        allowSave: true
-                      } %}
+                      {% namespace cart.gateway.handle|commercePaymentFormNamespace %}
+                        {% include '_includes/components/forms/creditCard' with {
+                          paymentForm: paymentForm,
+                          allowSave: true
+                        } %}
+                      {% endnamespace %}
                     </div>
                   </template>
                 </div>
               {% else %}
                 <div>
-                  {% include '_includes/components/forms/creditCard' with {
-                    paymentForm: paymentForm,
-                    allowSave: true
-                  } %}
+                  {% namespace cart.gateway.handle|commercePaymentFormNamespace %}
+                    {% include '_includes/components/forms/creditCard' with {
+                      paymentForm: paymentForm,
+                      allowSave: true
+                    } %}
+                  {% endnamespace %}
                 </div>
               {% endif %}
             {% else %}
-              {% include '_includes/components/forms/creditCard' with {
-                paymentForm: paymentForm
-              } %}
+              {% namespace cart.gateway.handle|commercePaymentFormNamespace %}
+                {% include '_includes/components/forms/creditCard' with {
+                  paymentForm: paymentForm
+                } %}
+              {% endnamespace %}
             {% endif %}
           </div>
 
