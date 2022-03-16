@@ -24,7 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 140ff835-0b2d-44e3-8b57-4b256dc5c095
+            uid: ece5122e-c7e9-4bdf-b53f-47c46f7139af
             warning: null
             width: 100
         name: Content
@@ -52,7 +52,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: a1054cba-7042-451c-a20f-5317c870b15a
+            uid: 9008e406-4f60-4d37-a690-3a8ec7b7d7f4
             warning: null
             width: 100
         name: Content

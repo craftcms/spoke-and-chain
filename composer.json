@@ -30,7 +30,8 @@
     "pixelandtonic/yii2-dynamodb": "dev-develop",
     "putyourlightson/craft-sprig": "2.0.0-alpha.1",
     "vlucas/phpdotenv": "^3.4.0",
-    "solspace/craft-freeform": "dev-craft4"
+    "solspace/craft-freeform": "dev-craft4",
+    "verbb/default-dashboard": "dev-craft-4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e45b99a3b440bb96e46f7549da9dbfc9",
+    "content-hash": "0eb740d1b8c5f03a7abe1bbbd9680c1f",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1003,12 +1003,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "1a8a3c7b2d0f527972fbb8d9d1c69d4011494857"
+                "reference": "4d5d34a4eef9eb162258a37de2f951f7479579b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/1a8a3c7b2d0f527972fbb8d9d1c69d4011494857",
-                "reference": "1a8a3c7b2d0f527972fbb8d9d1c69d4011494857",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/4d5d34a4eef9eb162258a37de2f951f7479579b2",
+                "reference": "4d5d34a4eef9eb162258a37de2f951f7479579b2",
                 "shasum": ""
             },
             "require": {
@@ -1066,7 +1066,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-03-16T14:42:16+00:00"
+            "time": "2022-03-16T15:55:31+00:00"
         },
         {
             "name": "craftcms/craft-flysystem",
@@ -8376,6 +8376,113 @@
             "time": "2022-02-04T06:59:48+00:00"
         },
         {
+            "name": "verbb/base",
+            "version": "2.0.0-beta.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/verbb-base.git",
+                "reference": "4aba61a5cd7e44faa2a0d0bb4dcc8137ce441b4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/4aba61a5cd7e44faa2a0d0bb4dcc8137ce441b4e",
+                "reference": "4aba61a5cd7e44faa2a0d0bb4dcc8137ce441b4e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-beta.1",
+                "php": "^8.0.2"
+            },
+            "type": "yii-module",
+            "autoload": {
+                "psr-4": {
+                    "verbb\\base\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
+            "support": {
+                "docs": "https://github.com/verbb/verbb-base",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/verbb-base/issues?state=open",
+                "rss": "https://github.com/verbb/verbb-base/commits/v2.atom",
+                "source": "https://github.com/verbb/verbb-base"
+            },
+            "time": "2022-03-09T21:09:51+00:00"
+        },
+        {
+            "name": "verbb/default-dashboard",
+            "version": "dev-craft-4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/default-dashboard.git",
+                "reference": "609575c19d66cde6fb5d27ec53d88a7e67321263"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/609575c19d66cde6fb5d27ec53d88a7e67321263",
+                "reference": "609575c19d66cde6fb5d27ec53d88a7e67321263",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-beta.1",
+                "php": "^8.0.2",
+                "verbb/base": "^2.0.0-beta"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Default Dashboard",
+                "handle": "default-dashboard",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/default-dashboard/craft-4/CHANGELOG.md",
+                "class": "verbb\\defaultdashboard\\DefaultDashboard"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\defaultdashboard\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "A Craft CMS plugin to set default dashboard widgets for users.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/verbb/default-dashboard",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/default-dashboard/issues?state=open",
+                "rss": "https://github.com/verbb/default-dashboard/commits/v2.atom",
+                "source": "https://github.com/verbb/default-dashboard"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/verbb",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-03-12T12:37:47+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v3.6.10",
             "source": {
@@ -9891,7 +9998,8 @@
         "craftcms/store-hours": 20,
         "oberon/starfield": 20,
         "pixelandtonic/yii2-dynamodb": 20,
-        "solspace/craft-freeform": 20
+        "solspace/craft-freeform": 20,
+        "verbb/default-dashboard": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
