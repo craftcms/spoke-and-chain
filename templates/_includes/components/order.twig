@@ -22,7 +22,7 @@
           </div>
           <div>
             <div class="uppercase text-xs text-gray-600">{{ 'Shipped To'|t }}</div>
-            <div class="font-medium">{{ order.shippingAddress.zipCode }}, {{ order.shippingAddress.country.iso }}</div>
+            <div class="font-medium">{{ order.shippingAddress.postalCode }}, {{ order.shippingAddress.countryCode }}</div>
           </div>
         </div>
         <div class="mt-8 md:mt-0 md:ml-4 md:text-right">
@@ -52,13 +52,13 @@
           {% endfor %}
         </div>
         <div class="mt-4 sm:mt-0 sm:w-1/3">
-          <a class="button text-center text-sm w-full submit" 
+          <a class="button text-center text-sm w-full submit"
             href="{{ siteUrl(entry.uri ~ '/' ~ order.shortNumber) }}"
           >
             {{- 'View order details'|t -}}
           </a>
             {% if pdf %}
-              <a class="button text-sm w-full mt-2 text-center" 
+              <a class="button text-sm w-full mt-2 text-center"
                 href="{{ pdf }}"
               >
                 {{- 'Download PDF invoice'|t -}}

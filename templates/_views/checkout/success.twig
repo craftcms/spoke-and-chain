@@ -34,14 +34,15 @@
                 <h4>
                   {{- 'Shipping To'|t ~ ':' -}}
                 </h4>
-                <p>{{ craft.app.addresses.formatAddress(order.shippingAddress)|raw }}</p>
+
+                {{ craft.app.addresses.formatAddress(order.shippingAddress)|raw }}
               </div>
               <div class="w-1/2">
                 <h4>
                   {{- 'Billing Address'|t ~ ':' -}}
                 </h4>
 
-                <p>{{ craft.app.addresses.formatAddress(order.billingAddress)|raw }}</p>
+                {{ craft.app.addresses.formatAddress(order.billingAddress)|raw }}
               </div>
             </div>
           </div>

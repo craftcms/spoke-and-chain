@@ -2,8 +2,5 @@
 
 {% if address %}
   <!-- Template: {{ _self }}.twig -->
-    THE ADDRESS
-{#  {% for key, line in address.addressLines %}#}
-{#    {% if key == 'name' %}<strong>{{ line }}</strong>{% else %}{{ line }}{% endif %}<br>#}
-{#  {% endfor %}#}
+    {{ craft.app.addresses.formatAddress(address)|raw }}
 {% endif %}

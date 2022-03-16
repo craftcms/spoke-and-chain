@@ -1,7 +1,7 @@
 {% set errors = errors is not defined ? [] : errors %}
 {% set errorKeys = errors and errors|length ? errors|keys : [] %}
-{% set countries = craft.commerce.store.store.getCountriesList() %}
-{% set states = countries|map((val, key) => craft.app.getAddresses().getAddressFormatRepository().get(key).getAdministrativeAreaType() == null ? null : craft.app.addresses.getSubdivisionRepository().getAll([key])|map((av, aa) => aa)) %}
+{% set countries = craft.commerce.store.getStore().getCountriesList() %}
+{% set states = craft.commerce.store.getStore().getAdministrativeAreasListByCountryCode() %}
 {% set countryCode = model and model.countryCode ? model.countryCode : null %}
 {% set administrativeArea = model and model.administrativeArea ? model.administrativeArea : null %}
 {% set outputIdField = outputIdField is defined ? outputIdField : true %}
@@ -69,7 +69,6 @@
     </div>
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-state">{{ 'State'|t }} <small class="text-gray-500" x-show="!showStateSelect">({{ 'optional'|t }})</small></label>
-{#      {% set options = (model and states[model.countryCode] ? states[model.countryCode] : []) %}#}
       <div class="w-full" x-show="showStateSelect">
         {% set stateSelect %}
           <select :id="stateSelectId" class="appearance-none block w-full bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base leading-6 text-gray-900 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5" name="{{ modelName }}[administrativeArea]" x-model="administrativeArea">

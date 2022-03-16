@@ -16,10 +16,10 @@ window.addresses = function() {
             if (this.countryCode && this.allStates()[this.countryCode]) {
                 let states = [];
 
-                Object.keys(this.allStates()[this.countryCode]).forEach(key => {
+                Object.keys(this.allStates()[this.countryCode]).forEach((key) => {
                     states.push({
                         id: key,
-                        name: key,
+                        name: this.allStates()[this.countryCode][key],
                     });
                 });
 

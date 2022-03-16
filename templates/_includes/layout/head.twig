@@ -19,7 +19,7 @@
     var CSRF = '{{ craft.app.request.getCsrfToken() }}';
 
     var addressCountries = {{ craft.commerce.store.getStore().getCountriesList()|json_encode|raw }};
-    var addressStates = {{ craft.commerce.store.getStore().getCountriesList()|map((val, key) => craft.app.getAddresses().getAddressFormatRepository().get(key).getAdministrativeAreaType() == null ? null : craft.app.addresses.getSubdivisionRepository().getAll([key])|map((av, aa) => aa))|json_encode|raw }};
+    var addressStates = {{ craft.commerce.store.getStore().getAdministrativeAreasListByCountryCode()|json_encode|raw }};
   </script>
   {# /Project Scripts #}
 </head>
