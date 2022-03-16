@@ -17,21 +17,10 @@
  * your config/ folder, alongside this one.
  */
 
-use craft\helpers\App;
-
 return [
-    '*' => [
-        'id' => App::env('APP_ID') ?: 'CraftCMS',
-        'modules' => [
-            'demos' => \modules\demos\Module::class,
-            'spoke' => \modules\Module::class,
-        ],
-        'bootstrap' => ['spoke', 'demos'],
-        'components' => [
-            'mailer' => null,
-        ],
+    'modules' => [
+        'demos' => \modules\demos\Module::class,
+        'spoke' => \modules\Module::class,
     ],
-    'dev' => [
-        'components' => [],
-    ]
+    'bootstrap' => ['spoke', 'demos'],
 ];
