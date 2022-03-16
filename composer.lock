@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75e149dc11e161e110f111fd7194ae81",
+    "content-hash": "e45b99a3b440bb96e46f7549da9dbfc9",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1003,12 +1003,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "0c1f6af173b19d7a4a7b6bf587bc0b86bd823317"
+                "reference": "1a8a3c7b2d0f527972fbb8d9d1c69d4011494857"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/0c1f6af173b19d7a4a7b6bf587bc0b86bd823317",
-                "reference": "0c1f6af173b19d7a4a7b6bf587bc0b86bd823317",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/1a8a3c7b2d0f527972fbb8d9d1c69d4011494857",
+                "reference": "1a8a3c7b2d0f527972fbb8d9d1c69d4011494857",
                 "shasum": ""
             },
             "require": {
@@ -1066,7 +1066,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-03-16T12:02:27+00:00"
+            "time": "2022-03-16T14:42:16+00:00"
         },
         {
             "name": "craftcms/craft-flysystem",
@@ -4659,6 +4659,61 @@
                 "source": "https://github.com/pixelandtonic/Imagine/tree/1.2.4.2"
             },
             "time": "2021-06-22T18:26:46+00:00"
+        },
+        {
+            "name": "pixelandtonic/yii2-dynamodb",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pixelandtonic/yii2-dynamodb.git",
+                "reference": "ef109632a2f939bcd454c6602aec9c512fefa97e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pixelandtonic/yii2-dynamodb/zipball/ef109632a2f939bcd454c6602aec9c512fefa97e",
+                "reference": "ef109632a2f939bcd454c6602aec9c512fefa97e",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": ">=2.4",
+                "ext-json": "*",
+                "yiisoft/yii2": "~2.0.14",
+                "yiisoft/yii2-queue": "^2.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pixelandtonic\\dynamodb\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Yii2 implementation of a cache, session, and queue driver for DynamoDB",
+            "keywords": [
+                "cache",
+                "dynamodb",
+                "queue",
+                "session",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/pixelandtonic/yii2-dynamodb/blob/README.md",
+                "email": "support@pixelandtonic.com",
+                "issues": "https://github.com/pixelandtonic/yii2-dynamodb/issues?state=open",
+                "source": "https://github.com/pixelandtonic/yii2-dynamodb"
+            },
+            "time": "2022-03-13T16:14:00+00:00"
         },
         {
             "name": "psr/container",
@@ -9835,6 +9890,7 @@
         "craftcms/redactor": 20,
         "craftcms/store-hours": 20,
         "oberon/starfield": 20,
+        "pixelandtonic/yii2-dynamodb": 20,
         "solspace/craft-freeform": 20
     },
     "prefer-stable": true,
