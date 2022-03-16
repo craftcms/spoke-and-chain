@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0eb740d1b8c5f03a7abe1bbbd9680c1f",
+    "content-hash": "01092bf03cd3325b27879d42a0c5524d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1003,12 +1003,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "4d5d34a4eef9eb162258a37de2f951f7479579b2"
+                "reference": "a87020679601524e3152f59ca562b8abe17877d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/4d5d34a4eef9eb162258a37de2f951f7479579b2",
-                "reference": "4d5d34a4eef9eb162258a37de2f951f7479579b2",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/a87020679601524e3152f59ca562b8abe17877d3",
+                "reference": "a87020679601524e3152f59ca562b8abe17877d3",
                 "shasum": ""
             },
             "require": {
@@ -1066,7 +1066,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-03-16T15:55:31+00:00"
+            "time": "2022-03-16T18:09:09+00:00"
         },
         {
             "name": "craftcms/craft-flysystem",
@@ -3816,16 +3816,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.0-beta.4",
+            "version": "dev-develop-v4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "b53f46a459ec7f79b335c44e07a272b8e9d21047"
+                "reference": "db4064c0c402be4124a8186d8b7f725a5ed715f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b53f46a459ec7f79b335c44e07a272b8e9d21047",
-                "reference": "b53f46a459ec7f79b335c44e07a272b8e9d21047",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/db4064c0c402be4124a8186d8b7f725a5ed715f8",
+                "reference": "db4064c0c402be4124a8186d8b7f725a5ed715f8",
                 "shasum": ""
             },
             "require": {
@@ -3887,7 +3887,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-14T02:04:20+00:00"
+            "time": "2022-03-16T18:03:16+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -9990,12 +9990,20 @@
             "time": "2020-05-02T11:43:24+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "nystudio107/craft-seomatic",
+            "version": "dev-develop-v4",
+            "alias": "4.0.0-beta.5",
+            "alias_normalized": "4.0.0.0-beta5"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "craftcms/commerce": 20,
         "craftcms/redactor": 20,
         "craftcms/store-hours": 20,
+        "nystudio107/craft-seomatic": 20,
         "oberon/starfield": 20,
         "pixelandtonic/yii2-dynamodb": 20,
         "solspace/craft-freeform": 20,
