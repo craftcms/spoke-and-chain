@@ -26,11 +26,10 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        if (!App::env('FS_HANDLE') && !App::env('S3_BUCKET')) {
-            putenv('FS_HANDLE=imagesLocal');
-            $_SERVER['FS_HANDLE'] = 'imagesLocal';
-            $_ENV['FS_HANDLE'] = 'imagesLocal';
-        }
+        $fsHandle = App::env('FS_HANDLE') ?? (App::env('S3_BUCKET') ? 'images' : 'imagesLocal');
+        putenv("FS_HANDLE=$fsHandle");
+        $_SERVER['FS_HANDLE'] = $fsHandle;
+        $_ENV['FS_HANDLE'] = $fsHandle;
 
         Event::on(
             View::class,
