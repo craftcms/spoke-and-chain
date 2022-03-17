@@ -177,7 +177,7 @@ class SeedController extends Controller
     {
         $this->stdout('Beginning seed ... ' . PHP_EOL . PHP_EOL);
         $this->runAction('freeform-data', ['contact']);
-        // $this->runAction('refresh-articles');
+        $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
         $this->_cleanup();
         $this->stdout('Seed complete.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
