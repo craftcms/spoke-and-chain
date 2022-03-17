@@ -18,10 +18,10 @@
     "email": "support@craftcms.com"
   },
   "require": {
-    "craftcms/aws-s3": "2.0.0-beta.1",
-    "craftcms/cms": "^4.0.0-alpha.1",
-    "craftcms/commerce": "4.0.x-dev",
-    "craftcms/redactor": "3.0.x-dev",
+    "craftcms/aws-s3": "^2.0.0-beta",
+    "craftcms/cms": "^4.0.0-beta",
+    "craftcms/commerce": "^4.0.0-beta",
+    "craftcms/redactor": "^3.0.0-beta",
     "craftcms/store-hours": "v3.x-dev",
     "fakerphp/faker": "^1.9",
     "nystudio107/craft-seomatic": "dev-develop-v4 as 4.0.0-beta.5",

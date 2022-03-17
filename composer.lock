@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01092bf03cd3325b27879d42a0c5524d",
+    "content-hash": "0ed7503e01444dd8d8e30b9925d065ae",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -999,16 +999,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "4.0.x-dev",
+            "version": "4.0.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "932ee810658f1f6e447b77ea025ad68bc60fb3f7"
+                "reference": "ea56f80fcaf461fe9ca48c94b899cc668ad23df9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/932ee810658f1f6e447b77ea025ad68bc60fb3f7",
-                "reference": "932ee810658f1f6e447b77ea025ad68bc60fb3f7",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/ea56f80fcaf461fe9ca48c94b899cc668ad23df9",
+                "reference": "ea56f80fcaf461fe9ca48c94b899cc668ad23df9",
                 "shasum": ""
             },
             "require": {
@@ -1065,7 +1065,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-03-17T08:58:26+00:00"
+            "time": "2022-03-16T19:16:10+00:00"
         },
         {
             "name": "craftcms/craft-flysystem",
@@ -1280,7 +1280,7 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "3.0.x-dev",
+            "version": "3.0.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
@@ -9999,8 +9999,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "craftcms/commerce": 20,
-        "craftcms/redactor": 20,
         "craftcms/store-hours": 20,
         "nystudio107/craft-seomatic": 20,
         "oberon/starfield": 20,
