@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.213.1",
+            "version": "3.214.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7d361a532ccb7c6a640fdfd4be23980c0fa60fd1"
+                "reference": "a2eacf8c1b55de4733f4cfc315da38f1d4c66501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7d361a532ccb7c6a640fdfd4be23980c0fa60fd1",
-                "reference": "7d361a532ccb7c6a640fdfd4be23980c0fa60fd1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a2eacf8c1b55de4733f4cfc315da38f1d4c66501",
+                "reference": "a2eacf8c1b55de4733f4cfc315da38f1d4c66501",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.213.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.214.0"
             },
-            "time": "2022-03-15T20:28:59+00:00"
+            "time": "2022-03-16T19:00:00+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -881,16 +881,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.0-beta.1",
+            "version": "4.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "2c20eed81e34c35b880ddd9e1bc61c9cfd9c6690"
+                "reference": "147517d020e58c8b528c6e548437908d259060e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2c20eed81e34c35b880ddd9e1bc61c9cfd9c6690",
-                "reference": "2c20eed81e34c35b880ddd9e1bc61c9cfd9c6690",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/147517d020e58c8b528c6e548437908d259060e0",
+                "reference": "147517d020e58c8b528c6e548437908d259060e0",
                 "shasum": ""
             },
             "require": {
@@ -995,7 +995,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-09T20:44:42+00:00"
+            "time": "2022-03-16T19:10:28+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1003,16 +1003,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "a87020679601524e3152f59ca562b8abe17877d3"
+                "reference": "932ee810658f1f6e447b77ea025ad68bc60fb3f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/a87020679601524e3152f59ca562b8abe17877d3",
-                "reference": "a87020679601524e3152f59ca562b8abe17877d3",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/932ee810658f1f6e447b77ea025ad68bc60fb3f7",
+                "reference": "932ee810658f1f6e447b77ea025ad68bc60fb3f7",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0-beta.1",
+                "craftcms/cms": "^4.0.0-beta.2",
                 "dompdf/dompdf": "^1.0.2",
                 "ibericode/vat": "^1.1.2",
                 "iio/libmergepdf": "^4.0",
@@ -1034,7 +1034,6 @@
             "type": "craft-plugin",
             "extra": {
                 "handle": "commerce",
-                "version": "4.0.0-alpha",
                 "name": "Craft Commerce",
                 "description": "Create beautifully bespoke ecommerce experiences",
                 "developer": "Pixel & Tonic",
@@ -1066,7 +1065,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-03-16T18:09:09+00:00"
+            "time": "2022-03-17T08:58:26+00:00"
         },
         {
             "name": "craftcms/craft-flysystem",
@@ -3820,12 +3819,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "db4064c0c402be4124a8186d8b7f725a5ed715f8"
+                "reference": "e5fb490bcb52d22c73baaeaff7a6e105858e9bd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/db4064c0c402be4124a8186d8b7f725a5ed715f8",
-                "reference": "db4064c0c402be4124a8186d8b7f725a5ed715f8",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/e5fb490bcb52d22c73baaeaff7a6e105858e9bd8",
+                "reference": "e5fb490bcb52d22c73baaeaff7a6e105858e9bd8",
                 "shasum": ""
             },
             "require": {
@@ -3887,7 +3886,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-16T18:03:16+00:00"
+            "time": "2022-03-16T20:22:41+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
