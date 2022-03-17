@@ -5,7 +5,8 @@
 {% set countryCode = model and model.countryCode ? model.countryCode : null %}
 {% set administrativeArea = model and model.administrativeArea ? model.administrativeArea : null %}
 {% set outputIdField = outputIdField is defined ? outputIdField : true %}
-{% set idName = model and model.id ? modelName ~ '-' ~ model.id : modelName %}
+{% set idName = model and model.id ? (modelName ? modelName : 'address') ~ '-' ~ model.id : modelName %}
+{% set idField = modelName ? 'id'|namespaceInputId(modelName) : 'addressId' %}
 
 <!-- Template: {{ _self }}.twig -->
 <div x-data="addresses()" x-init="
@@ -17,39 +18,41 @@
 "
 >
   {% if model and model.id and outputIdField %}
-    {{ hiddenInput(modelName ~ '[id]', model.id) }}
+    {{ hiddenInput(idField, model.id) }}
+  {% elseif model and not model.id %}
+    {{ hiddenInput(modelName ? 'title'|namespaceInputName(modelName) : 'title', 'New'|t) }}
   {% endif %}
   <div class="mt-3">
     <label for="{{ idName }}-firstName">{{ 'First Name'|t }}</label>
-    <input type="text" id="{{ idName }}-firstName" class="w-full {{ 'firstName' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[firstName]" value="{{ model ? model.firstName : '' }}">
+    <input type="text" id="{{ idName }}-firstName" class="w-full {{ 'firstName' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName ? 'firstName'|namespaceInputName(modelName) : 'firstName' }}" value="{{ model ? model.firstName : '' }}">
     {% include '_includes/components/forms/errorList' with { errors: errors['firstName'] ?? [] } only %}
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-lastName">{{ 'Last Name'|t }}</label>
-    <input type="text" id="{{ idName }}-lastName" class="w-full {{ 'lastName' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[lastName]" value="{{ model ? model.lastName : '' }}">
+    <input type="text" id="{{ idName }}-lastName" class="w-full {{ 'lastName' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName ? 'lastName'|namespaceInputName(modelName) : 'lastName' }}" value="{{ model ? model.lastName : '' }}">
     {% include '_includes/components/forms/errorList' with { errors: errors['lastName'] ?? [] } only %}
   </div>
   <div class="mt-3">
     <label for="{{ idName }}-addressLine1">{{ 'Address 1'|t }}</label>
-    <input type="text" id="{{ idName }}-addressLine1" class="w-full {{ 'addressLine1' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[addressLine1]" value="{{ model ? model.addressLine1 : '' }}">
+    <input type="text" id="{{ idName }}-addressLine1" class="w-full {{ 'addressLine1' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName ? 'addressLine1'|namespaceInputName(modelName) : 'addressLine1' }}" value="{{ model ? model.addressLine1 : '' }}">
     {% include '_includes/components/forms/errorList' with { errors: errors['addressLine1'] ?? [] } only %}
   </div>
 
   <div class="mt-3">
     <label for="{{ idName }}-addressLine2">{{ 'Address 2'|t }} <small class="text-gray-500">({{ 'optional'|t }})</small></label>
-    <input type="text" id="{{ idName }}-addressLine2" class="w-full {{ 'addressLine2' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[addressLine2]" value="{{ model ? model.addressLine2 : '' }}">
+    <input type="text" id="{{ idName }}-addressLine2" class="w-full {{ 'addressLine2' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName ? 'addressLine2'|namespaceInputName(modelName) : 'addressLine2' }}" value="{{ model ? model.addressLine2 : '' }}">
     {% include '_includes/components/forms/errorList' with { errors: errors['addressLine2'] ?? [] } only %}
   </div>
 
   <div class="flex -mx-4 mt-3">
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-locality">{{ 'City'|t }}</label>
-      <input type="text" id="{{ idName }}-locality" class="w-full {{ 'locality' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[locality]" value="{{ model ? model.locality : '' }}">
+      <input type="text" id="{{ idName }}-locality" class="w-full {{ 'locality' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName ? 'locality'|namespaceInputName(modelName) : 'locality' }}" value="{{ model ? model.locality : '' }}">
       {% include '_includes/components/forms/errorList' with { errors: errors['locality'] ?? [] } only %}
     </div>
     <div class="flex-1 mx-4">
       <label for="{{ idName }}-postalCode">{{ 'Postal Code'|t }}</label>
-      <input type="text" id="{{ idName }}-postalCode" class="w-full {{ 'postalCode' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName }}[postalCode]" value="{{ model ? model.postalCode : '' }}">
+      <input type="text" id="{{ idName }}-postalCode" class="w-full {{ 'postalCode' in errorKeys ? 'border-red-600' : '' }}" name="{{ modelName ? 'postalCode'|namespaceInputName(modelName) : 'postalCode' }}" value="{{ model ? model.postalCode : '' }}">
       {% include '_includes/components/forms/errorList' with { errors: errors['postalCode'] ?? [] } only %}
     </div>
   </div>
@@ -59,7 +62,7 @@
       {% set countryOptions = countries|map((option, key) => { value: key, label: option, selected: key == (model ? model.countryCode : '') }) %}
       {% include '_includes/components/forms/select' with {
         id: idName ~ '-countryCode',
-        name: modelName ~ '[countryCode]',
+        name: modelName ? 'countryCode'|namespaceInputName(modelName) : 'countryCode',
         options : [{value: '', label: '---'}]|merge(countryOptions),
         attributes: {
           'x-on:change': 'onChange'
@@ -68,10 +71,10 @@
       {% include '_includes/components/forms/errorList' with { errors: errors['countryCode'] ?? [] } only %}
     </div>
     <div class="flex-1 mx-4">
-      <label for="{{ idName }}-state">{{ 'State'|t }} <small class="text-gray-500" x-show="!showStateSelect">({{ 'optional'|t }})</small></label>
+      <label x-show="showStateSelect" for="{{ idName }}-state">{{ 'State'|t }}</label>
       <div class="w-full" x-show="showStateSelect">
         {% set stateSelect %}
-          <select :id="stateSelectId" class="appearance-none block w-full bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base leading-6 text-gray-900 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5" name="{{ modelName }}[administrativeArea]" x-model="administrativeArea">
+          <select :id="stateSelectId" class="appearance-none block w-full bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base leading-6 text-gray-900 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5" name="{{ modelName ? 'administrativeArea'|namespaceInputName(modelName) : 'administrativeArea' }}" x-model="administrativeArea">
             <template x-for="(state, index) in states()" :key="state.id" x-if="states().length">
               <option :value="state.id" x-text="state.name" :selected="stateSelected(state)"></option>
             </template>
@@ -81,14 +84,6 @@
           select: stateSelect
         } %}
       </div>
-      <input
-          type="text"
-          :id="stateTextId"
-          class="w-full"
-          :name="!showStateSelect ? '{{ modelName }}[administrativeArea]' : ''"
-          value="{{ model and not model.countryCode in states|keys ? model.administrativeArea : '' }}"
-          x-show="!showStateSelect"
-      >
       {% include '_includes/components/forms/errorList' with { errors: errors['administrativeArea'] ?? [] } only %}
     </div>
   </div>

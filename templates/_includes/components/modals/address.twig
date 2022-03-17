@@ -1,7 +1,7 @@
 {% set data = data is not defined ? '' : data %}
 {% set data = not data is iterable ? data|json_decode : data %}
 {% if address is not defined or (address is defined and not address is instance of('craft\\elements\\Address')) %}
-  {% set address = data.id and data.id == 'new' ? create('craft\\elements\\Address') : data.id ? craft.addresses.id(data.id).one() : null %}
+  {% set address = data.id and data.id == 'new' ? create('craft\\elements\\Address') : data.id ? collect(currentUser.getAddresses()).firstWhere('id', data.id) : null %}
 {% endif %}
 
 <!-- Template: {{ _self }}.twig -->
@@ -10,7 +10,7 @@
   class="h-full w-full overflow-auto flex flex-col relative"
   s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
   s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
-  s-val:data='{{ data|json_encode }}'
+  s-val:data='{{ data|json_encode|raw }}'
   s-val:type='{{ type }}'
   x-data="{ submitting: false }"
   x-on:submit="submitting = true"
@@ -22,7 +22,7 @@
         <p>{{ 'Unable to find address.'|t }}</p>
       {% else %}
         {% include '_includes/components/address/fields' with {
-          modelName: 'address',
+          modelName: null,
           model: address,
           outputIdField: true,
           errors: address.getErrors()
