@@ -22,6 +22,7 @@ return [
         'allowAdminChanges' => true,
         'allowUpdates' => false,
         'autoLoginAfterAccountActivation' => true,
+        'backupOnUpdate' => false,
         'cpTrigger' => 'admin',
         'defaultSearchTermOptions' => [
             'subLeft' => true,
