@@ -17,10 +17,27 @@
  * your config/ folder, alongside this one.
  */
 
+use Bugsnag\Client;
+use craft\helpers\App;
+
+use MeadSteve\MonoSnag\BugsnagHandler;
+use samdark\log\PsrTarget;
+
 return [
     'modules' => [
         'demos' => \modules\demos\Module::class,
         'spoke' => \modules\Module::class,
     ],
     'bootstrap' => ['spoke', 'demos'],
+    'components' => [
+        'log' => [
+            'targets' => App::env('BUGSNAG_API_KEY') ? [
+                [
+                    'class' => PsrTarget::class,
+                    'logger' => (new Monolog\Logger('bugsnag'))
+                        ->pushHandler(new BugsnagHandler(Client::make(App::env('BUGSNAG_API_KEY')))),
+                ]
+            ] : [],
+        ],
+    ]
 ];
