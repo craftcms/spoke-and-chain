@@ -1,16 +1,14 @@
 {# Layout #}
 {% extends '_layouts/site' %}
 
-{% spaceless %}
-  {# Variables #}
-  {% set featuredArticle = craft.entries({
-    section: 'articles',
-  }).one() %}
-  {% set articles = craft.entries({
-    section: 'articles',
-    offset: 1
-  }).all() %}
-{% endspaceless %}
+{# Variables #}
+{% set featuredArticle = craft.entries({
+  section: 'articles',
+}).one() %}
+{% set articles = craft.entries({
+  section: 'articles',
+  offset: 1
+}).all() %}
 
 {# Blocks #}
 {% block content %}
