@@ -31,7 +31,6 @@ return [
         'devMode' => false,
         'disallowRobots' => true,
         'errorTemplatePrefix' => '_errors/',
-        'generateTransformsBeforePageLoad' => true,
         'loginPath' => 'account/login',
         'omitScriptNameInUrls' => true,
         'postLoginRedirect' => 'account',
