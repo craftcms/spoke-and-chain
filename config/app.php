@@ -31,13 +31,13 @@ return [
     'bootstrap' => ['spoke', 'demos'],
     'components' => [
         'log' => [
-            'targets' => [
+            'targets' => App::env('BUGSNAG_API_KEY') ? [
                 [
                     'class' => PsrTarget::class,
                     'logger' => (new Monolog\Logger('bugsnag'))
                         ->pushHandler(new BugsnagHandler(Client::make(App::env('BUGSNAG_API_KEY')))),
                 ]
-            ],
+            ] : [],
         ],
     ]
 ];
