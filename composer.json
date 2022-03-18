@@ -19,7 +19,7 @@
   },
   "require": {
     "craftcms/aws-s3": "^2.0.0-beta",
-    "craftcms/cms": "^4.0.0-beta",
+    "craftcms/cms": "4.0.x-dev",
     "craftcms/commerce": "^4.0.0-beta",
     "craftcms/redactor": "^3.0.0-beta",
     "craftcms/store-hours": "v3.x-dev",

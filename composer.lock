@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ed7503e01444dd8d8e30b9925d065ae",
+    "content-hash": "199b125993bf8b8659b35e93829197e8",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -881,16 +881,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.0-beta.2",
+            "version": "4.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "147517d020e58c8b528c6e548437908d259060e0"
+                "reference": "b00f03ea44b4e4439038c50d7da1a6825cd4fe05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/147517d020e58c8b528c6e548437908d259060e0",
-                "reference": "147517d020e58c8b528c6e548437908d259060e0",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/b00f03ea44b4e4439038c50d7da1a6825cd4fe05",
+                "reference": "b00f03ea44b4e4439038c50d7da1a6825cd4fe05",
                 "shasum": ""
             },
             "require": {
@@ -995,7 +995,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-16T19:10:28+00:00"
+            "time": "2022-03-18T00:06:04+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -9999,6 +9999,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "craftcms/cms": 20,
         "craftcms/store-hours": 20,
         "nystudio107/craft-seomatic": 20,
         "oberon/starfield": 20,
