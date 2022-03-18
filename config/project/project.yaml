@@ -1,4 +1,4 @@
-dateModified: 1646854294
+dateModified: 1647612478
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -262,6 +262,7 @@ plugins:
       addHrefLang: true
       addPaginatedHreflang: true
       addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
       cpTitlePrefix: '⚙ '
       cspNonce: ''
       cspScriptSrcPolicies:
@@ -278,15 +279,17 @@ plugins:
       enableMetaContainerEndpoint: false
       enableSeoFileLinkEndpoint: false
       environment: live
+      excludeNonCanonicalUrls: false
       generatorEnabled: true
       headersEnabled: true
-      lowercaseCanonicalUrl: '1'
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
       manuallySetEnvironment: false
       maxDescriptionLength: 155
       maxTitleLength: 70
-      metaCacheDuration: 'null'
+      metaCacheDuration: 0
       pluginName: SEOmatic
-      regenerateSitemapsAutomatically: true
+      regenerateSitemapsAutomatically: false
       renderEnabled: true
       separatorChar: '-'
       sidebarDisplayPreviewTypes:
@@ -297,7 +300,9 @@ plugins:
       siteUrlOverride: ''
       sitemapsEnabled: true
       socialMediaPreviewTarget: true
-      submitSitemaps: true
+      submitSitemaps: false
+      truncateDescriptionTags: '1'
+      truncateTitleTags: '1'
   sprig:
     edition: standard
     enabled: true
