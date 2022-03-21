@@ -1,4 +1,4 @@
-dateModified: 1647596636
+dateModified: 1647612478
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -316,7 +316,7 @@ plugins:
       maxTitleLength: 70
       metaCacheDuration: 0
       pluginName: SEOmatic
-      regenerateSitemapsAutomatically: true
+      regenerateSitemapsAutomatically: false
       renderEnabled: true
       separatorChar: '-'
       sidebarDisplayPreviewTypes:
@@ -327,7 +327,7 @@ plugins:
       siteUrlOverride: ''
       sitemapsEnabled: true
       socialMediaPreviewTarget: true
-      submitSitemaps: true
+      submitSitemaps: false
       truncateDescriptionTags: '1'
       truncateTitleTags: '1'
   sprig:

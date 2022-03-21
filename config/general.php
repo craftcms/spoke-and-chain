@@ -22,6 +22,7 @@ return [
         'allowAdminChanges' => true,
         'allowUpdates' => false,
         'autoLoginAfterAccountActivation' => true,
+        'backupOnUpdate' => false,
         'cpTrigger' => 'admin',
         'defaultSearchTermOptions' => [
             'subLeft' => true,
@@ -31,7 +32,6 @@ return [
         'devMode' => false,
         'disallowRobots' => true,
         'errorTemplatePrefix' => '_errors/',
-        'generateTransformsBeforePageLoad' => true,
         'loginPath' => 'account/login',
         'omitScriptNameInUrls' => true,
         'postLoginRedirect' => 'account',

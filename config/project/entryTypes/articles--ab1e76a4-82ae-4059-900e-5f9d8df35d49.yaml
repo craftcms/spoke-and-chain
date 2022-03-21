@@ -24,7 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 322f1613-4f4a-42f5-92e3-a2fb4058907d
+            uid: 932e61aa-1504-4c60-bd78-1402eb7b5977
             warning: null
             width: 100
           -
@@ -34,7 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4f0f7176-950e-4082-8037-469efb6a17c6
+            uid: 683d6805-2d17-448e-ad15-ef99be7bc967
             warning: null
             width: 100
           -
@@ -44,11 +44,59 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d15a18fe-312c-48ef-a17d-08384d0968a6
+            uid: 99ab7af6-650f-4f6c-8202-190d75b3bfca
             warning: null
             width: 100
         name: Content
         uid: d96de62e-69c3-4bde-b990-5f7c678b6df2
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 36332953-c6d7-45f1-915a-af6fd487fcd8
+            warning: null
+            width: 100
+          -
+            fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ba7a19b-49f2-4186-b144-62774e975eb0
+            warning: null
+            width: 100
+          -
+            fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Blocks
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c66455d0-ddff-4f35-9dc1-a68b6e5f715e
+            warning: null
+            width: 100
+        name: Content
+        uid: 73256197-0428-4f3c-8743-a6ed424816c1
 handle: articles
 hasTitleField: true
 name: Articles

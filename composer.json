@@ -24,14 +24,15 @@
     "craftcms/redactor": "^3.0.0-beta",
     "craftcms/store-hours": "v3.x-dev",
     "fakerphp/faker": "^1.9",
+    "mead-steve/mono-snag": "^4.1",
     "nystudio107/craft-seomatic": "dev-develop-v4 as 4.0.0-beta.5",
     "nystudio107/craft-twigpack": "4.0.0-beta.2",
     "oberon/starfield": "dev-craft-4",
     "pixelandtonic/yii2-dynamodb": "dev-develop",
     "putyourlightson/craft-sprig": "2.0.0-alpha.1",
-    "vlucas/phpdotenv": "^3.4.0",
     "solspace/craft-freeform": "dev-craft4",
-    "verbb/default-dashboard": "dev-craft-4"
+    "verbb/default-dashboard": "dev-craft-4",
+    "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
