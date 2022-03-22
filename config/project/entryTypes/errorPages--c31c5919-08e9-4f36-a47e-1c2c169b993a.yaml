@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d0750fca-284e-41cc-888b-59fe19d571c6
             warning: null
             width: 100
           -
@@ -33,15 +34,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f5fd82d3-b1cf-4384-9fbf-3a9314431fc2
             warning: null
             width: 100
           -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: ''
+            instructions: null
             label: Content
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 68756a59-0ce2-457d-8c53-fed0e6b05b15
             warning: null
             width: 100
           -
@@ -51,10 +54,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6c5ea841-5ea7-4c87-ade7-eaa52420f3a6
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 4ca7400d-c024-4ec0-b4f8-912f538194e8
 handle: errorPages
 hasTitleField: true
 name: 'Error Pages'

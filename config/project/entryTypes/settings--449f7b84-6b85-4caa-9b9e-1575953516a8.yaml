@@ -24,37 +24,41 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9eafb5b0-a301-44ba-8014-39bd1c65a3ef
             warning: null
             width: 100
           -
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: 'Used on the account dashboard page'
-            label: ''
-            required: ''
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c116617f-44f0-46fe-b643-b5cfd261a5d0
             warning: null
             width: 100
           -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: ''
+            instructions: null
             label: 'New Password Help Text'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6363eaed-ad1c-4037-ac2d-e4b31175ca83
             warning: null
             width: 100
           -
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: ''
+            instructions: null
             label: 'Current Password Help Text'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9e69d2ee-3672-4406-b0ac-f070ae8792c1
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: a2de9c41-2a6e-42cc-af3b-f652fa04c9b4
       -
         elements:
           -
@@ -64,10 +68,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 62ec070e-632f-485e-863b-8c900623006a
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 3f14c402-0dfe-41f1-bcca-d69d1050cab4
 handle: settings
 hasTitleField: true
 name: Settings

@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0aa64e89-178a-4fee-86c7-5fb4329296b0
             warning: null
             width: 100
           -
@@ -33,10 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e5373666-f3f5-4436-9c11-3b5cfae14f59
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 605c8167-2548-44a9-a6b1-750297eded92
       -
         elements:
           -
@@ -46,10 +48,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: cca88b68-e434-4c42-a75a-436d499d61dc
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 4a9da9d8-4123-4370-9f7e-48fa6da33c4d
 handle: bikesLanding
 hasTitleField: false
 name: Bikes

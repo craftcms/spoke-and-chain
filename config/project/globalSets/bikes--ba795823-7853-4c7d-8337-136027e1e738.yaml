@@ -10,11 +10,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9e8dee91-ffb3-478a-89fc-612e6f934711
+            uid: 4ecc606e-caba-45a3-89ad-1bf629b06e8b
             warning: null
             width: 100
         name: Products
-        uid: fbfe9b99-ff8b-4143-b500-33906f29770b
+        uid: 1b44cab5-1399-4f04-9644-a0c350c78a99
 handle: bikes
 name: Bikes
 sortOrder: 2

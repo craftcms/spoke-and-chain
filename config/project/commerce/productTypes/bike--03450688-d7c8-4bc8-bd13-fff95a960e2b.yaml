@@ -31,7 +31,7 @@ productFieldLayouts:
             tip: null
             title: null
             type: craft\commerce\fieldlayoutelements\ProductTitleField
-            uid: 70ff1d0c-40d7-4391-aa71-421eae489ddb
+            uid: 33b61ce3-27f7-4baa-ab54-211f0085b1ec
             warning: null
             width: 100
           -
@@ -41,7 +41,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 46532c77-b96b-4cf0-9b90-c26645cb403a
+            uid: 1875158d-1206-4f9e-bca3-682677a53863
             warning: null
             width: 100
           -
@@ -51,7 +51,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 05beaa0f-a0f2-4d59-ac5c-18a84db6526f
+            uid: 741b6d49-f8ba-49e3-ae18-1f1005eb7f67
             warning: null
             width: 100
           -
@@ -61,11 +61,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 908ddd31-9756-4c37-a746-1c1899c54706
+            uid: 7c4f244f-5e45-41fd-b59d-ad52e69c37b2
             warning: null
             width: 100
         name: Content
-        uid: c533dded-0edb-4b1d-8807-0e2973485136
+        uid: fccc567b-d17f-4d1e-b843-45f068abc4c5
       -
         elements:
           -
@@ -75,7 +75,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f30d77c0-43c6-4a76-8f15-ff62429e0137
+            uid: 87e86daf-4add-42cb-a34b-fa6e84e91b37
             warning: null
             width: 100
           -
@@ -85,11 +85,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4869b233-0b0b-4315-a9d2-db27707adad9
+            uid: 0c8270a8-2019-4d17-a8cc-9f76dba6bb06
             warning: null
             width: 100
         name: Images
-        uid: b249908c-82af-4b9b-8dd6-051039531757
+        uid: 822cdcb6-9cfb-4bcc-abbe-b04555f0d745
       -
         elements:
           -
@@ -99,7 +99,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f26e813e-4219-44eb-bf0e-5574c0dab304
+            uid: 142c278c-3102-4001-8d0a-4d38b1066bde
             warning: null
             width: 100
           -
@@ -109,7 +109,7 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 22191898-d14f-4b7a-a9b9-37addf22ca05
+            uid: daa2a8b9-2432-41df-8534-2b08fc1e8717
             warning: null
             width: 100
           -
@@ -119,11 +119,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 94839541-5923-4fc2-a1f7-582769b3fb80
+            uid: 18d3bc2a-9752-40f5-b640-3b22f034b490
             warning: null
             width: 100
         name: Options
-        uid: 52d8a48c-9803-4731-baa1-fb190cdf6250
+        uid: 8f79dcc0-5877-4cbd-96e2-a4f4d903714d
       -
         elements:
           -
@@ -132,10 +132,10 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\commerce\fieldlayoutelements\VariantsField
-            uid: bd670d41-9084-4f38-81d1-52af456549f9
+            uid: 64aafa31-1e2b-4918-a2db-56edf34f5594
             warning: null
         name: Variants
-        uid: 2098ddec-442a-4b65-9f97-3e2c3687df08
+        uid: cf0564d5-ba39-4eae-aa0d-10924780225a
       -
         elements:
           -
@@ -145,11 +145,11 @@ productFieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ae52e449-2619-4e43-ac00-2185dd3a3b46
+            uid: c5137a50-8430-4d7b-9d6c-593c279a42ac
             warning: null
             width: 100
         name: SEO
-        uid: 8884bdcc-7a75-466d-a9ef-421c714bd561
+        uid: f7687c40-7192-4ed3-8005-6f3a0b38e3dd
 productTitleFormat: ''
 siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
@@ -183,9 +183,9 @@ variantFieldLayouts:
             tip: null
             title: null
             type: craft\commerce\fieldlayoutelements\VariantTitleField
-            uid: d8a0e678-0c31-41f0-a269-c625e121bef2
+            uid: 4926d4d5-11b4-4f2d-b6b6-b12b167a3144
             warning: null
             width: 100
         name: Content
-        uid: de6cef88-f6ea-47e4-87e6-6d8eac64fced
+        uid: ada5fa58-e6f4-4756-a509-c05740fefbfe
 variantTitleFormat: '{product.title}'

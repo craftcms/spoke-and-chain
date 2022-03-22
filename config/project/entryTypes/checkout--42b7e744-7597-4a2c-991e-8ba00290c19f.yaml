@@ -24,28 +24,31 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1d543e2f-478a-4459-a9f2-c72e227142c0
             warning: null
             width: 100
           -
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
-            instructions: ''
+            instructions: null
             label: 'Login Heading'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e84363e2-3259-42ae-80e6-49ec9da5a54f
             warning: null
             width: 100
           -
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
-            instructions: ''
+            instructions: null
             label: 'Guest Heading'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 885cf876-5cdc-4d33-b0a2-f76f80d61510
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: feff6ae7-b827-4f55-9dc0-8b7b12468439
       -
         elements:
           -
@@ -55,10 +58,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9754bbd2-34ed-4e90-9074-c7ee0eccd235
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: ce6d0b27-dfac-42bb-ab87-4e49357f41d9
 handle: checkout
 hasTitleField: true
 name: Checkout

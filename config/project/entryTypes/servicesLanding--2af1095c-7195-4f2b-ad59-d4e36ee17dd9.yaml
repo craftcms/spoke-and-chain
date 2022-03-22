@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 15d12082-6566-48a3-bf79-b5ff977778a9
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4c585b9b-6e5d-4f9c-88a1-f12953c82264
             warning: null
             width: 100
           -
@@ -42,10 +44,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 73226b59-c7c2-4c57-898d-992bff02fc7c
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: a865163d-8c65-4f6e-ad0c-444cb1cde6a0
       -
         elements:
           -
@@ -55,10 +58,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4ad147f1-a46d-4f7d-9ef4-4b0852ad9a0c
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 264ad76a-6b5f-40b3-b3aa-bd1353c3be0e
 handle: servicesLanding
 hasTitleField: false
 name: Services

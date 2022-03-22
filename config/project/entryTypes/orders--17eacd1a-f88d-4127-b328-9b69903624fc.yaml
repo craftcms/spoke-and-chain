@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 45854963-804e-4615-84ac-372e0fc13ac0
             warning: null
             width: 100
           -
@@ -33,10 +34,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 187b8eeb-3203-46ca-90c8-79880ab60cf8
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 91783058-8e77-4cd5-8588-12205a3978d3
       -
         elements:
           -
@@ -46,10 +48,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c9b63bff-525f-4656-81bf-c828e82bc630
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: c8ffd793-e370-44eb-855b-f56a4ee83426
 handle: orders
 hasTitleField: true
 name: Orders

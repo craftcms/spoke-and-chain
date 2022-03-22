@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ab492db4-797f-44c2-98c2-d271b94bed02
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: a516a971-8dce-430b-9d90-8d8f188f7d2b
       -
         elements:
           -
@@ -37,10 +38,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4043c407-097c-499c-bd2f-1ac155d73ce8
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: a288626e-7ac2-4e9b-a88c-8b676c8cf643
 handle: dashboard
 hasTitleField: true
 name: Dashboard

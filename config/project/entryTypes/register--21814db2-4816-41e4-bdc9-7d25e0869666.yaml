@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: db86c078-7f7e-40a0-a6ab-20ff8236e6c3
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 46bb0816-21af-4382-afd7-7e35d6d5ec4a
       -
         elements:
           -
@@ -37,10 +38,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d8dbcc3b-ff4d-4b65-9f4b-2fa48ed460bd
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 11a50d40-f876-442a-85c6-ecb81aae91e9
 handle: register
 hasTitleField: true
 name: Register

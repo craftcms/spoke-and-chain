@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a3fc9677-0954-485a-943c-63a91096ac56
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: add6cb0c-11f6-4885-8e0b-efb3e0c70a6c
       -
         elements:
           -
@@ -37,10 +38,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 90c89520-4161-4ffe-9451-547d6610cdf2
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 12c80604-be6e-4fb1-bf4b-b6aed0671b29
 handle: articlesLanding
 hasTitleField: true
 name: 'Articles Landing'

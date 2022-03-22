@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 19859cd2-7c19-479f-a135-7334fbb0e6e9
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4544c2d1-4b95-44e3-9faa-1983c0bf35bd
             warning: null
             width: 100
           -
@@ -42,10 +44,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 71667137-b105-487f-92c8-290675f42566
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 3d9b8344-a3d5-4e98-9d52-4df88939c700
 handle: pdfs
 hasTitleField: true
 name: PDFs

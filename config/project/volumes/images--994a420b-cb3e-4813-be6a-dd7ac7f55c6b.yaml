@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 5c41788c-6748-4368-aa7b-69c7461225e6
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e5451970-4f1c-4076-83a1-74a60170fb01
             warning: null
             width: 100
           -
@@ -42,15 +44,16 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9c5e0c74-1dd4-429a-85fd-7377edb2f7d4
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
-fs: images
+        uid: 184aa23a-08e9-4f4e-933a-200f44850885
+fs: $FS_HANDLE
 handle: images
-hasUrls: true
 name: Images
 sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-url: $S3_BASE_URL
+transformFs: null
+transformSubpath: ''

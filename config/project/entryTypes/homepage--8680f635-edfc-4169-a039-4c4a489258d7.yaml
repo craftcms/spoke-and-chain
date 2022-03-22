@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9e394782-cd27-4158-a253-f4b764a690ec
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ed285f15-e6c8-4801-97fe-1b75115fd6bb
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 21168102-1a7f-4bc5-96be-0eb1d111fc69
             warning: null
             width: 100
           -
@@ -51,10 +54,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5f9e8c9d-b725-41c0-8145-bead75143e12
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 6bbea475-b016-4b0a-a148-216038ee25d6
       -
         elements:
           -
@@ -64,10 +68,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0ea7ea2f-87a6-492f-b39d-1b561eb56079
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: be74158e-e925-459b-bca6-74d8044e024e
 handle: homepage
 hasTitleField: false
 name: Homepage

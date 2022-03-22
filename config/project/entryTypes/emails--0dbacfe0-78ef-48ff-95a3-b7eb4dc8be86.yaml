@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ac587da9-fee3-4aa7-bcaf-9e3254479554
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c2ad49bf-5b33-4475-b0cc-3221510b158d
             warning: null
             width: 100
           -
@@ -42,10 +44,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f0ab0bc2-6720-4ad0-831b-d342b09c2df7
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: db7b3149-83e1-441d-9dfa-38c1d5c093d7
 handle: emails
 hasTitleField: true
 name: Emails

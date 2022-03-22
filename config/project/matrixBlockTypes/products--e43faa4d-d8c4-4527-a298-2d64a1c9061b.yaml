@@ -11,11 +11,11 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 015c4ed4-a885-4b10-8745-846ed8cabaa9
+            uid: 6e03db92-e525-4e6f-890e-bd74e540862b
             warning: null
             width: 100
         name: Content
-        uid: bbacd397-59ce-4f89-8650-1a69cc0404b8
+        uid: b89de1a7-7320-4ddd-8c5c-6bce35abf395
 fields:
   d6666f58-4d11-4bd3-b5bd-bc92b52a538c: # Products
     columnSuffix: null

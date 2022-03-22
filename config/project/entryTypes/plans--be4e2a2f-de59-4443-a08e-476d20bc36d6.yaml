@@ -10,7 +10,7 @@ fieldLayouts:
             class: null
             disabled: false
             id: null
-            instructions: ''
+            instructions: null
             label: 'Plan Name'
             max: null
             min: null
@@ -24,19 +24,21 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a1a4b072-6af8-497a-920f-1ecead41f14d
             warning: null
             width: 100
           -
             fieldUid: 144eafb4-8a07-46d0-a4b2-e85237275206 # Plan Features
             instructions: 'Describe plan features, each having its own line.'
-            label: ''
-            required: ''
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9e9a2194-30ef-4767-989a-63df6bdfb9c2
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: b647d90b-79b3-4524-88ac-63c4f22483ad
 handle: plans
 hasTitleField: true
 name: Plans

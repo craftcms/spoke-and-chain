@@ -24,10 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b27b0faf-fd2a-459b-995f-5f8d50a6436e
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 767066dc-a817-48f9-a239-67b3e18fa302
       -
         elements:
           -
@@ -37,10 +38,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f21e90e7-f101-44f3-bc0c-54dcfe3c7799
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: 5295452a-cfcc-44d9-b94d-d408fee259c3
 handle: checkoutShipping
 hasTitleField: true
 name: 'Checkout: Shipping'

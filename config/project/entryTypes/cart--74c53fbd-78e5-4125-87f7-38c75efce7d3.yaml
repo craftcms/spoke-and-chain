@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b820b4fe-5c1e-4958-8bcd-ccb1a11e5202
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 29df2851-4c81-46b0-b08d-13c150cd835c
             warning: null
             width: 100
           -
@@ -42,19 +44,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 68194d2f-73c2-4023-97d0-aeaea812a2fa
             warning: null
             width: 100
           -
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
-            instructions: ''
+            instructions: null
             label: 'No items content'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c8e52b15-ffe5-4144-aed0-f06b6f617ddb
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 56485d23-f4b1-452c-b634-556650094149
       -
         elements:
           -
@@ -64,10 +68,11 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4ad389b5-fde0-4b7e-9f15-4632eae7ba20
             warning: null
             width: 100
         name: SEO
-        sortOrder: 2
+        uid: f14e7211-14e6-4b24-b9e4-c53dc1ec4055
 handle: cart
 hasTitleField: true
 name: Cart
