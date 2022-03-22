@@ -24,7 +24,6 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 46651c2e-f3cd-40cc-95ca-63ec54a0cfbd
             warning: null
             width: 100
           -
@@ -34,89 +33,41 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 09f17898-165e-4ec9-98d7-8dacf462b050
             warning: null
             width: 100
           -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: null
+            instructions: ''
             label: 'Manage Membership Text'
-            required: false
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 831e4b9f-5584-4b69-bb25-4eb0400a930d
             warning: null
             width: 100
           -
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: null
+            instructions: ''
             label: 'View Memberships Text'
-            required: false
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 39f2a9c1-1d62-4901-9d19-37fdb2a9ca43
             warning: null
             width: 100
         name: Content
-        uid: 252a5221-251c-4b43-b5a1-5a5c87e3b2c2
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: b793b249-652f-40cf-a163-d7ada4905f8b
-            warning: null
-            width: 100
-          -
-            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e3318db5-7997-4edf-ac13-44d6500e25f4
             warning: null
             width: 100
-          -
-            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: null
-            label: 'Manage Membership Text'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7873c37d-44e1-41a9-9346-15b4d1863742
-            warning: null
-            width: 100
-          -
-            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: null
-            label: 'View Memberships Text'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f7ac3cca-873b-4edb-b40d-8394b3090f5b
-            warning: null
-            width: 100
-        name: Content
-        uid: f9a5fad9-6b52-4eb9-8d8d-315bd647568e
+        name: SEO
+        sortOrder: 2
 handle: membership
 hasTitleField: true
 name: Membership

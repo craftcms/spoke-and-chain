@@ -24,39 +24,23 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 991a8844-258a-4fa3-abf5-d5f346ec2feb
             warning: null
             width: 100
         name: Content
-        uid: 97565aa9-8dbf-4c2d-89ba-3b6ee08bfe63
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
+            required: false
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 68670cc2-615e-431c-824c-9d99e3827cd2
+            type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Content
-        uid: b1c5ca0f-1d44-4d7c-8e68-dd26dbcaa246
+        name: SEO
+        sortOrder: 2
 handle: checkoutShipping
 hasTitleField: true
 name: 'Checkout: Shipping'

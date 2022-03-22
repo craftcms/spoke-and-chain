@@ -24,79 +24,41 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 9d68e92c-ca78-4ab9-b601-e774726dc30e
             warning: null
             width: 100
           -
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
-            instructions: null
+            instructions: ''
             label: 'Login Heading'
-            required: false
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ca8ae84c-1c05-4d71-9b35-49127a00266a
             warning: null
             width: 100
           -
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
-            instructions: null
+            instructions: ''
             label: 'Guest Heading'
-            required: false
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6a6dc1d6-edcf-4ac8-8502-2d45f7e3244d
             warning: null
             width: 100
         name: Content
-        uid: b49723ee-722d-4cb8-9188-3341a0b02a0a
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ec7bfd86-60e1-44a5-8a84-a6a1504e4eeb
-            warning: null
-            width: 100
-          -
-            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
-            instructions: null
-            label: 'Login Heading'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6db19843-b4a2-42d6-b02a-e4a1db7dc10d
             warning: null
             width: 100
-          -
-            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
-            instructions: null
-            label: 'Guest Heading'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2682a5f4-19c4-4f71-8c13-460d053d4899
-            warning: null
-            width: 100
-        name: Content
-        uid: 3aba2b91-0aa6-4032-aec7-2e1fa4727938
+        name: SEO
+        sortOrder: 2
 handle: checkout
 hasTitleField: true
 name: Checkout

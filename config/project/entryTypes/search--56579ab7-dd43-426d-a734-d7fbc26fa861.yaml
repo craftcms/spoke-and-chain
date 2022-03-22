@@ -24,79 +24,41 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 84fd337c-8236-4caf-9a9f-83da47e11bf8
             warning: null
             width: 100
           -
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: null
+            instructions: ''
             label: 'No Results Heading'
-            required: false
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 449bb412-d10f-40a0-8221-ff54d96ce072
             warning: null
             width: 100
           -
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: null
+            instructions: ''
             label: 'No Results Text'
-            required: false
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1044173d-2878-4621-a563-1c14d6a22ccd
             warning: null
             width: 100
         name: Content
-        uid: a8d72bee-2930-4ff0-b7fc-f42d4dd60db9
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 054d3192-1ff0-4d3c-8474-b4481ac81c4f
-            warning: null
-            width: 100
-          -
-            fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
-            instructions: null
-            label: 'No Results Heading'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b6e615d2-1693-43e0-bbfd-183835970e28
             warning: null
             width: 100
-          -
-            fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
-            instructions: null
-            label: 'No Results Text'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 58c261c2-f58c-4c03-9abd-2cdee9f117f2
-            warning: null
-            width: 100
-        name: Content
-        uid: bfd951cf-f2ce-4ec4-9b9b-60720dc9f1d3
+        name: SEO
+        sortOrder: 2
 handle: search
 hasTitleField: false
 name: Search

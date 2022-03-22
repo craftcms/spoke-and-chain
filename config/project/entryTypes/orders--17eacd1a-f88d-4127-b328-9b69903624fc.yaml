@@ -24,7 +24,6 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 2055cca8-7f4f-41c6-adb6-10839a6c5118
             warning: null
             width: 100
           -
@@ -34,49 +33,23 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 16133da4-1468-41b2-9314-381cc6f64eee
             warning: null
             width: 100
         name: Content
-        uid: adc4d68e-6771-4e87-aeef-35d65791fc51
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: a7ae2e04-2c78-46b5-9c85-08aac96bb067
-            warning: null
-            width: 100
-          -
-            fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c3b92118-98ab-42d7-af6d-2662c2a559d7
             warning: null
             width: 100
-        name: Content
-        uid: d816722e-a752-4785-8f1f-6031668a4ec8
+        name: SEO
+        sortOrder: 2
 handle: orders
 hasTitleField: true
 name: Orders

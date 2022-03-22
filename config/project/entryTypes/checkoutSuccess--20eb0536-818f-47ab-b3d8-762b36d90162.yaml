@@ -24,7 +24,6 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 926f0fea-3807-4c43-b156-8f6fda028b75
             warning: null
             width: 100
           -
@@ -34,49 +33,23 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e2e26435-f4e3-4db1-a02e-01cf2982fa93
             warning: null
             width: 100
         name: Content
-        uid: bb5ead87-b6ad-4b48-8b54-5e48feb0ead6
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 1751b52b-962f-4db2-a8df-cd055cde4f28
-            warning: null
-            width: 100
-          -
-            fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 500306f4-d8dd-4b93-9f27-34e185c6b39c
             warning: null
             width: 100
-        name: Content
-        uid: c9734410-657f-45f7-8b67-83536d347c9d
+        name: SEO
+        sortOrder: 2
 handle: checkoutSuccess
 hasTitleField: true
 name: 'Checkout: Success'

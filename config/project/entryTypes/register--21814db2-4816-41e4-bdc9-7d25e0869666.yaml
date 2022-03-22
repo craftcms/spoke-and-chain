@@ -24,39 +24,23 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ece5122e-c7e9-4bdf-b53f-47c46f7139af
             warning: null
             width: 100
         name: Content
-        uid: 12df0c3d-776b-4623-83ee-1b5bd73fa74f
+        sortOrder: 1
       -
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            id: null
+            fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
+            required: false
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 9008e406-4f60-4d37-a690-3a8ec7b7d7f4
+            type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Content
-        uid: ca919cfb-3b96-4c34-9f93-1d8982cc6f33
+        name: SEO
+        sortOrder: 2
 handle: register
 hasTitleField: true
 name: Register
