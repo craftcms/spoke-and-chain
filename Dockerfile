@@ -7,7 +7,7 @@ RUN composer install --ignore-platform-reqs --no-interaction --prefer-dist
 FROM craftcms/nginx:8.0
 
 USER root
-RUN apk add --no-cache mysql-client mariadb-connector-c
+RUN apk add --no-cache mysql-client mariadb-connector-c git
 COPY .docker/default.conf /etc/nginx/conf.d/default.conf
 USER www-data
 
