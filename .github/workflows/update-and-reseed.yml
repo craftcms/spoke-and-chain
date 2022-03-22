@@ -1,25 +1,20 @@
-name: Update dependencies
+name: Update dependencies and reseed
 
 on:
   workflow_dispatch:
-    inputs:
-      dockerhub_push:
-        default: true
-        required: true
-        type: boolean
   schedule:
     - cron: "0 */12 * * *"
 
 jobs:
-  update:
+  update_and_reseed:
     runs-on: ubuntu-latest
-    name: Update dependencies
+    name: Update dependencies and reseed
     outputs:
       changes_detected: ${{ steps.auto_commit.outputs.changes_detected == 'true' }}
     steps:
       - uses: actions/checkout@v2
 
-      - run: make update
+      - run: make update_and_reseed
 
       - run: make test
 
@@ -44,9 +39,3 @@ jobs:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
-
-      - uses: benc-uk/workflow-dispatch@v1
-        if: ${{ steps.auto_commit.outputs.changes_detected == 'true' && (github.event.inputs.dockerhub_push || github.event_name == 'schedule') }}
-        with:
-          workflow: Build and push docker images
-          token: ${{ secrets.PAT }}
