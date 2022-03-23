@@ -153,7 +153,7 @@ class SeedController extends Controller
         Event::on(
             Emails::class,
             Emails::EVENT_BEFORE_SEND_MAIL,
-            function (MailEvent $event) {
+            function(MailEvent $event) {
                 $event->isValid = false;
             }
         );
@@ -506,7 +506,7 @@ class SeedController extends Controller
                 'city' => $this->_faker->city,
                 'zipCode' => $this->_faker->postcode,
                 'countryId' => $country->id,
-            ]
+            ],
         ]);
 
         if ($country->isStateRequired && $state = $this->_getRandomStateFromCountry($country)) {
@@ -677,7 +677,7 @@ class SeedController extends Controller
         /** @var Order $order */
         $order = Craft::createObject([
             'class' => Order::class,
-            'attributes' => $attributes
+            'attributes' => $attributes,
         ]);
 
         $order->customerId = $customer['customerId'];

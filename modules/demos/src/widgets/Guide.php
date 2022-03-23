@@ -53,7 +53,7 @@ class Guide extends Widget
         $iconsDir = Craft::getAlias('@appicons');
 
         return $view->renderTemplate('modules/widgets/guide.twig', [
-            'bookIcon' => file_get_contents($iconsDir . '/book.svg')
+            'bookIcon' => file_get_contents($iconsDir . '/book.svg'),
         ]);
     }
 }
