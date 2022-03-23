@@ -30,7 +30,7 @@ class Reviews extends BaseObject
     /**
      * Get the average review rating by the product ID.
      *
-     * @param $id
+     * @param int|null $id
      * @return mixed|null
      * @throws Exception
      */
@@ -69,6 +69,7 @@ class Reviews extends BaseObject
 
         $reviewsByProductId = [];
         foreach ($reviews as $review) {
+            /** @phpstan-ignore-next-line */
             $product = $review->product[0] ?? null;
             if (!$product) {
                 continue;
@@ -78,6 +79,7 @@ class Reviews extends BaseObject
                 $reviewsByProductId[$product->id] = ['total' => 0, 'reviews' => []];
             }
 
+            /** @phpstan-ignore-next-line */
             $reviewsByProductId[$product->id]['total'] += $review->stars;
             $reviewsByProductId[$product->id]['reviews'][] = $review;
         }
