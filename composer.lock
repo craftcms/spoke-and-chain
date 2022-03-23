@@ -5769,7 +5769,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brandonkelly/craft3-freeform",
-                "reference": "bc62e27cd59bf7fd13df69727de3d342a3a4c13f"
+                "reference": "544941f0843216253ebfaa493a4f865337788b93"
             },
             "require": {
                 "composer/composer": "^1.0|^2.0.13",
@@ -5852,7 +5852,7 @@
                 }
             ],
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
-            "time": "2022-03-14T14:30:06+00:00"
+            "time": "2022-03-23T12:34:49+00:00"
         },
         {
             "name": "solspace/craft3-commons",
