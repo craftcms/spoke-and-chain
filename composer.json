@@ -37,6 +37,7 @@
     "wbrowar/guide": "^2.0"
   },
   "require-dev": {
+    "craftcms/phpstan": "dev-main",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
@@ -51,6 +52,10 @@
     "optimize-autoloader": true,
     "platform": {
       "php": "8.0"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
     }
   },
   "scripts": {
@@ -58,6 +63,9 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "@php craft db/restore seed.sql > /dev/null 2>&1",
       "@php craft demos/seed > /dev/null 2>&1"
-    ]
-  }
+    ],
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

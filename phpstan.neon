@@ -1,0 +1,9 @@
+includes:
+    - vendor/craftcms/phpstan/phpstan.neon
+
+parameters:
+    level: 5
+    paths:
+        - modules
+    stubFiles:
+        - stubs/UserQuery.stub
