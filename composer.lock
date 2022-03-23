@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e98ddca814a0996c94cc2c1b706cb37a",
+    "content-hash": "f670ddb7d979b4c10021c71415c231e7",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -9168,6 +9168,39 @@
     ],
     "packages-dev": [
         {
+            "name": "craftcms/ecs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/ecs.git",
+                "reference": "8547a813e62a7f76019cda04f7761b09e19fa9c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/ecs/zipball/8547a813e62a7f76019cda04f7761b09e19fa9c2",
+                "reference": "8547a813e62a7f76019cda04f7761b09e19fa9c2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5|^8.0.2",
+                "symplify/easy-coding-standard": "^10.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "craft\\ecs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Easy Coding Standard configurations for Craft CMS projects",
+            "support": {
+                "issues": "https://github.com/craftcms/ecs/issues",
+                "source": "https://github.com/craftcms/ecs/tree/main"
+            },
+            "time": "2022-03-08T16:53:16+00:00"
+        },
+        {
             "name": "craftcms/phpstan",
             "version": "dev-main",
             "source": {
@@ -9474,6 +9507,61 @@
             "time": "2022-03-02T12:42:23+00:00"
         },
         {
+            "name": "symplify/easy-coding-standard",
+            "version": "10.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symplify/easy-coding-standard.git",
+                "reference": "3fdbead9da24889727dc11804e9bbfb9d4502d3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/3fdbead9da24889727dc11804e9bbfb9d4502d3a",
+                "reference": "3fdbead9da24889727dc11804e9bbfb9d4502d3a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "conflict": {
+                "friendsofphp/php-cs-fixer": "<3.0",
+                "squizlabs/php_codesniffer": "<3.6"
+            },
+            "bin": [
+                "bin/ecs"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "9.5-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Prefixed scoped version of ECS package",
+            "support": {
+                "source": "https://github.com/symplify/easy-coding-standard/tree/10.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/rectorphp",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-03-16T15:18:55+00:00"
+        },
+        {
             "name": "yiisoft/yii2-shell",
             "version": "2.0.4",
             "source": {
@@ -9543,6 +9631,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pixelandtonic/yii2-dynamodb": 20,
+        "craftcms/ecs": 20,
         "craftcms/phpstan": 20
     },
     "prefer-stable": true,
