@@ -1,0 +1,42 @@
+name: PHP Checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: [ 'ubuntu-latest' ]
+        php-versions: [ 8.1, 8.0 ]
+
+    name: PHP ${{ matrix.php-versions }}
+    env:
+      PHP_EXTENSIONS: ctype,curl,dom,iconv,imagick,intl,json,mbstring,openssl,pcre,pdo,reflection,spl,zip
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Run phpstan
+        run: composer run-script phpstan
+
+      - name: Run ecs
+        run: composer run-script check-cs
