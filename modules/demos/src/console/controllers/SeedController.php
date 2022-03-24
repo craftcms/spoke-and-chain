@@ -260,10 +260,9 @@ class SeedController extends Controller
 
         foreach ($entries->all() as $entry) {
             $entry->postDate = $this->_faker->dateTimeInInterval('-1 months', '-5 days');
-            Craft::$app->elements->saveElement(element: $entry, updateSearchIndex: false);
+            Craft::$app->elements->saveElement(element: $entry);
         }
 
-        Craft::$app->getSearch()->indexElementAttributes(element: $entry);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
@@ -447,7 +446,6 @@ class SeedController extends Controller
         $this->stdout('Creating customers...' . PHP_EOL);
         $numCustomers = random_int(self::CUSTOMERS_MIN, self::CUSTOMERS_MAX);
         for ($i = 0; $i <= $numCustomers; $i++) {
-
             $customer = Craft::$app->getUsers()->ensureUserByEmail($this->_faker->email);
 
             $customer->firstName = $this->_faker->firstName();
@@ -743,6 +741,7 @@ class SeedController extends Controller
         $reviewsSection = Craft::$app->getSections()->getSectionByHandle('reviews');
         /** @var UserQuery $authorQuery */
         $authorQuery = Craft::$app->getElements()->createElementQuery(User::class);
+        /** @var User|null $author */
         $author = $authorQuery->admin(true)->orderBy('id ASC')->one();
 
         if (!$reviewsSection || !$author) {

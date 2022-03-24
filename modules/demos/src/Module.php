@@ -3,15 +3,16 @@
 namespace modules\demos;
 
 use Craft;
-use craft\awss3\Volume as AwsVolume;
-
-use Craft;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\helpers\App;
 use craft\web\View;
-use modules\demos\widgets\Guide;
 use yii\base\Event;
 
+/**
+ * Class Module
+ *
+ * @author Pixel & Tonic, Inc. <support@pixelandtonic.com>
+ */
 class Module extends \yii\base\Module
 {
     public function init()
