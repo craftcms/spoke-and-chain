@@ -1,0 +1,17 @@
+<?php
+
+namespace craft\elements\db;
+
+class UserQuery
+{
+    /**
+     * @param string|array|string[]|\craft\models\UserGroup|null $value The property value
+     * @return static self reference
+     * @uses $groupId
+     */
+    public function group($value);
+}
+
+namespace craft\models;
+
+class UserGroup {}

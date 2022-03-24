@@ -18,6 +18,7 @@
     "email": "support@craftcms.com"
   },
   "require": {
+    "php": ">=8.0.2",
     "craftcms/aws-s3": "^2.0.0-beta",
     "craftcms/cms": "^4.0.0-beta",
     "craftcms/commerce": "^4.0.0-beta",
@@ -35,6 +36,8 @@
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
@@ -70,7 +73,10 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "@php craft db/restore seed.sql > /dev/null 2>&1",
       "@php craft demos/seed > /dev/null 2>&1"
-    ]
+    ],
+    "phpstan": "phpstan --memory-limit=1G",
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix"
   },
   "minimum-stability": "dev",
   "prefer-stable": true

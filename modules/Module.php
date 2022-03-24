@@ -1,13 +1,14 @@
 <?php
+
 namespace modules;
 
 use Craft;
+use craft\base\Element;
+use craft\base\Model;
 use craft\commerce\elements\Product;
 use craft\commerce\elements\Variant;
 use craft\elements\Address;
 use craft\elements\Entry;
-use craft\base\Element;
-use craft\base\Model;
 use craft\events\RegisterElementSourcesEvent;
 use craft\web\twig\variables\CraftVariable;
 use modules\services\Reviews;
@@ -60,7 +61,7 @@ class Module extends \yii\base\Module
                     'addressLine1',
                     'locality',
                     'countryCode',
-                    'postalCode'
+                    'postalCode',
                 ], 'required'];
             }
         );
@@ -162,7 +163,7 @@ class Module extends \yii\base\Module
                                     'id' => $entryIds,
                                     'fixedOrder' => true,
                                 ],
-                            ]
+                            ],
                         ],
                         array_slice($event->sources, $insertAfter)
                     );

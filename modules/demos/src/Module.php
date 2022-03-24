@@ -2,15 +2,15 @@
 
 namespace modules\demos;
 
-use craft\helpers\App;
-use modules\demos\widgets\Guide;
+use Craft;
+use craft\awss3\Volume as AwsVolume;
 
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
+use craft\helpers\App;
 use craft\web\View;
+use modules\demos\widgets\Guide;
 use yii\base\Event;
-use craft\awss3\Volume as AwsVolume;
-use craft\volumes\Local as LocalVolume;
 
 class Module extends \yii\base\Module
 {

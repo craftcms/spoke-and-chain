@@ -4,6 +4,7 @@ namespace modules\demos\console\controllers;
 
 use CommerceGuys\Addressing\Subdivision\Subdivision;
 use Craft;
+use craft\commerce\elements\db\ProductQuery;
 use craft\commerce\elements\Order;
 use craft\commerce\elements\Product;
 use craft\commerce\events\MailEvent;
@@ -26,6 +27,7 @@ use craft\helpers\FileHelper;
 use DateInterval;
 use DateTime;
 use Faker\Generator as FakerGenerator;
+use Solspace\Freeform\Elements\Db\SubmissionQuery;
 use Solspace\Freeform\Elements\Submission;
 use Solspace\Freeform\Freeform;
 use Solspace\Freeform\Library\Composer\Components\Form;
@@ -155,7 +157,7 @@ class SeedController extends Controller
         Event::on(
             Emails::class,
             Emails::EVENT_BEFORE_SEND_MAIL,
-            function (MailEvent $event) {
+            function(MailEvent $event) {
                 $event->isValid = false;
             }
         );
@@ -186,7 +188,10 @@ class SeedController extends Controller
 
     public function actionClean(): int
     {
-        $this->deleteElements(Submission::find()->isSpam(null), 'submissions');
+        /** @var SubmissionQuery $submissions */
+        $submissions = Submission::find();
+        $submissions->isSpam(null);
+        $this->deleteElements($submissions, 'submissions');
         $this->runAction('delete-commerce-data');
         return ExitCode::OK;
     }
@@ -490,7 +495,7 @@ class SeedController extends Controller
                 'locality' => $this->_faker->city,
                 'postalCode' => $this->_faker->postcode,
                 'countryCode' => $country,
-            ]
+            ],
         ]);
 
         $addressFormat = Craft::$app->getAddresses()->getAddressFormatRepository()->get($country);
@@ -576,7 +581,7 @@ class SeedController extends Controller
     private function _setTime(DateTime $date): DateTime
     {
         if (DateTimeHelper::isToday($date)) {
-            $date->setTime(random_int(0, $date->format('G')), random_int(0, $date->format('i')), 0);
+            $date->setTime(random_int(0, (int)$date->format('G')), random_int(0, (int)$date->format('i')), 0);
         } else {
             $date->setTime(random_int(0, 23), random_int(0, 59), random_int(0, 59));
         }
@@ -598,7 +603,7 @@ class SeedController extends Controller
     /**
      * Return a random address from an imported customer.
      *
-     * @param $customer
+     * @param array $customer
      * @return Address
      */
     private function _getRandomAddressFromCustomer($customer): Address
@@ -614,7 +619,9 @@ class SeedController extends Controller
     private function _getRandomProduct(): Product
     {
         if (empty($this->_products)) {
-            $this->_products = Craft::$app->getElements()->createElementQuery(Product::class)->all();
+            /** @var ProductQuery $productQuery */
+            $productQuery = Craft::$app->getElements()->createElementQuery(Product::class);
+            $this->_products = $productQuery->all();
         }
 
         return $this->_faker->randomElement($this->_products);
@@ -648,7 +655,7 @@ class SeedController extends Controller
      */
     private function _createOrderElement(DateTime $date, bool $isCompleted = true)
     {
-        $customer = $this->_getRandomCustomer(random_int(0, 1));
+        $customer = $this->_getRandomCustomer((bool)random_int(0, 1));
 
         $attributes = [
             'dateUpdated' => $date,
@@ -658,7 +665,7 @@ class SeedController extends Controller
         /** @var Order $order */
         $order = Craft::createObject([
             'class' => Order::class,
-            'attributes' => $attributes
+            'attributes' => $attributes,
         ]);
 
 
