@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.216.0",
+            "version": "3.216.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e283b3210fcef6a60e686a68b92c4e81d34bb021"
+                "reference": "00176c97319448c9520176d7c7d107b04b35406d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e283b3210fcef6a60e686a68b92c4e81d34bb021",
-                "reference": "e283b3210fcef6a60e686a68b92c4e81d34bb021",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/00176c97319448c9520176d7c7d107b04b35406d",
+                "reference": "00176c97319448c9520176d7c7d107b04b35406d",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.216.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.216.1"
             },
-            "time": "2022-03-23T18:16:07+00:00"
+            "time": "2022-03-24T18:15:20+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -1613,16 +1613,16 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "60b704331479a69e9bcdb3496da2315b5c4f94fd"
+                "reference": "c6dfd9bb8b0040609f04754f729d4cb3016e0575"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/60b704331479a69e9bcdb3496da2315b5c4f94fd",
-                "reference": "60b704331479a69e9bcdb3496da2315b5c4f94fd",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/c6dfd9bb8b0040609f04754f729d4cb3016e0575",
+                "reference": "c6dfd9bb8b0040609f04754f729d4cb3016e0575",
                 "shasum": ""
             },
             "require": {
@@ -1674,9 +1674,9 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/v1.2.0"
+                "source": "https://github.com/dompdf/dompdf/tree/v1.2.1"
             },
-            "time": "2022-02-07T13:02:10+00:00"
+            "time": "2022-03-24T12:57:42+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -4943,22 +4943,22 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "1.12.1",
+            "version": "1.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "6578d6b7965ecc8bead18fc3186fc8a5834df903"
+                "reference": "69b285c4afc4ebbb3f4ced1418b34be7d86a3766"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/6578d6b7965ecc8bead18fc3186fc8a5834df903",
-                "reference": "6578d6b7965ecc8bead18fc3186fc8a5834df903",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/69b285c4afc4ebbb3f4ced1418b34be7d86a3766",
+                "reference": "69b285c4afc4ebbb3f4ced1418b34be7d86a3766",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.3.0",
                 "phpdocumentor/reflection-docblock": "^5.2.0",
-                "putyourlightson/craft-sprig-core": "^1.3.1"
+                "putyourlightson/craft-sprig-core": "^1.3.2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -4992,20 +4992,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-15T08:59:21+00:00"
+            "time": "2022-03-24T12:45:19+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "49bf3a0e0e706ab60017e7445b06f3d60837f834"
+                "reference": "88661ced05920f06f53aea89e4a33c85af0ec98c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/49bf3a0e0e706ab60017e7445b06f3d60837f834",
-                "reference": "49bf3a0e0e706ab60017e7445b06f3d60837f834",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/88661ced05920f06f53aea89e4a33c85af0ec98c",
+                "reference": "88661ced05920f06f53aea89e4a33c85af0ec98c",
                 "shasum": ""
             },
             "require": {
@@ -5033,7 +5033,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2022-03-15T08:56:09+00:00"
+            "time": "2022-03-24T12:44:44+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -9284,20 +9284,20 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.4.10",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "898c479c39caa727bedf4311dd294a8f4e250e72"
+                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/898c479c39caa727bedf4311dd294a8f4e250e72",
-                "reference": "898c479c39caa727bedf4311dd294a8f4e250e72",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
+                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1|^8.0"
+                "php": "^7.2|^8.0"
             },
             "conflict": {
                 "phpstan/phpstan-shim": "*"
@@ -9319,7 +9319,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.4.10"
+                "source": "https://github.com/phpstan/phpstan/tree/1.5.0"
             },
             "funding": [
                 {
@@ -9339,7 +9339,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-14T10:25:45+00:00"
+            "time": "2022-03-24T18:18:00+00:00"
         },
         {
             "name": "psy/psysh",
