@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.216.1",
+            "version": "3.216.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "00176c97319448c9520176d7c7d107b04b35406d"
+                "reference": "9e09386c3a5b313eeb324490beff4eb843ed339d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/00176c97319448c9520176d7c7d107b04b35406d",
-                "reference": "00176c97319448c9520176d7c7d107b04b35406d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9e09386c3a5b313eeb324490beff4eb843ed339d",
+                "reference": "9e09386c3a5b313eeb324490beff4eb843ed339d",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.216.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.216.2"
             },
-            "time": "2022-03-24T18:15:20+00:00"
+            "time": "2022-03-25T18:17:03+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -5624,16 +5624,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.118.0",
+            "version": "v7.119.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "4ab7c6b496892073d8b8e2ef945485e68a97d7f6"
+                "reference": "a454dde82f5698cc4bcc5016c5328f533f516690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/4ab7c6b496892073d8b8e2ef945485e68a97d7f6",
-                "reference": "4ab7c6b496892073d8b8e2ef945485e68a97d7f6",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/a454dde82f5698cc4bcc5016c5328f533f516690",
+                "reference": "a454dde82f5698cc4bcc5016c5328f533f516690",
                 "shasum": ""
             },
             "require": {
@@ -5678,9 +5678,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.118.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.119.0"
             },
-            "time": "2022-03-23T19:01:34+00:00"
+            "time": "2022-03-25T20:09:27+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
