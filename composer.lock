@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.216.2",
+            "version": "3.216.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9e09386c3a5b313eeb324490beff4eb843ed339d"
+                "reference": "5ec2b55c7e2afdaf173348841440076c8e2d2acb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9e09386c3a5b313eeb324490beff4eb843ed339d",
-                "reference": "9e09386c3a5b313eeb324490beff4eb843ed339d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5ec2b55c7e2afdaf173348841440076c8e2d2acb",
+                "reference": "5ec2b55c7e2afdaf173348841440076c8e2d2acb",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.216.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.216.3"
             },
-            "time": "2022-03-25T18:17:03+00:00"
+            "time": "2022-03-28T18:16:18+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -5510,16 +5510,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.13.6",
+            "version": "3.13.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "839e67f99157dea1bdfcf8e12d3130252aca40c8"
+                "reference": "7a830026f33585fe6ab6bd8d10de8dbd3b20a3d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/839e67f99157dea1bdfcf8e12d3130252aca40c8",
-                "reference": "839e67f99157dea1bdfcf8e12d3130252aca40c8",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/7a830026f33585fe6ab6bd8d10de8dbd3b20a3d7",
+                "reference": "7a830026f33585fe6ab6bd8d10de8dbd3b20a3d7",
                 "shasum": ""
             },
             "require": {
@@ -5584,9 +5584,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v3.13.6"
+                "source": "https://github.com/solspace/craft-freeform/tree/v3.13.7"
             },
-            "time": "2022-03-16T19:41:24+00:00"
+            "time": "2022-03-28T17:53:02+00:00"
         },
         {
             "name": "solspace/craft3-commons",
@@ -8330,16 +8330,16 @@
         },
         {
             "name": "voku/stringy",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Stringy.git",
-                "reference": "760438112f8696ba3d51a96896bc786d29a5f183"
+                "reference": "c453c88fbff298f042c836ef44306f8703b2d537"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Stringy/zipball/760438112f8696ba3d51a96896bc786d29a5f183",
-                "reference": "760438112f8696ba3d51a96896bc786d29a5f183",
+                "url": "https://api.github.com/repos/voku/Stringy/zipball/c453c88fbff298f042c836ef44306f8703b2d537",
+                "reference": "c453c88fbff298f042c836ef44306f8703b2d537",
                 "shasum": ""
             },
             "require": {
@@ -8421,7 +8421,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-30T05:46:50+00:00"
+            "time": "2022-03-28T14:52:20+00:00"
         },
         {
             "name": "voku/urlify",
@@ -9284,16 +9284,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e"
+                "reference": "cc67578d9afd0f5f2545067285613d7a529aefac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
-                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/cc67578d9afd0f5f2545067285613d7a529aefac",
+                "reference": "cc67578d9afd0f5f2545067285613d7a529aefac",
                 "shasum": ""
             },
             "require": {
@@ -9319,7 +9319,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.5.0"
+                "source": "https://github.com/phpstan/phpstan/tree/1.5.1"
             },
             "funding": [
                 {
@@ -9339,7 +9339,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-24T18:18:00+00:00"
+            "time": "2022-03-28T15:34:48+00:00"
         },
         {
             "name": "psy/psysh",
