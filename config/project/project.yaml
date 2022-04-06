@@ -1,4 +1,4 @@
-dateModified: 1647980953
+dateModified: 1649278633
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -171,7 +171,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: SI24H20R5SQCC22FZMXL94F7
-    schemaVersion: 4.0.0
+    schemaVersion: 4.0.1
   default-dashboard:
     edition: standard
     enabled: true
@@ -351,5 +351,5 @@ system:
   live: true
   name: 'Spoke & Chain'
   retryDuration: null
-  schemaVersion: 4.0.0.7
+  schemaVersion: 4.0.0.8
   timeZone: America/Los_Angeles
