@@ -13,9 +13,9 @@ services:
     image: mariadb:10.5
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${CRAFT_DB_DATABASE}
+      MYSQL_USER: ${CRAFT_DB_USER}
+      MYSQL_PASSWORD: ${CRAFT_DB_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
