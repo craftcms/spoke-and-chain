@@ -35,7 +35,7 @@ return [
         'loginPath' => 'account/login',
         'omitScriptNameInUrls' => true,
         'postLoginRedirect' => 'account',
-        'securityKey' => App::env('SECURITY_KEY'),
+        'securityKey' => App::env('CRAFT_SECURITY_KEY'),
         'useEmailAsUsername' => true,
     ],
 
