@@ -41,5 +41,6 @@ return [
 
     'dev' => [
         'disallowRobots' => true,
+        'devMode' => true,
     ],
 ];
