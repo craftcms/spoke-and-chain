@@ -85,21 +85,20 @@
                   <h2 class="text-2xl mb-4">{{ 'Billing Address'|t }}</h2>
                 </div>
                 <div class="space-y-2 relative">
-                  {{ sprig('_includes/components/address/list', {
-                    showDelete: false,
-                    model: 'billingAddress',
-                    radio: 'billingAddressId',
-                  }, {
-                    id: 'billing-address-list',
-                    class: 'address-list',
-                    's-include': '#billing-address-list',
-                    's-indicator': '#billing-address-list-indicator',
-                  }) }}
-                  <div id="billing-address-list-indicator" class="spinner-overlay">
-                    {% include '_includes/components/spinner' %}
-                  </div>
                   {% if currentUser and addresses|length %}
-                    {# ¯\_(ツ)_/¯ #}
+                    {{ sprig('_includes/components/address/list', {
+                      showDelete: false,
+                      model: 'billingAddress',
+                      radio: 'billingAddressId',
+                    }, {
+                      id: 'billing-address-list',
+                      class: 'address-list',
+                      's-include': '#billing-address-list',
+                      's-indicator': '#billing-address-list-indicator',
+                    }) }}
+                    <div id="billing-address-list-indicator" class="spinner-overlay">
+                      {% include '_includes/components/spinner' %}
+                    </div>
                   {% else %}
                     <div>
                       {% include '_includes/components/address/fields' with {
