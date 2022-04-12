@@ -5,13 +5,13 @@
 {% endif %}
 
 <!-- Template: {{ _self }}.twig -->
+<pre>{{ dump(data) }}</pre>
 <form
   sprig
   class="h-full w-full overflow-auto flex flex-col relative"
   s-method="{{ data is not defined or data.method is not defined ? 'post' : data.method }}"
   s-action="{{ data is not defined or data.action is not defined ? 'post' : data.action }}"
-  s-val:data='{{ data|json_encode }}'
-  s-val:type='{{ type }}'
+  s-vals='{{ {data: data, type: type}|json_encode|raw }}'
   x-data="{ submitting: false }"
   x-on:submit="submitting = true"
 >
