@@ -24,6 +24,7 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 - PostgreSQL (11.5+) / MySQL (5.7+)
 - PHP (7.2.5+), built on the [Yii 2 framework](https://www.yiiframework.com/)
 - Native Twig templates with reactive [Sprig](https://plugins.craftcms.com/sprig) components
+- [Node](https://nodejs.org/en/) (12+) / [npm](https://www.npmjs.com/) (6+), managing and building front end resources
 
 ### Front End Dependencies
 
@@ -70,7 +71,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
 
 ### Front End
 
-Run `npm install` with node 12. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm install`.)
+Run `npm ci` with node 12. (If you’ve installed [nvm](https://github.com/nvm-sh/nvm) run `nvm use`, then `npm ci`.)
 
 If you’ve chosen a different environment setup, make sure your `.env` is configured for it. These environment variables are specifically used by `webpack-dev-server`:
 
