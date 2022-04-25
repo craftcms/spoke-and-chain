@@ -40,6 +40,25 @@ fs:
       path: '@webroot/assets/volumes/images'
     type: craft\fs\Local
     url: '@web/assets/volumes/images'
+  runtime:
+    hasUrls: false
+    name: Runtime
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: ''
+      cfPrefix: ''
+      expires: ''
+      keyId: ''
+      makeUploadsPublic: false
+      region: $AWS_REGION
+      secret: ''
+      storageClass: ''
+      subfolder: runtime
+    type: craft\awss3\Fs
+    url: null
 meta:
   __names__:
     0dbacfe0-78ef-48ff-95a3-b7eb4dc8be86: Emails # Emails
