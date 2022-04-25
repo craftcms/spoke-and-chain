@@ -26,13 +26,13 @@
     "craftcms/store-hours": "^3.0.0-beta.1",
     "fakerphp/faker": "^1.9",
     "mead-steve/mono-snag": "^4.1",
-    "nystudio107/craft-seomatic": "dev-develop-v4 as 4.0.0-beta.5",
+    "nystudio107/craft-seomatic": "^4.0.0-beta.8",
     "nystudio107/craft-twigpack": "^4.0.0-beta.2",
     "oberon/starfield": "dev-craft-4",
-    "pixelandtonic/yii2-dynamodb": "dev-cloud-refactor",
+    "craftcms/yii2-dynamodb": "^2.0.0",
     "putyourlightson/craft-sprig": "^2.0.0-beta.1",
     "solspace/craft-freeform": "dev-craft4",
-    "verbb/default-dashboard": "dev-craft-4",
+    "verbb/default-dashboard": "^2.0.0-beta.1",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
