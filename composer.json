@@ -21,7 +21,7 @@
     "php": ">=8.0.2",
     "craftcms/aws-s3": "^2.0.0",
     "craftcms/cms": "dev-release/4.0.0 as 4.0.0",
-    "craftcms/commerce": "^4.0.0-RC1",
+    "craftcms/commerce": "^4.0.0",
     "craftcms/redactor": "^3.0.0-beta",
     "craftcms/store-hours": "^3.0.0",
     "fakerphp/faker": "^1.9",

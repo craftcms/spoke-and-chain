@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18dce47ec1f875bf11ac2f948a669912",
+    "content-hash": "2b1a5d0856405e1dae1662fa509ac623",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1064,16 +1064,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "4.0.0-RC1",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "23326a08ff4981c13423dcba2e5c1ca9f6afa02a"
+                "reference": "03fe68b8a09d05b028c510411b55af6cea6a089a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/23326a08ff4981c13423dcba2e5c1ca9f6afa02a",
-                "reference": "23326a08ff4981c13423dcba2e5c1ca9f6afa02a",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/03fe68b8a09d05b028c510411b55af6cea6a089a",
+                "reference": "03fe68b8a09d05b028c510411b55af6cea6a089a",
                 "shasum": ""
             },
             "require": {
@@ -1130,7 +1130,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-05-02T18:50:03+00:00"
+            "time": "2022-05-04T17:10:32+00:00"
         },
         {
             "name": "craftcms/flysystem",
