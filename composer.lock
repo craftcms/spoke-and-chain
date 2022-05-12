@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.222.5",
+            "version": "3.222.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "26596820b043db985bf7c9deb98aa2234f6054cb"
+                "reference": "a82c1b4903f5df893bf7108ec9de73328f74652a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/26596820b043db985bf7c9deb98aa2234f6054cb",
-                "reference": "26596820b043db985bf7c9deb98aa2234f6054cb",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a82c1b4903f5df893bf7108ec9de73328f74652a",
+                "reference": "a82c1b4903f5df893bf7108ec9de73328f74652a",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.222.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.222.10"
             },
-            "time": "2022-05-04T20:25:34+00:00"
+            "time": "2022-05-11T18:15:28+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -946,16 +946,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.0.1",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "e3456380bdf7b18a5bb4c47c2e61e62805960915"
+                "reference": "b7051e4f2738d347c4b77c641ae4cc150daf6d0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/e3456380bdf7b18a5bb4c47c2e61e62805960915",
-                "reference": "e3456380bdf7b18a5bb4c47c2e61e62805960915",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/b7051e4f2738d347c4b77c641ae4cc150daf6d0a",
+                "reference": "b7051e4f2738d347c4b77c641ae4cc150daf6d0a",
                 "shasum": ""
             },
             "require": {
@@ -1060,7 +1060,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-05-04T17:36:16+00:00"
+            "time": "2022-05-11T15:42:18+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -2733,7 +2733,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.11.0",
+            "version": "v9.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2788,7 +2788,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.11.0",
+            "version": "v9.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2834,7 +2834,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.11.0",
+            "version": "v9.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2882,7 +2882,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.11.0",
+            "version": "v9.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -3457,16 +3457,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "4192345e260f1d51b365536199744b987e160edc"
+                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/4192345e260f1d51b365536199744b987e160edc",
-                "reference": "4192345e260f1d51b365536199744b987e160edc",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/247918972acd74356b0a91dfaa5adcaec069b6c0",
+                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0",
                 "shasum": ""
             },
             "require": {
@@ -3479,18 +3479,23 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "elasticsearch/elasticsearch": "^7",
+                "elasticsearch/elasticsearch": "^7 || ^8",
+                "ext-json": "*",
                 "graylog2/gelf-php": "^1.4.2",
+                "guzzlehttp/guzzle": "^7.4",
+                "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
                 "php-console/php-console": "^3.1.3",
-                "phpspec/prophecy": "^1.6.1",
+                "phpspec/prophecy": "^1.15",
                 "phpstan/phpstan": "^0.12.91",
-                "phpunit/phpunit": "^8.5",
+                "phpunit/phpunit": "^8.5.14",
                 "predis/predis": "^1.1",
                 "rollbar/rollbar": "^1.3 || ^2 || ^3",
-                "ruflin/elastica": ">=0.90@dev",
-                "swiftmailer/swiftmailer": "^5.3|^6.0"
+                "ruflin/elastica": "^7",
+                "swiftmailer/swiftmailer": "^5.3|^6.0",
+                "symfony/mailer": "^5.4 || ^6",
+                "symfony/mime": "^5.4 || ^6"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -3540,7 +3545,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.5.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.6.0"
             },
             "funding": [
                 {
@@ -3552,7 +3557,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-08T15:43:54+00:00"
+            "time": "2022-05-10T09:36:00+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -3714,20 +3719,20 @@
         },
         {
             "name": "nystudio107/craft-plugin-manifest",
-            "version": "4.0.0-beta.3",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-plugin-manifest.git",
-                "reference": "74ab2a955be5d9073631ee43abfabdcce5a9a1f0"
+                "reference": "4695716e0e7936da3e71e0ae5f435b8f0764973c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-plugin-manifest/zipball/74ab2a955be5d9073631ee43abfabdcce5a9a1f0",
-                "reference": "74ab2a955be5d9073631ee43abfabdcce5a9a1f0",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-manifest/zipball/4695716e0e7936da3e71e0ae5f435b8f0764973c",
+                "reference": "4695716e0e7936da3e71e0ae5f435b8f0764973c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0-beta.1"
+                "craftcms/cms": "^4.0.0"
             },
             "type": "library",
             "autoload": {
@@ -3754,7 +3759,7 @@
             "support": {
                 "docs": "https://github.com/nystudio107/craft-plugin-manifest/blob/v4/README.md",
                 "issues": "https://github.com/nystudio107/craft-plugin-manifest/issues",
-                "source": "https://github.com/nystudio107/craft-plugin-manifest/tree/4.0.0-beta.3"
+                "source": "https://github.com/nystudio107/craft-plugin-manifest/tree/4.0.0"
             },
             "funding": [
                 {
@@ -3762,7 +3767,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-26T14:58:39+00:00"
+            "time": "2022-05-07T19:06:54+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
@@ -4807,16 +4812,16 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "1a4be65faedbdbfaf9aa6e77287b8cd5600c5eba"
+                "reference": "6899a5ee507d91d8ee8e649ff8cc95575e8169ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/1a4be65faedbdbfaf9aa6e77287b8cd5600c5eba",
-                "reference": "1a4be65faedbdbfaf9aa6e77287b8cd5600c5eba",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/6899a5ee507d91d8ee8e649ff8cc95575e8169ad",
+                "reference": "6899a5ee507d91d8ee8e649ff8cc95575e8169ad",
                 "shasum": ""
             },
             "require": {
@@ -4856,7 +4861,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-04T18:17:31+00:00"
+            "time": "2022-05-12T11:46:11+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
@@ -5490,16 +5495,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.126.0",
+            "version": "v7.128.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "c36de62a89475e81d9c75ec08de19376466f67b7"
+                "reference": "c704949c49b72985c76cc61063aa26fefbd2724e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c36de62a89475e81d9c75ec08de19376466f67b7",
-                "reference": "c36de62a89475e81d9c75ec08de19376466f67b7",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c704949c49b72985c76cc61063aa26fefbd2724e",
+                "reference": "c704949c49b72985c76cc61063aa26fefbd2724e",
                 "shasum": ""
             },
             "require": {
@@ -5544,9 +5549,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.126.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.128.0"
             },
-            "time": "2022-05-03T15:37:27+00:00"
+            "time": "2022-05-05T17:18:02+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -9623,16 +9628,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.6.7",
+            "version": "1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d41c39cb2e487663bce9bbd97c660e244b73abad"
+                "reference": "d76498c5531232cb8386ceb6004f7e013138d3ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d41c39cb2e487663bce9bbd97c660e244b73abad",
-                "reference": "d41c39cb2e487663bce9bbd97c660e244b73abad",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d76498c5531232cb8386ceb6004f7e013138d3ba",
+                "reference": "d76498c5531232cb8386ceb6004f7e013138d3ba",
                 "shasum": ""
             },
             "require": {
@@ -9658,7 +9663,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.6.7"
+                "source": "https://github.com/phpstan/phpstan/tree/1.6.8"
             },
             "funding": [
                 {
@@ -9678,7 +9683,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-04T22:55:41+00:00"
+            "time": "2022-05-10T06:54:21+00:00"
         },
         {
             "name": "psy/psysh",
