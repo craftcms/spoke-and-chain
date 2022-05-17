@@ -1,10 +1,11 @@
 name: PHP Checks
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main, craft4 ]
+    branches: [ stable, beta, dev ]
   pull_request:
-    branches: [ main, craft4 ]
+    branches: [ stable, beta, dev ]
 
 jobs:
   build:
