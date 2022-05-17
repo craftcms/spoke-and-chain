@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.222.10",
+            "version": "3.222.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a82c1b4903f5df893bf7108ec9de73328f74652a"
+                "reference": "007ddbbded7b753c2ceda61f3648774597a2615f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a82c1b4903f5df893bf7108ec9de73328f74652a",
-                "reference": "a82c1b4903f5df893bf7108ec9de73328f74652a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/007ddbbded7b753c2ceda61f3648774597a2615f",
+                "reference": "007ddbbded7b753c2ceda61f3648774597a2615f",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.222.10"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.222.13"
             },
-            "time": "2022-05-11T18:15:28+00:00"
+            "time": "2022-05-16T18:15:06+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -3771,22 +3771,22 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.0-beta.8",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "d084081d3735108bfe4762217ee0424248806d37"
+                "reference": "a31f7d211b52d55d274c66a291310ceec64c733f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/d084081d3735108bfe4762217ee0424248806d37",
-                "reference": "d084081d3735108bfe4762217ee0424248806d37",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a31f7d211b52d55d274c66a291310ceec64c733f",
+                "reference": "a31f7d211b52d55d274c66a291310ceec64c733f",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0-alpha",
+                "craftcms/cms": "^4.0.0",
                 "davechild/textstatistics": "1.0.2",
-                "nystudio107/craft-plugin-manifest": "^4.0.0-beta.1",
+                "nystudio107/craft-plugin-manifest": "^4.0.0",
                 "php": "^8.0.2",
                 "php-science/textrank": "^1.0.3",
                 "sunra/php-simple-html-dom-parser": "^1.5.2"
@@ -3842,7 +3842,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-18T22:18:58+00:00"
+            "time": "2022-05-16T16:46:40+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -9762,20 +9762,20 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "10.2.3",
+            "version": "10.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/easy-coding-standard.git",
-                "reference": "7303e9b0a6ac61b2a0cf5185a2078b7af25fba9d"
+                "reference": "adf8160b62834ef7de518254a05fd6d57b7c1c29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/7303e9b0a6ac61b2a0cf5185a2078b7af25fba9d",
-                "reference": "7303e9b0a6ac61b2a0cf5185a2078b7af25fba9d",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/adf8160b62834ef7de518254a05fd6d57b7c1c29",
+                "reference": "adf8160b62834ef7de518254a05fd6d57b7c1c29",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "conflict": {
                 "friendsofphp/php-cs-fixer": "<3.0",
@@ -9801,7 +9801,7 @@
             ],
             "description": "Prefixed scoped version of ECS package",
             "support": {
-                "source": "https://github.com/symplify/easy-coding-standard/tree/10.2.3"
+                "source": "https://github.com/symplify/easy-coding-standard/tree/10.2.5"
             },
             "funding": [
                 {
@@ -9813,7 +9813,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-03T14:07:44+00:00"
+            "time": "2022-05-14T22:55:58+00:00"
         },
         {
             "name": "yiisoft/yii2-shell",
