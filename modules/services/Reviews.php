@@ -69,7 +69,6 @@ class Reviews extends BaseObject
 
         $reviewsByProductId = [];
         foreach ($reviews as $review) {
-            /** @phpstan-ignore-next-line */
             $product = $review->product[0] ?? null;
             if (!$product) {
                 continue;
