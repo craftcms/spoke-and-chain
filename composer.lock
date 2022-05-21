@@ -9627,16 +9627,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.6.8",
+            "version": "1.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d76498c5531232cb8386ceb6004f7e013138d3ba"
+                "reference": "8c98899c7c54251a098befd23b50a983594a20f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d76498c5531232cb8386ceb6004f7e013138d3ba",
-                "reference": "d76498c5531232cb8386ceb6004f7e013138d3ba",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/8c98899c7c54251a098befd23b50a983594a20f9",
+                "reference": "8c98899c7c54251a098befd23b50a983594a20f9",
                 "shasum": ""
             },
             "require": {
@@ -9662,7 +9662,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.6.8"
+                "source": "https://github.com/phpstan/phpstan/tree/1.6.9"
             },
             "funding": [
                 {
@@ -9682,7 +9682,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-10T06:54:21+00:00"
+            "time": "2022-05-21T11:34:44+00:00"
         },
         {
             "name": "psy/psysh",
@@ -9761,16 +9761,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "10.2.6",
+            "version": "10.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/easy-coding-standard.git",
-                "reference": "8875d8cd438756c9719fcdcc3b7d0c1d06515dd5"
+                "reference": "e34a105876b0640e70c584d75adaf9c0b03cf0f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/8875d8cd438756c9719fcdcc3b7d0c1d06515dd5",
-                "reference": "8875d8cd438756c9719fcdcc3b7d0c1d06515dd5",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/e34a105876b0640e70c584d75adaf9c0b03cf0f3",
+                "reference": "e34a105876b0640e70c584d75adaf9c0b03cf0f3",
                 "shasum": ""
             },
             "require": {
@@ -9800,7 +9800,7 @@
             ],
             "description": "Prefixed scoped version of ECS package",
             "support": {
-                "source": "https://github.com/symplify/easy-coding-standard/tree/10.2.6"
+                "source": "https://github.com/symplify/easy-coding-standard/tree/10.2.7"
             },
             "funding": [
                 {
@@ -9812,7 +9812,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-17T07:11:50+00:00"
+            "time": "2022-05-21T11:14:40+00:00"
         },
         {
             "name": "yiisoft/yii2-shell",
