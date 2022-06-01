@@ -9761,16 +9761,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "10.2.7",
+            "version": "10.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/easy-coding-standard.git",
-                "reference": "e34a105876b0640e70c584d75adaf9c0b03cf0f3"
+                "reference": "455c8430d3a53ceb950455d2d0779e6ed849c7ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/e34a105876b0640e70c584d75adaf9c0b03cf0f3",
-                "reference": "e34a105876b0640e70c584d75adaf9c0b03cf0f3",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/455c8430d3a53ceb950455d2d0779e6ed849c7ad",
+                "reference": "455c8430d3a53ceb950455d2d0779e6ed849c7ad",
                 "shasum": ""
             },
             "require": {
@@ -9786,7 +9786,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "9.5-dev"
+                    "dev-main": "10.3-dev"
                 }
             },
             "autoload": {
@@ -9800,7 +9800,7 @@
             ],
             "description": "Prefixed scoped version of ECS package",
             "support": {
-                "source": "https://github.com/symplify/easy-coding-standard/tree/10.2.7"
+                "source": "https://github.com/symplify/easy-coding-standard/tree/10.2.8"
             },
             "funding": [
                 {
@@ -9812,7 +9812,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-21T11:14:40+00:00"
+            "time": "2022-06-01T10:14:09+00:00"
         },
         {
             "name": "yiisoft/yii2-shell",
