@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.224.2",
+            "version": "3.224.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a2e6461261a92570128e6c2b6fb1896f3d16b424"
+                "reference": "52f45dfe0d1e5a77f33c050bde5134901fc54a57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a2e6461261a92570128e6c2b6fb1896f3d16b424",
-                "reference": "a2e6461261a92570128e6c2b6fb1896f3d16b424",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/52f45dfe0d1e5a77f33c050bde5134901fc54a57",
+                "reference": "52f45dfe0d1e5a77f33c050bde5134901fc54a57",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.224.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.224.3"
             },
-            "time": "2022-06-01T18:17:06+00:00"
+            "time": "2022-06-02T18:22:57+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -2733,7 +2733,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.15.0",
+            "version": "v9.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2788,7 +2788,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.15.0",
+            "version": "v9.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2834,7 +2834,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.15.0",
+            "version": "v9.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2882,7 +2882,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.15.0",
+            "version": "v9.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -9627,16 +9627,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.7.8",
+            "version": "1.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "2bf3d43015d56abac4d002a4d2d6c3a7d6fa627a"
+                "reference": "22e7559489776846e7c9d92ca43e8d1e53d18b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2bf3d43015d56abac4d002a4d2d6c3a7d6fa627a",
-                "reference": "2bf3d43015d56abac4d002a4d2d6c3a7d6fa627a",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/22e7559489776846e7c9d92ca43e8d1e53d18b94",
+                "reference": "22e7559489776846e7c9d92ca43e8d1e53d18b94",
                 "shasum": ""
             },
             "require": {
@@ -9662,7 +9662,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.7.8"
+                "source": "https://github.com/phpstan/phpstan/tree/1.7.9"
             },
             "funding": [
                 {
@@ -9682,7 +9682,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-01T13:43:17+00:00"
+            "time": "2022-06-02T13:27:46+00:00"
         },
         {
             "name": "psy/psysh",
