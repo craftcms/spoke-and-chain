@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3756b9b1bdb56f6f19c60ea723e5fbfc",
+    "content-hash": "a4e0019058e9be8ad140c40a8ffc2314",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.227.1",
+            "version": "3.228.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "dd3271b171cd83dfcfa3cfc390057114d8f010b1"
+                "reference": "4ff51d01da43aa3bd36eef921a9cd4e0ff843fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/dd3271b171cd83dfcfa3cfc390057114d8f010b1",
-                "reference": "dd3271b171cd83dfcfa3cfc390057114d8f010b1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4ff51d01da43aa3bd36eef921a9cd4e0ff843fab",
+                "reference": "4ff51d01da43aa3bd36eef921a9cd4e0ff843fab",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.227.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.228.0"
             },
-            "time": "2022-06-20T18:14:17+00:00"
+            "time": "2022-06-21T18:13:25+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -946,16 +946,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.4",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "623f8899b25aa957be7ec1f59cad7a11e0599499"
+                "reference": "b5ff4896c15695331aaf0a3cf763b31e63903936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/623f8899b25aa957be7ec1f59cad7a11e0599499",
-                "reference": "623f8899b25aa957be7ec1f59cad7a11e0599499",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/b5ff4896c15695331aaf0a3cf763b31e63903936",
+                "reference": "b5ff4896c15695331aaf0a3cf763b31e63903936",
                 "shasum": ""
             },
             "require": {
@@ -1060,7 +1060,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-06-03T19:10:26+00:00"
+            "time": "2022-06-21T18:36:28+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -2733,16 +2733,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.17.0",
+            "version": "v9.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "5aac36506247e4f0e50afe815ba711c16e65bcef"
+                "reference": "239c9274b8008fb9532ada0899365d1e182f8f9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/5aac36506247e4f0e50afe815ba711c16e65bcef",
-                "reference": "5aac36506247e4f0e50afe815ba711c16e65bcef",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/239c9274b8008fb9532ada0899365d1e182f8f9d",
+                "reference": "239c9274b8008fb9532ada0899365d1e182f8f9d",
                 "shasum": ""
             },
             "require": {
@@ -2784,11 +2784,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-05-30T13:16:45+00:00"
+            "time": "2022-06-19T21:41:21+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.17.0",
+            "version": "v9.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2834,16 +2834,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.17.0",
+            "version": "v9.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "e354ef98f3c59e5c8b5ba87299999220270f3da5"
+                "reference": "e014cf88ef46065b8b1f078893c01189b95ffb11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/e354ef98f3c59e5c8b5ba87299999220270f3da5",
-                "reference": "e354ef98f3c59e5c8b5ba87299999220270f3da5",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/e014cf88ef46065b8b1f078893c01189b95ffb11",
+                "reference": "e014cf88ef46065b8b1f078893c01189b95ffb11",
                 "shasum": ""
             },
             "require": {
@@ -2878,11 +2878,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-04-28T13:05:07+00:00"
+            "time": "2022-06-07T19:28:00+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.17.0",
+            "version": "v9.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -3906,11 +3906,17 @@
         },
         {
             "name": "oberon/starfield",
-            "version": "dev-craft-4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mattstein/craft-starfield.git",
-                "reference": "c8532686e5282ae5e7c9a799a39fb5f9df334892"
+                "url": "https://github.com/oberonamsterdam/craft-starfield.git",
+                "reference": "e4869031f1d35dbc44b08dbf1760a17a27dc2637"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oberonamsterdam/craft-starfield/zipball/e4869031f1d35dbc44b08dbf1760a17a27dc2637",
+                "reference": "e4869031f1d35dbc44b08dbf1760a17a27dc2637",
+                "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0.0-alpha.1",
@@ -3930,6 +3936,7 @@
                     "oberon\\starfield\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3949,12 +3956,12 @@
                 "yii2"
             ],
             "support": {
+                "docs": "https://github.com/oberonamsterdam/craft-starfield",
                 "email": "contact@oberon.nl",
                 "issues": "https://github.com/oberonamsterdam/craft-starfield/issues?state=open",
-                "source": "https://github.com/oberonamsterdam/craft-starfield",
-                "docs": "https://github.com/oberonamsterdam/craft-starfield"
+                "source": "https://github.com/oberonamsterdam/craft-starfield"
             },
-            "time": "2022-03-09T20:36:54+00:00"
+            "time": "2022-06-21T10:00:39+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -9883,7 +9890,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "oberon/starfield": 20,
         "craftcms/ecs": 20,
         "craftcms/phpstan": 20
     },
