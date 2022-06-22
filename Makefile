@@ -29,4 +29,4 @@ clean:
 test:
 	${EXEC} curl -IX GET --fail http://localhost:8080/actions/app/health-check
 	${EXEC} curl -IX GET --fail http://localhost:8080/
-update_and_reseed: init restore clean update seed backup
+update_and_reseed: init restore update clean seed backup

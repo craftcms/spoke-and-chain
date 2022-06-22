@@ -2,8 +2,8 @@ name: Update dependencies and reseed
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: "0 */12 * * *"
+  schedule:
+    - cron: "0 */12 * * *"
 
 jobs:
   update_and_reseed:

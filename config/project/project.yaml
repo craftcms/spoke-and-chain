@@ -1,4 +1,4 @@
-dateModified: 1651680926
+dateModified: 1651719338
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -205,7 +205,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: 5MSLVVCLNO91XX5P8MBVKF1N
-    schemaVersion: 3.6.2
+    schemaVersion: 4.1.0
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: ''
@@ -229,7 +229,6 @@ plugins:
       digestRecipients: ''
       displayFeed: ''
       emailTemplateDirectory: null
-      emailTemplateStorage: db
       exportLabels: ''
       fieldDisplayOrder: name
       fillWithGet: false
@@ -238,7 +237,7 @@ plugins:
       formSubmitDisable: false
       formSubmitExpiration: null
       formTemplateDirectory: null
-      formattingTemplate: flexbox.html
+      formattingTemplate: flexbox.twig
       freeformHoneypot: true
       freeformHoneypotEnhancement: false
       hideBannerDemo: '1'

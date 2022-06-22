@@ -22,16 +22,16 @@
     "craftcms/aws-s3": "^2.0.0",
     "craftcms/cms": "dev-develop as 4.0.0",
     "craftcms/commerce": "dev-develop as 4.0.0",
-    "craftcms/redactor": "^3.0.0-beta",
+    "craftcms/redactor": "^3.0.0",
     "craftcms/store-hours": "^3.0.0",
     "fakerphp/faker": "^1.9",
     "mead-steve/mono-snag": "^4.1",
     "nystudio107/craft-seomatic": "^4.0.0-beta.8",
     "nystudio107/craft-twigpack": "^4.0.0-beta.2",
-    "oberon/starfield": "dev-craft-4",
+    "oberon/starfield": "^2.0.0",
     "craftcms/yii2-dynamodb": "^2.0.0",
     "putyourlightson/craft-sprig": "^2.0.0-beta.1",
-    "solspace/craft-freeform": "dev-craft4 as 3.11.9",
+    "solspace/craft-freeform": "4.0.0-beta.5",
     "verbb/default-dashboard": "^2.0.0-beta.1",
     "vlucas/phpdotenv": "^3.4.0"
   },
@@ -47,16 +47,6 @@
       "sprig\\components\\": "sprig/components/"
     }
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/mattstein/craft-starfield.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/brandonkelly/craft3-freeform"
-    }
-  ],
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
