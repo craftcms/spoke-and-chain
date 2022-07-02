@@ -8210,22 +8210,22 @@
         },
         {
             "name": "verbb/default-dashboard",
-            "version": "2.0.0-beta.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/default-dashboard.git",
-                "reference": "aa4f8d352b204e7f569f047d6a1905626749e0ee"
+                "reference": "a189e1b5b80f5d2289b2787372279e6e49ba70b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/aa4f8d352b204e7f569f047d6a1905626749e0ee",
-                "reference": "aa4f8d352b204e7f569f047d6a1905626749e0ee",
+                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/a189e1b5b80f5d2289b2787372279e6e49ba70b4",
+                "reference": "a189e1b5b80f5d2289b2787372279e6e49ba70b4",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0-beta.1",
+                "craftcms/cms": "^4.0.0",
                 "php": "^8.0.2",
-                "verbb/base": "^2.0.0-beta"
+                "verbb/base": "^2.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -8269,7 +8269,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-09T21:22:35+00:00"
+            "time": "2022-07-02T01:26:02+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
