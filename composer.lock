@@ -8433,16 +8433,16 @@
         },
         {
             "name": "voku/arrayy",
-            "version": "7.9.2",
+            "version": "7.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "a3ddfcae4955670840b1534c7ead2cda908111a0"
+                "reference": "41318bd1483a10f133c8214479b3580a3e936a86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/a3ddfcae4955670840b1534c7ead2cda908111a0",
-                "reference": "a3ddfcae4955670840b1534c7ead2cda908111a0",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/41318bd1483a10f133c8214479b3580a3e936a86",
+                "reference": "41318bd1483a10f133c8214479b3580a3e936a86",
                 "shasum": ""
             },
             "require": {
@@ -8512,7 +8512,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-05T09:42:30+00:00"
+            "time": "2022-07-06T00:50:30+00:00"
         },
         {
             "name": "voku/email-check",
