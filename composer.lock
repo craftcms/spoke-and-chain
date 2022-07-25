@@ -3934,16 +3934,16 @@
         },
         {
             "name": "nystudio107/craft-twigfield",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-twigfield.git",
-                "reference": "061017659daa631536c8da740965c5d9c1ea5233"
+                "reference": "1b920b9fa491256755975c9dd8e3a9a160546494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/061017659daa631536c8da740965c5d9c1ea5233",
-                "reference": "061017659daa631536c8da740965c5d9c1ea5233",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/1b920b9fa491256755975c9dd8e3a9a160546494",
+                "reference": "1b920b9fa491256755975c9dd8e3a9a160546494",
                 "shasum": ""
             },
             "require": {
@@ -3990,7 +3990,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-07-23T20:19:47+00:00"
+            "time": "2022-07-24T18:06:56+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
