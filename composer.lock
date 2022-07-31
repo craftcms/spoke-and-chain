@@ -4471,29 +4471,33 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.8.1",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "eab7a0df01fe2344d172bff4cd6dbd3f8b84ad15"
+                "reference": "dc5ff11e274a90cc1c743f66c9ad700ce50db9ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/eab7a0df01fe2344d172bff4cd6dbd3f8b84ad15",
-                "reference": "eab7a0df01fe2344d172bff4cd6dbd3f8b84ad15",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/dc5ff11e274a90cc1c743f66c9ad700ce50db9ab",
+                "reference": "dc5ff11e274a90cc1c743f66c9ad700ce50db9ab",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0 || ^8.0"
+                "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
-                "phpunit/phpunit": "^6.5.14 || ^7.5.20 || ^8.5.19 || ^9.5.8"
+                "bamarni/composer-bin-plugin": "^1.8",
+                "phpunit/phpunit": "^8.5.28 || ^9.5.21"
             },
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": true
+                },
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -4526,7 +4530,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.8.1"
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.0"
             },
             "funding": [
                 {
@@ -4538,7 +4542,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-04T23:24:31+00:00"
+            "time": "2022-07-30T15:51:26+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
