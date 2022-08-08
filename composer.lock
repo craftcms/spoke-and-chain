@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4eb42b1ecede05ee6f2ccc131688638a",
+    "content-hash": "79cbaa099792c4d0ae950814eefe2520",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1029,7 +1029,6 @@
                 "ext-iconv": "Adds support for more character encodings than PHP’s built-in mb_convert_encoding() function, which Craft will take advantage of when converting strings to UTF-8.",
                 "ext-imagick": "Adds support for more image processing formats and options."
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1098,7 +1097,6 @@
                 "craftcms/redactor": "*",
                 "vlucas/phpdotenv": "^3.4"
             },
-            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "handle": "commerce",
@@ -10042,24 +10040,9 @@
             "time": "2020-05-02T11:43:24+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "craftcms/cms",
-            "version": "dev-develop",
-            "alias": "4.0.0",
-            "alias_normalized": "4.0.0.0"
-        },
-        {
-            "package": "craftcms/commerce",
-            "version": "dev-develop",
-            "alias": "4.0.0",
-            "alias_normalized": "4.0.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "craftcms/cms": 20,
-        "craftcms/commerce": 20,
         "craftcms/ecs": 20,
         "craftcms/phpstan": 20
     },
@@ -10072,5 +10055,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
