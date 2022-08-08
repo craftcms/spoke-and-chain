@@ -293,7 +293,7 @@ class SeedController extends Controller
 
     private function deleteElements(ElementQuery $query, string $label = 'elements'): void
     {
-        $count = $query ->count();
+        $count = $query->count();
         $errorCount = 0;
         $this->stdout("Deleting $label ..." . PHP_EOL);
 

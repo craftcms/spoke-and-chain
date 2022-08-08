@@ -25,7 +25,7 @@ class Reviews extends BaseObject
     /**
      * @var string
      */
-    const CACHE_KEY = 'reviews:averageRatings';
+    public const CACHE_KEY = 'reviews:averageRatings';
 
     /**
      * Get the average review rating by the product ID.
@@ -69,7 +69,6 @@ class Reviews extends BaseObject
 
         $reviewsByProductId = [];
         foreach ($reviews as $review) {
-            /** @phpstan-ignore-next-line */
             $product = $review->product[0] ?? null;
             if (!$product) {
                 continue;
