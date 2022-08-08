@@ -13,26 +13,25 @@ sizes.forEach((size) => {
             // Add a product to the cart
             cy.visit('/product/san-quentin-24')
 
-            cy.get('#buy input[type=submit]')
-                .click();
+            cy.get('#buy button[type=submit]')
+                .click({scrollBehavior: 'center'});
 
             // Navigate to the cart
             cy.get('button.cart-toggle')
                 .click();
 
-            cy.get('div.cart-menu a')
-                .contains('Cart')
+            cy.get('div.cart-menu a.button.submit')
+                .contains('Check Out')
                 .click();
 
             // Checkout as guest
-            cy.get('a.button.submit')
-                .contains('Checkout')
-                .click();
+            cy.get('#guest-checkout button[type=submit]')
+                .contains('Continue as Guest');
 
-            cy.get('form#guest-checkout input[type=text]')
+            cy.get('#guest-checkout input[type=text]')
                 .type(this.user.email);
 
-            cy.get('form#guest-checkout input[type=submit]')
+            cy.get('#guest-checkout button[type=submit]')
                 .click();
 
             // Shipping address
@@ -40,33 +39,36 @@ sizes.forEach((size) => {
                 .type(this.user.address.firstName);
             cy.get('form#checkout-address input[name="shippingAddress[lastName]"]')
                 .type(this.user.address.lastName);
-            cy.get('form#checkout-address input[name="shippingAddress[address1]"]')
-                .type(this.user.address.address1);
-            cy.get('form#checkout-address input[name="shippingAddress[city]"]')
-                .type(this.user.address.city);
-            cy.get('form#checkout-address input[name="shippingAddress[zipCode]"]')
-                .type(this.user.address.zipCode);
-            cy.get('form#checkout-address select[name="shippingAddress[countryId]"]')
-                .select(this.user.address.countryId);
-            cy.get('form#checkout-address input[type=submit]')
+            cy.get('form#checkout-address input[name="shippingAddress[addressLine1]"]')
+                .type(this.user.address.addressLine1);
+            cy.get('form#checkout-address input[name="shippingAddress[locality]"]')
+                .type(this.user.address.locality);
+            cy.get('form#checkout-address input[name="shippingAddress[postalCode]"]')
+                .type(this.user.address.postalCode);
+            cy.get('form#checkout-address select[name="shippingAddress[countryCode]"]')
+                .select(this.user.address.countryCode);
+            cy.get('form#checkout-address button[type=submit]')
                 .click();
 
             // Use the default shipping method
-            cy.get('form#checkout-shipping-method input[type=submit]')
+            cy.get('form#checkout-shipping-method input[type=radio][value="freeShipping"]')
+                .click();
+
+            cy.get('form#checkout-shipping-method button[type=submit]')
                 .click();
 
             // Fill credit card details and pay
-            cy.get('form#checkout-payment input[name="firstName"]')
+            cy.get('form#checkout-payment input[name="paymentForm[dummy][firstName]"]')
                 .type(this.user.card.firstName);
-            cy.get('form#checkout-payment input[name="lastName"]')
+            cy.get('form#checkout-payment input[name="paymentForm[dummy][lastName]"]')
                 .type(this.user.card.lastName);
-            cy.get('form#checkout-payment input[name="number"]')
+            cy.get('form#checkout-payment input[name="paymentForm[dummy][number]"]')
                 .type(this.user.card.number);
-            cy.get('form#checkout-payment input[name="expiry"]')
+            cy.get('form#checkout-payment input[name="paymentForm[dummy][expiry]"]')
                 .type(this.user.card.expiry);
-            cy.get('form#checkout-payment input[name="cvv"]')
+            cy.get('form#checkout-payment input[name="paymentForm[dummy][cvv]"]')
                 .type(this.user.card.cvv);
-            cy.get('form#checkout-payment input[type=submit]')
+            cy.get('form#checkout-payment button[type=submit]')
                 .click();
 
             // Success

@@ -49,7 +49,7 @@ sizes.forEach((size) => {
                 .type('15OFF')
 
             // Apply the coupon
-            cy.get('form#cart input[type=submit].coupon-apply')
+            cy.get('form#cart button[type=submit].coupon-apply')
                 .click()
 
             // Check that the cart contains a discount row

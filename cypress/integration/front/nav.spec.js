@@ -10,28 +10,28 @@ describe('Navigation', () => {
         it(`should not be visible on ${size} screen`, function () {
             cy.setViewportSize(size)
 
-            cy.get('#nav').should('not.be.visible')
+            cy.get('nav.main').should('not.be.visible')
         })
         it(`should show open toggle and hide close toggle when nav is closed on ${size} screen`, function () {
             cy.setViewportSize(size)
 
-            cy.get('#main-nav .toggle-open').should('be.visible')
-            cy.get('#main-nav .toggle-close').should('not.be.visible')
+            cy.get('.toggle-nav .toggle-open').should('be.visible')
+            cy.get('.toggle-nav .toggle-close').should('not.be.visible')
         })
         it(`should hide open toggle and show close toggle when nav is open on ${size} screen`, function () {
             cy.setViewportSize(size)
 
-            cy.get('#main-nav .toggle-nav').click()
+            cy.get('.toggle-nav').click()
 
-            cy.get('#main-nav .toggle-open').should('not.be.visible')
-            cy.get('#main-nav .toggle-close').should('be.visible')
+            cy.get('.toggle-open').should('not.be.visible')
+            cy.get('.toggle-close').should('be.visible')
         })
     })
     bigScreenSizes.forEach((size) => {
         it(`should be visible on ${size} screen`, function () {
             cy.setViewportSize(size)
 
-            cy.get('#nav').should('be.visible')
+            cy.get('nav.main').should('be.visible')
         })
     })
 })

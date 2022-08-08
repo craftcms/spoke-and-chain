@@ -9,8 +9,8 @@ sizes.forEach((size) => {
         it(`should show an “All bikes” button`, function () {
             cy.visit('/')
 
-            cy.get('a.button')
-                .contains('Browse all bikes')
+            cy.get('.aspect-ratio-hero-home a.button')
+                .contains("Let's Ride!")
         })
 
         it(`should show bike categories`, function () {
