@@ -1,6 +1,6 @@
 <h1 align="center">Spoke & Chain Craft Commerce Demo</h1>
 
-![Spoke & Chain homepage](https://raw.githubusercontent.com/craftcms/spoke-and-chain/main/web/assets/guide/homepage.png)
+![Spoke & Chain homepage](https://raw.githubusercontent.com/craftcms/spoke-and-chain/stable/web/assets/guide/homepage.png)
 
 ## Overview
 

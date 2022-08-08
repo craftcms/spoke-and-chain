@@ -20,8 +20,8 @@
   "require": {
     "php": ">=8.0.2",
     "craftcms/aws-s3": "^2.0.0",
-    "craftcms/cms": "^4.0.0",
-    "craftcms/commerce": "^4.0.0",
+    "craftcms/cms": "dev-develop as 4.0.0",
+    "craftcms/commerce": "dev-develop as 4.0.0",
     "craftcms/redactor": "^3.0.0",
     "craftcms/store-hours": "^3.0.0",
     "fakerphp/faker": "^1.9",
