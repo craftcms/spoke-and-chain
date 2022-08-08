@@ -11,13 +11,22 @@ sizes.forEach((size) => {
         it(`should show search results`, function() {
             cy.visit('/')
 
-            cy.get('#header button.search-toggle')
-                .click()
+            let $input, $form
 
-            cy.get('input#search-input')
-                .type(searchQuery)
+            if (size === 'iphone-6' || (Array.isArray(size) && size[0] < 1024)) {
+                cy.get('#header button.toggle-nav')
+                    .click()
+                $input = cy.get('.search-form input#search-input')
+                $form = cy.get('form.search-form')
+            } else {
+                cy.get('#header button.search-toggle')
+                    .click()
+                $input = cy.get('#search-form input#search-input')
+                $form = cy.get('form#search-form');
+            }
 
-            cy.get('form#search-form').submit()
+            $input.type(searchQuery)
+            $form.submit()
 
             cy.get('h1').contains(`Search results for “${searchQuery}”`)
 
