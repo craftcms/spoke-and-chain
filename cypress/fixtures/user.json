@@ -5,10 +5,10 @@
   "address": {
     "firstName": "Ben",
     "lastName": "David",
-    "address1": "13 rue des Papillons",
-    "city": "Grenoble",
-    "zipCode": "38000",
-    "countryId": "76"
+    "addressLine1": "13 rue des Papillons",
+    "locality": "Grenoble",
+    "postalCode": "38000",
+    "countryCode": "FR"
   },
   "card": {
     "firstName": "Ben",

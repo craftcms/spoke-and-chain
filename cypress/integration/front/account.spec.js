@@ -42,7 +42,7 @@ sizes.forEach((size) => {
                 .click()
 
             cy.get('#header .cart-menu a')
-                .contains('Settings')
+                .contains('Account')
                 .click()
 
             cy.get('h1')

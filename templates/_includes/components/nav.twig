@@ -1,5 +1,6 @@
 <!-- Template: {{ _self }}.twig -->
 {# Variables #}
+{% set class = class is defined ? class : '' %}
 {% set currentEntryId = currentEntryId is not defined ? false : currentEntryId %}
 {% set isBikeCategory = isBikeCategory is not defined ? false : isBikeCategory %}
 {% set navItems = [] %}
@@ -38,7 +39,7 @@
 
 {# Output #}
 {% if navItems|length %}
-  <nav>
+  <nav {% if class %}class="{{ class }}"{% endif %}>
     <ul class="list-none p-0 flex flex-col lg:flex-row justify-center">
       {% for item in navItems %}
         <li class="border-b border-gray-200 lg:border-b-0{% if item.selected %} bg-gray-200 rounded{% endif %}">

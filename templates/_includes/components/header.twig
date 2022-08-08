@@ -30,11 +30,11 @@
         aria-expanded="false"
       >
         <!-- open -->
-        <svg class="toggle-open block h-6 w-6" 
-          :class="{'hidden': showNav}" 
-          xmlns="http://www.w3.org/2000/svg" 
-          fill="none" 
-          viewBox="0 0 24 24" 
+        <svg class="toggle-open block h-6 w-6"
+          :class="{'hidden': showNav}"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -67,13 +67,14 @@
       <!-- desktop nav -->
       {% if showNav %}
         {% include '_includes/components/nav' with {
+          class: 'main',
           currentEntryId: entry is defined ? entry.id : false,
           isBikeCategory: category is defined and category.group.handle == 'bikeTypes' ? true : false,
         } only %}
       {% endif %}
 
       <!-- desktop search -->
-      <div x-show.transition.opacity.duration.300ms="showSearch" 
+      <div x-show.transition.opacity.duration.300ms="showSearch"
         class="py-0 pl-4 pr-12 h-full flex items-center bg-white"
         :class="{
           'absolute z-20 top-0 left-0 right-0': true,
@@ -162,9 +163,9 @@
               </div>
 
               <input id="search-input"
-                name="q" 
-                type="search" 
-                class="full-w pl-10 mr-0 transition-spacing duration-500" 
+                name="q"
+                type="search"
+                class="full-w pl-10 mr-0 transition-spacing duration-500"
                 :class="{ '-mr-20': !searchFocused }"
                 x-on:focus="onSearchFocus"
                 x-on:blur="onSearchBlur"
@@ -200,6 +201,7 @@
             >
               <div class="px-4 py-1">
                 {% include '_includes/components/nav' with {
+                  class: 'small',
                   currentEntryId: entry is defined ? entry.id : false,
                   isBikeCategory: category is defined and category.group.handle == 'bikeTypes' ? true : false,
                 } only %}
