@@ -1,6 +1,6 @@
 <h1 align="center">Spoke & Chain Craft Commerce Demo</h1>
 
-![Spoke & Chain homepage](https://raw.githubusercontent.com/craftcms/spoke-and-chain/stable/web/assets/guide/homepage.png)
+![Spoke & Chain homepage](https://github.com/craftcms/spoke-and-chain/raw/stable/web/assets/volumes/images/Logos/logo.png)
 
 ## Overview
 
@@ -19,10 +19,10 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 
 ### Development Technologies
 
-- [Craft CMS 3](https://craftcms.com/docs/3.x/)
-- [Craft Commerce 3](https://craftcms.com/docs/commerce/3.x/)
+- [Craft CMS 4](https://craftcms.com/docs/4.x/)
+- [Craft Commerce 4](https://craftcms.com/docs/commerce/4.x/)
 - PostgreSQL (11.5+) / MySQL (5.7+)
-- PHP (7.2.5+), built on the [Yii 2 framework](https://www.yiiframework.com/)
+- PHP (8.0.2+), built on the [Yii 2 framework](https://www.yiiframework.com/)
 - Native Twig templates with reactive [Sprig](https://plugins.craftcms.com/sprig) components
 - [Node](https://nodejs.org/en/) (12+) / [npm](https://www.npmjs.com/) (6+), managing and building front end resources
 
@@ -37,37 +37,33 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 
 ### Environment
 
-If you’d like to get Spoke & Chain running in a local environment, we recommend using [Craft Nitro](https://getnitro.sh):
+If you’d like to get Spoke & Chain running in a local environment, we recommend using [DDEV](https://ddev.com):
 
-1. Follow Nitro’s [installation instructions](https://craftcms.com/docs/nitro/2.x/installation.html) for your OS.
-2. Make sure you’ve used `nitro db new` to create a MySQL 8 or MariaDB 10 database engine.
-3. Run `nitro create` with the URL to this repository:
+1. Clone the Spoke & Chain repository to your system.
     ```zsh
-    nitro create craftcms/spoke-and-chain spokeandchain
+    git clone git@github.com:craftcms/spoke-and-chain.git spokeandchain && cd spokeandchain
     ```
-    - hostname: `spokeandchain.nitro`
-    - web root: `web`
-    - PHP version: `8.0`
-    - database? `Y`
-    - database engine: `mysql-8.0-*.database.nitro` (or `mariadb-latest-*.database.nitro`)
-    - database name: `spokeandchain`
-    - update env file? `Y`
-4. Restore the initial database
+1. Follow Craft related DDEV [installation instructions](https://craftcms.com/knowledge-base/migrating-from-craft-nitro-to-ddev).
+1. Make sure you’ve used `ddev config` to create your environment.
+1. Copy and update your `.env` file:
+    ```zsh
+    cp .env.example .env
+    ```
+1. Restore the initial database
    ```zsh
-   nitro craft db/restore seed.sql
+   ddev exec php craft db/restory seed.sql
    ```
-5. Optionally seed demo data:
+1. Optionally seed demo data:
    ```zsh
-   nitro craft demos/seed
+   ddev exec php craft demos/seed
    ```
    > ⚠️ The Craft site is offline by default, and the seeder turns it on when it’s finished. If you skip this step, you’ll need to manually bring the site online by navigating to **Settings** → **General Settings** and switching **System Status** to “Online”.
-6. Move to the project directory and add a Craft account for yourself by following the prompts:
+1. Add a Craft account for yourself by following the prompts:
     ```zsh
-    cd spokeandchain
-    nitro craft users/create --admin
+    ddev exec php craft users/create --admin
     ```
 
-> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/3.x/installation.html).
+> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/4.x/installation.html).
 
 ### Front End
 
