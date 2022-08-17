@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.233.2",
+            "version": "3.233.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c804eb974240ae04b4ae5381f45003f25bbed56c"
+                "reference": "0b9277a5c3d2fbccafc16b05a1b53404c9b67d1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c804eb974240ae04b4ae5381f45003f25bbed56c",
-                "reference": "c804eb974240ae04b4ae5381f45003f25bbed56c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0b9277a5c3d2fbccafc16b05a1b53404c9b67d1b",
+                "reference": "0b9277a5c3d2fbccafc16b05a1b53404c9b67d1b",
                 "shasum": ""
             },
             "require": {
@@ -144,9 +144,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.233.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.233.3"
             },
-            "time": "2022-08-15T18:16:30+00:00"
+            "time": "2022-08-16T18:14:59+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -2735,7 +2735,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.24.0",
+            "version": "v9.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2790,7 +2790,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.24.0",
+            "version": "v9.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2836,7 +2836,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.24.0",
+            "version": "v9.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2884,7 +2884,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.24.0",
+            "version": "v9.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
