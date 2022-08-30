@@ -6,6 +6,9 @@ on:
     branches: [ stable, beta, dev ]
   pull_request:
     branches: [ stable, beta, dev ]
+    
+permissions:
+  contents: read
 
 jobs:
   build:
