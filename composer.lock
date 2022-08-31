@@ -5472,16 +5472,16 @@
         },
         {
             "name": "seld/phar-utils",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/phar-utils.git",
-                "reference": "9f3452c93ff423469c0d56450431562ca423dcee"
+                "reference": "ea2f4014f163c1be4c601b9b7bd6af81ba8d701c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/9f3452c93ff423469c0d56450431562ca423dcee",
-                "reference": "9f3452c93ff423469c0d56450431562ca423dcee",
+                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/ea2f4014f163c1be4c601b9b7bd6af81ba8d701c",
+                "reference": "ea2f4014f163c1be4c601b9b7bd6af81ba8d701c",
                 "shasum": ""
             },
             "require": {
@@ -5514,9 +5514,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/phar-utils/issues",
-                "source": "https://github.com/Seldaek/phar-utils/tree/1.2.0"
+                "source": "https://github.com/Seldaek/phar-utils/tree/1.2.1"
             },
-            "time": "2021-12-10T11:20:11+00:00"
+            "time": "2022-08-31T10:31:18+00:00"
         },
         {
             "name": "setasign/fpdi",
@@ -8806,16 +8806,16 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "6.0.5",
+            "version": "6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "6c764c2c4fcad451a0f6622260a4934cfea08aa4"
+                "reference": "51f9b0837c8428ed1413ff84d103b2c4700f2e26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/6c764c2c4fcad451a0f6622260a4934cfea08aa4",
-                "reference": "6c764c2c4fcad451a0f6622260a4934cfea08aa4",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/51f9b0837c8428ed1413ff84d103b2c4700f2e26",
+                "reference": "51f9b0837c8428ed1413ff84d103b2c4700f2e26",
                 "shasum": ""
             },
             "require": {
@@ -8828,7 +8828,11 @@
                 "voku/portable-ascii": "~2.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0"
+                "phpstan/phpstan": "1.8.*@dev",
+                "phpstan/phpstan-strict-rules": "1.4.*@dev",
+                "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0",
+                "thecodingmachine/phpstan-strict-rules": "1.0.*@dev",
+                "voku/phpstan-rules": "3.1.*@dev"
             },
             "suggest": {
                 "ext-ctype": "Use Ctype for e.g. hexadecimal digit detection",
@@ -8877,7 +8881,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-utf8/issues",
-                "source": "https://github.com/voku/portable-utf8/tree/6.0.5"
+                "source": "https://github.com/voku/portable-utf8/tree/6.0.6"
             },
             "funding": [
                 {
@@ -8901,7 +8905,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-10T12:32:31+00:00"
+            "time": "2022-08-31T07:42:29+00:00"
         },
         {
             "name": "voku/stop-words",
