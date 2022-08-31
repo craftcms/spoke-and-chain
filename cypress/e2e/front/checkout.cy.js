@@ -14,7 +14,7 @@ sizes.forEach((size) => {
             cy.visit('/product/san-quentin-24')
 
             cy.get('#buy button[type=submit]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             // Navigate to the cart
             cy.get('button.cart-toggle')
