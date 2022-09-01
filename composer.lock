@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.234.6",
+            "version": "3.234.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c0ae9fbc8295678502a8fde6a2ecc49f2bd39580"
+                "reference": "325931ead99e794657f88393c5b7cdf56723aadb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c0ae9fbc8295678502a8fde6a2ecc49f2bd39580",
-                "reference": "c0ae9fbc8295678502a8fde6a2ecc49f2bd39580",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/325931ead99e794657f88393c5b7cdf56723aadb",
+                "reference": "325931ead99e794657f88393c5b7cdf56723aadb",
                 "shasum": ""
             },
             "require": {
@@ -144,9 +144,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.234.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.234.7"
             },
-            "time": "2022-08-30T20:25:10+00:00"
+            "time": "2022-08-31T18:25:01+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -8806,16 +8806,16 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "6.0.6",
+            "version": "6.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "51f9b0837c8428ed1413ff84d103b2c4700f2e26"
+                "reference": "69b8cefe559ad041e0fe989d5e810c9af155a7d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/51f9b0837c8428ed1413ff84d103b2c4700f2e26",
-                "reference": "51f9b0837c8428ed1413ff84d103b2c4700f2e26",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/69b8cefe559ad041e0fe989d5e810c9af155a7d8",
+                "reference": "69b8cefe559ad041e0fe989d5e810c9af155a7d8",
                 "shasum": ""
             },
             "require": {
@@ -8881,7 +8881,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-utf8/issues",
-                "source": "https://github.com/voku/portable-utf8/tree/6.0.6"
+                "source": "https://github.com/voku/portable-utf8/tree/6.0.8"
             },
             "funding": [
                 {
@@ -8905,7 +8905,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-31T07:42:29+00:00"
+            "time": "2022-08-31T22:43:08+00:00"
         },
         {
             "name": "voku/stop-words",
