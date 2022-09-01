@@ -1065,16 +1065,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "00b072d103309bf47a502a936dbd191f0657b545"
+                "reference": "1756efc7a68c78f3ba3be53dfe122ed54eefbcbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/00b072d103309bf47a502a936dbd191f0657b545",
-                "reference": "00b072d103309bf47a502a936dbd191f0657b545",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/1756efc7a68c78f3ba3be53dfe122ed54eefbcbc",
+                "reference": "1756efc7a68c78f3ba3be53dfe122ed54eefbcbc",
                 "shasum": ""
             },
             "require": {
@@ -1131,7 +1131,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-07-19T17:31:30+00:00"
+            "time": "2022-09-01T08:42:13+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -8806,16 +8806,16 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "6.0.8",
+            "version": "6.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "69b8cefe559ad041e0fe989d5e810c9af155a7d8"
+                "reference": "eb2861c34203a9c2a7c275cba7014d6816604e89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/69b8cefe559ad041e0fe989d5e810c9af155a7d8",
-                "reference": "69b8cefe559ad041e0fe989d5e810c9af155a7d8",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/eb2861c34203a9c2a7c275cba7014d6816604e89",
+                "reference": "eb2861c34203a9c2a7c275cba7014d6816604e89",
                 "shasum": ""
             },
             "require": {
@@ -8881,7 +8881,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-utf8/issues",
-                "source": "https://github.com/voku/portable-utf8/tree/6.0.8"
+                "source": "https://github.com/voku/portable-utf8/tree/6.0.9"
             },
             "funding": [
                 {
@@ -8905,7 +8905,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-31T22:43:08+00:00"
+            "time": "2022-09-01T09:54:03+00:00"
         },
         {
             "name": "voku/stop-words",
