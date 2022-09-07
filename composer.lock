@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.235.1",
+            "version": "3.235.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2025db05c7dd22ae414857dadd49207f64c2fc74"
+                "reference": "9776dc3235bf7c0fce59d5c70e3ade88d0d095d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2025db05c7dd22ae414857dadd49207f64c2fc74",
-                "reference": "2025db05c7dd22ae414857dadd49207f64c2fc74",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9776dc3235bf7c0fce59d5c70e3ade88d0d095d2",
+                "reference": "9776dc3235bf7c0fce59d5c70e3ade88d0d095d2",
                 "shasum": ""
             },
             "require": {
@@ -144,9 +144,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.235.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.235.2"
             },
-            "time": "2022-09-02T18:18:19+00:00"
+            "time": "2022-09-06T18:15:53+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -2787,7 +2787,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.27.0",
+            "version": "v9.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2842,7 +2842,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.27.0",
+            "version": "v9.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2888,7 +2888,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.27.0",
+            "version": "v9.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2936,7 +2936,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.27.0",
+            "version": "v9.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -8573,16 +8573,16 @@
         },
         {
             "name": "voku/arrayy",
-            "version": "7.9.3",
+            "version": "7.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "41318bd1483a10f133c8214479b3580a3e936a86"
+                "reference": "4a995937b91f15b95d9a170f803951069b2f0fa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/41318bd1483a10f133c8214479b3580a3e936a86",
-                "reference": "41318bd1483a10f133c8214479b3580a3e936a86",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/4a995937b91f15b95d9a170f803951069b2f0fa0",
+                "reference": "4a995937b91f15b95d9a170f803951069b2f0fa0",
                 "shasum": ""
             },
             "require": {
@@ -8652,7 +8652,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-06T00:50:30+00:00"
+            "time": "2022-09-06T20:07:10+00:00"
         },
         {
             "name": "voku/email-check",
