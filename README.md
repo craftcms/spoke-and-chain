@@ -121,20 +121,20 @@ Cypress tests cover multiple parts of the website:
 
 Set the environment variables Cypress needs to run by copying `cypress.example.json` to `cypress.json` and adjusting it:
 
-```
+```zsh
 cp cypress.example.json cypress.json
 ```
 
 Open the Cypress Test Runner from the project root:
 
-```
+```zsh
 npx cypress open
 ```
 
-Open accessibility tests only:
+Run accessibility tests only:
 
-```
-npx cypress open --config testFiles=./front/a11y/*.spec.js
+```zsh
+npx cypress run --spec "cypress/e2e/front/a11y/*.cy.js"
 ```
 
 ## License
