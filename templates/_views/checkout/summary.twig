@@ -66,7 +66,7 @@
                     {{- 'Billing Address'|t ~ ':' -}}
                   </h4>
 
-                  {% if cart.shippingAddressId == cart.billingAddressId %}
+                  {% if cart.hasMatchingAddresses() %}
                     <p>{{ 'Same as shipping.'|t }}</p>
                   {% elseif cart.billingAddress %}
                     {{ craft.app.addresses.formatAddress(cart.billingAddress)|raw }}

@@ -11,7 +11,7 @@
   {% if cart and (not cart.email or not cart.lineItems|length) %}
     {% redirect checkoutPage ? checkoutPage.uri : 'checkout' %}
   {% endif %}
-  {% set billingAddressSameAsShipping = (not cart.shippingAddressId and not cart.billingAddressId) or (cart.shippingAddressId and cart.billingAddressId and cart.shippingAddressId == cart.billingAddressId) %}
+  {% set billingAddressSameAsShipping = (not cart.shippingAddressId and not cart.billingAddressId) or (cart.shippingAddressId and cart.billingAddressId and cart.hasMatchingAddresses()) %}
   <!-- Template: {{ _self }}.twig -->
 
   {# Heading #}
@@ -57,7 +57,8 @@
                 <div>
                   {% include '_includes/components/address/fields' with {
                     modelName: 'shippingAddress',
-                    model: cart.shippingAddress
+                    model: cart.shippingAddress,
+                    errors: cart.shippingAddress and cart.shippingAddress.hasErrors ? cart.shippingAddress.getErrors() : [],
                   } %}
                 </div>
               {% endif %}
@@ -104,6 +105,7 @@
                       {% include '_includes/components/address/fields' with {
                         modelName: 'billingAddress',
                         model: cart.billingAddress,
+                        errors: cart.billingAddress and cart.billingAddress.hasErrors ? cart.billingAddress.getErrors() : [],
                         outputIdField: not (cart.billingAddress and cart.shippingAddress and cart.billingAddress.id == cart.shippingAddress.id)
                       } %}
                     </div>
