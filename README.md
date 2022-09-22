@@ -122,7 +122,7 @@ Cypress tests cover multiple parts of the website:
 Set the environment variables Cypress needs to run by copying `cypress.example.json` to `cypress.json` and adjusting it:
 
 ```zsh
-cp cypress.example.json cypress.json
+cp cypress.config.example.js cypress.config.js
 ```
 
 Open the Cypress Test Runner from the project root:
