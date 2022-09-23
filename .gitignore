@@ -13,4 +13,4 @@
 !.elasticbeanstalk/*.global.yml
 
 # Cypress
-/cypress.json
+/cypress.config.js
