@@ -5081,16 +5081,16 @@
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "b280f343bbd227b08cd090c95aa08c125f64a4d7"
+                "reference": "9dfc817fb7637915b761187f8702fc271e91d0f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/b280f343bbd227b08cd090c95aa08c125f64a4d7",
-                "reference": "b280f343bbd227b08cd090c95aa08c125f64a4d7",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/9dfc817fb7637915b761187f8702fc271e91d0f1",
+                "reference": "9dfc817fb7637915b761187f8702fc271e91d0f1",
                 "shasum": ""
             },
             "require": {
@@ -5119,7 +5119,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2022-06-30T14:48:02+00:00"
+            "time": "2022-09-25T18:43:25+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
