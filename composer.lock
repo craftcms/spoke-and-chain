@@ -4053,16 +4053,16 @@
         },
         {
             "name": "nystudio107/craft-twigfield",
-            "version": "1.0.11",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-twigfield.git",
-                "reference": "1b920b9fa491256755975c9dd8e3a9a160546494"
+                "reference": "532872715b5b6342f65a2442d6517eae32e32390"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/1b920b9fa491256755975c9dd8e3a9a160546494",
-                "reference": "1b920b9fa491256755975c9dd8e3a9a160546494",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/532872715b5b6342f65a2442d6517eae32e32390",
+                "reference": "532872715b5b6342f65a2442d6517eae32e32390",
                 "shasum": ""
             },
             "require": {
@@ -4109,7 +4109,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-07-24T18:06:56+00:00"
+            "time": "2022-10-05T05:11:44+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -5090,23 +5090,23 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "21edd2408dccb2e28e2f116a2e0a55b0b0f84e6d"
+                "reference": "4dfd74dfbf9c9454d1fe5ab448b1d2389410a74d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/21edd2408dccb2e28e2f116a2e0a55b0b0f84e6d",
-                "reference": "21edd2408dccb2e28e2f116a2e0a55b0b0f84e6d",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/4dfd74dfbf9c9454d1fe5ab448b1d2389410a74d",
+                "reference": "4dfd74dfbf9c9454d1fe5ab448b1d2389410a74d",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0",
-                "nystudio107/craft-twigfield": "^1.0.6",
+                "nystudio107/craft-twigfield": "^1.0.8",
                 "php": "^8.0.2",
-                "putyourlightson/craft-sprig-core": "^2.0.4"
+                "putyourlightson/craft-sprig-core": "^2.1.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5139,20 +5139,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-22T18:21:45+00:00"
+            "time": "2022-10-05T09:39:24+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.0.6",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "9dfc817fb7637915b761187f8702fc271e91d0f1"
+                "reference": "6dbe0aa90da14259318eaea5e9cac8b2e3ee4320"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/9dfc817fb7637915b761187f8702fc271e91d0f1",
-                "reference": "9dfc817fb7637915b761187f8702fc271e91d0f1",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/6dbe0aa90da14259318eaea5e9cac8b2e3ee4320",
+                "reference": "6dbe0aa90da14259318eaea5e9cac8b2e3ee4320",
                 "shasum": ""
             },
             "require": {
@@ -5181,7 +5181,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2022-09-25T18:43:25+00:00"
+            "time": "2022-10-05T09:40:37+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
