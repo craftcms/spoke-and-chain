@@ -5090,23 +5090,23 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "4dfd74dfbf9c9454d1fe5ab448b1d2389410a74d"
+                "reference": "7afdbeb22ce1e822dc162d8a5ba4999246a25a30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/4dfd74dfbf9c9454d1fe5ab448b1d2389410a74d",
-                "reference": "4dfd74dfbf9c9454d1fe5ab448b1d2389410a74d",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/7afdbeb22ce1e822dc162d8a5ba4999246a25a30",
+                "reference": "7afdbeb22ce1e822dc162d8a5ba4999246a25a30",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0",
                 "nystudio107/craft-twigfield": "^1.0.8",
                 "php": "^8.0.2",
-                "putyourlightson/craft-sprig-core": "^2.1.0"
+                "putyourlightson/craft-sprig-core": "^2.1.1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5139,20 +5139,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-05T09:39:24+00:00"
+            "time": "2022-10-08T14:57:44+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "6dbe0aa90da14259318eaea5e9cac8b2e3ee4320"
+                "reference": "6adcb8989dfea41bb6e355f157486052e2f336e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/6dbe0aa90da14259318eaea5e9cac8b2e3ee4320",
-                "reference": "6dbe0aa90da14259318eaea5e9cac8b2e3ee4320",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/6adcb8989dfea41bb6e355f157486052e2f336e2",
+                "reference": "6adcb8989dfea41bb6e355f157486052e2f336e2",
                 "shasum": ""
             },
             "require": {
@@ -5181,7 +5181,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2022-10-05T09:40:37+00:00"
+            "time": "2022-10-08T14:54:20+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
