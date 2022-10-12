@@ -51,7 +51,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
     ```
 1. Restore the initial database
    ```zsh
-   ddev exec php craft db/restory seed.sql
+   ddev exec php craft db/restore seed.sql
    ```
 1. Optionally seed demo data:
    ```zsh
