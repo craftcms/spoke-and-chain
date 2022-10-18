@@ -3118,16 +3118,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.7.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "0deb0ff21094cbd37b13cbda085c076312708e6c"
+                "reference": "3d2ed6215e096e900662bd8f993fc5ad81cc4135"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/0deb0ff21094cbd37b13cbda085c076312708e6c",
-                "reference": "0deb0ff21094cbd37b13cbda085c076312708e6c",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3d2ed6215e096e900662bd8f993fc5ad81cc4135",
+                "reference": "3d2ed6215e096e900662bd8f993fc5ad81cc4135",
                 "shasum": ""
             },
             "require": {
@@ -3189,7 +3189,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.7.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.8.0"
             },
             "funding": [
                 {
@@ -3205,25 +3205,25 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-17T07:23:36+00:00"
+            "time": "2022-10-18T06:54:34+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
-            "version": "3.7.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
-                "reference": "8c884379593dd2081ec07394842665be6fe6fd61"
+                "reference": "192c0e7f36fe4e5a79cce94f8359076630b641f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/8c884379593dd2081ec07394842665be6fe6fd61",
-                "reference": "8c884379593dd2081ec07394842665be6fe6fd61",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/192c0e7f36fe4e5a79cce94f8359076630b641f8",
+                "reference": "192c0e7f36fe4e5a79cce94f8359076630b641f8",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.132.4",
-                "league/flysystem": "^3.7.0",
+                "league/flysystem": "^3.8.0",
                 "league/mime-type-detection": "^1.0.0",
                 "php": "^8.0.2"
             },
@@ -3259,7 +3259,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem-aws-s3-v3/issues",
-                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/3.7.0"
+                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/3.8.0"
             },
             "funding": [
                 {
@@ -3275,7 +3275,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-16T21:21:26+00:00"
+            "time": "2022-10-18T06:40:06+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -4053,16 +4053,16 @@
         },
         {
             "name": "nystudio107/craft-twigfield",
-            "version": "1.0.14",
+            "version": "1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-twigfield.git",
-                "reference": "fb93bfbbc4cc4df71d45ba61bc9a1addd0b0b444"
+                "reference": "b5f651177c6442bd943a24c3af2f1c01779732be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/fb93bfbbc4cc4df71d45ba61bc9a1addd0b0b444",
-                "reference": "fb93bfbbc4cc4df71d45ba61bc9a1addd0b0b444",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/b5f651177c6442bd943a24c3af2f1c01779732be",
+                "reference": "b5f651177c6442bd943a24c3af2f1c01779732be",
                 "shasum": ""
             },
             "require": {
@@ -4110,7 +4110,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-13T19:41:42+00:00"
+            "time": "2022-10-18T00:51:06+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
