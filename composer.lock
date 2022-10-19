@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.238.6",
+            "version": "3.239.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "79a76b438bd20ae687394561b4f28cb6c10db08e"
+                "reference": "33ae76381b77a1a2580817996dcc7b9e931ae5f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/79a76b438bd20ae687394561b4f28cb6c10db08e",
-                "reference": "79a76b438bd20ae687394561b4f28cb6c10db08e",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/33ae76381b77a1a2580817996dcc7b9e931ae5f4",
+                "reference": "33ae76381b77a1a2580817996dcc7b9e931ae5f4",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.238.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.239.0"
             },
-            "time": "2022-10-17T18:17:10+00:00"
+            "time": "2022-10-18T18:17:00+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -949,16 +949,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.2.7",
+            "version": "4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "db7a0731c9dee6b1c4bc362f7473470a93631f0f"
+                "reference": "3db5c2376356d6baada51079de89c54a5073e24e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/db7a0731c9dee6b1c4bc362f7473470a93631f0f",
-                "reference": "db7a0731c9dee6b1c4bc362f7473470a93631f0f",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3db5c2376356d6baada51079de89c54a5073e24e",
+                "reference": "3db5c2376356d6baada51079de89c54a5073e24e",
                 "shasum": ""
             },
             "require": {
@@ -1063,7 +1063,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-10-11T17:54:34+00:00"
+            "time": "2022-10-18T18:28:05+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -2853,7 +2853,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.35.1",
+            "version": "v9.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2908,7 +2908,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.35.1",
+            "version": "v9.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2954,7 +2954,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.35.1",
+            "version": "v9.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3002,7 +3002,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.35.1",
+            "version": "v9.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -3118,16 +3118,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.8.0",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3d2ed6215e096e900662bd8f993fc5ad81cc4135"
+                "reference": "60f3760352fe08e918bc3b1acae4e91af092ebe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3d2ed6215e096e900662bd8f993fc5ad81cc4135",
-                "reference": "3d2ed6215e096e900662bd8f993fc5ad81cc4135",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/60f3760352fe08e918bc3b1acae4e91af092ebe1",
+                "reference": "60f3760352fe08e918bc3b1acae4e91af092ebe1",
                 "shasum": ""
             },
             "require": {
@@ -3189,7 +3189,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.8.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.9.0"
             },
             "funding": [
                 {
@@ -3205,7 +3205,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-18T06:54:34+00:00"
+            "time": "2022-10-18T21:02:43+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -4053,21 +4053,23 @@
         },
         {
             "name": "nystudio107/craft-twigfield",
-            "version": "1.0.15",
+            "version": "1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-twigfield.git",
-                "reference": "b5f651177c6442bd943a24c3af2f1c01779732be"
+                "reference": "431572cc5eefd03da662739c9926e86c0809dee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/b5f651177c6442bd943a24c3af2f1c01779732be",
-                "reference": "b5f651177c6442bd943a24c3af2f1c01779732be",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigfield/zipball/431572cc5eefd03da662739c9926e86c0809dee5",
+                "reference": "431572cc5eefd03da662739c9926e86c0809dee5",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0 || ^4.0.0",
                 "phpdocumentor/reflection-docblock": "^5.0.0"
+            },
+            "require-dev": {
+                "craftcms/cms": "^3.0.0 || ^4.0.0"
             },
             "type": "yii2-extension",
             "extra": {
@@ -4110,7 +4112,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-18T00:51:06+00:00"
+            "time": "2022-10-18T22:01:44+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
