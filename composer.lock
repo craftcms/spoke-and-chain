@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.240.7",
+            "version": "3.240.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "afad16e102229de8da15f07cc48436955811ef7f"
+                "reference": "72a4381a59f42720b033865d265aa64c3190cc13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/afad16e102229de8da15f07cc48436955811ef7f",
-                "reference": "afad16e102229de8da15f07cc48436955811ef7f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/72a4381a59f42720b033865d265aa64c3190cc13",
+                "reference": "72a4381a59f42720b033865d265aa64c3190cc13",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.240.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.240.8"
             },
-            "time": "2022-11-01T18:23:34+00:00"
+            "time": "2022-11-02T18:44:20+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -3925,16 +3925,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "d27a7fca30b18cd6ad4ced00ce99ad5f1669e71a"
+                "reference": "21f99d79dca956b931d884f8240b518e23cd64cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/d27a7fca30b18cd6ad4ced00ce99ad5f1669e71a",
-                "reference": "d27a7fca30b18cd6ad4ced00ce99ad5f1669e71a",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/21f99d79dca956b931d884f8240b518e23cd64cc",
+                "reference": "21f99d79dca956b931d884f8240b518e23cd64cc",
                 "shasum": ""
             },
             "require": {
@@ -3986,7 +3986,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-11-01T19:23:11+00:00"
+            "time": "2022-11-02T22:44:21+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-manifest",
