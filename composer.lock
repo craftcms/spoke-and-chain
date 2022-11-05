@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.240.9",
+            "version": "3.240.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ee0bde83538e5acbb4f84f79a12b651ccb19017b"
+                "reference": "84b8229fc25cf787876047b6a73b202209853e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ee0bde83538e5acbb4f84f79a12b651ccb19017b",
-                "reference": "ee0bde83538e5acbb4f84f79a12b651ccb19017b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/84b8229fc25cf787876047b6a73b202209853e79",
+                "reference": "84b8229fc25cf787876047b6a73b202209853e79",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.240.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.240.10"
             },
-            "time": "2022-11-03T18:18:02+00:00"
+            "time": "2022-11-04T19:25:00+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -3925,16 +3925,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "21f99d79dca956b931d884f8240b518e23cd64cc"
+                "reference": "f4bc04b22a6d1b94b87e6076a53a87e52058b7a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/21f99d79dca956b931d884f8240b518e23cd64cc",
-                "reference": "21f99d79dca956b931d884f8240b518e23cd64cc",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/f4bc04b22a6d1b94b87e6076a53a87e52058b7a9",
+                "reference": "f4bc04b22a6d1b94b87e6076a53a87e52058b7a9",
                 "shasum": ""
             },
             "require": {
@@ -3986,7 +3986,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-11-02T22:44:21+00:00"
+            "time": "2022-11-04T16:15:50+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-manifest",
@@ -9947,16 +9947,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e08de53a5eec983de78a787a88e72518cf8fe43a"
+                "reference": "a59c8b5bfd4a236f27efc8b5ce72c313c2b54b5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e08de53a5eec983de78a787a88e72518cf8fe43a",
-                "reference": "e08de53a5eec983de78a787a88e72518cf8fe43a",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a59c8b5bfd4a236f27efc8b5ce72c313c2b54b5f",
+                "reference": "a59c8b5bfd4a236f27efc8b5ce72c313c2b54b5f",
                 "shasum": ""
             },
             "require": {
@@ -9986,7 +9986,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.9.0"
+                "source": "https://github.com/phpstan/phpstan/tree/1.9.1"
             },
             "funding": [
                 {
@@ -10002,7 +10002,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-03T07:26:48+00:00"
+            "time": "2022-11-04T13:35:59+00:00"
         },
         {
             "name": "psy/psysh",
