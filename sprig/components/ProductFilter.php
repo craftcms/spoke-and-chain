@@ -15,6 +15,7 @@ use craft\elements\Category;
 use craft\elements\db\CategoryQuery;
 use craft\elements\Entry;
 use craft\helpers\ArrayHelper;
+use craft\helpers\StringHelper;
 use craft\helpers\UrlHelper;
 use putyourlightson\sprig\base\Component;
 
@@ -111,12 +112,19 @@ class ProductFilter extends Component
             $this->colors = (!$this->colors) ? [] : explode('|', $this->colors);
         }
 
+        if (is_array($this->colors) && !empty($this->colors)) {
+            $this->colors = array_filter($this->colors);
+            array_walk($this->colors, fn($c) => StringHelper::escape($c));
+        }
+
         if (is_string($this->materials)) {
             $this->materials = (!$this->materials) ? [] : explode('|', $this->materials);
         }
 
-        $this->colors = array_filter($this->colors);
-        $this->materials = array_filter($this->materials);
+        if (is_array($this->materials) && !empty($this->materials)) {
+            $this->materials = array_filter($this->materials);
+            array_walk($this->materials, fn($c) => StringHelper::escape($c));
+        }
     }
 
     /**
