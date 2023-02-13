@@ -8531,16 +8531,16 @@
         },
         {
             "name": "voku/anti-xss",
-            "version": "4.1.40",
+            "version": "4.1.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/anti-xss.git",
-                "reference": "1ba4f954c39cd064e12622f04439826a67378a5f"
+                "reference": "55a403436494e44a2547a8d42de68e6cad4bca1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/anti-xss/zipball/1ba4f954c39cd064e12622f04439826a67378a5f",
-                "reference": "1ba4f954c39cd064e12622f04439826a67378a5f",
+                "url": "https://api.github.com/repos/voku/anti-xss/zipball/55a403436494e44a2547a8d42de68e6cad4bca1d",
+                "reference": "55a403436494e44a2547a8d42de68e6cad4bca1d",
                 "shasum": ""
             },
             "require": {
@@ -8586,7 +8586,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/anti-xss/issues",
-                "source": "https://github.com/voku/anti-xss/tree/4.1.40"
+                "source": "https://github.com/voku/anti-xss/tree/4.1.41"
             },
             "funding": [
                 {
@@ -8610,7 +8610,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-11T23:38:48+00:00"
+            "time": "2023-02-12T15:56:55+00:00"
         },
         {
             "name": "voku/arrayy",
