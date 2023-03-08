@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.261.5",
+            "version": "3.261.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "1fb31e97fa4da90935a87e321c07662a5827ee2d"
+                "reference": "63b03ec821473861af58439f1a35173e904d0f8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1fb31e97fa4da90935a87e321c07662a5827ee2d",
-                "reference": "1fb31e97fa4da90935a87e321c07662a5827ee2d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/63b03ec821473861af58439f1a35173e904d0f8c",
+                "reference": "63b03ec821473861af58439f1a35173e904d0f8c",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.6"
             },
-            "time": "2023-03-06T19:20:40+00:00"
+            "time": "2023-03-07T19:21:12+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -9885,16 +9885,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.4",
+            "version": "1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "8d39218664b45a4a42d5be66d2b63dcf8c149982"
+                "reference": "1fb6f494d82455151ecf15c5c191923f5d84324e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/8d39218664b45a4a42d5be66d2b63dcf8c149982",
-                "reference": "8d39218664b45a4a42d5be66d2b63dcf8c149982",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1fb6f494d82455151ecf15c5c191923f5d84324e",
+                "reference": "1fb6f494d82455151ecf15c5c191923f5d84324e",
                 "shasum": ""
             },
             "require": {
@@ -9924,7 +9924,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.10.4"
+                "source": "https://github.com/phpstan/phpstan/tree/1.10.5"
             },
             "funding": [
                 {
@@ -9940,7 +9940,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-06T13:39:20+00:00"
+            "time": "2023-03-07T16:48:45+00:00"
         },
         {
             "name": "psy/psysh",
