@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6ab26c33a1580ec37f64e56701b9725",
+    "content-hash": "8cfab589e01ab4732ad0aa0c05eac0e5",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.261.6",
+            "version": "3.261.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "63b03ec821473861af58439f1a35173e904d0f8c"
+                "reference": "2f0a97018eb9fd05bbd69a75a943ef15d0bbc785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/63b03ec821473861af58439f1a35173e904d0f8c",
-                "reference": "63b03ec821473861af58439f1a35173e904d0f8c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2f0a97018eb9fd05bbd69a75a943ef15d0bbc785",
+                "reference": "2f0a97018eb9fd05bbd69a75a943ef15d0bbc785",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.7"
             },
-            "time": "2023-03-07T19:21:12+00:00"
+            "time": "2023-03-08T19:20:51+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -419,16 +419,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.2.15",
+            "version": "2.2.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "509dcbd4f8d459e0ef2ef223a231b8c31bceed78"
+                "reference": "30ff21a9af9a10845436abaeeb0bb7276e996d24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/509dcbd4f8d459e0ef2ef223a231b8c31bceed78",
-                "reference": "509dcbd4f8d459e0ef2ef223a231b8c31bceed78",
+                "url": "https://api.github.com/repos/composer/composer/zipball/30ff21a9af9a10845436abaeeb0bb7276e996d24",
+                "reference": "30ff21a9af9a10845436abaeeb0bb7276e996d24",
                 "shasum": ""
             },
             "require": {
@@ -498,7 +498,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.2.15"
+                "source": "https://github.com/composer/composer/tree/2.2.19"
             },
             "funding": [
                 {
@@ -514,7 +514,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-01T10:01:26+00:00"
+            "time": "2023-02-04T13:54:48+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -949,26 +949,26 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.2.8",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "3db5c2376356d6baada51079de89c54a5073e24e"
+                "reference": "0c7834c4a316d2f7537317e4e14989f39da05a76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/3db5c2376356d6baada51079de89c54a5073e24e",
-                "reference": "3db5c2376356d6baada51079de89c54a5073e24e",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/0c7834c4a316d2f7537317e4e14989f39da05a76",
+                "reference": "0c7834c4a316d2f7537317e4e14989f39da05a76",
                 "shasum": ""
             },
             "require": {
                 "commerceguys/addressing": "^1.2",
-                "composer/composer": "2.2.15",
+                "composer/composer": "2.2.19",
                 "craftcms/oauth2-craftid": "~1.0.0",
-                "craftcms/plugin-installer": "~1.5.6",
+                "craftcms/plugin-installer": "~1.6.0",
                 "craftcms/server-check": "~2.1.2",
                 "creocoder/yii2-nested-sets": "~0.9.0",
-                "elvanto/litemoji": "^3.0.1",
+                "elvanto/litemoji": "^4.3.0",
                 "enshrined/svg-sanitize": "~0.15.0",
                 "ext-bcmath": "*",
                 "ext-curl": "*",
@@ -987,7 +987,7 @@
                 "moneyphp/money": "^4.0",
                 "monolog/monolog": "^2.3",
                 "php": "^8.0.2",
-                "pixelandtonic/imagine": "~1.2.4.1",
+                "pixelandtonic/imagine": "~1.3.3.1",
                 "samdark/yii2-psr-log-target": "^1.1",
                 "seld/cli-prompt": "^1.0.4",
                 "symfony/http-client": "^6.0.3",
@@ -997,7 +997,7 @@
                 "twig/twig": "~3.4.3",
                 "voku/stringy": "^6.4.0",
                 "webonyx/graphql-php": "~14.11.5",
-                "yiisoft/yii2": "~2.0.45.0",
+                "yiisoft/yii2": "~2.0.47.0",
                 "yiisoft/yii2-debug": "~2.1.19.0",
                 "yiisoft/yii2-queue": "~2.3.2",
                 "yiisoft/yii2-symfonymailer": "^2.0.0"
@@ -1024,7 +1024,8 @@
                 "fakerphp/faker": "^1.19.0",
                 "league/factory-muffin": "^3.3.0",
                 "phpstan/phpstan": "^1.8.5",
-                "vlucas/phpdotenv": "^5.4.1"
+                "vlucas/phpdotenv": "^5.4.1",
+                "yiisoft/yii2-redis": "^2.0"
             },
             "suggest": {
                 "ext-exif": "Adds support for parsing image EXIF data.",
@@ -1063,25 +1064,25 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-10-18T18:28:05+00:00"
+            "time": "2023-03-08T18:08:46+00:00"
         },
         {
             "name": "craftcms/commerce",
-            "version": "4.1.3",
+            "version": "4.2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "b30b617d29bbda7ffcc6bf9bf2d26955a1341380"
+                "reference": "652e6ce72340d7d063e6633d7a08bdea85993711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/b30b617d29bbda7ffcc6bf9bf2d26955a1341380",
-                "reference": "b30b617d29bbda7ffcc6bf9bf2d26955a1341380",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/652e6ce72340d7d063e6633d7a08bdea85993711",
+                "reference": "652e6ce72340d7d063e6633d7a08bdea85993711",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.1.2",
-                "dompdf/dompdf": "^2.0.0",
+                "craftcms/cms": "^4.3.0",
+                "dompdf/dompdf": "^2.0.2",
                 "ibericode/vat": "^1.1.2",
                 "iio/libmergepdf": "^4.0",
                 "php": "^8.0.2"
@@ -1133,7 +1134,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-10-07T15:23:01+00:00"
+            "time": "2023-02-02T13:57:22+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -1296,16 +1297,16 @@
         },
         {
             "name": "craftcms/plugin-installer",
-            "version": "1.5.7",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/plugin-installer.git",
-                "reference": "23ec472acd4410b70b07d5a02b2b82db9ee3f66b"
+                "reference": "bd1650e8da6d5ca7a8527068d3e51c34bc7b6b4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/23ec472acd4410b70b07d5a02b2b82db9ee3f66b",
-                "reference": "23ec472acd4410b70b07d5a02b2b82db9ee3f66b",
+                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/bd1650e8da6d5ca7a8527068d3e51c34bc7b6b4f",
+                "reference": "bd1650e8da6d5ca7a8527068d3e51c34bc7b6b4f",
                 "shasum": ""
             },
             "require": {
@@ -1345,7 +1346,7 @@
                 "rss": "https://craftcms.com/changelog.rss",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-02-18T02:01:38+00:00"
+            "time": "2023-02-22T13:17:00+00:00"
         },
         {
             "name": "craftcms/redactor",
@@ -1517,23 +1518,23 @@
         },
         {
             "name": "craftcms/yii2-dynamodb",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/yii2-dynamodb.git",
-                "reference": "baf3a30ab24007317b43dd2f3f5faba1a399d566"
+                "reference": "0e2fe6c2697a06ef6c6f033fb42b64fb4d8764e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/yii2-dynamodb/zipball/baf3a30ab24007317b43dd2f3f5faba1a399d566",
-                "reference": "baf3a30ab24007317b43dd2f3f5faba1a399d566",
+                "url": "https://api.github.com/repos/craftcms/yii2-dynamodb/zipball/0e2fe6c2697a06ef6c6f033fb42b64fb4d8764e4",
+                "reference": "0e2fe6c2697a06ef6c6f033fb42b64fb4d8764e4",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": ">=2.4",
                 "ext-json": "*",
-                "yiisoft/yii2": "~2.0.45.0",
-                "yiisoft/yii2-queue": "~2.3.2"
+                "yiisoft/yii2": "^2.0.45",
+                "yiisoft/yii2-queue": "^2.3.2"
             },
             "provide": {
                 "bower-asset/bootstrap": "*",
@@ -1546,6 +1547,7 @@
             "require-dev": {
                 "craftcms/ecs": "dev-main",
                 "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main",
                 "phpunit/phpunit": "^8.5"
             },
             "type": "library",
@@ -1578,7 +1580,7 @@
                 "issues": "https://github.com/craftcms/yii2-dynamodb/issues?state=open",
                 "source": "https://github.com/craftcms/yii2-dynamodb"
             },
-            "time": "2022-04-25T03:32:27+00:00"
+            "time": "2023-03-08T20:08:21+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -2067,24 +2069,25 @@
         },
         {
             "name": "elvanto/litemoji",
-            "version": "3.0.1",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elvanto/litemoji.git",
-                "reference": "acd6fd944814683983dcdfcf4d33f24430631b77"
+                "reference": "f13cf10686f7110a3b17d09de03050d0708840b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elvanto/litemoji/zipball/acd6fd944814683983dcdfcf4d33f24430631b77",
-                "reference": "acd6fd944814683983dcdfcf4d33f24430631b77",
+                "url": "https://api.github.com/repos/elvanto/litemoji/zipball/f13cf10686f7110a3b17d09de03050d0708840b8",
+                "reference": "f13cf10686f7110a3b17d09de03050d0708840b8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "ext-mbstring": "*",
+                "php": ">=7.3"
             },
             "require-dev": {
-                "milesj/emojibase": "6.0.*",
-                "phpunit/phpunit": "^6.0"
+                "milesj/emojibase": "7.0.*",
+                "phpunit/phpunit": "^9.0"
             },
             "type": "library",
             "autoload": {
@@ -2103,9 +2106,9 @@
             ],
             "support": {
                 "issues": "https://github.com/elvanto/litemoji/issues",
-                "source": "https://github.com/elvanto/litemoji/tree/3.0.1"
+                "source": "https://github.com/elvanto/litemoji/tree/4.3.0"
             },
-            "time": "2020-11-27T05:08:33+00:00"
+            "time": "2022-10-28T02:32:19+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -4683,26 +4686,26 @@
         },
         {
             "name": "pixelandtonic/imagine",
-            "version": "1.2.4.2",
+            "version": "1.3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pixelandtonic/Imagine.git",
-                "reference": "5ee4b6a365497818815ba50738c8dcbb555c9fd3"
+                "reference": "4d9bb596ff60504e37ccf9103c0bb705dba7fec6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pixelandtonic/Imagine/zipball/5ee4b6a365497818815ba50738c8dcbb555c9fd3",
-                "reference": "5ee4b6a365497818815ba50738c8dcbb555c9fd3",
+                "url": "https://api.github.com/repos/pixelandtonic/Imagine/zipball/4d9bb596ff60504e37ccf9103c0bb705dba7fec6",
+                "reference": "4d9bb596ff60504e37ccf9103c0bb705dba7fec6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.5"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.2",
                 "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4 || ^9.3"
             },
             "suggest": {
+                "ext-exif": "to read EXIF metadata",
                 "ext-gd": "to use the GD implementation",
                 "ext-gmagick": "to use the Gmagick implementation",
                 "ext-imagick": "to use the Imagick implementation"
@@ -4710,7 +4713,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "0.7-dev"
+                    "dev-develop": "1.x-dev"
                 }
             },
             "autoload": {
@@ -4738,9 +4741,9 @@
                 "image processing"
             ],
             "support": {
-                "source": "https://github.com/pixelandtonic/Imagine/tree/1.2.4.2"
+                "source": "https://github.com/pixelandtonic/Imagine/tree/1.3.3.1"
             },
-            "time": "2021-06-22T18:26:46+00:00"
+            "time": "2023-01-03T19:18:06+00:00"
         },
         {
             "name": "psr/container",
@@ -9298,16 +9301,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.45",
+            "version": "2.0.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "e2223d4085e5612aa616635f8fcaf478607f62e8"
+                "reference": "8ecf57895d9c4b29cf9658ffe57af5f3d0e25254"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/e2223d4085e5612aa616635f8fcaf478607f62e8",
-                "reference": "e2223d4085e5612aa616635f8fcaf478607f62e8",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/8ecf57895d9c4b29cf9658ffe57af5f3d0e25254",
+                "reference": "8ecf57895d9c4b29cf9658ffe57af5f3d0e25254",
                 "shasum": ""
             },
             "require": {
@@ -9416,7 +9419,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-11T13:12:40+00:00"
+            "time": "2022-11-18T16:21:58+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
