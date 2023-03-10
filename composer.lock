@@ -4048,16 +4048,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.20",
+            "version": "4.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "b636d0e37de414ea2d1eedd1c9f1fe4b91ab16e5"
+                "reference": "2d25278c1f482e311addddb89a45178a895df5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b636d0e37de414ea2d1eedd1c9f1fe4b91ab16e5",
-                "reference": "b636d0e37de414ea2d1eedd1c9f1fe4b91ab16e5",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/2d25278c1f482e311addddb89a45178a895df5e2",
+                "reference": "2d25278c1f482e311addddb89a45178a895df5e2",
                 "shasum": ""
             },
             "require": {
@@ -4099,7 +4099,7 @@
                     "homepage": "https://nystudio107.com"
                 }
             ],
-            "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
+            "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 4. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
                 "Craft",
                 "JSON-LD",
@@ -4125,7 +4125,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-10T04:51:55+00:00"
+            "time": "2023-03-09T23:43:41+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
