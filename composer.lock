@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.262.1",
+            "version": "3.262.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "42ca7ade60a775fc5eb103d4631df3d366b48a29"
+                "reference": "6359e467b6f099149f93769e014416b5f841bb42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/42ca7ade60a775fc5eb103d4631df3d366b48a29",
-                "reference": "42ca7ade60a775fc5eb103d4631df3d366b48a29",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6359e467b6f099149f93769e014416b5f841bb42",
+                "reference": "6359e467b6f099149f93769e014416b5f841bb42",
                 "shasum": ""
             },
             "require": {
@@ -150,9 +150,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.262.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.262.2"
             },
-            "time": "2023-03-24T18:20:43+00:00"
+            "time": "2023-03-27T18:22:32+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -4053,16 +4053,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.22",
+            "version": "4.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "0189053868fa8de5c6d69290ad562683f1de7caf"
+                "reference": "7a8bf7ab1fe8f08032ff2594463f8618d2c66279"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/0189053868fa8de5c6d69290ad562683f1de7caf",
-                "reference": "0189053868fa8de5c6d69290ad562683f1de7caf",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/7a8bf7ab1fe8f08032ff2594463f8618d2c66279",
+                "reference": "7a8bf7ab1fe8f08032ff2594463f8618d2c66279",
                 "shasum": ""
             },
             "require": {
@@ -4130,7 +4130,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-13T18:14:11+00:00"
+            "time": "2023-03-27T23:49:47+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -4561,16 +4561,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.7.0",
+            "version": "1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5"
+                "reference": "dfc078e8af9c99210337325ff5aa152872c98714"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5",
-                "reference": "1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/dfc078e8af9c99210337325ff5aa152872c98714",
+                "reference": "dfc078e8af9c99210337325ff5aa152872c98714",
                 "shasum": ""
             },
             "require": {
@@ -4613,9 +4613,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.1"
             },
-            "time": "2023-03-12T10:13:29+00:00"
+            "time": "2023-03-27T19:02:04+00:00"
         },
         {
             "name": "phpoption/phpoption",
