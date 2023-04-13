@@ -3928,16 +3928,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "68ddd78f0988d6702b5849ae69241a473a58f08c"
+                "reference": "6e9cd8a7078915660c99e934357eafc720492b88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/68ddd78f0988d6702b5849ae69241a473a58f08c",
-                "reference": "68ddd78f0988d6702b5849ae69241a473a58f08c",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/6e9cd8a7078915660c99e934357eafc720492b88",
+                "reference": "6e9cd8a7078915660c99e934357eafc720492b88",
                 "shasum": ""
             },
             "require": {
@@ -3989,7 +3989,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-16T03:52:43+00:00"
+            "time": "2023-04-13T03:43:09+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
