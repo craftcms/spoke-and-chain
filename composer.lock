@@ -4684,16 +4684,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.1",
+            "version": "1.20.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "57f6787f0bb6431905a18aa7caea25dcd2bd59e0"
+                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/57f6787f0bb6431905a18aa7caea25dcd2bd59e0",
-                "reference": "57f6787f0bb6431905a18aa7caea25dcd2bd59e0",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/90490bd8fd8530a272043c4950c180b6d0cf5f81",
+                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81",
                 "shasum": ""
             },
             "require": {
@@ -4723,9 +4723,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.2"
             },
-            "time": "2023-04-22T09:05:52+00:00"
+            "time": "2023-04-22T12:59:35+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -5154,23 +5154,23 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "2.5.1",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "1e23b3e3be9508e57d5619d79a18f4481ff62b96"
+                "reference": "ee7baaea2ae7a6b71d569c49b5683acf6979733c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/1e23b3e3be9508e57d5619d79a18f4481ff62b96",
-                "reference": "1e23b3e3be9508e57d5619d79a18f4481ff62b96",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/ee7baaea2ae7a6b71d569c49b5683acf6979733c",
+                "reference": "ee7baaea2ae7a6b71d569c49b5683acf6979733c",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0",
                 "nystudio107/craft-code-editor": "^1.0.0",
                 "php": "^8.0.2",
-                "putyourlightson/craft-sprig-core": "^2.4.0"
+                "putyourlightson/craft-sprig-core": "^2.5.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5203,20 +5203,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-31T16:36:53+00:00"
+            "time": "2023-04-23T15:18:16+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.4.2",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "1fad56a092a0a0aa05973068becf3b7da366356b"
+                "reference": "15bc5e90144e6eed5772642a4bb3454e35ca2717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/1fad56a092a0a0aa05973068becf3b7da366356b",
-                "reference": "1fad56a092a0a0aa05973068becf3b7da366356b",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/15bc5e90144e6eed5772642a4bb3454e35ca2717",
+                "reference": "15bc5e90144e6eed5772642a4bb3454e35ca2717",
                 "shasum": ""
             },
             "require": {
@@ -5245,7 +5245,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2023-03-26T21:51:56+00:00"
+            "time": "2023-04-23T15:17:08+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
