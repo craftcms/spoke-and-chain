@@ -19,6 +19,7 @@
   },
   "require": {
     "php": ">=8.0.2",
+    "bref/bref": "^2.0",
     "craftcms/aws-s3": "^2.0.0",
     "craftcms/cms": "^4.2.0.2",
     "craftcms/commerce": "^4.1.0",
