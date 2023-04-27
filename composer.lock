@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.268.18",
+            "version": "3.269.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "086934b1009a8d9a9ae15dc89eafe1a25b1e8b45"
+                "reference": "6d759ef9f24f0c7f271baf8014f41fc0cfdfbf78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/086934b1009a8d9a9ae15dc89eafe1a25b1e8b45",
-                "reference": "086934b1009a8d9a9ae15dc89eafe1a25b1e8b45",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6d759ef9f24f0c7f271baf8014f41fc0cfdfbf78",
+                "reference": "6d759ef9f24f0c7f271baf8014f41fc0cfdfbf78",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.268.18"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.269.0"
             },
-            "time": "2023-04-25T18:20:08+00:00"
+            "time": "2023-04-26T18:21:04+00:00"
         },
         {
             "name": "bref/bref",
@@ -10420,16 +10420,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.15",
+            "version": "v0.11.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "5350ce0ec8ecf2c5b5cf554cd2496f97b444af85"
+                "reference": "151b145906804eea8e5d71fea23bfb470c904bfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/5350ce0ec8ecf2c5b5cf554cd2496f97b444af85",
-                "reference": "5350ce0ec8ecf2c5b5cf554cd2496f97b444af85",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/151b145906804eea8e5d71fea23bfb470c904bfb",
+                "reference": "151b145906804eea8e5d71fea23bfb470c904bfb",
                 "shasum": ""
             },
             "require": {
@@ -10490,9 +10490,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.15"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.16"
             },
-            "time": "2023-04-07T21:57:09+00:00"
+            "time": "2023-04-26T12:53:57+00:00"
         },
         {
             "name": "symplify/easy-coding-standard",
