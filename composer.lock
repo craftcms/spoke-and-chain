@@ -4304,16 +4304,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.23",
+            "version": "4.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "7a8bf7ab1fe8f08032ff2594463f8618d2c66279"
+                "reference": "b00cd1174d63fe61293d429edeccc1f5e57c044a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/7a8bf7ab1fe8f08032ff2594463f8618d2c66279",
-                "reference": "7a8bf7ab1fe8f08032ff2594463f8618d2c66279",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b00cd1174d63fe61293d429edeccc1f5e57c044a",
+                "reference": "b00cd1174d63fe61293d429edeccc1f5e57c044a",
                 "shasum": ""
             },
             "require": {
@@ -4381,7 +4381,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-27T23:49:47+00:00"
+            "time": "2023-05-01T06:42:09+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
