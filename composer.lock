@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.269.14",
+            "version": "3.270.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7ca74fdf63fa6b0ef8120485c97e753658eb4d8a"
+                "reference": "edea7a2b0cc787dafa23b28215f3819362c9dcde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7ca74fdf63fa6b0ef8120485c97e753658eb4d8a",
-                "reference": "7ca74fdf63fa6b0ef8120485c97e753658eb4d8a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/edea7a2b0cc787dafa23b28215f3819362c9dcde",
+                "reference": "edea7a2b0cc787dafa23b28215f3819362c9dcde",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.269.14"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.270.0"
             },
-            "time": "2023-05-18T18:20:30+00:00"
+            "time": "2023-05-19T18:23:56+00:00"
         },
         {
             "name": "bref/bref",
@@ -4362,16 +4362,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.24",
+            "version": "4.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "b00cd1174d63fe61293d429edeccc1f5e57c044a"
+                "reference": "a6168b97305350cb3048622155382e2091873291"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b00cd1174d63fe61293d429edeccc1f5e57c044a",
-                "reference": "b00cd1174d63fe61293d429edeccc1f5e57c044a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a6168b97305350cb3048622155382e2091873291",
+                "reference": "a6168b97305350cb3048622155382e2091873291",
                 "shasum": ""
             },
             "require": {
@@ -4439,7 +4439,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-01T06:42:09+00:00"
+            "time": "2023-05-19T19:01:20+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -10309,16 +10309,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.15.4",
+            "version": "v4.15.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "6bb5176bc4af8bcb7d926f88718db9b96a2d4290"
+                "reference": "11e2663a5bc9db5d714eedb4277ee300403b4a9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/6bb5176bc4af8bcb7d926f88718db9b96a2d4290",
-                "reference": "6bb5176bc4af8bcb7d926f88718db9b96a2d4290",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/11e2663a5bc9db5d714eedb4277ee300403b4a9e",
+                "reference": "11e2663a5bc9db5d714eedb4277ee300403b4a9e",
                 "shasum": ""
             },
             "require": {
@@ -10359,9 +10359,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.4"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.5"
             },
-            "time": "2023-03-05T19:49:14+00:00"
+            "time": "2023-05-19T20:20:00+00:00"
         },
         {
             "name": "phpstan/phpstan",
