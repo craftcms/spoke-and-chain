@@ -1,4 +1,4 @@
-dateModified: 1678306817
+dateModified: 1685751845
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -302,7 +302,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: WRI3RMSQQ0H9XWZV0QH9FRE0
-    schemaVersion: 3.0.11
+    schemaVersion: 3.0.12
     settings:
       addHrefLang: true
       addPaginatedHreflang: true

@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.271.6",
+            "version": "3.271.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "16d4f9e5395e73d6370e7e3d9acd077a0e38adc3"
+                "reference": "d0fe1af38ef521e419004e5f990ceb8e0b2b001d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/16d4f9e5395e73d6370e7e3d9acd077a0e38adc3",
-                "reference": "16d4f9e5395e73d6370e7e3d9acd077a0e38adc3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d0fe1af38ef521e419004e5f990ceb8e0b2b001d",
+                "reference": "d0fe1af38ef521e419004e5f990ceb8e0b2b001d",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.271.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.271.7"
             },
-            "time": "2023-06-01T18:23:44+00:00"
+            "time": "2023-06-02T18:21:03+00:00"
         },
         {
             "name": "bref/bref",
@@ -4231,16 +4231,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.26",
+            "version": "4.0.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "0f13b9044db9d22197fee8ac326a35237f1f27c4"
+                "reference": "b8a934a85f61b6a8c724239a19b10b661416046d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/0f13b9044db9d22197fee8ac326a35237f1f27c4",
-                "reference": "0f13b9044db9d22197fee8ac326a35237f1f27c4",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b8a934a85f61b6a8c724239a19b10b661416046d",
+                "reference": "b8a934a85f61b6a8c724239a19b10b661416046d",
                 "shasum": ""
             },
             "require": {
@@ -4308,7 +4308,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-01T19:40:26+00:00"
+            "time": "2023-06-02T18:27:13+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
