@@ -40,30 +40,40 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 If you’d like to get Spoke & Chain running in a local environment, we recommend using [DDEV](https://ddev.com):
 
 1. Clone the Spoke & Chain repository to your system.
-    ```zsh
-    git clone git@github.com:craftcms/spoke-and-chain.git spokeandchain && cd spokeandchain
-    ```
-1. Follow Craft related DDEV [installation instructions](https://craftcms.com/knowledge-base/migrating-from-craft-nitro-to-ddev).
-1. Make sure you’ve used `ddev config` to create your environment.
-1. Copy and update your `.env` file:
-    ```zsh
-    cp .env.example .env
-    ```
-1. Restore the initial database
-   ```zsh
-   ddev exec php craft db/restore seed.sql
+   ```sh
+   git clone git@github.com:craftcms/spoke-and-chain.git spokeandchain && cd spokeandchain
    ```
-1. Optionally seed demo data:
-   ```zsh
-   ddev exec php craft demos/seed
+2. Install the Composer dependencies:
+   ```sh
+   ddev composer install
+   ```
+3. Initialize a DDEV project for the repo:
+   ```sh
+   ddev config --project-type=craftcms --project-name=spokeandchain --docroot=web && ddev start
+   ```
+4. Create your `.env` file:
+   ```sh
+   cp .env.example .env
+   ```
+5. Set the application ID and security key:
+   ```sh
+   ddev craft setup/keys
+   ```
+6. Restore the initial database
+   ```sh
+   ddev import-db --src seed.sql
+   ```
+7. Optionally seed demo data:
+   ```sh
+   ddev craft demos/seed
    ```
    > ⚠️ The Craft site is offline by default, and the seeder turns it on when it’s finished. If you skip this step, you’ll need to manually bring the site online by navigating to **Settings** → **General Settings** and switching **System Status** to “Online”.
-1. Add a Craft account for yourself by following the prompts:
-    ```zsh
-    ddev exec php craft users/create --admin
-    ```
+8. Add a Craft account for yourself by following the prompts:
+   ```sh
+   ddev craft users/create --admin
+   ```
 
-> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/4.x/installation.html).
+> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/4.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/4.x/installation.html).
 
 ### Front End
 
@@ -121,19 +131,19 @@ Cypress tests cover multiple parts of the website:
 
 Set the environment variables Cypress needs to run by copying `cypress.example.json` to `cypress.json` and adjusting it:
 
-```zsh
+```sh
 cp cypress.config.example.js cypress.config.js
 ```
 
 Open the Cypress Test Runner from the project root:
 
-```zsh
+```sh
 npx cypress open
 ```
 
 Run accessibility tests only:
 
-```zsh
+```sh
 npx cypress run --spec "cypress/e2e/front/a11y/*.cy.js"
 ```
 
