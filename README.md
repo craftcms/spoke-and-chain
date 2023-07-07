@@ -45,7 +45,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
    ```
 2. Install the Composer dependencies:
    ```sh
-   composer install
+   ddev composer install
    ```
 3. Initialize a DDEV project for the repo:
    ```sh
