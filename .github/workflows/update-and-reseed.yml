@@ -13,6 +13,8 @@ jobs:
       changes_detected: ${{ steps.auto_commit.outputs.changes_detected == 'true' }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
 
       - run: make update_and_reseed
 
