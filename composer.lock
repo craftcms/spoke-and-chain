@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.275.8",
+            "version": "3.275.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "18ebb727039c974aa9e997772486b2c869ec2bb6"
+                "reference": "1ef08ba5109591751257ad1eaa52c2e2fbd53cf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/18ebb727039c974aa9e997772486b2c869ec2bb6",
-                "reference": "18ebb727039c974aa9e997772486b2c869ec2bb6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1ef08ba5109591751257ad1eaa52c2e2fbd53cf1",
+                "reference": "1ef08ba5109591751257ad1eaa52c2e2fbd53cf1",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.275.8"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.275.9"
             },
-            "time": "2023-07-17T18:32:24+00:00"
+            "time": "2023-07-18T18:20:13+00:00"
         },
         {
             "name": "bref/bref",
@@ -1032,16 +1032,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.4.15",
+            "version": "4.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "273dfd3dadbb404f69ffd6d7f93451497bbd811c"
+                "reference": "8a03721c411e60c70946017f10fa21001b9601f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/273dfd3dadbb404f69ffd6d7f93451497bbd811c",
-                "reference": "273dfd3dadbb404f69ffd6d7f93451497bbd811c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/8a03721c411e60c70946017f10fa21001b9601f7",
+                "reference": "8a03721c411e60c70946017f10fa21001b9601f7",
                 "shasum": ""
             },
             "require": {
@@ -1050,7 +1050,7 @@
                 "craftcms/plugin-installer": "~1.6.0",
                 "craftcms/server-check": "~2.1.2",
                 "creocoder/yii2-nested-sets": "~0.9.0",
-                "elvanto/litemoji": "^4.3.0",
+                "elvanto/litemoji": "~4.3.0",
                 "enshrined/svg-sanitize": "~0.16.0",
                 "ext-bcmath": "*",
                 "ext-curl": "*",
@@ -1078,7 +1078,7 @@
                 "twig/twig": "~3.4.3",
                 "voku/stringy": "^6.4.0",
                 "webonyx/graphql-php": "~14.11.5",
-                "yiisoft/yii2": "~2.0.47.0",
+                "yiisoft/yii2": "~2.0.48.1",
                 "yiisoft/yii2-debug": "~2.1.22.0",
                 "yiisoft/yii2-queue": "~2.3.2",
                 "yiisoft/yii2-symfonymailer": "^2.0.0"
@@ -1144,7 +1144,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-07-03T17:32:53+00:00"
+            "time": "2023-07-18T20:50:34+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -4236,16 +4236,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.28",
+            "version": "4.0.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "46dc01226cb5e1db3a5953d0dc48b1bc6982a6f2"
+                "reference": "da51e070b19cb50cc152369617cf9cc2bcefd35c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/46dc01226cb5e1db3a5953d0dc48b1bc6982a6f2",
-                "reference": "46dc01226cb5e1db3a5953d0dc48b1bc6982a6f2",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/da51e070b19cb50cc152369617cf9cc2bcefd35c",
+                "reference": "da51e070b19cb50cc152369617cf9cc2bcefd35c",
                 "shasum": ""
             },
             "require": {
@@ -4313,7 +4313,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-13T19:32:07+00:00"
+            "time": "2023-07-18T20:58:52+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -9651,16 +9651,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.47",
+            "version": "2.0.48.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "8ecf57895d9c4b29cf9658ffe57af5f3d0e25254"
+                "reference": "de92f154eefe322fc1b1b2a52cce46677441ced4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/8ecf57895d9c4b29cf9658ffe57af5f3d0e25254",
-                "reference": "8ecf57895d9c4b29cf9658ffe57af5f3d0e25254",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/de92f154eefe322fc1b1b2a52cce46677441ced4",
+                "reference": "de92f154eefe322fc1b1b2a52cce46677441ced4",
                 "shasum": ""
             },
             "require": {
@@ -9671,7 +9671,7 @@
                 "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
                 "ext-ctype": "*",
                 "ext-mbstring": "*",
-                "ezyang/htmlpurifier": "~4.6",
+                "ezyang/htmlpurifier": "^4.6",
                 "lib-pcre": "*",
                 "paragonie/random_compat": ">=1",
                 "php": ">=5.4.0",
@@ -9769,7 +9769,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-18T16:21:58+00:00"
+            "time": "2023-05-24T19:04:02+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
