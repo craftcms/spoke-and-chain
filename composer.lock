@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.277.9",
+            "version": "3.277.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f2437a755b70756425bf8f1bd588a7c583891900"
+                "reference": "efb08ad9e89946eb124ec8f6e9852ac1da6d324c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f2437a755b70756425bf8f1bd588a7c583891900",
-                "reference": "f2437a755b70756425bf8f1bd588a7c583891900",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/efb08ad9e89946eb124ec8f6e9852ac1da6d324c",
+                "reference": "efb08ad9e89946eb124ec8f6e9852ac1da6d324c",
                 "shasum": ""
             },
             "require": {
@@ -151,22 +151,22 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.277.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.277.10"
             },
-            "time": "2023-08-04T18:16:19+00:00"
+            "time": "2023-08-07T18:11:45+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "20db6cafbcd09507947ee968701cb9047e9cd9ed"
+                "reference": "3a4a335981b7a9fd4c603041c70a098af91e4029"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/20db6cafbcd09507947ee968701cb9047e9cd9ed",
-                "reference": "20db6cafbcd09507947ee968701cb9047e9cd9ed",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/3a4a335981b7a9fd4c603041c70a098af91e4029",
+                "reference": "3a4a335981b7a9fd4c603041c70a098af91e4029",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.0"
+                "source": "https://github.com/brefphp/bref/tree/2.1.1"
             },
             "funding": [
                 {
@@ -231,7 +231,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-27T09:41:43+00:00"
+            "time": "2023-08-07T13:53:50+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -1036,12 +1036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "b5372a677edbbed8e3f41809bd3ba6df8cfda763"
+                "reference": "df72b0a2f4829db75b7a4481d0889733eaedd9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/b5372a677edbbed8e3f41809bd3ba6df8cfda763",
-                "reference": "b5372a677edbbed8e3f41809bd3ba6df8cfda763",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/df72b0a2f4829db75b7a4481d0889733eaedd9eb",
+                "reference": "df72b0a2f4829db75b7a4481d0889733eaedd9eb",
                 "shasum": ""
             },
             "require": {
@@ -1144,7 +1144,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-08-05T23:31:54+00:00"
+            "time": "2023-08-07T21:39:12+00:00"
         },
         {
             "name": "craftcms/commerce",
