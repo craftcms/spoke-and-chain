@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.278.1",
+            "version": "3.278.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ed7cba5c8888421b89cdb3561dcd5e40e4bd4395"
+                "reference": "d9c58e931efef8f053449e5374bbe0f1745c45d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ed7cba5c8888421b89cdb3561dcd5e40e4bd4395",
-                "reference": "ed7cba5c8888421b89cdb3561dcd5e40e4bd4395",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d9c58e931efef8f053449e5374bbe0f1745c45d0",
+                "reference": "d9c58e931efef8f053449e5374bbe0f1745c45d0",
                 "shasum": ""
             },
             "require": {
@@ -151,22 +151,22 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.278.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.278.2"
             },
-            "time": "2023-08-11T18:07:09+00:00"
+            "time": "2023-08-14T18:09:33+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "3a4a335981b7a9fd4c603041c70a098af91e4029"
+                "reference": "e2488b4ffa6a7a1355ef88a6da0678c147c28363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/3a4a335981b7a9fd4c603041c70a098af91e4029",
-                "reference": "3a4a335981b7a9fd4c603041c70a098af91e4029",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/e2488b4ffa6a7a1355ef88a6da0678c147c28363",
+                "reference": "e2488b4ffa6a7a1355ef88a6da0678c147c28363",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,8 @@
                 "guzzlehttp/guzzle": "^7.5",
                 "phpstan/phpstan": "^1.10.26",
                 "phpunit/phpunit": "^9.6.10",
-                "symfony/console": "^4.4|^5.0|^6.0|^7.0"
+                "symfony/console": "^4.4|^5.0|^6.0|^7.0",
+                "symfony/yaml": "^4.4|^5.0|^6.0|^7.0"
             },
             "bin": [
                 "bref",
@@ -219,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.1"
+                "source": "https://github.com/brefphp/bref/tree/2.1.2"
             },
             "funding": [
                 {
@@ -231,7 +232,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-07T13:53:50+00:00"
+            "time": "2023-08-14T13:24:35+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -4206,16 +4207,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.11",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "3a4798e4f16d63c3a56bf7a8a6d1fe0695003997"
+                "reference": "0c7fac95e43b397b29ee4d5cdc460f105b7bb06e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/3a4798e4f16d63c3a56bf7a8a6d1fe0695003997",
-                "reference": "3a4798e4f16d63c3a56bf7a8a6d1fe0695003997",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/0c7fac95e43b397b29ee4d5cdc460f105b7bb06e",
+                "reference": "0c7fac95e43b397b29ee4d5cdc460f105b7bb06e",
                 "shasum": ""
             },
             "require": {
@@ -4267,7 +4268,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-06T21:30:15+00:00"
+            "time": "2023-08-14T22:37:56+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -10462,16 +10463,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.28",
+            "version": "1.10.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e4545b55904ebef470423d3ddddb74fa7325497a"
+                "reference": "ee5d8f2d3977fb09e55603eee6fb53bdd76ee9c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e4545b55904ebef470423d3ddddb74fa7325497a",
-                "reference": "e4545b55904ebef470423d3ddddb74fa7325497a",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ee5d8f2d3977fb09e55603eee6fb53bdd76ee9c1",
+                "reference": "ee5d8f2d3977fb09e55603eee6fb53bdd76ee9c1",
                 "shasum": ""
             },
             "require": {
@@ -10520,7 +10521,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-08T12:33:42+00:00"
+            "time": "2023-08-14T13:24:11+00:00"
         },
         {
             "name": "psy/psysh",
