@@ -1,6 +1,7 @@
 DUMPFILE ?= seed.sql
 COMPOSE ?= docker-compose
 EXEC ?= ${COMPOSE} exec -T web
+EXEC_MYSQL ?= ${COMPOSE} exec -T mysql mysql --user=craft --password=secret --database=craft --execute
 RUN ?= ${COMPOSE} run --rm web
 WEB_CONTAINER = docker-compose ps -q web
 
@@ -31,4 +32,13 @@ test:
 gc:
 	${EXEC} php craft gc --delete-all-trashed --interactive=0
 	${EXEC} php craft utils/prune-revisions --max-revisions=1
+	${EXEC_MYSQL} 'TRUNCATE TABLE `searchindex`'
+	${EXEC} php craft resave/assets --update-search-index=1
+	${EXEC} php craft resave/carts --update-search-index=1
+	${EXEC} php craft resave/categories --update-search-index=1
+	${EXEC} php craft resave/entries --update-search-index=1
+	${EXEC} php craft resave/orders --update-search-index=1
+	${EXEC} php craft resave/products --update-search-index=1
+	${EXEC} php craft resave/tags --update-search-index=1
+	${EXEC} php craft resave/users --update-search-index=1
 update_and_reseed: init restore update clean seed gc backup
