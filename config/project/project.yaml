@@ -1,4 +1,4 @@
-dateModified: 1692750001
+dateModified: 1693354830
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -369,5 +369,5 @@ system:
   live: true
   name: 'Spoke & Chain'
   retryDuration: null
-  schemaVersion: 4.5.0.3
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
