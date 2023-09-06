@@ -8780,16 +8780,16 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.6.2",
+            "version": "6.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "e3cffc9bcbc76e89e167e9eb0bbda0cab7518459"
+                "reference": "96985b992f7464ecccf0d47e3c59073de06375e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/e3cffc9bcbc76e89e167e9eb0bbda0cab7518459",
-                "reference": "e3cffc9bcbc76e89e167e9eb0bbda0cab7518459",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/96985b992f7464ecccf0d47e3c59073de06375e1",
+                "reference": "96985b992f7464ecccf0d47e3c59073de06375e1",
                 "shasum": ""
             },
             "require": {
@@ -8818,7 +8818,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-3.0-only"
+                "LGPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -8840,7 +8840,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.6.2"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.6.3"
             },
             "funding": [
                 {
@@ -8848,7 +8848,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-12-17T10:28:59+00:00"
+            "time": "2023-09-06T08:42:11+00:00"
         },
         {
             "name": "theiconic/name-parser",
