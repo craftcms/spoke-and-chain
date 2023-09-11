@@ -157,16 +157,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "e2488b4ffa6a7a1355ef88a6da0678c147c28363"
+                "reference": "6311b7efad39bf8f771c14cc0bd30e8b77f18203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/e2488b4ffa6a7a1355ef88a6da0678c147c28363",
-                "reference": "e2488b4ffa6a7a1355ef88a6da0678c147c28363",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/6311b7efad39bf8f771c14cc0bd30e8b77f18203",
+                "reference": "6311b7efad39bf8f771c14cc0bd30e8b77f18203",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.2"
+                "source": "https://github.com/brefphp/bref/tree/2.1.3"
             },
             "funding": [
                 {
@@ -232,7 +232,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-14T13:24:35+00:00"
+            "time": "2023-09-11T09:13:40+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
