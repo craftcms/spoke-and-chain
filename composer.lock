@@ -4340,16 +4340,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.30",
+            "version": "4.0.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "698ce2b226b7bc0bd67e2d87a6011d138912f017"
+                "reference": "34253e3a9f22c4e4c935fa3caad2c9441f9d4eed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/698ce2b226b7bc0bd67e2d87a6011d138912f017",
-                "reference": "698ce2b226b7bc0bd67e2d87a6011d138912f017",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/34253e3a9f22c4e4c935fa3caad2c9441f9d4eed",
+                "reference": "34253e3a9f22c4e4c935fa3caad2c9441f9d4eed",
                 "shasum": ""
             },
             "require": {
@@ -4417,7 +4417,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-19T16:06:37+00:00"
+            "time": "2023-09-13T03:01:44+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -10528,16 +10528,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.33",
+            "version": "1.10.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "03b1cf9f814ba0863c4e9affea49a4d1ed9a2ed1"
+                "reference": "7f806b6f1403e6914c778140e2ba07c293cb4901"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/03b1cf9f814ba0863c4e9affea49a4d1ed9a2ed1",
-                "reference": "03b1cf9f814ba0863c4e9affea49a4d1ed9a2ed1",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/7f806b6f1403e6914c778140e2ba07c293cb4901",
+                "reference": "7f806b6f1403e6914c778140e2ba07c293cb4901",
                 "shasum": ""
             },
             "require": {
@@ -10586,7 +10586,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-04T12:20:53+00:00"
+            "time": "2023-09-13T09:49:47+00:00"
         },
         {
             "name": "psy/psysh",
