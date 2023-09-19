@@ -9028,16 +9028,16 @@
         },
         {
             "name": "verbb/default-dashboard",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/default-dashboard.git",
-                "reference": "a189e1b5b80f5d2289b2787372279e6e49ba70b4"
+                "reference": "0977dfe14bbce0d1aa9ef0e51d60c1b4e78f9522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/a189e1b5b80f5d2289b2787372279e6e49ba70b4",
-                "reference": "a189e1b5b80f5d2289b2787372279e6e49ba70b4",
+                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/0977dfe14bbce0d1aa9ef0e51d60c1b4e78f9522",
+                "reference": "0977dfe14bbce0d1aa9ef0e51d60c1b4e78f9522",
                 "shasum": ""
             },
             "require": {
@@ -9067,7 +9067,7 @@
                     "homepage": "https://verbb.io"
                 }
             ],
-            "description": "A Craft CMS plugin to set default dashboard widgets for users.",
+            "description": "Set default dashboard widgets for users.",
             "keywords": [
                 "Craft",
                 "cms",
@@ -9087,7 +9087,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-07-02T01:26:02+00:00"
+            "time": "2023-09-19T11:07:30+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
