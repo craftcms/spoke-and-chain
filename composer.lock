@@ -1527,16 +1527,16 @@
         },
         {
             "name": "craftcms/server-check",
-            "version": "2.1.6",
+            "version": "2.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/server-check.git",
-                "reference": "445c8eccde570ede09dc96c39fc1357a5296520f"
+                "reference": "97c09a55cee207cb0a79243606354d9783d693d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/server-check/zipball/445c8eccde570ede09dc96c39fc1357a5296520f",
-                "reference": "445c8eccde570ede09dc96c39fc1357a5296520f",
+                "url": "https://api.github.com/repos/craftcms/server-check/zipball/97c09a55cee207cb0a79243606354d9783d693d8",
+                "reference": "97c09a55cee207cb0a79243606354d9783d693d8",
                 "shasum": ""
             },
             "type": "library",
@@ -1565,7 +1565,7 @@
                 "rss": "https://github.com/craftcms/server-check/releases.atom",
                 "source": "https://github.com/craftcms/server-check"
             },
-            "time": "2023-09-09T18:23:58+00:00"
+            "time": "2023-09-20T01:56:57+00:00"
         },
         {
             "name": "craftcms/store-hours",
