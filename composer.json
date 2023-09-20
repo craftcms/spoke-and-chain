@@ -19,9 +19,10 @@
   },
   "require": {
     "php": ">=8.0.2",
+    "craftcms/cloud": "^1.0.0",
     "bref/bref": "^2.0",
     "craftcms/aws-s3": "^2.0.0",
-    "craftcms/cms": "^4.2.0.2",
+    "craftcms/cms": "^4.5.0",
     "craftcms/commerce": "^4.1.0",
     "craftcms/redactor": "^3.0.0",
     "craftcms/store-hours": "^3.0.0",
