@@ -10,10 +10,11 @@ const webpack = require('webpack');
 // webpack plugins
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CreateSymlinkPlugin = require('create-symlink-webpack-plugin');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
+
 
 // config files
 const common = require('./webpack.common.js');
@@ -56,28 +57,28 @@ const configureImageLoader = () => {
                 name: 'img/[name].[hash].[ext]'
             }
         },
-            {
-                loader: 'img-loader',
-                options: {
-                    plugins: [
-                        require('imagemin-gifsicle')({
-                            interlaced: true,
-                        }),
-                        require('imagemin-mozjpeg')({
-                            progressive: true,
-                            arithmetic: false,
-                        }),
-                        require('imagemin-optipng')({
-                            optimizationLevel: 5,
-                        }),
-                        require('imagemin-svgo')({
-                            plugins: [{
-                                convertPathData: false
-                            }, ]
-                        }),
-                    ]
-                }
-            }
+            // {
+            //     loader: 'img-loader',
+            //     options: {
+            //         plugins: [
+            //             require('imagemin-gifsicle')({
+            //                 interlaced: true,
+            //             }),
+            //             require('imagemin-mozjpeg')({
+            //                 progressive: true,
+            //                 arithmetic: false,
+            //             }),
+            //             require('imagemin-optipng')({
+            //                 optimizationLevel: 5,
+            //             }),
+            //             require('imagemin-svgo')({
+            //                 plugins: [{
+            //                     convertPathData: false
+            //                 }, ]
+            //             }),
+            //         ]
+            //     }
+            // }
         ]
     };
 };
@@ -86,19 +87,18 @@ const configureImageLoader = () => {
 const configureOptimization = () => {
     return {
         minimizer: [
-            new TerserPlugin(
-                configureTerser()
-            ),
-            new OptimizeCSSAssetsPlugin({
-                cssProcessorOptions: {
-                    map: {
-                        inline: false,
-                        annotation: true,
-                    },
-                    safe: true,
-                    discardComments: true
-                },
-            })
+            new TerserPlugin({
+              terserOptions: configureTerser()
+            }),
+          new ImageMinimizerPlugin({
+            minimizer: {
+              implementation: ImageMinimizerPlugin.squooshMinify,
+              options: {
+                // Your options for `squoosh`
+              },
+            },
+          }),
+          new CssMinimizerPlugin(),
         ]
     };
 };
@@ -132,9 +132,8 @@ const configurePostcssLoader = () => {
 // Configure terser
 const configureTerser = () => {
     return {
-        cache: true,
-        parallel: true,
-        sourceMap: true
+        // parallel: true,
+        // sourceMap: true
     };
 };
 
@@ -160,8 +159,8 @@ module.exports = [
                     configureCleanWebpack()
                 ),
                 new MiniCssExtractPlugin({
-                    path: path.resolve(__dirname, settings.paths.dist),
-                    filename: path.join('./css', '[name].[chunkhash].css'),
+                  // basePath: path.resolve(__dirname, settings.paths.dist),
+                  //   filename: path.join('./css', '[name].[chunkhash].css'),
                 }),
                 new webpack.BannerPlugin(
                     configureBanner()
@@ -171,7 +170,6 @@ module.exports = [
                     true
                 ),
                 new webpack.optimize.ModuleConcatenationPlugin(),
-                new ImageminWebpWebpackPlugin(),
             ]
         }
     ),

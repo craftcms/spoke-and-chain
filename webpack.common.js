@@ -5,7 +5,7 @@ const path = require('path');
 const {merge} = require('webpack-merge');
 
 // webpack plugins
-const ManifestPlugin = require('webpack-manifest-plugin');
+const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 // config files
@@ -89,7 +89,7 @@ const webpackConfig = {
         ],
     },
     plugins: [
-        new ManifestPlugin(
+        new WebpackManifestPlugin(
             configureManifest('manifest.json')
         ),
         new WebpackNotifierPlugin({title: 'Webpack', excludeWarnings: true, alwaysNotify: true}),
