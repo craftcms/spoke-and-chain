@@ -61,7 +61,7 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
    ```
 6. Restore the initial database
    ```sh
-   ddev import-db --src seed.sql
+   curl -L https://github.com/craftcms/spoke-and-chain/raw/stable/seed.sql -o seed.sql && ddev import-db --src seed.sql
    ```
 7. Optionally seed demo data:
    ```sh
