@@ -1,4 +1,4 @@
-dateModified: 1694650831
+dateModified: 1695404704
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -18,28 +18,12 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: $S3_BUCKET
-      bucketSelectionMode: manual
-      cfDistributionId: ''
-      cfPrefix: ''
-      expires: ''
-      keyId: ''
-      makeUploadsPublic: true
-      region: $AWS_REGION
-      secret: ''
-      storageClass: ''
-      subfolder: assets/volumes/images
-    type: craft\awss3\Fs
-    url: $S3_BASE_URL
-  imagesLocal:
-    hasUrls: true
-    name: 'Images (local)'
-    settings:
-      path: '@webroot/assets/volumes/images'
-    type: craft\fs\Local
-    url: '@web/assets/volumes/images'
+      expires: '1 years'
+      localFsPath: '@webroot/craft-cloud/{handle}'
+      localFsUrl: '@web/craft-cloud/{handle}'
+      subpath: images
+      url: __URL__
+    type: craft\cloud\fs\AssetsFs
   runtime:
     hasUrls: false
     name: Runtime
