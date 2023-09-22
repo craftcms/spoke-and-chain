@@ -1,10 +1,7 @@
 {
-  "app.js": "/assets/dist/js/app.bdc88099a1797dfce7c3.js",
-  "app.js.map": "/assets/dist/js/app.bdc88099a1797dfce7c3.js.map",
-  "styles.css": "/assets/dist/css/styles.6f82a377c329418c8101.css",
-  "styles.js": "/assets/dist/js/styles.6f82a377c329418c8101.js",
-  "styles.js.map": "/assets/dist/js/styles.6f82a377c329418c8101.js.map",
-  "css/styles.6f82a377c329418c8101.css.map": "/assets/dist/css/styles.6f82a377c329418c8101.css.map",
-  "js/app.bdc88099a1797dfce7c3.js.LICENSE.txt": "/assets/dist/js/app.bdc88099a1797dfce7c3.js.LICENSE.txt",
-  "js/styles.6f82a377c329418c8101.js.LICENSE.txt": "/assets/dist/js/styles.6f82a377c329418c8101.js.LICENSE.txt"
+  "app.js": "/assets/dist/js/app.8657ed858a829cc32a07.js",
+  "styles.css": "/assets/dist/styles.css",
+  "styles.js": "/assets/dist/js/styles.f367885adc46b66bc718.js",
+  "app.js.map": "/assets/dist/js/app.8657ed858a829cc32a07.js.map",
+  "styles.css.map": "/assets/dist/styles.css.map"
 }

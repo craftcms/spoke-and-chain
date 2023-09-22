@@ -15,10 +15,6 @@ use craft\helpers\App;
 return [
     // Global settings
     '*' => [
-        'aliases' => [
-            '@web' => App::env('DEFAULT_SITE_URL'),
-            '@assetBaseUrl' => App::env('S3_BASE_URL') ?: App::env('DEFAULT_SITE_URL'),
-        ],
         'allowAdminChanges' => true,
         'allowUpdates' => false,
         'autoLoginAfterAccountActivation' => true,
