@@ -7,12 +7,13 @@ name: Product
 searchable: false
 settings:
   allowSelfRelations: false
+  branchLimit: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   selectionLabel: null
   showSiteMenu: true
-  source: null
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

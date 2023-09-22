@@ -2,6 +2,7 @@ fieldLayouts:
   2001d55a-3bd3-4600-8ee8-e3ef1b6899de:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 45854963-804e-4615-84ac-372e0fc13ac0
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: null
             label: null
@@ -35,13 +39,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 187b8eeb-3203-46ca-90c8-79880ab60cf8
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 91783058-8e77-4cd5-8588-12205a3978d3
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -49,14 +57,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c9b63bff-525f-4656-81bf-c828e82bc630
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: c8ffd793-e370-44eb-855b-f56a4ee83426
+        userCondition: null
 handle: orders
 hasTitleField: true
 name: Orders
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null

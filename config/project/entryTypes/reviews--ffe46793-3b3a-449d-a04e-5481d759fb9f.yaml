@@ -2,6 +2,7 @@ fieldLayouts:
   1cc7f891-fbc6-4719-912c-584df79a6353:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: Name
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: ea8e262e-cf85-4ead-88a5-bc6b0f1996ee
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
             instructions: null
             label: Review
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: cac9a0e5-245e-440b-a089-b07a7d96578f
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: cb3481b3-e34c-4104-b4da-6f86236f44ca # Product
             instructions: null
             label: null
@@ -45,9 +51,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1b88528b-c942-4f05-946f-d5e3674a0034
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: fcaf6130-3481-4680-bf31-2ee9b178c554 # Stars
             instructions: null
             label: null
@@ -55,14 +63,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 07580c39-f6b6-4873-98fc-ee938ad64ba3
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 48e665a2-90ae-44e9-b61a-b9c5c0920318
+        userCondition: null
 handle: reviews
 hasTitleField: true
 name: Reviews
 section: 32faa6bc-a330-408a-b37a-4e8bde606b43 # Reviews
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -2,6 +2,7 @@ fieldLayouts:
   f8e1b05f-cfd4-4263-b062-b9a4d12274b2:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: d0750fca-284e-41cc-888b-59fe19d571c6
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: null
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f5fd82d3-b1cf-4384-9fbf-3a9314431fc2
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
             instructions: null
             label: Content
@@ -45,9 +51,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 68756a59-0ce2-457d-8c53-fed0e6b05b15
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
@@ -55,14 +63,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6c5ea841-5ea7-4c87-ade7-eaa52420f3a6
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 4ca7400d-c024-4ec0-b4f8-912f538194e8
+        userCondition: null
 handle: errorPages
 hasTitleField: true
 name: 'Error Pages'
 section: 0f952e73-17b8-408c-9c37-3f07a5d16a92 # Error Pages
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

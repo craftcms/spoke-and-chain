@@ -6,17 +6,15 @@ instructions: null
 name: Colors
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: null
   localizeRelations: false
+  maintainHierarchy: true
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add a color'
   showSiteMenu: true
   source: 'group:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
-  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

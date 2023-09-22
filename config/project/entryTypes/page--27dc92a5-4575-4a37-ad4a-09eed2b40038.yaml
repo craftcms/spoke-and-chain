@@ -2,6 +2,7 @@ fieldLayouts:
   09f50636-036b-45fe-b573-04b734738d40:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 3aa0efcb-c482-4a3b-88f3-95567824b34a
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Blocks
             instructions: null
             label: null
@@ -35,13 +39,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 662ec813-4c9b-43d0-b472-d9bb81fd69ee
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 9bd126b4-4480-4379-a7ab-db9c4dce3efe
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -49,14 +57,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: af863ed6-0bfd-41e3-a4b6-5684dfd57c1a
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 33339ebd-d9b5-42e3-80e5-3d897dfc0328
+        userCondition: null
 handle: page
 hasTitleField: true
 name: Page
 section: 2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5 # Landing Pages
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -2,6 +2,7 @@ fieldLayouts:
   6d983617-98cb-4b8d-a296-b42968ecb161:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 9eafb5b0-a301-44ba-8014-39bd1c65a3ef
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: 'Used on the account dashboard page'
             label: null
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c116617f-44f0-46fe-b643-b5cfd261a5d0
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
             instructions: null
             label: 'New Password Help Text'
@@ -45,9 +51,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6363eaed-ad1c-4037-ac2d-e4b31175ca83
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
             instructions: null
             label: 'Current Password Help Text'
@@ -55,13 +63,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9e69d2ee-3672-4406-b0ac-f070ae8792c1
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: a2de9c41-2a6e-42cc-af3b-f652fa04c9b4
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -69,14 +81,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 62ec070e-632f-485e-863b-8c900623006a
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 3f14c402-0dfe-41f1-bcca-d69d1050cab4
+        userCondition: null
 handle: settings
 hasTitleField: true
 name: Settings
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null

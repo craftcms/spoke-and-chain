@@ -1,4 +1,4 @@
-dateModified: 1695404704
+dateModified: 1695411495
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -96,7 +96,7 @@ meta:
     678ed5e4-f5a7-4694-9483-fbc5656b7f95: SEO # SEO
     705abccb-1d21-44fe-a3f7-87530e29cd34: 'Product Images' # Product Images
     708be4d3-74b6-4389-a32f-aebc64f33b0d: Heading # Heading
-    994a420b-cb3e-4813-be6a-dd7ac7f55c6b: Images # Images
+    994a420b-cb3e-4813-be6a-dd7ac7f55c6b: Images
     1620c507-acc0-4d72-ab32-2228a73a088d: Bikes # Bikes
     2170bde4-2ca6-4d6f-b2d0-7367050a564a: Membership # Membership
     3815aa30-9bf2-4a2b-8d16-00fd08c68e86: 'Aria Label' # Aria Label
@@ -274,7 +274,7 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
     settings:
-      assetVolume: 994a420b-cb3e-4813-be6a-dd7ac7f55c6b # Images
+      assetVolume: 994a420b-cb3e-4813-be6a-dd7ac7f55c6b
       clientName: ''
       myCompanyName: ''
       templatePath: _guide

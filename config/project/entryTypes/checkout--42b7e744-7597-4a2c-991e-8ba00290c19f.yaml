@@ -2,6 +2,7 @@ fieldLayouts:
   232a3fe3-acb0-47f2-83bd-79e104d39576:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 1d543e2f-478a-4459-a9f2-c72e227142c0
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: 'Login Heading'
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e84363e2-3259-42ae-80e6-49ec9da5a54f
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
             instructions: null
             label: 'Guest Heading'
@@ -45,13 +51,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 885cf876-5cdc-4d33-b0a2-f76f80d61510
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: feff6ae7-b827-4f55-9dc0-8b7b12468439
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -59,14 +69,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9754bbd2-34ed-4e90-9074-c7ee0eccd235
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: ce6d0b27-dfac-42bb-ab87-4e49357f41d9
+        userCondition: null
 handle: checkout
 hasTitleField: true
 name: Checkout
 section: 70e125cc-65ea-4a3f-a65f-a5c91efcbfe7 # Checkout
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

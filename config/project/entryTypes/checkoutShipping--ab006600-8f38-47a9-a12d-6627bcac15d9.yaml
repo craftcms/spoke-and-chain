@@ -2,6 +2,7 @@ fieldLayouts:
   482c524a-895e-47e5-a80b-22ef6f7a2bd1:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,13 +27,17 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: b27b0faf-fd2a-459b-995f-5f8d50a6436e
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 767066dc-a817-48f9-a239-67b3e18fa302
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -39,14 +45,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f21e90e7-f101-44f3-bc0c-54dcfe3c7799
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 5295452a-cfcc-44d9-b94d-d408fee259c3
+        userCondition: null
 handle: checkoutShipping
 hasTitleField: true
 name: 'Checkout: Shipping'
 section: 92145d02-d68b-4c71-a8be-fa082467d8fc # Checkout: Shipping
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

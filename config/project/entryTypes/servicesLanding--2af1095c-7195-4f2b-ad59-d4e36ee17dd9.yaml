@@ -2,6 +2,7 @@ fieldLayouts:
   2fa7aac3-edd5-4d97-9db8-f6bc63e34113:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 15d12082-6566-48a3-bf79-b5ff977778a9
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4c585b9b-6e5d-4f9c-88a1-f12953c82264
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: bd167f4d-e985-4aec-b6e4-9ba85fbe69f9 # Content Blocks
             instructions: null
             label: null
@@ -45,13 +51,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 73226b59-c7c2-4c57-898d-992bff02fc7c
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: a865163d-8c65-4f6e-ad0c-444cb1cde6a0
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -59,14 +69,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4ad147f1-a46d-4f7d-9ef4-4b0852ad9a0c
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 264ad76a-6b5f-40b3-b3aa-bd1353c3be0e
+        userCondition: null
 handle: servicesLanding
 hasTitleField: false
 name: Services
 section: d64cd626-dade-430d-98d1-9b9be69592c0 # Services
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

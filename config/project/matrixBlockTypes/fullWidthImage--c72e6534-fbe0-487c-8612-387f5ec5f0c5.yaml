@@ -3,8 +3,10 @@ fieldLayouts:
   a4d40528-744c-4343-940a-f76056228c2d:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 4ddf421a-c279-4733-9b0c-2df498c98ec8 # Image
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 86a67306-fc79-44db-9eac-06abb4b7800f
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 145c6fa5-235b-418f-b42a-1827819d1774
+        userCondition: null
 fields:
   4ddf421a-c279-4733-9b0c-2df498c98ec8: # Image
     columnSuffix: null
@@ -30,22 +34,23 @@ fields:
       allowSubfolders: false
       allowUploads: true
       allowedKinds: null
-      defaultUploadLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
       defaultUploadLocationSubpath: null
       localizeRelations: false
+      maintainHierarchy: false
       maxRelations: 1
       minRelations: null
       previewMode: full
       restrictFiles: false
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+      restrictedLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
       restrictedLocationSubpath: null
       selectionLabel: null
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      source: null
       sources: '*'
       targetSiteId: null
       validateRelatedElements: false

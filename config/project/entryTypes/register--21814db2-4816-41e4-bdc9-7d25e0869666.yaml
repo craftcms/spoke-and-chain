@@ -2,6 +2,7 @@ fieldLayouts:
   027eef66-df14-41cd-9692-c8c9753aa868:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,13 +27,17 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: db86c078-7f7e-40a0-a6ab-20ff8236e6c3
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 46bb0816-21af-4382-afd7-7e35d6d5ec4a
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -39,14 +45,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d8dbcc3b-ff4d-4b65-9f4b-2fa48ed460bd
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 11a50d40-f876-442a-85c6-ecb81aae91e9
+        userCondition: null
 handle: register
 hasTitleField: true
 name: Register
 section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 6
 titleFormat: null
 titleTranslationKeyFormat: null

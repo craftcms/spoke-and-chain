@@ -3,8 +3,10 @@ fieldLayouts:
   007ad558-50e4-45ef-a6bf-44c60060e91e:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Heading
             instructions: null
             label: null
@@ -12,9 +14,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 609adb8a-50cc-44ce-ac5c-5cc3320a1c90
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Product Categories
             instructions: null
             label: null
@@ -22,10 +26,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 55f8572a-6412-48fb-bb21-9c3d224a5632
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: bba1caa1-ab3c-4ffa-81eb-fddf4de3fee0
+        userCondition: null
 fields:
   d5599be5-4ce7-4f5f-997b-843257caca75: # Heading
     columnSuffix: null
@@ -56,17 +62,15 @@ fields:
     name: 'Product Categories'
     searchable: false
     settings:
-      allowLimit: false
-      allowMultipleSources: false
       allowSelfRelations: false
       branchLimit: null
       localizeRelations: false
+      maintainHierarchy: true
       maxRelations: null
       minRelations: null
       selectionLabel: null
       showSiteMenu: true
       source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
-      sources: '*'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null

@@ -2,6 +2,7 @@ fieldLayouts:
   f35f48a2-5520-4076-bee1-e1f5134c3145:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
             uid: 5c41788c-6748-4368-aa7b-69c7461225e6
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9b41a7f2-dc44-4ede-8931-b8f5895093f7 # Image Alt
             instructions: null
             label: null
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e5451970-4f1c-4076-83a1-74a60170fb01
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: ba0c0b5b-813d-4075-acec-9700550b80ae # Image Caption
             instructions: null
             label: null
@@ -45,7 +51,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9c5e0c74-1dd4-429a-85fd-7377edb2f7d4
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 184aa23a-08e9-4f4e-933a-200f44850885
+        userCondition: null
+fs: $FS_HANDLE
+handle: images
+name: Images
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

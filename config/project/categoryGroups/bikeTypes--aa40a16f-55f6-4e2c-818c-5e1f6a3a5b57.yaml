@@ -3,6 +3,7 @@ fieldLayouts:
   21f5f824-8dec-4655-aea5-cdf2a90708fc:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,6 +11,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -26,9 +28,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\TitleField
             uid: 262b8c65-c9fd-4c0e-a772-cccd60e99079
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e9eeb095-1668-49fe-99a2-36721c1bdbec # Icon
             instructions: null
             label: null
@@ -36,9 +40,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ef07f79f-f046-49bc-a76b-3eedfa10f021
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: null
             label: null
@@ -46,10 +52,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e0bb8a18-3e20-4a58-af64-b090a09aea7a
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 659072b4-bec9-4e00-84d8-ae0730a8e1c7
+        userCondition: null
 handle: bikeTypes
 name: 'Bike Types'
 siteSettings:

@@ -6,17 +6,15 @@ instructions: null
 name: Material
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: 1
   localizeRelations: false
+  maintainHierarchy: true
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add a material'
   showSiteMenu: true
   source: 'group:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
-  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

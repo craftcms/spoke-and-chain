@@ -6,7 +6,7 @@ instructions: null
 name: Stars
 searchable: false
 settings:
-  maxStars: '5'
+  maxStars: 5
 translationKeyFormat: null
 translationMethod: none
 type: oberon\starfield\fields\StarField

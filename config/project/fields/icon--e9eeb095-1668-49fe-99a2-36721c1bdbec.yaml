@@ -10,22 +10,23 @@ settings:
   allowSubfolders: false
   allowUploads: true
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
   defaultUploadLocationSubpath: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: null
   minRelations: null
   previewMode: full
   restrictFiles: false
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  restrictedLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
   restrictedLocationSubpath: null
   selectionLabel: null
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  source: null
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

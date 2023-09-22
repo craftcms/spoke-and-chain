@@ -2,8 +2,10 @@ fieldLayouts:
   15235b15-7e3b-41db-9d9a-a8be850b6fc5:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
             instructions: 'Optionally designate a bike geometry reference to be displayed on relevant product detail pages.'
             label: 'Geometry Reference'
@@ -11,10 +13,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4ecc606e-caba-45a3-89ad-1bf629b06e8b
+            userCondition: null
             warning: null
             width: 100
         name: Products
         uid: 1b44cab5-1399-4f04-9644-a0c350c78a99
+        userCondition: null
 handle: bikes
 name: Bikes
 sortOrder: 2

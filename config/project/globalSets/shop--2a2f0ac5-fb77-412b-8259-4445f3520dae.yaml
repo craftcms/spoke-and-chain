@@ -2,8 +2,10 @@ fieldLayouts:
   d78ad337-2e0d-4308-a919-f3a76bee12e3:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 54f6a656-b4ef-4d80-86dc-2ed613f64056 # Business Hours
             instructions: null
             label: null
@@ -11,9 +13,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: cc9c17a9-67bf-40bf-904f-e98b3b600e1e
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: ea02150d-88e1-46f5-ab32-052940c08072 # Business Address
             instructions: null
             label: null
@@ -21,10 +25,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a039f6ae-130b-4978-8b96-3680c8d257e0
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: cf9da45b-2094-4a6a-b5cc-0cab3efc6546
+        userCondition: null
 handle: shop
 name: Shop
 sortOrder: 1

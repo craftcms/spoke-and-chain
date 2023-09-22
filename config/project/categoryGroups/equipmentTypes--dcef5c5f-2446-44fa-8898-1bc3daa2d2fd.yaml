@@ -3,6 +3,7 @@ fieldLayouts:
   2e756f2d-e91f-4982-a4f0-225484d01f7a:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,6 +11,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -26,10 +28,12 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\TitleField
             uid: 34075f1a-6b34-41f9-801e-e4ca10225f83
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 11c8680f-1688-4014-b510-a178591d1263
+        userCondition: null
 handle: equipmentTypes
 name: 'Equipment Types'
 siteSettings:

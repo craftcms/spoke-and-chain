@@ -2,6 +2,7 @@ fieldLayouts:
   71222191-7c3b-4b87-8360-97ff7be07cb0:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: d184fe43-6ed8-498f-963e-bc4f1530bcc5
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
             instructions: null
             label: null
@@ -35,13 +39,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6d645eb7-69c5-4ded-a2ee-d2a3d633264c
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 6d9736f4-6c22-47b9-912f-70111149e201
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
             instructions: null
             label: null
@@ -49,14 +57,19 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f8fc9d25-a0af-451d-8469-80e5433415cb
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: cbe95acd-214b-46a4-b7c9-46897e0a797e
+        userCondition: null
 handle: checkoutSuccess
 hasTitleField: true
 name: 'Checkout: Success'
 section: c41d2205-c49f-48ac-9313-177916b70313 # Checkout: Success
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
