@@ -43,13 +43,13 @@ If you’d like to get Spoke & Chain running in a local environment, we recommen
    ```sh
    git clone git@github.com:craftcms/spoke-and-chain.git spokeandchain && cd spokeandchain
    ```
-2. Install the Composer dependencies:
-   ```sh
-   ddev composer install
-   ```
-3. Initialize a DDEV project for the repo:
+2. Initialize a DDEV project for the repo:
    ```sh
    ddev config --project-type=craftcms --project-name=spokeandchain --docroot=web && ddev start
+   ```
+3. Install the Composer dependencies:
+   ```sh
+   ddev composer install
    ```
 4. Create your `.env` file:
    ```sh
