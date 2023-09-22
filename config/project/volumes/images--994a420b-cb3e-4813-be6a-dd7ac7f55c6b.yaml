@@ -57,7 +57,7 @@ fieldLayouts:
         name: Content
         uid: 184aa23a-08e9-4f4e-933a-200f44850885
         userCondition: null
-fs: $FS_HANDLE
+fs: images
 handle: images
 name: Images
 sortOrder: 1
