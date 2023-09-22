@@ -39,7 +39,7 @@
           {% for bikeCategory in bikeCategories %}
             {% include '_includes/components/cards/category' with {
               title: bikeCategory.title,
-              image: bikeCategory.mainImage[0],
+              image: bikeCategory.mainImage.one(),
               url: bikeCategory.url,
             } only %}
           {% endfor %}
