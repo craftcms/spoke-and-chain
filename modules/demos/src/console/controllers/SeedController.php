@@ -153,6 +153,10 @@ class SeedController extends Controller
     {
         parent::init();
 
+        if (!Craft::$app->isInstalled) {
+            return;
+        }
+
         // Don’t let order status emails send while this is running
         Event::on(
             Emails::class,
