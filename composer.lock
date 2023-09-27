@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.281.13",
+            "version": "3.281.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5547757d891495713aa7d5770bf04124d48a6ab5"
+                "reference": "4b5b8aab08ef0add75f086bc03c7651799d187db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5547757d891495713aa7d5770bf04124d48a6ab5",
-                "reference": "5547757d891495713aa7d5770bf04124d48a6ab5",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4b5b8aab08ef0add75f086bc03c7651799d187db",
+                "reference": "4b5b8aab08ef0add75f086bc03c7651799d187db",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.281.13"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.281.14"
             },
-            "time": "2023-09-25T18:07:38+00:00"
+            "time": "2023-09-26T18:15:48+00:00"
         },
         {
             "name": "bref/bref",
@@ -1121,16 +1121,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.5",
+            "version": "4.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "906e011df5c248174770050ee598f620005f6623"
+                "reference": "48cdfbca64aeff9944cb9d2d6cbbd75aeb0d9014"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/906e011df5c248174770050ee598f620005f6623",
-                "reference": "906e011df5c248174770050ee598f620005f6623",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/48cdfbca64aeff9944cb9d2d6cbbd75aeb0d9014",
+                "reference": "48cdfbca64aeff9944cb9d2d6cbbd75aeb0d9014",
                 "shasum": ""
             },
             "require": {
@@ -1233,7 +1233,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-09-15T04:55:07+00:00"
+            "time": "2023-09-26T19:25:44+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -4981,16 +4981,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.1",
+            "version": "1.24.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01"
+                "reference": "bcad8d995980440892759db0c32acae7c8e79442"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01",
-                "reference": "9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bcad8d995980440892759db0c32acae7c8e79442",
+                "reference": "bcad8d995980440892759db0c32acae7c8e79442",
                 "shasum": ""
             },
             "require": {
@@ -5022,9 +5022,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.2"
             },
-            "time": "2023-09-18T12:18:02+00:00"
+            "time": "2023-09-26T12:28:12+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
