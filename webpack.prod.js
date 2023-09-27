@@ -143,7 +143,7 @@ module.exports = [
         common.webpackConfig, {
             output: {
                 filename: path.join('./js', '[name].[chunkhash].js'),
-                publicPath: 'https://cdn.craft.cloud/$CRAFT_CLOUD_ENVIRONMENT_ID/builds/$CRAFT_CLOUD_BUILD_ID/artifacts/assets/dist/'
+                publicPath: `https://cdn.craft.cloud/${process.env.CRAFT_CLOUD_ENVIRONMENT_ID}/builds/${process.env.CRAFT_CLOUD_BUILD_ID}/artifacts/assets/dist/`
             },
             stats: {warnings:false},
             mode: 'production',
