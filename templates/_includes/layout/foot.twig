@@ -1,5 +1,7 @@
 <!-- START JS -->
 {{ sprig.script }}
 
-{{ craft.twigpack.includeJsModule("app.js", true) }}
+{{ craft.twigpack.includeJsModule("app.js", false, {
+  defer: true
+}) }}
 <!-- END JS -->
