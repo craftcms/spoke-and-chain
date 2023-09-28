@@ -80,7 +80,7 @@
             <div>
               <button class="button button--small w-full" x-on:click="clear()" aria-controls="products-list">
                 <div class="flex items-center">
-                  {{ svg('@webroot/assets/icons/cross.svg')|attr({ class: 'w-5 h-5 fill-current block' }) }}
+                  {{ svg('@webroot/icons/cross.svg')|attr({ class: 'w-5 h-5 fill-current block' }) }}
                   <span>{{ 'Clear filters'|t }}</span>
                 </div>
               </button>
@@ -95,7 +95,7 @@
         </div>
         {% if not products|length %}
           <div class="md:mt-16 py-16 text-center">
-            {{ svg('@webroot/assets/icons/bike.svg')|attr({ class: 'inline-block text-red-400 w-16 h-16' }) }}
+            {{ svg('@webroot/icons/bike.svg')|attr({ class: 'inline-block text-red-400 w-16 h-16' }) }}
             <p class="mt-2 text-gray-800">{{ 'No products available.'|t }}</p>
           </div>
         {% else %}

@@ -57,7 +57,7 @@
           class="inline-block px-4 py-2 text-black hover:text-red-600"
           href="/"
         >
-          {{- svg('@webroot/assets/icons/logo.svg')|attr({ class: 'fill-current' }) -}}
+          {{- svg('@webroot/icons/logo.svg')|attr({ class: 'fill-current' }) -}}
         </a>
       </div>
     </div>
@@ -84,7 +84,7 @@
           <form id="search-form" action="{{ searchPage ? searchPage.url : '/search' }}" class="flex-1">
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                {{ svg('@webroot/assets/icons/search.svg')|attr({
+                {{ svg('@webroot/icons/search.svg')|attr({
                   class: 'text-gray-500 w-6 h-6',
                 }) }}
               </div>
@@ -99,7 +99,7 @@
 
           <div class="absolute right-0 transform translate-x-full -mr-3">
             <button @click="closeSearch()" aria-label="{{ 'Close search'|t('site') }}" class="flex items-center">
-              {{ svg('@webroot/assets/icons/times-light.svg')|attr({
+              {{ svg('@webroot/icons/times-light.svg')|attr({
                 class: 'w-6 h-6',
               }) }}
             </button>
@@ -116,7 +116,7 @@
           class="search-toggle inline-block px-4 py-2 text-black hover:text-red-600"
           @click="openSearch($nextTick)"
         >
-            {{- svg('@webroot/assets/icons/search.svg')|attr({ class: 'w-6 h-6' }) -}}
+            {{- svg('@webroot/icons/search.svg')|attr({ class: 'w-6 h-6' }) -}}
         </button>
       </div>
 
@@ -157,7 +157,7 @@
           >
             <div class="search-field relative flex items-center">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                {{ svg('@webroot/assets/icons/search.svg')|attr({
+                {{ svg('@webroot/icons/search.svg')|attr({
                   class: 'text-gray-500 w-6 h-6',
                 }) }}
               </div>

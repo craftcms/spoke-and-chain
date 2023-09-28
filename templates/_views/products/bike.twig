@@ -61,7 +61,7 @@
                     {{ averageRating }}
                   </div>
                   <div>
-                    {{ svg('@webroot/assets/icons/star.svg')|attr({ class: 'w-4 h-4', 'aria-label': "Stars"|t('site') }) }}
+                    {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-4 h-4', 'aria-label': "Stars"|t('site') }) }}
                   </div>
                 </a>
               {% endif %}
@@ -177,7 +177,7 @@
                   {% for i in range(1, 5) %}
                     {% if i <= averageRating %}
                       {# filled star #}
-                      {{ svg('@webroot/assets/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
+                      {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
                     {% else %}
                       {% set averageRatingFloor = averageRating|round(0, 'floor') %}
                       {% set averageRatingCeil = averageRating|round(0, 'ceil') %}
@@ -185,17 +185,17 @@
                       {% if averageRatingFloor < averageRating and averageRatingCeil == i %}
                         {# half star #}
                         <div class="relative">
-                          {{ svg('@webroot/assets/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
+                          {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
 
                           <div class="absolute top-0 left-0 w-1/2 overflow-hidden"
                                style="width: {{ ((averageRating - averageRatingFloor) * 100) }}%;"
                           >
-                            {{ svg('@webroot/assets/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
+                            {{ svg('@webroot/icons/star.svg')|attr({ class: 'w-7 h-7' }) }}
                           </div>
                         </div>
                       {% else %}
                         {# empty star #}
-                        {{ svg('@webroot/assets/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
+                        {{ svg('@webroot/icons/star.svg')|attr({ class: 'text-gray-300 w-7 h-7' }) }}
                       {% endif %}
                     {% endif %}
                   {% endfor %}

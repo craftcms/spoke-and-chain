@@ -39,16 +39,16 @@
       <form action="/search" class="max-w-sm mx-auto mt-4">
         <div class="relative">
           <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            {{ svg('@webroot/assets/icons/search.svg')|attr({
+            {{ svg('@webroot/icons/search.svg')|attr({
               class: 'text-gray-500 w-6 h-6',
             }) }}
           </div>
 
-          <input id="search-input" 
-            name="q" 
-            type="search" 
-            placeholder="{{ 'Search Spoke & Chain…'|t }}" 
-            value="{{ searchQuery }}" 
+          <input id="search-input"
+            name="q"
+            type="search"
+            placeholder="{{ 'Search Spoke & Chain…'|t }}"
+            value="{{ searchQuery }}"
             class="full-w pl-10"
           />
         </div>
