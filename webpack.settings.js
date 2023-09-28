@@ -20,7 +20,7 @@ module.exports = {
     urls: {
         live: process.env.LIVE_SITE_URL || "http://example.com",
         local: process.env.PRIMARY_SITE_URL || "http://local.craft.test/",
-        publicPath: process.env.PUBLIC_PATH || "/assets/dist/"
+        publicPath: process.env.PUBLIC_PATH || "/dist/"
     },
     vars: {
         cssName: "styles"
