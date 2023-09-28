@@ -1,0 +1,13 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+ <defs>
+  <style>.cls-1 {
+        fill: none;
+      }</style>
+ </defs>
+ <g>
+  <path id="svg_2" d="m14.18751,7.55666" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="null"/>
+  <rect stroke="null" transform="rotate(45 16,16.000001907348633) " id="svg_3" height="1.94357" width="21.15605" y="15.02822" x="5.42198" stroke-opacity="null" stroke-width="null" />
+  <rect stroke="null" transform="rotate(-45.02938461303711 16,15.999999999999996) " id="svg_4" height="1.94357" width="21.15605" y="15.02821" x="5.42198" stroke-opacity="null" stroke-width="null"/>
+  <rect height="32" width="32" class="cls-1" id="_Transparent_Rectangle_"/>
+ </g>
+</svg>

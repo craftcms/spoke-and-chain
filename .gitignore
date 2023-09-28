@@ -6,6 +6,7 @@
 .DS_Store
 !seed.sql
 /web/cpresources
+dist/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

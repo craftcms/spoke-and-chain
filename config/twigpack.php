@@ -22,7 +22,7 @@ return [
         // Public server config
         'server' => [
             'manifestPath' => \craft\cloud\Helper::artifactUrl('dist') ?? '@webroot/dist',
-            'publicPath' => \craft\cloud\Helper::artifactUrl() ?? '@web/dist',
+            'publicPath' => \craft\cloud\Helper::artifactUrl('dist') ?? '@web/dist',
         ],
         // webpack-dev-server config
         'devServer' => [
