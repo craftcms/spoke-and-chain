@@ -20,7 +20,7 @@ module.exports = {
     urls: {
         live: process.env.LIVE_SITE_URL || "http://example.com",
         local: process.env.PRIMARY_SITE_URL || "http://local.craft.test/",
-        publicPath: process.env.PUBLIC_PATH || `https://cdn.craft.cloud/${process.env.CRAFT_CLOUD_ENVIRONMENT_ID}/builds/${process.env.CRAFT_CLOUD_BUILD_ID}/artifacts/dist/`
+        publicPath: process.env.PUBLIC_PATH || `${process.env.CRAFT_CLOUD_ARTIFACT_BASE_URL}/dist/`
     },
     vars: {
         cssName: "styles"
