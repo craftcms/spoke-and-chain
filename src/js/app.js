@@ -12,7 +12,7 @@ import './components/productNav';
 import './components/quickReplace';
 import './components/sliders';
 
-console.log('Loaded.');
+console.log('Loaded.', htmx);
 
 // Init sliders
 window.sliders()
