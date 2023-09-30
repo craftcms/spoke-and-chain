@@ -5557,23 +5557,23 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "5e1db473141fe5d899b886c4dddd5c009b6369a2"
+                "reference": "217f2b94c412f48c6648259390dc8bfa69619f85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/5e1db473141fe5d899b886c4dddd5c009b6369a2",
-                "reference": "5e1db473141fe5d899b886c4dddd5c009b6369a2",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/217f2b94c412f48c6648259390dc8bfa69619f85",
+                "reference": "217f2b94c412f48c6648259390dc8bfa69619f85",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0",
                 "nystudio107/craft-code-editor": "^1.0.0",
                 "php": "^8.0.2",
-                "putyourlightson/craft-sprig-core": "^2.6.2"
+                "putyourlightson/craft-sprig-core": "^2.6.3"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5606,20 +5606,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-27T07:58:41+00:00"
+            "time": "2023-09-29T16:10:34+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.6.2",
+            "version": "2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "b1091e90235385f58831562d94d1a418344f4419"
+                "reference": "9c5bc247d4291d8e480954b2ae0847bea22c362f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/b1091e90235385f58831562d94d1a418344f4419",
-                "reference": "b1091e90235385f58831562d94d1a418344f4419",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/9c5bc247d4291d8e480954b2ae0847bea22c362f",
+                "reference": "9c5bc247d4291d8e480954b2ae0847bea22c362f",
                 "shasum": ""
             },
             "require": {
@@ -5648,7 +5648,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2023-09-27T07:43:01+00:00"
+            "time": "2023-09-29T16:09:43+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -10528,16 +10528,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.35",
+            "version": "1.10.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e730e5facb75ffe09dfb229795e8c01a459f26c3"
+                "reference": "ffa3089511121a672e62969404e4fddc753f9b15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e730e5facb75ffe09dfb229795e8c01a459f26c3",
-                "reference": "e730e5facb75ffe09dfb229795e8c01a459f26c3",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ffa3089511121a672e62969404e4fddc753f9b15",
+                "reference": "ffa3089511121a672e62969404e4fddc753f9b15",
                 "shasum": ""
             },
             "require": {
@@ -10586,7 +10586,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-19T15:27:56+00:00"
+            "time": "2023-09-29T14:07:45+00:00"
         },
         {
             "name": "psy/psysh",
