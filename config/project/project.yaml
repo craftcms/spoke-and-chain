@@ -1,4 +1,4 @@
-dateModified: 1696194123
+dateModified: 1696194938
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -19,8 +19,8 @@ fs:
     name: Images
     settings:
       expires: '1 years'
-      localFsPath: '@webroot/craft-cloud/{handle}'
-      localFsUrl: '@web/craft-cloud/images'
+      localFsPath: '@webroot/craft-cloud/{handle}/assets/images'
+      localFsUrl: '@web/craft-cloud/{handle}'
       subpath: images
       url: __URL__
     type: craft\cloud\fs\AssetsFs
