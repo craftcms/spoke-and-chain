@@ -14,5 +14,4 @@ dist/
 
 # Cypress
 /cypress.config.js
-/web/craft-cloud
 config/cloud.php
