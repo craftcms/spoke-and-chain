@@ -1,0 +1,86 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    spoke-and-chain-web-80-http:
+      
+      rule: HostRegexp(`spoke-and-chain.ddev.site`)
+      
+      service: "spoke-and-chain-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    spoke-and-chain-web-8025-http:
+      
+      rule: HostRegexp(`spoke-and-chain.ddev.site`)
+      
+      service: "spoke-and-chain-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    
+    
+    
+    
+    spoke-and-chain-web-80-https:
+      
+      rule: HostRegexp(`spoke-and-chain.ddev.site`)
+      
+      service: "spoke-and-chain-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    spoke-and-chain-web-8025-https:
+      
+      rule: HostRegexp(`spoke-and-chain.ddev.site`)
+      
+      service: "spoke-and-chain-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  services:
+    
+    spoke-and-chain-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-spoke-and-chain-web:80
+    
+    spoke-and-chain-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-spoke-and-chain-web:8025
+    
+    spoke-and-chain-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-spoke-and-chain-web:80
+    
+    spoke-and-chain-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-spoke-and-chain-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/spoke-and-chain.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/spoke-and-chain.key
+
