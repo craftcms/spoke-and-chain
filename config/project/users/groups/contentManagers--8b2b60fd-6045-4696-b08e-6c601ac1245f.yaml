@@ -14,8 +14,8 @@ permissions:
   - 'createentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
   - 'createentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
   - 'createentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'createfolders:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
-  - 'deleteassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
+  - 'createfolders:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'deleteassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'deletecategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
   - 'deletecategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
   - 'deletecategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
@@ -26,7 +26,7 @@ permissions:
   - 'deleteentries:32faa6bc-a330-408a-b37a-4e8bde606b43' # Reviews
   - 'deleteentries:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
   - 'deleteentries:97a0491d-814e-4172-811d-51096a86e67d' # Plans
-  - 'deletepeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
+  - 'deletepeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'deletepeercategorydrafts:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
   - 'deletepeercategorydrafts:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
   - 'deletepeercategorydrafts:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
@@ -52,11 +52,11 @@ permissions:
   - 'editglobalset:2a2f0ac5-fb77-412b-8259-4445f3520dae' # Shop
   - 'editglobalset:63ae8822-3b4e-4a3d-b902-eba33875c230' # Footer
   - 'editglobalset:ba795823-7853-4c7d-8337-136027e1e738' # Bikes
-  - 'editimages:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
-  - 'editpeerimages:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
-  - 'replacefiles:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
-  - 'replacepeerfiles:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
-  - 'saveassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
+  - 'editimages:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'editpeerimages:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'replacefiles:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'replacepeerfiles:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
+  - 'saveassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'savecategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
   - 'savecategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
   - 'savecategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
@@ -73,7 +73,7 @@ permissions:
   - 'saveentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'saveentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
   - 'saveentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'savepeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
+  - 'savepeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'savepeercategorydrafts:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
   - 'savepeercategorydrafts:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
   - 'savepeercategorydrafts:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
@@ -96,7 +96,7 @@ permissions:
   - 'savepeerentrydrafts:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'savepeerentrydrafts:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
   - 'savepeerentrydrafts:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'viewassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
+  - 'viewassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'viewcategories:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
   - 'viewcategories:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
   - 'viewcategories:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
@@ -113,7 +113,7 @@ permissions:
   - 'viewentries:9b9e7f64-d3ac-4cd8-9ac6-2dad92ba68f1' # Contact
   - 'viewentries:a47082e1-a4c7-48c4-b08e-e84d5dae0956' # Search
   - 'viewentries:d64cd626-dade-430d-98d1-9b9be69592c0' # Services
-  - 'viewpeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b'
+  - 'viewpeerassets:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   - 'viewpeercategorydrafts:562224df-c083-4f48-b0b3-7bdcb9bd8df9' # Material
   - 'viewpeercategorydrafts:5a97754b-a6d0-41f2-ba98-cf145d689df1' # Colors
   - 'viewpeercategorydrafts:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
