@@ -13,6 +13,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 const common = require('./webpack.common.js');
 const pkg = require('./package.json');
 const settings = require('./webpack.settings.js');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Configure the webpack-dev-server
 const configureDevServer = () => {
@@ -71,6 +72,7 @@ const configurePostcssLoader = () => {
     return {
         test: /\.(pcss|css)$/,
         use: [
+            MiniCssExtractPlugin.loader,
             {
                 loader: 'style-loader',
                 options: { injectType: "singletonStyleTag" },
