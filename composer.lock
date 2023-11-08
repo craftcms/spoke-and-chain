@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.284.1",
+            "version": "3.285.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "eb03db9795bfdaed3501ebc7f33b4e6cee0c15b4"
+                "reference": "41c7a9491455f89052cba62c4e4f0c748af51265"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/eb03db9795bfdaed3501ebc7f33b4e6cee0c15b4",
-                "reference": "eb03db9795bfdaed3501ebc7f33b4e6cee0c15b4",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/41c7a9491455f89052cba62c4e4f0c748af51265",
+                "reference": "41c7a9491455f89052cba62c4e4f0c748af51265",
                 "shasum": ""
             },
             "require": {
@@ -151,22 +151,22 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.284.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.285.0"
             },
-            "time": "2023-11-06T19:08:09+00:00"
+            "time": "2023-11-07T19:33:47+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "c0effa7fc3de8839ceb3bc78272eff47eb62a1ec"
+                "reference": "378a63a26c0ed0eb0e6c1ec63b39a79eb52b7e3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/c0effa7fc3de8839ceb3bc78272eff47eb62a1ec",
-                "reference": "c0effa7fc3de8839ceb3bc78272eff47eb62a1ec",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/378a63a26c0ed0eb0e6c1ec63b39a79eb52b7e3d",
+                "reference": "378a63a26c0ed0eb0e6c1ec63b39a79eb52b7e3d",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.5"
+                "source": "https://github.com/brefphp/bref/tree/2.1.6"
             },
             "funding": [
                 {
@@ -232,7 +232,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-26T15:03:41+00:00"
+            "time": "2023-11-05T10:52:31+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -1121,16 +1121,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.9",
+            "version": "4.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "0fb938cba82b0ae9ee9e0854fd6bf96b428d6f2e"
+                "reference": "dac4844088c56a44880f4b3b35c86c58641a7c1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/0fb938cba82b0ae9ee9e0854fd6bf96b428d6f2e",
-                "reference": "0fb938cba82b0ae9ee9e0854fd6bf96b428d6f2e",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/dac4844088c56a44880f4b3b35c86c58641a7c1c",
+                "reference": "dac4844088c56a44880f4b3b35c86c58641a7c1c",
                 "shasum": ""
             },
             "require": {
@@ -1233,7 +1233,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-10-23T19:23:42+00:00"
+            "time": "2023-11-07T18:32:05+00:00"
         },
         {
             "name": "craftcms/commerce",
