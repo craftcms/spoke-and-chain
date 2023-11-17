@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.286.1",
+            "version": "3.286.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f3276ecb6e5202452d4b64237e6dc1bc9d350ae6"
+                "reference": "29079a62c6a30ac594b50285494b4dec279b4648"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f3276ecb6e5202452d4b64237e6dc1bc9d350ae6",
-                "reference": "f3276ecb6e5202452d4b64237e6dc1bc9d350ae6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/29079a62c6a30ac594b50285494b4dec279b4648",
+                "reference": "29079a62c6a30ac594b50285494b4dec279b4648",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.286.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.286.3"
             },
-            "time": "2023-11-14T19:09:59+00:00"
+            "time": "2023-11-16T19:12:53+00:00"
         },
         {
             "name": "bref/bref",
@@ -1121,16 +1121,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.10",
+            "version": "4.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "dac4844088c56a44880f4b3b35c86c58641a7c1c"
+                "reference": "3ce66732d97093cc4be3aaf67c661bae6e8d2d45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/dac4844088c56a44880f4b3b35c86c58641a7c1c",
-                "reference": "dac4844088c56a44880f4b3b35c86c58641a7c1c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3ce66732d97093cc4be3aaf67c661bae6e8d2d45",
+                "reference": "3ce66732d97093cc4be3aaf67c661bae6e8d2d45",
                 "shasum": ""
             },
             "require": {
@@ -1233,7 +1233,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-11-07T18:32:05+00:00"
+            "time": "2023-11-16T16:49:54+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -4340,16 +4340,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.33",
+            "version": "4.0.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "d8270c406d0771802eb93069c0afd9910b27872e"
+                "reference": "ab7cba5e3331ed130ca75ad1b02d75e753403db5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/d8270c406d0771802eb93069c0afd9910b27872e",
-                "reference": "d8270c406d0771802eb93069c0afd9910b27872e",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ab7cba5e3331ed130ca75ad1b02d75e753403db5",
+                "reference": "ab7cba5e3331ed130ca75ad1b02d75e753403db5",
                 "shasum": ""
             },
             "require": {
@@ -4417,7 +4417,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-22T22:35:59+00:00"
+            "time": "2023-11-16T15:02:05+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -5696,24 +5696,24 @@
         },
         {
             "name": "react/promise",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "c86753c76fd3be465d93b308f18d189f01a22be4"
+                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/c86753c76fd3be465d93b308f18d189f01a22be4",
-                "reference": "c86753c76fd3be465d93b308f18d189f01a22be4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
+                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "1.10.20 || 1.4.10",
-                "phpunit/phpunit": "^9.5 || ^7.5"
+                "phpstan/phpstan": "1.10.39 || 1.4.10",
+                "phpunit/phpunit": "^9.6 || ^7.5"
             },
             "type": "library",
             "autoload": {
@@ -5757,7 +5757,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v3.0.0"
+                "source": "https://github.com/reactphp/promise/tree/v3.1.0"
             },
             "funding": [
                 {
@@ -5765,7 +5765,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-07-11T16:12:49+00:00"
+            "time": "2023-11-16T16:21:57+00:00"
         },
         {
             "name": "riverline/multipart-parser",
