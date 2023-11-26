@@ -4222,23 +4222,23 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.13",
+            "version": "1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "66a1ba02c0ad5de8e89d4632d5e4da1dfa193dce"
+                "reference": "2784e69cb62d69707e03f2c0b9e0d2a9bdd08209"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/66a1ba02c0ad5de8e89d4632d5e4da1dfa193dce",
-                "reference": "66a1ba02c0ad5de8e89d4632d5e4da1dfa193dce",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/2784e69cb62d69707e03f2c0b9e0d2a9bdd08209",
+                "reference": "2784e69cb62d69707e03f2c0b9e0d2a9bdd08209",
                 "shasum": ""
             },
             "require": {
                 "phpdocumentor/reflection-docblock": "^5.0.0"
             },
             "require-dev": {
-                "craftcms/cms": "^3.0.0 || ^4.0.0"
+                "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0-alpha.1"
             },
             "type": "yii2-extension",
             "extra": {
@@ -4283,7 +4283,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-16T02:31:19+00:00"
+            "time": "2023-11-25T16:56:35+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
