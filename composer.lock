@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.290.1",
+            "version": "3.291.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "716d8033484a3ad86d7570e739de6dbfa91c4371"
+                "reference": "c114ca013dd99d79d61914def93ecf80665b6df9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/716d8033484a3ad86d7570e739de6dbfa91c4371",
-                "reference": "716d8033484a3ad86d7570e739de6dbfa91c4371",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c114ca013dd99d79d61914def93ecf80665b6df9",
+                "reference": "c114ca013dd99d79d61914def93ecf80665b6df9",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.290.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.291.0"
             },
-            "time": "2023-11-28T05:32:29+00:00"
+            "time": "2023-11-28T20:23:07+00:00"
         },
         {
             "name": "bref/bref",
@@ -4339,16 +4339,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.35",
+            "version": "4.0.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "ab7cba5e3331ed130ca75ad1b02d75e753403db5"
+                "reference": "3785d2cb9c28f1280c4ca65c6a576695b9d7eedf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ab7cba5e3331ed130ca75ad1b02d75e753403db5",
-                "reference": "ab7cba5e3331ed130ca75ad1b02d75e753403db5",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/3785d2cb9c28f1280c4ca65c6a576695b9d7eedf",
+                "reference": "3785d2cb9c28f1280c4ca65c6a576695b9d7eedf",
                 "shasum": ""
             },
             "require": {
@@ -4416,7 +4416,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-16T15:02:05+00:00"
+            "time": "2023-11-28T15:01:38+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -10538,16 +10538,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.45",
+            "version": "1.10.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "2f024fbb47432e2e62ad8a8032387aa2dd631c73"
+                "reference": "90d3d25c5b98b8068916bbf08ce42d5cb6c54e70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2f024fbb47432e2e62ad8a8032387aa2dd631c73",
-                "reference": "2f024fbb47432e2e62ad8a8032387aa2dd631c73",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/90d3d25c5b98b8068916bbf08ce42d5cb6c54e70",
+                "reference": "90d3d25c5b98b8068916bbf08ce42d5cb6c54e70",
                 "shasum": ""
             },
             "require": {
@@ -10596,7 +10596,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-27T14:15:06+00:00"
+            "time": "2023-11-28T14:57:26+00:00"
         },
         {
             "name": "psy/psysh",
