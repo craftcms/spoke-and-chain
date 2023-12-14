@@ -1306,16 +1306,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "4.3.2",
+            "version": "4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "b2756caabcc3b5e39b95288a7a8bd5e8bcb1d339"
+                "reference": "976e0625ea5b6a4be391729ab7f9b57a0b715561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/b2756caabcc3b5e39b95288a7a8bd5e8bcb1d339",
-                "reference": "b2756caabcc3b5e39b95288a7a8bd5e8bcb1d339",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/976e0625ea5b6a4be391729ab7f9b57a0b715561",
+                "reference": "976e0625ea5b6a4be391729ab7f9b57a0b715561",
                 "shasum": ""
             },
             "require": {
@@ -1373,7 +1373,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2023-11-01T06:19:32+00:00"
+            "time": "2023-12-14T11:57:58+00:00"
         },
         {
             "name": "craftcms/flysystem",
