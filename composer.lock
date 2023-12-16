@@ -5050,16 +5050,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.4",
+            "version": "1.24.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496"
+                "reference": "fedf211ff14ec8381c9bf5714e33a7a552dd1acc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6bd0c26f3786cd9b7c359675cb789e35a8e07496",
-                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
+                "reference": "fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
                 "shasum": ""
             },
             "require": {
@@ -5091,9 +5091,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.4"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.5"
             },
-            "time": "2023-11-26T18:29:22+00:00"
+            "time": "2023-12-16T09:33:33+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -5679,16 +5679,16 @@
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.6.5",
+            "version": "2.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "c735ccb7ec9e7e1a105d956ecfb817344e6e4501"
+                "reference": "76b1d813bcd29bcad667453f8a3d3e4164b8f043"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/c735ccb7ec9e7e1a105d956ecfb817344e6e4501",
-                "reference": "c735ccb7ec9e7e1a105d956ecfb817344e6e4501",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/76b1d813bcd29bcad667453f8a3d3e4164b8f043",
+                "reference": "76b1d813bcd29bcad667453f8a3d3e4164b8f043",
                 "shasum": ""
             },
             "require": {
@@ -5717,7 +5717,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2023-12-14T14:05:23+00:00"
+            "time": "2023-12-16T01:18:51+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
