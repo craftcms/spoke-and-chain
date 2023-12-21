@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.294.3",
+            "version": "3.294.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "05761093c61ca7a02c1b5ae9be279bf69360e060"
+                "reference": "4f59bf50aa445fc3ec0b10648b205dd2465e9bec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/05761093c61ca7a02c1b5ae9be279bf69360e060",
-                "reference": "05761093c61ca7a02c1b5ae9be279bf69360e060",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4f59bf50aa445fc3ec0b10648b205dd2465e9bec",
+                "reference": "4f59bf50aa445fc3ec0b10648b205dd2465e9bec",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.294.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.294.4"
             },
-            "time": "2023-12-19T19:07:14+00:00"
+            "time": "2023-12-20T19:21:19+00:00"
         },
         {
             "name": "bref/bref",
