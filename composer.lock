@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.295.3",
+            "version": "3.295.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "3346f60c6c5075453f90f703693f764dad76a3a8"
+                "reference": "2372661db989fe4229abd95f4434b37252076d58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3346f60c6c5075453f90f703693f764dad76a3a8",
-                "reference": "3346f60c6c5075453f90f703693f764dad76a3a8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2372661db989fe4229abd95f4434b37252076d58",
+                "reference": "2372661db989fe4229abd95f4434b37252076d58",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.295.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.295.4"
             },
-            "time": "2023-12-28T19:32:33+00:00"
+            "time": "2023-12-29T19:07:49+00:00"
         },
         {
             "name": "bref/bref",
@@ -4750,16 +4750,16 @@
         },
         {
             "name": "php-science/textrank",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/PHP-Science/TextRank.git",
-                "reference": "c5ccfc998b3cee91bf5d01b9f107d382acfa0ca8"
+                "url": "https://github.com/DavidBelicza/PHP-Science-TextRank.git",
+                "reference": "d63788f7f7305b8dd726a367a5653cdd5dac7fba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-Science/TextRank/zipball/c5ccfc998b3cee91bf5d01b9f107d382acfa0ca8",
-                "reference": "c5ccfc998b3cee91bf5d01b9f107d382acfa0ca8",
+                "url": "https://api.github.com/repos/DavidBelicza/PHP-Science-TextRank/zipball/d63788f7f7305b8dd726a367a5653cdd5dac7fba",
+                "reference": "d63788f7f7305b8dd726a367a5653cdd5dac7fba",
                 "shasum": ""
             },
             "require": {
@@ -4774,8 +4774,7 @@
             "autoload": {
                 "psr-4": {
                     "PhpScience\\TextRank\\": [
-                        "src/",
-                        "tests/"
+                        "src/"
                     ]
                 }
             },
@@ -4786,13 +4785,16 @@
             "authors": [
                 {
                     "name": "David Belicza",
-                    "email": "87.bdavid@gmail.com"
+                    "email": "david@belicza.com"
                 }
             ],
-            "description": "TextRank (automatic text summarization) for PHP7 and HHVM.",
+            "description": "TextRank (automatic text summarization) for PHP.",
             "keywords": [
-                "PHP7",
+                "ai",
+                "artificial",
                 "automatic",
+                "intelligence",
+                "php",
                 "php8",
                 "science",
                 "strict",
@@ -4800,10 +4802,10 @@
                 "textrank"
             ],
             "support": {
-                "issues": "https://github.com/PHP-Science/TextRank/issues",
-                "source": "https://github.com/PHP-Science/TextRank/tree/1.2.2"
+                "issues": "https://github.com/DavidBelicza/PHP-Science-TextRank/issues",
+                "source": "https://github.com/DavidBelicza/PHP-Science-TextRank/tree/1.2.3"
             },
-            "time": "2022-08-12T13:02:17+00:00"
+            "time": "2023-12-29T15:21:30+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
