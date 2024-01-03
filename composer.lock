@@ -1190,16 +1190,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.13",
+            "version": "4.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "c94af041eaca79540eac8ce4352e7d5737de6785"
+                "reference": "27277014272e8d372f0294bee60b274816f336b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c94af041eaca79540eac8ce4352e7d5737de6785",
-                "reference": "c94af041eaca79540eac8ce4352e7d5737de6785",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/27277014272e8d372f0294bee60b274816f336b9",
+                "reference": "27277014272e8d372f0294bee60b274816f336b9",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-12-15T19:23:31+00:00"
+            "time": "2024-01-02T17:52:44+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -2465,16 +2465,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01"
+                "reference": "bfb4fe148adbf78eff521199619b93a52ae3554b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/bfb4fe148adbf78eff521199619b93a52ae3554b",
+                "reference": "bfb4fe148adbf78eff521199619b93a52ae3554b",
                 "shasum": ""
             },
             "require": {
@@ -2500,11 +2500,6 @@
                 "ext-mbstring": "Required for multibyte Unicode string functionality."
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "v1.21-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Faker\\": "src/Faker/"
@@ -2527,9 +2522,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.1"
             },
-            "time": "2023-06-12T08:44:38+00:00"
+            "time": "2024-01-02T13:46:09+00:00"
         },
         {
             "name": "graham-campbell/result-type",
