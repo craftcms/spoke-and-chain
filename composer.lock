@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.296.2",
+            "version": "3.296.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "74dda6a5bf570ae4b394c2ed54edd573883426cc"
+                "reference": "2efd701a5e5f50560319ffe0669942dc8d3a4a54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/74dda6a5bf570ae4b394c2ed54edd573883426cc",
-                "reference": "74dda6a5bf570ae4b394c2ed54edd573883426cc",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2efd701a5e5f50560319ffe0669942dc8d3a4a54",
+                "reference": "2efd701a5e5f50560319ffe0669942dc8d3a4a54",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.296.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.296.4"
             },
-            "time": "2024-01-16T19:10:36+00:00"
+            "time": "2024-01-17T23:34:36+00:00"
         },
         {
             "name": "bref/bref",
@@ -1377,16 +1377,16 @@
         },
         {
             "name": "craftcms/flysystem",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/flysystem.git",
-                "reference": "57a6fbdb3eec31151101216d50f7a37a5b6d68f2"
+                "reference": "2cb782bf4dc8164886c84973bccad5609c4fa212"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/flysystem/zipball/57a6fbdb3eec31151101216d50f7a37a5b6d68f2",
-                "reference": "57a6fbdb3eec31151101216d50f7a37a5b6d68f2",
+                "url": "https://api.github.com/repos/craftcms/flysystem/zipball/2cb782bf4dc8164886c84973bccad5609c4fa212",
+                "reference": "2cb782bf4dc8164886c84973bccad5609c4fa212",
                 "shasum": ""
             },
             "require": {
@@ -1428,7 +1428,7 @@
                 "rss": "https://github.com/craftcms/flysystem/commits/master.atom",
                 "source": "https://github.com/craftcms/flysystem"
             },
-            "time": "2022-05-03T21:28:40+00:00"
+            "time": "2024-01-17T17:12:23+00:00"
         },
         {
             "name": "craftcms/html-field",
