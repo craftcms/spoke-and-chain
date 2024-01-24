@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.296.7",
+            "version": "3.296.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "da296909ceb8a4c156c4e849fe1c43ec9e2bb4b0"
+                "reference": "f84fe470709e5ab9515649a1a0891e279693d1b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/da296909ceb8a4c156c4e849fe1c43ec9e2bb4b0",
-                "reference": "da296909ceb8a4c156c4e849fe1c43ec9e2bb4b0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f84fe470709e5ab9515649a1a0891e279693d1b3",
+                "reference": "f84fe470709e5ab9515649a1a0891e279693d1b3",
                 "shasum": ""
             },
             "require": {
@@ -151,22 +151,22 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.296.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.296.8"
             },
-            "time": "2024-01-22T19:11:58+00:00"
+            "time": "2024-01-23T20:32:59+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "2.1.11",
+            "version": "2.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "65b318a0f0e400a3353c88ad2c8f4a67bb9df813"
+                "reference": "99eb6766d20df0c3cbacc14d7de29ac9b3616788"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/65b318a0f0e400a3353c88ad2c8f4a67bb9df813",
-                "reference": "65b318a0f0e400a3353c88ad2c8f4a67bb9df813",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/99eb6766d20df0c3cbacc14d7de29ac9b3616788",
+                "reference": "99eb6766d20df0c3cbacc14d7de29ac9b3616788",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.11"
+                "source": "https://github.com/brefphp/bref/tree/2.1.12"
             },
             "funding": [
                 {
@@ -232,7 +232,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-01T19:43:25+00:00"
+            "time": "2024-01-23T13:51:26+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -1190,16 +1190,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.6.1",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "562ab3515f86f083f52f094411bd0799d7608ffc"
+                "reference": "17164e79c7b3e86534491ff7687129cc1db79386"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/562ab3515f86f083f52f094411bd0799d7608ffc",
-                "reference": "562ab3515f86f083f52f094411bd0799d7608ffc",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/17164e79c7b3e86534491ff7687129cc1db79386",
+                "reference": "17164e79c7b3e86534491ff7687129cc1db79386",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-01-16T18:07:18+00:00"
+            "time": "2024-01-23T18:59:37+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1596,16 +1596,16 @@
         },
         {
             "name": "craftcms/server-check",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/server-check.git",
-                "reference": "97c09a55cee207cb0a79243606354d9783d693d8"
+                "reference": "c86e8aeabc73333111e2bfb4483d7b5402232e48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/server-check/zipball/97c09a55cee207cb0a79243606354d9783d693d8",
-                "reference": "97c09a55cee207cb0a79243606354d9783d693d8",
+                "url": "https://api.github.com/repos/craftcms/server-check/zipball/c86e8aeabc73333111e2bfb4483d7b5402232e48",
+                "reference": "c86e8aeabc73333111e2bfb4483d7b5402232e48",
                 "shasum": ""
             },
             "type": "library",
@@ -1634,7 +1634,7 @@
                 "rss": "https://github.com/craftcms/server-check/releases.atom",
                 "source": "https://github.com/craftcms/server-check"
             },
-            "time": "2023-09-20T01:56:57+00:00"
+            "time": "2023-09-25T17:28:37+00:00"
         },
         {
             "name": "craftcms/store-hours",
