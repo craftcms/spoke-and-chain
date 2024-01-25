@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.296.8",
+            "version": "3.297.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f84fe470709e5ab9515649a1a0891e279693d1b3"
+                "reference": "ad1f7be78d74d48628a6fe345818ce53bae64169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f84fe470709e5ab9515649a1a0891e279693d1b3",
-                "reference": "f84fe470709e5ab9515649a1a0891e279693d1b3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ad1f7be78d74d48628a6fe345818ce53bae64169",
+                "reference": "ad1f7be78d74d48628a6fe345818ce53bae64169",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.296.8"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.297.0"
             },
-            "time": "2024-01-23T20:32:59+00:00"
+            "time": "2024-01-24T19:09:39+00:00"
         },
         {
             "name": "bref/bref",
@@ -3846,16 +3846,16 @@
         },
         {
             "name": "moneyphp/money",
-            "version": "v4.3.0",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moneyphp/money.git",
-                "reference": "50ddfd15b2be01d4bed3bcb0c975a6af5f78a183"
+                "reference": "5e60aebf09f709dd4ea16bf85e66d65301c0d172"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/50ddfd15b2be01d4bed3bcb0c975a6af5f78a183",
-                "reference": "50ddfd15b2be01d4bed3bcb0c975a6af5f78a183",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/5e60aebf09f709dd4ea16bf85e66d65301c0d172",
+                "reference": "5e60aebf09f709dd4ea16bf85e66d65301c0d172",
                 "shasum": ""
             },
             "require": {
@@ -3879,7 +3879,7 @@
                 "phpbench/phpbench": "^1.2.5",
                 "phpunit/phpunit": "^9.5.4",
                 "psalm/plugin-phpunit": "^0.18.4",
-                "psr/cache": "^1.0.1",
+                "psr/cache": "^1.0.1 || ^2.0 || ^3.0",
                 "vimeo/psalm": "~5.15.0"
             },
             "suggest": {
@@ -3928,9 +3928,9 @@
             ],
             "support": {
                 "issues": "https://github.com/moneyphp/money/issues",
-                "source": "https://github.com/moneyphp/money/tree/v4.3.0"
+                "source": "https://github.com/moneyphp/money/tree/v4.4.0"
             },
-            "time": "2023-11-22T09:46:30+00:00"
+            "time": "2024-01-24T08:29:16+00:00"
         },
         {
             "name": "monolog/monolog",
