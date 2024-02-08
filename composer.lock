@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.298.4",
+            "version": "3.298.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c61e8f8640352c4cad1ec364c0801b8adae8adb9"
+                "reference": "b9bc34a8702a37a6151d843af966bf3b36aaaae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c61e8f8640352c4cad1ec364c0801b8adae8adb9",
-                "reference": "c61e8f8640352c4cad1ec364c0801b8adae8adb9",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b9bc34a8702a37a6151d843af966bf3b36aaaae3",
+                "reference": "b9bc34a8702a37a6151d843af966bf3b36aaaae3",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.298.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.298.5"
             },
-            "time": "2024-02-06T19:09:25+00:00"
+            "time": "2024-02-07T19:05:01+00:00"
         },
         {
             "name": "bref/bref",
@@ -1190,16 +1190,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.7.1",
+            "version": "4.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "887b4ca440dd554b0233ec077ef3b9a725df53e8"
+                "reference": "cf03b115fc3f08df4af8d32ce90530de95a3294f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/887b4ca440dd554b0233ec077ef3b9a725df53e8",
-                "reference": "887b4ca440dd554b0233ec077ef3b9a725df53e8",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/cf03b115fc3f08df4af8d32ce90530de95a3294f",
+                "reference": "cf03b115fc3f08df4af8d32ce90530de95a3294f",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-01-29T18:59:43+00:00"
+            "time": "2024-02-07T22:39:35+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -4706,16 +4706,16 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "0.5.1",
+            "version": "0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/php-svg-lib.git",
-                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456"
+                "reference": "732faa9fb4309221e2bd9b2fda5de44f947133aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
-                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/732faa9fb4309221e2bd9b2fda5de44f947133aa",
+                "reference": "732faa9fb4309221e2bd9b2fda5de44f947133aa",
                 "shasum": ""
             },
             "require": {
@@ -4746,9 +4746,9 @@
             "homepage": "https://github.com/PhenX/php-svg-lib",
             "support": {
                 "issues": "https://github.com/dompdf/php-svg-lib/issues",
-                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.1"
+                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.2"
             },
-            "time": "2023-12-11T20:56:08+00:00"
+            "time": "2024-02-07T12:49:40+00:00"
         },
         {
             "name": "php-science/textrank",
@@ -6073,16 +6073,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "76d449a358ece77d6f1d6331c68453e657172202"
+                "reference": "9bb7db07b5d66d90f6ebf542f09fc67d800e5259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/76d449a358ece77d6f1d6331c68453e657172202",
-                "reference": "76d449a358ece77d6f1d6331c68453e657172202",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/9bb7db07b5d66d90f6ebf542f09fc67d800e5259",
+                "reference": "9bb7db07b5d66d90f6ebf542f09fc67d800e5259",
                 "shasum": ""
             },
             "require": {
@@ -6121,7 +6121,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/jsonlint/issues",
-                "source": "https://github.com/Seldaek/jsonlint/tree/1.10.1"
+                "source": "https://github.com/Seldaek/jsonlint/tree/1.10.2"
             },
             "funding": [
                 {
@@ -6133,7 +6133,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-18T13:03:25+00:00"
+            "time": "2024-02-07T12:57:50+00:00"
         },
         {
             "name": "seld/phar-utils",
