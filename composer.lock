@@ -5683,16 +5683,16 @@
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.6.6",
+            "version": "2.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "76b1d813bcd29bcad667453f8a3d3e4164b8f043"
+                "reference": "d81e3f344fca08eb0b49cd3a4ad6a2c8d9aedbcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/76b1d813bcd29bcad667453f8a3d3e4164b8f043",
-                "reference": "76b1d813bcd29bcad667453f8a3d3e4164b8f043",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/d81e3f344fca08eb0b49cd3a4ad6a2c8d9aedbcb",
+                "reference": "d81e3f344fca08eb0b49cd3a4ad6a2c8d9aedbcb",
                 "shasum": ""
             },
             "require": {
@@ -5703,6 +5703,10 @@
                 "codeception/codeception": "^4.1.29",
                 "codeception/module-asserts": "^1.3.1",
                 "codeception/module-yii2": "^1.1.5",
+                "craftcms/ecs": "dev-main",
+                "craftcms/generator": "^1.0.0",
+                "craftcms/phpstan": "dev-main",
+                "putyourlightson/craft-sprig": "^2.0.0",
                 "vlucas/phpdotenv": "^5.4.1"
             },
             "type": "craft-module",
@@ -5721,7 +5725,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2023-12-16T01:18:51+00:00"
+            "time": "2024-02-09T02:28:56+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
