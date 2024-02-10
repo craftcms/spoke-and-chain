@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.298.6",
+            "version": "3.298.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "0afccba68a96c0cbc10f6fc5b08c5a0e09774220"
+                "reference": "b4d98bfc70df146774bf9b04f5ac5b39955fbad2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0afccba68a96c0cbc10f6fc5b08c5a0e09774220",
-                "reference": "0afccba68a96c0cbc10f6fc5b08c5a0e09774220",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b4d98bfc70df146774bf9b04f5ac5b39955fbad2",
+                "reference": "b4d98bfc70df146774bf9b04f5ac5b39955fbad2",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.298.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.298.7"
             },
-            "time": "2024-02-08T19:03:23+00:00"
+            "time": "2024-02-09T19:07:04+00:00"
         },
         {
             "name": "bref/bref",
@@ -645,16 +645,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "96d107e2bfe61bb9eafe55a9d45bd7faed1dd461"
+                "reference": "aaf6ed5ccd27c23f79a545e351b4d7842a99d0bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/96d107e2bfe61bb9eafe55a9d45bd7faed1dd461",
-                "reference": "96d107e2bfe61bb9eafe55a9d45bd7faed1dd461",
+                "url": "https://api.github.com/repos/composer/composer/zipball/aaf6ed5ccd27c23f79a545e351b4d7842a99d0bc",
+                "reference": "aaf6ed5ccd27c23f79a545e351b4d7842a99d0bc",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +739,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.0"
+                "source": "https://github.com/composer/composer/tree/2.7.1"
             },
             "funding": [
                 {
@@ -755,7 +755,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-08T14:09:19+00:00"
+            "time": "2024-02-09T14:26:28+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -4411,16 +4411,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.38",
+            "version": "4.0.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "2508dd5c39016ad3d03b2593bc8865b14655dcdf"
+                "reference": "d24f1530314c39212ba42c902f4111ab1ed0b519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/2508dd5c39016ad3d03b2593bc8865b14655dcdf",
-                "reference": "2508dd5c39016ad3d03b2593bc8865b14655dcdf",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/d24f1530314c39212ba42c902f4111ab1ed0b519",
+                "reference": "d24f1530314c39212ba42c902f4111ab1ed0b519",
                 "shasum": ""
             },
             "require": {
@@ -4439,6 +4439,17 @@
                 "codeception/module-phpbrowser": "^1.0.2",
                 "codeception/module-rest": "^1.4.2",
                 "codeception/module-yii2": "^1.1.5",
+                "craftcms/commerce": "^4.0.0",
+                "craftcms/digital-products": "^3.0.0",
+                "craftcms/ecs": "dev-main",
+                "craftcms/feed-me": "^5.0.0",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main",
+                "putyourlightson/craft-campaign": "^2.0.0",
+                "solspace/craft-calendar": "^4.0.0",
+                "spicyweb/craft-neo": "^4.0.0",
+                "verbb/doxter": "^5.0.0",
+                "verbb/super-table": "^3.0.0",
                 "vlucas/phpdotenv": "^3.0"
             },
             "type": "craft-plugin",
@@ -4488,7 +4499,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-22T20:12:43+00:00"
+            "time": "2024-02-09T19:58:16+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
