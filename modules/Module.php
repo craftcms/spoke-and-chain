@@ -139,7 +139,7 @@ class Module extends \yii\base\Module
 
             // Get the ID for each single’s handle
             foreach ($singleHandles as $handle) {
-                if ($section = Craft::$app->getSections()->getSectionByHandle($handle)) {
+                if ($section = Craft::$app->getEntries()->getSectionByHandle($handle)) {
                     $sectionIds[] = $section->id;
                 }
             }
