@@ -10,7 +10,7 @@
 
 {# Variables #}
 {% set successPage = craft.entries({ type: 'checkoutSuccess' }).one() %}
-{% set paymentSources = craft.commerce.paymentSources.allPaymentSourcesByUserId(currentUser.id ?? null) %}
+{% set paymentSources = craft.commerce.paymentSources.allPaymentSourcesByCustomerId(currentUser.id ?? null) %}
 {% set paymentSourceId = currentUser and paymentSources|length ? paymentSources[0].id : false %}
 {% set paymentForm = paymentForm is defined ? paymentForm : (cart.gatewayId ? cart.gateway.paymentFormModel() : null)  %}
 
