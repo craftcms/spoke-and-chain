@@ -18,8 +18,8 @@
     var SITE_URL = '{{ siteUrl }}';
     var CSRF = '{{ craft.app.request.getCsrfToken() }}';
 
-    var addressCountries = {{ craft.commerce.store.getStore().getCountriesList()|json_encode|raw }};
-    var addressStates = {{ craft.commerce.store.getStore().getAdministrativeAreasListByCountryCode()|json_encode|raw }};
+    var addressCountries = {{ currentStore.getSettings().getCountriesList()|json_encode|raw }};
+    var addressStates = {{ currentStore.getSettings().getAdministrativeAreasListByCountryCode()|json_encode|raw }};
   </script>
   {# /Project Scripts #}
 </head>
