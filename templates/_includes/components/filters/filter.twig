@@ -109,7 +109,7 @@
                 colors: product.colors,
                 type: product.bikeType[0] ?? null,
                 price: defaultVariant.priceAsCurrency,
-                salePrice: defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : false,
+                salePrice: defaultVariant.onPromotion ? defaultVariant.salePriceAsCurrency : false,
                 averageRating: craft.reviews.getAverageRatingByProductId(product.id)
               } only %}
             {% endfor %}
