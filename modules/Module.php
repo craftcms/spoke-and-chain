@@ -91,7 +91,9 @@ class Module extends \yii\base\Module
             Entry::class,
             Entry::EVENT_AFTER_SAVE,
             function($event) {
-                if ($event->sender && $event->sender->section->handle === 'reviews') {
+                /** @var Entry $entry */
+                $entry = $event->sender;
+                if ($entry && $entry->getSection()?->handle === 'reviews') {
                     Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
                 }
             }
@@ -102,7 +104,9 @@ class Module extends \yii\base\Module
             Entry::class,
             Entry::EVENT_AFTER_DELETE,
             function($event) {
-                if ($event->sender && $event->sender->section->handle === 'reviews') {
+                /** @var Entry $entry */
+                $entry = $event->sender;
+                if ($entry && $entry->getSection()?->handle === 'reviews') {
                     Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
                 }
             }
