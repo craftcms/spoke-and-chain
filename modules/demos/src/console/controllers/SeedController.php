@@ -636,11 +636,11 @@ class SeedController extends Controller
      */
     private function _getRandomOrderStatus(): OrderStatus
     {
-        if (empty($this->_orderStatuses)) {
+        if ($this->_orderStatuses === null) {
             $this->_orderStatuses = Plugin::getInstance()->getOrderStatuses()->getAllOrderStatuses();
         }
 
-        return $this->_faker->randomElement($this->_orderStatuses);
+        return $this->_orderStatuses->random();
     }
 
     /**
