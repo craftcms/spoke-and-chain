@@ -403,6 +403,7 @@ class SeedController extends Controller
             }, $groups);
 
             $attributes = [
+                'type' => User::class,
                 'email' => $email,
                 'username' => $email,
                 'firstName' => $firstName,
@@ -412,10 +413,7 @@ class SeedController extends Controller
             $this->stdout("    - [{$i}/{$numUsers}] Creating user " . $attributes['fullName'] . ' ... ');
 
             /** @var User $user */
-            $user = Craft::createObject([
-                'class' => User::class,
-                'attributes' => $attributes,
-            ]);
+            $user = Craft::$app->getElements()->createElement($attributes);
 
             if (!Craft::$app->getElements()->saveElement($user)) {
                 // If a user cannot be saved, simply skip over it and carry on.
