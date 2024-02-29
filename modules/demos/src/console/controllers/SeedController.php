@@ -4,6 +4,7 @@ namespace modules\demos\console\controllers;
 
 use CommerceGuys\Addressing\Subdivision\Subdivision;
 use Craft;
+use craft\commerce\db\Table;
 use craft\commerce\elements\db\ProductQuery;
 use craft\commerce\elements\Order;
 use craft\commerce\elements\Product;
@@ -27,6 +28,7 @@ use craft\helpers\FileHelper;
 use DateInterval;
 use DateTime;
 use Faker\Generator as FakerGenerator;
+use Illuminate\Support\Collection;
 use Solspace\Freeform\Elements\Db\SubmissionQuery;
 use Solspace\Freeform\Elements\Submission;
 use Solspace\Freeform\Freeform;
@@ -127,9 +129,9 @@ class SeedController extends Controller
     private array $_products = [];
 
     /**
-     * @var OrderStatus[]|array
+     * @var Collection<OrderStatus>|null
      */
-    private array $_orderStatuses = [];
+    private ?Collection $_orderStatuses = null;
 
     /**
      * @var DateTime|null
@@ -182,7 +184,7 @@ class SeedController extends Controller
     public function actionIndex(): int
     {
         $this->stdout('Beginning seed ... ' . PHP_EOL . PHP_EOL);
-        $this->runAction('freeform-data', ['contact']);
+        // $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
         $this->_cleanup();
@@ -488,7 +490,7 @@ class SeedController extends Controller
         $address = Craft::createObject([
             'class' => Address::class,
             'attributes' => [
-                'ownerId' => $customer->id,
+                'primaryOwnerId' => $customer->id,
                 'firstName' => $firstName,
                 'lastName' => $lastName,
                 'addressLine1' => $this->_faker->streetAddress,
@@ -517,7 +519,7 @@ class SeedController extends Controller
     private function _getRandomCountry(): string
     {
         if (empty($this->_countries)) {
-            $this->_countries = $this->_store->getCountries();
+            $this->_countries = $this->_store->getSettings()->getCountries();
         }
 
         return $this->_faker->randomElement($this->_countries);
@@ -676,12 +678,12 @@ class SeedController extends Controller
 
         /** @var Address $billingAddress */
         $billingAddress = Craft::$app->getElements()->duplicateElement($this->_getRandomAddressFromCustomer($customer), [
-            'ownerId' => $order->id,
+            'primaryOwnerId' => $order->id,
             'title' => Craft::t('commerce', 'Billing Address'),
         ]);
         /** @var Address $shippingAddress */
         $shippingAddress = Craft::$app->getElements()->duplicateElement($this->_getRandomAddressFromCustomer($customer), [
-            'ownerId' => $order->id,
+            'primaryOwnerId' => $order->id,
             'title' => Craft::t('commerce', 'Shipping Address'),
         ]);
 
@@ -707,7 +709,10 @@ class SeedController extends Controller
 
             $order->orderStatusId = $this->_getRandomOrderStatus()->id;
             $order->dateOrdered = $date;
-            Craft::$app->getElements()->saveElement($order);
+
+            Craft::$app->getDb()->createCommand()
+                ->update(Table::ORDERS, ['orderStatusId' => $order->orderStatusId, 'dateOrdered' => Db::prepareDateForDb($date)], ['id' => $order->id])
+                ->execute();
 
             $this->_createTransactionForOrder($order);
         }
@@ -740,7 +745,7 @@ class SeedController extends Controller
      */
     private function _createReviews()
     {
-        $reviewsSection = Craft::$app->getSections()->getSectionByHandle('reviews');
+        $reviewsSection = Craft::$app->getEntries()->getSectionByHandle('reviews');
         /** @var UserQuery $authorQuery */
         $authorQuery = Craft::$app->getElements()->createElementQuery(User::class);
         /** @var User|null $author */
