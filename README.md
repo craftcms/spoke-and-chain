@@ -19,10 +19,10 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 
 ### Development Technologies
 
-- [Craft CMS 4](https://craftcms.com/docs/4.x/)
-- [Craft Commerce 4](https://craftcms.com/docs/commerce/4.x/)
-- PostgreSQL (11.5+) / MySQL (5.7+)
-- PHP (8.0.2+), built on the [Yii 2 framework](https://www.yiiframework.com/)
+- [Craft CMS 5](https://craftcms.com/docs/5.x/)
+- [Craft Commerce 5](https://craftcms.com/docs/commerce/5.x/)
+- PostgreSQL (13+) / MySQL (8.0.17++)
+- PHP (8.2+), built on the [Yii 2 framework](https://www.yiiframework.com/)
 - Native Twig templates with reactive [Sprig](https://plugins.craftcms.com/sprig) components
 - [Node](https://nodejs.org/en/) (12+) / [npm](https://www.npmjs.com/) (6+), managing and building front end resources
 
