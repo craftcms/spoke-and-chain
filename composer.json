@@ -54,13 +54,6 @@
     {
       "type": "vcs",
       "url": "https://github.com/craftcms/store-hours"
-    },
-    {
-      "type": "path",
-      "url": "/var/www/html/repos/commerce",
-      "options": {
-        "symlink": true
-      }
     }
   ],
   "require-dev": {

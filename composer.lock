@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a9f22e66c601c05a78a12e7ce4c7cb2",
+    "content-hash": "faf846f95ff74ee6639cc9d50c1cd436",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1364,10 +1364,16 @@
         {
             "name": "craftcms/commerce",
             "version": "5.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/commerce.git",
+                "reference": "da5d000230242fb0b62c6b1cc6a059bd2a44b5ed"
+            },
             "dist": {
-                "type": "path",
-                "url": "/var/www/html/repos/commerce",
-                "reference": "8db35768749fd7c98134a578854acb732e8aee53"
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/da5d000230242fb0b62c6b1cc6a059bd2a44b5ed",
+                "reference": "da5d000230242fb0b62c6b1cc6a059bd2a44b5ed",
+                "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.0.0-beta.4",
@@ -1407,21 +1413,7 @@
                     "craftcommercetests\\fixtures\\": "tests/fixtures/"
                 }
             },
-            "scripts": {
-                "check-cs": [
-                    "ecs check --ansi"
-                ],
-                "fix-cs": [
-                    "ecs check --ansi --fix"
-                ],
-                "phpstan": [
-                    "phpstan --memory-limit=1G"
-                ],
-                "testunit": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "codecept run unit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -1434,17 +1426,14 @@
                 "yii2"
             ],
             "support": {
-                "email": "support@craftcms.com",
-                "issues": "https://github.com/craftcms/commerce/issues?state=open",
-                "forum": "https://craftcms.stackexchange.com/",
-                "source": "https://github.com/craftcms/commerce",
                 "docs": "https://craftcms.com/docs/commerce/4.x/",
-                "rss": "https://github.com/craftcms/commerce/releases.atom"
+                "email": "support@craftcms.com",
+                "forum": "https://craftcms.stackexchange.com/",
+                "issues": "https://github.com/craftcms/commerce/issues?state=open",
+                "rss": "https://github.com/craftcms/commerce/releases.atom",
+                "source": "https://github.com/craftcms/commerce"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "time": "2024-02-29T18:55:13+00:00"
         },
         {
             "name": "craftcms/flysystem",
