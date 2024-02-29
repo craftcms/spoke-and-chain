@@ -21,7 +21,7 @@
     "php": "^8.2",
     "bref/bref": "^2.0",
     "craftcms/aws-s3": "v3.x-dev",
-    "craftcms/cms": "5.0.x-dev",
+    "craftcms/cms": "^5.0.0-beta.4",
     "craftcms/commerce": "5.0.x-dev",
     "craftcms/redactor": "4.0.x-dev",
     "craftcms/store-hours": "4.0.x-dev",

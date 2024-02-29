@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e215fcc2d70f1400a1c1626c3ea1698",
+    "content-hash": "6a9f22e66c601c05a78a12e7ce4c7cb2",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1241,16 +1241,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.0.x-dev",
+            "version": "5.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "c413430c5b063aaae88af3fc62fb3c97cee624dc"
+                "reference": "d08cc1b051832c1cb32b51fa5a6453eb872f00da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c413430c5b063aaae88af3fc62fb3c97cee624dc",
-                "reference": "c413430c5b063aaae88af3fc62fb3c97cee624dc",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d08cc1b051832c1cb32b51fa5a6453eb872f00da",
+                "reference": "d08cc1b051832c1cb32b51fa5a6453eb872f00da",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-02-29T14:27:31+00:00"
+            "time": "2024-02-29T18:33:31+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1367,10 +1367,10 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/html/repos/commerce",
-                "reference": "04df505103d7f97a431972611c37efc5b1d9f807"
+                "reference": "8db35768749fd7c98134a578854acb732e8aee53"
             },
             "require": {
-                "craftcms/cms": "5.0.x-dev",
+                "craftcms/cms": "^5.0.0-beta.4",
                 "dompdf/dompdf": "^2.0.2",
                 "ibericode/vat": "^1.1.2",
                 "iio/libmergepdf": "^4.0",
@@ -12256,7 +12256,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "craftcms/aws-s3": 20,
-        "craftcms/cms": 20,
         "craftcms/commerce": 20,
         "craftcms/redactor": 20,
         "craftcms/store-hours": 20,
