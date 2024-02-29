@@ -1,4 +1,4 @@
-/.ddev
+/.ddev/docker-compose.local.yaml
 /.env
 /.idea
 /vendor
