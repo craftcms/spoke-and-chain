@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - ffe46793-3b3a-449d-a04e-5481d759fb9f # Reviews
 handle: reviews
 name: Reviews
 previewTargets:

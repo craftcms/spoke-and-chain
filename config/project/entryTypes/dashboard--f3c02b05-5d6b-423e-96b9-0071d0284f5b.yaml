@@ -46,7 +46,6 @@ fieldLayouts:
 handle: dashboard
 hasTitleField: true
 name: Dashboard
-section: 21dd60d6-92a7-4e82-8884-7dbe57d73c6c # Account
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

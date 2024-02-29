@@ -1,0 +1,96 @@
+color: null
+fieldLayouts:
+  4e683645-3a9f-4fa8-96a1-8de2cc285fe0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d832652-3b7e-417c-8a96-14965cdfd744 # Button - Button - Label
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb77724f-26e2-4302-9975-70c6edbbf5b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3815aa30-9bf2-4a2b-8d16-00fd08c68e86 # Button - Button - Aria Label
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Aria Label'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 63f8229c-6f4b-4d48-94e8-57f84447bb36
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee205f0d-9016-48b3-8c84-df68b08003cd # Button - Button - Entry Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Entry Link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 77e5293e-76f5-4e33-94ca-934a286ba769
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f531774-b9c9-4fde-8708-762f09ef7191 # Button - Button - Category Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Category Link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2ad506c-2942-4f40-84e1-26c2aab9aafe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6443fbe4-a797-4f2a-8b81-c76619128990 # Button - Button - Button URL
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Button URL'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec3ceb16-1d3c-46dd-80fb-054c895b2f70
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4242747f-13aa-4ca5-a783-a8d32fe97610
+        userCondition: null
+handle: button
+hasTitleField: false
+icon: null
+name: Button
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

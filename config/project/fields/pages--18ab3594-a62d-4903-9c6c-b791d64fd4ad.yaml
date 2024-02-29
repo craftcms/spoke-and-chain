@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: pages
+instructions: 'Select the pages that should be displayed in this column.'
+name: 'Footer Nav - Pages - Pages'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add a page'
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+    - singles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

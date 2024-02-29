@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 68e89100-65f8-4cef-9eee-a07652f3e68a # PDFs
 handle: pdfs
 name: PDFs
 propagationMethod: all

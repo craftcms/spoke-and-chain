@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 0dbacfe0-78ef-48ff-95a3-b7eb4dc8be86 # Emails
 handle: emails
 name: Emails
 previewTargets:

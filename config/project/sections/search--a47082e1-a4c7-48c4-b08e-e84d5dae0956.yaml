@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 56579ab7-dd43-426d-a734-d7fbc26fa861 # Search
 handle: search
 name: Search
 previewTargets:

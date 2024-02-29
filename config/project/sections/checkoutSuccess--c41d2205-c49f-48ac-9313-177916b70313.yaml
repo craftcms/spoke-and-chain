@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 20eb0536-818f-47ab-b3d8-762b36d90162 # Checkout: Success
 handle: checkoutSuccess
 name: 'Checkout: Success'
 previewTargets:

@@ -3,7 +3,7 @@ handle: bike
 hasDimensions: false
 hasProductTitleField: true
 hasVariantTitleField: true
-hasVariants: true
+maxVariants: null
 name: Bike
 productFieldLayouts:
   8104fb3b-ffde-4282-993b-2d27a7bc6bd5:

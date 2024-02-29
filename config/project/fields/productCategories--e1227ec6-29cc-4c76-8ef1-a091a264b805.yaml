@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: productCategories
+instructions: 'Select product categories that should be displayed in this column.'
+name: 'Footer Nav - Product Categories - Product Categories'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

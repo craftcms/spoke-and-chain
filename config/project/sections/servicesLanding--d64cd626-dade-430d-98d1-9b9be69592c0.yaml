@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 2af1095c-7195-4f2b-ad59-d4e36ee17dd9 # Services
 handle: servicesLanding
 name: Services
 previewTargets:

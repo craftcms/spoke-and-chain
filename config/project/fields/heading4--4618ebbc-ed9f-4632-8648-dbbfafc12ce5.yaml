@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: heading4
+instructions: 'Enter an optional heading to be displayed above the form.'
+name: 'Content Blocks - Form - Heading'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

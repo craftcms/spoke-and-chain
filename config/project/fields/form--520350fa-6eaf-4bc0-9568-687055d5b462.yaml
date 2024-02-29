@@ -1,0 +1,8 @@
+columnSuffix: null
+handle: form
+instructions: 'Choose the form you’d like to display on this page.'
+name: 'Content Blocks - Form - Form'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: Solspace\Freeform\FieldTypes\FormFieldType

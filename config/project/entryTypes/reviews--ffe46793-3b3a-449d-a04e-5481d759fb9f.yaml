@@ -62,7 +62,6 @@ fieldLayouts:
 handle: reviews
 hasTitleField: true
 name: Reviews
-section: 32faa6bc-a330-408a-b37a-4e8bde606b43 # Reviews
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

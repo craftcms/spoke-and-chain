@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - ab006600-8f38-47a9-a12d-6627bcac15d9 # Checkout: Shipping
 handle: checkoutShipping
 name: 'Checkout: Shipping'
 previewTargets:

@@ -56,7 +56,6 @@ fieldLayouts:
 handle: page
 hasTitleField: true
 name: Page
-section: 2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5 # Landing Pages
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

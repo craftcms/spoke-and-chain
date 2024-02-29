@@ -1,16 +1,17 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: button
 instructions: null
 name: Button
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_button}}'
-  maxBlocks: 1
-  minBlocks: 0
+  entryTypes:
+    - 4735edf8-ae6c-4f28-a8df-338ca5637aab # Button
+  maxEntries: 1
+  minEntries: 0
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix
