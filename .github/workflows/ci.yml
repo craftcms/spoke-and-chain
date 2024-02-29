@@ -6,7 +6,7 @@ on:
     branches: [ stable, beta, dev ]
   pull_request:
     branches: [ stable, beta, dev ]
-    
+
 permissions:
   contents: read
 
@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ 'ubuntu-latest' ]
-        php-versions: [ 8.1, 8.0 ]
+        php-versions: [ 8.2 ]
 
     name: PHP ${{ matrix.php-versions }}
     env:
