@@ -1,0 +1,36 @@
+color: null
+fieldLayouts:
+  a4d40528-744c-4343-940a-f76056228c2d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4ddf421a-c279-4733-9b0c-2df498c98ec8 # Content Blocks - Full Width Image - Image
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Image
+            providesThumbs: true
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 86a67306-fc79-44db-9eac-06abb4b7800f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 145c6fa5-235b-418f-b42a-1827819d1774
+        userCondition: null
+handle: fullWidthImage
+hasTitleField: false
+icon: null
+name: 'Full Width Image'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

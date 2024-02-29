@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 8680f635-edfc-4169-a039-4c4a489258d7 # Homepage
 handle: homepage
 name: Homepage
 previewTargets:

@@ -1,6 +1,5 @@
 columnSuffix: pakraxun
 contentColumnType: text
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: imageCaption
 instructions: 'Optionally write a brief caption to appear along with the image.'
 name: 'Image Caption'

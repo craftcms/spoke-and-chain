@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: body2
+instructions: null
+name: 'Content Blocks - Body - Body'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: null
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

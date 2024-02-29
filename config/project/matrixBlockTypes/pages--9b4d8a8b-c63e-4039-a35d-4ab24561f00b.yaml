@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: a004cfa0-a7f8-419b-8343-d6670a0a52e8 # Heading
+            fieldUid: a004cfa0-a7f8-419b-8343-d6670a0a52e8 # Footer Nav - Pages - Heading
             instructions: null
             label: null
             required: false
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad # Pages
+            fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad # Footer Nav - Pages - Pages
             instructions: null
             label: null
             required: true
@@ -27,7 +27,7 @@ fieldLayouts:
         name: Content
         uid: a2fce55d-f813-42c9-88ab-4cea5dbabc01
 fields:
-  18ab3594-a62d-4903-9c6c-b791d64fd4ad: # Pages
+  18ab3594-a62d-4903-9c6c-b791d64fd4ad: # Footer Nav - Pages - Pages
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -52,7 +52,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  a004cfa0-a7f8-419b-8343-d6670a0a52e8: # Heading
+  a004cfa0-a7f8-419b-8343-d6670a0a52e8: # Footer Nav - Pages - Heading
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null

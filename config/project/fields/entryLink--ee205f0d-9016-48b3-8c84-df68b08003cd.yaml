@@ -1,0 +1,27 @@
+columnSuffix: null
+handle: entryLink
+instructions: 'Select and entry to link to (leave this blank when linking to a category or using the button URL)'
+name: 'Button - Button - Entry Link'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:21dd60d6-92a7-4e82-8884-7dbe57d73c6c' # Account
+    - 'section:506e9a86-f8ca-4f35-bffc-21da95813979' # Articles
+    - 'section:f6e39d3c-bc6d-4fac-b921-c655cde09804'
+    - 'section:2fad1c7c-c4f2-4fdf-9154-8c88bcc18db5' # Landing Pages
+    - singles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

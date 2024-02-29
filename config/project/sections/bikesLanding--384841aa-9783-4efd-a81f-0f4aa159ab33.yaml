@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 1620c507-acc0-4d72-ab32-2228a73a088d # Bikes
 handle: bikesLanding
 name: Bikes
 previewTargets:

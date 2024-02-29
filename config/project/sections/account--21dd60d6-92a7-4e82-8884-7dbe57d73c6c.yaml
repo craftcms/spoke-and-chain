@@ -1,5 +1,12 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 17eacd1a-f88d-4127-b328-9b69903624fc # Orders
+  - 449f7b84-6b85-4caa-9b9e-1575953516a8 # Settings
+  - 2170bde4-2ca6-4d6f-b2d0-7367050a564a # Membership
+  - 21814db2-4816-41e4-bdc9-7d25e0869666 # Register
+  - 938640bc-562a-4bde-9ab8-4c0b3489b21f # Login
+  - f3c02b05-5d6b-423e-96b9-0071d0284f5b # Dashboard
 handle: account
 name: Account
 previewTargets:

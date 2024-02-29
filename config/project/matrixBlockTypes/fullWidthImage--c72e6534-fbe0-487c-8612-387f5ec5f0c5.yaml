@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 4ddf421a-c279-4733-9b0c-2df498c98ec8 # Image
+            fieldUid: 4ddf421a-c279-4733-9b0c-2df498c98ec8 # Content Blocks - Full Width Image - Image
             instructions: null
             label: null
             required: true
@@ -17,7 +17,7 @@ fieldLayouts:
         name: Content
         uid: 145c6fa5-235b-418f-b42a-1827819d1774
 fields:
-  4ddf421a-c279-4733-9b0c-2df498c98ec8: # Image
+  4ddf421a-c279-4733-9b0c-2df498c98ec8: # Content Blocks - Full Width Image - Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

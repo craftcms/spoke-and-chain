@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - d1927da5-c26d-4063-b443-dc05b85a6468 # Checkout: Address
 handle: checkoutAddress
 name: 'Checkout: Address'
 previewTargets:

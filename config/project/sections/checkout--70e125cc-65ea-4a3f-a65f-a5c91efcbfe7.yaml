@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 42b7e744-7597-4a2c-991e-8ba00290c19f # Checkout
 handle: checkout
 name: Checkout
 previewTargets:

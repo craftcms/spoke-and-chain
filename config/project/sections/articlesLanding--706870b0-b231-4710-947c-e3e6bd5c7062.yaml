@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - a853d93f-f289-4671-b5d1-61a8099d5abb # Articles Landing
 handle: articlesLanding
 name: 'Articles Landing'
 previewTargets:

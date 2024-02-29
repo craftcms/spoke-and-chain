@@ -56,7 +56,6 @@ fieldLayouts:
 handle: checkoutAddress
 hasTitleField: true
 name: 'Checkout: Address'
-section: 33b8424b-2140-4fc1-a0bb-6b07da33b045 # Checkout: Address
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

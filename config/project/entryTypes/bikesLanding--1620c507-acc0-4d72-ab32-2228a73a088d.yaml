@@ -56,7 +56,6 @@ fieldLayouts:
 handle: bikesLanding
 hasTitleField: false
 name: Bikes
-section: 384841aa-9783-4efd-a81f-0f4aa159ab33 # Bikes
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

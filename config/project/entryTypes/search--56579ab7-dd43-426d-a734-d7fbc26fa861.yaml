@@ -66,7 +66,6 @@ fieldLayouts:
 handle: search
 hasTitleField: false
 name: Search
-section: a47082e1-a4c7-48c4-b08e-e84d5dae0956 # Search
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

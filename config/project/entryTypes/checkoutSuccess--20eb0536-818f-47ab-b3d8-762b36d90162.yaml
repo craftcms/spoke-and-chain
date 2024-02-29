@@ -56,7 +56,6 @@ fieldLayouts:
 handle: checkoutSuccess
 hasTitleField: true
 name: 'Checkout: Success'
-section: c41d2205-c49f-48ac-9313-177916b70313 # Checkout: Success
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 27dc92a5-4575-4a37-ad4a-09eed2b40038 # Page
 handle: pages
 name: 'Landing Pages'
 previewTargets:

@@ -52,7 +52,6 @@ fieldLayouts:
 handle: pdfs
 hasTitleField: true
 name: PDFs
-section: 220feec1-8cc9-4f3e-82da-73c748d0ae0b # PDFs
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

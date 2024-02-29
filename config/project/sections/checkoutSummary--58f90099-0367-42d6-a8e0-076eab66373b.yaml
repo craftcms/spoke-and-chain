@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - c3af370d-8c71-468a-b040-1583d3342b27 # Checkout: Summary
 handle: checkoutSummary
 name: 'Checkout: Summary'
 previewTargets:

@@ -66,7 +66,6 @@ fieldLayouts:
 handle: articles
 hasTitleField: true
 name: Articles
-section: 506e9a86-f8ca-4f35-bffc-21da95813979 # Articles
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

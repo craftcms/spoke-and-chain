@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 74c53fbd-78e5-4125-87f7-38c75efce7d3 # Cart
 handle: cart
 name: Cart
 previewTargets:

@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Products
+            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Content Blocks - Products - Products
             instructions: null
             label: null
             required: true
@@ -17,7 +17,7 @@ fieldLayouts:
         name: Content
         uid: b89de1a7-7320-4ddd-8c5c-6bce35abf395
 fields:
-  d6666f58-4d11-4bd3-b5bd-bc92b52a538c: # Products
+  d6666f58-4d11-4bd3-b5bd-bc92b52a538c: # Content Blocks - Products - Products
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

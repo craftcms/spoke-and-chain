@@ -1,16 +1,20 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: contentBlocks
 instructions: 'Use the available block types to compose the page’s main content.'
 name: 'Content Blocks'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_contentblocks}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    - c72e6534-fbe0-487c-8612-387f5ec5f0c5 # Full Width Image
+    - e43faa4d-d8c4-4527-a298-2d64a1c9061b # Products
+    - e177ffea-3077-40f7-8dda-265effea6592 # Form
+    - fa42e7b9-0e6f-4d2b-8bf7-9fb4e1cc9010 # Body
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - c31c5919-08e9-4f36-a47e-1c2c169b993a # Error Pages
 handle: errorPages
 name: 'Error Pages'
 previewTargets:

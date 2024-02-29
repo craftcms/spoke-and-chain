@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - be4e2a2f-de59-4443-a08e-476d20bc36d6 # Plans
 handle: plans
 name: Plans
 previewTargets:

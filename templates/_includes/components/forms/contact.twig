@@ -23,7 +23,7 @@
               {% set fieldName = 'input-' ~ loop.parent.loop.index ~ '-' ~ loop.index %}
               <div class="{{ form.customAttributes.columnClass }} pt-4"{{ field.rulesHtmlData }}>
                 <label for="{{ fieldName }}">{{ field.label }}</label>
-                {{ field.renderInput({ id:fieldName, class: field.errors|length ? 'border-red-600' : '' , errorClass: 'hidden' }) }}
+                {{ field.renderInput({ handle: fieldName, class: field.errors|length ? 'border-red-600' : '' , errorClass: 'hidden' }) }}
                 {% include '_includes/components/forms/errorList' with { errors: field.errors } only %}
               </div>
             {% endfor %}

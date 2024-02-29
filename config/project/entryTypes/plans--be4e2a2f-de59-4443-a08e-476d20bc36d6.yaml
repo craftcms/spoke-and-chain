@@ -42,7 +42,6 @@ fieldLayouts:
 handle: plans
 hasTitleField: true
 name: Plans
-section: 97a0491d-814e-4172-811d-51096a86e67d # Plans
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

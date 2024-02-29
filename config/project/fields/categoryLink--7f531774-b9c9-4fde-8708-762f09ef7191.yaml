@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: categoryLink
+instructions: 'Select a category to link to (leave blank if using the button URL).'
+name: 'Button - Button - Category Link'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: 1
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:aa40a16f-55f6-4e2c-818c-5e1f6a3a5b57' # Bike Types
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

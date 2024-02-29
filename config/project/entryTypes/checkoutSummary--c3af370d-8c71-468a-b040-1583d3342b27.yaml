@@ -56,7 +56,6 @@ fieldLayouts:
 handle: checkoutSummary
 hasTitleField: true
 name: 'Checkout: Summary'
-section: 58f90099-0367-42d6-a8e0-076eab66373b # Checkout: Summary
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

@@ -18,24 +18,44 @@
     "email": "support@craftcms.com"
   },
   "require": {
-    "php": ">=8.0.2",
+    "php": "^8.2",
     "bref/bref": "^2.0",
-    "craftcms/aws-s3": "^2.0.0",
-    "craftcms/cms": "^4.2.0.2",
-    "craftcms/commerce": "^4.1.0",
-    "craftcms/redactor": "^3.0.0",
-    "craftcms/store-hours": "^3.0.0",
-    "craftcms/yii2-dynamodb": "^2.0.1",
+    "craftcms/aws-s3": "v3.x-dev",
+    "craftcms/cms": "^5.0.0-beta.4",
+    "craftcms/commerce": "5.0.x-dev",
+    "craftcms/redactor": "4.0.x-dev",
+    "craftcms/store-hours": "4.0.x-dev",
     "fakerphp/faker": "^1.9",
-    "mead-steve/mono-snag": "^4.1",
-    "nystudio107/craft-seomatic": "^4.0.0-beta.8",
-    "nystudio107/craft-twigpack": "^4.0.0-beta.2",
-    "oberon/starfield": "^2.0.0",
-    "putyourlightson/craft-sprig": "^2.0.0-beta.1",
-    "solspace/craft-freeform": "4.0.0-beta.5",
-    "verbb/default-dashboard": "^2.0.0-beta.1",
+    "nystudio107/craft-seomatic": "v5.x-dev",
+    "nystudio107/craft-twigpack": "v5.x-dev",
+    "solspace/craft-freeform": "dev-v5-craft5",
+    "solspace/craft3-commons": "dev-dev-craft5 as 2.0.3",
+    "oberon/starfield": "dev-master",
+    "putyourlightson/craft-sprig": "v3.x-dev",
     "vlucas/phpdotenv": "^5.4.1"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/AugustMiller/craft-twigpack"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/craftcms/craft-freeform"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/craftcms/craft3-commons"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/craftcms/craft-starfield"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/craftcms/store-hours"
+    }
+  ],
   "require-dev": {
     "craftcms/ecs": "dev-main",
     "craftcms/phpstan": "dev-main",
@@ -51,9 +71,6 @@
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
-    "platform": {
-      "php": "8.0.2"
-    },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true

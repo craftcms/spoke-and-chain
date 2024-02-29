@@ -52,7 +52,6 @@ fieldLayouts:
 handle: emails
 hasTitleField: true
 name: Emails
-section: 5075e975-0eb8-4e62-9ae7-9d8cd88348eb # Emails
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

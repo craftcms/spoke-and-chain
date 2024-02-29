@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - f2df00c0-373c-4c6a-8b92-af04075dd56c # Contact
 handle: contact
 name: Contact
 previewTargets:

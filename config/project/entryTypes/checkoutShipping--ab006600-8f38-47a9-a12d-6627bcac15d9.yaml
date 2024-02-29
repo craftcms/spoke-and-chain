@@ -46,7 +46,6 @@ fieldLayouts:
 handle: checkoutShipping
 hasTitleField: true
 name: 'Checkout: Shipping'
-section: 92145d02-d68b-4c71-a8be-fa082467d8fc # Checkout: Shipping
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

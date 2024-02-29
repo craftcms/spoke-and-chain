@@ -48,8 +48,8 @@
             <h1 class="mt-0">{{ product.title }}</h1>
             <div class="mt-1 flex items-start  leading-5">
               <div>
-                <div>{{ defaultVariant.onSale ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
-                {% if defaultVariant.onSale %}
+                <div>{{ defaultVariant.onPromotion ? defaultVariant.salePriceAsCurrency : defaultVariant.priceAsCurrency }}</div>
+                {% if defaultVariant.onPromotion %}
                   <div>
                     <s aria-label="{{ 'Reduced from {price}'|t('site', { price: defaultVariant.priceAsCurrency }) }}" class="block mt-1 text-xs text-gray-500">{{ defaultVariant.priceAsCurrency }}</s>
                   </div>

@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  a07d3103-a401-4270-a15f-172faf15aade:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a004cfa0-a7f8-419b-8343-d6670a0a52e8 # Footer Nav - Pages - Heading
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Heading
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 00796380-d9d1-4f41-a957-eba55fd76dd6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 18ab3594-a62d-4903-9c6c-b791d64fd4ad # Footer Nav - Pages - Pages
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Pages
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4768b662-0d97-43bb-a011-7eab31eb1a88
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a2fce55d-f813-42c9-88ab-4cea5dbabc01
+        userCondition: null
+handle: pages
+hasTitleField: false
+icon: null
+name: Pages
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

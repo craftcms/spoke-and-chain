@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  007ad558-50e4-45ef-a6bf-44c60060e91e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Footer Nav - Product Categories - Heading
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Heading
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 609adb8a-50cc-44ce-ac5c-5cc3320a1c90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Footer Nav - Product Categories - Product Categories
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Product Categories'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55f8572a-6412-48fb-bb21-9c3d224a5632
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bba1caa1-ab3c-4ffa-81eb-fddf4de3fee0
+        userCondition: null
+handle: productCategories
+hasTitleField: false
+icon: null
+name: 'Product Categories'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

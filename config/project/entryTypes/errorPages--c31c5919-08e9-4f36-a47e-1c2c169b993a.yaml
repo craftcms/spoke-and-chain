@@ -62,7 +62,6 @@ fieldLayouts:
 handle: errorPages
 hasTitleField: true
 name: 'Error Pages'
-section: 0f952e73-17b8-408c-9c37-3f07a5d16a92 # Error Pages
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

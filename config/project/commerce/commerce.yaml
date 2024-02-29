@@ -1,0 +1,5 @@
+stores084e99dd-eb3e-4322-8616-8a04eda795ae:
+  currency: USD
+  handle: primaryStore
+  name: 'Primary Store'
+  primary: true

@@ -76,7 +76,6 @@ fieldLayouts:
 handle: cart
 hasTitleField: true
 name: Cart
-section: 7e2085d8-34c4-41a9-81fc-db0fef15293f # Cart
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

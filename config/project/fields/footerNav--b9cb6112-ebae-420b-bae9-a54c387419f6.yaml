@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6aa1ad27-db4b-4af9-8658-d93eff3d4512 # Common
 handle: footerNav
 instructions: 'Use the available block types to build the site’s global footer navigation. Each block type represents a column.'
 name: 'Footer Nav'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_footernav}}'
-  maxBlocks: 4
-  minBlocks: null
+  entryTypes:
+    - 3db0de34-4e51-40f0-a195-e3ab0a071dcf # Product Categories
+    - 9b4d8a8b-c63e-4039-a35d-4ab24561f00b # Pages
+  maxEntries: 4
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix
