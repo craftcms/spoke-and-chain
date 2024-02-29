@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "faf846f95ff74ee6639cc9d50c1cd436",
+    "content-hash": "44bd06bca9c0840a3a35620fbcd21cea",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.300.7",
+            "version": "3.300.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "aefd3ed981a6a1104e3621855dc0bed5ffaa4d51"
+                "reference": "421be99f109a330acd4297abe2f41069eccbf447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/aefd3ed981a6a1104e3621855dc0bed5ffaa4d51",
-                "reference": "aefd3ed981a6a1104e3621855dc0bed5ffaa4d51",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/421be99f109a330acd4297abe2f41069eccbf447",
+                "reference": "421be99f109a330acd4297abe2f41069eccbf447",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.300.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.300.8"
             },
-            "time": "2024-02-28T19:05:57+00:00"
+            "time": "2024-02-29T19:06:50+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1363,16 +1363,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "5.0.x-dev",
+            "version": "5.0.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "da5d000230242fb0b62c6b1cc6a059bd2a44b5ed"
+                "reference": "3126805811dfb0ff0212b67ba2708a5224191e3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/da5d000230242fb0b62c6b1cc6a059bd2a44b5ed",
-                "reference": "da5d000230242fb0b62c6b1cc6a059bd2a44b5ed",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/3126805811dfb0ff0212b67ba2708a5224191e3d",
+                "reference": "3126805811dfb0ff0212b67ba2708a5224191e3d",
                 "shasum": ""
             },
             "require": {
@@ -1433,7 +1433,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2024-02-29T18:55:13+00:00"
+            "time": "2024-02-29T20:11:50+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -12245,7 +12245,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "craftcms/aws-s3": 20,
-        "craftcms/commerce": 20,
         "craftcms/redactor": 20,
         "craftcms/store-hours": 20,
         "nystudio107/craft-seomatic": 20,
