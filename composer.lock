@@ -1367,7 +1367,7 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/html/repos/commerce",
-                "reference": "f5cbebb57b798d73e0388c3e0ea9750eb5aa37e6"
+                "reference": "04df505103d7f97a431972611c37efc5b1d9f807"
             },
             "require": {
                 "craftcms/cms": "5.0.x-dev",
