@@ -1,12 +1,12 @@
 <h1 align="center">Spoke & Chain Craft Commerce Demo</h1>
 
-![Spoke & Chain homepage](https://raw.githubusercontent.com/craftcms/spoke-and-chain/main/web/assets/guide/homepage.png)
+![Spoke & Chain homepage](https://github.com/craftcms/spoke-and-chain/raw/stable/web/assets/volumes/images/Logos/logo.png)
 
 ## Overview
 
 Spoke & Chain is a fictitious bicycle shop custom-built to demonstrate [Craft CMS](https://craftcms.com) and [Craft Commerce](https://craftcms.com/commerce). This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo?kind=spokeandchain).
 
-We’ve also included instructions below for setting up the demo in a local development environment with [Craft Nitro](https://getnitro.sh).
+We’ve also included instructions below for setting up the demo in a local development environment with [DDEV](https://ddev.com/).
 
 Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerce store:
 
@@ -19,10 +19,10 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 
 ### Development Technologies
 
-- [Craft CMS 3](https://craftcms.com/docs/3.x/)
-- [Craft Commerce 3](https://craftcms.com/docs/commerce/3.x/)
+- [Craft CMS 4](https://craftcms.com/docs/4.x/)
+- [Craft Commerce 4](https://craftcms.com/docs/commerce/4.x/)
 - PostgreSQL (11.5+) / MySQL (5.7+)
-- PHP (7.2.5+), built on the [Yii 2 framework](https://www.yiiframework.com/)
+- PHP (8.0.2+), built on the [Yii 2 framework](https://www.yiiframework.com/)
 - Native Twig templates with reactive [Sprig](https://plugins.craftcms.com/sprig) components
 - [Node](https://nodejs.org/en/) (12+) / [npm](https://www.npmjs.com/) (6+), managing and building front end resources
 
@@ -37,37 +37,43 @@ Spoke & Chain shows core Craft CMS features and a fully-configured Craft Commerc
 
 ### Environment
 
-If you’d like to get Spoke & Chain running in a local environment, we recommend using [Craft Nitro](https://getnitro.sh):
+If you’d like to get Spoke & Chain running in a local environment, we recommend using [DDEV](https://ddev.com):
 
-1. Follow Nitro’s [installation instructions](https://craftcms.com/docs/nitro/2.x/installation.html) for your OS.
-2. Make sure you’ve used `nitro db new` to create a MySQL 8 or MariaDB 10 database engine.
-3. Run `nitro create` with the URL to this repository:
-    ```zsh
-    nitro create craftcms/spoke-and-chain spokeandchain
-    ```
-    - hostname: `spokeandchain.nitro`
-    - web root: `web`
-    - PHP version: `8.0`
-    - database? `Y`
-    - database engine: `mysql-8.0-*.database.nitro` (or `mariadb-latest-*.database.nitro`)
-    - database name: `spokeandchain`
-    - update env file? `Y`
-4. Restore the initial database
-   ```zsh
-   nitro craft db/restore seed.sql
+1. Clone the Spoke & Chain repository to your system.
+   ```sh
+   git clone git@github.com:craftcms/spoke-and-chain.git spokeandchain && cd spokeandchain
    ```
-5. Optionally seed demo data:
-   ```zsh
-   nitro craft demos/seed
+2. Initialize a DDEV project for the repo:
+   ```sh
+   ddev config --project-type=craftcms --project-name=spokeandchain --docroot=web && ddev start
+   ```
+3. Install the Composer dependencies:
+   ```sh
+   ddev composer install
+   ```
+4. Create your `.env` file:
+   ```sh
+   cp .env.example .env
+   ```
+5. Set the application ID and security key:
+   ```sh
+   ddev craft setup/keys
+   ```
+6. Restore the initial database
+   ```sh
+   curl -L https://github.com/craftcms/spoke-and-chain/raw/stable/seed.sql -o seed.sql && ddev import-db --src seed.sql
+   ```
+7. Optionally seed demo data:
+   ```sh
+   ddev craft demos/seed
    ```
    > ⚠️ The Craft site is offline by default, and the seeder turns it on when it’s finished. If you skip this step, you’ll need to manually bring the site online by navigating to **Settings** → **General Settings** and switching **System Status** to “Online”.
-6. Move to the project directory and add a Craft account for yourself by following the prompts:
-    ```zsh
-    cd spokeandchain
-    nitro craft users/create --admin
-    ```
+8. Add a Craft account for yourself by following the prompts:
+   ```sh
+   ddev craft users/create --admin
+   ```
 
-> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/3.x/installation.html).
+> 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/4.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/4.x/installation.html).
 
 ### Front End
 
@@ -125,20 +131,20 @@ Cypress tests cover multiple parts of the website:
 
 Set the environment variables Cypress needs to run by copying `cypress.example.json` to `cypress.json` and adjusting it:
 
-```
-cp cypress.example.json cypress.json
+```sh
+cp cypress.config.example.js cypress.config.js
 ```
 
 Open the Cypress Test Runner from the project root:
 
-```
+```sh
 npx cypress open
 ```
 
-Open accessibility tests only:
+Run accessibility tests only:
 
-```
-npx cypress open --config testFiles=./front/a11y/*.spec.js
+```sh
+npx cypress run --spec "cypress/e2e/front/a11y/*.cy.js"
 ```
 
 ## License

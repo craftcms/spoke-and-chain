@@ -1,4 +1,4 @@
-dateModified: 1651680926
+dateModified: 1708993303
 email:
   fromEmail: support@craftcms.com
   fromName: 'Spoke & Chain'
@@ -190,7 +190,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: SI24H20R5SQCC22FZMXL94F7
-    schemaVersion: 4.0.1
+    schemaVersion: 4.5.0
   default-dashboard:
     edition: standard
     enabled: true
@@ -205,7 +205,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: 5MSLVVCLNO91XX5P8MBVKF1N
-    schemaVersion: 3.6.2
+    schemaVersion: 4.1.0
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: ''
@@ -229,7 +229,6 @@ plugins:
       digestRecipients: ''
       displayFeed: ''
       emailTemplateDirectory: null
-      emailTemplateStorage: db
       exportLabels: ''
       fieldDisplayOrder: name
       fillWithGet: false
@@ -238,7 +237,7 @@ plugins:
       formSubmitDisable: false
       formSubmitExpiration: null
       formTemplateDirectory: null
-      formattingTemplate: flexbox.html
+      formattingTemplate: flexbox.twig
       freeformHoneypot: true
       freeformHoneypotEnhancement: false
       hideBannerDemo: '1'
@@ -303,7 +302,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: WRI3RMSQQ0H9XWZV0QH9FRE0
-    schemaVersion: 3.0.11
+    schemaVersion: 3.0.12
     settings:
       addHrefLang: true
       addPaginatedHreflang: true
@@ -370,5 +369,5 @@ system:
   live: true
   name: 'Spoke & Chain'
   retryDuration: null
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles

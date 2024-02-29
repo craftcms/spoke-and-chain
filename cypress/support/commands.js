@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+import 'cypress-audit/commands'
 
 Cypress.Commands.add("cpVisit", (url, options) => {
     cy.visit('/' + Cypress.env('CP_TRIGGER') + url, options)
@@ -87,15 +88,10 @@ Cypress.Commands.add("addProductToCart", () => {
     cy.get('a.product-card').first()
         .click()
 
-    cy.get('#buy input[type=submit]')
-        .click();
+    cy.get('#buy button[type=submit]')
+        .click({scrollBehavior: 'center'});
 })
 
 Cypress.Commands.add("navigateToCart", () => {
-    cy.get('button.cart-toggle')
-        .click();
-
-    cy.get('div.cart-menu a')
-        .contains('Cart')
-        .click();
+    cy.visit('/cart');
 })

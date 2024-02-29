@@ -3,8 +3,10 @@
 
 {% set type = entry is defined ? '' : category.slug %}
 {% set colorsQuery = craft.app.request.getQueryParam('colors', '') %}
+{% set colorsArray = colorsQuery ? colorsQuery|split('|')|map(c => c|e('js')) : [] %}
 {% set materialsQuery = craft.app.request.getQueryParam('materials', '') %}
-{% set sort = craft.app.request.getQueryParam('sort', '') %}
+{% set materialsQuery = materialsQuery ? materialsQuery|split('|')|map(m => m|e) : [] %}
+{% set sort = craft.app.request.getQueryParam('sort', '')|e('js') %}
 
 {% block content %}
   {% set mainImage = null %}
@@ -22,8 +24,7 @@
       short: true,
     } only %}
   </div>
-
-  <div x-data="filter()" x-init='init({ type: "{{ type }}", colors: {{ (colorsQuery ? colorsQuery|split('|') : [])|json_encode|raw }}, materials: {{ (materialsQuery ? materialsQuery|split('|') : [])|json_encode|raw }}, sort: "{{ sort }}" }, $nextTick)'
+  <div x-data="filter()" x-init='init({ type: "{{ type }}", colors: {{ colorsArray|json_encode|raw }}, materials: {{ materialsQuery|json_encode|raw }}, sort: "{{ sort }}" }, $nextTick)'
       class="relative"
   >
     {{ sprig('ProductFilter',

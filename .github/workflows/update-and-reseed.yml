@@ -2,8 +2,8 @@ name: Update dependencies and reseed
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: "0 */12 * * *"
+  schedule:
+    - cron: "0 */12 * * *"
 
 jobs:
   update_and_reseed:
@@ -13,6 +13,8 @@ jobs:
       changes_detected: ${{ steps.auto_commit.outputs.changes_detected == 'true' }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
 
       - run: make update_and_reseed
 

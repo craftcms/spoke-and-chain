@@ -55,14 +55,16 @@ class Module extends \yii\base\Module
             Address::class,
             Model::EVENT_DEFINE_RULES,
             function($event) {
-                $event->rules[] = [[
-                    'firstName',
-                    'lastName',
-                    'addressLine1',
-                    'locality',
-                    'countryCode',
-                    'postalCode',
-                ], 'required'];
+                if (Craft::$app->getRequest()->getIsSiteRequest()) {
+                    $event->rules[] = [[
+                        'firstName',
+                        'lastName',
+                        'addressLine1',
+                        'locality',
+                        'countryCode',
+                        'postalCode',
+                    ], 'required'];
+                }
             }
         );
 

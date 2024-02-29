@@ -153,6 +153,10 @@ class SeedController extends Controller
     {
         parent::init();
 
+        if (!Craft::$app->isInstalled) {
+            return;
+        }
+
         // Don’t let order status emails send while this is running
         Event::on(
             Emails::class,
@@ -293,7 +297,7 @@ class SeedController extends Controller
 
     private function deleteElements(ElementQuery $query, string $label = 'elements'): void
     {
-        $count = $query ->count();
+        $count = $query->count();
         $errorCount = 0;
         $this->stdout("Deleting $label ..." . PHP_EOL);
 
