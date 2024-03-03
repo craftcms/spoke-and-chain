@@ -9051,16 +9051,16 @@
         },
         {
             "name": "verbb/base",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/verbb-base.git",
-                "reference": "fb33550d8bc1c879f3e114ce00ee70d624014b9e"
+                "reference": "1cd36eeea2448793d0e77b652801c27272c803c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/fb33550d8bc1c879f3e114ce00ee70d624014b9e",
-                "reference": "fb33550d8bc1c879f3e114ce00ee70d624014b9e",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/1cd36eeea2448793d0e77b652801c27272c803c5",
+                "reference": "1cd36eeea2448793d0e77b652801c27272c803c5",
                 "shasum": ""
             },
             "require": {
@@ -9097,7 +9097,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-19T22:50:02+00:00"
+            "time": "2024-03-03T04:45:09+00:00"
         },
         {
             "name": "verbb/default-dashboard",
