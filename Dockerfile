@@ -4,7 +4,7 @@ COPY composer.json composer.json
 COPY composer.lock composer.lock
 RUN composer install --ignore-platform-reqs --no-interaction --prefer-dist
 
-FROM craftcms/nginx:8.1
+FROM craftcms/nginx:8.2
 
 USER root
 RUN apk add --no-cache mysql-client mariadb-connector-c git
