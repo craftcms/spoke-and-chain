@@ -38,35 +38,35 @@ use yii\console\ExitCode;
 
 class SeedController extends Controller
 {
-    public const FREEFORM_SUBMISSION_MIN = 100;
-    public const FREEFORM_SUBMISSION_MAX = 200;
-    public const FREEFORM_MESSAGE_CHARS_MIN = 120;
-    public const FREEFORM_MESSAGE_CHARS_MAX = 300;
+    public const FREEFORM_SUBMISSION_MIN = 1;
+    public const FREEFORM_SUBMISSION_MAX = 10;
+    public const FREEFORM_MESSAGE_CHARS_MIN = 5;
+    public const FREEFORM_MESSAGE_CHARS_MAX = 10;
 
     /**
      * Maximum number of carts to generate per day.
      */
-    public const CARTS_PER_DAY_MAX = 3;
+    public const CARTS_PER_DAY_MAX = 1;
 
     /**
      * Maximum number of customers to generate.
      */
-    public const CUSTOMERS_MAX = 50;
+    public const CUSTOMERS_MAX = 10;
 
     /**
      * Minimum number of customers to generate.
      */
-    public const CUSTOMERS_MIN = 40;
+    public const CUSTOMERS_MIN = 5;
 
     /**
      * Maximum number of orders to generate per day.
      */
-    public const ORDERS_PER_DAY_MAX = 3;
+    public const ORDERS_PER_DAY_MAX = 1;
 
     /**
      * Maximum number of products per order/cart.
      */
-    public const PRODUCTS_PER_ORDER_MAX = 3;
+    public const PRODUCTS_PER_ORDER_MAX = 1;
 
     /**
      * The start date of when orders should begin generating.
@@ -76,12 +76,12 @@ class SeedController extends Controller
     /**
      * Maximum number of users to generate.
      */
-    public const USERS_MAX = 30;
+    public const USERS_MAX = 10;
 
     /**
      * Minimum number of users to generate.
      */
-    public const USERS_MIN = 20;
+    public const USERS_MIN = 5;
 
     /**
      * Percentage of customers to give VIP status.
@@ -106,7 +106,7 @@ class SeedController extends Controller
     /**
      * Maximum number of reviews per product.
      */
-    public const REVIEWS_PER_PRODUCT_MAX = 20;
+    public const REVIEWS_PER_PRODUCT_MAX = 2;
 
     /**
      * @var array
@@ -291,6 +291,8 @@ class SeedController extends Controller
         $this->deleteElements(Order::find(), 'orders');
         $this->deleteElements(User::find()->status(User::STATUS_INACTIVE), 'customers');
         $this->deleteElements(Entry::find()->section('reviews'), 'reviews');
+        $this->deleteElements(User::find()->group(self::CUSTOMER_GROUP_HANDLE), 'customers');
+        $this->deleteElements(User::find()->group(self::VIP_CUSTOMER_GROUP_HANDLE), 'customers');
 
         Plugin::getInstance()->getCarts()->purgeIncompleteCarts();
 
