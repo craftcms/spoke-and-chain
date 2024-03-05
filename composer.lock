@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44bd06bca9c0840a3a35620fbcd21cea",
+    "content-hash": "694ef3859e3e077a05b491e8e85c1ad8",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1769,6 +1769,72 @@
                 "rss": "https://github.com/craftcms/store-hours/commits/v2.atom"
             },
             "time": "2024-02-28T15:21:48+00:00"
+        },
+        {
+            "name": "craftcms/yii2-dynamodb",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/yii2-dynamodb.git",
+                "reference": "0e2fe6c2697a06ef6c6f033fb42b64fb4d8764e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/yii2-dynamodb/zipball/0e2fe6c2697a06ef6c6f033fb42b64fb4d8764e4",
+                "reference": "0e2fe6c2697a06ef6c6f033fb42b64fb4d8764e4",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": ">=2.4",
+                "ext-json": "*",
+                "yiisoft/yii2": "^2.0.45",
+                "yiisoft/yii2-queue": "^2.3.2"
+            },
+            "provide": {
+                "bower-asset/bootstrap": "*",
+                "bower-asset/inputmask": "*",
+                "bower-asset/jquery": "*",
+                "bower-asset/punycode": "*",
+                "bower-asset/typeahead.js": "*",
+                "bower-asset/yii2-pjax": "*"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "craftcms\\dynamodb\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Yii2 implementation of a cache, session, and queue driver for DynamoDB",
+            "keywords": [
+                "cache",
+                "dynamodb",
+                "queue",
+                "session",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/craftcms/yii2-dynamodb/blob/README.md",
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/yii2-dynamodb/issues?state=open",
+                "source": "https://github.com/craftcms/yii2-dynamodb"
+            },
+            "time": "2023-03-08T20:08:21+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
