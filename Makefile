@@ -32,8 +32,6 @@ test:
 	${EXEC} curl -IX GET --fail http://localhost:8080/actions/app/health-check
 	${EXEC} curl -IX GET --fail http://localhost:8080/
 gc:
-	${EXEC} php craft gc --delete-all-trashed --interactive=0
-	${EXEC} php craft utils/prune-revisions --max-revisions=1
 	${EXEC_MYSQL} 'TRUNCATE TABLE `searchindex`'
 	${EXEC} php craft resave/assets --update-search-index=1
 	${EXEC} php craft resave/carts --update-search-index=1
@@ -43,4 +41,6 @@ gc:
 	${EXEC} php craft resave/products --update-search-index=1
 	${EXEC} php craft resave/tags --update-search-index=1
 	${EXEC} php craft resave/users --update-search-index=1
+	${EXEC} php craft gc --delete-all-trashed --interactive=0
+	${EXEC} php craft utils/prune-revisions --max-revisions=1
 update_and_reseed: init restore update clean seed gc backup
