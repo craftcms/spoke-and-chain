@@ -5,7 +5,7 @@ EXEC_MYSQL ?= ${COMPOSE} exec -T mysql mysql --user=craft --password=secret --da
 RUN ?= ${COMPOSE} run --rm web
 WEB_CONTAINER = docker-compose ps -q web
 
-.PHONY: init update restore backup seed clean test gc
+.PHONY: init update restore backup seed clean test gc drop
 
 init:
 	cp .env.docker .env
@@ -17,6 +17,8 @@ update:
 	${EXEC} php craft queue/run --interactive=0
 restore:
 	${EXEC} php craft db/restore ${DUMPFILE}
+drop:
+	${EXEC} php craft db/drop-all-tables --interactive=0
 backup:
 	${EXEC} php craft db/backup ${DUMPFILE} --overwrite --interactive=0
 	docker cp $(shell ${WEB_CONTAINER}):/app/composer.lock ./
