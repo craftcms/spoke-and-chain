@@ -157,16 +157,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.1.15",
+            "version": "2.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "ffdcd2667ac6eaeab88f82a2d5949fa5697f7a24"
+                "reference": "b90057f076e95d8ce6d122c4da2e6c6d47dd920a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/ffdcd2667ac6eaeab88f82a2d5949fa5697f7a24",
-                "reference": "ffdcd2667ac6eaeab88f82a2d5949fa5697f7a24",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/b90057f076e95d8ce6d122c4da2e6c6d47dd920a",
+                "reference": "b90057f076e95d8ce6d122c4da2e6c6d47dd920a",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.15"
+                "source": "https://github.com/brefphp/bref/tree/2.1.16"
             },
             "funding": [
                 {
@@ -232,7 +232,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-16T14:07:58+00:00"
+            "time": "2024-03-15T10:23:05+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -4411,16 +4411,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.43",
+            "version": "4.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "7020b001572558ad9db323e841cc00a8006133ce"
+                "reference": "4ea8ea54952c61369c5e708699e6701631f4c6ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/7020b001572558ad9db323e841cc00a8006133ce",
-                "reference": "7020b001572558ad9db323e841cc00a8006133ce",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/4ea8ea54952c61369c5e708699e6701631f4c6ad",
+                "reference": "4ea8ea54952c61369c5e708699e6701631f4c6ad",
                 "shasum": ""
             },
             "require": {
@@ -4506,7 +4506,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-08T22:02:20+00:00"
+            "time": "2024-03-15T03:26:54+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
