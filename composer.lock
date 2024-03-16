@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.301.0",
+            "version": "3.301.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a0173e793f244eeedd0a47d40437a3bb9d8f05b8"
+                "reference": "0a910d2b35e7087337cdf3569dc9b6ce232aafba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a0173e793f244eeedd0a47d40437a3bb9d8f05b8",
-                "reference": "a0173e793f244eeedd0a47d40437a3bb9d8f05b8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0a910d2b35e7087337cdf3569dc9b6ce232aafba",
+                "reference": "0a910d2b35e7087337cdf3569dc9b6ce232aafba",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.1"
             },
-            "time": "2024-03-14T18:09:12+00:00"
+            "time": "2024-03-15T18:14:42+00:00"
         },
         {
             "name": "bref/bref",
@@ -496,28 +496,28 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.4.2",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "18fc0ab083a48f85bfee31f3786537353b8a8403"
+                "reference": "0c5ccfcfea312b5c5a190a21ac5cef93f74baf99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/18fc0ab083a48f85bfee31f3786537353b8a8403",
-                "reference": "18fc0ab083a48f85bfee31f3786537353b8a8403",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/0c5ccfcfea312b5c5a190a21ac5cef93f74baf99",
+                "reference": "0c5ccfcfea312b5c5a190a21ac5cef93f74baf99",
                 "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
                 "ext-pcre": "*",
-                "php": "^5.3.2 || ^7.0 || ^8.0"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan": "^1.10",
                 "psr/log": "^1.0",
                 "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
+                "symfony/process": "^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "type": "library",
             "extra": {
@@ -552,7 +552,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.4.2"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.0"
             },
             "funding": [
                 {
@@ -568,20 +568,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-14T13:20:33+00:00"
+            "time": "2024-03-15T14:00:32+00:00"
         },
         {
             "name": "composer/class-map-generator",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/class-map-generator.git",
-                "reference": "953cc4ea32e0c31f2185549c7d216d7921f03da9"
+                "reference": "8286a62d243312ed99b3eee20d5005c961adb311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/953cc4ea32e0c31f2185549c7d216d7921f03da9",
-                "reference": "953cc4ea32e0c31f2185549c7d216d7921f03da9",
+                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/8286a62d243312ed99b3eee20d5005c961adb311",
+                "reference": "8286a62d243312ed99b3eee20d5005c961adb311",
                 "shasum": ""
             },
             "require": {
@@ -625,7 +625,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/class-map-generator/issues",
-                "source": "https://github.com/composer/class-map-generator/tree/1.1.0"
+                "source": "https://github.com/composer/class-map-generator/tree/1.1.1"
             },
             "funding": [
                 {
@@ -641,7 +641,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-30T13:58:57+00:00"
+            "time": "2024-03-15T12:53:41+00:00"
         },
         {
             "name": "composer/composer",
@@ -1190,16 +1190,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.8.2",
+            "version": "4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "3d3854612ea7419aabed4dfa45017b7b02201ddf"
+                "reference": "51956c455a9a362cb1efd5dc5d93d9eaa5ea8493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/3d3854612ea7419aabed4dfa45017b7b02201ddf",
-                "reference": "3d3854612ea7419aabed4dfa45017b7b02201ddf",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/51956c455a9a362cb1efd5dc5d93d9eaa5ea8493",
+                "reference": "51956c455a9a362cb1efd5dc5d93d9eaa5ea8493",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-03-12T23:00:16+00:00"
+            "time": "2024-03-15T21:39:24+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1638,16 +1638,16 @@
         },
         {
             "name": "craftcms/store-hours",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/store-hours.git",
-                "reference": "97246a6968d01dc6802b5566bdeaf7d4796cef4a"
+                "reference": "f534a4bfb60964bfa3e2a95c45d7ea8a7337f29b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/97246a6968d01dc6802b5566bdeaf7d4796cef4a",
-                "reference": "97246a6968d01dc6802b5566bdeaf7d4796cef4a",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/f534a4bfb60964bfa3e2a95c45d7ea8a7337f29b",
+                "reference": "f534a4bfb60964bfa3e2a95c45d7ea8a7337f29b",
                 "shasum": ""
             },
             "require": {
@@ -1698,7 +1698,7 @@
                 "rss": "https://github.com/craftcms/store-hours/commits/v2.atom",
                 "source": "https://github.com/craftcms/store-hours"
             },
-            "time": "2022-05-03T22:36:01+00:00"
+            "time": "2024-03-15T22:17:40+00:00"
         },
         {
             "name": "craftcms/yii2-dynamodb",
