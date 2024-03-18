@@ -36,7 +36,7 @@ gc:
 	${EXEC} php craft resave/assets --update-search-index=1
 	${EXEC} php craft resave/carts --update-search-index=1
 	${EXEC} php craft resave/categories --update-search-index=1
-	${EXEC} php craft resave/entries --update-search-index=1
+	${EXEC} php craft resave/entries --update-search-index=1 --section=account,articles,articlesLanding,bikesLanding,cart,checkout,checkoutAddress,checkoutShipping,checkoutSuccess,checkoutSummary,contact,emails,errorPages,homepage,pages,pdfs,plans,reviews,search,servicesLanding
 	${EXEC} php craft resave/orders --update-search-index=1
 	${EXEC} php craft resave/products --update-search-index=1
 	${EXEC} php craft resave/tags --update-search-index=1
