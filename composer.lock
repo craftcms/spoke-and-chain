@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.301.3",
+            "version": "3.301.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6b21e34d24a73ea66492869be90443069034fdb3"
+                "reference": "1d04b11a621eaceb389d2cfbd82bcdc423903796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6b21e34d24a73ea66492869be90443069034fdb3",
-                "reference": "6b21e34d24a73ea66492869be90443069034fdb3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1d04b11a621eaceb389d2cfbd82bcdc423903796",
+                "reference": "1d04b11a621eaceb389d2cfbd82bcdc423903796",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.4"
             },
-            "time": "2024-03-19T18:05:04+00:00"
+            "time": "2024-03-20T18:16:55+00:00"
         },
         {
             "name": "bref/bref",
@@ -8858,16 +8858,16 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.7.2",
+            "version": "6.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "1ae5c4721cecb6be1fa1c0bebb506ed454a3e02d"
+                "reference": "8389cec2c34926bb87e87736265f077ad822adeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/1ae5c4721cecb6be1fa1c0bebb506ed454a3e02d",
-                "reference": "1ae5c4721cecb6be1fa1c0bebb506ed454a3e02d",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/8389cec2c34926bb87e87736265f077ad822adeb",
+                "reference": "8389cec2c34926bb87e87736265f077ad822adeb",
                 "shasum": ""
             },
             "require": {
@@ -8918,7 +8918,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.2"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.3"
             },
             "funding": [
                 {
@@ -8926,7 +8926,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-03-18T17:08:30+00:00"
+            "time": "2024-03-20T16:19:35+00:00"
         },
         {
             "name": "theiconic/name-parser",
