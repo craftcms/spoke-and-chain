@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f51e1b13456807607c26f6e4005a3afc",
+    "content-hash": "12daa2620faed22b84fa2efcb9d3df71",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.301.1",
+            "version": "3.301.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "0a910d2b35e7087337cdf3569dc9b6ce232aafba"
+                "reference": "1d04b11a621eaceb389d2cfbd82bcdc423903796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0a910d2b35e7087337cdf3569dc9b6ce232aafba",
-                "reference": "0a910d2b35e7087337cdf3569dc9b6ce232aafba",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1d04b11a621eaceb389d2cfbd82bcdc423903796",
+                "reference": "1d04b11a621eaceb389d2cfbd82bcdc423903796",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.4"
             },
-            "time": "2024-03-15T18:14:42+00:00"
+            "time": "2024-03-20T18:16:55+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -879,16 +879,16 @@
         },
         {
             "name": "composer/pcre",
-            "version": "3.1.2",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "4775f35b2d70865807c89d32c8e7385b86eb0ace"
+                "reference": "5b16e25a5355f1f3afdfc2f954a0a80aec4826a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/4775f35b2d70865807c89d32c8e7385b86eb0ace",
-                "reference": "4775f35b2d70865807c89d32c8e7385b86eb0ace",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/5b16e25a5355f1f3afdfc2f954a0a80aec4826a8",
+                "reference": "5b16e25a5355f1f3afdfc2f954a0a80aec4826a8",
                 "shasum": ""
             },
             "require": {
@@ -930,7 +930,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/3.1.2"
+                "source": "https://github.com/composer/pcre/tree/3.1.3"
             },
             "funding": [
                 {
@@ -946,7 +946,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-07T15:38:35+00:00"
+            "time": "2024-03-19T10:26:25+00:00"
         },
         {
             "name": "composer/semver",
@@ -1241,16 +1241,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.0.0-beta.9",
+            "version": "5.0.0-beta.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "5ec6db054699db006780c8a0d0b656f57a5f3faf"
+                "reference": "bd7eaa53137a2dfb08bdfe002e2abad822851da0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5ec6db054699db006780c8a0d0b656f57a5f3faf",
-                "reference": "5ec6db054699db006780c8a0d0b656f57a5f3faf",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/bd7eaa53137a2dfb08bdfe002e2abad822851da0",
+                "reference": "bd7eaa53137a2dfb08bdfe002e2abad822851da0",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-03-18T05:03:18+00:00"
+            "time": "2024-03-19T17:35:45+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1698,16 +1698,16 @@
         },
         {
             "name": "craftcms/store-hours",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/store-hours.git",
-                "reference": "3382708e4b5c96f138170fb7c566f9d3d2e04422"
+                "reference": "5af8c5e5becf47f9be52af00f57e26c68d2b96de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/3382708e4b5c96f138170fb7c566f9d3d2e04422",
-                "reference": "3382708e4b5c96f138170fb7c566f9d3d2e04422",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/5af8c5e5becf47f9be52af00f57e26c68d2b96de",
+                "reference": "5af8c5e5becf47f9be52af00f57e26c68d2b96de",
                 "shasum": ""
             },
             "require": {
@@ -1758,7 +1758,7 @@
                 "rss": "https://github.com/craftcms/store-hours/commits/v2.atom",
                 "source": "https://github.com/craftcms/store-hours"
             },
-            "time": "2024-03-15T22:19:12+00:00"
+            "time": "2024-03-19T06:42:04+00:00"
         },
         {
             "name": "craftcms/yii2-dynamodb",
@@ -4686,20 +4686,20 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.17",
+            "version": "1.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "d2d9c8706fc1a6f40253fc78762101ce9b5ac386"
+                "reference": "e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/d2d9c8706fc1a6f40253fc78762101ce9b5ac386",
-                "reference": "d2d9c8706fc1a6f40253fc78762101ce9b5ac386",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed",
+                "reference": "e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0-alpha.1",
+                "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0-beta.1",
                 "phpdocumentor/reflection-docblock": "^5.0.0"
             },
             "require-dev": {
@@ -4750,7 +4750,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-30T03:18:54+00:00"
+            "time": "2024-03-19T20:14:01+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -7139,32 +7139,32 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "dev-v5-craft5",
+            "version": "5.1.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/craftcms/craft-freeform.git",
-                "reference": "406ce80e55bf4297b4eca8b5968bcc59644d791b"
+                "url": "https://github.com/solspace/craft-freeform.git",
+                "reference": "6cf7e3ba5d89625c3ea4b3b991e95edfbcd4ec4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/craft-freeform/zipball/406ce80e55bf4297b4eca8b5968bcc59644d791b",
-                "reference": "406ce80e55bf4297b4eca8b5968bcc59644d791b",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/6cf7e3ba5d89625c3ea4b3b991e95edfbcd4ec4d",
+                "reference": "6cf7e3ba5d89625c3ea4b3b991e95edfbcd4ec4d",
                 "shasum": ""
             },
             "require": {
                 "composer/class-map-generator": "^1.1",
                 "composer/composer": "^1.0|^2.0.13",
-                "craftcms/cms": "^4.0.0 || ^5.0.0-alpha.12",
+                "craftcms/cms": "^4.0.0|^5.0.0-beta.1",
                 "doctrine/annotations": "^2.0",
                 "egulias/email-validator": "^2.1|^3.0",
                 "ext-json": "*",
                 "ext-zip": "*",
                 "hashids/hashids": "^2.0|^3.0|^4.0",
                 "nesbot/carbon": "^1.22.1|^2.19",
-                "php": "^8.2",
+                "php": "^8.0.2|^8.2.0",
                 "phpoffice/phpspreadsheet": "^1.29",
-                "solspace/craft3-commons": "^2.0",
                 "stripe/stripe-php": "^7.0|^8.0|^9.0|^10.0",
+                "symfony/expression-language": "^2.8|^3.0|^4.0|^5.0|^6.0",
                 "symfony/filesystem": "^2.8|^3.0|^4.0|^5.0|^6.0",
                 "symfony/finder": "^2.8|^3.0|^4.0|^5.0|^6.0",
                 "symfony/property-access": "^2.8|^3.0|^4.0|^5.0|^6.0",
@@ -7173,13 +7173,12 @@
             },
             "require-dev": {
                 "brainmaestro/composer-git-hooks": "^2.8",
-                "craftcms/rector": "dev-main",
-                "friendsofphp/php-cs-fixer": "^v3.14.4",
+                "friendsofphp/php-cs-fixer": "^v3.52.0",
                 "phpunit/phpunit": "^9.3.0"
             },
             "type": "craft-plugin",
             "extra": {
-                "schemaVersion": "5.0.21",
+                "schemaVersion": "5.0.22",
                 "handle": "freeform",
                 "class": "Solspace\\Freeform\\Freeform",
                 "name": "Freeform",
@@ -7206,31 +7205,7 @@
                     "Solspace\\Freeform\\": "packages/plugin/src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Solspace\\Freeform\\Tests\\": "packages/plugin/src/Tests/"
-                }
-            },
-            "scripts": {
-                "test:unit": [
-                    "vendor/bin/phpunit --configuration ./phpunit.xml"
-                ],
-                "fix": [
-                    "vendor/bin/php-cs-fixer fix --diff --config=./.php-cs-fixer.dist.php"
-                ],
-                "fix:dry-run": [
-                    "vendor/bin/php-cs-fixer fix --dry-run --diff  --config=./.php-cs-fixer.dist.php"
-                ],
-                "cghooks": [
-                    "vendor/bin/cghooks"
-                ],
-                "post-install-cmd": [
-                    "cghooks add --ignore-lock"
-                ],
-                "post-update-cmd": [
-                    "cghooks update"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Solspace",
@@ -7239,49 +7214,10 @@
             ],
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
-                "source": "https://github.com/craftcms/craft-freeform/tree/v5-craft5"
+                "issues": "https://github.com/solspace/craft-freeform/issues",
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.6"
             },
-            "time": "2024-02-28T15:09:49+00:00"
-        },
-        {
-            "name": "solspace/craft3-commons",
-            "version": "dev-dev-craft5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/craftcms/craft3-commons.git",
-                "reference": "48eb85e646f680024c7ca436dd4862f952e3f435"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/craft3-commons/zipball/48eb85e646f680024c7ca436dd4862f952e3f435",
-                "reference": "48eb85e646f680024c7ca436dd4862f952e3f435",
-                "shasum": ""
-            },
-            "require": {
-                "monolog/monolog": "^1.23.0|^2.0|^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Solspace\\Commons\\": "src/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit --configuration ./phpunit.xml"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "Solspace Commons Library for Craft CMS 3 plugins",
-            "support": {
-                "source": "https://github.com/craftcms/craft3-commons/tree/dev-craft5"
-            },
-            "time": "2024-02-06T00:23:41+00:00"
+            "time": "2024-03-20T20:54:47+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -7589,6 +7525,178 @@
                 "source": "https://github.com/sunra/php-simple-html-dom-parser/tree/master"
             },
             "time": "2016-11-22T22:57:47+00:00"
+        },
+        {
+            "name": "symfony/cache",
+            "version": "v6.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache.git",
+                "reference": "0ef36534694c572ff526d91c7181f3edede176e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/0ef36534694c572ff526d91c7181f3edede176e7",
+                "reference": "0ef36534694c572ff526d91c7181f3edede176e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^2.0|^3.0",
+                "psr/log": "^1.1|^2|^3",
+                "symfony/cache-contracts": "^2.5|^3",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/var-exporter": "^6.3.6|^7.0"
+            },
+            "conflict": {
+                "doctrine/dbal": "<2.13.1",
+                "symfony/dependency-injection": "<5.4",
+                "symfony/http-kernel": "<5.4",
+                "symfony/var-dumper": "<5.4"
+            },
+            "provide": {
+                "psr/cache-implementation": "2.0|3.0",
+                "psr/simple-cache-implementation": "1.0|2.0|3.0",
+                "symfony/cache-implementation": "1.1|2.0|3.0"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/dbal": "^2.13.1|^3|^4",
+                "predis/predis": "^1.1|^2.0",
+                "psr/simple-cache": "^1.0|^2.0|^3.0",
+                "symfony/config": "^5.4|^6.0|^7.0",
+                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
+                "symfony/filesystem": "^5.4|^6.0|^7.0",
+                "symfony/http-kernel": "^5.4|^6.0|^7.0",
+                "symfony/messenger": "^5.4|^6.0|^7.0",
+                "symfony/var-dumper": "^5.4|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Cache\\": ""
+                },
+                "classmap": [
+                    "Traits/ValueWrapper.php"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides extended PSR-6, PSR-16 (and tags) implementations",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "caching",
+                "psr6"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache/tree/v6.4.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-02-22T20:27:10+00:00"
+        },
+        {
+            "name": "symfony/cache-contracts",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache-contracts.git",
+                "reference": "1d74b127da04ffa87aa940abe15446fa89653778"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/1d74b127da04ffa87aa940abe15446fa89653778",
+                "reference": "1d74b127da04ffa87aa940abe15446fa89653778",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.4-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Cache\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to caching",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache-contracts/tree/v3.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-09-25T12:52:38+00:00"
         },
         {
             "name": "symfony/console",
@@ -7906,6 +8014,70 @@
                 }
             ],
             "time": "2023-05-23T14:45:45+00:00"
+        },
+        {
+            "name": "symfony/expression-language",
+            "version": "v6.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/expression-language.git",
+                "reference": "b4a4ae33fbb33a99d23c5698faaecadb76ad0fe4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/b4a4ae33fbb33a99d23c5698faaecadb76ad0fe4",
+                "reference": "b4a4ae33fbb33a99d23c5698faaecadb76ad0fe4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/cache": "^5.4|^6.0|^7.0",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/service-contracts": "^2.5|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\ExpressionLanguage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an engine that can compile and evaluate expressions",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/expression-language/tree/v6.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-01-23T14:51:35+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -10058,6 +10230,80 @@
             "time": "2024-02-15T11:19:14+00:00"
         },
         {
+            "name": "symfony/var-exporter",
+            "version": "v7.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-exporter.git",
+                "reference": "dfb0acb6803eb714f05d97dd4c5abe6d5fa9fe41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/dfb0acb6803eb714f05d97dd4c5abe6d5fa9fe41",
+                "reference": "dfb0acb6803eb714f05d97dd4c5abe6d5fa9fe41",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\VarExporter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Allows exporting any serializable PHP data structure to plain PHP code",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "clone",
+                "construct",
+                "export",
+                "hydrate",
+                "instantiate",
+                "lazy-loading",
+                "proxy",
+                "serialize"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-exporter/tree/v7.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-02-26T10:35:24+00:00"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v5.4.35",
             "source": {
@@ -10134,20 +10380,20 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.7.0",
+            "version": "6.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "51cd1b39de5643836e62661d162c472d63167df7"
+                "reference": "8389cec2c34926bb87e87736265f077ad822adeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/51cd1b39de5643836e62661d162c472d63167df7",
-                "reference": "51cd1b39de5643836e62661d162c472d63167df7",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/8389cec2c34926bb87e87736265f077ad822adeb",
+                "reference": "8389cec2c34926bb87e87736265f077ad822adeb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.5.0"
             },
             "type": "library",
             "autoload": {
@@ -10194,7 +10440,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.0"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.3"
             },
             "funding": [
                 {
@@ -10202,7 +10448,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-03-18T15:14:12+00:00"
+            "time": "2024-03-20T16:19:35+00:00"
         },
         {
             "name": "theiconic/name-parser",
@@ -12037,16 +12283,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.62",
+            "version": "1.10.63",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "cd5c8a1660ed3540b211407c77abf4af193a6af9"
+                "reference": "ad12836d9ca227301f5fb9960979574ed8628339"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/cd5c8a1660ed3540b211407c77abf4af193a6af9",
-                "reference": "cd5c8a1660ed3540b211407c77abf4af193a6af9",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ad12836d9ca227301f5fb9960979574ed8628339",
+                "reference": "ad12836d9ca227301f5fb9960979574ed8628339",
                 "shasum": ""
             },
             "require": {
@@ -12095,7 +12341,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-13T12:27:20+00:00"
+            "time": "2024-03-18T16:53:53+00:00"
         },
         {
             "name": "psy/psysh",
@@ -12298,21 +12544,12 @@
             "time": "2022-09-04T10:37:52+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "solspace/craft3-commons",
-            "version": "dev-dev-craft5",
-            "alias": "2.0.3",
-            "alias_normalized": "2.0.3.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "craftcms/redactor": 20,
         "nystudio107/craft-seomatic": 20,
         "nystudio107/craft-twigpack": 20,
-        "solspace/craft-freeform": 20,
-        "solspace/craft3-commons": 20,
         "oberon/starfield": 20,
         "putyourlightson/craft-sprig": 20,
         "craftcms/ecs": 20,
