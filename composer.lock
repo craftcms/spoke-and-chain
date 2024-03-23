@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.301.5",
+            "version": "3.301.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "434f13d3bdb0230bfb247cf77a7ecfaa8b83aa97"
+                "reference": "18c0ebd71d3071304f1ea02aa9af75f95863177a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/434f13d3bdb0230bfb247cf77a7ecfaa8b83aa97",
-                "reference": "434f13d3bdb0230bfb247cf77a7ecfaa8b83aa97",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/18c0ebd71d3071304f1ea02aa9af75f95863177a",
+                "reference": "18c0ebd71d3071304f1ea02aa9af75f95863177a",
                 "shasum": ""
             },
             "require": {
@@ -151,22 +151,22 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.6"
             },
-            "time": "2024-03-21T18:06:56+00:00"
+            "time": "2024-03-22T18:05:21+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "2.1.16",
+            "version": "2.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "b90057f076e95d8ce6d122c4da2e6c6d47dd920a"
+                "reference": "6041ad7d5ca1901dfb91323c9a903ec0d4fc9333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/b90057f076e95d8ce6d122c4da2e6c6d47dd920a",
-                "reference": "b90057f076e95d8ce6d122c4da2e6c6d47dd920a",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/6041ad7d5ca1901dfb91323c9a903ec0d4fc9333",
+                "reference": "6041ad7d5ca1901dfb91323c9a903ec0d4fc9333",
                 "shasum": ""
             },
             "require": {
@@ -179,7 +179,7 @@
                 "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0|^2.0",
                 "psr/http-server-handler": "^1.0",
-                "riverline/multipart-parser": "^2.0.6",
+                "riverline/multipart-parser": "^2.1.2",
                 "symfony/process": "^4.4|^5.0|^6.0|^7.0"
             },
             "require-dev": {
@@ -220,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.16"
+                "source": "https://github.com/brefphp/bref/tree/2.1.17"
             },
             "funding": [
                 {
@@ -232,7 +232,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-15T10:23:05+00:00"
+            "time": "2024-03-22T12:39:34+00:00"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -1377,16 +1377,16 @@
         },
         {
             "name": "craftcms/flysystem",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/flysystem.git",
-                "reference": "2cb782bf4dc8164886c84973bccad5609c4fa212"
+                "reference": "04ad4b85a04d4c660b33ee8859e3db0cee6c3c85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/flysystem/zipball/2cb782bf4dc8164886c84973bccad5609c4fa212",
-                "reference": "2cb782bf4dc8164886c84973bccad5609c4fa212",
+                "url": "https://api.github.com/repos/craftcms/flysystem/zipball/04ad4b85a04d4c660b33ee8859e3db0cee6c3c85",
+                "reference": "04ad4b85a04d4c660b33ee8859e3db0cee6c3c85",
                 "shasum": ""
             },
             "require": {
@@ -1428,7 +1428,7 @@
                 "rss": "https://github.com/craftcms/flysystem/commits/master.atom",
                 "source": "https://github.com/craftcms/flysystem"
             },
-            "time": "2024-01-17T17:12:23+00:00"
+            "time": "2024-03-22T18:38:04+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -4410,16 +4410,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.44",
+            "version": "4.0.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "4ea8ea54952c61369c5e708699e6701631f4c6ad"
+                "reference": "03252189729e0f534880a8d3d6b23ad2a7e1b2ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/4ea8ea54952c61369c5e708699e6701631f4c6ad",
-                "reference": "4ea8ea54952c61369c5e708699e6701631f4c6ad",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/03252189729e0f534880a8d3d6b23ad2a7e1b2ba",
+                "reference": "03252189729e0f534880a8d3d6b23ad2a7e1b2ba",
                 "shasum": ""
             },
             "require": {
@@ -4505,7 +4505,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-15T03:26:54+00:00"
+            "time": "2024-03-22T20:36:28+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
