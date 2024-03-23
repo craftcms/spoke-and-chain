@@ -1126,16 +1126,16 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "dd1d643e15303a6bd9d4c3d0dddbf007396e9939"
+                "reference": "a160e2247c9fb16eacb4131b8310088fad33ebfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/dd1d643e15303a6bd9d4c3d0dddbf007396e9939",
-                "reference": "dd1d643e15303a6bd9d4c3d0dddbf007396e9939",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/a160e2247c9fb16eacb4131b8310088fad33ebfd",
+                "reference": "a160e2247c9fb16eacb4131b8310088fad33ebfd",
                 "shasum": ""
             },
             "require": {
@@ -1186,20 +1186,20 @@
                 "rss": "https://github.com/craftcms/aws-s3/commits/master.atom",
                 "source": "https://github.com/craftcms/aws-s3"
             },
-            "time": "2024-03-13T13:25:09+00:00"
+            "time": "2024-03-23T01:31:54+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "4.8.4",
+            "version": "4.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "9d218d94f490e787e1c9f20ed9d2bd909a3bdfd2"
+                "reference": "f0fd4fd291d9833d99a3cad370021522c9a0a5b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/9d218d94f490e787e1c9f20ed9d2bd909a3bdfd2",
-                "reference": "9d218d94f490e787e1c9f20ed9d2bd909a3bdfd2",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/f0fd4fd291d9833d99a3cad370021522c9a0a5b6",
+                "reference": "f0fd4fd291d9833d99a3cad370021522c9a0a5b6",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-03-19T17:13:27+00:00"
+            "time": "2024-03-23T01:15:01+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -10611,16 +10611,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.64",
+            "version": "1.10.65",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "fb9f270daffedcb5ff46275dcafe92538b1bc4bb"
+                "reference": "3c657d057a0b7ecae19cb12db446bbc99d8839c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fb9f270daffedcb5ff46275dcafe92538b1bc4bb",
-                "reference": "fb9f270daffedcb5ff46275dcafe92538b1bc4bb",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3c657d057a0b7ecae19cb12db446bbc99d8839c6",
+                "reference": "3c657d057a0b7ecae19cb12db446bbc99d8839c6",
                 "shasum": ""
             },
             "require": {
@@ -10669,7 +10669,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-21T09:57:47+00:00"
+            "time": "2024-03-23T10:30:26+00:00"
         },
         {
             "name": "psy/psysh",
