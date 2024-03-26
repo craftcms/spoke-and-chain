@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.301.4",
+            "version": "3.301.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "1d04b11a621eaceb389d2cfbd82bcdc423903796"
+                "reference": "2fd8cae93e87326f2263c420fa9031ad8903a2f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1d04b11a621eaceb389d2cfbd82bcdc423903796",
-                "reference": "1d04b11a621eaceb389d2cfbd82bcdc423903796",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2fd8cae93e87326f2263c420fa9031ad8903a2f2",
+                "reference": "2fd8cae93e87326f2263c420fa9031ad8903a2f2",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.7"
             },
-            "time": "2024-03-20T18:16:55+00:00"
+            "time": "2024-03-25T18:14:28+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -211,16 +211,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.1.16",
+            "version": "2.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "b90057f076e95d8ce6d122c4da2e6c6d47dd920a"
+                "reference": "6041ad7d5ca1901dfb91323c9a903ec0d4fc9333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/b90057f076e95d8ce6d122c4da2e6c6d47dd920a",
-                "reference": "b90057f076e95d8ce6d122c4da2e6c6d47dd920a",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/6041ad7d5ca1901dfb91323c9a903ec0d4fc9333",
+                "reference": "6041ad7d5ca1901dfb91323c9a903ec0d4fc9333",
                 "shasum": ""
             },
             "require": {
@@ -233,7 +233,7 @@
                 "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0|^2.0",
                 "psr/http-server-handler": "^1.0",
-                "riverline/multipart-parser": "^2.0.6",
+                "riverline/multipart-parser": "^2.1.2",
                 "symfony/process": "^4.4|^5.0|^6.0|^7.0"
             },
             "require-dev": {
@@ -274,7 +274,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.16"
+                "source": "https://github.com/brefphp/bref/tree/2.1.17"
             },
             "funding": [
                 {
@@ -286,7 +286,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-15T10:23:05+00:00"
+            "time": "2024-03-22T12:39:34+00:00"
         },
         {
             "name": "brick/math",
@@ -1177,16 +1177,16 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "dd1d643e15303a6bd9d4c3d0dddbf007396e9939"
+                "reference": "a160e2247c9fb16eacb4131b8310088fad33ebfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/dd1d643e15303a6bd9d4c3d0dddbf007396e9939",
-                "reference": "dd1d643e15303a6bd9d4c3d0dddbf007396e9939",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/a160e2247c9fb16eacb4131b8310088fad33ebfd",
+                "reference": "a160e2247c9fb16eacb4131b8310088fad33ebfd",
                 "shasum": ""
             },
             "require": {
@@ -1237,20 +1237,20 @@
                 "rss": "https://github.com/craftcms/aws-s3/commits/master.atom",
                 "source": "https://github.com/craftcms/aws-s3"
             },
-            "time": "2024-03-13T13:25:09+00:00"
+            "time": "2024-03-23T01:31:54+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "5.0.0-beta.10",
+            "version": "5.0.0-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "bd7eaa53137a2dfb08bdfe002e2abad822851da0"
+                "reference": "04755d93f86d07cc183db47db8a0eee106892e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/bd7eaa53137a2dfb08bdfe002e2abad822851da0",
-                "reference": "bd7eaa53137a2dfb08bdfe002e2abad822851da0",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/04755d93f86d07cc183db47db8a0eee106892e30",
+                "reference": "04755d93f86d07cc183db47db8a0eee106892e30",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-03-19T17:35:45+00:00"
+            "time": "2024-03-25T21:41:37+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -1437,16 +1437,16 @@
         },
         {
             "name": "craftcms/flysystem",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/flysystem.git",
-                "reference": "0218431d2754cbe1efd095e50044896382fb53ec"
+                "reference": "db27fc34ec50239c4634533efba6fbb07c040060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/flysystem/zipball/0218431d2754cbe1efd095e50044896382fb53ec",
-                "reference": "0218431d2754cbe1efd095e50044896382fb53ec",
+                "url": "https://api.github.com/repos/craftcms/flysystem/zipball/db27fc34ec50239c4634533efba6fbb07c040060",
+                "reference": "db27fc34ec50239c4634533efba6fbb07c040060",
                 "shasum": ""
             },
             "require": {
@@ -1488,7 +1488,7 @@
                 "rss": "https://github.com/craftcms/flysystem/commits/master.atom",
                 "source": "https://github.com/craftcms/flysystem"
             },
-            "time": "2024-01-17T17:19:15+00:00"
+            "time": "2024-03-22T18:41:28+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -3346,16 +3346,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.48.3",
+            "version": "v10.48.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "36651526fa6bb5445ffc6d51899d80291f8e0486"
+                "reference": "f9589f1063a449111dcaa1d68285b507d9483a95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/36651526fa6bb5445ffc6d51899d80291f8e0486",
-                "reference": "36651526fa6bb5445ffc6d51899d80291f8e0486",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/f9589f1063a449111dcaa1d68285b507d9483a95",
+                "reference": "f9589f1063a449111dcaa1d68285b507d9483a95",
                 "shasum": ""
             },
             "require": {
@@ -3397,11 +3397,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-10T15:34:39+00:00"
+            "time": "2024-03-20T20:09:13+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.48.3",
+            "version": "v10.48.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -3447,7 +3447,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.3",
+            "version": "v10.48.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3495,7 +3495,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.48.3",
+            "version": "v10.48.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -3675,16 +3675,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.25.1",
+            "version": "3.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "abbd664eb4381102c559d358420989f835208f18"
+                "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/abbd664eb4381102c559d358420989f835208f18",
-                "reference": "abbd664eb4381102c559d358420989f835208f18",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/072735c56cc0da00e10716dd90d5a7f7b40b36be",
+                "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be",
                 "shasum": ""
             },
             "require": {
@@ -3749,7 +3749,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.25.1"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.26.0"
             },
             "funding": [
                 {
@@ -3761,20 +3761,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-16T12:53:19+00:00"
+            "time": "2024-03-25T11:49:53+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
-            "version": "3.25.1",
+            "version": "3.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
-                "reference": "6a5be0e6d6a93574e80805c9cc108a4b63c824d8"
+                "reference": "885d0a758c71ae3cd6c503544573a1fdb8dc754f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/6a5be0e6d6a93574e80805c9cc108a4b63c824d8",
-                "reference": "6a5be0e6d6a93574e80805c9cc108a4b63c824d8",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/885d0a758c71ae3cd6c503544573a1fdb8dc754f",
+                "reference": "885d0a758c71ae3cd6c503544573a1fdb8dc754f",
                 "shasum": ""
             },
             "require": {
@@ -3814,7 +3814,7 @@
                 "storage"
             ],
             "support": {
-                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/3.25.1"
+                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/3.26.0"
             },
             "funding": [
                 {
@@ -3826,7 +3826,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-15T19:58:44+00:00"
+            "time": "2024-03-24T21:11:18+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -4815,12 +4815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "ebcc8b750b20d258ca938562587050e0883eeb5a"
+                "reference": "f1783db29d942b300afaca93c8d3784cd4dc1e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ebcc8b750b20d258ca938562587050e0883eeb5a",
-                "reference": "ebcc8b750b20d258ca938562587050e0883eeb5a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/f1783db29d942b300afaca93c8d3784cd4dc1e51",
+                "reference": "f1783db29d942b300afaca93c8d3784cd4dc1e51",
                 "shasum": ""
             },
             "require": {
@@ -4839,14 +4839,20 @@
                 "codeception/module-phpbrowser": "^3.0.0",
                 "codeception/module-rest": "^3.3.2",
                 "codeception/module-yii2": "^1.1.9",
-                "craftcms/ckeditor": "4.0.0-beta.1",
+                "craftcms/ckeditor": "^4.0.0-beta.1",
                 "craftcms/commerce": "^5.0.0-beta.1",
+                "craftcms/digital-products": "4.0.x-dev",
                 "craftcms/ecs": "dev-main",
+                "craftcms/feed-me": "^6.0.0",
                 "craftcms/phpstan": "dev-main",
                 "craftcms/rector": "dev-main",
                 "craftcms/redactor": "4.0.x-dev",
+                "craftcms/shopify": "^5.0.0",
                 "nystudio107/craft-minify": "^5.0.0-beta.1",
-                "putyourlightson/craft-blitz": "^5.0.0-beta.1"
+                "putyourlightson/craft-blitz": "^5.0.0-beta.1",
+                "putyourlightson/craft-campaign": "^3.0.0-beta.1",
+                "spicyweb/craft-neo": "^5.0.0-beta.1",
+                "verbb/doxter": "^6.0.0-beta.1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -4895,7 +4901,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-15T03:27:41+00:00"
+            "time": "2024-03-22T20:37:16+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -5626,16 +5632,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.26.0",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "231e3186624c03d7e7c890ec662b81e6b0405227"
+                "reference": "86e4d5a4b036f8f0be1464522f4c6b584c452757"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/231e3186624c03d7e7c890ec662b81e6b0405227",
-                "reference": "231e3186624c03d7e7c890ec662b81e6b0405227",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/86e4d5a4b036f8f0be1464522f4c6b584c452757",
+                "reference": "86e4d5a4b036f8f0be1464522f4c6b584c452757",
                 "shasum": ""
             },
             "require": {
@@ -5667,9 +5673,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.26.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.27.0"
             },
-            "time": "2024-02-23T16:05:55+00:00"
+            "time": "2024-03-21T13:14:53+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -7139,16 +7145,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.1.6",
+            "version": "5.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "6cf7e3ba5d89625c3ea4b3b991e95edfbcd4ec4d"
+                "reference": "41005c477353b984784f232b1afa83be20e1a834"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/6cf7e3ba5d89625c3ea4b3b991e95edfbcd4ec4d",
-                "reference": "6cf7e3ba5d89625c3ea4b3b991e95edfbcd4ec4d",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/41005c477353b984784f232b1afa83be20e1a834",
+                "reference": "41005c477353b984784f232b1afa83be20e1a834",
                 "shasum": ""
             },
             "require": {
@@ -7215,9 +7221,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.6"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.7"
             },
-            "time": "2024-03-20T20:54:47+00:00"
+            "time": "2024-03-22T18:43:29+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -10380,16 +10386,16 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.7.3",
+            "version": "6.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "8389cec2c34926bb87e87736265f077ad822adeb"
+                "reference": "d4adef47ca21c90e6483d59dcb9e5b1023696937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/8389cec2c34926bb87e87736265f077ad822adeb",
-                "reference": "8389cec2c34926bb87e87736265f077ad822adeb",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/d4adef47ca21c90e6483d59dcb9e5b1023696937",
+                "reference": "d4adef47ca21c90e6483d59dcb9e5b1023696937",
                 "shasum": ""
             },
             "require": {
@@ -10440,7 +10446,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.3"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.4"
             },
             "funding": [
                 {
@@ -10448,7 +10454,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-03-20T16:19:35+00:00"
+            "time": "2024-03-25T23:56:24+00:00"
         },
         {
             "name": "theiconic/name-parser",
@@ -11382,16 +11388,16 @@
         },
         {
             "name": "web-auth/metadata-service",
-            "version": "4.8.2",
+            "version": "4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/web-auth/webauthn-metadata-service.git",
-                "reference": "024df5fb26166adf388dea697d2826ae5a6001cf"
+                "reference": "fb7c1f107639285fab90f870aab38360252c82f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/web-auth/webauthn-metadata-service/zipball/024df5fb26166adf388dea697d2826ae5a6001cf",
-                "reference": "024df5fb26166adf388dea697d2826ae5a6001cf",
+                "url": "https://api.github.com/repos/web-auth/webauthn-metadata-service/zipball/fb7c1f107639285fab90f870aab38360252c82f5",
+                "reference": "fb7c1f107639285fab90f870aab38360252c82f5",
                 "shasum": ""
             },
             "require": {
@@ -11450,7 +11456,7 @@
                 "webauthn"
             ],
             "support": {
-                "source": "https://github.com/web-auth/webauthn-metadata-service/tree/4.8.2"
+                "source": "https://github.com/web-auth/webauthn-metadata-service/tree/4.8.3"
             },
             "funding": [
                 {
@@ -11462,20 +11468,20 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-02-26T07:58:15+00:00"
+            "time": "2024-03-13T07:16:02+00:00"
         },
         {
             "name": "web-auth/webauthn-lib",
-            "version": "4.8.2",
+            "version": "4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/web-auth/webauthn-lib.git",
-                "reference": "abac08104bbbbdef01ace704c90ff8290696e47f"
+                "reference": "d296fde8450ce6972c54315a70e32159cad7e35b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/abac08104bbbbdef01ace704c90ff8290696e47f",
-                "reference": "abac08104bbbbdef01ace704c90ff8290696e47f",
+                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/d296fde8450ce6972c54315a70e32159cad7e35b",
+                "reference": "d296fde8450ce6972c54315a70e32159cad7e35b",
                 "shasum": ""
             },
             "require": {
@@ -11536,7 +11542,7 @@
                 "webauthn"
             ],
             "support": {
-                "source": "https://github.com/web-auth/webauthn-lib/tree/4.8.2"
+                "source": "https://github.com/web-auth/webauthn-lib/tree/4.8.3"
             },
             "funding": [
                 {
@@ -11548,7 +11554,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-02-26T19:17:26+00:00"
+            "time": "2024-03-22T20:51:36+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -12283,16 +12289,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.63",
+            "version": "1.10.65",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "ad12836d9ca227301f5fb9960979574ed8628339"
+                "reference": "3c657d057a0b7ecae19cb12db446bbc99d8839c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ad12836d9ca227301f5fb9960979574ed8628339",
-                "reference": "ad12836d9ca227301f5fb9960979574ed8628339",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3c657d057a0b7ecae19cb12db446bbc99d8839c6",
+                "reference": "3c657d057a0b7ecae19cb12db446bbc99d8839c6",
                 "shasum": ""
             },
             "require": {
@@ -12341,7 +12347,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-18T16:53:53+00:00"
+            "time": "2024-03-23T10:30:26+00:00"
         },
         {
             "name": "psy/psysh",
