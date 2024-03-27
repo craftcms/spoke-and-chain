@@ -6448,19 +6448,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "b90dd495b0c2f651441e2063762d8bd0e0af22b8"
+                "reference": "35cb9d0de8fd53123a71c260517bd116f0b05a6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/b90dd495b0c2f651441e2063762d8bd0e0af22b8",
-                "reference": "b90dd495b0c2f651441e2063762d8bd0e0af22b8",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/35cb9d0de8fd53123a71c260517bd116f0b05a6e",
+                "reference": "35cb9d0de8fd53123a71c260517bd116f0b05a6e",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "nystudio107/craft-code-editor": "^1.0.0",
                 "php": "^8.2",
-                "putyourlightson/craft-sprig-core": "^3.0.0-beta.1"
+                "putyourlightson/craft-sprig-core": "^3.0.0-beta.2"
             },
             "require-dev": {
                 "craftcms/ecs": "dev-main",
@@ -6473,7 +6473,7 @@
                 "developer": "PutYourLightsOn",
                 "developerUrl": "https://putyourlightson.com/",
                 "documentationUrl": "https://putyourlightson.com/plugins/sprig",
-                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sprig/v2/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sprig/v3/CHANGELOG.md",
                 "class": "putyourlightson\\sprig\\plugin\\Sprig"
             },
             "autoload": {
@@ -6497,32 +6497,33 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-14T14:40:40+00:00"
+            "time": "2024-03-27T02:48:17+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "3.0.0-beta.1",
+            "version": "3.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "4b6fec787274f675089d05a408bc35b7105cd27f"
+                "reference": "7e99eef43feb43a5707c8f1dc06a31b40c5099a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/4b6fec787274f675089d05a408bc35b7105cd27f",
-                "reference": "4b6fec787274f675089d05a408bc35b7105cd27f",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/7e99eef43feb43a5707c8f1dc06a31b40c5099a7",
+                "reference": "7e99eef43feb43a5707c8f1dc06a31b40c5099a7",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2"
             },
             "require-dev": {
                 "craftcms/ecs": "dev-main",
-                "craftcms/generator": "^1.0.0",
+                "craftcms/generator": "2.0.x-dev",
                 "craftcms/phpstan": "dev-main",
                 "markhuot/craft-pest-core": "v3.x-dev",
-                "putyourlightson/craft-sprig": "^2.0.0",
+                "putyourlightson/craft-generate-test-spec": "v2.x-dev",
+                "putyourlightson/craft-sprig": "^3.0.0-beta.1",
                 "vlucas/phpdotenv": "^5.4.1"
             },
             "type": "craft-module",
@@ -6541,7 +6542,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2024-02-14T14:27:04+00:00"
+            "time": "2024-03-27T02:45:48+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
