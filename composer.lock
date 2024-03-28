@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.301.8",
+            "version": "3.301.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a6ad44dd7bc4ace137d583c91439fa9c16331b01"
+                "reference": "23eda9eeb6c44a3ed6a12951b61020dc6048f7f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a6ad44dd7bc4ace137d583c91439fa9c16331b01",
-                "reference": "a6ad44dd7bc4ace137d583c91439fa9c16331b01",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/23eda9eeb6c44a3ed6a12951b61020dc6048f7f5",
+                "reference": "23eda9eeb6c44a3ed6a12951b61020dc6048f7f5",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.8"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.301.9"
             },
-            "time": "2024-03-26T18:14:03+00:00"
+            "time": "2024-03-27T18:26:04+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -211,16 +211,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.1.17",
+            "version": "2.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "6041ad7d5ca1901dfb91323c9a903ec0d4fc9333"
+                "reference": "fee29863803d2e9d5765f5f278fcbd7ccbad6537"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/6041ad7d5ca1901dfb91323c9a903ec0d4fc9333",
-                "reference": "6041ad7d5ca1901dfb91323c9a903ec0d4fc9333",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/fee29863803d2e9d5765f5f278fcbd7ccbad6537",
+                "reference": "fee29863803d2e9d5765f5f278fcbd7ccbad6537",
                 "shasum": ""
             },
             "require": {
@@ -274,7 +274,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.17"
+                "source": "https://github.com/brefphp/bref/tree/2.1.18"
             },
             "funding": [
                 {
@@ -286,7 +286,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-22T12:39:34+00:00"
+            "time": "2024-03-27T12:47:08+00:00"
         },
         {
             "name": "brick/math",
@@ -7146,16 +7146,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.1.7",
+            "version": "5.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "41005c477353b984784f232b1afa83be20e1a834"
+                "reference": "f7faa9c8e6df878eea9e08ca93b5c9eddcd5274b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/41005c477353b984784f232b1afa83be20e1a834",
-                "reference": "41005c477353b984784f232b1afa83be20e1a834",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/f7faa9c8e6df878eea9e08ca93b5c9eddcd5274b",
+                "reference": "f7faa9c8e6df878eea9e08ca93b5c9eddcd5274b",
                 "shasum": ""
             },
             "require": {
@@ -7222,9 +7222,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.7"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.8"
             },
-            "time": "2024-03-22T18:43:29+00:00"
+            "time": "2024-03-27T19:14:28+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
