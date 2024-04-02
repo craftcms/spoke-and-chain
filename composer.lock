@@ -1363,16 +1363,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "5.0.0-beta.1",
+            "version": "5.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "3126805811dfb0ff0212b67ba2708a5224191e3d"
+                "reference": "5989f656a1696387b9f46d556364829d5114d320"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/3126805811dfb0ff0212b67ba2708a5224191e3d",
-                "reference": "3126805811dfb0ff0212b67ba2708a5224191e3d",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/5989f656a1696387b9f46d556364829d5114d320",
+                "reference": "5989f656a1696387b9f46d556364829d5114d320",
                 "shasum": ""
             },
             "require": {
@@ -1389,7 +1389,7 @@
                 "codeception/module-phpbrowser": "^3.0.0",
                 "codeception/module-rest": "^3.3.2",
                 "codeception/module-yii2": "^1.1.9",
-                "craftcms/ckeditor": "4.0.x-dev",
+                "craftcms/ckeditor": "^4.0.0",
                 "craftcms/ecs": "dev-main",
                 "craftcms/phpstan": "dev-main",
                 "craftcms/rector": "dev-main",
@@ -1433,7 +1433,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2024-02-29T20:11:50+00:00"
+            "time": "2024-04-02T07:54:40+00:00"
         },
         {
             "name": "craftcms/flysystem",
