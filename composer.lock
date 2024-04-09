@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.303.4",
+            "version": "3.304.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9ae5429f7699701cb158780cd287d1549f45ad32"
+                "reference": "29a79bac02997f3053559f6961a0e83622a14f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9ae5429f7699701cb158780cd287d1549f45ad32",
-                "reference": "9ae5429f7699701cb158780cd287d1549f45ad32",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/29a79bac02997f3053559f6961a0e83622a14f88",
+                "reference": "29a79bac02997f3053559f6961a0e83622a14f88",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.303.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.304.0"
             },
-            "time": "2024-04-05T18:04:15+00:00"
+            "time": "2024-04-08T18:03:38+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -6452,24 +6452,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "35cb9d0de8fd53123a71c260517bd116f0b05a6e"
+                "reference": "1f27df0b51408e2ceed7432e9f776f3785d90072"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/35cb9d0de8fd53123a71c260517bd116f0b05a6e",
-                "reference": "35cb9d0de8fd53123a71c260517bd116f0b05a6e",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/1f27df0b51408e2ceed7432e9f776f3785d90072",
+                "reference": "1f27df0b51408e2ceed7432e9f776f3785d90072",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
-                "nystudio107/craft-code-editor": "^1.0.0",
+                "craftcms/cms": "^5.0",
+                "nystudio107/craft-code-editor": "^1.0",
                 "php": "^8.2",
-                "putyourlightson/craft-sprig-core": "^3.0.0-beta.2"
+                "putyourlightson/craft-sprig-core": "^3.0"
             },
             "require-dev": {
                 "craftcms/ecs": "dev-main",
                 "craftcms/phpstan": "dev-main"
             },
+            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "name": "Sprig",
@@ -6477,7 +6478,7 @@
                 "developer": "PutYourLightsOn",
                 "developerUrl": "https://putyourlightson.com/",
                 "documentationUrl": "https://putyourlightson.com/plugins/sprig",
-                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sprig/v3/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sprig/develop/CHANGELOG.md",
                 "class": "putyourlightson\\sprig\\plugin\\Sprig"
             },
             "autoload": {
@@ -6501,24 +6502,24 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-27T02:48:17+00:00"
+            "time": "2024-04-08T13:41:13+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "3.0.0-beta.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "7e99eef43feb43a5707c8f1dc06a31b40c5099a7"
+                "reference": "38ce5c826b46ab4067734a89bcb9a62075a074b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/7e99eef43feb43a5707c8f1dc06a31b40c5099a7",
-                "reference": "7e99eef43feb43a5707c8f1dc06a31b40c5099a7",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/38ce5c826b46ab4067734a89bcb9a62075a074b5",
+                "reference": "38ce5c826b46ab4067734a89bcb9a62075a074b5",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
+                "craftcms/cms": "^5.0",
                 "php": "^8.2"
             },
             "require-dev": {
@@ -6527,7 +6528,7 @@
                 "craftcms/phpstan": "dev-main",
                 "markhuot/craft-pest-core": "v3.x-dev",
                 "putyourlightson/craft-generate-test-spec": "v2.x-dev",
-                "putyourlightson/craft-sprig": "^3.0.0-beta.1",
+                "putyourlightson/craft-sprig": "^3.0",
                 "vlucas/phpdotenv": "^5.4.1"
             },
             "type": "craft-module",
@@ -6546,7 +6547,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2024-03-27T02:45:48+00:00"
+            "time": "2024-04-08T13:34:31+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
