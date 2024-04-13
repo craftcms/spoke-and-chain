@@ -211,16 +211,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.1.20",
+            "version": "2.1.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "1ed871a6ecfa1f4d0d0023b57c95b446a05f15cc"
+                "reference": "597830c01de581d6cf09541b059179091f5156ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/1ed871a6ecfa1f4d0d0023b57c95b446a05f15cc",
-                "reference": "1ed871a6ecfa1f4d0d0023b57c95b446a05f15cc",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/597830c01de581d6cf09541b059179091f5156ec",
+                "reference": "597830c01de581d6cf09541b059179091f5156ec",
                 "shasum": ""
             },
             "require": {
@@ -274,7 +274,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.20"
+                "source": "https://github.com/brefphp/bref/tree/2.1.21"
             },
             "funding": [
                 {
@@ -286,7 +286,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-06T09:03:54+00:00"
+            "time": "2024-04-13T09:30:11+00:00"
         },
         {
             "name": "brick/math",
@@ -6437,16 +6437,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.1.11",
+            "version": "5.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "b0deaf62e2d0547c44379f993e72a2ced1e18ead"
+                "reference": "29242c80ff0fbda5f6eec364d1d29537d84d7582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/b0deaf62e2d0547c44379f993e72a2ced1e18ead",
-                "reference": "b0deaf62e2d0547c44379f993e72a2ced1e18ead",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/29242c80ff0fbda5f6eec364d1d29537d84d7582",
+                "reference": "29242c80ff0fbda5f6eec364d1d29537d84d7582",
                 "shasum": ""
             },
             "require": {
@@ -6500,9 +6500,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.11"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.12"
             },
-            "time": "2024-04-11T20:39:40+00:00"
+            "time": "2024-04-13T02:18:17+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
