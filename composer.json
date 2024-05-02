@@ -27,18 +27,14 @@
     "craftcms/redactor": "4.0.x-dev",
     "craftcms/store-hours": "^4",
     "fakerphp/faker": "^1.9",
-    "nystudio107/craft-seomatic": "v5.x-dev",
-    "nystudio107/craft-twigpack": "v5.x-dev",
+    "nystudio107/craft-seomatic": "^5",
+    "nystudio107/craft-twigpack": "^5",
     "solspace/craft-freeform": "^5",
     "oberon/starfield": "dev-master",
-    "putyourlightson/craft-sprig": "v3.x-dev",
+    "putyourlightson/craft-sprig": "^3",
     "vlucas/phpdotenv": "^5.4.1"
   },
   "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/AugustMiller/craft-twigpack"
-    },
     {
       "type": "vcs",
       "url": "https://github.com/craftcms/craft-starfield"
