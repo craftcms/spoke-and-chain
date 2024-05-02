@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   508dee1a-a736-4ed5-a082-159858c9a490:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,34 +31,50 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: ac587da9-fee3-4aa7-bcaf-9e3254479554
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c2ad49bf-5b33-4475-b0cc-3221510b158d
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f0ab0bc2-6720-4ad0-831b-d342b09c2df7
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: db7b3149-83e1-441d-9dfa-38c1d5c093d7
+        userCondition: null
 handle: emails
 hasTitleField: true
+icon: null
 name: Emails
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

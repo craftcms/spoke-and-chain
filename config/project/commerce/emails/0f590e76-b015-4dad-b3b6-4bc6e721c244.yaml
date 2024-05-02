@@ -3,10 +3,13 @@ cc: null
 enabled: false
 language: orderLanguage
 name: 'Order Received'
+pdf: null
 plainTextTemplatePath: null
 recipientType: customer
 replyTo: null
-store: 084e99dd-eb3e-4322-8616-8a04eda795ae
+senderAddress: null
+senderName: null
+store: 084e99dd-eb3e-4322-8616-8a04eda795ae # Primary Store
 subject: 'We''ve got it! Thanks for your order!'
 templatePath: _special/emails/received
 to: null

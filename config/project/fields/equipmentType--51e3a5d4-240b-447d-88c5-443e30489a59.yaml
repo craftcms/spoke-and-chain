@@ -1,21 +1,19 @@
 columnSuffix: null
-contentColumnType: string
 handle: equipmentType
 instructions: null
 name: 'Equipment Type'
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: 1
   localizeRelations: false
+  maintainHierarchy: true
   maxRelations: null
   minRelations: null
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   source: 'group:dcef5c5f-2446-44fa-8898-1bc3daa2d2fd' # Equipment Types
-  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

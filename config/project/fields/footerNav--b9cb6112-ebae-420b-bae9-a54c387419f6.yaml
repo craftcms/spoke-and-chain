@@ -1,17 +1,20 @@
 columnSuffix: null
-contentColumnType: string
 handle: footerNav
 instructions: 'Use the available block types to build the site’s global footer navigation. Each block type represents a column.'
 name: 'Footer Nav'
 searchable: false
 settings:
+  createButtonLabel: null
   entryTypes:
     - 3db0de34-4e51-40f0-a195-e3ab0a071dcf # Product Categories
     - 9b4d8a8b-c63e-4039-a35d-4ab24561f00b # Pages
+  includeTableView: false
   maxEntries: 4
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

@@ -3,6 +3,7 @@ fieldLayouts:
   95a4ce3d-304b-4d73-a82a-11b9ecdf6669:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -18,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -26,20 +31,27 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\TitleField
             uid: 3509db1b-895c-47f9-bace-76f09cddd949
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 344f5ef7-49f4-463b-854e-14b57001ee32 # Color
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 163ff768-3958-41af-b60e-2ea26bb6b02e
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 63f0e27c-a0d0-4104-8324-9dd739ebc800
+        userCondition: null
 handle: colors
 name: Colors
 siteSettings:

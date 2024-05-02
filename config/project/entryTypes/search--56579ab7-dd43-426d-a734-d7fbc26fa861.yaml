@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   26ed06a3-4c9a-4566-be88-6ff2aa950ddf:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,48 +31,71 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: ac528b97-bc6c-4788-89df-f4b8128858f6
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'No Results Heading'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bc95fd89-6baf-428d-a59e-afb65f5713e7
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'No Results Text'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9c132665-0abb-417e-88c2-45d6a366d11c
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: ee6e3e33-0326-420c-8252-21415a28004e
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 167c1c73-e360-4799-9412-b3b4b10462e1
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 0fba52fd-6b69-4938-92de-d12749b62c80
+        userCondition: null
 handle: search
 hasTitleField: false
+icon: null
 name: Search
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

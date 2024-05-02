@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Content Blocks - Products - Products
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a2fc229b-6a97-4205-a6aa-bd61d32c34d9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Products
             handle: null
             includeInCards: true
             instructions: null

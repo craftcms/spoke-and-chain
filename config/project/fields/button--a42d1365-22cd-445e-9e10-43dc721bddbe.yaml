@@ -1,16 +1,19 @@
 columnSuffix: null
-contentColumnType: string
 handle: button
 instructions: null
 name: Button
 searchable: false
 settings:
+  createButtonLabel: null
   entryTypes:
     - 4735edf8-ae6c-4f28-a8df-338ca5637aab # Button
+  includeTableView: false
   maxEntries: 1
-  minEntries: 0
+  minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

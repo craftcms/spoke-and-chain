@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   6d983617-98cb-4b8d-a296-b42968ecb161:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,58 +31,86 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 9eafb5b0-a301-44ba-8014-39bd1c65a3ef
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            handle: null
+            includeInCards: false
             instructions: 'Used on the account dashboard page'
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c116617f-44f0-46fe-b643-b5cfd261a5d0
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'New Password Help Text'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6363eaed-ad1c-4037-ac2d-e4b31175ca83
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'Current Password Help Text'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9e69d2ee-3672-4406-b0ac-f070ae8792c1
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: a2de9c41-2a6e-42cc-af3b-f652fa04c9b4
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 62ec070e-632f-485e-863b-8c900623006a
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 3f14c402-0dfe-41f1-bcca-d69d1050cab4
+        userCondition: null
 handle: settings
 hasTitleField: true
+icon: null
 name: Settings
-sortOrder: 3
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

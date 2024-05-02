@@ -3,6 +3,7 @@ enableVersioning: true
 entryTypes:
   - ab1e76a4-82ae-4059-900e-5f9d8df35d49 # Articles
 handle: articles
+maxAuthors: 1
 name: Articles
 previewTargets:
   -
@@ -11,22 +12,22 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
   -
     __assoc__:
       -
         - label
         - 'Listing page'
       -
-        - urlFormat
-        - articles
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - articles
 propagationMethod: all
 siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain

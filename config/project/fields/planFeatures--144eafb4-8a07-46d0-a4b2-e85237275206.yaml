@@ -1,12 +1,10 @@
 columnSuffix: null
-contentColumnType: text
 handle: planFeatures
 instructions: null
 name: 'Plan Features'
 searchable: false
 settings:
   addRowLabel: 'Add a feature'
-  columnType: text
   columns:
     __assoc__:
       -
@@ -25,9 +23,9 @@ settings:
             -
               - type
               - singleline
-  defaults: null
   maxRows: null
   minRows: null
+  staticRows: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Table

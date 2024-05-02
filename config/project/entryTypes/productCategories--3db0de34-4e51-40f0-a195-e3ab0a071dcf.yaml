@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Footer Nav - Product Categories - Heading
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 851f01ef-64a9-4726-b6a7-5ba9bb2de381
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Heading
             handle: heading
             includeInCards: true
             instructions: null
@@ -22,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Footer Nav - Product Categories - Product Categories
+            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Product Categories
             handle: null
             includeInCards: false
             instructions: null

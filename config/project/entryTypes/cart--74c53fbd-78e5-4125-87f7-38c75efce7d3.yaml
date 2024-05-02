@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   d6bab467-3ac2-4092-9bf6-30c86263d0c5:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,58 +31,86 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: b820b4fe-5c1e-4958-8bcd-ccb1a11e5202
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 29df2851-4c81-46b0-b08d-13c150cd835c
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: edcd5813-3fcd-4824-9a2e-e1f6d92c7fdf # Subheading
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 68194d2f-73c2-4023-97d0-aeaea812a2fa
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'No items content'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c8e52b15-ffe5-4144-aed0-f06b6f617ddb
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 56485d23-f4b1-452c-b634-556650094149
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4ad389b5-fde0-4b7e-9f15-4632eae7ba20
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: f14e7211-14e6-4b24-b9e4-c53dc1ec4055
+        userCondition: null
 handle: cart
 hasTitleField: true
+icon: null
 name: Cart
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   97801d55-b621-4a1a-bcd1-c92fbb24b7c4:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,28 +31,41 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: a3fc9677-0954-485a-943c-63a91096ac56
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: add6cb0c-11f6-4885-8e0b-efb3e0c70a6c
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 90c89520-4161-4ffe-9451-547d6610cdf2
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 12c80604-be6e-4fb1-bf4b-b6aed0671b29
+        userCondition: null
 handle: articlesLanding
 hasTitleField: true
+icon: null
 name: 'Articles Landing'
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

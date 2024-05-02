@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: icon
 instructions: null
 name: Icon
@@ -9,9 +8,11 @@ settings:
   allowSubfolders: false
   allowUploads: true
   allowedKinds: null
+  branchLimit: null
   defaultUploadLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: null
   minRelations: null
   previewMode: full
@@ -21,10 +22,10 @@ settings:
   restrictedLocationSource: 'volume:994a420b-cb3e-4813-be6a-dd7ac7f55c6b' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  source: null
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

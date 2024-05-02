@@ -9,6 +9,7 @@ productFieldLayouts:
   8104fb3b-ffde-4282-993b-2d27a7bc6bd5:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -16,7 +17,10 @@ productFieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -24,6 +28,7 @@ productFieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -32,124 +37,189 @@ productFieldLayouts:
             title: null
             type: craft\commerce\fieldlayoutelements\ProductTitleField
             uid: 33b61ce3-27f7-4baa-ab54-211f0085b1ec
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 86ec2b26-5d53-4798-8fb0-927890e52039 # Body
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1875158d-1206-4f9e-bca3-682677a53863
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 19549c94-cebb-4606-a533-aaef9dc49de7 # Geometry
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 741b6d49-f8ba-49e3-ae18-1f1005eb7f67
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 5f3f9d21-e4a4-40d6-b80f-a92d99e02926 # Show Form
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7c4f244f-5e45-41fd-b59d-ad52e69c37b2
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: fccc567b-d17f-4d1e-b843-45f068abc4c5
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 5572edd6-3495-4a53-8f09-68bb6c53d79a # Main Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 87e86daf-4add-42cb-a34b-fa6e84e91b37
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 705abccb-1d21-44fe-a3f7-87530e29cd34 # Product Images
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0c8270a8-2019-4d17-a8cc-9f76dba6bb06
+            userCondition: null
             warning: null
             width: 100
         name: Images
         uid: 822cdcb6-9cfb-4bcc-abbe-b04555f0d745
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: f3de475b-4a85-4e74-b144-4ff3e464f057 # Bike Type
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 142c278c-3102-4001-8d0a-4d38b1066bde
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 06e900c5-0757-485f-bda2-2875772bbe25 # Colors
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: daa2a8b9-2432-41df-8534-2b08fc1e8717
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 03b7bc53-c8e9-48e4-8f45-da16de73909b # Material
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 18d3bc2a-9752-40f5-b640-3b22f034b490
+            userCondition: null
             warning: null
             width: 100
         name: Options
         uid: 8f79dcc0-5877-4cbd-96e2-a4f4d903714d
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            attribute: variants
+            elementCondition: null
+            id: null
+            includeInCards: false
             instructions: null
             label: null
+            mandatory: true
+            orientation: null
+            providesThumbs: false
+            requirable: false
             required: false
             tip: null
+            translatable: false
             type: craft\commerce\fieldlayoutelements\VariantsField
             uid: 64aafa31-1e2b-4918-a2db-56edf34f5594
+            userCondition: null
             warning: null
         name: Variants
         uid: cf0564d5-ba39-4eae-aa0d-10924780225a
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c5137a50-8430-4d7b-9d6c-593c279a42ac
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: f7687c40-7192-4ed3-8005-6f3a0b38e3dd
+        userCondition: null
 productTitleFormat: ''
 siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain
@@ -161,6 +231,7 @@ variantFieldLayouts:
   7480375f-d72f-4bf8-806a-2c72045b9880:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -168,7 +239,10 @@ variantFieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -176,6 +250,7 @@ variantFieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -184,8 +259,10 @@ variantFieldLayouts:
             title: null
             type: craft\commerce\fieldlayoutelements\VariantTitleField
             uid: 4926d4d5-11b4-4f2d-b6b6-b12b167a3144
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: ada5fa58-e6f4-4756-a509-c05740fefbfe
+        userCondition: null
 variantTitleFormat: '{product.title}'

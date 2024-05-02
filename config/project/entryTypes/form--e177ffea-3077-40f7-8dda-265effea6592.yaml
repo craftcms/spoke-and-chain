@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: 4618ebbc-ed9f-4632-8648-dbbfafc12ce5 # Content Blocks - Form - Heading
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 794da6b7-45d0-4be3-8f47-bfbd12c11567
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4618ebbc-ed9f-4632-8648-dbbfafc12ce5 # Heading
             handle: heading
             includeInCards: true
             instructions: null
@@ -22,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 520350fa-6eaf-4bc0-9568-687055d5b462 # Content Blocks - Form - Form
+            fieldUid: 520350fa-6eaf-4bc0-9568-687055d5b462 # Form
             handle: null
             includeInCards: false
             instructions: null

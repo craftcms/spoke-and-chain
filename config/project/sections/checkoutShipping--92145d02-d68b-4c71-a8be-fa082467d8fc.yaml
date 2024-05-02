@@ -3,6 +3,7 @@ enableVersioning: true
 entryTypes:
   - ab006600-8f38-47a9-a12d-6627bcac15d9 # Checkout: Shipping
 handle: checkoutShipping
+maxAuthors: 1
 name: 'Checkout: Shipping'
 previewTargets:
   -
@@ -11,11 +12,11 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   5712e1f3-7800-493e-b74b-c2887dc25c81: # Spoke & Chain

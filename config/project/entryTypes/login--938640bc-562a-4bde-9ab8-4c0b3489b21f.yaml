@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   b0e6a962-9009-46e1-9c22-c30bc59b0daf:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,48 +31,71 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 3d2d635c-1750-4679-ac9b-58c7ca123c61
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: d3fad61c-dfb9-4da2-bb75-6d2910c3c4ca # Plain Text 1
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'Forgot Password Text'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e5665e60-9afa-469b-8cdf-f17b76f03a9a
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e60fd5c1-9f1b-496d-8369-a9daafcc185d # Plain Text 2
+            handle: null
+            includeInCards: false
             instructions: null
             label: 'Register Text'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8641dbd9-ae07-45bf-a4db-4fb89b23e1d8
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: f9b16cda-5559-46f8-94ea-ad293a133af7
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ce78cd9e-dc7b-483d-9307-5329274de98c
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: ae3ece1a-d1a0-4dc4-b040-28cd87afd77d
+        userCondition: null
 handle: login
 hasTitleField: true
+icon: null
 name: Login
-sortOrder: 4
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2 # Content Blocks - Body - Body
+            fieldUid: 2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2 # Body
             instructions: null
             label: null
             required: true
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 03f1355e-67b8-457a-b8e9-20cbc34af8c4 # Content Blocks - Body - Intro
+            fieldUid: 03f1355e-67b8-457a-b8e9-20cbc34af8c4 # Intro
             instructions: null
             label: null
             required: false
@@ -27,7 +27,7 @@ fieldLayouts:
         name: Content
         uid: 38e8252e-7338-4d4e-92c8-ab9b7073b3e5
 fields:
-  2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2: # Content Blocks - Body - Body
+  2e8e706d-cbc4-4433-a3b1-2a7a4be18ee2: # Body
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -55,7 +55,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  03f1355e-67b8-457a-b8e9-20cbc34af8c4: # Content Blocks - Body - Intro
+  03f1355e-67b8-457a-b8e9-20cbc34af8c4: # Intro
     columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null

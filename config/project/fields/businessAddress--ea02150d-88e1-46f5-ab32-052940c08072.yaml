@@ -1,5 +1,4 @@
 columnSuffix: zhgorwis
-contentColumnType: text
 handle: businessAddress
 instructions: 'Enter the shop’s physical street address.'
 name: 'Business Address'
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 3
   multiline: true
   placeholder: null

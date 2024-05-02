@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: text
 handle: body
 instructions: null
 name: Body
@@ -7,7 +6,6 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  columnType: text
   configSelectionMode: choose
   defaultTransform: ''
   manualConfig: ''

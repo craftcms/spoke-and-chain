@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   0bc1ed2c-d164-4ede-9587-a3167296f22b:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: 'Plan Name'
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,24 +31,35 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: a1a4b072-6af8-497a-920f-1ecead41f14d
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 144eafb4-8a07-46d0-a4b2-e85237275206 # Plan Features
+            handle: null
+            includeInCards: false
             instructions: 'Describe plan features, each having its own line.'
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9e9a2194-30ef-4767-989a-63df6bdfb9c2
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: b647d90b-79b3-4524-88ac-63c4f22483ad
+        userCondition: null
 handle: plans
 hasTitleField: true
+icon: null
 name: Plans
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

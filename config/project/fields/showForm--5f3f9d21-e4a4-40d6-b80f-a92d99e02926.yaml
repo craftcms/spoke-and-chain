@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: boolean
 handle: showForm
 instructions: null
 name: 'Show Form'

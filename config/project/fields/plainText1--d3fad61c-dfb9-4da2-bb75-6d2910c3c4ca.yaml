@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: text
 handle: plainText1
 instructions: null
 name: 'Plain Text 1'
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: null

@@ -3,6 +3,7 @@ fieldLayouts:
   5ad70f34-acf7-440a-937b-458e3d6886bf:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -18,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -26,10 +31,12 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\TitleField
             uid: 640167de-5a15-4514-a4a5-7f5282dd1217
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 02935f50-1b4e-42b4-8236-fba92b85c84a
+        userCondition: null
 handle: material
 name: Material
 siteSettings:

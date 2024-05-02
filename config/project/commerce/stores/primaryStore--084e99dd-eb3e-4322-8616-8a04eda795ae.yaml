@@ -1,0 +1,19 @@
+allowCheckoutWithoutPayment: '0'
+allowEmptyCartOnCheckout: '0'
+allowPartialPaymentOnCheckout: '0'
+autoSetCartShippingMethodOption: '0'
+autoSetNewCartAddresses: '0'
+autoSetPaymentSource: '0'
+currency: USD
+freeOrderPaymentStrategy: complete
+handle: primaryStore
+minimumTotalPriceStrategy: default
+name: 'Primary Store'
+orderReferenceFormat: '{{number[:7]}}'
+primary: true
+requireBillingAddressAtCheckout: '0'
+requireShippingAddressAtCheckout: '0'
+requireShippingMethodSelectionAtCheckout: '0'
+sortOrder: 1
+useBillingAddressForTax: '0'
+validateOrganizationTaxIdAsVatId: '0'

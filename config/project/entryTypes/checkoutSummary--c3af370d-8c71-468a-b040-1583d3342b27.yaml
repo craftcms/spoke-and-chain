@@ -1,7 +1,9 @@
+color: null
 fieldLayouts:
   f8853b83-c030-4ebe-896c-e344ed6abef0:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +11,10 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -17,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -25,38 +31,56 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: b5b2d67d-0707-4d8a-8ddb-f81bdf33cdfb
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 708be4d3-74b6-4389-a32f-aebc64f33b0d # Heading
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 36dd0791-f7b9-4df7-a18e-56ce06805936
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: a090d9e3-a80b-4295-a853-f9c5b7106299
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7ec0fe3-e0bc-474d-837d-3159984e36f3 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 83e47497-72cc-42d8-82b8-6028948b9381
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 6eb70a19-3ed8-42c1-b74c-4180addcb873
+        userCondition: null
 handle: checkoutSummary
 hasTitleField: true
+icon: null
 name: 'Checkout: Summary'
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

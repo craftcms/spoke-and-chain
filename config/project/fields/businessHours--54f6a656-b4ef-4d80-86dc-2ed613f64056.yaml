@@ -1,5 +1,4 @@
 columnSuffix: vmtyuvjf
-contentColumnType: text
 handle: businessHours
 instructions: 'Enter the shop’s daily opening and closing hours.'
 name: 'Business Hours'

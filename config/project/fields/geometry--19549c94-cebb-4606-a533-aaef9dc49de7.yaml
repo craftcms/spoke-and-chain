@@ -1,12 +1,10 @@
 columnSuffix: null
-contentColumnType: text
 handle: geometry
 instructions: null
 name: Geometry
 searchable: false
 settings:
   addRowLabel: 'Add a row'
-  columnType: text
   columns:
     __assoc__:
       -
@@ -89,9 +87,9 @@ settings:
             -
               - type
               - singleline
-  defaults: null
   maxRows: null
   minRows: null
+  staticRows: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Table
