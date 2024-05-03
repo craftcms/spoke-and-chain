@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Footer Nav - Product Categories - Heading
+            fieldUid: d5599be5-4ce7-4f5f-997b-843257caca75 # Heading
             instructions: null
             label: null
             required: false
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Footer Nav - Product Categories - Product Categories
+            fieldUid: e1227ec6-29cc-4c76-8ef1-a091a264b805 # Product Categories
             instructions: null
             label: null
             required: true
@@ -27,7 +27,7 @@ fieldLayouts:
         name: Content
         uid: bba1caa1-ab3c-4ffa-81eb-fddf4de3fee0
 fields:
-  d5599be5-4ce7-4f5f-997b-843257caca75: # Footer Nav - Product Categories - Heading
+  d5599be5-4ce7-4f5f-997b-843257caca75: # Heading
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -47,7 +47,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  e1227ec6-29cc-4c76-8ef1-a091a264b805: # Footer Nav - Product Categories - Product Categories
+  e1227ec6-29cc-4c76-8ef1-a091a264b805: # Product Categories
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Content Blocks - Products - Products
+            fieldUid: d6666f58-4d11-4bd3-b5bd-bc92b52a538c # Products
             handle: null
             includeInCards: true
             instructions: null
