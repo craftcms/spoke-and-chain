@@ -1,6 +1,6 @@
 color: green
 default: true
-description: ''
+description: null
 emails:
   0f590e76-b015-4dad-b3b6-4bc6e721c244: 0f590e76-b015-4dad-b3b6-4bc6e721c244 # Order Received
 handle: received

@@ -29,7 +29,7 @@ tabs:
         tip: null
         title: null
         type: craft\fieldlayoutelements\users\FullNameField
-        uid: fe279206-91ba-483a-849f-43e8c5c61ab4
+        uid: 2fbd180b-877e-4fd0-9b62-dd0d91519be3
         userCondition: null
         warning: null
         width: 100
@@ -44,7 +44,7 @@ tabs:
         requirable: false
         tip: null
         type: craft\fieldlayoutelements\users\PhotoField
-        uid: ad88b346-f0a4-4f7a-807e-bb87af2325a5
+        uid: d754628a-e5fa-4662-b405-a171d294233a
         userCondition: null
         warning: null
         width: 100
@@ -73,9 +73,9 @@ tabs:
         tip: null
         title: null
         type: craft\fieldlayoutelements\users\EmailField
-        uid: c26b9f2a-44a6-41da-95e7-b470f07dde3c
+        uid: 93a0e852-7a95-49bb-9a51-08974972859b
         userCondition: null
         width: 100
     name: Content
-    uid: e1bbe6fe-c481-46f2-8b3a-899024116d94
+    uid: fb788f39-376d-4c0c-8405-a82cd57ea449
     userCondition: null
