@@ -8,5 +8,5 @@ name: Invoice
 paperOrientation: portrait
 paperSize: letter
 sortOrder: 9999
-store: 084e99dd-eb3e-4322-8616-8a04eda795ae # Primary Store
+store: 084e99dd-eb3e-4322-8616-8a04eda795ae
 templatePath: _special/pdfs/invoice
