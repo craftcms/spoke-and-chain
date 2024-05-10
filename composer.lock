@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.306.2",
+            "version": "3.306.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "0de11adba8f174a76346c9dbb175c2030ff5c8f2"
+                "reference": "d340c5e7fc151d59f71e8c3bf7c5eafa911bcebd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0de11adba8f174a76346c9dbb175c2030ff5c8f2",
-                "reference": "0de11adba8f174a76346c9dbb175c2030ff5c8f2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d340c5e7fc151d59f71e8c3bf7c5eafa911bcebd",
+                "reference": "d340c5e7fc151d59f71e8c3bf7c5eafa911bcebd",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.306.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.306.3"
             },
-            "time": "2024-05-08T18:07:54+00:00"
+            "time": "2024-05-09T18:32:58+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -211,16 +211,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.1.21",
+            "version": "2.1.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "597830c01de581d6cf09541b059179091f5156ec"
+                "reference": "52c70b72ae80945f26c3f69c6291832911a1be75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/597830c01de581d6cf09541b059179091f5156ec",
-                "reference": "597830c01de581d6cf09541b059179091f5156ec",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/52c70b72ae80945f26c3f69c6291832911a1be75",
+                "reference": "52c70b72ae80945f26c3f69c6291832911a1be75",
                 "shasum": ""
             },
             "require": {
@@ -274,7 +274,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.21"
+                "source": "https://github.com/brefphp/bref/tree/2.1.22"
             },
             "funding": [
                 {
@@ -286,7 +286,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-13T09:30:11+00:00"
+            "time": "2024-05-09T13:04:48+00:00"
         },
         {
             "name": "brick/math",
