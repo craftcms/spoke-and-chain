@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.306.6",
+            "version": "3.306.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "79a618bb5624e52f31de7083a26d1749050aa5a0"
+                "reference": "bc30df54badd9d2af8d291cd0665ade6eb509598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/79a618bb5624e52f31de7083a26d1749050aa5a0",
-                "reference": "79a618bb5624e52f31de7083a26d1749050aa5a0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/bc30df54badd9d2af8d291cd0665ade6eb509598",
+                "reference": "bc30df54badd9d2af8d291cd0665ade6eb509598",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.306.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.306.7"
             },
-            "time": "2024-05-14T18:05:44+00:00"
+            "time": "2024-05-15T18:04:12+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -962,16 +962,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "5.0.5",
+            "version": "5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "198db3860e6571cf95a945f852f850cafd1a1b4d"
+                "reference": "cabc764c009879c0fac504b5f6b90de300ec6d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/198db3860e6571cf95a945f852f850cafd1a1b4d",
-                "reference": "198db3860e6571cf95a945f852f850cafd1a1b4d",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/cabc764c009879c0fac504b5f6b90de300ec6d30",
+                "reference": "cabc764c009879c0fac504b5f6b90de300ec6d30",
                 "shasum": ""
             },
             "require": {
@@ -1032,7 +1032,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2024-05-09T07:58:42+00:00"
+            "time": "2024-05-15T14:12:08+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -6050,16 +6050,16 @@
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "6fe35b10254fa07e75721d00172e50ee23186256"
+                "reference": "6fe966876febd83f17448829478f8bd8e6e37256"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/6fe35b10254fa07e75721d00172e50ee23186256",
-                "reference": "6fe35b10254fa07e75721d00172e50ee23186256",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/6fe966876febd83f17448829478f8bd8e6e37256",
+                "reference": "6fe966876febd83f17448829478f8bd8e6e37256",
                 "shasum": ""
             },
             "require": {
@@ -6089,7 +6089,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2024-04-26T13:43:59+00:00"
+            "time": "2024-05-15T20:33:19+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6447,16 +6447,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.1.19.1",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "92d389c58617eaac8b71d5ebd2f3a15e6b5b9657"
+                "reference": "3897d8aeffc12d29f3f1721e3cd391a246c2c6d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/92d389c58617eaac8b71d5ebd2f3a15e6b5b9657",
-                "reference": "92d389c58617eaac8b71d5ebd2f3a15e6b5b9657",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/3897d8aeffc12d29f3f1721e3cd391a246c2c6d4",
+                "reference": "3897d8aeffc12d29f3f1721e3cd391a246c2c6d4",
                 "shasum": ""
             },
             "require": {
@@ -6485,7 +6485,7 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "schemaVersion": "5.0.26",
+                "schemaVersion": "5.1.0",
                 "handle": "freeform",
                 "class": "Solspace\\Freeform\\Freeform",
                 "name": "Freeform",
@@ -6511,9 +6511,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.1.19.1"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.2.0"
             },
-            "time": "2024-05-09T05:57:54+00:00"
+            "time": "2024-05-15T17:12:08+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
