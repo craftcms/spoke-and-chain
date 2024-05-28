@@ -24,7 +24,7 @@
     "craftcms/yii2-dynamodb": "^2.0.1",
     "craftcms/cms": "^5.0.0-beta.4",
     "craftcms/commerce": "^5.0.0-beta.1",
-    "craftcms/redactor": "4.0.x-dev",
+    "craftcms/redactor": "^4.0.0",
     "craftcms/store-hours": "^4",
     "fakerphp/faker": "^1.9",
     "nystudio107/craft-seomatic": "^5",
