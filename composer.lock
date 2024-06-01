@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.308.6",
+            "version": "3.308.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d119265faba226b3fab1514b6fa27a2986b91453"
+                "reference": "97074bd8cdd9fe498570821cefa4868fa3353cf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d119265faba226b3fab1514b6fa27a2986b91453",
-                "reference": "d119265faba226b3fab1514b6fa27a2986b91453",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/97074bd8cdd9fe498570821cefa4868fa3353cf3",
+                "reference": "97074bd8cdd9fe498570821cefa4868fa3353cf3",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.308.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.308.7"
             },
-            "time": "2024-05-30T18:08:56+00:00"
+            "time": "2024-05-31T18:17:12+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -547,16 +547,16 @@
         },
         {
             "name": "composer/class-map-generator",
-            "version": "1.1.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/class-map-generator.git",
-                "reference": "8286a62d243312ed99b3eee20d5005c961adb311"
+                "reference": "acd227952154850d0bb7d65caa4f9edf9cd806a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/8286a62d243312ed99b3eee20d5005c961adb311",
-                "reference": "8286a62d243312ed99b3eee20d5005c961adb311",
+                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/acd227952154850d0bb7d65caa4f9edf9cd806a7",
+                "reference": "acd227952154850d0bb7d65caa4f9edf9cd806a7",
                 "shasum": ""
             },
             "require": {
@@ -600,7 +600,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/class-map-generator/issues",
-                "source": "https://github.com/composer/class-map-generator/tree/1.1.1"
+                "source": "https://github.com/composer/class-map-generator/tree/1.3.2"
             },
             "funding": [
                 {
@@ -616,7 +616,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-15T12:53:41+00:00"
+            "time": "2024-05-31T19:45:56+00:00"
         },
         {
             "name": "composer/pcre",
@@ -6421,16 +6421,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.3.1",
+            "version": "5.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "fcfe54fd4f4e8dc5152453415b6f779460943e91"
+                "reference": "987bd1bd29e8a2905fe5fb98cd260f52316b1535"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/fcfe54fd4f4e8dc5152453415b6f779460943e91",
-                "reference": "fcfe54fd4f4e8dc5152453415b6f779460943e91",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/987bd1bd29e8a2905fe5fb98cd260f52316b1535",
+                "reference": "987bd1bd29e8a2905fe5fb98cd260f52316b1535",
                 "shasum": ""
             },
             "require": {
@@ -6485,9 +6485,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.3.1"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.3.2"
             },
-            "time": "2024-05-28T14:56:01+00:00"
+            "time": "2024-05-31T15:45:59+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -11543,16 +11543,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.2",
+            "version": "1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "0d5d4294a70deb7547db655c47685d680e39cfec"
+                "reference": "e64220a05c1209fc856d58e789c3b7a32c0bb9a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0d5d4294a70deb7547db655c47685d680e39cfec",
-                "reference": "0d5d4294a70deb7547db655c47685d680e39cfec",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e64220a05c1209fc856d58e789c3b7a32c0bb9a5",
+                "reference": "e64220a05c1209fc856d58e789c3b7a32c0bb9a5",
                 "shasum": ""
             },
             "require": {
@@ -11597,7 +11597,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-24T13:23:04+00:00"
+            "time": "2024-05-31T13:53:37+00:00"
         },
         {
             "name": "psy/psysh",
