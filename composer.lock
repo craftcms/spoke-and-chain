@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.313.0",
+            "version": "3.314.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2f5f173300888d6f630ce24751a6ee0f1e6d72e8"
+                "reference": "5867f04e0e3959085328d853a743ffc5c8e8ae0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2f5f173300888d6f630ce24751a6ee0f1e6d72e8",
-                "reference": "2f5f173300888d6f630ce24751a6ee0f1e6d72e8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5867f04e0e3959085328d853a743ffc5c8e8ae0b",
+                "reference": "5867f04e0e3959085328d853a743ffc5c8e8ae0b",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.313.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.314.0"
             },
-            "time": "2024-06-11T18:20:58+00:00"
+            "time": "2024-06-12T18:10:03+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -547,16 +547,16 @@
         },
         {
             "name": "composer/class-map-generator",
-            "version": "1.3.3",
+            "version": "1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/class-map-generator.git",
-                "reference": "61804f9973685ec7bead0fb7fe022825e3cd418e"
+                "reference": "b1b3fd0b4eaf3ddf3ee230bc340bf3fff454a1a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/61804f9973685ec7bead0fb7fe022825e3cd418e",
-                "reference": "61804f9973685ec7bead0fb7fe022825e3cd418e",
+                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/b1b3fd0b4eaf3ddf3ee230bc340bf3fff454a1a3",
+                "reference": "b1b3fd0b4eaf3ddf3ee230bc340bf3fff454a1a3",
                 "shasum": ""
             },
             "require": {
@@ -600,7 +600,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/class-map-generator/issues",
-                "source": "https://github.com/composer/class-map-generator/tree/1.3.3"
+                "source": "https://github.com/composer/class-map-generator/tree/1.3.4"
             },
             "funding": [
                 {
@@ -616,7 +616,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-10T11:53:54+00:00"
+            "time": "2024-06-12T14:13:04+00:00"
         },
         {
             "name": "composer/pcre",
@@ -836,16 +836,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.1.10",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "3fe8e67e1026084c282ced906617a78f175174f2"
+                "reference": "1b2dd98384df894c87f3d6c21ad804220f63e19c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/3fe8e67e1026084c282ced906617a78f175174f2",
-                "reference": "3fe8e67e1026084c282ced906617a78f175174f2",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/1b2dd98384df894c87f3d6c21ad804220f63e19c",
+                "reference": "1b2dd98384df894c87f3d6c21ad804220f63e19c",
                 "shasum": ""
             },
             "require": {
@@ -891,7 +891,7 @@
                 "voku/stringy": "^6.4.0",
                 "web-auth/webauthn-lib": "~4.8.0",
                 "webonyx/graphql-php": "~14.11.5",
-                "yiisoft/yii2": "~2.0.48.1",
+                "yiisoft/yii2": "~2.0.50",
                 "yiisoft/yii2-debug": "~2.1.22.0",
                 "yiisoft/yii2-queue": "~2.3.2",
                 "yiisoft/yii2-symfonymailer": "^4.0.0"
@@ -900,10 +900,10 @@
                 "webonyx/graphql-php": "14.11.7"
             },
             "provide": {
-                "bower-asset/inputmask": "~3.2.2|~3.3.5",
-                "bower-asset/jquery": "3.5.*@stable|3.4.*@stable|3.3.*@stable|3.2.*@stable|3.1.*@stable|2.2.*@stable|2.1.*@stable|1.11.*@stable|1.12.*@stable",
-                "bower-asset/punycode": "1.3.*",
-                "bower-asset/yii2-pjax": "~2.0.1",
+                "bower-asset/inputmask": "5.0.9",
+                "bower-asset/jquery": "3.6.1",
+                "bower-asset/punycode": "2.3.1",
+                "bower-asset/yii2-pjax": "2.0.8",
                 "yii2tech/ar-softdelete": "1.0.4"
             },
             "require-dev": {
@@ -928,6 +928,9 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "lib/yii2/helpers/ArrayHelper.php"
+                ],
                 "psr-4": {
                     "craft\\": "src/",
                     "yii2tech\\ar\\softdelete\\": "lib/ar-softdelete/src/"
@@ -958,20 +961,20 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-06-07T21:58:22+00:00"
+            "time": "2024-06-12T16:34:15+00:00"
         },
         {
             "name": "craftcms/commerce",
-            "version": "5.0.9",
+            "version": "5.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "b1dac454fd85fce9df8ad7bb1151981574ef56c6"
+                "reference": "73cb64f5102df02f9d64134c2a0be56149df3bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/b1dac454fd85fce9df8ad7bb1151981574ef56c6",
-                "reference": "b1dac454fd85fce9df8ad7bb1151981574ef56c6",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/73cb64f5102df02f9d64134c2a0be56149df3bf8",
+                "reference": "73cb64f5102df02f9d64134c2a0be56149df3bf8",
                 "shasum": ""
             },
             "require": {
@@ -1032,7 +1035,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2024-06-05T18:32:23+00:00"
+            "time": "2024-06-12T13:42:06+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -1193,16 +1196,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "155f01c5a5ccbc8a8e0b6df4cf0b97b654ee0a44"
+                "reference": "6d01f809b9feb8a4011365a2e0954d66d074bb27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/155f01c5a5ccbc8a8e0b6df4cf0b97b654ee0a44",
-                "reference": "155f01c5a5ccbc8a8e0b6df4cf0b97b654ee0a44",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/6d01f809b9feb8a4011365a2e0954d66d074bb27",
+                "reference": "6d01f809b9feb8a4011365a2e0954d66d074bb27",
                 "shasum": ""
             },
             "require": {
@@ -1252,7 +1255,7 @@
                 "source": "https://github.com/craftcms/redactor"
             },
             "abandoned": "craftcms/ckeditor",
-            "time": "2024-03-21T23:13:12+00:00"
+            "time": "2024-06-12T16:49:32+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -10938,30 +10941,30 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.48.1",
+            "version": "2.0.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "de92f154eefe322fc1b1b2a52cce46677441ced4"
+                "reference": "a90b6638cce84e78ed8f681a5cad4a14c76464b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/de92f154eefe322fc1b1b2a52cce46677441ced4",
-                "reference": "de92f154eefe322fc1b1b2a52cce46677441ced4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a90b6638cce84e78ed8f681a5cad4a14c76464b4",
+                "reference": "a90b6638cce84e78ed8f681a5cad4a14c76464b4",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
-                "bower-asset/jquery": "3.6.*@stable | 3.5.*@stable | 3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/punycode": "1.3.*",
+                "bower-asset/inputmask": "^5.0.8 ",
+                "bower-asset/jquery": "3.7.*@stable | 3.6.*@stable | 3.5.*@stable | 3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
+                "bower-asset/punycode": "^2.2",
                 "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
                 "ext-ctype": "*",
                 "ext-mbstring": "*",
-                "ezyang/htmlpurifier": "^4.6",
+                "ezyang/htmlpurifier": "^4.17",
                 "lib-pcre": "*",
                 "paragonie/random_compat": ">=1",
-                "php": ">=5.4.0",
+                "php": ">=7.3.0",
                 "yiisoft/yii2-composer": "~2.0.4"
             },
             "bin": [
@@ -11056,7 +11059,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-24T19:04:02+00:00"
+            "time": "2024-05-30T17:23:31+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
