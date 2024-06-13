@@ -4258,16 +4258,16 @@
         },
         {
             "name": "nystudio107/craft-plugin-vite",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-plugin-vite.git",
-                "reference": "a20f6609de886bfe1590584f64c0b7618bfb71c7"
+                "reference": "848febc3587dc81a69b576f22c2122dcdbd4d4a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/a20f6609de886bfe1590584f64c0b7618bfb71c7",
-                "reference": "a20f6609de886bfe1590584f64c0b7618bfb71c7",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/848febc3587dc81a69b576f22c2122dcdbd4d4a0",
+                "reference": "848febc3587dc81a69b576f22c2122dcdbd4d4a0",
                 "shasum": ""
             },
             "require": {
@@ -4303,7 +4303,7 @@
             "support": {
                 "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v5/README.md",
                 "issues": "https://github.com/nystudio107/craft-plugin-vite/issues",
-                "source": "https://github.com/nystudio107/craft-plugin-vite/tree/5.0.0"
+                "source": "https://github.com/nystudio107/craft-plugin-vite/tree/5.0.1"
             },
             "funding": [
                 {
@@ -4311,7 +4311,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-15T19:22:47+00:00"
+            "time": "2024-06-13T03:41:28+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
