@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.314.0",
+            "version": "3.314.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5867f04e0e3959085328d853a743ffc5c8e8ae0b"
+                "reference": "85207a1f342443f40711ac8fe246120821370f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5867f04e0e3959085328d853a743ffc5c8e8ae0b",
-                "reference": "5867f04e0e3959085328d853a743ffc5c8e8ae0b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/85207a1f342443f40711ac8fe246120821370f11",
+                "reference": "85207a1f342443f40711ac8fe246120821370f11",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.314.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.314.1"
             },
-            "time": "2024-06-12T18:10:03+00:00"
+            "time": "2024-06-13T18:07:00+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -4315,16 +4315,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "5.0.3",
+            "version": "5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "339624bbbc751d9e01a0eb2b3d770909750f5ca3"
+                "reference": "ab4dc818160f772f9ce4744797405c6872cda911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/339624bbbc751d9e01a0eb2b3d770909750f5ca3",
-                "reference": "339624bbbc751d9e01a0eb2b3d770909750f5ca3",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ab4dc818160f772f9ce4744797405c6872cda911",
+                "reference": "ab4dc818160f772f9ce4744797405c6872cda911",
                 "shasum": ""
             },
             "require": {
@@ -4344,19 +4344,21 @@
                 "codeception/module-rest": "^3.3.2",
                 "codeception/module-yii2": "^1.1.9",
                 "craftcms/ckeditor": "^4.0.0",
-                "craftcms/commerce": "^5.0.0-beta.1",
+                "craftcms/commerce": "^5.0.0",
                 "craftcms/digital-products": "^4.0.0",
                 "craftcms/ecs": "dev-main",
                 "craftcms/feed-me": "^6.0.0",
                 "craftcms/phpstan": "dev-main",
                 "craftcms/rector": "dev-main",
-                "craftcms/redactor": "4.0.x-dev",
+                "craftcms/redactor": "^4.0.0",
                 "craftcms/shopify": "^5.0.0",
+                "nystudio107/craft-fastcgicachebust": "^5.0.0",
                 "nystudio107/craft-minify": "^5.0.0",
                 "putyourlightson/craft-blitz": "^5.0.0",
                 "putyourlightson/craft-campaign": "^3.0.0",
-                "spicyweb/craft-neo": "^5.0.0-beta.1",
-                "verbb/doxter": "^6.0.0-beta.1",
+                "solspace/craft-calendar": "^5.0.0",
+                "spicyweb/craft-neo": "^5.0.0",
+                "verbb/doxter": "^6.0.0",
                 "vlucas/phpdotenv": "^5.4.0"
             },
             "type": "craft-plugin",
@@ -4406,7 +4408,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-20T19:45:47+00:00"
+            "time": "2024-06-13T22:58:31+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
