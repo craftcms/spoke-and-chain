@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.314.3",
+            "version": "3.314.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c9e8a31cfa07f47b7ab9ecc741845a3a9d50fc61"
+                "reference": "fd1261a60495a7aeb2661d8b7eecfd5fc16abd41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c9e8a31cfa07f47b7ab9ecc741845a3a9d50fc61",
-                "reference": "c9e8a31cfa07f47b7ab9ecc741845a3a9d50fc61",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fd1261a60495a7aeb2661d8b7eecfd5fc16abd41",
+                "reference": "fd1261a60495a7aeb2661d8b7eecfd5fc16abd41",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.314.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.314.4"
             },
-            "time": "2024-06-17T18:13:22+00:00"
+            "time": "2024-06-18T18:13:34+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -836,16 +836,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.2.1",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "9beea769b1dfa4c9c4bff38f7af5da9f4e96cbe9"
+                "reference": "68a250eef09b13534a8ecc0af8c51d33e3f069a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/9beea769b1dfa4c9c4bff38f7af5da9f4e96cbe9",
-                "reference": "9beea769b1dfa4c9c4bff38f7af5da9f4e96cbe9",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/68a250eef09b13534a8ecc0af8c51d33e3f069a3",
+                "reference": "68a250eef09b13534a8ecc0af8c51d33e3f069a3",
                 "shasum": ""
             },
             "require": {
@@ -961,20 +961,20 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-06-17T20:10:48+00:00"
+            "time": "2024-06-18T22:13:24+00:00"
         },
         {
             "name": "craftcms/commerce",
-            "version": "5.0.10.1",
+            "version": "5.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "9b242cb0e05532e8ac9c6dc76325b072577685ee"
+                "reference": "98092cc9ff5c5b6d3d4aabec54778838c936dd10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/9b242cb0e05532e8ac9c6dc76325b072577685ee",
-                "reference": "9b242cb0e05532e8ac9c6dc76325b072577685ee",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/98092cc9ff5c5b6d3d4aabec54778838c936dd10",
+                "reference": "98092cc9ff5c5b6d3d4aabec54778838c936dd10",
                 "shasum": ""
             },
             "require": {
@@ -1035,7 +1035,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2024-06-14T10:17:24+00:00"
+            "time": "2024-06-18T17:06:54+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -2948,16 +2948,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.48.12",
+            "version": "v10.48.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "f9589f1063a449111dcaa1d68285b507d9483a95"
+                "reference": "994cedcd2060b65918efe46da805ac31b0563034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/f9589f1063a449111dcaa1d68285b507d9483a95",
-                "reference": "f9589f1063a449111dcaa1d68285b507d9483a95",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/994cedcd2060b65918efe46da805ac31b0563034",
+                "reference": "994cedcd2060b65918efe46da805ac31b0563034",
                 "shasum": ""
             },
             "require": {
@@ -2999,11 +2999,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-20T20:09:13+00:00"
+            "time": "2024-06-04T13:31:47+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.48.12",
+            "version": "v10.48.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -3049,7 +3049,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.12",
+            "version": "v10.48.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3097,7 +3097,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.48.12",
+            "version": "v10.48.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -6426,16 +6426,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.3.5",
+            "version": "5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "eceebe1953075586f7d9c935d397f80512fb5b0f"
+                "reference": "5d4f6f717ea8c3e4c2385010d1df5a49ca1c61f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/eceebe1953075586f7d9c935d397f80512fb5b0f",
-                "reference": "eceebe1953075586f7d9c935d397f80512fb5b0f",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/5d4f6f717ea8c3e4c2385010d1df5a49ca1c61f0",
+                "reference": "5d4f6f717ea8c3e4c2385010d1df5a49ca1c61f0",
                 "shasum": ""
             },
             "require": {
@@ -6464,7 +6464,7 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "schemaVersion": "5.1.0",
+                "schemaVersion": "5.2.0",
                 "handle": "freeform",
                 "class": "Solspace\\Freeform\\Freeform",
                 "name": "Freeform",
@@ -6490,9 +6490,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.3.5"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.4.0"
             },
-            "time": "2024-06-14T04:31:38+00:00"
+            "time": "2024-06-18T21:11:21+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
