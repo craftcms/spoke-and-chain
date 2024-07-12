@@ -691,16 +691,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.4.0",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "35e8d0af4486141bc745f23a29cc2091eb624a32"
+                "reference": "c51258e759afdb17f1fd1fe83bc12baaef6309d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/35e8d0af4486141bc745f23a29cc2091eb624a32",
-                "reference": "35e8d0af4486141bc745f23a29cc2091eb624a32",
+                "url": "https://api.github.com/repos/composer/semver/zipball/c51258e759afdb17f1fd1fe83bc12baaef6309d6",
+                "reference": "c51258e759afdb17f1fd1fe83bc12baaef6309d6",
                 "shasum": ""
             },
             "require": {
@@ -752,7 +752,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.4.0"
+                "source": "https://github.com/composer/semver/tree/3.4.2"
             },
             "funding": [
                 {
@@ -768,7 +768,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-31T09:50:34+00:00"
+            "time": "2024-07-12T11:35:52+00:00"
         },
         {
             "name": "craftcms/aws-s3",
@@ -965,16 +965,16 @@
         },
         {
             "name": "craftcms/commerce",
-            "version": "5.0.12",
+            "version": "5.0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "939e2bf977c37197e49bbb80ce1723e78934d296"
+                "reference": "dd7a087a62f12cbfad262bfc5afc353cfc92a2af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/939e2bf977c37197e49bbb80ce1723e78934d296",
-                "reference": "939e2bf977c37197e49bbb80ce1723e78934d296",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/dd7a087a62f12cbfad262bfc5afc353cfc92a2af",
+                "reference": "dd7a087a62f12cbfad262bfc5afc353cfc92a2af",
                 "shasum": ""
             },
             "require": {
@@ -1035,7 +1035,7 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2024-07-11T14:57:55+00:00"
+            "time": "2024-07-12T05:02:02+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -4315,16 +4315,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "5.0.4",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "ab4dc818160f772f9ce4744797405c6872cda911"
+                "reference": "ec28e0083d69421027232b9848d05f247aab1811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ab4dc818160f772f9ce4744797405c6872cda911",
-                "reference": "ab4dc818160f772f9ce4744797405c6872cda911",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ec28e0083d69421027232b9848d05f247aab1811",
+                "reference": "ec28e0083d69421027232b9848d05f247aab1811",
                 "shasum": ""
             },
             "require": {
@@ -4408,7 +4408,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-13T22:58:31+00:00"
+            "time": "2024-07-12T04:36:04+00:00"
         },
         {
             "name": "nystudio107/craft-twigpack",
@@ -6426,16 +6426,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.5.3",
+            "version": "5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "e775497b3d192c4c4e0da502fec76965672862ca"
+                "reference": "3a9de78b7b5898b97a3201453730456e4810217a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/e775497b3d192c4c4e0da502fec76965672862ca",
-                "reference": "e775497b3d192c4c4e0da502fec76965672862ca",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/3a9de78b7b5898b97a3201453730456e4810217a",
+                "reference": "3a9de78b7b5898b97a3201453730456e4810217a",
                 "shasum": ""
             },
             "require": {
@@ -6490,9 +6490,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.5.3"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.5.4"
             },
-            "time": "2024-07-05T03:50:50+00:00"
+            "time": "2024-07-12T02:48:18+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
