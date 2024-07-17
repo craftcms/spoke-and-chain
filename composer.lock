@@ -836,16 +836,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.2.6",
+            "version": "5.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "6540a0611a8cfee78f0d511fe600d09a2fbbb549"
+                "reference": "55583e6c64bc1d73fcef951b50a727e6025ba75a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/6540a0611a8cfee78f0d511fe600d09a2fbbb549",
-                "reference": "6540a0611a8cfee78f0d511fe600d09a2fbbb549",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/55583e6c64bc1d73fcef951b50a727e6025ba75a",
+                "reference": "55583e6c64bc1d73fcef951b50a727e6025ba75a",
                 "shasum": ""
             },
             "require": {
@@ -961,7 +961,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-07-11T15:43:50+00:00"
+            "time": "2024-07-16T23:29:25+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -4006,16 +4006,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "39c8ef752db6865717cc3fba63970c16f057982c"
+                "reference": "cb4374784c87d0a0294e8513a52eb63c0aff3139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/39c8ef752db6865717cc3fba63970c16f057982c",
-                "reference": "39c8ef752db6865717cc3fba63970c16f057982c",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cb4374784c87d0a0294e8513a52eb63c0aff3139",
+                "reference": "cb4374784c87d0a0294e8513a52eb63c0aff3139",
                 "shasum": ""
             },
             "require": {
@@ -4108,7 +4108,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-20T15:52:59+00:00"
+            "time": "2024-07-16T22:29:20+00:00"
         },
         {
             "name": "nyholm/psr7",
