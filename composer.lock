@@ -1309,16 +1309,16 @@
         },
         {
             "name": "craftcms/store-hours",
-            "version": "4.0.1",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/store-hours.git",
-                "reference": "5af8c5e5becf47f9be52af00f57e26c68d2b96de"
+                "reference": "6560463178e4890d683e602bbda163e37dea7c12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/5af8c5e5becf47f9be52af00f57e26c68d2b96de",
-                "reference": "5af8c5e5becf47f9be52af00f57e26c68d2b96de",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/6560463178e4890d683e602bbda163e37dea7c12",
+                "reference": "6560463178e4890d683e602bbda163e37dea7c12",
                 "shasum": ""
             },
             "require": {
@@ -1369,7 +1369,7 @@
                 "rss": "https://github.com/craftcms/store-hours/commits/v2.atom",
                 "source": "https://github.com/craftcms/store-hours"
             },
-            "time": "2024-03-19T06:42:04+00:00"
+            "time": "2024-07-28T17:22:28+00:00"
         },
         {
             "name": "craftcms/yii2-dynamodb",
