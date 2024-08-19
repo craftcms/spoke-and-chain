@@ -1,4 +1,4 @@
-dateModified: 1721348667
+dateModified: 1724099491
 elementSources:
   craft\elements\Asset:
     -
@@ -209,7 +209,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: SI24H20R5SQCC22FZMXL94F7
-    schemaVersion: 5.0.79
+    schemaVersion: 5.0.82
   default-dashboard:
     edition: standard
     enabled: true
@@ -388,5 +388,5 @@ system:
   live: true
   name: 'Spoke & Chain'
   retryDuration: null
-  schemaVersion: 5.0.0.21
+  schemaVersion: 5.3.0.2
   timeZone: America/Los_Angeles
