@@ -2,7 +2,7 @@ DUMPFILE ?= seed.sql
 EXEC ?= docker compose exec -T web
 EXEC_MYSQL ?= docker compose exec -T mysql mysql --user=craft --password=secret --database=craft --execute
 RUN ?= docker compose run --rm web
-WEB_CONTAINER = docker-compose ps -q web
+WEB_CONTAINER = docker compose ps -q web
 
 .PHONY: init update restore backup seed clean test gc
 
