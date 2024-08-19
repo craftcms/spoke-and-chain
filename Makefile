@@ -1,15 +1,14 @@
 DUMPFILE ?= seed.sql
-COMPOSE ?= docker-compose
-EXEC ?= ${COMPOSE} exec -T web
-EXEC_MYSQL ?= ${COMPOSE} exec -T mysql mysql --user=craft --password=secret --database=craft --execute
-RUN ?= ${COMPOSE} run --rm web
+EXEC ?= docker compose exec -T web
+EXEC_MYSQL ?= docker compose exec -T mysql mysql --user=craft --password=secret --database=craft --execute
+RUN ?= docker compose run --rm web
 WEB_CONTAINER = docker-compose ps -q web
 
 .PHONY: init update restore backup seed clean test gc
 
 init:
 	cp .env.docker .env
-	${COMPOSE} up -d
+	docker compose up -d
 	${EXEC} composer install
 update:
 	${EXEC} composer update --no-interaction
