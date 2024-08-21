@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.320.3",
+            "version": "3.320.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "afe137e61b0b536c93a71ce3bb3cdac2e92ae789"
+                "reference": "e6af3e760864d43a30d8b7deb4f9dc6a49a5f66a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/afe137e61b0b536c93a71ce3bb3cdac2e92ae789",
-                "reference": "afe137e61b0b536c93a71ce3bb3cdac2e92ae789",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e6af3e760864d43a30d8b7deb4f9dc6a49a5f66a",
+                "reference": "e6af3e760864d43a30d8b7deb4f9dc6a49a5f66a",
                 "shasum": ""
             },
             "require": {
@@ -154,9 +154,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.320.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.320.4"
             },
-            "time": "2024-08-19T18:05:46+00:00"
+            "time": "2024-08-20T18:20:32+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -5979,23 +5979,23 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig.git",
-                "reference": "6c655bf5d299055b75c3348b47e2fd1ad1cfe58c"
+                "reference": "39adafa85bfcc62aba3a1c2eda82650c7fed945e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/6c655bf5d299055b75c3348b47e2fd1ad1cfe58c",
-                "reference": "6c655bf5d299055b75c3348b47e2fd1ad1cfe58c",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/39adafa85bfcc62aba3a1c2eda82650c7fed945e",
+                "reference": "39adafa85bfcc62aba3a1c2eda82650c7fed945e",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.0",
                 "nystudio107/craft-code-editor": "^1.0",
                 "php": "^8.2",
-                "putyourlightson/craft-sprig-core": "^3.3.0"
+                "putyourlightson/craft-sprig-core": "^3.4.0"
             },
             "require-dev": {
                 "craftcms/ecs": "dev-main",
@@ -6032,20 +6032,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-08T11:40:23+00:00"
+            "time": "2024-08-20T18:05:40+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "3.3.2",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "fcc79f5fcf8524c22634778e72b065a3f9606cb8"
+                "reference": "8dc409c8dcdf67d890ed1956bc7570def2aac881"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/fcc79f5fcf8524c22634778e72b065a3f9606cb8",
-                "reference": "fcc79f5fcf8524c22634778e72b065a3f9606cb8",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/8dc409c8dcdf67d890ed1956bc7570def2aac881",
+                "reference": "8dc409c8dcdf67d890ed1956bc7570def2aac881",
                 "shasum": ""
             },
             "require": {
@@ -6075,7 +6075,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2024-08-12T07:30:00+00:00"
+            "time": "2024-08-20T18:31:09+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
