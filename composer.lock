@@ -847,16 +847,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.3.4",
+            "version": "5.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "6183b53d6aadab0808e673bf1deed675d9f408e4"
+                "reference": "44390826f18b0fab0a192afa87766659fe27b432"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/6183b53d6aadab0808e673bf1deed675d9f408e4",
-                "reference": "6183b53d6aadab0808e673bf1deed675d9f408e4",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/44390826f18b0fab0a192afa87766659fe27b432",
+                "reference": "44390826f18b0fab0a192afa87766659fe27b432",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +969,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-08-13T21:06:00+00:00"
+            "time": "2024-08-22T04:28:21+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -4197,16 +4197,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.19",
+            "version": "1.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "a793406e62cd6c7d8e25ac5e0fb2208b4206815b"
+                "reference": "4983704849f2c85ee7fc7d89145c074e770a00c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/a793406e62cd6c7d8e25ac5e0fb2208b4206815b",
-                "reference": "a793406e62cd6c7d8e25ac5e0fb2208b4206815b",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/4983704849f2c85ee7fc7d89145c074e770a00c8",
+                "reference": "4983704849f2c85ee7fc7d89145c074e770a00c8",
                 "shasum": ""
             },
             "require": {
@@ -4261,7 +4261,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-15T16:35:48+00:00"
+            "time": "2024-08-22T02:10:56+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
