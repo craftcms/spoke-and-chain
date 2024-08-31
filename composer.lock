@@ -214,16 +214,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "acfe18b1d9348db4bd69456977e4fc669b118bb1"
+                "reference": "a23b43162d7c311a174017275d6d622daecff7f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/acfe18b1d9348db4bd69456977e4fc669b118bb1",
-                "reference": "acfe18b1d9348db4bd69456977e4fc669b118bb1",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/a23b43162d7c311a174017275d6d622daecff7f9",
+                "reference": "a23b43162d7c311a174017275d6d622daecff7f9",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +277,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.3.4"
+                "source": "https://github.com/brefphp/bref/tree/2.3.5"
             },
             "funding": [
                 {
@@ -289,7 +289,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-16T17:30:08+00:00"
+            "time": "2024-08-31T08:41:28+00:00"
         },
         {
             "name": "brick/math",
