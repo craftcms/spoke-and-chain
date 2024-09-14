@@ -31,8 +31,6 @@ use Faker\Generator as FakerGenerator;
 use Illuminate\Support\Collection;
 use Solspace\Freeform\Elements\Db\SubmissionQuery;
 use Solspace\Freeform\Elements\Submission;
-use Solspace\Freeform\Freeform;
-use Solspace\Freeform\Library\Composer\Components\Form;
 use yii\base\Event;
 use yii\console\ExitCode;
 
