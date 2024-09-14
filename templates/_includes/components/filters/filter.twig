@@ -60,6 +60,30 @@
           {% endif %}
 
           <hr class="my-6">
+          <h3 class="uppercase text-xs text-gray-600">{{ 'Price'|t }}</h3>
+          <div class="md:flex items-center">
+            <div>
+              <label for="minPrice" class="sr-only">{{ 'Minimum Price'|t }}</label>
+              {{ input('text', 'minPrice', minPrice, {
+                'id': 'minPrice',
+                'x-on:keyup.debounce.400': "if ($event.key !== 'Tab' && $event.keyCode !== 9 && (isFinite($event.key) || ($event.keyCode == 8 || $event.keyCode == 46))) { htmx.trigger($event.target, 'refresh'); }",
+                'aria-controls': 'products-list',
+              }) }}
+            </div>
+            <div class="px-3">
+              {{ 'to'|t }}
+            </div>
+            <div>
+              <label for="maxPrice" class="sr-only">{{ 'Maximum Price'|t }}</label>
+              {{ input('text', 'maxPrice', maxPrice, {
+                'id': 'maxPrice',
+                'x-on:keyup.debounce.400': "if ($event.key !== 'Tab' && $event.keyCode !== 9 && (isFinite($event.key) || ($event.keyCode == 8 || $event.keyCode == 46))) { htmx.trigger($event.target, 'refresh'); }",
+                'aria-controls': 'products-list',
+              }) }}
+            </div>
+          </div>
+
+          <hr class="my-6">
 
           <h3 class="uppercase text-xs text-gray-600">{{ 'Sort'|t }}</h3>
           <label for="sort" class="sr-only">{{ 'Sort'|t }}</label>

@@ -52,6 +52,16 @@ class ProductFilter extends Component
     public string|array $materials = [];
 
     /**
+     * @var string|null
+     */
+    public ?string $maxPrice = null;
+
+    /**
+     * @var string|null
+     */
+    public ?string $minPrice = null;
+
+    /**
      * @var string
      */
     public string $sort = '';
@@ -139,6 +149,8 @@ class ProductFilter extends Component
                 'type',
                 'colors',
                 'materials',
+                'maxPrice',
+                'minPrice',
                 'sort',
                 'currentPushUrl',
                 'saveState',
@@ -161,6 +173,8 @@ class ProductFilter extends Component
         $attributes[] = 'filterUrlsByType';
         $attributes[] = 'isAllBikes';
         $attributes[] = 'materialFilters';
+        $attributes[] = 'maxPrice';
+        $attributes[] = 'minPrice';
         $attributes[] = 'productCount';
         $attributes[] = 'products';
         $attributes[] = 'pushUrl';
@@ -279,6 +293,20 @@ class ProductFilter extends Component
         if ($this->type) {
             $type = ArrayHelper::firstWhere($this->getTypes(), 'slug', $this->type);
             $query->relatedTo($type);
+        }
+
+        if (is_numeric($this->minPrice) || is_numeric($this->maxPrice)) {
+            if (is_numeric($this->minPrice) && is_numeric($this->maxPrice)) {
+                $priceQuery = ['and', '>= ' . $this->minPrice, '<= ' . $this->maxPrice];
+            } elseif (is_numeric($this->minPrice)) {
+                $priceQuery = '>= ' . $this->minPrice;
+            } elseif (is_numeric($this->maxPrice)) {
+                $priceQuery = '<= ' . $this->maxPrice;
+            }
+
+            if (isset($priceQuery)) {
+                $query->hasVariant(['salePrice' => $priceQuery]);
+            }
         }
 
         // Sort
@@ -403,6 +431,14 @@ class ProductFilter extends Component
         $urlParams = [];
         if ($this->sort) {
             $urlParams['sort'] = $this->sort;
+        }
+
+        if ($this->minPrice !== null && $this->minPrice !== '') {
+            $urlParams['minPrice'] = $this->minPrice;
+        }
+
+        if ($this->maxPrice !== null && $this->maxPrice !== '') {
+            $urlParams['maxPrice'] = $this->maxPrice;
         }
 
         if (!empty($this->colors)) {
