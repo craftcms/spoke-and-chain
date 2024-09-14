@@ -9,6 +9,7 @@ use craft\commerce\elements\Product;
 use craft\commerce\elements\Variant;
 use craft\elements\Address;
 use craft\elements\Entry;
+use craft\events\ModelEvent;
 use craft\events\RegisterElementSourcesEvent;
 use craft\web\twig\variables\CraftVariable;
 use modules\services\Reviews;
@@ -90,8 +91,8 @@ class Module extends \yii\base\Module
         Event::on(
             Entry::class,
             Entry::EVENT_AFTER_SAVE,
-            function($event) {
-                /** @var Entry $entry */
+            function(ModelEvent $event) {
+                /** @var Entry|null $entry */
                 $entry = $event->sender;
                 if ($entry && $entry->getSection()?->handle === 'reviews') {
                     Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
@@ -103,8 +104,8 @@ class Module extends \yii\base\Module
         Event::on(
             Entry::class,
             Entry::EVENT_AFTER_DELETE,
-            function($event) {
-                /** @var Entry $entry */
+            function(ModelEvent $event) {
+                /** @var Entry|null $entry */
                 $entry = $event->sender;
                 if ($entry && $entry->getSection()?->handle === 'reviews') {
                     Craft::$app->getCache()->delete(Reviews::CACHE_KEY);
