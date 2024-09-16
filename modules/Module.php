@@ -104,7 +104,7 @@ class Module extends \yii\base\Module
         Event::on(
             Entry::class,
             Entry::EVENT_AFTER_DELETE,
-            function(ModelEvent $event) {
+            function(Event $event) {
                 /** @var Entry|null $entry */
                 $entry = $event->sender;
                 if ($entry && $entry->getSection()?->handle === 'reviews') {
