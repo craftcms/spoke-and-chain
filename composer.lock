@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.321.13",
+            "version": "3.322.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6330c3367f303ef4430fca605df9e411abe34d48"
+                "reference": "3eeb8d400acc902965f7de5bc85635853f27c109"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6330c3367f303ef4430fca605df9e411abe34d48",
-                "reference": "6330c3367f303ef4430fca605df9e411abe34d48",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3eeb8d400acc902965f7de5bc85635853f27c109",
+                "reference": "3eeb8d400acc902965f7de5bc85635853f27c109",
                 "shasum": ""
             },
             "require": {
@@ -154,9 +154,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.321.13"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.322.0"
             },
-            "time": "2024-09-17T18:08:34+00:00"
+            "time": "2024-09-18T18:09:42+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -6433,16 +6433,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.6.0",
+            "version": "5.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "ba9b3761775350cea5f303bf952f3da059121d9b"
+                "reference": "8189186c0772a88119195a86a7f8d599da761248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/ba9b3761775350cea5f303bf952f3da059121d9b",
-                "reference": "ba9b3761775350cea5f303bf952f3da059121d9b",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/8189186c0772a88119195a86a7f8d599da761248",
+                "reference": "8189186c0772a88119195a86a7f8d599da761248",
                 "shasum": ""
             },
             "require": {
@@ -6497,9 +6497,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.6.0"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.6.1"
             },
-            "time": "2024-09-17T19:49:09+00:00"
+            "time": "2024-09-18T18:44:31+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -6697,16 +6697,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v15.9.0",
+            "version": "v15.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "dc9726ac0cfbba7b3c97e2cf6042f2c090551cdb"
+                "reference": "3df1a19a33477af9ead8984dbd84e8f637c36199"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/dc9726ac0cfbba7b3c97e2cf6042f2c090551cdb",
-                "reference": "dc9726ac0cfbba7b3c97e2cf6042f2c090551cdb",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/3df1a19a33477af9ead8984dbd84e8f637c36199",
+                "reference": "3df1a19a33477af9ead8984dbd84e8f637c36199",
                 "shasum": ""
             },
             "require": {
@@ -6750,9 +6750,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v15.9.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v15.10.0"
             },
-            "time": "2024-09-12T22:05:50+00:00"
+            "time": "2024-09-18T18:38:30+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
