@@ -2,7 +2,9 @@ window.filterPreviousState = {
     type: '',
     colors: [],
     materials: [],
-    sort: ''
+    sort: '',
+    minPrice: '',
+    maxPrice: '',
 };
 window.filterPreviousStates = [];
 
@@ -13,6 +15,8 @@ window.filter = function() {
         colors: [],
         materials: [],
         sort: '',
+        minPrice: '',
+        maxPrice: '',
         _nt: null,
         state: {},
         saveState: true,
@@ -21,6 +25,7 @@ window.filter = function() {
         init(state, $nextTick) {
             let _this = this;
             this._nt = $nextTick;
+            console.log(state);
             this.setFromState(state);
 
             // Using window variables to avoid alpine proxying all the data
@@ -58,6 +63,8 @@ window.filter = function() {
             this.colors = state.colors;
             this.materials = state.materials;
             this.sort = state.sort;
+            this.minPrice = state.minPrice;
+            this.maxPrice = state.maxPrice;
         },
 
         toggle(key, value, $event) {
@@ -80,6 +87,8 @@ window.filter = function() {
             this.colors = [];
             this.materials = [];
             this.sort = '';
+            this.minPrice = '';
+            this.maxPrice = '';
 
             this.refresh();
         },

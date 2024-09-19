@@ -66,6 +66,7 @@
               <label for="minPrice" class="sr-only">{{ 'Minimum Price'|t }}</label>
               {{ input('text', 'minPrice', minPrice, {
                 'id': 'minPrice',
+                'x-model': 'minPrice',
                 'x-on:keyup.debounce.400': "if ($event.key !== 'Tab' && $event.keyCode !== 9 && (isFinite($event.key) || ($event.keyCode == 8 || $event.keyCode == 46))) { htmx.trigger($event.target, 'refresh'); }",
                 'aria-controls': 'products-list',
               }) }}
@@ -77,6 +78,7 @@
               <label for="maxPrice" class="sr-only">{{ 'Maximum Price'|t }}</label>
               {{ input('text', 'maxPrice', maxPrice, {
                 'id': 'maxPrice',
+                'x-model': 'maxPrice',
                 'x-on:keyup.debounce.400': "if ($event.key !== 'Tab' && $event.keyCode !== 9 && (isFinite($event.key) || ($event.keyCode == 8 || $event.keyCode == 46))) { htmx.trigger($event.target, 'refresh'); }",
                 'aria-controls': 'products-list',
               }) }}
@@ -99,7 +101,7 @@
             }
           } %}
 
-          {% if type or colors|length or materials|length or sort %}
+          {% if type or colors|length or materials|length or sort or minPrice or maxPrice %}
             <hr class="my-6">
             <div>
               <button class="button button--small w-full" x-on:click="clear()" aria-controls="products-list">
@@ -149,8 +151,12 @@
     sort: '{{ sort }}',
     colors: {{ colors|json_encode|raw }},
     materials: {{ materials|json_encode|raw }},
-    type: '{{ type }}'
+    type: '{{ type }}',
+    minPrice: '{{ minPrice }}',
+    maxPrice: '{{ maxPrice }}',
   };
+
+  console.log(currentState);
 
   {% if saveState and saveState != 'false' %}
   window.dispatchEvent(new CustomEvent('saveFilterState', {

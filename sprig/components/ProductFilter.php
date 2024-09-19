@@ -52,14 +52,14 @@ class ProductFilter extends Component
     public string|array $materials = [];
 
     /**
-     * @var string|null
+     * @var string
      */
-    public ?string $maxPrice = null;
+    public string $maxPrice = '';
 
     /**
-     * @var string|null
+     * @var string
      */
-    public ?string $minPrice = null;
+    public string $minPrice = '';
 
     /**
      * @var string
@@ -433,11 +433,11 @@ class ProductFilter extends Component
             $urlParams['sort'] = $this->sort;
         }
 
-        if ($this->minPrice !== null && $this->minPrice !== '') {
+        if ($this->minPrice) {
             $urlParams['minPrice'] = $this->minPrice;
         }
 
-        if ($this->maxPrice !== null && $this->maxPrice !== '') {
+        if ($this->maxPrice) {
             $urlParams['maxPrice'] = $this->maxPrice;
         }
 

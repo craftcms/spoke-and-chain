@@ -12,7 +12,5 @@ import './components/productNav';
 import './components/quickReplace';
 import './components/sliders';
 
-console.log('Loaded.');
-
 // Init sliders
 window.sliders()

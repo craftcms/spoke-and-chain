@@ -7,6 +7,8 @@
 {% set materialsQuery = craft.app.request.getQueryParam('materials', '') %}
 {% set materialsQuery = materialsQuery ? materialsQuery|split('|')|map(m => m|e) : [] %}
 {% set sort = craft.app.request.getQueryParam('sort', '')|e('js') %}
+{% set minPrice = craft.app.request.getQueryParam('minPrice', '')|e('js') %}
+{% set maxPrice = craft.app.request.getQueryParam('maxPrice', '')|e('js') %}
 
 {% block content %}
   {% set mainImage = null %}
@@ -24,7 +26,7 @@
       short: true,
     } only %}
   </div>
-  <div x-data="filter()" x-init='init({ type: "{{ type }}", colors: {{ colorsArray|json_encode|raw }}, materials: {{ materialsQuery|json_encode|raw }}, sort: "{{ sort }}" }, $nextTick)'
+  <div x-data="filter()" x-init='init({ type: "{{ type }}", colors: {{ colorsArray|json_encode|raw }}, materials: {{ materialsQuery|json_encode|raw }}, sort: "{{ sort }}", minPrice: "{{ minPrice }}", maxPrice: "{{ maxPrice }}"}, $nextTick)'
       class="relative"
   >
     {{ sprig('ProductFilter',
@@ -33,6 +35,8 @@
         colors: colorsQuery,
         materials: materialsQuery,
         sort: sort,
+        minPrice: minPrice,
+        maxPrice: maxPrice,
       },
       {
         id: 'filter',
