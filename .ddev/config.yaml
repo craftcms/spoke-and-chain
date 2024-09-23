@@ -12,6 +12,7 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
+nodejs_version: "12"
 
 # Key features of DDEV's config.yaml:
 

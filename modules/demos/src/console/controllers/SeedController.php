@@ -31,18 +31,11 @@ use Faker\Generator as FakerGenerator;
 use Illuminate\Support\Collection;
 use Solspace\Freeform\Elements\Db\SubmissionQuery;
 use Solspace\Freeform\Elements\Submission;
-use Solspace\Freeform\Freeform;
-use Solspace\Freeform\Library\Composer\Components\Form;
 use yii\base\Event;
 use yii\console\ExitCode;
 
 class SeedController extends Controller
 {
-    public const FREEFORM_SUBMISSION_MIN = 1;
-    public const FREEFORM_SUBMISSION_MAX = 10;
-    public const FREEFORM_MESSAGE_CHARS_MIN = 5;
-    public const FREEFORM_MESSAGE_CHARS_MAX = 10;
-
     /**
      * Maximum number of carts to generate per day.
      */
@@ -184,7 +177,6 @@ class SeedController extends Controller
     public function actionIndex(): int
     {
         $this->stdout('Beginning seed ... ' . PHP_EOL . PHP_EOL);
-        // $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-articles');
         $this->runAction('commerce-data');
         $this->_cleanup();
@@ -221,42 +213,6 @@ class SeedController extends Controller
         $this->stdout('Setting system status to online ... ');
         Craft::$app->projectConfig->set('system.live', true, null, false);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-    }
-
-    /**
-     * Seeds Freeform with submission data
-     *
-     * @param string $formHandle Freeform form handle
-     * @return int
-     */
-    public function actionFreeformData(string $formHandle): int
-    {
-        $this->stdout('Seeding Freeform data ... ' . PHP_EOL);
-
-        $freeform = Freeform::getInstance();
-        $form = $freeform->forms->getFormByHandle($formHandle)->getForm();
-        $submissionCount = $this->_faker->numberBetween(self::FREEFORM_SUBMISSION_MIN, self::FREEFORM_SUBMISSION_MAX);
-        $errorCount = 0;
-
-        for ($i = 1; $i <= $submissionCount; $i++) {
-            try {
-                $submission = $this->_createFormSubmission($form);
-                $this->stdout("    - [{$i}/{$submissionCount}] Creating submission {$submission->title} ... ");
-
-                if ($this->_saveFormSubmission($submission)) {
-                    $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-                } else {
-                    $this->stderr('failed: ' . implode(', ', $submission->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
-                    $errorCount++;
-                }
-            } catch (\Throwable $e) {
-                $this->stderr('error: ' . $e->getMessage() . PHP_EOL, Console::FG_RED);
-                $errorCount++;
-            }
-        }
-
-        $this->stdout('Done seeding Freeform data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
-        return $errorCount ? ExitCode::UNSPECIFIED_ERROR : ExitCode::OK;
     }
 
     public function actionRefreshArticles(): int
@@ -327,53 +283,6 @@ class SeedController extends Controller
         }
         $this->stdout($message . PHP_EOL . PHP_EOL, Console::FG_GREEN);
     }
-
-    private function _createFormSubmission(Form $form): Submission
-    {
-        /** @var Submission $submission */
-        $submission = Freeform::getInstance()->submissions->createSubmissionFromForm($form);
-        $submission->dateCreated = $submission->dateUpdated = $this->_faker->dateTimeThisMonth();
-
-        // Reparse the title with the fake date
-        $submission->title = Craft::$app->view->renderString(
-            $form->getSubmissionTitleFormat(),
-            $form->getLayout()->getFieldsByHandle() + [
-                'dateCreated' => $submission->dateCreated,
-                'form' => $form,
-            ]
-        );
-
-        $submission->setFormFieldValues([
-            'email' => $this->_faker->email,
-            'firstName' => $this->_faker->firstName,
-            'lastName' => $this->_faker->lastName,
-            'message' => $this->_faker->realTextBetween(self::FREEFORM_MESSAGE_CHARS_MIN, self::FREEFORM_MESSAGE_CHARS_MAX),
-        ]);
-
-        return $submission;
-    }
-
-    private function _saveFormSubmission(Submission $submission): bool
-    {
-        if (!Craft::$app->getElements()->saveElement($submission)) {
-            return false;
-        }
-
-        // Update submissions table to match date, so element index will sort properly
-        $dateCreatedDb = Db::prepareDateForDb($submission->dateCreated);
-
-        Craft::$app->db->createCommand()
-            ->update($submission::TABLE, [
-                'dateCreated' => $dateCreatedDb,
-                'dateUpdated' => $dateCreatedDb,
-            ], [
-                'id' => $submission->id,
-            ])
-            ->execute();
-
-        return true;
-    }
-
     /**
      * Create demo users.
      *

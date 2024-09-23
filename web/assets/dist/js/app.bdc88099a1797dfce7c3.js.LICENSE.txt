@@ -1,7 +1,0 @@
-/*!
- * @project        Spoke & Chain
- * @name           app.bdc88099a1797dfce7c3.js
- * @author         Pixel & Tonic
- * @build          Wed, Mar 16, 2022 12:00 PM Europe/London
- * @copyright      Copyright (c) 2022 Pixel & Tonic
- */
