@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.322.3",
+            "version": "3.322.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9a94b9a123e0a14cacd72a34c24624ab728aa398"
+                "reference": "f6d2c64cb87d9e70ad99aeaffcd879a412d2ccb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9a94b9a123e0a14cacd72a34c24624ab728aa398",
-                "reference": "9a94b9a123e0a14cacd72a34c24624ab728aa398",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f6d2c64cb87d9e70ad99aeaffcd879a412d2ccb5",
+                "reference": "f6d2c64cb87d9e70ad99aeaffcd879a412d2ccb5",
                 "shasum": ""
             },
             "require": {
@@ -154,9 +154,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.322.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.322.4"
             },
-            "time": "2024-09-23T18:11:39+00:00"
+            "time": "2024-09-24T18:10:10+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -214,16 +214,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.3.5",
+            "version": "2.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "a23b43162d7c311a174017275d6d622daecff7f9"
+                "reference": "8903fe56a9e2c051b5b301b3f4e8f16a4936be42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/a23b43162d7c311a174017275d6d622daecff7f9",
-                "reference": "a23b43162d7c311a174017275d6d622daecff7f9",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/8903fe56a9e2c051b5b301b3f4e8f16a4936be42",
+                "reference": "8903fe56a9e2c051b5b301b3f4e8f16a4936be42",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +277,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.3.5"
+                "source": "https://github.com/brefphp/bref/tree/2.3.6"
             },
             "funding": [
                 {
@@ -289,7 +289,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-31T08:41:28+00:00"
+            "time": "2024-09-25T11:29:04+00:00"
         },
         {
             "name": "brick/math",
@@ -847,16 +847,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.4.5",
+            "version": "5.4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "e2b02717993dee639fcf6308716b6e4bbf26bba8"
+                "reference": "21768956ad2f289572187e89b3027ce2841c871d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/e2b02717993dee639fcf6308716b6e4bbf26bba8",
-                "reference": "e2b02717993dee639fcf6308716b6e4bbf26bba8",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/21768956ad2f289572187e89b3027ce2841c871d",
+                "reference": "21768956ad2f289572187e89b3027ce2841c871d",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +969,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-09-23T21:11:12+00:00"
+            "time": "2024-09-24T14:25:03+00:00"
         },
         {
             "name": "craftcms/commerce",
@@ -3150,34 +3150,34 @@
         },
         {
             "name": "lcobucci/clock",
-            "version": "3.2.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/clock.git",
-                "reference": "6f28b826ea01306b07980cb8320ab30b966cd715"
+                "reference": "db3713a61addfffd615b79bf0bc22f0ccc61b86b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/clock/zipball/6f28b826ea01306b07980cb8320ab30b966cd715",
-                "reference": "6f28b826ea01306b07980cb8320ab30b966cd715",
+                "url": "https://api.github.com/repos/lcobucci/clock/zipball/db3713a61addfffd615b79bf0bc22f0ccc61b86b",
+                "reference": "db3713a61addfffd615b79bf0bc22f0ccc61b86b",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.2.0 || ~8.3.0",
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
                 "psr/clock": "^1.0"
             },
             "provide": {
                 "psr/clock-implementation": "1.0"
             },
             "require-dev": {
-                "infection/infection": "^0.27",
-                "lcobucci/coding-standard": "^11.0.0",
+                "infection/infection": "^0.29",
+                "lcobucci/coding-standard": "^11.1.0",
                 "phpstan/extension-installer": "^1.3.1",
                 "phpstan/phpstan": "^1.10.25",
                 "phpstan/phpstan-deprecation-rules": "^1.1.3",
                 "phpstan/phpstan-phpunit": "^1.3.13",
                 "phpstan/phpstan-strict-rules": "^1.5.1",
-                "phpunit/phpunit": "^10.2.3"
+                "phpunit/phpunit": "^11.3.6"
             },
             "type": "library",
             "autoload": {
@@ -3198,7 +3198,7 @@
             "description": "Yet another clock abstraction",
             "support": {
                 "issues": "https://github.com/lcobucci/clock/issues",
-                "source": "https://github.com/lcobucci/clock/tree/3.2.0"
+                "source": "https://github.com/lcobucci/clock/tree/3.3.1"
             },
             "funding": [
                 {
@@ -3210,7 +3210,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-11-17T17:00:27+00:00"
+            "time": "2024-09-24T20:45:14+00:00"
         },
         {
             "name": "league/flysystem",
