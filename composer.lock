@@ -3758,16 +3758,16 @@
         },
         {
             "name": "moneyphp/money",
-            "version": "v4.5.0",
+            "version": "v4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moneyphp/money.git",
-                "reference": "a1daa7daf159b4044e3d0c34c41fe2be5860e850"
+                "reference": "142107bec4870ac2586057dc2fe917d25c92a91e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/a1daa7daf159b4044e3d0c34c41fe2be5860e850",
-                "reference": "a1daa7daf159b4044e3d0c34c41fe2be5860e850",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/142107bec4870ac2586057dc2fe917d25c92a91e",
+                "reference": "142107bec4870ac2586057dc2fe917d25c92a91e",
                 "shasum": ""
             },
             "require": {
@@ -3840,9 +3840,9 @@
             ],
             "support": {
                 "issues": "https://github.com/moneyphp/money/issues",
-                "source": "https://github.com/moneyphp/money/tree/v4.5.0"
+                "source": "https://github.com/moneyphp/money/tree/v4.5.1"
             },
-            "time": "2024-02-15T19:47:21+00:00"
+            "time": "2024-09-27T12:04:27+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6433,16 +6433,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.6.2",
+            "version": "5.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "8711c53765d103f9a55fd83f34c8f6a0bfb60018"
+                "reference": "2939e277aa69178f8619f49a811a3faa9a3ac18e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/8711c53765d103f9a55fd83f34c8f6a0bfb60018",
-                "reference": "8711c53765d103f9a55fd83f34c8f6a0bfb60018",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/2939e277aa69178f8619f49a811a3faa9a3ac18e",
+                "reference": "2939e277aa69178f8619f49a811a3faa9a3ac18e",
                 "shasum": ""
             },
             "require": {
@@ -6497,9 +6497,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.6.2"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.6.3"
             },
-            "time": "2024-09-20T16:23:13+00:00"
+            "time": "2024-09-27T05:45:28+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
