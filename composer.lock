@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.322.6",
+            "version": "3.322.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ae7b0edab466c3440fe007c07cb62ae32a4dbfca"
+                "reference": "ea3563a7f10fa562796f712fa306c1dca41a45d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ae7b0edab466c3440fe007c07cb62ae32a4dbfca",
-                "reference": "ae7b0edab466c3440fe007c07cb62ae32a4dbfca",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ea3563a7f10fa562796f712fa306c1dca41a45d7",
+                "reference": "ea3563a7f10fa562796f712fa306c1dca41a45d7",
                 "shasum": ""
             },
             "require": {
@@ -154,9 +154,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.322.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.322.7"
             },
-            "time": "2024-09-26T18:12:45+00:00"
+            "time": "2024-09-27T18:34:08+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -214,16 +214,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "2.3.6",
+            "version": "2.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "8903fe56a9e2c051b5b301b3f4e8f16a4936be42"
+                "reference": "62a6391c63a017c7361f88df7826758d1ac7aa61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/8903fe56a9e2c051b5b301b3f4e8f16a4936be42",
-                "reference": "8903fe56a9e2c051b5b301b3f4e8f16a4936be42",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/62a6391c63a017c7361f88df7826758d1ac7aa61",
+                "reference": "62a6391c63a017c7361f88df7826758d1ac7aa61",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +277,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.3.6"
+                "source": "https://github.com/brefphp/bref/tree/2.3.7"
             },
             "funding": [
                 {
@@ -289,7 +289,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-25T11:29:04+00:00"
+            "time": "2024-09-27T16:11:15+00:00"
         },
         {
             "name": "brick/math",
@@ -847,16 +847,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.4.5.1",
+            "version": "5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "21768956ad2f289572187e89b3027ce2841c871d"
+                "reference": "d44a2d4628b02db2290ecff4248ba70f664c070d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/21768956ad2f289572187e89b3027ce2841c871d",
-                "reference": "21768956ad2f289572187e89b3027ce2841c871d",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d44a2d4628b02db2290ecff4248ba70f664c070d",
+                "reference": "d44a2d4628b02db2290ecff4248ba70f664c070d",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +969,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-09-24T14:25:03+00:00"
+            "time": "2024-09-27T18:53:45+00:00"
         },
         {
             "name": "craftcms/commerce",
