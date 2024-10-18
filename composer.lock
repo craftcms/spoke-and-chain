@@ -6430,16 +6430,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.6.5",
+            "version": "5.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "06890bbac8491022340e41c746d63a80673252c6"
+                "reference": "a0da095a587af762d7e6aecfd685b8d1c512a3ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/06890bbac8491022340e41c746d63a80673252c6",
-                "reference": "06890bbac8491022340e41c746d63a80673252c6",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/a0da095a587af762d7e6aecfd685b8d1c512a3ed",
+                "reference": "a0da095a587af762d7e6aecfd685b8d1c512a3ed",
                 "shasum": ""
             },
             "require": {
@@ -6494,9 +6494,9 @@
             "description": "The most reliable form builder that's ready for wherever your project takes you.",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.6.5"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.6.6"
             },
-            "time": "2024-10-11T20:44:57+00:00"
+            "time": "2024-10-18T06:44:45+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -11547,16 +11547,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.6",
+            "version": "1.12.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "dc4d2f145a88ea7141ae698effd64d9df46527ae"
+                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dc4d2f145a88ea7141ae698effd64d9df46527ae",
-                "reference": "dc4d2f145a88ea7141ae698effd64d9df46527ae",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
+                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
                 "shasum": ""
             },
             "require": {
@@ -11601,7 +11601,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-06T15:03:59+00:00"
+            "time": "2024-10-18T11:12:07+00:00"
         },
         {
             "name": "psy/psysh",
