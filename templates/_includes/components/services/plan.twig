@@ -30,7 +30,7 @@
 {% set planInfo = plan ? plan.getInformation() : null %}
 {% set paymentSources = plan ? craft.commerce.
   getPaymentSources().
-  getAllGatewayPaymentSourcesByUserId(
+  getAllGatewayPaymentSourcesByCustomerId(
     plan.getGateway().id,
     currentUser.id ?? null
   ) : null
