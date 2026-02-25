@@ -774,23 +774,23 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "2.2.6",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "1457e48cee3d41828a559a932bc780cab432d454"
+                "reference": "874751abefe3c9995831d459fafc9e0d3027d2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/1457e48cee3d41828a559a932bc780cab432d454",
-                "reference": "1457e48cee3d41828a559a932bc780cab432d454",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/874751abefe3c9995831d459fafc9e0d3027d2ad",
+                "reference": "874751abefe3c9995831d459fafc9e0d3027d2ad",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0.0-beta.1|^5.0.0-beta.1",
                 "craftcms/flysystem": "^1.0.0-beta.2|^2.0.0",
                 "league/flysystem-aws-s3-v3": "^3.0.0",
-                "php": "^8.0.2"
+                "php": "^8.1.0"
             },
             "require-dev": {
                 "craftcms/ecs": "dev-main",
@@ -834,7 +834,7 @@
                 "rss": "https://github.com/craftcms/aws-s3/commits/master.atom",
                 "source": "https://github.com/craftcms/aws-s3"
             },
-            "time": "2026-02-19T22:34:04+00:00"
+            "time": "2026-02-25T00:57:04+00:00"
         },
         {
             "name": "craftcms/cms",
