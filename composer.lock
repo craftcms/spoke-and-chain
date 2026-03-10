@@ -2633,16 +2633,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.8.0",
+            "version": "2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "21dc724a0583619cd1652f673303492272778051"
+                "reference": "718f1ee6a878be5290af3557aeda0c91278361d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/21dc724a0583619cd1652f673303492272778051",
-                "reference": "21dc724a0583619cd1652f673303492272778051",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/718f1ee6a878be5290af3557aeda0c91278361d9",
+                "reference": "718f1ee6a878be5290af3557aeda0c91278361d9",
                 "shasum": ""
             },
             "require": {
@@ -2729,7 +2729,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.8.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.8.1"
             },
             "funding": [
                 {
@@ -2745,7 +2745,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-23T21:21:41+00:00"
+            "time": "2026-03-10T09:55:26+00:00"
         },
         {
             "name": "hashids/hashids",
@@ -10574,16 +10574,16 @@
         },
         {
             "name": "web-auth/webauthn-lib",
-            "version": "4.9.3",
+            "version": "4.9.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/web-auth/webauthn-lib.git",
-                "reference": "129fbaccd22163429a39bf85e320fb9eddad035c"
+                "reference": "fd7a0943c663b325e92ad562c2bcc943e77beeac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/129fbaccd22163429a39bf85e320fb9eddad035c",
-                "reference": "129fbaccd22163429a39bf85e320fb9eddad035c",
+                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/fd7a0943c663b325e92ad562c2bcc943e77beeac",
+                "reference": "fd7a0943c663b325e92ad562c2bcc943e77beeac",
                 "shasum": ""
             },
             "require": {
@@ -10648,7 +10648,7 @@
                 "webauthn"
             ],
             "support": {
-                "source": "https://github.com/web-auth/webauthn-lib/tree/4.9.3"
+                "source": "https://github.com/web-auth/webauthn-lib/tree/4.9.x"
             },
             "funding": [
                 {
@@ -10660,7 +10660,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2026-02-05T12:48:16+00:00"
+            "time": "2024-07-16T18:36:36+00:00"
         },
         {
             "name": "webmozart/assert",
