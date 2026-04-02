@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.376.0",
+            "version": "3.376.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5c9ce14723532cd694fa64dc1cbd1b33db1c79f9"
+                "reference": "475b367bb518fdfafd44b0848534f6636e0886e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5c9ce14723532cd694fa64dc1cbd1b33db1c79f9",
-                "reference": "5c9ce14723532cd694fa64dc1cbd1b33db1c79f9",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/475b367bb518fdfafd44b0848534f6636e0886e9",
+                "reference": "475b367bb518fdfafd44b0848534f6636e0886e9",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.376.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.376.1"
             },
-            "time": "2026-03-31T18:13:11+00:00"
+            "time": "2026-04-01T18:11:20+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -292,23 +292,22 @@
         },
         {
             "name": "brick/math",
-            "version": "0.14.8",
+            "version": "0.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "63422359a44b7f06cae63c3b429b59e8efcc0629"
+                "reference": "a62af7ab2e3cee9f9bf4cf77a5d1e6ba408a44ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/63422359a44b7f06cae63c3b429b59e8efcc0629",
-                "reference": "63422359a44b7f06cae63c3b429b59e8efcc0629",
+                "url": "https://api.github.com/repos/brick/math/zipball/a62af7ab2e3cee9f9bf4cf77a5d1e6ba408a44ee",
+                "reference": "a62af7ab2e3cee9f9bf4cf77a5d1e6ba408a44ee",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.2"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "^2.2",
                 "phpstan/phpstan": "2.1.22",
                 "phpunit/phpunit": "^11.5"
             },
@@ -340,7 +339,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.14.8"
+                "source": "https://github.com/brick/math/tree/0.17.0"
             },
             "funding": [
                 {
@@ -348,7 +347,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-10T14:33:43+00:00"
+            "time": "2026-03-17T12:54:54+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -6763,16 +6762,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.15.2",
+            "version": "5.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft-freeform.git",
-                "reference": "63b6e7cee80ce51f1db3e3d191f5b5b367498228"
+                "reference": "cb199a92b658b5717ecab4c420b5e22888d59c42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/63b6e7cee80ce51f1db3e3d191f5b5b367498228",
-                "reference": "63b6e7cee80ce51f1db3e3d191f5b5b367498228",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/cb199a92b658b5717ecab4c420b5e22888d59c42",
+                "reference": "cb199a92b658b5717ecab4c420b5e22888d59c42",
                 "shasum": ""
             },
             "require": {
@@ -6831,9 +6830,9 @@
             "description": "The most flexible and user-friendly form building plugin!",
             "support": {
                 "issues": "https://github.com/solspace/craft-freeform/issues",
-                "source": "https://github.com/solspace/craft-freeform/tree/v5.15.2"
+                "source": "https://github.com/solspace/craft-freeform/tree/v5.15.3"
             },
-            "time": "2026-03-31T15:11:57+00:00"
+            "time": "2026-04-01T15:34:25+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -10521,20 +10520,20 @@
         },
         {
             "name": "web-auth/cose-lib",
-            "version": "4.5.0",
+            "version": "4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/web-auth/cose-lib.git",
-                "reference": "5adac6fe126994a3ee17ed9950efb4947ab132a9"
+                "reference": "3185af4df10dc537b65c140c315b88d15ae15b80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/web-auth/cose-lib/zipball/5adac6fe126994a3ee17ed9950efb4947ab132a9",
-                "reference": "5adac6fe126994a3ee17ed9950efb4947ab132a9",
+                "url": "https://api.github.com/repos/web-auth/cose-lib/zipball/3185af4df10dc537b65c140c315b88d15ae15b80",
+                "reference": "3185af4df10dc537b65c140c315b88d15ae15b80",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.9|^0.10|^0.11|^0.12|^0.13|^0.14",
+                "brick/math": "^0.9|^0.10|^0.11|^0.12|^0.13|^0.14|^0.15|^0.16|^0.17",
                 "ext-json": "*",
                 "ext-openssl": "*",
                 "php": ">=8.1",
@@ -10576,7 +10575,7 @@
             ],
             "support": {
                 "issues": "https://github.com/web-auth/cose-lib/issues",
-                "source": "https://github.com/web-auth/cose-lib/tree/4.5.0"
+                "source": "https://github.com/web-auth/cose-lib/tree/4.5.1"
             },
             "funding": [
                 {
@@ -10588,7 +10587,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2026-01-03T14:43:18+00:00"
+            "time": "2026-04-01T12:47:39+00:00"
         },
         {
             "name": "web-auth/webauthn-lib",
